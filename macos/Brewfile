@@ -47,6 +47,8 @@ cask "microsoft-powerpoint"
 cask "microsoft-word"
 # Desktop virtualization software
 cask "parallels"
+# Remote desktop
+cask "parsec"
 # SSH client
 cask "termius"
 # Music streaming service with high fidelity sound and hi-def video quality
