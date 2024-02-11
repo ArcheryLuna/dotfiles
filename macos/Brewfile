@@ -13,7 +13,7 @@ brew "go"
 brew "mariadb"
 # Fast, highly customisable system info script
 brew "neofetch"
-# Sex in the minecraft bed rn ;) Ambitious Vim-fork focused on extensibility and agility
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Platform built on V8 to build network applications
 brew "node"
@@ -61,6 +61,8 @@ cask "tidal"
 cask "unnaturalscrollwheels"
 # Open-source code editor
 cask "visual-studio-code"
+# Network protocol analyzer
+cask "wireshark"
 vscode "acidic9.glua"
 vscode "actboy168.lua-debug"
 vscode "bmewburn.vscode-intelephense-client"
