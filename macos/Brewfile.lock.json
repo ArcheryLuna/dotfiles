@@ -465,6 +465,94 @@
             }
           }
         }
+      },
+      "mariadb": {
+        "version": "11.2.2",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:68ee86e9ef737def5151828f09cd9df394661914b867e5a597d64b8941d5b3b8",
+              "sha256": "68ee86e9ef737def5151828f09cd9df394661914b867e5a597d64b8941d5b3b8"
+            },
+            "arm64_ventura": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:22af53d47ba0a8fdae1f0967467cef72b11a19c8e2c8f3b04068c076c700eece",
+              "sha256": "22af53d47ba0a8fdae1f0967467cef72b11a19c8e2c8f3b04068c076c700eece"
+            },
+            "arm64_monterey": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:f56356c3e9b43687bcea5803ae32cce91ef0dee6050927ce2e8fd6c365d32392",
+              "sha256": "f56356c3e9b43687bcea5803ae32cce91ef0dee6050927ce2e8fd6c365d32392"
+            },
+            "sonoma": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:5e1ed4126924f17b9f024b3e7d121652bb553cc764dc402afaa928da4b0e2a3a",
+              "sha256": "5e1ed4126924f17b9f024b3e7d121652bb553cc764dc402afaa928da4b0e2a3a"
+            },
+            "ventura": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:0a4f6dbeb45e948cc66ecc06706d19d99bbbe591f25465a8add7dc318730810e",
+              "sha256": "0a4f6dbeb45e948cc66ecc06706d19d99bbbe591f25465a8add7dc318730810e"
+            },
+            "monterey": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:3c7beede8f0875b70a77dc32ef699bd74b82c113ff571f35fac113c0daf1a730",
+              "sha256": "3c7beede8f0875b70a77dc32ef699bd74b82c113ff571f35fac113c0daf1a730"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/mariadb/blobs/sha256:bc5ddab5ae44bd291c490e7c766fab7a88fdc828a88e50a4d75eb693eda56e81",
+              "sha256": "bc5ddab5ae44bd291c490e7c766fab7a88fdc828a88e50a4d75eb693eda56e81"
+            }
+          }
+        }
+      },
+      "openvpn": {
+        "version": "2.6.8",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "arm64_sonoma": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:87d1d04d2a38a8843d4cc59d5ea3f9bb2d24d2fb6f2edb13bc7e5eee6e0972a8",
+              "sha256": "87d1d04d2a38a8843d4cc59d5ea3f9bb2d24d2fb6f2edb13bc7e5eee6e0972a8"
+            },
+            "arm64_ventura": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:7d3b34f4b5b9feaf9235a27bcb5c9da3ff92fc01cf85a0358a54235cabbe41c4",
+              "sha256": "7d3b34f4b5b9feaf9235a27bcb5c9da3ff92fc01cf85a0358a54235cabbe41c4"
+            },
+            "arm64_monterey": {
+              "cellar": "/opt/homebrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:15a5a841305eebf947493a63ad306caea8923a853106b268229762b7c10b5cf8",
+              "sha256": "15a5a841305eebf947493a63ad306caea8923a853106b268229762b7c10b5cf8"
+            },
+            "sonoma": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:3e6843669acd7896896bbf9ae8b550b84e4cd0bd6e86bcd4264776e21e732513",
+              "sha256": "3e6843669acd7896896bbf9ae8b550b84e4cd0bd6e86bcd4264776e21e732513"
+            },
+            "ventura": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:3419a8342f2dcca7b8a6f185e55e9c716cbab81f8e77ad2c3e7791059ef42cd5",
+              "sha256": "3419a8342f2dcca7b8a6f185e55e9c716cbab81f8e77ad2c3e7791059ef42cd5"
+            },
+            "monterey": {
+              "cellar": "/usr/local/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:e5740345e1e76ce070267fdf970e7c6c3a6e7b68ba63351d79daf30981a56867",
+              "sha256": "e5740345e1e76ce070267fdf970e7c6c3a6e7b68ba63351d79daf30981a56867"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "url": "https://ghcr.io/v2/homebrew/core/openvpn/blobs/sha256:a25b9665e36878d79e2a98820889d56c84871b073252d756c8739109d87907bb",
+              "sha256": "a25b9665e36878d79e2a98820889d56c84871b073252d756c8739109d87907bb"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -556,6 +644,12 @@
         "version": "1.86.1",
         "options": {
           "full_name": "visual-studio-code"
+        }
+      },
+      "parsec": {
+        "version": "150.92.1",
+        "options": {
+          "full_name": "parsec"
         }
       }
     },
