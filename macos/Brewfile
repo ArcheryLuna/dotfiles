@@ -1,6 +1,8 @@
 tap "homebrew/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # GNU compiler collection
 brew "gcc"
 # Play, record, convert, and stream audio and video
