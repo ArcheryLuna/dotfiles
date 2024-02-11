@@ -3,3 +3,4 @@
 	email = 76516425+ArcheryLuna@users.noreply.github.com
 [core]
 	editor = nano
+	excludesfile = /Users/archery/.gitignore
