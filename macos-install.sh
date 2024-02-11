@@ -8,3 +8,9 @@ ln -s ~/.dotfiles/macos/.vscode ~/
 ln -s ~/.dotfiles/macos/.npm ~/
 
 cd ~/.dotfiles
+
+python3 -m ensurepip
+python3 -m pip install --upgrade setuptools
+python3 -m pip install --upgrade pip
+
+npm i -g npm@latest
