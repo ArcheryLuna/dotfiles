@@ -1,5 +1,8 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew bundle --file ~/.dotfiles/macos/Brewfile
+
+ln -s ~/.dotfile/macos/.zprofile ~/
+
+brew bundle install --file=~/.dotfiles/macos/Brewfile
 
 ln -s ~/.dotfiles/macos/.config ~/.config
 ln -s ~/.dotfiles/macos/.zshrc ~/
@@ -16,4 +19,4 @@ python3 -m pip install --upgrade pip
 npm i -g npm@latest
 npm i -g nodemon
 
-
+starship init zsh
