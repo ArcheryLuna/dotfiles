@@ -9,6 +9,8 @@ brew "gcc"
 brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Drop-in replacement for MySQL
+brew "mariadb"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Platform built on V8 to build network applications
