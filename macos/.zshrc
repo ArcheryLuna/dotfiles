@@ -10,9 +10,19 @@ brew() {
         command brew bundle dump --file=~/.dotfiles/macos/Brewfile --force --describe
         echo "Brewfile updated."
     fi
+
+    # commit the changes to github
+    cd ~/.dotfiles
+    git add .
+    git commit -m "update Brewfile"
+    git push
+
+    # return to the original directory
+    cd -
 }
 
 # Ensure you source this script in your .zshrc to make it available in your shell sessions
+
 
 
 eval "$(starship init zsh)"
