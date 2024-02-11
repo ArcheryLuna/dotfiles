@@ -15,5 +15,5 @@
 3. Run the install script
 
    ```bash
-   ~/macos-install.sh
+   cd ~/.dotfiles && sh macos-install.sh
    ```
