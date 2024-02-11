@@ -1,0 +1,51 @@
+{
+	"EFFECT/EndTouch": {
+		"body": [
+			"EndTouch()$0"
+		],
+		"description": "No description available.",
+		"prefix": "EndTouch"
+	},
+	"EFFECT/Init": {
+		"body": [
+			"Init(${1:effectData})$0"
+		],
+		"description": "Called when the effect is created.",
+		"prefix": "Init"
+	},
+	"EFFECT/PhysicsCollide": {
+		"body": [
+			"PhysicsCollide(${1:colData}, ${2:collider})$0"
+		],
+		"description": "Called when the effect collides with anything.",
+		"prefix": "PhysicsCollide"
+	},
+	"EFFECT/Render": {
+		"body": [
+			"Render()$0"
+		],
+		"description": "Called when the effect should be rendered.",
+		"prefix": "Render"
+	},
+	"EFFECT/StartTouch": {
+		"body": [
+			"StartTouch()$0"
+		],
+		"description": "No description available.",
+		"prefix": "StartTouch"
+	},
+	"EFFECT/Think": {
+		"body": [
+			"Think()$0"
+		],
+		"description": "Called when the effect should think, return false to kill the effect.",
+		"prefix": "Think"
+	},
+	"EFFECT/Touch": {
+		"body": [
+			"Touch()$0"
+		],
+		"description": "No description available.",
+		"prefix": "Touch"
+	}
+}

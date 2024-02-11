@@ -1,0 +1,135 @@
+{
+    "ConnectTo": {
+        "body": [
+            "ConnectTo(${1:area})$0"
+        ],
+        "description": "CNAVLADDER [Server] \n\n[CNavArea] area\n  The area this ladder leads to.",
+        "prefix": "ConnectTo"
+    },
+    "Disconnect": {
+        "body": [
+            "Disconnect(${1:area})$0"
+        ],
+        "description": "CNAVLADDER [Server] \n\n[CNavArea] area\n  The CNavArea this to disconnect from.",
+        "prefix": "Disconnect"
+    },
+    "GetBottomArea": {
+        "body": [
+            "GetBottomArea()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "GetBottomArea"
+    },
+    "GetID": {
+        "body": [
+            "GetID()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "GetID"
+    },
+    "GetLength": {
+        "body": [
+            "GetLength()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "GetLength"
+    },
+    "GetNormal": {
+        "body": [
+            "GetNormal()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "GetNormal"
+    },
+    "GetPosAtHeight": {
+        "body": [
+            "GetPosAtHeight(${1:height})$0"
+        ],
+        "description": "CNAVLADDER [Server] \n\n[number] height\n  The Z position in world space coordinates.\n\nValidation required.\nThis page contains eventual incorrect information and requires validation.Validation required.\nThis page contains eventual incorrect information and requires validation.",
+        "prefix": "GetPosAtHeight"
+    },
+    "GetTopBehindArea": {
+        "body": [
+            "GetTopBehindArea()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "GetTopBehindArea"
+    },
+    "GetTopForwardArea": {
+        "body": [
+            "GetTopForwardArea()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "GetTopForwardArea"
+    },
+    "GetTopLeftArea": {
+        "body": [
+            "GetTopLeftArea()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "GetTopLeftArea"
+    },
+    "GetTopRightArea": {
+        "body": [
+            "GetTopRightArea()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "GetTopRightArea"
+    },
+    "IsConnectedAtSide": {
+        "body": [
+            "IsConnectedAtSide(${1:navArea}, ${2:navDirType})$0"
+        ],
+        "description": "CNAVLADDER [Server] Returns whether this CNavLadder has an outgoing ( one or two way ) connection to given CNavArea in given direction.\n\n[CNavArea] navArea\n  The CNavArea to test against.\n\n[number] navDirType\n  The direction, in which to look for the connection. See NavDir_ Enums",
+        "prefix": "IsConnectedAtSide"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "IsValid"
+    },
+    "Remove": {
+        "body": [
+            "Remove()$0"
+        ],
+        "description": "CNAVLADDER [Server]",
+        "prefix": "Remove"
+    },
+    "SetBottomArea": {
+        "body": [
+            "SetBottomArea(${1:area})$0"
+        ],
+        "description": "CNAVLADDER [Server] \n\n[CNavArea] area",
+        "prefix": "SetBottomArea"
+    },
+    "SetTopBehindArea": {
+        "body": [
+            "SetTopBehindArea(${1:area})$0"
+        ],
+        "description": "CNAVLADDER [Server] \n\n[CNavArea] area",
+        "prefix": "SetTopBehindArea"
+    },
+    "SetTopForwardArea": {
+        "body": [
+            "SetTopForwardArea(${1:area})$0"
+        ],
+        "description": "CNAVLADDER [Server] \n\n[CNavArea] area",
+        "prefix": "SetTopForwardArea"
+    },
+    "SetTopLeftArea": {
+        "body": [
+            "SetTopLeftArea(${1:area})$0"
+        ],
+        "description": "CNAVLADDER [Server] \n\n[CNavArea] area",
+        "prefix": "SetTopLeftArea"
+    },
+    "SetTopRightArea": {
+        "body": [
+            "SetTopRightArea(${1:area})$0"
+        ],
+        "description": "CNAVLADDER [Server] \n\n[CNavArea] area",
+        "prefix": "SetTopRightArea"
+    }
+}

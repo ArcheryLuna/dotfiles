@@ -1,0 +1,16 @@
+{
+	"controlpanel/Clear": {
+		"body": [
+			"controlpanel.Clear()$0"
+		],
+		"description": "Clears ALL the control panels ( for tools )",
+		"prefix": "controlpanel.Clear"
+	},
+	"controlpanel/Get": {
+		"body": [
+			"controlpanel.Get(${1:name})$0"
+		],
+		"description": "Returns (or creates if not exists) a controlpanel.",
+		"prefix": "controlpanel.Get"
+	}
+}

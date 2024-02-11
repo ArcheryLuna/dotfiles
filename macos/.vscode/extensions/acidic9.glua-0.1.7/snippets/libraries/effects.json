@@ -1,0 +1,16 @@
+{
+    "effects.Create": {
+        "body": [
+            "effects.Create(${1:name})$0"
+        ],
+        "description": "EFFECTS [Client] \n\n[string] name\n  Effect name.",
+        "prefix": "effects.Create"
+    },
+    "effects.Register": {
+        "body": [
+            "effects.Register(${1:effect_table}, ${2:name})$0"
+        ],
+        "description": "EFFECTS [Client] \n\n[table] effect_table\n  Effect table.\n\n[string] name\n  Effect name.",
+        "prefix": "effects.Register"
+    }
+}

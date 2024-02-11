@@ -1,0 +1,247 @@
+{
+    "AddKey": {
+        "body": [
+            "AddKey(${1:keys})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] keys\n  Keys to add, see IN_ Enums",
+        "prefix": "AddKey"
+    },
+    "GetAbsMoveAngles": {
+        "body": [
+            "GetAbsMoveAngles()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetAbsMoveAngles"
+    },
+    "GetAngles": {
+        "body": [
+            "GetAngles()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetAngles"
+    },
+    "GetButtons": {
+        "body": [
+            "GetButtons()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetButtons"
+    },
+    "GetConstraintRadius": {
+        "body": [
+            "GetConstraintRadius()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetConstraintRadius"
+    },
+    "GetForwardSpeed": {
+        "body": [
+            "GetForwardSpeed()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetForwardSpeed"
+    },
+    "GetImpulseCommand": {
+        "body": [
+            "GetImpulseCommand()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetImpulseCommand"
+    },
+    "GetMaxClientSpeed": {
+        "body": [
+            "GetMaxClientSpeed()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetMaxClientSpeed"
+    },
+    "GetMaxSpeed": {
+        "body": [
+            "GetMaxSpeed()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetMaxSpeed"
+    },
+    "GetMoveAngles": {
+        "body": [
+            "GetMoveAngles()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetMoveAngles"
+    },
+    "GetOldAngles": {
+        "body": [
+            "GetOldAngles()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetOldAngles"
+    },
+    "GetOldButtons": {
+        "body": [
+            "GetOldButtons()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetOldButtons"
+    },
+    "GetOrigin": {
+        "body": [
+            "GetOrigin()$0"
+        ],
+        "description": "CMOVEDATA [Shared] Gets the player's position.",
+        "prefix": "GetOrigin"
+    },
+    "GetSideSpeed": {
+        "body": [
+            "GetSideSpeed()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetSideSpeed"
+    },
+    "GetUpSpeed": {
+        "body": [
+            "GetUpSpeed()$0"
+        ],
+        "description": "CMOVEDATA [Shared]",
+        "prefix": "GetUpSpeed"
+    },
+    "GetVelocity": {
+        "body": [
+            "GetVelocity()$0"
+        ],
+        "description": "CMOVEDATA [Shared] Gets the players velocity.",
+        "prefix": "GetVelocity"
+    },
+    "KeyDown": {
+        "body": [
+            "KeyDown(${1:key})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] key\n  The key to test, see IN_ Enums",
+        "prefix": "KeyDown"
+    },
+    "KeyPressed": {
+        "body": [
+            "KeyPressed(${1:key})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] key\n  The key to test, see IN_ Enums",
+        "prefix": "KeyPressed"
+    },
+    "KeyReleased": {
+        "body": [
+            "KeyReleased(${1:key})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] key\n  A key to test, see IN_ Enums",
+        "prefix": "KeyReleased"
+    },
+    "KeyWasDown": {
+        "body": [
+            "KeyWasDown(${1:key})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] key\n  The key to test, seee IN_ Enums",
+        "prefix": "KeyWasDown"
+    },
+    "SetAbsMoveAngles": {
+        "body": [
+            "SetAbsMoveAngles(${1:ang})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[Angle] ang\n  New absolute move angles",
+        "prefix": "SetAbsMoveAngles"
+    },
+    "SetAngles": {
+        "body": [
+            "SetAngles(${1:ang})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[Angle] ang\n  The angles",
+        "prefix": "SetAngles"
+    },
+    "SetButtons": {
+        "body": [
+            "SetButtons(${1:buttons})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] buttons\n  A number representing which buttons are down, see IN_ Enums",
+        "prefix": "SetButtons"
+    },
+    "SetConstraintRadius": {
+        "body": [
+            "SetConstraintRadius(${1:radius})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] radius\n  The new constraint radius",
+        "prefix": "SetConstraintRadius"
+    },
+    "SetForwardSpeed": {
+        "body": [
+            "SetForwardSpeed(${1:speed})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] speed\n  New forward speed",
+        "prefix": "SetForwardSpeed"
+    },
+    "SetImpulseCommand": {
+        "body": [
+            "SetImpulseCommand(${1:impulse})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] impulse\n  The impulse to set",
+        "prefix": "SetImpulseCommand"
+    },
+    "SetMaxClientSpeed": {
+        "body": [
+            "SetMaxClientSpeed(${1:maxSpeed})$0"
+        ],
+        "description": "CMOVEDATA [Shared] Sets the maximum player speed. Player won't be able to run or sprint faster then this value.\nThis also automatically sets CMoveData:SetMaxSpeed when used in the GM:SetupMove hook. You must set it manually in the GM:Move hook.\nThis must be called on both client and server to avoid prediction errors.\nThis will not reduce speed in air.\n\n[number] maxSpeed\n  The new maximum speed",
+        "prefix": "SetMaxClientSpeed"
+    },
+    "SetMaxSpeed": {
+        "body": [
+            "SetMaxSpeed(${1:maxSpeed})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] maxSpeed\n  The new maximum speed",
+        "prefix": "SetMaxSpeed"
+    },
+    "SetMoveAngles": {
+        "body": [
+            "SetMoveAngles(${1:dir})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[Angle] dir\n  The aim direction.",
+        "prefix": "SetMoveAngles"
+    },
+    "SetOldAngles": {
+        "body": [
+            "SetOldAngles(${1:aimAng})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[Angle] aimAng\n  The old angles",
+        "prefix": "SetOldAngles"
+    },
+    "SetOldButtons": {
+        "body": [
+            "SetOldButtons(${1:buttons})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] buttons\n  A number representing which buttons were down, see IN_ Enums",
+        "prefix": "SetOldButtons"
+    },
+    "SetOrigin": {
+        "body": [
+            "SetOrigin(${1:pos})$0"
+        ],
+        "description": "CMOVEDATA [Shared] Sets the players position.\n\n[Vector] pos\n  The position",
+        "prefix": "SetOrigin"
+    },
+    "SetSideSpeed": {
+        "body": [
+            "SetSideSpeed(${1:speed})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] speed\n  Strafe speed",
+        "prefix": "SetSideSpeed"
+    },
+    "SetUpSpeed": {
+        "body": [
+            "SetUpSpeed(${1:speed})$0"
+        ],
+        "description": "CMOVEDATA [Shared] \n\n[number] speed\n  Vertical speed to set",
+        "prefix": "SetUpSpeed"
+    },
+    "SetVelocity": {
+        "body": [
+            "SetVelocity(${1:velocity})$0"
+        ],
+        "description": "CMOVEDATA [Shared] Sets the player's velocity\n\n[Vector] velocity\n  The velocity to set",
+        "prefix": "SetVelocity"
+    }
+}

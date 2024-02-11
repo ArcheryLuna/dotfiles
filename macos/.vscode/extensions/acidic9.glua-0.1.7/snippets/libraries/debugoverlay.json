@@ -1,0 +1,86 @@
+{
+    "debugoverlay.Axis": {
+        "body": [
+            "debugoverlay.Axis(${1:origin}, ${2:ang}, ${3:size}, ${4:lifetime=1}, ${5:ignoreZ=false})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays an axis indicator at the specified position.\n\n[Vector] origin\n  Position origin\n\n[Angle] ang\n  Angle of the axis\n\n[number] size\n  Size of the axis\n\n[number] lifetime=1\n  Number of seconds to appear\n\n[boolean] ignoreZ=false\n  If true, will draw on top of everything; ignoring the Z buffer",
+        "prefix": "debugoverlay.Axis"
+    },
+    "debugoverlay.Box": {
+        "body": [
+            "debugoverlay.Box(${1:origin}, ${2:mins}, ${3:maxs}, ${4:lifetime=1}, ${5:color=Color(255,255,255)})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays a solid coloured box at the specified position.\n\n[Vector] origin\n  Position origin\n\n[Vector] mins\n  Minimum bounds of the box\n\n[Vector] maxs\n  Maximum bounds of the box\n\n[number] lifetime=1\n  Number of seconds to appear\n\n[table] color=Color(255,255,255)\n  The color of the box. Uses the Color structure",
+        "prefix": "debugoverlay.Box"
+    },
+    "debugoverlay.BoxAngles": {
+        "body": [
+            "debugoverlay.BoxAngles(${1:pos}, ${2:mins}, ${3:maxs}, ${4:ang}, ${5:lifetime=1}, ${6:color=Color(255,255,255)})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays a solid colored rotated box at the specified position.\n\n[Vector] pos\n  World position\n\n[Vector] mins\n  The mins of the box (lowest corner)\n\n[Vector] maxs\n  The maxs of the box (highest corner)\n\n[Angle] ang\n  The angle to draw the box at\n\n[number] lifetime=1\n  Amount of seconds to show the box\n\n[table] color=Color(255,255,255)\n  The color of the box. Uses the Color structure",
+        "prefix": "debugoverlay.BoxAngles"
+    },
+    "debugoverlay.Cross": {
+        "body": [
+            "debugoverlay.Cross(${1:position}, ${2:size}, ${3:lifetime=1}, ${4:color=Color(255,255,255)}, ${5:ignoreZ=false})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Creates a coloured cross at the specified position for the specified time.\n\n[Vector] position\n  Position origin\n\n[number] size\n  Size of the cross\n\n[number] lifetime=1\n  Number of seconds the cross to appear\n\n[table] color=Color(255,255,255)\n  The color of the cross. Uses the Color structure\n\n[boolean] ignoreZ=false\n  If true, will draw on top of everything; ignoring the Z buffer",
+        "prefix": "debugoverlay.Cross"
+    },
+    "debugoverlay.EntityTextAtPosition": {
+        "body": [
+            "debugoverlay.EntityTextAtPosition(${1:pos}, ${2:line}, ${3:text}, ${4:lifetime=1}, ${5:color=Color(255,255,255)})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays 2D text at the specified coordinates.\n\n[Vector] pos\n  The position in 3D to display the text.\n\n[number] line\n  Line of text, will offset text on the to display the new line unobstructed\n\n[string] text\n  The text to display\n\n[number] lifetime=1\n  Number of seconds to appear\n\n[table] color=Color(255,255,255)\n  The color of the box. Uses the Color structure",
+        "prefix": "debugoverlay.EntityTextAtPosition"
+    },
+    "debugoverlay.Grid": {
+        "body": [
+            "debugoverlay.Grid(${1:position})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] \n\n[Vector] position",
+        "prefix": "debugoverlay.Grid"
+    },
+    "debugoverlay.Line": {
+        "body": [
+            "debugoverlay.Line(${1:pos1}, ${2:pos2}, ${3:lifetime=1}, ${4:color=Color(255,255,255)}, ${5:ignoreZ=false})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays a coloured line at the specified position.\n\n[Vector] pos1\n  First position of the line\n\n[Vector] pos2\n  Second position of the line\n\n[number] lifetime=1\n  Number of seconds to appear\n\n[table] color=Color(255,255,255)\n  The color of the line. Uses the Color structure\n\n[boolean] ignoreZ=false\n  If true, will draw on top of everything; ignoring the Z buffer",
+        "prefix": "debugoverlay.Line"
+    },
+    "debugoverlay.ScreenText": {
+        "body": [
+            "debugoverlay.ScreenText(${1:x}, ${2:y}, ${3:text}, ${4:lifetime=1}, ${5:color=Color(255,255,255)})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays text triangle at the specified coordinates.\n\n[number] x\n  The position of the text, from 0 ( left ) to 1 ( right ).\n\n[number] y\n  The position of the text, from 0 ( top ) to 1 ( bottom ).\n\n[string] text\n  The text to display\n\n[number] lifetime=1\n  Number of seconds to appear\n\n[table] color=Color(255,255,255)\n  The color of the box. Uses the Color structure",
+        "prefix": "debugoverlay.ScreenText"
+    },
+    "debugoverlay.Sphere": {
+        "body": [
+            "debugoverlay.Sphere(${1:origin}, ${2:size}, ${3:lifetime=1}, ${4:color=Color(255,255,255)}, ${5:ignoreZ=false})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays a coloured sphere at the specified position.\n\n[Vector] origin\n  Position origin\n\n[number] size\n  Size of the sphere\n\n[number] lifetime=1\n  Number of seconds to appear\n\n[table] color=Color(255,255,255)\n  The color of the sphere. Uses the Color structure\n\n[boolean] ignoreZ=false\n  If true, will draw on top of everything; ignoring the Z buffer",
+        "prefix": "debugoverlay.Sphere"
+    },
+    "debugoverlay.SweptBox": {
+        "body": [
+            "debugoverlay.SweptBox(${1:vStart}, ${2:vEnd}, ${3:vMins}, ${4:vMaxs}, ${5:ang}, ${6:lifetime=1}, ${7:color=Color(255,255,255)})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays \"swept\" box, two boxes connected with lines by their verices.\n\n[Vector] vStart\n  The start position of the box.\n\n[Vector] vEnd\n  The end position of the box.\n\n[Vector] vMins\n  The \"minimum\" edge of the box.\n\n[Vector] vMaxs\n  The \"maximum\" edge of the box.\n\n[Angle] ang\n  \n\n[number] lifetime=1\n  Number of seconds to appear\n\n[table] color=Color(255,255,255)\n  The color of the box. Uses the Color structure",
+        "prefix": "debugoverlay.SweptBox"
+    },
+    "debugoverlay.Text": {
+        "body": [
+            "debugoverlay.Text(${1:origin}, ${2:text}, ${3:lifetime=1}, ${4:viewCheck=false})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays text at the specified position.\n\n[Vector] origin\n  Position origin\n\n[string] text\n  String message to display\n\n[number] lifetime=1\n  Number of seconds to appear\n\n[boolean] viewCheck=false\n  Clip text that is obscured",
+        "prefix": "debugoverlay.Text"
+    },
+    "debugoverlay.Triangle": {
+        "body": [
+            "debugoverlay.Triangle(${1:pos1}, ${2:pos2}, ${3:pos3}, ${4:lifetime=1}, ${5:color=Color(255,255,255)}, ${6:ignoreZ=false})$0"
+        ],
+        "description": "DEBUGOVERLAY [Shared] Displays a colored triangle at the specified coordinates.\n\n[Vector] pos1\n  First point of the triangle\n\n[Vector] pos2\n  Second point of the triangle\n\n[Vector] pos3\n  Third point of the triangle\n\n[number] lifetime=1\n  Number of seconds to appear\n\n[table] color=Color(255,255,255)\n  The color of the box. Uses the Color structure\n\n[boolean] ignoreZ=false\n  If true, will draw on top of everything; ignoring the Z buffer",
+        "prefix": "debugoverlay.Triangle"
+    }
+}

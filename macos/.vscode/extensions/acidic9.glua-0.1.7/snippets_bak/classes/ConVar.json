@@ -1,0 +1,79 @@
+{
+	"ConVar/GetBool": {
+		"body": [
+			"GetBool()$0"
+		],
+		"description": "Tries to convert the current string value of a",
+		"prefix": "GetBool"
+	},
+	"ConVar/GetDefault": {
+		"body": [
+			"GetDefault()$0"
+		],
+		"description": "Returns the default value of the",
+		"prefix": "GetDefault"
+	},
+	"ConVar/GetFloat": {
+		"body": [
+			"GetFloat()$0"
+		],
+		"description": "Attempts to convert the",
+		"prefix": "GetFloat"
+	},
+	"ConVar/GetHelpText": {
+		"body": [
+			"GetHelpText()$0"
+		],
+		"description": "Returns the help text assigned to that convar.",
+		"prefix": "GetHelpText"
+	},
+	"ConVar/GetInt": {
+		"body": [
+			"GetInt()$0"
+		],
+		"description": "Attempts to convert the",
+		"prefix": "GetInt"
+	},
+	"ConVar/GetName": {
+		"body": [
+			"GetName()$0"
+		],
+		"description": "Returns the name of the",
+		"prefix": "GetName"
+	},
+	"ConVar/GetString": {
+		"body": [
+			"GetString()$0"
+		],
+		"description": "Returns the current",
+		"prefix": "GetString"
+	},
+	"ConVar/SetBool": {
+		"body": [
+			"SetBool(${1:value})$0"
+		],
+		"description": "Sets a ConVar\u0026#39;s value to 1 or 0 based on the input boolean. This can only be ran on ConVars created from within Lua.",
+		"prefix": "SetBool"
+	},
+	"ConVar/SetFloat": {
+		"body": [
+			"SetFloat(${1:value})$0"
+		],
+		"description": "Sets a ConVar\u0026#39;s value to to the input number. This can only be ran on ConVars created from within Lua.",
+		"prefix": "SetFloat"
+	},
+	"ConVar/SetInt": {
+		"body": [
+			"SetInt(${1:value})$0"
+		],
+		"description": "Sets a ConVar\u0026#39;s value to the input number after converting it to an integer. This can only be ran on ConVars created from within Lua.",
+		"prefix": "SetInt"
+	},
+	"ConVar/SetString": {
+		"body": [
+			"SetString(${1:value})$0"
+		],
+		"description": "Sets a ConVar\u0026#39;s value to the input string. This can only be ran on ConVars created from within Lua.",
+		"prefix": "SetString"
+	}
+}

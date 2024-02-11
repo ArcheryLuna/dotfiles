@@ -1,0 +1,37 @@
+{
+	"IVideoWriter/AddFrame": {
+		"body": [
+			"AddFrame(${1:frameTime}, ${2:downsample})$0"
+		],
+		"description": "Adds the current framebuffer to the video stream.",
+		"prefix": "AddFrame"
+	},
+	"IVideoWriter/Finish": {
+		"body": [
+			"Finish()$0"
+		],
+		"description": "Ends the video recording and dumps it to disk.",
+		"prefix": "Finish"
+	},
+	"IVideoWriter/Height": {
+		"body": [
+			"Height()$0"
+		],
+		"description": "Returns the height of the video stream.",
+		"prefix": "Height"
+	},
+	"IVideoWriter/SetRecordSound": {
+		"body": [
+			"SetRecordSound(${1:record})$0"
+		],
+		"description": "Sets whether to record sound or not.",
+		"prefix": "SetRecordSound"
+	},
+	"IVideoWriter/Width": {
+		"body": [
+			"Width()$0"
+		],
+		"description": "Returns the width of the video stream.",
+		"prefix": "Width"
+	}
+}

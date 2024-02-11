@@ -1,0 +1,16 @@
+{
+    "SetHeight": {
+        "body": [
+            "SetHeight(${1:num=2})$0"
+        ],
+        "description": "DMODELSELECT [Client] \n\n[number] num=2\n  Basically how many rows of 64x64 px spawnicons should fit in this DModelSelect",
+        "prefix": "SetHeight"
+    },
+    "SetModelList": {
+        "body": [
+            "SetModelList(${1:models}, ${2:convar}, ${3:dontSort}, ${4:DontCallListConVars})$0"
+        ],
+        "description": "DMODELSELECT [Client] Called to set the list of models within the panel element.\n\n[table] models\n  Each key is a model path, the value is a kay-value table where they key is a convar name and value is the value to set to that convar.\n\n[string] convar\n  \n\n[boolean] dontSort\n  \n\n[boolean] DontCallListConVars",
+        "prefix": "SetModelList"
+    }
+}

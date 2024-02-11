@@ -1,0 +1,163 @@
+{
+    "AddControlPoint": {
+        "body": [
+            "AddControlPoint(${1:cpID}, ${2:ent}, ${3:partAttachment}, ${4:entAttachment=0}, ${5:offset=Vector(0,0,0)})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] Adds a control point to the particle system.\n\n[number] cpID\n  The control point ID, 0 to 63.\n\n[Entity] ent\n  The entity to attach the control point to.\n\n[number] partAttachment\n  See PATTACH_ Enums.\n\n[number] entAttachment=0\n  The attachment ID on the entity to attach the particle system to\n\n[Vector] offset=Vector(0,0,0)\n  The offset from the Entity:GetPos of the entity we are attaching this CP to.",
+        "prefix": "AddControlPoint"
+    },
+    "GetAutoUpdateBBox": {
+        "body": [
+            "GetAutoUpdateBBox()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "GetAutoUpdateBBox"
+    },
+    "GetEffectName": {
+        "body": [
+            "GetEffectName()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "GetEffectName"
+    },
+    "GetHighestControlPoint": {
+        "body": [
+            "GetHighestControlPoint()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "GetHighestControlPoint"
+    },
+    "GetOwner": {
+        "body": [
+            "GetOwner()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "GetOwner"
+    },
+    "IsFinished": {
+        "body": [
+            "IsFinished()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "IsFinished"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "IsValid"
+    },
+    "IsViewModelEffect": {
+        "body": [
+            "IsViewModelEffect()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "IsViewModelEffect"
+    },
+    "Render": {
+        "body": [
+            "Render()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "Render"
+    },
+    "Restart": {
+        "body": [
+            "Restart()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "Restart"
+    },
+    "SetControlPoint": {
+        "body": [
+            "SetControlPoint(${1:cpID}, ${2:value})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[number] cpID\n  The control point ID, 0 to 63.\n\n[Vector] value\n  The value to set for given control point.",
+        "prefix": "SetControlPoint"
+    },
+    "SetControlPointEntity": {
+        "body": [
+            "SetControlPointEntity(${1:child}, ${2:parent})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[number] child\n  The child control point ID, 0 to 63.\n\n[Entity] parent\n  The parent entity to follow.",
+        "prefix": "SetControlPointEntity"
+    },
+    "SetControlPointForwardVector": {
+        "body": [
+            "SetControlPointForwardVector(${1:cpID}, ${2:forward})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[number] cpID\n  The control point ID, 0 to 63.\n\n[Vector] forward\n  The forward direction for given control point",
+        "prefix": "SetControlPointForwardVector"
+    },
+    "SetControlPointOrientation": {
+        "body": [
+            "SetControlPointOrientation(${1:cpID}, ${2:forward}, ${3:right}, ${4:up})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] Sets the orientation for given control point.\n\n[number] cpID\n  The control point ID, 0 to 63.\n\n[Vector] forward\n  The forward direction for given control point\n\n[Vector] right\n  The right direction for given control point\n\n[Vector] up\n  The up direction for given control point",
+        "prefix": "SetControlPointOrientation"
+    },
+    "SetControlPointParent": {
+        "body": [
+            "SetControlPointParent(${1:child}, ${2:parent})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[number] child\n  The child control point ID, 0 to 63.\n\n[number] parent\n  The parent control point ID, 0 to 63.",
+        "prefix": "SetControlPointParent"
+    },
+    "SetControlPointRightVector": {
+        "body": [
+            "SetControlPointRightVector(${1:cpID}, ${2:right})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[number] cpID\n  The control point ID, 0 to 63.\n\n[Vector] right\n  The right direction for given control point.",
+        "prefix": "SetControlPointRightVector"
+    },
+    "SetControlPointUpVector": {
+        "body": [
+            "SetControlPointUpVector(${1:cpID}, ${2:upward})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[number] cpID\n  The control point ID, 0 to 63.\n\n[Vector] upward\n  The upward direction for given control point",
+        "prefix": "SetControlPointUpVector"
+    },
+    "SetIsViewModelEffect": {
+        "body": [
+            "SetIsViewModelEffect(${1:isViewModel})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[boolean] isViewModel",
+        "prefix": "SetIsViewModelEffect"
+    },
+    "SetShouldDraw": {
+        "body": [
+            "SetShouldDraw(${1:should})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[boolean] should\n  Whether to automatically draw the particle effect or not.",
+        "prefix": "SetShouldDraw"
+    },
+    "SetSortOrigin": {
+        "body": [
+            "SetSortOrigin(${1:origin})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[Vector] origin\n  The new sort origin.",
+        "prefix": "SetSortOrigin"
+    },
+    "StartEmission": {
+        "body": [
+            "StartEmission(${1:infiniteOnly=false})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] \n\n[boolean] infiniteOnly=false",
+        "prefix": "StartEmission"
+    },
+    "StopEmission": {
+        "body": [
+            "StopEmission(${1:infiniteOnly=false}, ${2:removeAllParticles=false}, ${3:wakeOnStop=false})$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client] Stops the particle emission.\n\n[boolean] infiniteOnly=false\n  \n\n[boolean] removeAllParticles=false\n  \n\n[boolean] wakeOnStop=false",
+        "prefix": "StopEmission"
+    },
+    "StopEmissionAndDestroyImmediately": {
+        "body": [
+            "StopEmissionAndDestroyImmediately()$0"
+        ],
+        "description": "CNEWPARTICLEEFFECT [Client]",
+        "prefix": "StopEmissionAndDestroyImmediately"
+    }
+}

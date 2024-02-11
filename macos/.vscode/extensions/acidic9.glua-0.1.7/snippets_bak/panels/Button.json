@@ -1,0 +1,9 @@
+{
+	"Panel/SetActionFunction": {
+		"body": [
+			"SetActionFunction(${1:func})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetActionFunction"
+	}
+}

@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "PHPUnit",
+      "type": "php",
+      "request": "launch",
+      "program": "${workspaceRoot}/vendor/phpunit/phpunit/phpunit",
+      // "args": ["--filter", "testDefinitionForSelfKeyword"],
+      "cwd": "${workspaceRoot}",
+      "port": 0,
+      "runtimeArgs": ["-dxdebug.mode=debug", "-dxdebug.start_with_request=1", "-dxdebug.client_port=${port}"]
+    },
+    {
+      "name": "Listen for XDebug",
+      "type": "php",
+      "request": "launch",
+      "port": 9003
+    },
+    {
+      "name": "parse-stubs",
+      "type": "php",
+      "request": "launch",
+      "runtimeExecutable": "composer.bat",
+      "runtimeArgs": ["run-script", "parse-stubs"],
+      "port": 9003,
+      "cwd": "${workspaceRoot}",
+      "env": {
+        "COMPOSER_ALLOW_XDEBUG": "1",
+        "APPDATA": "${env:APPDATA}"
+      }
+    }
+  ]
+}

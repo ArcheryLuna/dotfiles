@@ -1,0 +1,58 @@
+{
+	"cleanup/Add": {
+		"body": [
+			"cleanup.Add(${1:pl}, ${2:type}, ${3:ent})$0"
+		],
+		"description": "Adds an entity to a player\u0026#39;s cleanup list.",
+		"prefix": "cleanup.Add"
+	},
+	"cleanup/CC_AdminCleanup": {
+		"body": [
+			"cleanup.CC_AdminCleanup(${1:pl}, ${2:command}, ${3:args})$0"
+		],
+		"description": "No description available.",
+		"prefix": "cleanup.CC_AdminCleanup"
+	},
+	"cleanup/CC_Cleanup": {
+		"body": [
+			"cleanup.CC_Cleanup(${1:pl}, ${2:command}, ${3:args})$0"
+		],
+		"description": "No description available.",
+		"prefix": "cleanup.CC_Cleanup"
+	},
+	"cleanup/GetList": {
+		"body": [
+			"cleanup.GetList()$0"
+		],
+		"description": "Gets the cleanup list.",
+		"prefix": "cleanup.GetList"
+	},
+	"cleanup/GetTable": {
+		"body": [
+			"cleanup.GetTable()$0"
+		],
+		"description": "Gets the table of cleanup types.",
+		"prefix": "cleanup.GetTable"
+	},
+	"cleanup/Register": {
+		"body": [
+			"cleanup.Register(${1:type})$0"
+		],
+		"description": "Registers a new cleanup type.",
+		"prefix": "cleanup.Register"
+	},
+	"cleanup/ReplaceEntity": {
+		"body": [
+			"cleanup.ReplaceEntity(${1:from}, ${2:to})$0"
+		],
+		"description": "Replaces one entity in the cleanup module with another",
+		"prefix": "cleanup.ReplaceEntity"
+	},
+	"cleanup/UpdateUI": {
+		"body": [
+			"cleanup.UpdateUI()$0"
+		],
+		"description": "Repopulates the clients cleanup menu",
+		"prefix": "cleanup.UpdateUI"
+	}
+}

@@ -1,0 +1,58 @@
+{
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "DSPRITE [Client]",
+        "prefix": "GetColor"
+    },
+    "GetHandle": {
+        "body": [
+            "GetHandle()$0"
+        ],
+        "description": "DSPRITE [Client]",
+        "prefix": "GetHandle"
+    },
+    "GetMaterial": {
+        "body": [
+            "GetMaterial()$0"
+        ],
+        "description": "DSPRITE [Client]",
+        "prefix": "GetMaterial"
+    },
+    "GetRotation": {
+        "body": [
+            "GetRotation()$0"
+        ],
+        "description": "DSPRITE [Client]",
+        "prefix": "GetRotation"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color})$0"
+        ],
+        "description": "DSPRITE [Client] \n\n[table] color\n  The Color to use.",
+        "prefix": "SetColor"
+    },
+    "SetHandle": {
+        "body": [
+            "SetHandle(${1:})$0"
+        ],
+        "description": "DSPRITE [Client] \n\n[Vector]",
+        "prefix": "SetHandle"
+    },
+    "SetMaterial": {
+        "body": [
+            "SetMaterial(${1:material})$0"
+        ],
+        "description": "DSPRITE [Client] \n\n[IMaterial] material\n  The material to use. This will ideally be an UnlitGeneric.",
+        "prefix": "SetMaterial"
+    },
+    "SetRotation": {
+        "body": [
+            "SetRotation(${1:ang})$0"
+        ],
+        "description": "DSPRITE [Client] \n\n[number] ang\n  The anti-clockwise rotation in degrees.",
+        "prefix": "SetRotation"
+    }
+}

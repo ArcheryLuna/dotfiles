@@ -1,0 +1,30 @@
+{
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "DLABELURL [Client]",
+        "prefix": "GetColor"
+    },
+    "GetTextColor": {
+        "body": [
+            "GetTextColor()$0"
+        ],
+        "description": "DLABELURL [Client]",
+        "prefix": "GetTextColor"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:col})$0"
+        ],
+        "description": "DLABELURL [Client] \n\n[table] col\n  The Color to use.",
+        "prefix": "SetColor"
+    },
+    "SetTextColor": {
+        "body": [
+            "SetTextColor(${1:col})$0"
+        ],
+        "description": "DLABELURL [Client] \n\n[table] col\n  The Color to use.",
+        "prefix": "SetTextColor"
+    }
+}

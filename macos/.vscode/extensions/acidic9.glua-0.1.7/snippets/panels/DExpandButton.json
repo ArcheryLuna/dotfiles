@@ -1,0 +1,16 @@
+{
+    "GetExpanded": {
+        "body": [
+            "GetExpanded()$0"
+        ],
+        "description": "DEXPANDBUTTON [Client]",
+        "prefix": "GetExpanded"
+    },
+    "SetExpanded": {
+        "body": [
+            "SetExpanded(${1:expanded})$0"
+        ],
+        "description": "DEXPANDBUTTON [Client] \n\n[boolean] expanded\n  True to expand ( visually will show a \"-\" )",
+        "prefix": "SetExpanded"
+    }
+}

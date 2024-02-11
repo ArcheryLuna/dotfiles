@@ -1,0 +1,177 @@
+{
+	"Vector/Add": {
+		"body": [
+			"Add(${1:vector})$0"
+		],
+		"description": "Adds the values of the second vector to the orignal vector, this function can be used to avoid garbage collection.",
+		"prefix": "Add"
+	},
+	"Vector/Angle": {
+		"body": [
+			"Angle()$0"
+		],
+		"description": "Returns an angle representing the normal of the vector.",
+		"prefix": "Angle"
+	},
+	"Vector/AngleEx": {
+		"body": [
+			"AngleEx(${1:up})$0"
+		],
+		"description": "Returns the angle of the vector, but instead of assuming that up is",
+		"prefix": "AngleEx"
+	},
+	"Vector/Cross": {
+		"body": [
+			"Cross(${1:otherVector})$0"
+		],
+		"description": "Calculates the cross product of this vector and the passed one.",
+		"prefix": "Cross"
+	},
+	"Vector/DistToSqr": {
+		"body": [
+			"DistToSqr(${1:otherVec})$0"
+		],
+		"description": "Returns the squared distance of 2 vectors, this is faster than",
+		"prefix": "DistToSqr"
+	},
+	"Vector/Distance": {
+		"body": [
+			"Distance(${1:otherVector})$0"
+		],
+		"description": "Returns the pythagorean distance between the vector and the other vector.",
+		"prefix": "Distance"
+	},
+	"Vector/Dot": {
+		"body": [
+			"Dot(${1:otherVector})$0"
+		],
+		"description": "Returns the",
+		"prefix": "Dot"
+	},
+	"Vector/DotProduct": {
+		"body": [
+			"DotProduct(${1:Vector})$0"
+		],
+		"description": "No description available.",
+		"prefix": "DotProduct"
+	},
+	"Vector/GetNormal": {
+		"body": [
+			"GetNormal()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNormal"
+	},
+	"Vector/GetNormalized": {
+		"body": [
+			"GetNormalized()$0"
+		],
+		"description": "Returns a normalized version of the vector. Normalized means vector with same direction but with length of 1.",
+		"prefix": "GetNormalized"
+	},
+	"Vector/IsEqualTol": {
+		"body": [
+			"IsEqualTol(${1:compare}, ${2:tolerance})$0"
+		],
+		"description": "Returns if the vector is equal to another vector with the given tolerance.",
+		"prefix": "IsEqualTol"
+	},
+	"Vector/IsZero": {
+		"body": [
+			"IsZero()$0"
+		],
+		"description": "Checks whenever all fields of the vector are 0.",
+		"prefix": "IsZero"
+	},
+	"Vector/Length": {
+		"body": [
+			"Length()$0"
+		],
+		"description": "Returns the Euclidean length of the vector: √",
+		"prefix": "Length"
+	},
+	"Vector/Length2D": {
+		"body": [
+			"Length2D()$0"
+		],
+		"description": "Returns the length of the vector in two dimensions, without the Z axis.",
+		"prefix": "Length2D"
+	},
+	"Vector/Length2DSqr": {
+		"body": [
+			"Length2DSqr()$0"
+		],
+		"description": "Returns the squared length of the vectors x and y value, x² + y².",
+		"prefix": "Length2DSqr"
+	},
+	"Vector/LengthSqr": {
+		"body": [
+			"LengthSqr()$0"
+		],
+		"description": "Returns the squared length of the vector, x² + y² + z².",
+		"prefix": "LengthSqr"
+	},
+	"Vector/Mul": {
+		"body": [
+			"Mul(${1:multiplier})$0"
+		],
+		"description": "Scales the vector by the given number, that means x, y and z are multiplied by that value.",
+		"prefix": "Mul"
+	},
+	"Vector/Normalize": {
+		"body": [
+			"Normalize()$0"
+		],
+		"description": "Normalizes the given vector. This changes the vector you call it on, if you want to return a normalized copy without affecting the original, use",
+		"prefix": "Normalize"
+	},
+	"Vector/Rotate": {
+		"body": [
+			"Rotate(${1:rotation})$0"
+		],
+		"description": "Rotates a vector by the given angle. Doesn\u0026#39;t return anything, but rather changes the original vector.",
+		"prefix": "Rotate"
+	},
+	"Vector/Set": {
+		"body": [
+			"Set(${1:vector})$0"
+		],
+		"description": "Copies the values from the second vector to the first vector.",
+		"prefix": "Set"
+	},
+	"Vector/Sub": {
+		"body": [
+			"Sub(${1:vector})$0"
+		],
+		"description": "Substracts the values of the second vector from the orignal vector, this function can be used to avoid garbage collection.",
+		"prefix": "Sub"
+	},
+	"Vector/ToColor": {
+		"body": [
+			"ToColor()$0"
+		],
+		"description": "Translates the vector normalized vector ( length is 1 ) into a",
+		"prefix": "ToColor"
+	},
+	"Vector/ToScreen": {
+		"body": [
+			"ToScreen()$0"
+		],
+		"description": "Translates the vectors position into 2D user screen coordinates.",
+		"prefix": "ToScreen"
+	},
+	"Vector/WithinAABox": {
+		"body": [
+			"WithinAABox(${1:boxStart}, ${2:boxEnd})$0"
+		],
+		"description": "Returns whenever the given vector is in a box created by the 2 other vectors.",
+		"prefix": "WithinAABox"
+	},
+	"Vector/Zero": {
+		"body": [
+			"Zero()$0"
+		],
+		"description": "Sets x, y and z to 0.",
+		"prefix": "Zero"
+	}
+}

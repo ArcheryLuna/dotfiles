@@ -1,0 +1,37 @@
+{
+    "BuildControls": {
+        "body": [
+            "BuildControls()$0"
+        ],
+        "description": "DCOLORCOMBO [Client]",
+        "prefix": "BuildControls"
+    },
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "DCOLORCOMBO [Client]",
+        "prefix": "GetColor"
+    },
+    "IsEditing": {
+        "body": [
+            "IsEditing()$0"
+        ],
+        "description": "DCOLORCOMBO [Client]",
+        "prefix": "IsEditing"
+    },
+    "OnValueChanged": {
+        "body": [
+            "OnValueChanged(${1:newcol})$0"
+        ],
+        "description": "DCOLORCOMBO [Client] \n\n[table] newcol",
+        "prefix": "OnValueChanged"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:clr})$0"
+        ],
+        "description": "DCOLORCOMBO [Client] \n\n[table] clr\n  A Color structure.",
+        "prefix": "SetColor"
+    }
+}

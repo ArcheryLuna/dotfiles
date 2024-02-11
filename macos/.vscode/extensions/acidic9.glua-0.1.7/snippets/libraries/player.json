@@ -1,0 +1,65 @@
+{
+    "player.CreateNextBot": {
+        "body": [
+            "player.CreateNextBot(${1:botName})$0"
+        ],
+        "description": "PLAYER [Server] Similar to the serverside command \"bot\", this function creates a new Player bot with the given name. This bot will not obey to the usual \"bot_*\" commands, and it's the same bot base used in TF2 and CS:S. The best way to control the behaviour of a Player bot right now is to use the GM:StartCommand hook and modify its input serverside.\n\n[string] botName\n  The name of the bot, using an already existing name will append brackets at the end of it with a number pertaining it.\n\nExample: \"Bot name test\", \"Bot name test(1)\".",
+        "prefix": "player.CreateNextBot"
+    },
+    "player.GetAll": {
+        "body": [
+            "player.GetAll()$0"
+        ],
+        "description": "PLAYER [Shared] Gets all the current players in the server (not including connecting clients).",
+        "prefix": "player.GetAll"
+    },
+    "player.GetBots": {
+        "body": [
+            "player.GetBots()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "player.GetBots"
+    },
+    "player.GetByID": {
+        "body": [
+            "player.GetByID(${1:connectionID})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] connectionID\n  The connection ID to find the player by.",
+        "prefix": "player.GetByID"
+    },
+    "player.GetBySteamID": {
+        "body": [
+            "player.GetBySteamID(${1:steamID})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[string] steamID\n  The Player:SteamID to find the player by.",
+        "prefix": "player.GetBySteamID"
+    },
+    "player.GetBySteamID64": {
+        "body": [
+            "player.GetBySteamID64(${1:steamID64})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[string] steamID64\n  The Player:SteamID64 to find the player by.",
+        "prefix": "player.GetBySteamID64"
+    },
+    "player.GetByUniqueID": {
+        "body": [
+            "player.GetByUniqueID(${1:uniqueID})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[string] uniqueID\n  The Player:UniqueID to find the player by.",
+        "prefix": "player.GetByUniqueID"
+    },
+    "player.GetCount": {
+        "body": [
+            "player.GetCount()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "player.GetCount"
+    },
+    "player.GetHumans": {
+        "body": [
+            "player.GetHumans()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "player.GetHumans"
+    }
+}

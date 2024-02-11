@@ -1,0 +1,198 @@
+{
+    "duplicator.Allow": {
+        "body": [
+            "duplicator.Allow(${1:classname})$0"
+        ],
+        "description": "DUPLICATOR [Shared] \n\n[string] classname\n  An entity's classname",
+        "prefix": "duplicator.Allow"
+    },
+    "duplicator.ApplyBoneModifiers": {
+        "body": [
+            "duplicator.ApplyBoneModifiers(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[Player] ply\n  The player whose entity this is\n\n[Entity] ent\n  The entity in question",
+        "prefix": "duplicator.ApplyBoneModifiers"
+    },
+    "duplicator.ApplyEntityModifiers": {
+        "body": [
+            "duplicator.ApplyEntityModifiers(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[Player] ply\n  The player whose entity this is\n\n[Entity] ent\n  The entity in question",
+        "prefix": "duplicator.ApplyEntityModifiers"
+    },
+    "duplicator.ClearEntityModifier": {
+        "body": [
+            "duplicator.ClearEntityModifier(${1:ent}, ${2:key})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[Entity] ent\n  The entity the modification is stored on\n\n[any] key\n  The key of the stored entity modifier",
+        "prefix": "duplicator.ClearEntityModifier"
+    },
+    "duplicator.Copy": {
+        "body": [
+            "duplicator.Copy(${1:ent}, ${2:tableToAdd={}})$0"
+        ],
+        "description": "DUPLICATOR [Server] Copies the entity, and all of its constraints and entities, then returns them in a table.\n\n[Entity] ent\n  The entity to duplicate. The function will automatically copy all constrained entities.\n\n[table] tableToAdd={}\n  A preexisting table to add entities and constraints in from.\n\nUses the same table format as the table returned from this function.",
+        "prefix": "duplicator.Copy"
+    },
+    "duplicator.CopyEntTable": {
+        "body": [
+            "duplicator.CopyEntTable(${1:ent})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[Entity] ent\n  The entity table to save",
+        "prefix": "duplicator.CopyEntTable"
+    },
+    "duplicator.CopyEnts": {
+        "body": [
+            "duplicator.CopyEnts(${1:ents})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[table] ents\n  A table of entities to save/copy.",
+        "prefix": "duplicator.CopyEnts"
+    },
+    "duplicator.CreateConstraintFromTable": {
+        "body": [
+            "duplicator.CreateConstraintFromTable(${1:constraint}, ${2:entityList})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[table] constraint\n  Saved/copied constraint table\n\n[table] entityList\n  The list of entities that are to be constrained",
+        "prefix": "duplicator.CreateConstraintFromTable"
+    },
+    "duplicator.CreateEntityFromTable": {
+        "body": [
+            "duplicator.CreateEntityFromTable(${1:ply}, ${2:entTable})$0"
+        ],
+        "description": "DUPLICATOR [Server] \"Create an entity from a table.\" \nThis creates an entity using the data in EntTable.\nIf an entity factory has been registered for the entity's Class, it will be called. \nOtherwise, duplicator.GenericDuplicatorFunction will be called instead.\n\n[Player] ply\n  The player who wants to create something\n\n[table] entTable\n  The duplication data to build the entity with. See EntityCopyData structure",
+        "prefix": "duplicator.CreateEntityFromTable"
+    },
+    "duplicator.DoBoneManipulator": {
+        "body": [
+            "duplicator.DoBoneManipulator(${1:ent}, ${2:bones})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[Entity] ent\n  The entity to be bone manipulated\n\n[table] bones\n  Table with a BoneManipulationData structure for every bone (that has manipulations applied) using the bone ID as the table index.",
+        "prefix": "duplicator.DoBoneManipulator"
+    },
+    "duplicator.DoFlex": {
+        "body": [
+            "duplicator.DoFlex(${1:ent}, ${2:flex}, ${3:scale=nil})$0"
+        ],
+        "description": "DUPLICATOR [Server] Restores the flex data using Entity:SetFlexWeight and Entity:SetFlexScale\n\n[Entity] ent\n  The entity to restore the flexes on\n\n[table] flex\n  The flexes to restore\n\n[number] scale=nil\n  The flex scale to apply. (Flex scale is unchanged if omitted)",
+        "prefix": "duplicator.DoFlex"
+    },
+    "duplicator.DoGeneric": {
+        "body": [
+            "duplicator.DoGeneric(${1:ent}, ${2:data})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[Entity] ent\n  The entity to be applied upon\n\n[table] data\n  The data to be applied onto the entity",
+        "prefix": "duplicator.DoGeneric"
+    },
+    "duplicator.DoGenericPhysics": {
+        "body": [
+            "duplicator.DoGenericPhysics(${1:ent}, ${2:ply=nil}, ${3:data})$0"
+        ],
+        "description": "DUPLICATOR [Server] \"Applies bone data, generically.\"\nIf data contains a PhysicsObjects table, it moves, re-angles and if relevent freezes all specified bones, first converting from local coordinates to world coordinates.\n\n[Entity] ent\n  The entity to be applied upon\n\n[Player] ply=nil\n  The player who owns the entity. Unused in function as of early 2013\n\n[table] data\n  The data to be applied onto the entity",
+        "prefix": "duplicator.DoGenericPhysics"
+    },
+    "duplicator.FindEntityClass": {
+        "body": [
+            "duplicator.FindEntityClass(${1:name})$0"
+        ],
+        "description": "DUPLICATOR [Shared] \n\n[string] name\n  The name of the entity class factory",
+        "prefix": "duplicator.FindEntityClass"
+    },
+    "duplicator.GenericDuplicatorFunction": {
+        "body": [
+            "duplicator.GenericDuplicatorFunction(${1:ply}, ${2:data})$0"
+        ],
+        "description": "DUPLICATOR [Server] \"Generic function for duplicating stuff\" \nThis is called when duplicator.CreateEntityFromTable can't find an entity factory to build with. It calls duplicator.DoGeneric and duplicator.DoGenericPhysics to apply standard duplicator stored things such as the model and position.\n\n[Player] ply\n  The player who wants to create something\n\n[table] data\n  The duplication data to build the entity with",
+        "prefix": "duplicator.GenericDuplicatorFunction"
+    },
+    "duplicator.GetAllConstrainedEntitiesAndConstraints": {
+        "body": [
+            "duplicator.GetAllConstrainedEntitiesAndConstraints(${1:ent}, ${2:entStorageTable}, ${3:constraintStorageTable})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[Entity] ent\n  The entity to start from\n\n[table] entStorageTable\n  The table the entities will be inserted into\n\n[table] constraintStorageTable\n  The table the constraints will be inserted into",
+        "prefix": "duplicator.GetAllConstrainedEntitiesAndConstraints"
+    },
+    "duplicator.IsAllowed": {
+        "body": [
+            "duplicator.IsAllowed(${1:classname})$0"
+        ],
+        "description": "DUPLICATOR [Shared] \n\n[string] classname\n  An entity's classname",
+        "prefix": "duplicator.IsAllowed"
+    },
+    "duplicator.Paste": {
+        "body": [
+            "duplicator.Paste(${1:Player}, ${2:EntityList}, ${3:ConstraintList})$0"
+        ],
+        "description": "DUPLICATOR [Server] \"Given entity list and constraint list, create all entities and return their tables\" Calls duplicator.CreateEntityFromTable on each sub-table of EntityList. If an entity is actually created, it calls ENTITY:OnDuplicated with the entity's duplicator data, then duplicator.ApplyEntityModifiers, duplicator.ApplyBoneModifiers and finally ENTITY:PostEntityPaste is called. The constraints are then created with duplicator.CreateConstraintFromTable.\n\n[Player] Player\n  The player who wants to create something\n\n[table] EntityList\n  A table of duplicator data to create the entities from\n\n[table] ConstraintList\n  A table of duplicator data to create the constraints from",
+        "prefix": "duplicator.Paste"
+    },
+    "duplicator.RegisterBoneModifier": {
+        "body": [
+            "duplicator.RegisterBoneModifier(${1:key}, ${2:boneModifier})$0"
+        ],
+        "description": "DUPLICATOR [Shared] \n\n[any] key\n  The type of the key doesn't appear to matter, but it is preferable to use a string.\n\n[function] boneModifier\n  Function called on each bone that an ent has. Called during duplicator.ApplyBoneModifiers.\nFunction parameters are:\n\n Player ply\n Entity ent\n number boneID\n PhysObj bone\n table data\n\n\n\nThe data table that is passed to boneModifier is set with duplicator.StoreBoneModifier",
+        "prefix": "duplicator.RegisterBoneModifier"
+    },
+    "duplicator.RegisterConstraint": {
+        "body": [
+            "duplicator.RegisterConstraint(${1:name}, ${2:callback}, ${3:...})$0"
+        ],
+        "description": "DUPLICATOR [Shared] Register a function used for creating a duplicated constraint.\n\n[string] name\n  The unique name of new constraint\n\n[function] callback\n  Function to be called when this constraint is created\n\n[any] ...\n  Arguments passed to the callback function",
+        "prefix": "duplicator.RegisterConstraint"
+    },
+    "duplicator.RegisterEntityClass": {
+        "body": [
+            "duplicator.RegisterEntityClass(${1:name}, ${2:function}, ${3:args})$0"
+        ],
+        "description": "DUPLICATOR [Shared] This allows you to specify a specific function to be run when your SENT is pasted with the duplicator, instead of relying on the generic automatic functions.\n\n[string] name\n  The ClassName of the entity you wish to register a factory for\n\n[function] function\n  The factory function you want to have called. It should have the arguments (Player, ...) where ... is whatever arguments you request to be passed.\n\n[vararg] args\n  Strings of the names of arguments you want passed to function the from the EntityCopyData structure. As a special case, \"Data\" will pass the whole structure.",
+        "prefix": "duplicator.RegisterEntityClass"
+    },
+    "duplicator.RegisterEntityModifier": {
+        "body": [
+            "duplicator.RegisterEntityModifier(${1:name}, ${2:func})$0"
+        ],
+        "description": "DUPLICATOR [Shared] \n\n[string] name\n  An identifier for your modification. This is not limited, so be verbose. \"Person's 'Unbreakable' mod\" is far less likely to cause conflicts than \"unbreakable\"\n\n[function] func\n  The function to be called for your modification. It should have the arguments (Player, Entity, Data), where data is what you pass to duplicator.StoreEntityModifier.",
+        "prefix": "duplicator.RegisterEntityModifier"
+    },
+    "duplicator.RemoveMapCreatedEntities": {
+        "body": [
+            "duplicator.RemoveMapCreatedEntities()$0"
+        ],
+        "description": "DUPLICATOR [Server]",
+        "prefix": "duplicator.RemoveMapCreatedEntities"
+    },
+    "duplicator.SetLocalAng": {
+        "body": [
+            "duplicator.SetLocalAng(${1:v})$0"
+        ],
+        "description": "DUPLICATOR [Shared] \n\n[Angle] v\n  The angle to offset all pastes from",
+        "prefix": "duplicator.SetLocalAng"
+    },
+    "duplicator.SetLocalPos": {
+        "body": [
+            "duplicator.SetLocalPos(${1:v})$0"
+        ],
+        "description": "DUPLICATOR [Shared] \n\n[Vector] v\n  The position to offset all pastes from",
+        "prefix": "duplicator.SetLocalPos"
+    },
+    "duplicator.StoreBoneModifier": {
+        "body": [
+            "duplicator.StoreBoneModifier(${1:ent}, ${2:boneID}, ${3:key}, ${4:data})$0"
+        ],
+        "description": "DUPLICATOR [Server] Stores bone mod data for a registered bone modification function\n\n[Entity] ent\n  The entity to add bone mod data to\n\n[number] boneID\n  The bone ID.\n\nSee Entity:GetPhysicsObjectNum\n\n[any] key\n  The key for the bone modification\n\n[table] data\n  The bone modification data that is passed to the bone modification function",
+        "prefix": "duplicator.StoreBoneModifier"
+    },
+    "duplicator.StoreEntityModifier": {
+        "body": [
+            "duplicator.StoreEntityModifier(${1:entity}, ${2:name}, ${3:data})$0"
+        ],
+        "description": "DUPLICATOR [Server] Stores an entity modifier into an entity for saving\n\n[Entity] entity\n  The entity to store modifier in\n\n[string] name\n  Unique modifier name\n\n[table] data\n  Modifier data",
+        "prefix": "duplicator.StoreEntityModifier"
+    },
+    "duplicator.WorkoutSize": {
+        "body": [
+            "duplicator.WorkoutSize(${1:Ents})$0"
+        ],
+        "description": "DUPLICATOR [Server] \n\n[table] Ents\n  A table of entity duplication datums.",
+        "prefix": "duplicator.WorkoutSize"
+    }
+}

@@ -1,0 +1,163 @@
+{
+    "DoClick": {
+        "body": [
+            "DoClick(${1:clr}, ${2:btn})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[table] clr\n  The new color via the Color structure\n\n[Panel] btn\n  The DColorButton that was pressed.",
+        "prefix": "DoClick"
+    },
+    "GetButtonSize": {
+        "body": [
+            "GetButtonSize()$0"
+        ],
+        "description": "DCOLORPALETTE [Client]",
+        "prefix": "GetButtonSize"
+    },
+    "GetConVarA": {
+        "body": [
+            "GetConVarA()$0"
+        ],
+        "description": "DCOLORPALETTE [Client]",
+        "prefix": "GetConVarA"
+    },
+    "GetConVarB": {
+        "body": [
+            "GetConVarB()$0"
+        ],
+        "description": "DCOLORPALETTE [Client]",
+        "prefix": "GetConVarB"
+    },
+    "GetConVarG": {
+        "body": [
+            "GetConVarG()$0"
+        ],
+        "description": "DCOLORPALETTE [Client]",
+        "prefix": "GetConVarG"
+    },
+    "GetConVarR": {
+        "body": [
+            "GetConVarR()$0"
+        ],
+        "description": "DCOLORPALETTE [Client]",
+        "prefix": "GetConVarR"
+    },
+    "GetNumRows": {
+        "body": [
+            "GetNumRows()$0"
+        ],
+        "description": "DCOLORPALETTE [Client]",
+        "prefix": "GetNumRows"
+    },
+    "NetworkColorChange": {
+        "body": [
+            "NetworkColorChange()$0"
+        ],
+        "description": "DCOLORPALETTE [Client]",
+        "prefix": "NetworkColorChange"
+    },
+    "OnRightClickButton": {
+        "body": [
+            "OnRightClickButton(${1:pnl})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[Panel] pnl\n  The DColorButton that was pressed.",
+        "prefix": "OnRightClickButton"
+    },
+    "OnValueChanged": {
+        "body": [
+            "OnValueChanged(${1:newcol})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] Called when the color is changed after clicking a new value.\n\n[table] newcol\n  The new color of the DColorPalette",
+        "prefix": "OnValueChanged"
+    },
+    "Reset": {
+        "body": [
+            "Reset()$0"
+        ],
+        "description": "DCOLORPALETTE [Client]",
+        "prefix": "Reset"
+    },
+    "ResetSavedColors": {
+        "body": [
+            "ResetSavedColors()$0"
+        ],
+        "description": "DCOLORPALETTE [Client]",
+        "prefix": "ResetSavedColors"
+    },
+    "SaveColor": {
+        "body": [
+            "SaveColor(${1:btn}, ${2:clr})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[Panel] btn\n  The button to save the color of. Used to get the ID of the button.\n\n[table] clr\n  The color to save to this button's index",
+        "prefix": "SaveColor"
+    },
+    "SetButtonSize": {
+        "body": [
+            "SetButtonSize(${1:size})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[number] size\n  Sets the new size",
+        "prefix": "SetButtonSize"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:clr})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[table] clr",
+        "prefix": "SetColor"
+    },
+    "SetColorButtons": {
+        "body": [
+            "SetColorButtons(${1:tab})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[table] tab\n  A number indexed table where each value is a Color structure",
+        "prefix": "SetColorButtons"
+    },
+    "SetConVarA": {
+        "body": [
+            "SetConVarA(${1:convar})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[string] convar\n  The ConVar name for the alpha channel of the color",
+        "prefix": "SetConVarA"
+    },
+    "SetConVarB": {
+        "body": [
+            "SetConVarB(${1:convar})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[string] convar\n  The ConVar name for the blue channel of the color",
+        "prefix": "SetConVarB"
+    },
+    "SetConVarG": {
+        "body": [
+            "SetConVarG(${1:convar})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[string] convar\n  The ConVar name for the green channel of the color",
+        "prefix": "SetConVarG"
+    },
+    "SetConVarR": {
+        "body": [
+            "SetConVarR(${1:convar})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[string] convar\n  The ConVar name for the red channel of the color",
+        "prefix": "SetConVarR"
+    },
+    "SetNumRows": {
+        "body": [
+            "SetNumRows(${1:rows})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[number] rows",
+        "prefix": "SetNumRows"
+    },
+    "UpdateConVar": {
+        "body": [
+            "UpdateConVar(${1:name}, ${2:key}, ${3:clr})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[string] name\n  The name of the console variable to set\n\n[string] key\n  The key of the 3rd argument to set the convar to\n\nPossible values: \"r\", \"g\", \"b\", \"a\"\n\n[table] clr\n  The Color structure to retrieve the info from.",
+        "prefix": "UpdateConVar"
+    },
+    "UpdateConVars": {
+        "body": [
+            "UpdateConVars(${1:clr})$0"
+        ],
+        "description": "DCOLORPALETTE [Client] \n\n[table] clr\n  A Color structure",
+        "prefix": "UpdateConVars"
+    }
+}

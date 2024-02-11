@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.CommonLanguageServerProtocol.Framework</name>
+    </assembly>
+    <members>
+        <member name="F:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1._queue">
+            <summary>
+            These are lazy to allow implementations to define custom variables that are used by
+            <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1.ConstructRequestExecutionQueue"/> or <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1.ConstructLspServices"/>
+            </summary>
+        </member>
+        <member name="F:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1._lifeCycleLock">
+            <summary>
+            Ensures that we only run shutdown and exit code once in order.
+            Guards access to <see cref="F:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1._shutdownRequestTask"/> and <see cref="F:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1._exitNotificationTask"/>
+            </summary>
+        </member>
+        <member name="F:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1._shutdownRequestTask">
+            <summary>
+            Task representing the work done on LSP server shutdown.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1._exitNotificationTask">
+            <summary>
+            Task representing the work down on LSP exit.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1._serverExitedSource">
+            <summary>
+            Task completion source that is started when the server starts and completes when the server exits.
+            Used when callers need to wait for the server to cleanup.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1.Initialize">
+            <summary>
+            Initializes the LanguageServer.
+            </summary>
+            <remarks>Should be called at the bottom of the implementing constructor or immedietly after construction.</remarks>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1.ConstructLspServices">
+            <summary>
+            Extension point to allow creation of <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.ILspServices"/> since that can't always be handled in the constructor.
+            </summary>
+            <returns>An <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.ILspServices"/> instance for this server.</returns>
+            <remarks>This should only be called once, and then cached.</remarks>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1.DelegatingEntryPoint">
+            <summary>
+            Wrapper class to hold the method and properties from the <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1"/>
+            that the method info passed to StreamJsonRpc is created from.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1.ShutdownAsync(System.String)">
+            <summary>
+            Tells the LSP server to stop handling any more incoming messages (other than exit).
+            Typically called from an LSP shutdown request.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1.ExitAsync">
+            <summary>
+            Tells the LSP server to exit.  Requires that <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1.ShutdownAsync(System.String)"/> was called first.
+            Typically called from an LSP exit notification.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLanguageServer`1.JsonRpc_Disconnected(System.Object,StreamJsonRpc.JsonRpcDisconnectedEventArgs)">
+            <summary>
+            Cleanup the server if we encounter a json rpc disconnect so that we can be restarted later.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.HandlerProvider">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.HandlerProvider.GetMethodHandler(System.String,System.Type,System.Type)">
+            <summary>
+            Get the MethodHandler for a particular request.
+            </summary>
+            <param name="method">The method name being made.</param>
+            <param name="requestType">The requestType for this method.</param>
+            <param name="responseType">The responseType for this method.</param>
+            <returns>The handler for this request.</returns>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.HandlerProvider.ConvertHandlerTypeToRequestResponseTypes(System.Type)">
+            <summary>
+            Retrieves the generic argument information from the request handler type without instantiating it.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.IHandlerProvider">
+            <summary>
+            Manages handler discovery and distribution.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IInitializeManager`2.GetInitializeResult">
+            <summary>
+            Gets a response to be used for "initialize", completing the negoticaitons between client and server.
+            </summary>
+            <returns>An InitializeResult.</returns>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IInitializeManager`2.SetInitializeParams(`0)">
+            <summary>
+            Store the InitializeParams for later retrieval.
+            </summary>
+            <param name="request">The InitializeParams to be stored.</param>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IInitializeManager`2.GetInitializeParams">
+            <summary>
+            Gets the InitializeParams to, for example, examine the ClientCapabilities.
+            </summary>
+            <returns>The InitializeParams object sent with "initialize".</returns>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.ILifeCycleManager">
+            <summary>
+            An optional component to run additional logic when LSP shutdown and exit are called,
+            for example logging messages, cleaning up custom resources, etc.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.ILifeCycleManager.ExitAsync">
+            <summary>
+            Called when the server recieves the LSP exit notification.
+            </summary>
+            <remarks>
+            This is always called after the LSP shutdown request and <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.ILifeCycleManager.ShutdownAsync(System.String)"/> runs
+            but before LSP services and the JsonRpc connection is disposed of in LSP exit.
+            Implementations are not expected to be threadsafe.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.ILifeCycleManager.ShutdownAsync(System.String)">
+            <summary>
+            Called when the server receives the LSP shutdown request.
+            </summary>
+            <remarks>
+            This is called before the request execution is closed.
+            Implementations are not expected to be threadsafe.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.IMethodHandler">
+            <summary>
+            Top level type for LSP request handler.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CommonLanguageServerProtocol.Framework.IMethodHandler.MutatesSolutionState">
+            <summary>
+            Whether or not the solution state on the server is modified as a part of handling this request.
+            This may affect queuing behavior (IE mutating requests are run in serial rather than paralel) depending on the <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.IRequestExecutionQueue`1"/> implementation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.INotificationHandler`1">
+            <summary>
+            An interface for handlers of methods which do not return a response and receive no parameters.
+            </summary>
+            <typeparam name="TRequestContext">The type of the RequestContext to be used by this handler.</typeparam>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.INotificationHandler`2">
+            <summary>
+            An interface for handlers of methods which do not return a response 
+            </summary>
+            <typeparam name="TRequest">The type of the Request parameter to be received.</typeparam>
+            <typeparam name="TRequestContext">The type of the RequestContext to be used by this handler.</typeparam>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1">
+            <summary>
+            An item to be queued for execution.
+            </summary>
+            <typeparam name="TRequestContext">The type of the request context to be passed along to the handler.</typeparam>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1.StartRequestAsync(`0,System.Threading.CancellationToken)">
+            <summary>
+            Executes the work specified by this queue item.
+            </summary>
+            <param name="requestContext">the context created by <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1.CreateRequestContextAsync(System.Threading.CancellationToken)"/></param>
+            <param name="cancellationToken" />
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> which completes when the request has finished.</returns>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1.CreateRequestContextAsync(System.Threading.CancellationToken)">
+            <summary>
+            Creates the context that is sent to the handler for this queue item.
+            Note - this method is always called serially inside the queue before
+            running the actual request in <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1.StartRequestAsync(`0,System.Threading.CancellationToken)"/>
+            Throwing in this method will cause the server to shutdown.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1.MutatesServerState">
+            <summary>
+            Indicates that this request may mutate the server state, so that the queue may handle its execution appropriatly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1.MethodName">
+            <summary>
+            The method being executed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1.MethodHandler">
+            <summary>
+            The handler which will run this operation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.IRequestContextFactory`1">
+            <summary>
+            <para>
+            A factory for creating <typeparamref name="TRequestContext"/> objects from <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1"/>'s.
+            </para>
+            <para>
+            RequestContext's are useful for passing document context, since by default <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.IRequestContextFactory`1.CreateRequestContextAsync``1(Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem{`0},``0,System.Threading.CancellationToken)"/>
+            is run on the queue thread (and thus no mutating requests may be executing simultaniously, preventing possible race conditions).
+            It also allows somewhere to pass things like the <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.ILspServices" /> or <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.ILspLogger" /> which are useful on a wide variety of requests.
+            </para>
+            </summary>
+            <typeparam name="TRequestContext">The type of the RequestContext to be used by the handler.</typeparam>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IRequestContextFactory`1.CreateRequestContextAsync``1(Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem{`0},``0,System.Threading.CancellationToken)">
+            <summary>
+            Create a <typeparamref name="TRequestContext"/> object from the given <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1"/>.
+            Note - throwing in the implementation of this method will cause the server to shutdown.
+            </summary>
+            <param name="queueItem">The <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.IQueueItem`1"/> from which to create a request.</param>
+            <param name="requestParam">The request parameters.</param>
+            <param name="cancellationToken"></param>
+            <returns>The <typeparamref name="TRequestContext"/> for this request.</returns>
+            <remarks>This method is called on the queue thread to allow context to be retrieved serially, without the posibility of race conditions from Mutating requests.</remarks>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.IRequestExecutionQueue`1">
+            <summary>
+            Queues requests to be executed in the proper order.
+            </summary>
+            <typeparam name="TRequestContext">The type of the RequestContext to be used by the handler.</typeparam>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IRequestExecutionQueue`1.ExecuteAsync``2(``0,System.String,Microsoft.CommonLanguageServerProtocol.Framework.ILspServices,System.Threading.CancellationToken)">
+            <summary>
+            Queue a request.
+            </summary>
+            <returns>A task that completes when the handler execution is done.</returns>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IRequestExecutionQueue`1.Start">
+            <summary>
+            Start the queue accepting requests once any event handlers have been attached.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IRequestHandler`3.HandleRequestAsync(`0,`2,System.Threading.CancellationToken)">
+            <summary>
+            Handles an LSP request in the context of the supplied document and/or solution.
+            </summary>
+            <param name="request">The request parameters.</param>
+            <param name="context">The LSP request context, which should have been filled in with document information from <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.ITextDocumentIdentifierHandler`2.GetTextDocumentIdentifier(`0)"/> if applicable.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the request processing.</param>
+            <returns>The LSP response.</returns>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.IRequestHandler`2.HandleRequestAsync(`1,System.Threading.CancellationToken)">
+            <summary>
+            Handles an LSP request in the context of the supplied document and/or solution.
+            </summary>
+            <param name="context">The LSP request context, which should have been filled in with document information from <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.ITextDocumentIdentifierHandler`2.GetTextDocumentIdentifier(`0)"/> if applicable.</param>
+            <param name="cancellationToken">A cancellation token that can be used to cancel the request processing.</param>
+            <returns>The LSP response.</returns>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.ITextDocumentIdentifierHandler`2.GetTextDocumentIdentifier(`0)">
+            <summary>
+            Gets the identifier of the document from the request, if the request provides one.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.LanguageServerEndpointAttribute">
+            <summary>
+            An attribute which identifies the method which an <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.IMethodHandler"/> implements.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CommonLanguageServerProtocol.Framework.LanguageServerEndpointAttribute.Method">
+            <summary>
+            Contains the method that this <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.IMethodHandler"/> implements.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.NoValue">
+            <summary>
+            A placeholder type to help handle parameterless messages and messages with no return value.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CommonLanguageServerProtocol.Framework.QueueItem`3._completionSource">
+            <summary>
+            A task completion source representing the result of this queue item's work.
+            This is the task that the client is waiting on.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.QueueItem`3.StartRequestAsync(`2,System.Threading.CancellationToken)">
+            <summary>
+            Processes the queued request. Exceptions will be sent to the task completion source
+            representing the task that the client is waiting for, then re-thrown so that
+            the queue can correctly handle them depending on the type of request.
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns>The result of the request.</returns>
+        </member>
+        <member name="T:Microsoft.CommonLanguageServerProtocol.Framework.RequestExecutionQueue`1">
+            <summary>
+            Coordinates the execution of LSP messages to ensure correct results are sent back.
+            </summary>
+            <remarks>
+            <para>
+            When a request comes in for some data the handler must be able to access a solution state that is correct
+            at the time of the request, that takes into account any text change requests that have come in  previously
+            (via textDocument/didChange for example).
+            </para>
+            <para>
+            This class achieves this by distinguishing between mutating and non-mutating requests, and ensuring that
+            when a mutating request comes in, its processing blocks all subsequent requests. As each request comes in
+            it is added to a queue, and a queue item will not be retrieved while a mutating request is running. Before
+            any request is handled the solution state is created by merging workspace solution state, which could have
+            changes from non-LSP means (eg, adding a project reference), with the current "mutated" state.
+            When a non-mutating work item is retrieved from the queue, it is given the current solution state, but then
+            run in a fire-and-forget fashion.
+            </para>
+            <para>
+            Regardless of whether a request is mutating or not, or blocking or not, is an implementation detail of this class
+            and any consumers observing the results of the task returned from
+            <see cref="M:Microsoft.CommonLanguageServerProtocol.Framework.RequestExecutionQueue`1.ExecuteAsync``2(``0,System.String,Microsoft.CommonLanguageServerProtocol.Framework.ILspServices,System.Threading.CancellationToken)"/>
+            will see the results of the handling of the request, whenever it occurred.
+            </para>
+            <para>
+            Exceptions in the handling of non-mutating requests are sent back to callers. Exceptions in the processing of
+            the queue will close the LSP connection so that the client can reconnect. Exceptions in the handling of mutating
+            requests will also close the LSP connection, as at that point the mutated solution is in an unknown state.
+            </para>
+            <para>
+            After shutdown is called, or an error causes the closing of the connection, the queue will not accept any
+            more messages, and a new queue will need to be created.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:Microsoft.CommonLanguageServerProtocol.Framework.RequestExecutionQueue`1._queue">
+            <summary>
+            The queue containing the ordered LSP requests along with the trace activityId (to associate logs with a request) and
+             a combined cancellation token representing the queue's cancellation token and the individual request cancellation token.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CommonLanguageServerProtocol.Framework.RequestExecutionQueue`1._queueProcessingTask">
+            <summary>
+            For test purposes only.
+            A task that completes when the queue processing stops.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CommonLanguageServerProtocol.Framework.RequestExecutionQueue`1.CancelInProgressWorkUponMutatingRequest">
+            <summary>
+            Indicates this queue requires in-progress work to be cancelled before servicing
+            a mutating request.
+            </summary>
+            <remarks>
+            This was added for WebTools consumption as they aren't resilient to
+            incomplete requests continuing execution during didChange notifications. As their
+            parse trees are mutable, a didChange notification requires all previous requests
+            to be completed before processing. This is similar to the O#
+            WithContentModifiedSupport(false) behavior.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.RequestExecutionQueue`1.ExecuteAsync``2(``0,System.String,Microsoft.CommonLanguageServerProtocol.Framework.ILspServices,System.Threading.CancellationToken)">
+            <summary>
+            Queues a request to be handled by the specified handler, with mutating requests blocking subsequent requests
+            from starting until the mutation is complete.
+            </summary>
+            <param name="request">The request to handle.</param>
+            <param name="methodName">The name of the LSP method.</param>
+            <param name="requestCancellationToken">A cancellation token that will cancel the handing of this request.
+            The request could also be cancelled by the queue shutting down.</param>
+            <returns>A task that can be awaited to observe the results of the handing of this request.</returns>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.RequestExecutionQueue`1.WrapStartRequestTaskAsync(System.Threading.Tasks.Task,System.Boolean)">
+            <summary>
+            Provides an extensibility point to log or otherwise inspect errors thrown from non-mutating requests,
+            which would otherwise be lost to the fire-and-forget task in the queue.
+            </summary>
+            <param name="nonMutatingRequestTask">The task to be inspected.</param>
+            <returns>The task from <paramref name="nonMutatingRequestTask"/>, to allow chained calls if needed.</returns>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.RequestExecutionQueue`1.DisposeAsync">
+            <summary>
+            Shuts down the queue, stops accepting new messages, and cancels any in-progress or queued tasks.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CommonLanguageServerProtocol.Framework.RequestExecutionQueue`1.TestAccessor.AreAllItemsCancelledUnsafeAsync">
+            <summary>
+            Test only method to validate that remaining items in the queue are cancelled.
+            This directly mutates the queue in an unsafe way, so ensure that all relevant queue operations
+            are done before calling.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+            Reserved to be used by the compiler for tracking metadata.
+            This class should not be used by developers in source code.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,58 @@
+{
+    "AddFunction": {
+        "body": [
+            "AddFunction(${1:library}, ${2:name}, ${3:callback})$0"
+        ],
+        "description": "DHTML [Client] Defines a Javascript function that when called will call a Lua callback.\n\n[string] library\n  Library name of the JS function you are defining.\n\n[string] name\n  Name of the JS function you are defining.\n\n[function] callback\n  Function called when the JS function is called. Arguments passed to the JS function will be passed here.",
+        "prefix": "AddFunction"
+    },
+    "Call": {
+        "body": [
+            "Call(${1:js})$0"
+        ],
+        "description": "DHTML [Client] Runs/Executes a string as JavaScript code.\n\n[string] js\n  Specify JavaScript code to be executed.",
+        "prefix": "Call"
+    },
+    "ConsoleMessage": {
+        "body": [
+            "ConsoleMessage(${1:msg})$0"
+        ],
+        "description": "DHTML [Client] \n\n[string] msg\n  The message to be logged (or Lua code to be executed; see above).",
+        "prefix": "ConsoleMessage"
+    },
+    "GetAllowLua": {
+        "body": [
+            "GetAllowLua()$0"
+        ],
+        "description": "DHTML [Client]",
+        "prefix": "GetAllowLua"
+    },
+    "QueueJavascript": {
+        "body": [
+            "QueueJavascript(${1:js})$0"
+        ],
+        "description": "DHTML [Client] Runs/Executes a string as JavaScript code.\n\n[string] js\n  Specify JavaScript code to be executed.",
+        "prefix": "QueueJavascript"
+    },
+    "SetAllowLua": {
+        "body": [
+            "SetAllowLua(${1:allow=false})$0"
+        ],
+        "description": "DHTML [Client] \n\n[boolean] allow=false\n  Whether or not to allow Lua.",
+        "prefix": "SetAllowLua"
+    },
+    "SetScrollbars": {
+        "body": [
+            "SetScrollbars(${1:show})$0"
+        ],
+        "description": "DHTML [Client] \n\n[boolean] show\n  True if scrollbars should be visible.",
+        "prefix": "SetScrollbars"
+    },
+    "StopLoading": {
+        "body": [
+            "StopLoading()$0"
+        ],
+        "description": "DHTML [Client]",
+        "prefix": "StopLoading"
+    }
+}

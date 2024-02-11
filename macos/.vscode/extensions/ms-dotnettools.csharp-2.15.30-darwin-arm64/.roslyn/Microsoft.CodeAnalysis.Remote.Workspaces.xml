@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.CodeAnalysis.Remote.Workspaces</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.CodeAnalysis.Remote.AbstractAssetProvider">
+            <summary>
+            Provides corresponding data of the given checksum
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.AbstractAssetProvider.GetAssetAsync``1(Microsoft.CodeAnalysis.Serialization.AssetHint,Microsoft.CodeAnalysis.Checksum,System.Threading.CancellationToken)">
+            <summary>
+            return data of type T whose checksum is the given checksum
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.CancellationTokenSourceExtensions.CancelOnAbnormalCompletion(System.Threading.CancellationTokenSource,System.Threading.Tasks.Task)">
+            <summary>
+            Automatically cancels the <paramref name="cancellationTokenSource"/> if the input <paramref name="task"/>
+            completes in a <see cref="F:System.Threading.Tasks.TaskStatus.Canceled"/> or <see cref="F:System.Threading.Tasks.TaskStatus.Faulted"/> state.
+            </summary>
+            <param name="cancellationTokenSource">The cancellation token source.</param>
+            <param name="task">The task to monitor.</param>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.IRemoteAssetSynchronizationService.SynchronizePrimaryWorkspaceAsync(Microsoft.CodeAnalysis.Checksum,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Synchronize data to OOP proactively so that the corresponding solution is often already available when
+            features call into it.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.ISolutionAssetProvider">
+            <summary>
+            Brokered service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.ISolutionAssetProvider.WriteAssetsAsync(System.IO.Pipelines.PipeWriter,Microsoft.CodeAnalysis.Checksum,Microsoft.CodeAnalysis.Serialization.AssetHint,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Checksum},System.Threading.CancellationToken)">
+            <summary>
+            Streams serialized assets into the given stream.  Assets will be serialized in the exact same order
+            corresponding to the checksum index in <paramref name="checksums"/>.
+            </summary>
+            <param name="pipeWriter">The writer to write the assets into.  Implementations of this method must call<see
+            cref="M:System.IO.Pipelines.PipeWriter.Complete(System.Exception)"/> on it (in the event of failure or success).  Failing to do so will lead to hangs on
+            the code that reads from the corresponding <see cref="T:System.IO.Pipelines.PipeReader"/> side of this.</param>
+            <param name="assetHint">Optional project and document ids to scope the search for checksums down to.  This can
+            save substantially on performance by avoiding having to search the full solution tree to find matching items for
+            a particular checksum.</param>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.ProjectSystem.IWorkspaceProjectBatch">
+            <summary>
+            A batch returned from <see cref="M:Microsoft.CodeAnalysis.Remote.ProjectSystem.IWorkspaceProject.StartBatchAsync(System.Threading.CancellationToken)" />. <see cref="M:Microsoft.CodeAnalysis.Remote.ProjectSystem.IWorkspaceProjectBatch.ApplyAsync(System.Threading.CancellationToken)" /> must be called before disposing the batch object, which is otherwise a no-op.
+            The dispose just releases any lifetime object tracking since this is an [RpcMarshalable] type.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.ProjectSystem.IWorkspaceProjectFactoryService.GetSupportedBuildSystemPropertiesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Returns the list of properties that are understood by the language service and can be passed to
+            <see cref="M:Microsoft.CodeAnalysis.Remote.ProjectSystem.IWorkspaceProject.SetBuildSystemPropertiesAsync(System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Threading.CancellationToken)"/> and to
+            <see cref="P:Microsoft.CodeAnalysis.Remote.ProjectSystem.WorkspaceProjectCreationInfo.BuildSystemProperties"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.RemoteCallback`1">
+            <summary>
+            Wraps calls from a remote brokered service back to the client or to an in-proc brokered service.
+            The purpose of this type is to handle exceptions thrown by the underlying remoting infrastructure
+            in manner that's compatible with our exception handling policies.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.RemoteCallback`1.InvokeServiceAsync``1(Microsoft.ServiceHub.Framework.ServiceBrokerClient,Microsoft.ServiceHub.Framework.ServiceRpcDescriptor,System.Func{Microsoft.CodeAnalysis.Remote.RemoteCallback{`0},System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``0}},System.Threading.CancellationToken)">
+            <summary>
+            Use to perform a callback from ServiceHub process to an arbitrary brokered service hosted in the original process (usually devenv).
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.RemoteCallback`1.InvokeAsync(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask},System.Threading.CancellationToken)">
+            <summary>
+            Invokes API on the callback object hosted in the original process (usually devenv) associated with the currently executing brokered service hosted in ServiceHub process.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.RemoteCallback`1.InvokeAsync``1(System.Func{`0,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``0}},System.Threading.CancellationToken)">
+            <summary>
+            Invokes API on the callback object hosted in the original process (usually devenv) associated with the currently executing brokered service hosted in ServiceHub process.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.RemoteCallback`1.InvokeAsync``1(System.Func{`0,System.IO.Pipelines.PipeWriter,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask},System.Func{System.IO.Pipelines.PipeReader,System.Threading.CancellationToken,System.Threading.Tasks.ValueTask{``0}},System.Threading.CancellationToken)">
+            <summary>
+            Invokes API on the callback object hosted in the original process (usually devenv) associated with the
+            currently executing brokered service hosted in ServiceHub process. The API streams results back to the
+            caller.
+            </summary>
+            <param name="invocation">A callback to asynchronously write data. The callback should always <see
+            cref="M:System.IO.Pipelines.PipeWriter.Complete(System.Exception)"/> the <see cref="T:System.IO.Pipelines.PipeWriter"/>.  If it does not then reading will hang</param>
+            <param name="reader">A callback to asynchronously read data. The callback should not complete the <see
+            cref="T:System.IO.Pipelines.PipeReader"/>, but no harm will happen if it does.</param>
+            <param name="cancellationToken">A cancellation token the operation will observe.</param>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.Remote.RemoteProcessConfiguration.Core">
+            <summary>
+            Remote host runs on .NET 6+.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.Remote.RemoteProcessConfiguration.ServerGC">
+            <summary>
+            Remote host uses server GC.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.Remote.RemoteProcessConfiguration.EnableSolutionCrawler">
+            <summary>
+            Enable solution crawler in remote workspace.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.RemoteSerializationOptions">
+            <summary>
+            Wraps MessagePack or JSON serialization options/converters.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.MessagePackFormatters">
+            <summary>
+            Defines MessagePack formatters for public types without a public constructor suitable for deserialization.
+            Roslyn internal types should always be annotated with <see cref="T:System.Runtime.Serialization.DataContractAttribute"/> and have the right constructor.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.MessagePackFormatters.ProjectIdFormatter">
+            <summary>
+            Specialized formatter used so we can cache and reuse <see cref="T:Microsoft.CodeAnalysis.ProjectId"/> instances.  This is valuable as
+            it's very common for a set of results to reuse the same ProjectId across long sequences of results
+            containing <see cref="T:Microsoft.CodeAnalysis.DocumentId"/>s.  This allows a single instance to be created and shared across that
+            entire sequence, saving on allocations.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.Remote.MessagePackFormatters.ProjectIdFormatter._previousProjectId">
+            <summary>
+            Keep a copy of the most recent project ID to avoid duplicate instances when many consecutive IDs
+            reference the same project.
+            </summary>
+            <remarks>
+            Synchronization is not required for this field, since it's only intended to be an opportunistic (lossy)
+            cache.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.MessagePackFormatters.EncodingFormatter">
+            <summary>
+            Supports (de)serialization of <see cref="T:System.Text.Encoding"/> that do not customize <see cref="P:System.Text.Encoding.EncoderFallback"/> or <see cref="P:System.Text.Encoding.DecoderFallback"/>.
+            The fallback will be discarded if the <see cref="T:System.Text.Encoding"/> has any.
+            </summary>
+            <remarks>
+            Only supports (de)serializing values that are statically typed to <see cref="T:System.Text.Encoding"/>.
+            This is important as we can't assume anything about arbitrary subtypes of <see cref="T:System.Text.Encoding"/>
+            and can only return general <see cref="T:System.Text.Encoding"/> from the deserializer.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.ServiceDescriptor">
+            <summary>
+            Describes Roslyn remote brokered service. 
+            Adds Roslyn specific JSON converters and RPC settings to the default implementation.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.Remote.ServiceDescriptor.ServiceNameTopLevelPrefix">
+            <summary>
+            Brokered services must be defined in Microsoft.VisualStudio service namespace in order to be considered first party.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.ServiceDescriptors">
+            <summary>
+            Service descriptors of brokered Roslyn ServiceHub services.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.ServiceDescriptors.GetFeatureDisplayName(System.String)">
+            <summary>
+            <paramref name="serviceName"/> is a short service name, e.g. "EditAndContinue".
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.ServiceHubRemoteHostClient.CreateConnection``1(System.Object)">
+            <summary>
+            Creates connection to built-in remote service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.ServiceHubRemoteHostClient.CreateConnection``1(Microsoft.CodeAnalysis.Remote.ServiceDescriptors,Microsoft.CodeAnalysis.Remote.IRemoteServiceCallbackDispatcherProvider,System.Object)">
+            <summary>
+            This overload is meant to be used by partner teams from their External Access layer.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider">
+            <summary>
+            Provides solution assets present locally (in the current process) to a remote process where the solution is being replicated to.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider.#ctor(Microsoft.CodeAnalysis.Host.SolutionServices)">
+            <summary>
+            Provides solution assets present locally (in the current process) to a remote process where the solution is being replicated to.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider.PipeWriterStream">
+            <summary>
+            Simple port of
+            https://github.com/AArnott/Nerdbank.Streams/blob/dafeb5846702bc29e261c9ddf60f42feae01654c/src/Nerdbank.Streams/BufferWriterStream.cs#L16.
+            Wraps a <see cref="T:System.IO.Pipelines.PipeWriter"/> in a <see cref="T:System.IO.Stream"/> interface.  Preferred over <see
+            cref="M:System.IO.Pipelines.PipeWriter.AsStream(System.Boolean)"/> as that API produces a stream that will synchronously flush after
+            <em>every</em> write.  That's undesirable as that will then block a thread pool thread on the actual
+            asynchronous flush call to the underlying PipeWriter
+            </summary>
+            <remarks>
+            Note: this stream does not have to <see cref="M:System.IO.Pipelines.PipeWriter.Complete(System.Exception)"/> the underlying <see cref="F:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider.PipeWriterStream._writer"/> it
+            is holding onto (including within <see cref="M:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider.PipeWriterStream.Flush"/>, <see cref="M:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider.PipeWriterStream.FlushAsync(System.Threading.CancellationToken)"/>, or <see cref="M:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider.PipeWriterStream.Dispose(System.Boolean)"/>).
+            Responsibility for that is solely in the hands of <see cref="M:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider.WriteAssetsAsync(System.IO.Pipelines.PipeWriter,Microsoft.CodeAnalysis.Checksum,Microsoft.CodeAnalysis.Serialization.AssetHint,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Checksum},System.Threading.CancellationToken)"/>.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider.PipeWriterStream.Flush">
+            <summary>
+            Intentionally a no op. We know that we and <see cref="M:Microsoft.CodeAnalysis.Remote.RemoteHostAssetSerialization.WriteDataAsync(System.IO.Stream,System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.Checksum,System.Object},Microsoft.CodeAnalysis.Serialization.ISerializerService,Microsoft.CodeAnalysis.Serialization.SolutionReplicationContext,Microsoft.CodeAnalysis.Checksum,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Checksum},System.Threading.CancellationToken)"/>
+            will call <see cref="M:Microsoft.CodeAnalysis.Remote.SolutionAssetProvider.PipeWriterStream.FlushAsync(System.Threading.CancellationToken)"/> at appropriate times to ensure data is being sent through the writer
+            at a reasonable cadence (once per asset).
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage">
+            <summary>
+            Stores solution snapshots available to remote services.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage._gate">
+            <summary>
+            Lock over <see cref="F:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage._checksumToScope"/>.  Note: We could consider making this a SemaphoreSlim if
+            the locking proves to be a problem. However, it would greatly complicate the implementation and consumption
+            side due to the pattern around <c>await using</c>.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage._checksumToScope">
+            <summary>
+            Mapping from operation checksum to the scope for the syncing operation that we've created for it.
+            Ref-counted so that if we have many concurrent calls going out from the host to the OOP side that we share
+            the same storage here so that all OOP calls can safely call back into us and get the assets they need, even
+            if individual calls get canceled.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.StoreAssetsAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)">
+            <summary>
+            Adds given snapshot into the storage. This snapshot will be available within the returned <see cref="T:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.Scope"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.StoreAssetsAsync(Microsoft.CodeAnalysis.Project,System.Threading.CancellationToken)">
+            <inheritdoc cref="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.StoreAssetsAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.StoreAssetsAsync(Microsoft.CodeAnalysis.SolutionCompilationState,System.Threading.CancellationToken)">
+            <inheritdoc cref="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.StoreAssetsAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)"/>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.StoreAssetsAsync(Microsoft.CodeAnalysis.SolutionCompilationState,Microsoft.CodeAnalysis.ProjectId,System.Threading.CancellationToken)">
+            <inheritdoc cref="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.StoreAssetsAsync(Microsoft.CodeAnalysis.Solution,System.Threading.CancellationToken)"/>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.Scope.ReplicationContext">
+            <summary>
+             Will be disposed from <see cref="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.DecreaseScopeRefCount(Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.Scope)"/> when the last ref-count to this scope goes
+             away.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.Scope.RefCount">
+            <summary>
+            Only safe to read write while <see cref="F:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage._gate"/> is held.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.Scope.AddAssetsAsync(Microsoft.CodeAnalysis.Serialization.AssetHint,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.Checksum},System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.Checksum,System.Object},System.Threading.CancellationToken)">
+            <summary>
+            Retrieve assets of specified <paramref name="checksums"/> available within <see langword="this"/> from
+            the storage.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Remote.SolutionAssetStorage.Scope.TestAccessor.GetAssetAsync(Microsoft.CodeAnalysis.Checksum,System.Threading.CancellationToken)">
+            <summary>
+            Retrieve asset of a specified <paramref name="checksum"/> available within <see langword="this"/> from
+            the storage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.Feature_0_is_currently_unavailable_host_shutting_down">
+            <summary>Feature '{0}' is currently unavailable since {1} is shutting down.</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.Feature_0_is_currently_unavailable_due_to_an_intermittent_error">
+            <summary>Feature '{0}' is currently unavailable due to an intermittent error, please try again later: '{1}'</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.Feature_0_is_currently_unavailable_due_to_an_internal_error">
+            <summary>Feature '{0}' is currently unavailable due to an internal error.</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_MissingImportDiscovery">
+            <summary>Missing import discovery</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_CodeLensReferences">
+            <summary>CodeLens references</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_ConvertTupleToStructCodeRefactoring">
+            <summary>Convert tuple to struct refactoring</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_DependentTypeFinder">
+            <summary>Dependent type finder</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_DesignerAttributeDiscovery">
+            <summary>DesignerAttribute discovery</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_DiagnosticAnalyzer">
+            <summary>Diagnostic analyzer runner</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_DocumentHighlights">
+            <summary>Document highlights</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_EncapsulateField">
+            <summary>Encapsulate field refactoring</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_ExtensionMethodImportCompletion">
+            <summary>Extension method import completion</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_FindUsages">
+            <summary>Find usages</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_FullyQualify">
+            <summary>Fully qualify</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_GlobalNotificationDelivery">
+            <summary>Global notification delivery</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_NavigateToSearch">
+            <summary>Navigate to</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_ProjectTelemetry">
+            <summary>Project telemetry collection</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_Renamer">
+            <summary>Rename</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_SemanticClassification">
+            <summary>Semantic classification</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_SymbolFinder">
+            <summary>Symbol finder</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_SymbolSearchUpdate">
+            <summary>Symbol search</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_TaskList">
+            <summary>Task list</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_AsynchronousOperationListener">
+            <summary>Asynchronous operation listener</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_AssetSynchronization">
+            <summary>Asset synchronization</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_SolutionAssetProvider">
+            <summary>Asset provider</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_EditAndContinue">
+            <summary>Edit and Continue</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_NavigationBarItem">
+            <summary>Navigation bar</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_InheritanceMargin">
+            <summary>Inheritance margin</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_UnusedReferenceAnalysis">
+            <summary>Unused reference analysis</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_ValueTracking">
+            <summary>Value Tracking</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_ProcessTelemetry">
+            <summary>Process telemetry</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_CompilationAvailable">
+            <summary>Project semantics availability</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_StackTraceExplorer">
+            <summary>Stack Trace Explorer</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_LegacySolutionEventsAggregation">
+            <summary>Solution Events</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_UnitTestingSearch">
+            <summary>Unit testing search</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_KeepAlive">
+            <summary>Keep alive service</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Remote.RemoteWorkspacesResources.FeatureName_SourceGeneration">
+            <summary>Source generation</summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.BrokeredServices.BrokeredServiceDescriptors">
+            <summary>
+            Descriptors of brokered services not used by Roslyn remoting infrastructure.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.BrokeredServices.BrokeredServiceDescriptors.ClientServiceDescriptor">
+            <summary>
+            Descriptors for client services written in TypeScript.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.BrokeredServices.BrokeredServiceDescriptors.LanguageServerComponentName">
+            <summary>
+            Services proffered by Language Server process.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.BrokeredServices.BrokeredServiceDescriptors.LanguageClientComponentName">
+            <summary>
+            Services proffered by language client in the Extension Host process.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.BrokeredServices.BrokeredServiceDescriptors.DebuggerComponentName">
+            <summary>
+            Services proffered by one of the Debugger processes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.BrokeredServices.BrokeredServiceDescriptors.CreateClientServiceDescriptor(System.String,System.Version)">
+            <summary>
+            Descriptor for services proferred by the client extension (implemented in TypeScript).
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.BrokeredServices.BrokeredServiceDescriptors.CreateServerServiceDescriptor(System.String,System.Version)">
+            <summary>
+            Descriptor for services proferred by Roslyn server (implemented in C#). 
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.BrokeredServices.BrokeredServiceDescriptors.CreateDebuggerServiceDescriptor(System.String,System.Version)">
+            <summary>
+            Descriptor for services proferred by the debugger server (implemented in C#). 
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.BrokeredServices.ServiceBrokerProvider">
+            <summary>
+            MEF service that can be used to fetch an <see cref="T:Microsoft.ServiceHub.Framework.IServiceBroker"/> instance without having to use legacy MEF imports.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.BrokeredServices.ServiceBrokerProvider.#ctor(Microsoft.ServiceHub.Framework.IServiceBroker)">
+            <summary>
+            MEF service that can be used to fetch an <see cref="T:Microsoft.ServiceHub.Framework.IServiceBroker"/> instance without having to use legacy MEF imports.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.EditAndContinue.ManagedHotReloadLanguageService.HasChangesAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Returns true if any changes have been made to the source since the last changes had been applied.
+            For performance reasons it only implements a heuristic and may return both false positives and false negatives.
+            If the result is a false negative the debugger will not apply the changes unless the user explicitly triggers apply change command.
+            The background diagnostic analysis will still report rude edits for these ignored changes. It may also happen that these rude edits 
+            will disappear once the debuggee is resumed - if they are caused by presence of active statements around the change.
+            If the result is a false positive the debugger attempts to apply the changes, which will result in a delay but will correctly end up
+            with no actual deltas to be applied.
+            
+            If <paramref name="sourceFilePath"/> is specified checks for changes only in a document of the given path.
+            This is not supported (returns false) for source-generated documents.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.ExternalAccess.Pythia.Api.PythiaServiceDescriptorsWrapper.GetDescriptorForServiceFactory(System.Type)">
+            <summary>
+            To be called from a service factory in OOP.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.ExternalAccess.UnitTesting.Api.UnitTestingServiceDescriptorsWrapper.GetDescriptorForServiceFactory(System.Type)">
+            <summary>
+            To be called from a service factory in OOP.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Host.Mef.VisualStudioMefHostServices">
+            <summary>
+            Provides host services imported via VS MEF.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Host.Mef.VisualStudioMefHostServices.CreateWorkspaceServices(Microsoft.CodeAnalysis.Workspace)">
+            <summary>
+            Creates a new <see cref="T:Microsoft.CodeAnalysis.Host.HostWorkspaceServices"/> associated with the specified workspace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Host.Mef.VisualStudioMefHostServices.GetExports``2">
+            <summary>
+            Gets all the MEF exports of the specified type with the specified metadata.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Host.Mef.VisualStudioMefHostServices.GetExports``1">
+            <summary>
+            Gets all the MEF exports of the specified type.
+            </summary>
+        </member>
+    </members>
+</doc>

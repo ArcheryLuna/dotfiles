@@ -1,0 +1,58 @@
+{
+    "numpad.Activate": {
+        "body": [
+            "numpad.Activate(${1:ply}, ${2:key}, ${3:isButton})$0"
+        ],
+        "description": "NUMPAD [Server] Activates numpad key owned by the player\n\n[Player] ply\n  The player whose numpad should be simulated\n\n[number] key\n  The key to press, see KEY_ Enums\n\n[boolean] isButton\n  Should this keypress pretend to be a from a gmod_button? (causes numpad.FromButton to return true)",
+        "prefix": "numpad.Activate"
+    },
+    "numpad.Deactivate": {
+        "body": [
+            "numpad.Deactivate(${1:ply}, ${2:key}, ${3:isButton})$0"
+        ],
+        "description": "NUMPAD [Server] Deactivates numpad key owned by the player\n\n[Player] ply\n  The player whose numpad should be simulated\n\n[number] key\n  The key to press, corresponding to KEY_ Enums\n\n[boolean] isButton\n  Should this keypress pretend to be a from a gmod_button? (causes numpad.FromButton to return true)",
+        "prefix": "numpad.Deactivate"
+    },
+    "numpad.FromButton": {
+        "body": [
+            "numpad.FromButton()$0"
+        ],
+        "description": "NUMPAD [Server]",
+        "prefix": "numpad.FromButton"
+    },
+    "numpad.OnDown": {
+        "body": [
+            "numpad.OnDown(${1:ply}, ${2:key}, ${3:name}, ${4:...})$0"
+        ],
+        "description": "NUMPAD [Server] Calls a function registered with numpad.Register when a player presses specified key. See for key released action: numpad.OnUp\n\n[Player] ply\n  The player whose numpad should be watched\n\n[number] key\n  The key, corresponding to KEY_ Enums\n\n[string] name\n  The name of the function to run, corresponding with the one used in numpad.Register\n\n[vararg] ...\n  Arguments to pass to the function passed to numpad.Register.",
+        "prefix": "numpad.OnDown"
+    },
+    "numpad.OnUp": {
+        "body": [
+            "numpad.OnUp(${1:ply}, ${2:key}, ${3:name}, ${4:...})$0"
+        ],
+        "description": "NUMPAD [Server] Calls a function registered with numpad.Register when a player releases specified key. See for key pressed action: numpad.OnDown\n\n[Player] ply\n  The player whose numpad should be watched\n\n[number] key\n  The key, corresponding to KEY_ Enums\n\n[string] name\n  The name of the function to run, corresponding with the one used in numpad.Register\n\n[vararg] ...\n  Arguments to pass to the function passed to numpad.Register.",
+        "prefix": "numpad.OnUp"
+    },
+    "numpad.Register": {
+        "body": [
+            "numpad.Register(${1:id}, ${2:func})$0"
+        ],
+        "description": "NUMPAD [Server] \n\n[string] id\n  The unique id of your action.\n\n[function] func\n  The function to be executed.\nArguments are:\nPlayer ply - The player who pressed the button\nvararg ... - The 4th and all subsequent arguments passed from numpad.OnDown and/or numpad.OnUp\n\n\nReturning false in this function will remove the listener which triggered this function (example: return false if one of your varargs is an entity which is no longer valid)",
+        "prefix": "numpad.Register"
+    },
+    "numpad.Remove": {
+        "body": [
+            "numpad.Remove(${1:ID})$0"
+        ],
+        "description": "NUMPAD [Server] \n\n[number] ID\n  The impulse ID returned by numpad.OnUp or numpad.OnDown",
+        "prefix": "numpad.Remove"
+    },
+    "numpad.Toggle": {
+        "body": [
+            "numpad.Toggle(${1:ply}, ${2:key})$0"
+        ],
+        "description": "NUMPAD [Server] \n\n[Player] ply\n  The player whose numpad should be simulated\n\n[number] key\n  The key to press, corresponding to KEY_ Enums",
+        "prefix": "numpad.Toggle"
+    }
+}

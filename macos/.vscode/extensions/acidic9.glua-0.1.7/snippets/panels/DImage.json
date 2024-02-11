@@ -1,0 +1,128 @@
+{
+    "DoLoadMaterial": {
+        "body": [
+            "DoLoadMaterial()$0"
+        ],
+        "description": "DIMAGE [Client]",
+        "prefix": "DoLoadMaterial"
+    },
+    "FixVertexLitMaterial": {
+        "body": [
+            "FixVertexLitMaterial()$0"
+        ],
+        "description": "DIMAGE [Client]",
+        "prefix": "FixVertexLitMaterial"
+    },
+    "GetFailsafeMatName": {
+        "body": [
+            "GetFailsafeMatName()$0"
+        ],
+        "description": "DIMAGE [Client]",
+        "prefix": "GetFailsafeMatName"
+    },
+    "GetImage": {
+        "body": [
+            "GetImage()$0"
+        ],
+        "description": "DIMAGE [Client] Returns the image loaded in the image panel.",
+        "prefix": "GetImage"
+    },
+    "GetImageColor": {
+        "body": [
+            "GetImageColor()$0"
+        ],
+        "description": "DIMAGE [Client] Returns the color override of the image panel.",
+        "prefix": "GetImageColor"
+    },
+    "GetKeepAspect": {
+        "body": [
+            "GetKeepAspect()$0"
+        ],
+        "description": "DIMAGE [Client]",
+        "prefix": "GetKeepAspect"
+    },
+    "GetMatName": {
+        "body": [
+            "GetMatName()$0"
+        ],
+        "description": "DIMAGE [Client]",
+        "prefix": "GetMatName"
+    },
+    "GetMaterial": {
+        "body": [
+            "GetMaterial()$0"
+        ],
+        "description": "DIMAGE [Client]",
+        "prefix": "GetMaterial"
+    },
+    "LoadMaterial": {
+        "body": [
+            "LoadMaterial()$0"
+        ],
+        "description": "DIMAGE [Client]",
+        "prefix": "LoadMaterial"
+    },
+    "PaintAt": {
+        "body": [
+            "PaintAt(${1:posX}, ${2:posY}, ${3:width}, ${4:height})$0"
+        ],
+        "description": "DIMAGE [Client] Paints a ghost copy of the DImage panel at the given position and dimensions. This function overrides Panel:PaintAt.\n\n[number] posX\n  The x coordinate to draw the panel from.\n\n[number] posY\n  The y coordinate to draw the panel from.\n\n[number] width\n  The width of the panel image to be drawn.\n\n[number] height\n  The height of the panel image to be drawn.",
+        "prefix": "PaintAt"
+    },
+    "SetFailsafeMatName": {
+        "body": [
+            "SetFailsafeMatName(${1:backupMat})$0"
+        ],
+        "description": "DIMAGE [Client] \n\n[string] backupMat",
+        "prefix": "SetFailsafeMatName"
+    },
+    "SetImage": {
+        "body": [
+            "SetImage(${1:strImage}, ${2:strBackup})$0"
+        ],
+        "description": "DIMAGE [Client] Sets the image to load into the frame. If the first image can't be loaded and strBackup is set, that image will be loaded instead. This eventually calls DImage:SetMaterial.\n\n[string] strImage\n  The path of the image to load. When no file extension is supplied the VMT file extension is used.\n\n[string] strBackup\n  The path of the backup image.",
+        "prefix": "SetImage"
+    },
+    "SetImageColor": {
+        "body": [
+            "SetImageColor(${1:col})$0"
+        ],
+        "description": "DIMAGE [Client] Sets the image's color override.\n\n[table] col\n  The color override of the image. Uses the Color structure.",
+        "prefix": "SetImageColor"
+    },
+    "SetKeepAspect": {
+        "body": [
+            "SetKeepAspect(${1:keep})$0"
+        ],
+        "description": "DIMAGE [Client] \n\n[boolean] keep\n  true to keep the aspect ratio, false not to",
+        "prefix": "SetKeepAspect"
+    },
+    "SetMatName": {
+        "body": [
+            "SetMatName(${1:mat})$0"
+        ],
+        "description": "DIMAGE [Client] \n\n[string] mat",
+        "prefix": "SetMatName"
+    },
+    "SetMaterial": {
+        "body": [
+            "SetMaterial(${1:mat})$0"
+        ],
+        "description": "DIMAGE [Client] \n\n[IMaterial] mat\n  The material to set",
+        "prefix": "SetMaterial"
+    },
+    "SetOnViewMaterial": {
+        "body": [
+            "SetOnViewMaterial(${1:mat}, ${2:backupMat})$0"
+        ],
+        "description": "DIMAGE [Client] \n\n[string] mat\n  \n\n[string] backupMat",
+        "prefix": "SetOnViewMaterial"
+    },
+    "Unloaded": {
+        "body": [
+            "Unloaded()$0"
+        ],
+        "description": "DIMAGE [Client]",
+        "prefix": "Unloaded"
+    }
+}

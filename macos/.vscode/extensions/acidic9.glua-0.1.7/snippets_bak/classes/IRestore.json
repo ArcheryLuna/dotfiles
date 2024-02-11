@@ -1,0 +1,65 @@
+{
+	"IRestore/EndBlock": {
+		"body": [
+			"EndBlock()$0"
+		],
+		"description": "Ends current data block started with",
+		"prefix": "EndBlock"
+	},
+	"IRestore/ReadAngle": {
+		"body": [
+			"ReadAngle()$0"
+		],
+		"description": "Reads next bytes from the restore object as an",
+		"prefix": "ReadAngle"
+	},
+	"IRestore/ReadBool": {
+		"body": [
+			"ReadBool()$0"
+		],
+		"description": "Reads next bytes from the restore object as a",
+		"prefix": "ReadBool"
+	},
+	"IRestore/ReadEntity": {
+		"body": [
+			"ReadEntity()$0"
+		],
+		"description": "Reads next bytes from the restore object as an",
+		"prefix": "ReadEntity"
+	},
+	"IRestore/ReadFloat": {
+		"body": [
+			"ReadFloat()$0"
+		],
+		"description": "Reads next bytes from the restore object as a floating point",
+		"prefix": "ReadFloat"
+	},
+	"IRestore/ReadInt": {
+		"body": [
+			"ReadInt()$0"
+		],
+		"description": "Reads next bytes from the restore object as an integer",
+		"prefix": "ReadInt"
+	},
+	"IRestore/ReadString": {
+		"body": [
+			"ReadString()$0"
+		],
+		"description": "Reads next bytes from the restore object as a",
+		"prefix": "ReadString"
+	},
+	"IRestore/ReadVector": {
+		"body": [
+			"ReadVector()$0"
+		],
+		"description": "Reads next bytes from the restore object as a",
+		"prefix": "ReadVector"
+	},
+	"IRestore/StartBlock": {
+		"body": [
+			"StartBlock()$0"
+		],
+		"description": "Loads next block of data to be read inside current block. Blocks",
+		"prefix": "StartBlock"
+	}
+}

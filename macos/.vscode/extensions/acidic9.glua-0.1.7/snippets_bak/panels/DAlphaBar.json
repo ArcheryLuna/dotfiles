@@ -1,0 +1,37 @@
+{
+	"DAlphaBar/GetBarColor": {
+		"body": [
+			"GetBarColor()$0"
+		],
+		"description": "Returns the base color of the alpha bar. This is the color for which the alpha channel is being modified.",
+		"prefix": "GetBarColor"
+	},
+	"DAlphaBar/GetValue": {
+		"body": [
+			"GetValue()$0"
+		],
+		"description": "Returns the alpha value of the alpha bar.",
+		"prefix": "GetValue"
+	},
+	"DAlphaBar/OnChange": {
+		"body": [
+			"OnChange(${1:alpha})$0"
+		],
+		"description": "Called when user changes the desired alpha value with the control.",
+		"prefix": "OnChange"
+	},
+	"DAlphaBar/SetBarColor": {
+		"body": [
+			"SetBarColor(${1:clr})$0"
+		],
+		"description": "Sets the base color of the alpha bar. This is the color for which the alpha channel is being modified.",
+		"prefix": "SetBarColor"
+	},
+	"DAlphaBar/SetValue": {
+		"body": [
+			"SetValue(${1:alpha})$0"
+		],
+		"description": "Sets the alpha value or the alpha bar.",
+		"prefix": "SetValue"
+	}
+}

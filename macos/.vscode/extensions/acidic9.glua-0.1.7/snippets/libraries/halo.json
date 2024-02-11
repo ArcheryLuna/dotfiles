@@ -1,0 +1,23 @@
+{
+    "halo.Add": {
+        "body": [
+            "halo.Add(${1:entities}, ${2:color}, ${3:blurX=2}, ${4:blurY=2}, ${5:passes=1}, ${6:additive=true}, ${7:ignoreZ=false})$0"
+        ],
+        "description": "HALO [Client] Applies a \"halo\" glow effect to one or multiple entities.\n\n[table] entities\n  A table of entities to add the halo effect to\n\n[table] color\n  The desired color of the halo.\n\n[number] blurX=2\n  The strength of the halo's blur on the x axis.\n\n[number] blurY=2\n  The strength of the halo's blur on the y axis.\n\n[number] passes=1\n  The number of times the halo should be drawn per frame. Increasing this may hinder player FPS.\n\n[boolean] additive=true\n  Sets the render mode of the halo to additive.\n\n[boolean] ignoreZ=false\n  Renders the halo through anything when set to true.",
+        "prefix": "halo.Add"
+    },
+    "halo.Render": {
+        "body": [
+            "halo.Render(${1:entry})$0"
+        ],
+        "description": "HALO [Client] \n\n[table] entry\n  Table with info about the halo to draw.",
+        "prefix": "halo.Render"
+    },
+    "halo.RenderedEntity": {
+        "body": [
+            "halo.RenderedEntity()$0"
+        ],
+        "description": "HALO [Client]",
+        "prefix": "halo.RenderedEntity"
+    }
+}

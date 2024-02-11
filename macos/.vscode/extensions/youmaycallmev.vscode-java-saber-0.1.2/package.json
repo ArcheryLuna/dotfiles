@@ -1,0 +1,207 @@
+{
+	"name": "vscode-java-saber",
+	"displayName": "Java IDE",
+	"description": "To make the vscode work as Eclipse or IDEA when you are coding in java.",
+	"version": "0.1.2",
+	"publisher": "YouMayCallMeV",
+	"repository": {
+		"url": "https://github.com/jiangdequan/vscode-java-saber"
+	},
+	"bugs": {
+		"url": "https://github.com/jiangdequan/vscode-java-saber/issues"
+	},
+	"icon": "logo.jpg",
+	"keywords": [
+		"new files or package",
+		"copy qualified name",
+		"generate getter setter",
+		"sort projects",
+		"generate java docs",
+		"execute maven goals"
+	],
+	"homepage": "https://github.com/jiangdequan/vscode-java-saber/blob/master/README.md",
+	"engines": {
+		"vscode": "^1.18.0"
+	},
+	"categories": [
+		"Other",
+		"Programming Languages"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension",
+	"contributes": {
+		"configuration": {
+			"title": "VSCodeclipse",
+			"properties": {
+				"ide.projectAutoSort": {
+					"type": "boolean",
+					"description": "Whether auto sorting is enabled. Auto sorting is working when adding a project.",
+					"default": false
+				},
+				"ide.mavenDefaultGoals": {
+					"type": "array",
+					"description": "Default maven goals for every maven projects.",
+					"default": [
+						"clean install -Dmaven.test.skip=true",
+						"clean install"
+					]
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.newFunctions",
+				"title": "New"
+			},
+			{
+				"command": "extension.newAnnotationFile",
+				"title": "Java: New Annotation File"
+			},
+			{
+				"command": "extension.newClassFile",
+				"title": "Java: New Class File"
+			},
+			{
+				"command": "extension.newEnumFile",
+				"title": "Java: New Enum File"
+			},
+			{
+				"command": "extension.newInterfaceFile",
+				"title": "Java: New Interface File"
+			},
+			{
+				"command": "extension.newHtmlFile",
+				"title": "Java: New HTML File"
+			},
+			{
+				"command": "extension.newJspFile",
+				"title": "Java: New JSP File"
+			},
+			{
+				"command": "extension.newPackage",
+				"title": "Java: New Package"
+			},
+			{
+				"command": "extension.generateGettersAndSetters",
+				"title": "Generate Getters and Setters..."
+			},
+			{
+				"command": "extension.generateDocs",
+				"title": "Generate Java Docs..."
+			},
+			{
+				"command": "extension.copyQualifiedName",
+				"title": "Copy Qualified Name"
+			},
+			{
+				"command": "extension.sortWorkspace",
+				"title": "Sort Project By Name"
+			},
+			{
+				"command": "extension.executeMavenGoal",
+				"title": "Run As"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "filesExplorerFocus",
+					"command": "extension.newFunctions",
+					"group": "1_javaactions"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.copyQualifiedName",
+					"alt": "extension.copyQualifiedName",
+					"group": "1_javaactions"
+				},
+				{
+					"when": "resourceFilename == pom.xml",
+					"command": "extension.executeMavenGoal",
+					"alt": "extension.executeMavenGoal",
+					"group": "1_javaactions"
+				},
+				{
+					"when": "filesExplorerFocus",
+					"command": "extension.sortWorkspace",
+					"alt": "extension.sortWorkspace",
+					"group": "1_javaactions"
+				}
+			],
+			"editor/context": [
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.generateGettersAndSetters",
+					"alt": "extension.generateGettersAndSetters",
+					"group": "1_modification"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.generateDocs",
+					"alt": "extension.generateDocs",
+					"group": "1_modification"
+				},
+				{
+					"when": "resourceLangId == java",
+					"command": "extension.copyQualifiedName",
+					"alt": "extension.copyQualifiedName",
+					"group": "1_modification"
+				}
+			],
+			"commandPalette": [
+				{
+					"command": "extension.executeMavenGoal",
+					"when": "never"
+				},
+				{
+					"command": "extension.newPackage",
+					"when": "never"
+				},
+				{
+					"command": "extension.newFunctions",
+					"when": "never"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"command": "extension.generateDocs",
+				"key": "alt+i",
+				"mac": "cmd+i",
+				"when": "editorHasSelection"
+			},
+			{
+				"command": "extension.generateGettersAndSetters",
+				"key": "alt+insert",
+				"mac": "cmd+insert",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.36",
+		"eslint": "^4.11.0",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"clipboardy": "^1.2.3"
+	},
+	"__metadata": {
+		"id": "e109b863-1993-4b40-be77-ef862fb2b470",
+		"publisherId": "4f329f6a-3f4c-4a48-bcd9-56a7f17e7a3d",
+		"publisherDisplayName": "JavaHub",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033140
+	}
+}

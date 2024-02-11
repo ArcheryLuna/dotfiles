@@ -1,0 +1,338 @@
+{
+	"math/AngleDifference": {
+		"body": [
+			"math.AngleDifference(${1:a}, ${2:b})$0"
+		],
+		"description": "Calculates the difference between two angles.",
+		"prefix": "math.AngleDifference"
+	},
+	"math/Approach": {
+		"body": [
+			"math.Approach(${1:current}, ${2:target}, ${3:change})$0"
+		],
+		"description": "Gradually approaches the target value by the specified amount.",
+		"prefix": "math.Approach"
+	},
+	"math/ApproachAngle": {
+		"body": [
+			"math.ApproachAngle(${1:currentAngle}, ${2:targetAngle}, ${3:rate})$0"
+		],
+		"description": "Increments an angle towards another by specified rate.",
+		"prefix": "math.ApproachAngle"
+	},
+	"math/BSplinePoint": {
+		"body": [
+			"math.BSplinePoint(${1:tDiff}, ${2:tPoints}, ${3:tMax})$0"
+		],
+		"description": "Basic code for",
+		"prefix": "math.BSplinePoint"
+	},
+	"math/BinToInt": {
+		"body": [
+			"math.BinToInt(${1:string})$0"
+		],
+		"description": "Converts a binary string into a number.",
+		"prefix": "math.BinToInt"
+	},
+	"math/Clamp": {
+		"body": [
+			"math.Clamp(${1:input}, ${2:min}, ${3:max})$0"
+		],
+		"description": "Clamps a number between a minimum and maximum value",
+		"prefix": "math.Clamp"
+	},
+	"math/Dist": {
+		"body": [
+			"math.Dist(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2})$0"
+		],
+		"description": "No description available.",
+		"prefix": "math.Dist"
+	},
+	"math/Distance": {
+		"body": [
+			"math.Distance(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2})$0"
+		],
+		"description": "Returns the difference between two points in 2D space.",
+		"prefix": "math.Distance"
+	},
+	"math/EaseInOut": {
+		"body": [
+			"math.EaseInOut(${1:progress}, ${2:easeIn}, ${3:easeOut})$0"
+		],
+		"description": "Calculates the progress of a value fraction, taking in to account given easing fractions",
+		"prefix": "math.EaseInOut"
+	},
+	"math/IntToBin": {
+		"body": [
+			"math.IntToBin(${1:int})$0"
+		],
+		"description": "Converts an integer to a binary (base-2) string.",
+		"prefix": "math.IntToBin"
+	},
+	"math/NormalizeAngle": {
+		"body": [
+			"math.NormalizeAngle(${1:angle})$0"
+		],
+		"description": "Normalizes angle, so it returns value between -180 and 180.",
+		"prefix": "math.NormalizeAngle"
+	},
+	"math/Rand": {
+		"body": [
+			"math.Rand(${1:min}, ${2:max})$0"
+		],
+		"description": "Returns a random float between min and max.",
+		"prefix": "math.Rand"
+	},
+	"math/Remap": {
+		"body": [
+			"math.Remap(${1:value}, ${2:inMin}, ${3:inMax}, ${4:outMin}, ${5:outMax})$0"
+		],
+		"description": "Remaps the value from one range to another",
+		"prefix": "math.Remap"
+	},
+	"math/Round": {
+		"body": [
+			"math.Round(${1:value}, ${2:decimals=0})$0"
+		],
+		"description": "Rounds the given value to the nearest whole number or to the given decimal places.",
+		"prefix": "math.Round"
+	},
+	"math/TimeFraction": {
+		"body": [
+			"math.TimeFraction(${1:start}, ${2:end}, ${3:current})$0"
+		],
+		"description": "Returns the fraction of where the current time is relative to the start and end times",
+		"prefix": "math.TimeFraction"
+	},
+	"math/Truncate": {
+		"body": [
+			"math.Truncate(${1:num}, ${2:digits})$0"
+		],
+		"description": "Rounds towards zero.",
+		"prefix": "math.Truncate"
+	},
+	"math/abs": {
+		"body": [
+			"math.abs(${1:x})$0"
+		],
+		"description": "Calculates the absolute value of a number (effectively removes any negative sign).",
+		"prefix": "math.abs"
+	},
+	"math/acos": {
+		"body": [
+			"math.acos(${1:normal})$0"
+		],
+		"description": "Returns the arc cosine of the given number.",
+		"prefix": "math.acos"
+	},
+	"math/asin": {
+		"body": [
+			"math.asin(${1:normal})$0"
+		],
+		"description": "Returns the arc sine of the given number.",
+		"prefix": "math.asin"
+	},
+	"math/atan": {
+		"body": [
+			"math.atan(${1:normal})$0"
+		],
+		"description": "Returns the arc tangents of the given number.",
+		"prefix": "math.atan"
+	},
+	"math/atan2": {
+		"body": [
+			"math.atan2(${1:y}, ${2:x})$0"
+		],
+		"description": "Returns math.atan(y / x) in radians. The result is between -math.pi and math.pi.",
+		"prefix": "math.atan2"
+	},
+	"math/calcBSplineN": {
+		"body": [
+			"math.calcBSplineN(${1:i}, ${2:k}, ${3:t}, ${4:tinc})$0"
+		],
+		"description": "Basic code for Bezier-Spline algorithm.",
+		"prefix": "math.calcBSplineN"
+	},
+	"math/ceil": {
+		"body": [
+			"math.ceil(${1:number})$0"
+		],
+		"description": "Ceils or rounds a number up.",
+		"prefix": "math.ceil"
+	},
+	"math/cos": {
+		"body": [
+			"math.cos(${1:number})$0"
+		],
+		"description": "Returns cosine of given angle.",
+		"prefix": "math.cos"
+	},
+	"math/cosh": {
+		"body": [
+			"math.cosh(${1:number})$0"
+		],
+		"description": "Returns hyperbolic cosine of the given number.",
+		"prefix": "math.cosh"
+	},
+	"math/deg": {
+		"body": [
+			"math.deg(${1:radians})$0"
+		],
+		"description": "Converts radians to degrees.",
+		"prefix": "math.deg"
+	},
+	"math/exp": {
+		"body": [
+			"math.exp(${1:exponent})$0"
+		],
+		"description": "Returns the x power of the euler constant.",
+		"prefix": "math.exp"
+	},
+	"math/floor": {
+		"body": [
+			"math.floor(${1:number})$0"
+		],
+		"description": "Floors or rounds a number down.",
+		"prefix": "math.floor"
+	},
+	"math/fmod": {
+		"body": [
+			"math.fmod(${1:base}, ${2:modulator})$0"
+		],
+		"description": "Returns the modulus of the specified values.",
+		"prefix": "math.fmod"
+	},
+	"math/frexp": {
+		"body": [
+			"math.frexp(${1:inputValue})$0"
+		],
+		"description": "used to split the number value into a normalized fraction and an exponent. Two values are returned: the first is a value always in the range 1/2 (inclusive) to 1 (exclusive) and the second is an exponent.",
+		"prefix": "math.frexp"
+	},
+	"math/huge": {
+		"body": [
+			"()$0"
+		],
+		"description": "No description available.",
+		"prefix": ""
+	},
+	"math/ldexp": {
+		"body": [
+			"math.ldexp(${1:normalizedFraction}, ${2:exponent})$0"
+		],
+		"description": "Takes a normalised number and returns the floating point representation.",
+		"prefix": "math.ldexp"
+	},
+	"math/log": {
+		"body": [
+			"math.log(${1:x}, ${2:base=math.exp(1)})$0"
+		],
+		"description": "With one argument, return the natural logarithm of x (to base e).",
+		"prefix": "math.log"
+	},
+	"math/log10": {
+		"body": [
+			"math.log10(${1:x})$0"
+		],
+		"description": "Returns the base-10 logarithm of x. This is usually more accurate than math.log(x, 10).",
+		"prefix": "math.log10"
+	},
+	"math/max": {
+		"body": [
+			"math.max(${1:numbers})$0"
+		],
+		"description": "Returns the largest value of all arguments.",
+		"prefix": "math.max"
+	},
+	"math/min": {
+		"body": [
+			"math.min(${1:numbers})$0"
+		],
+		"description": "Returns the smallest value of all arguments.",
+		"prefix": "math.min"
+	},
+	"math/mod": {
+		"body": [
+			"math.mod(${1:base}, ${2:modulator})$0"
+		],
+		"description": "No description available.",
+		"prefix": "math.mod"
+	},
+	"math/modf": {
+		"body": [
+			"math.modf(${1:base}, ${2:modulator})$0"
+		],
+		"description": "Returns the integral and fractional component of the modulo operation.",
+		"prefix": "math.modf"
+	},
+	"math/pi": {
+		"body": [
+			"()$0"
+		],
+		"description": "No description available.",
+		"prefix": ""
+	},
+	"math/pow": {
+		"body": [
+			"math.pow(${1:x}, ${2:y})$0"
+		],
+		"description": "Returns x raised to the power y. In particular, math.pow(1.0, x) and math.pow(x, 0.0) always return 1.0, even when x is a zero or a NaN. If both x and y are finite, x is negative, and y is not an integer then math.pow(x, y) is undefined.",
+		"prefix": "math.pow"
+	},
+	"math/rad": {
+		"body": [
+			"math.rad(${1:degrees})$0"
+		],
+		"description": "Converts an angle in degrees to it\u0026#39;s equivalent in radians.",
+		"prefix": "math.rad"
+	},
+	"math/random": {
+		"body": [
+			"math.random(${1:m}, ${2:n})$0"
+		],
+		"description": "When called without arguments, returns a uniform pseudo-random real number in the range 0 to 1 which includes 0 but excludes 1.",
+		"prefix": "math.random"
+	},
+	"math/randomseed": {
+		"body": [
+			"math.randomseed(${1:seed})$0"
+		],
+		"description": "Seeds the \u0026#34;seed\u0026#34; for the random generator, which will cause",
+		"prefix": "math.randomseed"
+	},
+	"math/sin": {
+		"body": [
+			"math.sin(${1:number})$0"
+		],
+		"description": "Returns sine of given angle.",
+		"prefix": "math.sin"
+	},
+	"math/sinh": {
+		"body": [
+			"math.sinh(${1:number})$0"
+		],
+		"description": "Returns hyperbolic sine of the given number.",
+		"prefix": "math.sinh"
+	},
+	"math/sqrt": {
+		"body": [
+			"math.sqrt(${1:value})$0"
+		],
+		"description": "Returns the square root of the number.",
+		"prefix": "math.sqrt"
+	},
+	"math/tan": {
+		"body": [
+			"math.tan(${1:value})$0"
+		],
+		"description": "Returns tangents of given angle.",
+		"prefix": "math.tan"
+	},
+	"math/tanh": {
+		"body": [
+			"math.tanh(${1:number})$0"
+		],
+		"description": "Returns hyperbolic tangents of the given number.",
+		"prefix": "math.tanh"
+	}
+}

@@ -1,0 +1,30 @@
+{
+    "CaptureMouse": {
+        "body": [
+            "CaptureMouse()$0"
+        ],
+        "description": "DADJUSTABLEMODELPANEL [Client]",
+        "prefix": "CaptureMouse"
+    },
+    "FirstPersonControls": {
+        "body": [
+            "FirstPersonControls()$0"
+        ],
+        "description": "DADJUSTABLEMODELPANEL [Client]",
+        "prefix": "FirstPersonControls"
+    },
+    "GetFirstPerson": {
+        "body": [
+            "GetFirstPerson()$0"
+        ],
+        "description": "DADJUSTABLEMODELPANEL [Client]",
+        "prefix": "GetFirstPerson"
+    },
+    "SetFirstPerson": {
+        "body": [
+            "SetFirstPerson(${1:enable})$0"
+        ],
+        "description": "DADJUSTABLEMODELPANEL [Client] \n\n[boolean] enable\n  Whether to enable/disable first person controls. See DAdjustableModelPanel:FirstPersonControls.",
+        "prefix": "SetFirstPerson"
+    }
+}

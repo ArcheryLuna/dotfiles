@@ -1,0 +1,163 @@
+{
+    "GetColor": {
+        "body": [
+            "GetColor(${1:x}, ${2:y})$0"
+        ],
+        "description": "IMATERIAL [Shared] Returns the color of the specified pixel of the $basetexture, only works for materials created from PNG files. Basically identical to ITexture:GetColor used on IMaterial:GetTexture( \"$basetexture\" ).\n\n[number] x\n  The X coordinate.\n\n[number] y\n  The Y coordinate.",
+        "prefix": "GetColor"
+    },
+    "GetFloat": {
+        "body": [
+            "GetFloat(${1:materialFloat})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialFloat\n  The name of the material value.",
+        "prefix": "GetFloat"
+    },
+    "GetInt": {
+        "body": [
+            "GetInt(${1:materialInt})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialInt\n  The name of the material integer.",
+        "prefix": "GetInt"
+    },
+    "GetKeyValues": {
+        "body": [
+            "GetKeyValues()$0"
+        ],
+        "description": "IMATERIAL [Shared] Gets all the key values defined for the material.",
+        "prefix": "GetKeyValues"
+    },
+    "GetMatrix": {
+        "body": [
+            "GetMatrix(${1:materialMatrix})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialMatrix\n  The name of the material matrix.",
+        "prefix": "GetMatrix"
+    },
+    "GetName": {
+        "body": [
+            "GetName()$0"
+        ],
+        "description": "IMATERIAL [Shared]",
+        "prefix": "GetName"
+    },
+    "GetShader": {
+        "body": [
+            "GetShader()$0"
+        ],
+        "description": "IMATERIAL [Shared]",
+        "prefix": "GetShader"
+    },
+    "GetString": {
+        "body": [
+            "GetString(${1:materialString})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialString\n  The name of the material string.",
+        "prefix": "GetString"
+    },
+    "GetTexture": {
+        "body": [
+            "GetTexture(${1:param})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] param\n  The shader parameter to retrieve. This should normally be $basetexture.",
+        "prefix": "GetTexture"
+    },
+    "GetVector": {
+        "body": [
+            "GetVector(${1:materialVector})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialVector\n  The name of the material vector.",
+        "prefix": "GetVector"
+    },
+    "GetVectorLinear": {
+        "body": [
+            "GetVectorLinear(${1:materialVector})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialVector\n  The name of the material vector.",
+        "prefix": "GetVectorLinear"
+    },
+    "Height": {
+        "body": [
+            "Height()$0"
+        ],
+        "description": "IMATERIAL [Shared]",
+        "prefix": "Height"
+    },
+    "IsError": {
+        "body": [
+            "IsError()$0"
+        ],
+        "description": "IMATERIAL [Shared]",
+        "prefix": "IsError"
+    },
+    "Recompute": {
+        "body": [
+            "Recompute()$0"
+        ],
+        "description": "IMATERIAL [Shared]",
+        "prefix": "Recompute"
+    },
+    "SetFloat": {
+        "body": [
+            "SetFloat(${1:materialFloat}, ${2:float})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialFloat\n  The name of the material float.\n\n[number] float\n  The new float value.",
+        "prefix": "SetFloat"
+    },
+    "SetInt": {
+        "body": [
+            "SetInt(${1:materialInt}, ${2:int})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialInt\n  The name of the material int.\n\n[number] int\n  The new int value.",
+        "prefix": "SetInt"
+    },
+    "SetMatrix": {
+        "body": [
+            "SetMatrix(${1:materialMatrix}, ${2:matrix})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialMatrix\n  The name of the material int.\n\n[VMatrix] matrix\n  The new matrix.",
+        "prefix": "SetMatrix"
+    },
+    "SetShader": {
+        "body": [
+            "SetShader(${1:shaderName})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] shaderName\n  Name of the shader",
+        "prefix": "SetShader"
+    },
+    "SetString": {
+        "body": [
+            "SetString(${1:materialString}, ${2:string})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialString\n  The name of the material string.\n\n[string] string\n  The new string.",
+        "prefix": "SetString"
+    },
+    "SetTexture": {
+        "body": [
+            "SetTexture(${1:materialTexture}, ${2:texture})$0"
+        ],
+        "description": "IMATERIAL [Shared] Sets the specified material texture to the specified texture, does nothing on a type mismatch.\n\n[string] materialTexture\n  The name of the keyvalue on the material to store the texture on.\n\n[ITexture] texture\n  The new texture. This can also be a string, the name of the new texture.",
+        "prefix": "SetTexture"
+    },
+    "SetUndefined": {
+        "body": [
+            "SetUndefined(${1:materialValueName})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] materialValueName\n  The name of the material value to be unset.",
+        "prefix": "SetUndefined"
+    },
+    "SetVector": {
+        "body": [
+            "SetVector(${1:MaterialVector}, ${2:vec})$0"
+        ],
+        "description": "IMATERIAL [Shared] \n\n[string] MaterialVector\n  The name of the material vector.\n\n[Vector] vec\n  The new vector.",
+        "prefix": "SetVector"
+    },
+    "Width": {
+        "body": [
+            "Width()$0"
+        ],
+        "description": "IMATERIAL [Shared]",
+        "prefix": "Width"
+    }
+}

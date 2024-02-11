@@ -1,0 +1,72 @@
+{
+    "GetImage": {
+        "body": [
+            "GetImage()$0"
+        ],
+        "description": "DIMAGEBUTTON [Client]",
+        "prefix": "GetImage"
+    },
+    "GetStretchToFit": {
+        "body": [
+            "GetStretchToFit()$0"
+        ],
+        "description": "DIMAGEBUTTON [Client]",
+        "prefix": "GetStretchToFit"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color})$0"
+        ],
+        "description": "DIMAGEBUTTON [Client] \n\n[table] color\n  The Color to set",
+        "prefix": "SetColor"
+    },
+    "SetIcon": {
+        "body": [
+            "SetIcon()$0"
+        ],
+        "description": "DIMAGEBUTTON [Client]",
+        "prefix": "SetIcon"
+    },
+    "SetImage": {
+        "body": [
+            "SetImage(${1:strImage}, ${2:strBackup})$0"
+        ],
+        "description": "DIMAGEBUTTON [Client] \n\n[string] strImage\n  The path of the image to load. When no file extension is supplied the VMT file extension is used.\n\n[string] strBackup\n  The path of the backup image.",
+        "prefix": "SetImage"
+    },
+    "SetImageVisible": {
+        "body": [
+            "SetImageVisible(${1:visible})$0"
+        ],
+        "description": "DIMAGEBUTTON [Client] \n\n[boolean] visible\n  Set true to make it visible ( default ), or false to hide the image",
+        "prefix": "SetImageVisible"
+    },
+    "SetKeepAspect": {
+        "body": [
+            "SetKeepAspect(${1:keep})$0"
+        ],
+        "description": "DIMAGEBUTTON [Client] \n\n[boolean] keep\n  true to keep the aspect ratio, false not to",
+        "prefix": "SetKeepAspect"
+    },
+    "SetMaterial": {
+        "body": [
+            "SetMaterial(${1:mat})$0"
+        ],
+        "description": "DIMAGEBUTTON [Client] \n\n[IMaterial] mat\n  The material to set",
+        "prefix": "SetMaterial"
+    },
+    "SetOnViewMaterial": {
+        "body": [
+            "SetOnViewMaterial(${1:mat}, ${2:backup})$0"
+        ],
+        "description": "DIMAGEBUTTON [Client] \n\n[string] mat\n  \n\n[string] backup",
+        "prefix": "SetOnViewMaterial"
+    },
+    "SetStretchToFit": {
+        "body": [
+            "SetStretchToFit(${1:stretch})$0"
+        ],
+        "description": "DIMAGEBUTTON [Client] \n\n[boolean] stretch\n  True to stretch, false to not to stretch",
+        "prefix": "SetStretchToFit"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "gameevent.Listen": {
+        "body": [
+            "gameevent.Listen(${1:eventName})$0"
+        ],
+        "description": "GAMEEVENT [Shared] Add a game event listener.\n\n[string] eventName\n  The event to listen to, travels through hooks with eventName as event.\n\nList of valid events can be found here.",
+        "prefix": "gameevent.Listen"
+    }
+}

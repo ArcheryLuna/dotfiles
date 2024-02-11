@@ -1,0 +1,191 @@
+{
+    "GetAngles": {
+        "body": [
+            "GetAngles()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "GetAngles"
+    },
+    "GetField": {
+        "body": [
+            "GetField(${1:row}, ${2:column})$0"
+        ],
+        "description": "VMATRIX [Shared] Returns a specific field in the matrix.\n\n[number] row\n  Row of the field whose value is to be retrieved, from 1 to 4\n\n[number] column\n  Column of the field whose value is to be retrieved, from 1 to 4",
+        "prefix": "GetField"
+    },
+    "GetForward": {
+        "body": [
+            "GetForward()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "GetForward"
+    },
+    "GetInverse": {
+        "body": [
+            "GetInverse()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "GetInverse"
+    },
+    "GetInverseTR": {
+        "body": [
+            "GetInverseTR()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "GetInverseTR"
+    },
+    "GetRight": {
+        "body": [
+            "GetRight()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "GetRight"
+    },
+    "GetScale": {
+        "body": [
+            "GetScale()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "GetScale"
+    },
+    "GetTranslation": {
+        "body": [
+            "GetTranslation()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "GetTranslation"
+    },
+    "GetUp": {
+        "body": [
+            "GetUp()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "GetUp"
+    },
+    "Identity": {
+        "body": [
+            "Identity()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "Identity"
+    },
+    "Invert": {
+        "body": [
+            "Invert()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "Invert"
+    },
+    "InvertTR": {
+        "body": [
+            "InvertTR()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "InvertTR"
+    },
+    "IsIdentity": {
+        "body": [
+            "IsIdentity()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "IsIdentity"
+    },
+    "IsRotationMatrix": {
+        "body": [
+            "IsRotationMatrix()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "IsRotationMatrix"
+    },
+    "Rotate": {
+        "body": [
+            "Rotate(${1:rotation})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[Angle] rotation\n  Rotation.",
+        "prefix": "Rotate"
+    },
+    "Scale": {
+        "body": [
+            "Scale(${1:scale})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[Vector] scale\n  Vector to scale with matrix with.",
+        "prefix": "Scale"
+    },
+    "ScaleTranslation": {
+        "body": [
+            "ScaleTranslation(${1:scale})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[number] scale\n  Value to scale the translation with.",
+        "prefix": "ScaleTranslation"
+    },
+    "Set": {
+        "body": [
+            "Set(${1:src})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[VMatrix] src\n  The matrix to copy values from.",
+        "prefix": "Set"
+    },
+    "SetAngles": {
+        "body": [
+            "SetAngles(${1:angle})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[Angle] angle\n  New angles.",
+        "prefix": "SetAngles"
+    },
+    "SetField": {
+        "body": [
+            "SetField(${1:row}, ${2:column}, ${3:value})$0"
+        ],
+        "description": "VMATRIX [Shared] Sets a specific field in the matrix.\n\n[number] row\n  Row of the field to be set, from 1 to 4\n\n[number] column\n  Column of the field to be set, from 1 to 4\n\n[number] value\n  The value to set in that field",
+        "prefix": "SetField"
+    },
+    "SetForward": {
+        "body": [
+            "SetForward(${1:forward})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[Vector] forward\n  The forward direction of the matrix.",
+        "prefix": "SetForward"
+    },
+    "SetRight": {
+        "body": [
+            "SetRight(${1:forward})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[Vector] forward\n  The right direction of the matrix.",
+        "prefix": "SetRight"
+    },
+    "SetScale": {
+        "body": [
+            "SetScale(${1:scale})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[Vector] scale\n  The scale to set.",
+        "prefix": "SetScale"
+    },
+    "SetTranslation": {
+        "body": [
+            "SetTranslation(${1:translation})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[Vector] translation\n  New translation.",
+        "prefix": "SetTranslation"
+    },
+    "SetUp": {
+        "body": [
+            "SetUp(${1:forward})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[Vector] forward\n  The up direction of the matrix.",
+        "prefix": "SetUp"
+    },
+    "ToTable": {
+        "body": [
+            "ToTable()$0"
+        ],
+        "description": "VMATRIX [Shared]",
+        "prefix": "ToTable"
+    },
+    "Translate": {
+        "body": [
+            "Translate(${1:translation})$0"
+        ],
+        "description": "VMATRIX [Shared] \n\n[Vector] translation\n  Vector to translate the matrix by.",
+        "prefix": "Translate"
+    }
+}

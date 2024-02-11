@@ -1,0 +1,51 @@
+{
+	"DCheckBox/DoClick": {
+		"body": [
+			"DoClick()$0"
+		],
+		"description": "Called when the checkbox is clicked by a user. If you are overriding this, you must call",
+		"prefix": "DoClick"
+	},
+	"DCheckBox/GetChecked": {
+		"body": [
+			"GetChecked()$0"
+		],
+		"description": "Gets the checked state of the checkbox.",
+		"prefix": "GetChecked"
+	},
+	"DCheckBox/IsEditing": {
+		"body": [
+			"IsEditing()$0"
+		],
+		"description": "Returns whether the state of the checkbox is being edited. This means whether the user is currently clicking (mouse-down) on the checkbox, and applies to both the left and right mouse buttons.",
+		"prefix": "IsEditing"
+	},
+	"DCheckBox/OnChange": {
+		"body": [
+			"OnChange(${1:bVal})$0"
+		],
+		"description": "Called when the \u0026#34;checked\u0026#34; state is changed.",
+		"prefix": "OnChange"
+	},
+	"DCheckBox/SetChecked": {
+		"body": [
+			"SetChecked(${1:checked})$0"
+		],
+		"description": "Sets the checked state of the checkbox. Does not call the checkbox\u0026#39;s",
+		"prefix": "SetChecked"
+	},
+	"DCheckBox/SetValue": {
+		"body": [
+			"SetValue(${1:checked})$0"
+		],
+		"description": "Sets the checked state of the checkbox, and calls the checkbox\u0026#39;s",
+		"prefix": "SetValue"
+	},
+	"DCheckBox/Toggle": {
+		"body": [
+			"Toggle()$0"
+		],
+		"description": "Toggles the checked state of the checkbox, and calls the checkbox\u0026#39;s",
+		"prefix": "Toggle"
+	}
+}

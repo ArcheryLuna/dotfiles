@@ -1,0 +1,127 @@
+{
+	"name": "compiler-explorer",
+	"displayName": "Compiler Explorer",
+	"description": "Use Compiler Explorer in VSCode",
+	"version": "0.5.0",
+	"publisher": "MatthewEvers",
+	"license": "MIT",
+	"homepage": "https://github.com/MRobertEvers/vscode-compiler-explorer.git",
+	"icon": "images/Compiler-Explorer-VSCode.png",
+	"galleryBanner": {
+		"color": "#1F1F1F",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/MRobertEvers/vscode-compiler-explorer.git"
+	},
+	"bugs": {
+		"url": "https://github.com/MRobertEvers/vscode-compiler-explorer/issues"
+	},
+	"engines": {
+		"vscode": "^1.42.0"
+	},
+	"categories": [
+		"Debuggers"
+	],
+	"keywords": [
+		"compiler-explorer",
+		"compiler"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./build/vscode-compiler-explorer",
+	"contributes": {
+		"configuration": {
+			"title": "Compiler Explorer Configuration",
+			"properties": {
+				"compiler-explorer.url": {
+					"type": [
+						"string"
+					],
+					"default": "https://godbolt.org",
+					"description": "URL of compiler explorer.",
+					"scope": "window"
+				},
+				"compiler-explorer.compiler": {
+					"type": "string",
+					"default": "g92",
+					"description": "Compiler code to use. See GET /api/compilers",
+					"scope": "window"
+				},
+				"compiler-explorer.options": {
+					"type": [
+						"array",
+						"string"
+					],
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"-O3"
+					],
+					"description": "Compiler options.",
+					"scope": "window"
+				},
+				"compiler-explorer.debug": {
+					"type": "boolean",
+					"default": false,
+					"description": "Include debug printouts.",
+					"scope": "window"
+				},
+				"compiler-explorer.include": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [],
+					"description": "Additional includes if running compiler explorer locally.",
+					"scope": "window"
+				}
+			}
+		},
+		"commands": [
+			{
+				"title": "Open Compiler Explorer",
+				"category": "compiler-explorer",
+				"command": "compiler-explorer.open"
+			},
+			{
+				"title": "Open Compiler Explorer",
+				"category": "compiler-explorer",
+				"command": "compiler-explorer.updateDisassembly"
+			}
+		]
+	},
+	"scripts": {
+		"build": "webpack --mode none",
+		"watch": "webpack --mode none --watch"
+	},
+	"dependencies": {
+		"node": "^12.16.1",
+		"node-fetch": "^2.6.0"
+	},
+	"devDependencies": {
+		"@types/node": "^12.12.14",
+		"@types/node-fetch": "^2.5.5",
+		"@types/vscode": "^1.42.0",
+		"@types/webpack": "^4.41.7",
+		"ts-loader": "^6.2.1",
+		"ts-node": "^8.6.2",
+		"typescript": "^3.8.3",
+		"vsce": "^1.74.0",
+		"webpack": "^4.41.6",
+		"webpack-cli": "^3.3.11"
+	},
+	"__metadata": {
+		"id": "ce0ff645-a684-49d1-9f79-427fa71cd2c8",
+		"publisherId": "af886f86-ea98-47b8-8c11-fd11026a7125",
+		"publisherDisplayName": "Matthew Evers",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033069
+	}
+}

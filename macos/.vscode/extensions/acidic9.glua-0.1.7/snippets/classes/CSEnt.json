@@ -1,0 +1,9 @@
+{
+    "Remove": {
+        "body": [
+            "Remove()$0"
+        ],
+        "description": "CSENT [Client]",
+        "prefix": "Remove"
+    }
+}

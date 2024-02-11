@@ -1,0 +1,72 @@
+{
+	"Panel/GetHTMLMaterial": {
+		"body": [
+			"GetHTMLMaterial()$0"
+		],
+		"description": "Returns the panel\u0026#39;s HTML material. Only works with",
+		"prefix": "GetHTMLMaterial"
+	},
+	"Panel/GoBack": {
+		"body": [
+			"GoBack()$0"
+		],
+		"description": "Goes back one page in the HTML panel\u0026#39;s history if available.",
+		"prefix": "GoBack"
+	},
+	"Panel/GoForward": {
+		"body": [
+			"GoForward()$0"
+		],
+		"description": "Goes forward one page in the HTML panel\u0026#39;s history if available.",
+		"prefix": "GoForward"
+	},
+	"Panel/GoToHistoryOffset": {
+		"body": [
+			"GoToHistoryOffset(${1:offset})$0"
+		],
+		"description": "Goes to the page in the HTML panel\u0026#39;s history at the specified relative offset.",
+		"prefix": "GoToHistoryOffset"
+	},
+	"Panel/NewObject": {
+		"body": [
+			"NewObject(${1:string})$0"
+		],
+		"description": "No description available.",
+		"prefix": "NewObject"
+	},
+	"Panel/NewObjectCallback": {
+		"body": [
+			"NewObjectCallback(${1:string}, ${2:string})$0"
+		],
+		"description": "No description available.",
+		"prefix": "NewObjectCallback"
+	},
+	"Panel/OpenURL": {
+		"body": [
+			"OpenURL(${1:URL})$0"
+		],
+		"description": "No description available.",
+		"prefix": "OpenURL"
+	},
+	"Panel/Refresh": {
+		"body": [
+			"Refresh(${1:ignoreCache=false})$0"
+		],
+		"description": "Refreshes the HTML panel\u0026#39;s current page.",
+		"prefix": "Refresh"
+	},
+	"Panel/StopLoading": {
+		"body": [
+			"StopLoading()$0"
+		],
+		"description": "Stops the loading of the HTML panel\u0026#39;s current page.",
+		"prefix": "StopLoading"
+	},
+	"Panel/UpdateHTMLTexture": {
+		"body": [
+			"UpdateHTMLTexture()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UpdateHTMLTexture"
+	}
+}

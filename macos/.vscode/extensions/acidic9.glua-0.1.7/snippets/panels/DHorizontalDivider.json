@@ -1,0 +1,135 @@
+{
+    "GetDividerWidth": {
+        "body": [
+            "GetDividerWidth()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "GetDividerWidth"
+    },
+    "GetDragging": {
+        "body": [
+            "GetDragging()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "GetDragging"
+    },
+    "GetHoldPos": {
+        "body": [
+            "GetHoldPos()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "GetHoldPos"
+    },
+    "GetLeft": {
+        "body": [
+            "GetLeft()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "GetLeft"
+    },
+    "GetLeftMin": {
+        "body": [
+            "GetLeftMin()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "GetLeftMin"
+    },
+    "GetLeftWidth": {
+        "body": [
+            "GetLeftWidth()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "GetLeftWidth"
+    },
+    "GetMiddle": {
+        "body": [
+            "GetMiddle()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "GetMiddle"
+    },
+    "GetRight": {
+        "body": [
+            "GetRight()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "GetRight"
+    },
+    "GetRightMin": {
+        "body": [
+            "GetRightMin()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "GetRightMin"
+    },
+    "SetDividerWidth": {
+        "body": [
+            "SetDividerWidth(${1:width})$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client] \n\n[number] width\n  The width of the horizontal divider bar.",
+        "prefix": "SetDividerWidth"
+    },
+    "SetDragging": {
+        "body": [
+            "SetDragging(${1:dragonot})$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client] \n\n[boolean] dragonot",
+        "prefix": "SetDragging"
+    },
+    "SetHoldPos": {
+        "body": [
+            "SetHoldPos(${1:x})$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client] \n\n[number] x",
+        "prefix": "SetHoldPos"
+    },
+    "SetLeft": {
+        "body": [
+            "SetLeft(${1:pnl})$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client] \n\n[Panel] pnl\n  The panel to set as the left side",
+        "prefix": "SetLeft"
+    },
+    "SetLeftMin": {
+        "body": [
+            "SetLeftMin(${1:minWidth})$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client] \n\n[number] minWidth\n  The minimum width of the left side",
+        "prefix": "SetLeftMin"
+    },
+    "SetLeftWidth": {
+        "body": [
+            "SetLeftWidth(${1:width})$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client] \n\n[number] width\n  The current/starting width of the left side",
+        "prefix": "SetLeftWidth"
+    },
+    "SetMiddle": {
+        "body": [
+            "SetMiddle(${1:middle})$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client] \n\n[Panel] middle\n  The middle content",
+        "prefix": "SetMiddle"
+    },
+    "SetRight": {
+        "body": [
+            "SetRight(${1:pnl})$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client] \n\n[Panel] pnl\n  The right side content",
+        "prefix": "SetRight"
+    },
+    "SetRightMin": {
+        "body": [
+            "SetRightMin(${1:minWidth})$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client] \n\n[number] minWidth\n  The minimum width of the right side",
+        "prefix": "SetRightMin"
+    },
+    "StartGrab": {
+        "body": [
+            "StartGrab()$0"
+        ],
+        "description": "DHORIZONTALDIVIDER [Client]",
+        "prefix": "StartGrab"
+    }
+}

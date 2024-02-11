@@ -1,0 +1,205 @@
+{
+	"CLuaLocomotion/Approach": {
+		"body": [
+			"Approach(${1:goal}, ${2:goalweight})$0"
+		],
+		"description": "Sets the location we want to get to",
+		"prefix": "Approach"
+	},
+	"CLuaLocomotion/ClearStuck": {
+		"body": [
+			"ClearStuck()$0"
+		],
+		"description": "Removes the stuck status from the bot",
+		"prefix": "ClearStuck"
+	},
+	"CLuaLocomotion/FaceTowards": {
+		"body": [
+			"FaceTowards(${1:goal})$0"
+		],
+		"description": "Sets the direction we want to face",
+		"prefix": "FaceTowards"
+	},
+	"CLuaLocomotion/GetAcceleration": {
+		"body": [
+			"GetAcceleration()$0"
+		],
+		"description": "Returns the acceleration speed",
+		"prefix": "GetAcceleration"
+	},
+	"CLuaLocomotion/GetCurrentAcceleration": {
+		"body": [
+			"GetCurrentAcceleration()$0"
+		],
+		"description": "Returns the current acceleration as a vector",
+		"prefix": "GetCurrentAcceleration"
+	},
+	"CLuaLocomotion/GetDeathDropHeight": {
+		"body": [
+			"GetDeathDropHeight()$0"
+		],
+		"description": "Gets the height the bot is scared to fall from",
+		"prefix": "GetDeathDropHeight"
+	},
+	"CLuaLocomotion/GetDeceleration": {
+		"body": [
+			"GetDeceleration()$0"
+		],
+		"description": "Gets the deceleration speed",
+		"prefix": "GetDeceleration"
+	},
+	"CLuaLocomotion/GetGroundMotionVector": {
+		"body": [
+			"GetGroundMotionVector()$0"
+		],
+		"description": "Return unit vector in XY plane describing our direction of motion - even if we are currently not moving",
+		"prefix": "GetGroundMotionVector"
+	},
+	"CLuaLocomotion/GetJumpHeight": {
+		"body": [
+			"GetJumpHeight()$0"
+		],
+		"description": "Gets the height of the bot\u0026#39;s jump",
+		"prefix": "GetJumpHeight"
+	},
+	"CLuaLocomotion/GetMaxJumpHeight": {
+		"body": [
+			"GetMaxJumpHeight()$0"
+		],
+		"description": "Returns maximum jump height of this",
+		"prefix": "GetMaxJumpHeight"
+	},
+	"CLuaLocomotion/GetMaxYawRate": {
+		"body": [
+			"GetMaxYawRate()$0"
+		],
+		"description": "Returns the max rate at which the NextBot can visually rotate.",
+		"prefix": "GetMaxYawRate"
+	},
+	"CLuaLocomotion/GetStepHeight": {
+		"body": [
+			"GetStepHeight()$0"
+		],
+		"description": "Gets the max height the bot can step up",
+		"prefix": "GetStepHeight"
+	},
+	"CLuaLocomotion/GetVelocity": {
+		"body": [
+			"GetVelocity()$0"
+		],
+		"description": "Returns the current movement velocity as a vector",
+		"prefix": "GetVelocity"
+	},
+	"CLuaLocomotion/IsAreaTraversable": {
+		"body": [
+			"IsAreaTraversable(${1:area})$0"
+		],
+		"description": "Returns whether this",
+		"prefix": "IsAreaTraversable"
+	},
+	"CLuaLocomotion/IsAttemptingToMove": {
+		"body": [
+			"IsAttemptingToMove()$0"
+		],
+		"description": "Returns true if we\u0026#39;re trying to move.",
+		"prefix": "IsAttemptingToMove"
+	},
+	"CLuaLocomotion/IsClimbingOrJumping": {
+		"body": [
+			"IsClimbingOrJumping()$0"
+		],
+		"description": "Returns true of the locomotion engine is jumping or climbing",
+		"prefix": "IsClimbingOrJumping"
+	},
+	"CLuaLocomotion/IsOnGround": {
+		"body": [
+			"IsOnGround()$0"
+		],
+		"description": "Returns whether the locomotion/nextbot is on ground or not.",
+		"prefix": "IsOnGround"
+	},
+	"CLuaLocomotion/IsStuck": {
+		"body": [
+			"IsStuck()$0"
+		],
+		"description": "Returns true if we\u0026#39;re stuck",
+		"prefix": "IsStuck"
+	},
+	"CLuaLocomotion/IsUsingLadder": {
+		"body": [
+			"IsUsingLadder()$0"
+		],
+		"description": "No description available.",
+		"prefix": "IsUsingLadder"
+	},
+	"CLuaLocomotion/Jump": {
+		"body": [
+			"Jump()$0"
+		],
+		"description": "Makes the bot jump",
+		"prefix": "Jump"
+	},
+	"CLuaLocomotion/JumpAcrossGap": {
+		"body": [
+			"JumpAcrossGap(${1:landingGoal}, ${2:landingForward})$0"
+		],
+		"description": "No description available.",
+		"prefix": "JumpAcrossGap"
+	},
+	"CLuaLocomotion/SetAcceleration": {
+		"body": [
+			"SetAcceleration(${1:speed})$0"
+		],
+		"description": "Sets the acceleration speed",
+		"prefix": "SetAcceleration"
+	},
+	"CLuaLocomotion/SetDeathDropHeight": {
+		"body": [
+			"SetDeathDropHeight(${1:height})$0"
+		],
+		"description": "Sets the height the bot is scared to fall from.",
+		"prefix": "SetDeathDropHeight"
+	},
+	"CLuaLocomotion/SetDeceleration": {
+		"body": [
+			"SetDeceleration(${1:deceleration})$0"
+		],
+		"description": "Sets the deceleration speed.",
+		"prefix": "SetDeceleration"
+	},
+	"CLuaLocomotion/SetDesiredSpeed": {
+		"body": [
+			"SetDesiredSpeed(${1:speed})$0"
+		],
+		"description": "Sets movement speed.",
+		"prefix": "SetDesiredSpeed"
+	},
+	"CLuaLocomotion/SetJumpHeight": {
+		"body": [
+			"SetJumpHeight(${1:height})$0"
+		],
+		"description": "Sets the height of the bot\u0026#39;s jump",
+		"prefix": "SetJumpHeight"
+	},
+	"CLuaLocomotion/SetMaxYawRate": {
+		"body": [
+			"SetMaxYawRate(${1:yawRate})$0"
+		],
+		"description": "Sets the max rate at which the NextBot can visually rotate. This will not affect moving or pathing.",
+		"prefix": "SetMaxYawRate"
+	},
+	"CLuaLocomotion/SetStepHeight": {
+		"body": [
+			"SetStepHeight(${1:height})$0"
+		],
+		"description": "Sets the max height the bot can step up",
+		"prefix": "SetStepHeight"
+	},
+	"CLuaLocomotion/SetVelocity": {
+		"body": [
+			"SetVelocity(${1:velocity})$0"
+		],
+		"description": "Sets the current movement velocity",
+		"prefix": "SetVelocity"
+	}
+}

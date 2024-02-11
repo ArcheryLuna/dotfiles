@@ -1,0 +1,23 @@
+{
+	"IMesh/BuildFromTriangles": {
+		"body": [
+			"BuildFromTriangles(${1:vertexes})$0"
+		],
+		"description": "Builds the mesh from a table mesh vertexes.",
+		"prefix": "BuildFromTriangles"
+	},
+	"IMesh/Destroy": {
+		"body": [
+			"Destroy()$0"
+		],
+		"description": "Deletes the mesh and frees the memory used by it..",
+		"prefix": "Destroy"
+	},
+	"IMesh/Draw": {
+		"body": [
+			"Draw()$0"
+		],
+		"description": "Renders the mesh with the active matrix.",
+		"prefix": "Draw"
+	}
+}

@@ -1,0 +1,30 @@
+{
+    "cookie.Delete": {
+        "body": [
+            "cookie.Delete(${1:name})$0"
+        ],
+        "description": "COOKIE [Shared/Menu] \n\n[string] name\n  The name of the cookie that you want to delete.",
+        "prefix": "cookie.Delete"
+    },
+    "cookie.GetNumber": {
+        "body": [
+            "cookie.GetNumber(${1:name}, ${2:default=nil})$0"
+        ],
+        "description": "COOKIE [Shared/Menu] Gets the value of a cookie on the client as a number.\n\n[string] name\n  The name of the cookie that you want to get.\n\n[any] default=nil\n  Value to return if the cookie does not exist.",
+        "prefix": "cookie.GetNumber"
+    },
+    "cookie.GetString": {
+        "body": [
+            "cookie.GetString(${1:name}, ${2:default=nil})$0"
+        ],
+        "description": "COOKIE [Shared/Menu] Gets the value of a cookie on the client as a string.\n\n[string] name\n  The name of the cookie that you want to get.\n\n[any] default=nil\n  Value to return if the cookie does not exist.",
+        "prefix": "cookie.GetString"
+    },
+    "cookie.Set": {
+        "body": [
+            "cookie.Set(${1:key}, ${2:value})$0"
+        ],
+        "description": "COOKIE [Shared] \n\n[string] key\n  The name of the cookie that you want to set.\n\n[string] value\n  Value to store in the cookie.",
+        "prefix": "cookie.Set"
+    }
+}

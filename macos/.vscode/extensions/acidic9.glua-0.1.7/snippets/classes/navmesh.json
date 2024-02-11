@@ -1,0 +1,9 @@
+{
+    "CreateNavArea": {
+        "body": [
+            "CreateNavArea(${1:corner}, ${2:opposite_corner})$0"
+        ],
+        "description": "NAVMESH [Server] Creates a new CNavArea.\n\n[Vector] corner\n  The first corner of the new CNavArea\n\n[Vector] opposite_corner\n  The opposite (diagonally) corner of the new CNavArea",
+        "prefix": "CreateNavArea"
+    }
+}

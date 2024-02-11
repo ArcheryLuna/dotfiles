@@ -1,0 +1,44 @@
+{
+    "killicon.Add": {
+        "body": [
+            "killicon.Add(${1:class}, ${2:texture}, ${3:color})$0"
+        ],
+        "description": "KILLICON [Client] Creates new kill icon using a texture.\n\n[string] class\n  Weapon or entity class\n\n[string] texture\n  Path to the texture\n\n[table] color\n  Color of the kill icon",
+        "prefix": "killicon.Add"
+    },
+    "killicon.AddAlias": {
+        "body": [
+            "killicon.AddAlias(${1:new_class}, ${2:existing_class})$0"
+        ],
+        "description": "KILLICON [Client] Creates kill icon from existing one.\n\n[string] new_class\n  New class of the kill icon\n\n[string] existing_class\n  Already existing kill icon class",
+        "prefix": "killicon.AddAlias"
+    },
+    "killicon.AddFont": {
+        "body": [
+            "killicon.AddFont(${1:class}, ${2:font}, ${3:symbol}, ${4:color})$0"
+        ],
+        "description": "KILLICON [Client] Adds kill icon for given weapon/entity class using special font.\n\n[string] class\n  Weapon or entity class\n\n[string] font\n  Font to be used\n\n[string] symbol\n  The symbol to be used\n\n[table] color\n  Color of the killicon",
+        "prefix": "killicon.AddFont"
+    },
+    "killicon.Draw": {
+        "body": [
+            "killicon.Draw(${1:x}, ${2:y}, ${3:name}, ${4:alpha})$0"
+        ],
+        "description": "KILLICON [Client] Draws a kill icon.\n\n[number] x\n  X coordinate of the icon\n\n[number] y\n  Y coordinate of the icon\n\n[string] name\n  Classname of the kill icon\n\n[number] alpha\n  Alpha/transparency value ( 0 - 255 ) of the icon",
+        "prefix": "killicon.Draw"
+    },
+    "killicon.Exists": {
+        "body": [
+            "killicon.Exists(${1:class})$0"
+        ],
+        "description": "KILLICON [Client] \n\n[string] class\n  The class to test",
+        "prefix": "killicon.Exists"
+    },
+    "killicon.GetSize": {
+        "body": [
+            "killicon.GetSize(${1:name})$0"
+        ],
+        "description": "KILLICON [Client] Returns the size of a kill icon.\n\n[string] name\n  Classname of the kill icon",
+        "prefix": "killicon.GetSize"
+    }
+}

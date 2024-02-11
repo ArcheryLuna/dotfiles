@@ -1,0 +1,233 @@
+{
+    "ActionSignal": {
+        "body": [
+            "ActionSignal(${1:signalName}, ${2:signalValue})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] signalName\n  The name of the signal, usually the sender of the signal or the command name.\n\n[string] signalValue\n  The value of the signal, usually a command argument.",
+        "prefix": "ActionSignal"
+    },
+    "AnimationThink": {
+        "body": [
+            "AnimationThink()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "AnimationThink"
+    },
+    "ApplySchemeSettings": {
+        "body": [
+            "ApplySchemeSettings()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "ApplySchemeSettings"
+    },
+    "DragHoverClick": {
+        "body": [
+            "DragHoverClick(${1:hoverTime})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] hoverTime\n  The time the object was hovered over this panel.",
+        "prefix": "DragHoverClick"
+    },
+    "DroppedOn": {
+        "body": [
+            "DroppedOn(${1:pnl})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] pnl\n  The panel we are dropped onto",
+        "prefix": "DroppedOn"
+    },
+    "GenerateExample": {
+        "body": [
+            "GenerateExample(${1:class}, ${2:dpropertysheet}, ${3:width}, ${4:height})$0"
+        ],
+        "description": "PANEL [Client] Called when the panel should generate example use case / example code to use for this panel. Used in the panel opened by derma_controls console command.\n\n[string] class\n  The classname of the panel to generate example for. This will be the class name of your panel.\n\n[Panel] dpropertysheet\n  A DPropertySheet to add your example to. See examples below.\n\n[number] width\n  Width of the property sheet?\n\n[number] height\n  Width of the property sheet?",
+        "prefix": "GenerateExample"
+    },
+    "Init": {
+        "body": [
+            "Init()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Init"
+    },
+    "LoadCookies": {
+        "body": [
+            "LoadCookies()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "LoadCookies"
+    },
+    "OnChangeTargetURL": {
+        "body": [
+            "OnChangeTargetURL(${1:targetURL})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] targetURL\n  New target URL.",
+        "prefix": "OnChangeTargetURL"
+    },
+    "OnChangeTitle": {
+        "body": [
+            "OnChangeTitle(${1:newTitle})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] newTitle\n  The new title of the page.",
+        "prefix": "OnChangeTitle"
+    },
+    "OnChildAdded": {
+        "body": [
+            "OnChildAdded(${1:child})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] child\n  The child which was added.",
+        "prefix": "OnChildAdded"
+    },
+    "OnChildRemoved": {
+        "body": [
+            "OnChildRemoved(${1:child})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] child\n  The child which is about to be removed.",
+        "prefix": "OnChildRemoved"
+    },
+    "OnChildViewCreated": {
+        "body": [
+            "OnChildViewCreated(${1:sourceURL}, ${2:targetURL}, ${3:isPopup})$0"
+        ],
+        "description": "PANEL [Client] Called by HTML panels when the page attempts to open a new child view (such as a popup or new tab).\n\n[string] sourceURL\n  The URL of the page requesting to create a child.\n\n[string] targetURL\n  The URL of the requested child.\n\n[boolean] isPopup\n  True if the requested view is a popup.",
+        "prefix": "OnChildViewCreated"
+    },
+    "OnCursorEntered": {
+        "body": [
+            "OnCursorEntered()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "OnCursorEntered"
+    },
+    "OnCursorExited": {
+        "body": [
+            "OnCursorExited()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "OnCursorExited"
+    },
+    "OnCursorMoved": {
+        "body": [
+            "OnCursorMoved(${1:cursorX}, ${2:cursorY})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] cursorX\n  The new x position of the cursor relative to the panels origin.\n\n[number] cursorY\n  The new y position of the cursor relative to the panels origin.",
+        "prefix": "OnCursorMoved"
+    },
+    "OnDocumentReady": {
+        "body": [
+            "OnDocumentReady(${1:url})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] url\n  The URL of the current page.",
+        "prefix": "OnDocumentReady"
+    },
+    "OnDrop": {
+        "body": [
+            "OnDrop()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "OnDrop"
+    },
+    "OnFocusChanged": {
+        "body": [
+            "OnFocusChanged(${1:gained})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] gained\n  Is the focus was gained ( true ) or lost ( false )",
+        "prefix": "OnFocusChanged"
+    },
+    "OnKeyCodePressed": {
+        "body": [
+            "OnKeyCodePressed(${1:keyCode})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] keyCode\n  They key code of the pressed key, see KEY_ Enums.",
+        "prefix": "OnKeyCodePressed"
+    },
+    "OnKeyCodeReleased": {
+        "body": [
+            "OnKeyCodeReleased(${1:keyCode})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] keyCode\n  They key code of the released key, see KEY_ Enums.",
+        "prefix": "OnKeyCodeReleased"
+    },
+    "OnMousePressed": {
+        "body": [
+            "OnMousePressed(${1:keyCode})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] keyCode\n  They key code of the key pressed, see MOUSE_ Enums.",
+        "prefix": "OnMousePressed"
+    },
+    "OnMouseReleased": {
+        "body": [
+            "OnMouseReleased(${1:keyCode})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] keyCode\n  They key code of the key released, see MOUSE_ Enums.",
+        "prefix": "OnMouseReleased"
+    },
+    "OnMouseWheeled": {
+        "body": [
+            "OnMouseWheeled(${1:scrollDelta})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] scrollDelta\n  The scroll delta, indicating how much the user turned the mouse wheel.",
+        "prefix": "OnMouseWheeled"
+    },
+    "OnRemove": {
+        "body": [
+            "OnRemove()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "OnRemove"
+    },
+    "OnStartDragging": {
+        "body": [
+            "OnStartDragging()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "OnStartDragging"
+    },
+    "OnStopDragging": {
+        "body": [
+            "OnStopDragging()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "OnStopDragging"
+    },
+    "Paint": {
+        "body": [
+            "Paint(${1:width}, ${2:height})$0"
+        ],
+        "description": "PANEL [Client] Called whenever the panel should be drawn. You can create panels with a customized appearance by overriding their Paint() function, which will prevent the default appearance from being drawn.\n\n[number] width\n  The panel's width.\n\n[number] height\n  The panel's height.",
+        "prefix": "Paint"
+    },
+    "PaintOver": {
+        "body": [
+            "PaintOver(${1:width}, ${2:height})$0"
+        ],
+        "description": "PANEL [Client] Called whenever the panel and all its children were drawn, return true to override the default drawing.\n\n[number] width\n  The panels current width.\n\n[number] height\n  The panels current height.",
+        "prefix": "PaintOver"
+    },
+    "PerformLayout": {
+        "body": [
+            "PerformLayout(${1:width}, ${2:height})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] width\n  The panels current width.\n\n[number] height\n  The panels current height.",
+        "prefix": "PerformLayout"
+    },
+    "PostAutoRefresh": {
+        "body": [
+            "PostAutoRefresh()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "PostAutoRefresh"
+    },
+    "PreAutoRefresh": {
+        "body": [
+            "PreAutoRefresh()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "PreAutoRefresh"
+    },
+    "Think": {
+        "body": [
+            "Think()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Think"
+    }
+}

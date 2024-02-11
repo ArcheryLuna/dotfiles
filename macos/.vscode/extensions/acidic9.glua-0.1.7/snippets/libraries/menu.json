@@ -1,0 +1,9 @@
+{
+    "menu.RecordFrame": {
+        "body": [
+            "menu.RecordFrame()$0"
+        ],
+        "description": "MENU [Client]",
+        "prefix": "menu.RecordFrame"
+    }
+}

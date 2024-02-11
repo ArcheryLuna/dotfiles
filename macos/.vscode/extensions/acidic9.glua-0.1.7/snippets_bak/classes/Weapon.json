@@ -1,0 +1,219 @@
+{
+	"Weapon/AllowsAutoSwitchFrom": {
+		"body": [
+			"AllowsAutoSwitchFrom()$0"
+		],
+		"description": "Returns whether the weapon allows to being switched from when a better (",
+		"prefix": "AllowsAutoSwitchFrom"
+	},
+	"Weapon/AllowsAutoSwitchTo": {
+		"body": [
+			"AllowsAutoSwitchTo()$0"
+		],
+		"description": "Returns whether the weapon allows to being switched to when a better (",
+		"prefix": "AllowsAutoSwitchTo"
+	},
+	"Weapon/CallOnClient": {
+		"body": [
+			"CallOnClient(${1:function}, ${2:arguments=\"\"})$0"
+		],
+		"description": "Calls a SWEP function on client.",
+		"prefix": "CallOnClient"
+	},
+	"Weapon/Clip1": {
+		"body": [
+			"Clip1()$0"
+		],
+		"description": "Returns how much primary ammo is in the magazine.",
+		"prefix": "Clip1"
+	},
+	"Weapon/Clip2": {
+		"body": [
+			"Clip2()$0"
+		],
+		"description": "Returns how much secondary ammo is in magazine.",
+		"prefix": "Clip2"
+	},
+	"Weapon/DefaultReload": {
+		"body": [
+			"DefaultReload(${1:act})$0"
+		],
+		"description": "Forces the weapon to reload while playing given animation.",
+		"prefix": "DefaultReload"
+	},
+	"Weapon/GetActivity": {
+		"body": [
+			"GetActivity()$0"
+		],
+		"description": "Returns the sequence enumeration number that the weapon is playing.",
+		"prefix": "GetActivity"
+	},
+	"Weapon/GetHoldType": {
+		"body": [
+			"GetHoldType()$0"
+		],
+		"description": "Returns the hold type of the weapon.",
+		"prefix": "GetHoldType"
+	},
+	"Weapon/GetMaxClip1": {
+		"body": [
+			"GetMaxClip1()$0"
+		],
+		"description": "Returns maximum primary clip size",
+		"prefix": "GetMaxClip1"
+	},
+	"Weapon/GetMaxClip2": {
+		"body": [
+			"GetMaxClip2()$0"
+		],
+		"description": "Returns maximum secondary clip size",
+		"prefix": "GetMaxClip2"
+	},
+	"Weapon/GetNextPrimaryFire": {
+		"body": [
+			"GetNextPrimaryFire()$0"
+		],
+		"description": "Gets the next time the weapon can primary fire. ( Can call",
+		"prefix": "GetNextPrimaryFire"
+	},
+	"Weapon/GetNextSecondaryFire": {
+		"body": [
+			"GetNextSecondaryFire()$0"
+		],
+		"description": "Gets the next time the weapon can secondary fire. ( Can call",
+		"prefix": "GetNextSecondaryFire"
+	},
+	"Weapon/GetPrimaryAmmoType": {
+		"body": [
+			"GetPrimaryAmmoType()$0"
+		],
+		"description": "Gets the primary ammo type of the given weapon.",
+		"prefix": "GetPrimaryAmmoType"
+	},
+	"Weapon/GetPrintName": {
+		"body": [
+			"GetPrintName()$0"
+		],
+		"description": "Returns the non-internal name of the weapon, that should be for displaying.",
+		"prefix": "GetPrintName"
+	},
+	"Weapon/GetSecondaryAmmoType": {
+		"body": [
+			"GetSecondaryAmmoType()$0"
+		],
+		"description": "Gets the ammo type of the given weapons secondary fire.",
+		"prefix": "GetSecondaryAmmoType"
+	},
+	"Weapon/GetSlot": {
+		"body": [
+			"GetSlot()$0"
+		],
+		"description": "Returns the slot of the weapon (slot numbers start from 0)",
+		"prefix": "GetSlot"
+	},
+	"Weapon/GetSlotPos": {
+		"body": [
+			"GetSlotPos()$0"
+		],
+		"description": "Returns slot position of the weapon",
+		"prefix": "GetSlotPos"
+	},
+	"Weapon/GetWeaponViewModel": {
+		"body": [
+			"GetWeaponViewModel()$0"
+		],
+		"description": "Returns the view model of the weapon.",
+		"prefix": "GetWeaponViewModel"
+	},
+	"Weapon/GetWeaponWorldModel": {
+		"body": [
+			"GetWeaponWorldModel()$0"
+		],
+		"description": "Returns the world model of the weapon.",
+		"prefix": "GetWeaponWorldModel"
+	},
+	"Weapon/GetWeight": {
+		"body": [
+			"GetWeight()$0"
+		],
+		"description": "Returns the \u0026#34;weight\u0026#34; of the weapon, which is used when deciding which",
+		"prefix": "GetWeight"
+	},
+	"Weapon/HasAmmo": {
+		"body": [
+			"HasAmmo()$0"
+		],
+		"description": "Returns whether the weapon has ammo left or not. It will return false when there\u0026#39;s no ammo left in the magazine",
+		"prefix": "HasAmmo"
+	},
+	"Weapon/IsCarriedByLocalPlayer": {
+		"body": [
+			"IsCarriedByLocalPlayer()$0"
+		],
+		"description": "Returns whenever the weapon is carried by the local player.",
+		"prefix": "IsCarriedByLocalPlayer"
+	},
+	"Weapon/IsScripted": {
+		"body": [
+			"IsScripted()$0"
+		],
+		"description": "Checks if the weapon is a SWEP or a built-in weapon.",
+		"prefix": "IsScripted"
+	},
+	"Weapon/IsWeaponVisible": {
+		"body": [
+			"IsWeaponVisible()$0"
+		],
+		"description": "Returns whether the weapon is visible. The term visibility is not exactly what gets checked here, first it checks if the owner is a player, then checks if the active view model has EF_NODRAW flag NOT set.",
+		"prefix": "IsWeaponVisible"
+	},
+	"Weapon/LastShootTime": {
+		"body": [
+			"LastShootTime()$0"
+		],
+		"description": "Returns the time since this weapon last fired a bullet with",
+		"prefix": "LastShootTime"
+	},
+	"Weapon/SendWeaponAnim": {
+		"body": [
+			"SendWeaponAnim(${1:act})$0"
+		],
+		"description": "Forces weapon to play activity/animation.",
+		"prefix": "SendWeaponAnim"
+	},
+	"Weapon/SetClip1": {
+		"body": [
+			"SetClip1(${1:ammo})$0"
+		],
+		"description": "Lets you change the number of bullets in the given weapons primary clip.",
+		"prefix": "SetClip1"
+	},
+	"Weapon/SetClip2": {
+		"body": [
+			"SetClip2(${1:ammo})$0"
+		],
+		"description": "Lets you change the number of bullets in the given weapons secondary clip.",
+		"prefix": "SetClip2"
+	},
+	"Weapon/SetHoldType": {
+		"body": [
+			"SetHoldType(${1:name})$0"
+		],
+		"description": "Sets the hold type of the weapon. This function also calls",
+		"prefix": "SetHoldType"
+	},
+	"Weapon/SetNextPrimaryFire": {
+		"body": [
+			"SetNextPrimaryFire(${1:time})$0"
+		],
+		"description": "Sets when the weapon can fire again. Time should be based on",
+		"prefix": "SetNextPrimaryFire"
+	},
+	"Weapon/SetNextSecondaryFire": {
+		"body": [
+			"SetNextSecondaryFire(${1:time})$0"
+		],
+		"description": "Sets when the weapon can alt-fire again. Time should be based on",
+		"prefix": "SetNextSecondaryFire"
+	}
+}

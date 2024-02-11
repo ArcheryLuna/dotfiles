@@ -1,0 +1,30 @@
+{
+	"ContextBase/ConVar": {
+		"body": [
+			"ConVar()$0"
+		],
+		"description": "Returns the",
+		"prefix": "ConVar"
+	},
+	"ContextBase/ControlValues": {
+		"body": [
+			"ControlValues(${1:contextData})$0"
+		],
+		"description": "Called by spawnmenu functions (when creating a context menu) to fill this control with data.",
+		"prefix": "ControlValues"
+	},
+	"ContextBase/SetConVar": {
+		"body": [
+			"SetConVar(${1:cvar})$0"
+		],
+		"description": "Sets the",
+		"prefix": "SetConVar"
+	},
+	"ContextBase/TestForChanges": {
+		"body": [
+			"TestForChanges()$0"
+		],
+		"description": "You should override this function and use it to check whether your convar value changed.",
+		"prefix": "TestForChanges"
+	}
+}

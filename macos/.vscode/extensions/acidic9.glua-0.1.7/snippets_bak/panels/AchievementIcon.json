@@ -1,0 +1,9 @@
+{
+	"Panel/SetAchievement": {
+		"body": [
+			"SetAchievement(${1:id})$0"
+		],
+		"description": "Sets the achievement to be displayed by",
+		"prefix": "SetAchievement"
+	}
+}

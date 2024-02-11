@@ -1,0 +1,79 @@
+{
+    "system.AppTime": {
+        "body": [
+            "system.AppTime()$0"
+        ],
+        "description": "SYSTEM [Shared/Menu]",
+        "prefix": "system.AppTime"
+    },
+    "system.BatteryPower": {
+        "body": [
+            "system.BatteryPower()$0"
+        ],
+        "description": "SYSTEM [Shared/Menu]",
+        "prefix": "system.BatteryPower"
+    },
+    "system.FlashWindow": {
+        "body": [
+            "system.FlashWindow()$0"
+        ],
+        "description": "SYSTEM [Client/Menu]",
+        "prefix": "system.FlashWindow"
+    },
+    "system.GetCountry": {
+        "body": [
+            "system.GetCountry()$0"
+        ],
+        "description": "SYSTEM [Shared/Menu]",
+        "prefix": "system.GetCountry"
+    },
+    "system.HasFocus": {
+        "body": [
+            "system.HasFocus()$0"
+        ],
+        "description": "SYSTEM [Shared/Menu]",
+        "prefix": "system.HasFocus"
+    },
+    "system.IsLinux": {
+        "body": [
+            "system.IsLinux()$0"
+        ],
+        "description": "SYSTEM [Shared/Menu]",
+        "prefix": "system.IsLinux"
+    },
+    "system.IsOSX": {
+        "body": [
+            "system.IsOSX()$0"
+        ],
+        "description": "SYSTEM [Shared/Menu]",
+        "prefix": "system.IsOSX"
+    },
+    "system.IsWindowed": {
+        "body": [
+            "system.IsWindowed()$0"
+        ],
+        "description": "SYSTEM [Client/Menu] Returns whether the game is being run in a window or in fullscreen (you can change this by opening the menu, clicking 'Options', then clicking the 'Video' tab, and changing the Display Mode using the dropdown menu):",
+        "prefix": "system.IsWindowed"
+    },
+    "system.IsWindows": {
+        "body": [
+            "system.IsWindows()$0"
+        ],
+        "description": "SYSTEM [Shared/Menu]",
+        "prefix": "system.IsWindows"
+    },
+    "system.SteamTime": {
+        "body": [
+            "system.SteamTime()$0"
+        ],
+        "description": "SYSTEM [Shared/Menu]",
+        "prefix": "system.SteamTime"
+    },
+    "system.UpTime": {
+        "body": [
+            "system.UpTime()$0"
+        ],
+        "description": "SYSTEM [Shared/Menu]",
+        "prefix": "system.UpTime"
+    }
+}

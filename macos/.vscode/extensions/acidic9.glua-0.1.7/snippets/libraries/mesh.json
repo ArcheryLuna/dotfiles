@@ -1,0 +1,93 @@
+{
+    "mesh.AdvanceVertex": {
+        "body": [
+            "mesh.AdvanceVertex()$0"
+        ],
+        "description": "MESH [Client]",
+        "prefix": "mesh.AdvanceVertex"
+    },
+    "mesh.Begin": {
+        "body": [
+            "mesh.Begin(${1:mesh=nil}, ${2:primitiveType}, ${3:primiteCount})$0"
+        ],
+        "description": "MESH [Client] Starts a new dynamic mesh. If an IMesh is passed, it will use that mesh instead.\n\n[IMesh] mesh=nil\n  Mesh to build. This argument can be removed if you wish to build a \"dynamic\" mesh. See examples below.\n\n[number] primitiveType\n  Primitive type, see MATERIAL_ Enums.\n\n[number] primiteCount\n  The amount of primitives.",
+        "prefix": "mesh.Begin"
+    },
+    "mesh.Color": {
+        "body": [
+            "mesh.Color(${1:r}, ${2:g}, ${3:b}, ${4:a})$0"
+        ],
+        "description": "MESH [Client] Sets the color to be used for the next vertex.\n\n[number] r\n  Red component.\n\n[number] g\n  Green component.\n\n[number] b\n  Blue component.\n\n[number] a\n  Alpha component.",
+        "prefix": "mesh.Color"
+    },
+    "mesh.End": {
+        "body": [
+            "mesh.End()$0"
+        ],
+        "description": "MESH [Client]",
+        "prefix": "mesh.End"
+    },
+    "mesh.Normal": {
+        "body": [
+            "mesh.Normal(${1:normal})$0"
+        ],
+        "description": "MESH [Client] \n\n[Vector] normal\n  The normal of the vertex.",
+        "prefix": "mesh.Normal"
+    },
+    "mesh.Position": {
+        "body": [
+            "mesh.Position(${1:position})$0"
+        ],
+        "description": "MESH [Client] \n\n[Vector] position\n  The position of the vertex.",
+        "prefix": "mesh.Position"
+    },
+    "mesh.Quad": {
+        "body": [
+            "mesh.Quad(${1:vertex1}, ${2:vertex2}, ${3:vertex3}, ${4:vertex4})$0"
+        ],
+        "description": "MESH [Client] Draws a quad using 4 vertices.\n\n[Vector] vertex1\n  The first vertex.\n\n[Vector] vertex2\n  The second vertex.\n\n[Vector] vertex3\n  The third vertex.\n\n[Vector] vertex4\n  The fourth vertex.",
+        "prefix": "mesh.Quad"
+    },
+    "mesh.QuadEasy": {
+        "body": [
+            "mesh.QuadEasy(${1:position}, ${2:normal}, ${3:sizeX}, ${4:sizeY})$0"
+        ],
+        "description": "MESH [Client] Draws a quad using a position, a normal and the size.\n\n[Vector] position\n  The center of the quad.\n\n[Vector] normal\n  The normal of the quad.\n\n[number] sizeX\n  X size in pixels.\n\n[number] sizeY\n  Y size in pixels.",
+        "prefix": "mesh.QuadEasy"
+    },
+    "mesh.Specular": {
+        "body": [
+            "mesh.Specular(${1:r}, ${2:g}, ${3:b}, ${4:a})$0"
+        ],
+        "description": "MESH [Client] Sets the specular map values. This function actually does nothing.\n\n[number] r\n  The red channel multiplier of the specular map.\n\n[number] g\n  The green channel multiplier of the specular map.\n\n[number] b\n  The blue channel multiplier of the specular map.\n\n[number] a\n  The alpha channel multiplier of the specular map.",
+        "prefix": "mesh.Specular"
+    },
+    "mesh.TangentS": {
+        "body": [
+            "mesh.TangentS(${1:sTanger})$0"
+        ],
+        "description": "MESH [Client] \n\n[Vector] sTanger\n  The s tangent.",
+        "prefix": "mesh.TangentS"
+    },
+    "mesh.TangentT": {
+        "body": [
+            "mesh.TangentT(${1:tTanger})$0"
+        ],
+        "description": "MESH [Client] \n\n[Vector] tTanger\n  The t tangent.",
+        "prefix": "mesh.TangentT"
+    },
+    "mesh.TexCoord": {
+        "body": [
+            "mesh.TexCoord(${1:stage}, ${2:u}, ${3:v})$0"
+        ],
+        "description": "MESH [Client] Sets the texture coordinates for the next vertex. Non-zero values of stage require the currently bound material to support it. For example, any LightmappedGeneric material supports stages 1 and 2 (lightmap texture coordinates).\n\n[number] stage\n  The stage of the texture coordinate.\n\n[number] u\n  U coordinate.\n\n[number] v\n  V coordinate.",
+        "prefix": "mesh.TexCoord"
+    },
+    "mesh.VertexCount": {
+        "body": [
+            "mesh.VertexCount()$0"
+        ],
+        "description": "MESH [Client]",
+        "prefix": "mesh.VertexCount"
+    }
+}

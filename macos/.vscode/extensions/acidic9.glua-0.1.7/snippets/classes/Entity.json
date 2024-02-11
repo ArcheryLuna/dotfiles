@@ -1,0 +1,3243 @@
+{
+    "Activate": {
+        "body": [
+            "Activate()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "Activate"
+    },
+    "AddCallback": {
+        "body": [
+            "AddCallback(${1:hook}, ${2:func})$0"
+        ],
+        "description": "ENTITY [Shared] Add a callback function to a specific event. This is used instead of hooks to avoid calling empty functions unnecessarily. This also allows you to use certain hooks in engine entities (non-scripted entities).\n\n[string] hook\n  The hook name to hook onto. See Entity Callbacks\n\n[function] func\n  The function to call",
+        "prefix": "AddCallback"
+    },
+    "AddEFlags": {
+        "body": [
+            "AddEFlags(${1:flag})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flag\n  Engine flag to add, see EFL_ Enums",
+        "prefix": "AddEFlags"
+    },
+    "AddEffects": {
+        "body": [
+            "AddEffects(${1:effect})$0"
+        ],
+        "description": "ENTITY [Shared] Applies an engine effect to an entity.\n\n[number] effect\n  The effect to apply, see EF_ Enums.",
+        "prefix": "AddEffects"
+    },
+    "AddFlags": {
+        "body": [
+            "AddFlags(${1:flag})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flag\n  Flag to add, see FL_ Enums",
+        "prefix": "AddFlags"
+    },
+    "AddGesture": {
+        "body": [
+            "AddGesture(${1:activity}, ${2:autokill=true})$0"
+        ],
+        "description": "ENTITY [Server] Adds a gesture animation to the entity and plays it.\nSee Entity:AddGestureSequence and Entity:AddLayeredSequence for functions that takes sequences instead of ACT_ Enums.\n\n[number] activity\n  The activity to play as the gesture. See ACT_ Enums.\n\n[boolean] autokill=true",
+        "prefix": "AddGesture"
+    },
+    "AddGestureSequence": {
+        "body": [
+            "AddGestureSequence(${1:sequence}, ${2:autokill=true})$0"
+        ],
+        "description": "ENTITY [Server] Adds a gesture animation to the entity and plays it.\nSee Entity:AddGesture for a function that takes ACT_ Enums.\nSee also Entity:AddLayeredSequence.\n\n[number] sequence\n  The sequence ID to play as the gesture. See Entity:LookupSequence.\n\n[boolean] autokill=true",
+        "prefix": "AddGestureSequence"
+    },
+    "AddLayeredSequence": {
+        "body": [
+            "AddLayeredSequence(${1:sequence}, ${2:priority})$0"
+        ],
+        "description": "ENTITY [Server] Adds a gesture animation to the entity and plays it.\nSee Entity:AddGestureSequence for a function that doesn't take priority.\nSee Entity:AddGesture for a function that takes ACT_ Enums.\n\n[number] sequence\n  The sequence ID to play as the gesture. See Entity:LookupSequence.\n\n[number] priority",
+        "prefix": "AddLayeredSequence"
+    },
+    "AddSolidFlags": {
+        "body": [
+            "AddSolidFlags(${1:flags})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flags\n  The flag(s) to apply, see FSOLID_ Enums.",
+        "prefix": "AddSolidFlags"
+    },
+    "AddToMotionController": {
+        "body": [
+            "AddToMotionController(${1:physObj})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[PhysObj] physObj\n  The PhysObj to add to the motion controller.",
+        "prefix": "AddToMotionController"
+    },
+    "AlignAngles": {
+        "body": [
+            "AlignAngles(${1:from}, ${2:to})$0"
+        ],
+        "description": "ENTITY [Shared] Returns an angle based on the ones inputted that you can use to align an object.\n\n[Angle] from\n  The angle you want to align from\n\n[Angle] to\n  The angle you want to align to",
+        "prefix": "AlignAngles"
+    },
+    "BecomeRagdollOnClient": {
+        "body": [
+            "BecomeRagdollOnClient()$0"
+        ],
+        "description": "ENTITY [Client] Spawns a clientside ragdoll for the entity, positioning it in place of the original entity, and makes the entity invisible. It doesn't preserve flex values (face posing) as CSRagdolls don't support flex. It does not work on players. Use Player:CreateRagdoll instead. The original entity is not removed, and neither are any ragdolls previously generated with this function. To make the entity re-appear, run Entity:SetNoDraw( false )",
+        "prefix": "BecomeRagdollOnClient"
+    },
+    "Blocked": {
+        "body": [
+            "Blocked(${1:entity})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Entity] entity\n  The entity that is blocking us",
+        "prefix": "Blocked"
+    },
+    "BodyTarget": {
+        "body": [
+            "BodyTarget(${1:origin}, ${2:noisy=false})$0"
+        ],
+        "description": "ENTITY [Server] Returns a centered vector of this entity, NPCs use this internally to aim at their targets.\n\n[Vector] origin\n  The vector of where the the attack comes from.\n\n[boolean] noisy=false\n  Decides if it should return the centered vector with a random offset to it.",
+        "prefix": "BodyTarget"
+    },
+    "BoneHasFlag": {
+        "body": [
+            "BoneHasFlag(${1:boneID}, ${2:flag})$0"
+        ],
+        "description": "ENTITY [Shared] Returns whether the entity's bone has the flag or not.\n\n[number] boneID\n  Bone ID to test flag of.\n\n[number] flag\n  The flag to test, see BONE_ Enums",
+        "prefix": "BoneHasFlag"
+    },
+    "BoneLength": {
+        "body": [
+            "BoneLength(${1:boneID})$0"
+        ],
+        "description": "ENTITY [Shared] This function takes the boneID and returns the length of it in an unrounded decimal\n\n[number] boneID\n  The ID of the bone you want the length of. You may want to get the length of the next bone ( boneID + 1 ) for decent results",
+        "prefix": "BoneLength"
+    },
+    "BoundingRadius": {
+        "body": [
+            "BoundingRadius()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "BoundingRadius"
+    },
+    "CallOnRemove": {
+        "body": [
+            "CallOnRemove(${1:identifier}, ${2:removeFunc}, ${3:argn...})$0"
+        ],
+        "description": "ENTITY [Shared] Causes a specified function to be run if the entity is removed by any means.\n\n[string] identifier\n  Identifier of the function within CallOnRemove\n\n[function] removeFunc\n  Function to be called on remove\n\n[vararg] argn...\n  Optional arguments to pass to removeFunc. Do note that the first argument passed to the function will always be the entity being removed, and the arguments passed on here start after that.",
+        "prefix": "CallOnRemove"
+    },
+    "ClearPoseParameters": {
+        "body": [
+            "ClearPoseParameters()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "ClearPoseParameters"
+    },
+    "CollisionRulesChanged": {
+        "body": [
+            "CollisionRulesChanged()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "CollisionRulesChanged"
+    },
+    "CreateParticleEffect": {
+        "body": [
+            "CreateParticleEffect(${1:particle}, ${2:attachment}, ${3:options=nil})$0"
+        ],
+        "description": "ENTITY [Client] Creates a clientside particle system attached to the entity.\n\n[string] particle\n  The particle name to create\n\n[number] attachment\n  Attachment ID to attach the particle to\n\n[table] options=nil\n  A table of tables ( IDs 1 to 64 ) having the following structure:\n\n number attachtype - The particle attach type. See PATTACH_ Enums. Default: PATTACH_ABSORIGIN\n Entity entity - The parent entity? Default: NULL\n Vector position - The offset position for given control point. Default: nil",
+        "prefix": "CreateParticleEffect"
+    },
+    "CreateShadow": {
+        "body": [
+            "CreateShadow()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "CreateShadow"
+    },
+    "CreatedByMap": {
+        "body": [
+            "CreatedByMap()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "CreatedByMap"
+    },
+    "DTVar": {
+        "body": [
+            "DTVar(${1:Type}, ${2:ID}, ${3:Name})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] Type\n  The type of the DTVar being set up. It can be one of the following: 'Int', 'Float', 'Vector', 'Angle', 'Bool', 'Entity' or 'String'\n\n[number] ID\n  The ID of the DTVar. Can be between 0 and 3\n\n[string] Name\n  Name by which you will refer to DTVar. It must be a valid variable name. (No spaces!)",
+        "prefix": "DTVar"
+    },
+    "DeleteOnRemove": {
+        "body": [
+            "DeleteOnRemove(${1:entityToRemove})$0"
+        ],
+        "description": "ENTITY [Server] Whenever the entity is removed, entityToRemove will be removed also.\n\n[Entity] entityToRemove\n  The entity to be removed",
+        "prefix": "DeleteOnRemove"
+    },
+    "DestroyShadow": {
+        "body": [
+            "DestroyShadow()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "DestroyShadow"
+    },
+    "DisableMatrix": {
+        "body": [
+            "DisableMatrix(${1:matrixType})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[string] matrixType\n  The name of the matrix type to disable.\n\nThe only known matrix type is \"RenderMultiply\".",
+        "prefix": "DisableMatrix"
+    },
+    "DispatchTraceAttack": {
+        "body": [
+            "DispatchTraceAttack(${1:damageInfo}, ${2:traceRes}, ${3:dir=traceRes.HitNormal})$0"
+        ],
+        "description": "ENTITY [Shared] Performs a trace attack.\n\n[CTakeDamageInfo] damageInfo\n  The damage to apply.\n\n[table] traceRes\n  Trace result to use to deal damage. See TraceResult structure\n\n[Vector] dir=traceRes.HitNormal\n  Direction of the attack.",
+        "prefix": "DispatchTraceAttack"
+    },
+    "DontDeleteOnRemove": {
+        "body": [
+            "DontDeleteOnRemove(${1:entityToUnremove})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Entity] entityToUnremove\n  The entity to be removed from the list of entities to delete",
+        "prefix": "DontDeleteOnRemove"
+    },
+    "DrawModel": {
+        "body": [
+            "DrawModel()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "DrawModel"
+    },
+    "DrawShadow": {
+        "body": [
+            "DrawShadow(${1:shouldDraw})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] shouldDraw\n  True to enable, false to disable shadow drawing.",
+        "prefix": "DrawShadow"
+    },
+    "DropToFloor": {
+        "body": [
+            "DropToFloor()$0"
+        ],
+        "description": "ENTITY [Server] Move an entity down until it collides with something.",
+        "prefix": "DropToFloor"
+    },
+    "EmitSound": {
+        "body": [
+            "EmitSound(${1:soundName}, ${2:soundLevel=75}, ${3:pitchPercent=100}, ${4:volume=1}, ${5:channel=CHAN_AUTO})$0"
+        ],
+        "description": "ENTITY [Shared] Plays a sound on an entity. If run clientside, the sound will only be heard locally. If used on a player or NPC character with the mouth rigged, the character will \"lip-sync\". ( Does not work with all sounds )\n\n[string] soundName\n  The name of the sound to be played.\n\n[number] soundLevel=75\n  A modifier for the distance this sound will reach, acceptable range is 0 to 511. 100 means no adjustment to the level. See SNDLVL_ Enums\n\n[number] pitchPercent=100\n  The pitch applied to the sound. The acceptable range is from 0 to 255. 100 means the pitch is not changed.\n\n[number] volume=1\n  The volume, from 0 to 1.\n\n[number] channel=CHAN_AUTO\n  The sound channel , see CHAN_ Enums",
+        "prefix": "EmitSound"
+    },
+    "EnableConstraints": {
+        "body": [
+            "EnableConstraints(${1:toggleConstraints})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[boolean] toggleConstraints\n  Set to true to enable the constraints and false to disable them.",
+        "prefix": "EnableConstraints"
+    },
+    "EnableCustomCollisions": {
+        "body": [
+            "EnableCustomCollisions(${1:useCustom})$0"
+        ],
+        "description": "ENTITY [Shared] Flags an entity as using custom lua defined collisions. Fixes entities having spongy player collisions or not hitting traces, such as after Entity:PhysicsFromMesh\n\n[boolean] useCustom\n  True to flag this entity",
+        "prefix": "EnableCustomCollisions"
+    },
+    "EnableMatrix": {
+        "body": [
+            "EnableMatrix(${1:matrixType}, ${2:matrix})$0"
+        ],
+        "description": "ENTITY [Client] Can be used to apply a custom VMatrix to the entity, mostly used for scaling the model by a Vector. To disable it, use Entity:DisableMatrix. If your old scales are wrong due to a recent update, use Entity:SetLegacyTransform as a quick fix.\n\n[string] matrixType\n  The name of the matrix type.\n\nThe only implemented matrix type is \"RenderMultiply\".\n\n[VMatrix] matrix\n  The matrix to apply before drawing the entity.",
+        "prefix": "EnableMatrix"
+    },
+    "EntIndex": {
+        "body": [
+            "EntIndex()$0"
+        ],
+        "description": "ENTITY [Shared] Gets the unique entity index of an entity.",
+        "prefix": "EntIndex"
+    },
+    "Extinguish": {
+        "body": [
+            "Extinguish()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "Extinguish"
+    },
+    "EyeAngles": {
+        "body": [
+            "EyeAngles()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the direction a player/npc/ragdoll is looking as a world-oriented angle.",
+        "prefix": "EyeAngles"
+    },
+    "EyePos": {
+        "body": [
+            "EyePos()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "EyePos"
+    },
+    "FindBodygroupByName": {
+        "body": [
+            "FindBodygroupByName(${1:name})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] name\n  The bodygroup name to search for.",
+        "prefix": "FindBodygroupByName"
+    },
+    "FindTransitionSequence": {
+        "body": [
+            "FindTransitionSequence(${1:currentSequence}, ${2:goalSequence})$0"
+        ],
+        "description": "ENTITY [Shared] Returns a transition from the given start and end sequence. This function was only used by HL1 entities and NPCs, before the advent of sequence blending and gestures.\n\n[number] currentSequence\n  The currently playing sequence\n\n[number] goalSequence\n  The goal sequence.",
+        "prefix": "FindTransitionSequence"
+    },
+    "Fire": {
+        "body": [
+            "Fire(${1:input}, ${2:param=\"\"}, ${3:delay=0})$0"
+        ],
+        "description": "ENTITY [Server] Fires an entity's input. You can find inputs for most entities on the Valve Developer Wiki\n\n[string] input\n  The name of the input to fire\n\n[string] param=\"\"\n  The value to give to the input, can also be a number.\n\n[number] delay=0\n  Delay in seconds before firing",
+        "prefix": "Fire"
+    },
+    "FireBullets": {
+        "body": [
+            "FireBullets(${1:bulletInfo}, ${2:suppressHostEvents=false})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[table] bulletInfo\n  The bullet data to be used. See the Bullet structure.\n\n[boolean] suppressHostEvents=false\n  Has the effect of encasing the FireBullets call in SuppressHostEvents, only works in multiplayer.",
+        "prefix": "FireBullets"
+    },
+    "FollowBone": {
+        "body": [
+            "FollowBone(${1:parent=NULL}, ${2:boneid})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Entity] parent=NULL\n  The entity to follow the bone of. If unset, removes the FollowBone effect.\n\n[number] boneid\n  The bone to follow",
+        "prefix": "FollowBone"
+    },
+    "ForcePlayerDrop": {
+        "body": [
+            "ForcePlayerDrop()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "ForcePlayerDrop"
+    },
+    "FrameAdvance": {
+        "body": [
+            "FrameAdvance(${1:delta})$0"
+        ],
+        "description": "ENTITY [Shared] Advances the cycle of an animated entity by the given delta. Since cycle is a value between 0 and 1, delta should be as well. Animations that loop will automatically reset the cycle so you don't have to - ones that do not will stop animating once you reach the end of their sequence.\n\n[number] delta\n  Amount to advance frame by.",
+        "prefix": "FrameAdvance"
+    },
+    "GetAbsVelocity": {
+        "body": [
+            "GetAbsVelocity()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetAbsVelocity"
+    },
+    "GetAngles": {
+        "body": [
+            "GetAngles()$0"
+        ],
+        "description": "ENTITY [Shared] Gets the angles of given entity.",
+        "prefix": "GetAngles"
+    },
+    "GetAnimInfo": {
+        "body": [
+            "GetAnimInfo(${1:animIndex})$0"
+        ],
+        "description": "ENTITY [Shared] Returns a table containing the number of frames, flags, name, and FPS of an entity's animation ID.\n\n[number] animIndex\n  The animation ID to look up",
+        "prefix": "GetAnimInfo"
+    },
+    "GetAnimTime": {
+        "body": [
+            "GetAnimTime()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "GetAnimTime"
+    },
+    "GetAttachment": {
+        "body": [
+            "GetAttachment(${1:attachmentId})$0"
+        ],
+        "description": "ENTITY [Shared] Gets the orientation and position of the attachment by its ID, returns nothing if the attachment does not exist.\n\n[number] attachmentId\n  The internal ID of the attachment.",
+        "prefix": "GetAttachment"
+    },
+    "GetAttachments": {
+        "body": [
+            "GetAttachments()$0"
+        ],
+        "description": "ENTITY [Shared] Returns a table containing all attachments of the given entitys model.\nReturns an empty table or nil in case it's model has no attachments.",
+        "prefix": "GetAttachments"
+    },
+    "GetBaseVelocity": {
+        "body": [
+            "GetBaseVelocity()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetBaseVelocity"
+    },
+    "GetBloodColor": {
+        "body": [
+            "GetBloodColor()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetBloodColor"
+    },
+    "GetBodyGroups": {
+        "body": [
+            "GetBodyGroups()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetBodyGroups"
+    },
+    "GetBodygroup": {
+        "body": [
+            "GetBodygroup(${1:id})$0"
+        ],
+        "description": "ENTITY [Shared] Gets the exact value for specific bodygroup of given entity.\n\n[number] id\n  The id of bodygroup to get value of. Starts from 0.",
+        "prefix": "GetBodygroup"
+    },
+    "GetBodygroupCount": {
+        "body": [
+            "GetBodygroupCount(${1:bodygroup})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] bodygroup\n  The ID of bodygroup to retrieve count of.",
+        "prefix": "GetBodygroupCount"
+    },
+    "GetBodygroupName": {
+        "body": [
+            "GetBodygroupName(${1:id})$0"
+        ],
+        "description": "ENTITY [Shared] Gets the name of specific bodygroup for given entity.\n\n[number] id\n  The id of bodygroup to get the name of.",
+        "prefix": "GetBodygroupName"
+    },
+    "GetBoneController": {
+        "body": [
+            "GetBoneController(${1:boneID})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneID\n  ID of the bone controller. Goes from 0 to 3.",
+        "prefix": "GetBoneController"
+    },
+    "GetBoneCount": {
+        "body": [
+            "GetBoneCount()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the amount of bones in the entity.",
+        "prefix": "GetBoneCount"
+    },
+    "GetBoneMatrix": {
+        "body": [
+            "GetBoneMatrix(${1:boneID})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneID\n  The bone to retrieve matrix of.\n\n Bones clientside and serverside will differ",
+        "prefix": "GetBoneMatrix"
+    },
+    "GetBoneName": {
+        "body": [
+            "GetBoneName(${1:index})$0"
+        ],
+        "description": "ENTITY [Shared] Returns name of given bone id.\n\n[number] index\n  ID of bone to lookup name of",
+        "prefix": "GetBoneName"
+    },
+    "GetBoneParent": {
+        "body": [
+            "GetBoneParent(${1:bone})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] bone\n  The bode ID of the bone to get parent of",
+        "prefix": "GetBoneParent"
+    },
+    "GetBonePosition": {
+        "body": [
+            "GetBonePosition(${1:boneIndex})$0"
+        ],
+        "description": "ENTITY [Shared] Returns the position and angle of the given attachment, relative to the world.\n\n[number] boneIndex\n  The bone index of the given attachment. See Entity:LookupBone.",
+        "prefix": "GetBonePosition"
+    },
+    "GetBrushPlane": {
+        "body": [
+            "GetBrushPlane(${1:id})$0"
+        ],
+        "description": "ENTITY [Shared] Returns info about given plane of non-nodraw brush model surfaces of the entity's model.\n\n[number] id\n  The index of the plane to get info of",
+        "prefix": "GetBrushPlane"
+    },
+    "GetBrushPlaneCount": {
+        "body": [
+            "GetBrushPlaneCount()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetBrushPlaneCount"
+    },
+    "GetCallbacks": {
+        "body": [
+            "GetCallbacks(${1:hook})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] hook\n  The hook to retrieve the callbacks from, see Entity Callbacks for the possible hooks.",
+        "prefix": "GetCallbacks"
+    },
+    "GetChildBones": {
+        "body": [
+            "GetChildBones(${1:boneid})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneid\n  Bone id to lookup children of",
+        "prefix": "GetChildBones"
+    },
+    "GetChildren": {
+        "body": [
+            "GetChildren()$0"
+        ],
+        "description": "ENTITY [Shared] Gets the children of the entity - that is, every entity whose parent is this entity.",
+        "prefix": "GetChildren"
+    },
+    "GetClass": {
+        "body": [
+            "GetClass()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the classname of a entity. This is often the name of the Lua file or folder containing the files for the entity",
+        "prefix": "GetClass"
+    },
+    "GetCollisionBounds": {
+        "body": [
+            "GetCollisionBounds()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetCollisionBounds"
+    },
+    "GetCollisionGroup": {
+        "body": [
+            "GetCollisionGroup()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetCollisionGroup"
+    },
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the color the entity is set to.",
+        "prefix": "GetColor"
+    },
+    "GetConstrainedEntities": {
+        "body": [
+            "GetConstrainedEntities()$0"
+        ],
+        "description": "ENTITY [Server] Returns the two entities involved in a constraint ent",
+        "prefix": "GetConstrainedEntities"
+    },
+    "GetConstrainedPhysObjects": {
+        "body": [
+            "GetConstrainedPhysObjects()$0"
+        ],
+        "description": "ENTITY [Server] Returns the two entities physobjects involved in a constraint ent",
+        "prefix": "GetConstrainedPhysObjects"
+    },
+    "GetCreationID": {
+        "body": [
+            "GetCreationID()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetCreationID"
+    },
+    "GetCreationTime": {
+        "body": [
+            "GetCreationTime()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetCreationTime"
+    },
+    "GetCreator": {
+        "body": [
+            "GetCreator()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetCreator"
+    },
+    "GetCustomCollisionCheck": {
+        "body": [
+            "GetCustomCollisionCheck()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetCustomCollisionCheck"
+    },
+    "GetCycle": {
+        "body": [
+            "GetCycle()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetCycle"
+    },
+    "GetDTAngle": {
+        "body": [
+            "GetDTAngle(${1:key})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 63.\n\nSpecifies what key to grab from datatable.",
+        "prefix": "GetDTAngle"
+    },
+    "GetDTBool": {
+        "body": [
+            "GetDTBool(${1:key})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 63.\n\nSpecifies what key to grab from datatable.",
+        "prefix": "GetDTBool"
+    },
+    "GetDTEntity": {
+        "body": [
+            "GetDTEntity(${1:key})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 63.\n\nSpecifies what key to grab from datatable.",
+        "prefix": "GetDTEntity"
+    },
+    "GetDTFloat": {
+        "body": [
+            "GetDTFloat(${1:key})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 63.\n\nSpecifies what key to grab from datatable.",
+        "prefix": "GetDTFloat"
+    },
+    "GetDTInt": {
+        "body": [
+            "GetDTInt(${1:key})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 63.\n\nSpecifies what key to grab from datatable.",
+        "prefix": "GetDTInt"
+    },
+    "GetDTString": {
+        "body": [
+            "GetDTString(${1:key})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 3.\n\nSpecifies what key to grab from datatable.",
+        "prefix": "GetDTString"
+    },
+    "GetDTVector": {
+        "body": [
+            "GetDTVector(${1:key})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 63.\n\nSpecifies what key to grab from datatable.",
+        "prefix": "GetDTVector"
+    },
+    "GetEFlags": {
+        "body": [
+            "GetEFlags()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetEFlags"
+    },
+    "GetEffects": {
+        "body": [
+            "GetEffects()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetEffects"
+    },
+    "GetElasticity": {
+        "body": [
+            "GetElasticity()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetElasticity"
+    },
+    "GetFlags": {
+        "body": [
+            "GetFlags()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetFlags"
+    },
+    "GetFlexBounds": {
+        "body": [
+            "GetFlexBounds(${1:flex})$0"
+        ],
+        "description": "ENTITY [Shared] Returns acceptable value range for the flex.\n\n[number] flex\n  The ID of the flex to look up bounds of",
+        "prefix": "GetFlexBounds"
+    },
+    "GetFlexIDByName": {
+        "body": [
+            "GetFlexIDByName(${1:name})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] name\n  The name of the flex to get the ID of. Case sensitive.",
+        "prefix": "GetFlexIDByName"
+    },
+    "GetFlexName": {
+        "body": [
+            "GetFlexName(${1:id})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] id\n  The flex id to look up name of",
+        "prefix": "GetFlexName"
+    },
+    "GetFlexNum": {
+        "body": [
+            "GetFlexNum()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetFlexNum"
+    },
+    "GetFlexScale": {
+        "body": [
+            "GetFlexScale()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetFlexScale"
+    },
+    "GetFlexWeight": {
+        "body": [
+            "GetFlexWeight(${1:flex})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flex\n  The ID of the flex to get weight of",
+        "prefix": "GetFlexWeight"
+    },
+    "GetForward": {
+        "body": [
+            "GetForward()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetForward"
+    },
+    "GetFriction": {
+        "body": [
+            "GetFriction()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetFriction"
+    },
+    "GetGravity": {
+        "body": [
+            "GetGravity()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetGravity"
+    },
+    "GetGroundEntity": {
+        "body": [
+            "GetGroundEntity()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetGroundEntity"
+    },
+    "GetGroundSpeedVelocity": {
+        "body": [
+            "GetGroundSpeedVelocity()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetGroundSpeedVelocity"
+    },
+    "GetHitBoxBone": {
+        "body": [
+            "GetHitBoxBone(${1:hitbox}, ${2:group})$0"
+        ],
+        "description": "ENTITY [Shared] Gets the bone of a hit box\n\n[number] hitbox\n  The number of the hit box\n\n[number] group\n  The number of the hit box group",
+        "prefix": "GetHitBoxBone"
+    },
+    "GetHitBoxBounds": {
+        "body": [
+            "GetHitBoxBounds(${1:hitbox}, ${2:group})$0"
+        ],
+        "description": "ENTITY [Shared] Gets the bounding box of a hit box\n\n[number] hitbox\n  The number of the hitbox\n\n[number] group\n  The group of the hitbox",
+        "prefix": "GetHitBoxBounds"
+    },
+    "GetHitBoxCount": {
+        "body": [
+            "GetHitBoxCount(${1:group})$0"
+        ],
+        "description": "ENTITY [Shared] Gets how many hit boxes are in a given hit box group\n\n[number] group\n  The number of the hit box group",
+        "prefix": "GetHitBoxCount"
+    },
+    "GetHitBoxGroupCount": {
+        "body": [
+            "GetHitBoxGroupCount()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the number of hit box groups that an entity has.",
+        "prefix": "GetHitBoxGroupCount"
+    },
+    "GetHitboxBone": {
+        "body": [
+            "GetHitboxBone()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetHitboxBone"
+    },
+    "GetHitboxSet": {
+        "body": [
+            "GetHitboxSet()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetHitboxSet"
+    },
+    "GetHitboxSetCount": {
+        "body": [
+            "GetHitboxSetCount()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetHitboxSetCount"
+    },
+    "GetInternalVariable": {
+        "body": [
+            "GetInternalVariable(${1:VariableName})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] VariableName\n  Name of variable corresponding to an entity save value.",
+        "prefix": "GetInternalVariable"
+    },
+    "GetKeyValues": {
+        "body": [
+            "GetKeyValues()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetKeyValues"
+    },
+    "GetLayerCycle": {
+        "body": [
+            "GetLayerCycle(${1:layerID})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID",
+        "prefix": "GetLayerCycle"
+    },
+    "GetLayerDuration": {
+        "body": [
+            "GetLayerDuration(${1:layerID})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID",
+        "prefix": "GetLayerDuration"
+    },
+    "GetLayerWeight": {
+        "body": [
+            "GetLayerWeight(${1:layerID})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID",
+        "prefix": "GetLayerWeight"
+    },
+    "GetLocalAngles": {
+        "body": [
+            "GetLocalAngles()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetLocalAngles"
+    },
+    "GetLocalAngularVelocity": {
+        "body": [
+            "GetLocalAngularVelocity()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetLocalAngularVelocity"
+    },
+    "GetLocalPos": {
+        "body": [
+            "GetLocalPos()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetLocalPos"
+    },
+    "GetManipulateBoneAngles": {
+        "body": [
+            "GetManipulateBoneAngles(${1:boneID})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneID\n  The bone's ID",
+        "prefix": "GetManipulateBoneAngles"
+    },
+    "GetManipulateBoneJiggle": {
+        "body": [
+            "GetManipulateBoneJiggle(${1:boneID})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneID\n  The bone ID",
+        "prefix": "GetManipulateBoneJiggle"
+    },
+    "GetManipulateBonePosition": {
+        "body": [
+            "GetManipulateBonePosition(${1:boneId})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneId\n  The bone's ID",
+        "prefix": "GetManipulateBonePosition"
+    },
+    "GetManipulateBoneScale": {
+        "body": [
+            "GetManipulateBoneScale(${1:boneID})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneID\n  The bone's ID",
+        "prefix": "GetManipulateBoneScale"
+    },
+    "GetMaterial": {
+        "body": [
+            "GetMaterial()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetMaterial"
+    },
+    "GetMaterialType": {
+        "body": [
+            "GetMaterialType()$0"
+        ],
+        "description": "ENTITY [Server] Returns the surface material of this entity.",
+        "prefix": "GetMaterialType"
+    },
+    "GetMaterials": {
+        "body": [
+            "GetMaterials()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetMaterials"
+    },
+    "GetMaxHealth": {
+        "body": [
+            "GetMaxHealth()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the max health that the entity was given. It can be set via Entity:SetMaxHealth.",
+        "prefix": "GetMaxHealth"
+    },
+    "GetModel": {
+        "body": [
+            "GetModel()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetModel"
+    },
+    "GetModelBounds": {
+        "body": [
+            "GetModelBounds()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetModelBounds"
+    },
+    "GetModelPhysBoneCount": {
+        "body": [
+            "GetModelPhysBoneCount()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "GetModelPhysBoneCount"
+    },
+    "GetModelRadius": {
+        "body": [
+            "GetModelRadius()$0"
+        ],
+        "description": "ENTITY [Shared] Gets the models radius.",
+        "prefix": "GetModelRadius"
+    },
+    "GetModelRenderBounds": {
+        "body": [
+            "GetModelRenderBounds()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetModelRenderBounds"
+    },
+    "GetModelScale": {
+        "body": [
+            "GetModelScale()$0"
+        ],
+        "description": "ENTITY [Shared] Gets the selected entity's model scale.",
+        "prefix": "GetModelScale"
+    },
+    "GetMomentaryRotButtonPos": {
+        "body": [
+            "GetMomentaryRotButtonPos(${1:turnAngle})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Angle] turnAngle\n  The angle of rotation to compare against. Usually should be Entity:GetAngles",
+        "prefix": "GetMomentaryRotButtonPos"
+    },
+    "GetMoveCollide": {
+        "body": [
+            "GetMoveCollide()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetMoveCollide"
+    },
+    "GetMoveParent": {
+        "body": [
+            "GetMoveParent()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetMoveParent"
+    },
+    "GetMoveType": {
+        "body": [
+            "GetMoveType()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetMoveType"
+    },
+    "GetNWAngle": {
+        "body": [
+            "GetNWAngle(${1:key}, ${2:fallback=Angle(0,0,0)})$0"
+        ],
+        "description": "ENTITY [Shared] Retrieves a networked angle value at specified index on the entity that is set by Entity:SetNWAngle.\n\n[string] key\n  The key that is associated with the value\n\n[Angle] fallback=Angle(0,0,0)\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNWAngle"
+    },
+    "GetNWBool": {
+        "body": [
+            "GetNWBool(${1:key}, ${2:fallback=false})$0"
+        ],
+        "description": "ENTITY [Shared] Retrieves a networked boolean value at specified index on the entity that is set by Entity:SetNWBool.\n\n[string] key\n  The key that is associated with the value\n\n[boolean] fallback=false\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNWBool"
+    },
+    "GetNWEntity": {
+        "body": [
+            "GetNWEntity(${1:key}, ${2:fallback=NULL})$0"
+        ],
+        "description": "ENTITY [Shared] Retrieves a networked entity value at specified index on the entity that is set by Entity:SetNWEntity.\n\n[string] key\n  The key that is associated with the value\n\n[Entity] fallback=NULL\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNWEntity"
+    },
+    "GetNWFloat": {
+        "body": [
+            "GetNWFloat(${1:key}, ${2:fallback=0})$0"
+        ],
+        "description": "ENTITY [Shared] Retrieves a networked float value at specified index on the entity that is set by Entity:SetNWFloat.\n\n[string] key\n  The key that is associated with the value\n\n[number] fallback=0\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNWFloat"
+    },
+    "GetNWInt": {
+        "body": [
+            "GetNWInt(${1:key}, ${2:fallback=0})$0"
+        ],
+        "description": "ENTITY [Shared] Retrieves a networked integer (whole number) value that was previously set by Entity:SetNWInt.\n\n[string] key\n  The key that is associated with the value\n\n[number] fallback=0\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNWInt"
+    },
+    "GetNWString": {
+        "body": [
+            "GetNWString(${1:key}, ${2:fallback=\"\"})$0"
+        ],
+        "description": "ENTITY [Shared] Retrieves a networked string value at specified index on the entity that is set by Entity:SetNWString.\n\n[string] key\n  The key that is associated with the value\n\n[string] fallback=\"\"\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNWString"
+    },
+    "GetNWVarProxy": {
+        "body": [
+            "GetNWVarProxy(${1:name})$0"
+        ],
+        "description": "ENTITY [Shared] Returns callback function for given NWVar of this entity.\n\n[string] name\n  The name of the NWVar to get callback of.",
+        "prefix": "GetNWVarProxy"
+    },
+    "GetNWVarTable": {
+        "body": [
+            "GetNWVarTable()$0"
+        ],
+        "description": "ENTITY [Shared] Returns all the networked variables in an entity.",
+        "prefix": "GetNWVarTable"
+    },
+    "GetNWVector": {
+        "body": [
+            "GetNWVector(${1:key}, ${2:fallback=Vector(0,0,0)})$0"
+        ],
+        "description": "ENTITY [Shared] Retrieves a networked vector value at specified index on the entity that is set by Entity:SetNWVector.\n\n[string] key\n  The key that is associated with the value\n\n[Vector] fallback=Vector(0,0,0)\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNWVector"
+    },
+    "GetName": {
+        "body": [
+            "GetName()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetName"
+    },
+    "GetNetworkAngles": {
+        "body": [
+            "GetNetworkAngles()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "GetNetworkAngles"
+    },
+    "GetNetworkOrigin": {
+        "body": [
+            "GetNetworkOrigin()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetNetworkOrigin"
+    },
+    "GetNetworkedAngle": {
+        "body": [
+            "GetNetworkedAngle(${1:key}, ${2:fallback=Angle(0,0,0)})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key that is associated with the value\n\n[Angle] fallback=Angle(0,0,0)\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNetworkedAngle"
+    },
+    "GetNetworkedBool": {
+        "body": [
+            "GetNetworkedBool(${1:key}, ${2:fallback=false})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key that is associated with the value\n\n[boolean] fallback=false\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNetworkedBool"
+    },
+    "GetNetworkedEntity": {
+        "body": [
+            "GetNetworkedEntity(${1:key}, ${2:fallback=NULL})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key that is associated with the value\n\n[Entity] fallback=NULL\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNetworkedEntity"
+    },
+    "GetNetworkedFloat": {
+        "body": [
+            "GetNetworkedFloat(${1:key}, ${2:fallback=0})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key that is associated with the value\n\n[number] fallback=0\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNetworkedFloat"
+    },
+    "GetNetworkedInt": {
+        "body": [
+            "GetNetworkedInt(${1:key}, ${2:fallback=0})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key that is associated with the value\n\n[number] fallback=0\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNetworkedInt"
+    },
+    "GetNetworkedString": {
+        "body": [
+            "GetNetworkedString(${1:key}, ${2:fallback=\"\"})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key that is associated with the value\n\n[string] fallback=\"\"\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNetworkedString"
+    },
+    "GetNetworkedVarProxy": {
+        "body": [
+            "GetNetworkedVarProxy(${1:name})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] name\n  The name of the NWVar to get callback of.",
+        "prefix": "GetNetworkedVarProxy"
+    },
+    "GetNetworkedVarTable": {
+        "body": [
+            "GetNetworkedVarTable()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetNetworkedVarTable"
+    },
+    "GetNetworkedVector": {
+        "body": [
+            "GetNetworkedVector(${1:key}, ${2:fallback=Vector(0,0,0)})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key that is associated with the value\n\n[Vector] fallback=Vector(0,0,0)\n  The value to return if we failed to retrieve the value. ( If it isn't set )",
+        "prefix": "GetNetworkedVector"
+    },
+    "GetNoDraw": {
+        "body": [
+            "GetNoDraw()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetNoDraw"
+    },
+    "GetNumBodyGroups": {
+        "body": [
+            "GetNumBodyGroups()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetNumBodyGroups"
+    },
+    "GetNumPoseParameters": {
+        "body": [
+            "GetNumPoseParameters()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the number of pose parameters this entity has.",
+        "prefix": "GetNumPoseParameters"
+    },
+    "GetOwner": {
+        "body": [
+            "GetOwner()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetOwner"
+    },
+    "GetParent": {
+        "body": [
+            "GetParent()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetParent"
+    },
+    "GetParentAttachment": {
+        "body": [
+            "GetParentAttachment()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetParentAttachment"
+    },
+    "GetParentPhysNum": {
+        "body": [
+            "GetParentPhysNum()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetParentPhysNum"
+    },
+    "GetPersistent": {
+        "body": [
+            "GetPersistent()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetPersistent"
+    },
+    "GetPhysicsAttacker": {
+        "body": [
+            "GetPhysicsAttacker(${1:timeLimit})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] timeLimit\n  The time to check if the entity was still a proper physics attacker.",
+        "prefix": "GetPhysicsAttacker"
+    },
+    "GetPhysicsObject": {
+        "body": [
+            "GetPhysicsObject()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the entity's physics object, if the entity has physics.",
+        "prefix": "GetPhysicsObject"
+    },
+    "GetPhysicsObjectCount": {
+        "body": [
+            "GetPhysicsObjectCount()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the number of physics objects an entity has (usually 1 for non-ragdolls)",
+        "prefix": "GetPhysicsObjectCount"
+    },
+    "GetPhysicsObjectNum": {
+        "body": [
+            "GetPhysicsObjectNum(${1:physNum})$0"
+        ],
+        "description": "ENTITY [Shared] Returns a specific physics object from an entity with multiple PhysObjects (like ragdolls) See also Entity:TranslateBoneToPhysBone.\n\n[number] physNum\n  The number corresponding to the PhysObj to grab. Starts at 0.",
+        "prefix": "GetPhysicsObjectNum"
+    },
+    "GetPlaybackRate": {
+        "body": [
+            "GetPlaybackRate()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetPlaybackRate"
+    },
+    "GetPos": {
+        "body": [
+            "GetPos()$0"
+        ],
+        "description": "ENTITY [Shared] Gets the position of entity in world.",
+        "prefix": "GetPos"
+    },
+    "GetPoseParameter": {
+        "body": [
+            "GetPoseParameter(${1:name})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] name\n  Pose parameter name to look up",
+        "prefix": "GetPoseParameter"
+    },
+    "GetPoseParameterName": {
+        "body": [
+            "GetPoseParameterName(${1:id})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] id\n  Id of the pose paremeter",
+        "prefix": "GetPoseParameterName"
+    },
+    "GetPoseParameterRange": {
+        "body": [
+            "GetPoseParameterRange(${1:id})$0"
+        ],
+        "description": "ENTITY [Shared] Returns pose parameter range\n\n[number] id\n  Pose parameter ID to look up",
+        "prefix": "GetPoseParameterRange"
+    },
+    "GetPredictable": {
+        "body": [
+            "GetPredictable()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "GetPredictable"
+    },
+    "GetRagdollOwner": {
+        "body": [
+            "GetRagdollOwner()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the entity which the ragdoll came from. The opposite of Player:GetRagdollEntity.",
+        "prefix": "GetRagdollOwner"
+    },
+    "GetRenderAngles": {
+        "body": [
+            "GetRenderAngles()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "GetRenderAngles"
+    },
+    "GetRenderBounds": {
+        "body": [
+            "GetRenderBounds()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "GetRenderBounds"
+    },
+    "GetRenderFX": {
+        "body": [
+            "GetRenderFX()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetRenderFX"
+    },
+    "GetRenderGroup": {
+        "body": [
+            "GetRenderGroup()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "GetRenderGroup"
+    },
+    "GetRenderMode": {
+        "body": [
+            "GetRenderMode()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetRenderMode"
+    },
+    "GetRenderOrigin": {
+        "body": [
+            "GetRenderOrigin()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "GetRenderOrigin"
+    },
+    "GetRight": {
+        "body": [
+            "GetRight()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetRight"
+    },
+    "GetRotatedAABB": {
+        "body": [
+            "GetRotatedAABB(${1:min}, ${2:max})$0"
+        ],
+        "description": "ENTITY [Shared] Returns the min and max of the entity's axis-aligned bounding box.\n\n[Vector] min\n  Minimum extent of the bounding box.\n\n[Vector] max\n  Maximum extent of the bounding box.",
+        "prefix": "GetRotatedAABB"
+    },
+    "GetSaveTable": {
+        "body": [
+            "GetSaveTable()$0"
+        ],
+        "description": "ENTITY [Shared] Returns a table of save values for an entity. These tables are not the same between the client and the server, and different entities may have different fields. You can get the list different fields an entity has by looking at it's source code ( the 2013 SDK can be found online, https://github.com/ValveSoftware/source-sdk-2013 ). Accessible fields are defined by each DEFINE_FIELD and DEFINE_KEYFIELD inside the DATADESC block. Take the headcrab, for example:",
+        "prefix": "GetSaveTable"
+    },
+    "GetSequence": {
+        "body": [
+            "GetSequence()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetSequence"
+    },
+    "GetSequenceActivity": {
+        "body": [
+            "GetSequenceActivity(${1:seq})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] seq\n  The sequence ID",
+        "prefix": "GetSequenceActivity"
+    },
+    "GetSequenceActivityName": {
+        "body": [
+            "GetSequenceActivityName(${1:sequenceId})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] sequenceId\n  The sequence id.",
+        "prefix": "GetSequenceActivityName"
+    },
+    "GetSequenceCount": {
+        "body": [
+            "GetSequenceCount()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetSequenceCount"
+    },
+    "GetSequenceGroundSpeed": {
+        "body": [
+            "GetSequenceGroundSpeed(${1:sequenceId})$0"
+        ],
+        "description": "ENTITY [Shared] Returns the ground speed of the entity's sequence.\n\n[number] sequenceId\n  The sequence ID.",
+        "prefix": "GetSequenceGroundSpeed"
+    },
+    "GetSequenceInfo": {
+        "body": [
+            "GetSequenceInfo(${1:sequenceId})$0"
+        ],
+        "description": "ENTITY [Shared] Returns a table of information about an entity's sequence.\n\n[number] sequenceId\n  The sequence id of the entity.",
+        "prefix": "GetSequenceInfo"
+    },
+    "GetSequenceList": {
+        "body": [
+            "GetSequenceList()$0"
+        ],
+        "description": "ENTITY [Shared] Returns a list of all sequences ( animations ) the model has.",
+        "prefix": "GetSequenceList"
+    },
+    "GetSequenceMoveDist": {
+        "body": [
+            "GetSequenceMoveDist(${1:sequenceId})$0"
+        ],
+        "description": "ENTITY [Server] Returns an entity's sequence move distance (the change in position over the course of the entire sequence).\n\n[number] sequenceId\n  The sequence index.",
+        "prefix": "GetSequenceMoveDist"
+    },
+    "GetSequenceMoveYaw": {
+        "body": [
+            "GetSequenceMoveYaw(${1:})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number]",
+        "prefix": "GetSequenceMoveYaw"
+    },
+    "GetSequenceName": {
+        "body": [
+            "GetSequenceName(${1:index})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] index\n  The index of the sequence to look up.",
+        "prefix": "GetSequenceName"
+    },
+    "GetShouldPlayPickupSound": {
+        "body": [
+            "GetShouldPlayPickupSound()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetShouldPlayPickupSound"
+    },
+    "GetShouldServerRagdoll": {
+        "body": [
+            "GetShouldServerRagdoll()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetShouldServerRagdoll"
+    },
+    "GetSkin": {
+        "body": [
+            "GetSkin()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetSkin"
+    },
+    "GetSolid": {
+        "body": [
+            "GetSolid()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetSolid"
+    },
+    "GetSolidFlags": {
+        "body": [
+            "GetSolidFlags()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetSolidFlags"
+    },
+    "GetSpawnEffect": {
+        "body": [
+            "GetSpawnEffect()$0"
+        ],
+        "description": "ENTITY [Shared] Returns if we should show a spawn effect on this entity.",
+        "prefix": "GetSpawnEffect"
+    },
+    "GetSpawnFlags": {
+        "body": [
+            "GetSpawnFlags()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the bitwise spawn flags used by the entity.",
+        "prefix": "GetSpawnFlags"
+    },
+    "GetSubMaterial": {
+        "body": [
+            "GetSubMaterial(${1:index})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] index\n  The index of the sub material. Acceptable values are from 0 to 31.",
+        "prefix": "GetSubMaterial"
+    },
+    "GetSubModels": {
+        "body": [
+            "GetSubModels()$0"
+        ],
+        "description": "ENTITY [Shared] Returns a list of models included into the entity's model in the .qc file.",
+        "prefix": "GetSubModels"
+    },
+    "GetTable": {
+        "body": [
+            "GetTable()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetTable"
+    },
+    "GetTouchTrace": {
+        "body": [
+            "GetTouchTrace()$0"
+        ],
+        "description": "ENTITY [Shared] Returns the last trace used in the collision callbacks such as ENTITY:StartTouch, ENTITY:Touch and ENTITY:EndTouch.",
+        "prefix": "GetTouchTrace"
+    },
+    "GetTransmitWithParent": {
+        "body": [
+            "GetTransmitWithParent()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetTransmitWithParent"
+    },
+    "GetUnFreezable": {
+        "body": [
+            "GetUnFreezable()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetUnFreezable"
+    },
+    "GetUp": {
+        "body": [
+            "GetUp()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetUp"
+    },
+    "GetVar": {
+        "body": [
+            "GetVar(${1:name}, ${2:default})$0"
+        ],
+        "description": "ENTITY [Shared] Retrieves a value from entity's Entity:GetTable. Set by Entity:SetVar.\n\n[string] name\n  Name of variable to retrieve\n\n[any] default\n  A default value to fallback to if we couldn't retrieve the value from entity",
+        "prefix": "GetVar"
+    },
+    "GetVelocity": {
+        "body": [
+            "GetVelocity()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "GetVelocity"
+    },
+    "GetWorkshopID": {
+        "body": [
+            "GetWorkshopID()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "GetWorkshopID"
+    },
+    "GibBreakClient": {
+        "body": [
+            "GibBreakClient(${1:force})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] force\n  The force to apply to the created gibs",
+        "prefix": "GibBreakClient"
+    },
+    "GibBreakServer": {
+        "body": [
+            "GibBreakServer(${1:force})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] force\n  The force to apply to the created gibs",
+        "prefix": "GibBreakServer"
+    },
+    "HasBoneManipulations": {
+        "body": [
+            "HasBoneManipulations()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "HasBoneManipulations"
+    },
+    "HasFlexManipulatior": {
+        "body": [
+            "HasFlexManipulatior()$0"
+        ],
+        "description": "ENTITY [Shared] Returns whether or not the the entity has had flex manipulations performed with Entity:SetFlexWeight or Entity:SetFlexScale.",
+        "prefix": "HasFlexManipulatior"
+    },
+    "HasSpawnFlags": {
+        "body": [
+            "HasSpawnFlags(${1:spawnFlags})$0"
+        ],
+        "description": "ENTITY [Shared] Returns whether this entity has the specified spawnflags bits set.\n\n[number] spawnFlags\n  The spawnflag bits to check, see SF_ Enums.",
+        "prefix": "HasSpawnFlags"
+    },
+    "HeadTarget": {
+        "body": [
+            "HeadTarget(${1:origin})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Vector] origin\n  The vector of where the attack comes from.",
+        "prefix": "HeadTarget"
+    },
+    "Health": {
+        "body": [
+            "Health()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "Health"
+    },
+    "Ignite": {
+        "body": [
+            "Ignite(${1:length}, ${2:radius})$0"
+        ],
+        "description": "ENTITY [Server] Sets the entity on fire.\n\n[number] length\n  How long to keep the entity ignited. Not supplying this argument will not ignite the entity at all.\n\n[number] radius\n  The radius of the ignition, will ignite everything around the entity that is in this radius.",
+        "prefix": "Ignite"
+    },
+    "InitializeAsClientEntity": {
+        "body": [
+            "InitializeAsClientEntity()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "InitializeAsClientEntity"
+    },
+    "Input": {
+        "body": [
+            "Input(${1:input}, ${2:activator}, ${3:inflictor}, ${4:param=nil})$0"
+        ],
+        "description": "ENTITY [Server] Fires input to the entity with the ability to make another entity responsible. Similar to Entity:Fire\n\n[string] input\n  The name of the input to fire\n\n[Entity] activator\n  The entity that is directly responsible\n\n[Entity] inflictor\n  The entity that is indirectly responsible (often a player)\n\n[any] param=nil\n  The value to give to the input. Can be a String, Float or Integer",
+        "prefix": "Input"
+    },
+    "InstallDataTable": {
+        "body": [
+            "InstallDataTable()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "InstallDataTable"
+    },
+    "InvalidateBoneCache": {
+        "body": [
+            "InvalidateBoneCache()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "InvalidateBoneCache"
+    },
+    "IsConstrained": {
+        "body": [
+            "IsConstrained()$0"
+        ],
+        "description": "ENTITY [Shared] Returns true if the entity has constraints attached to it",
+        "prefix": "IsConstrained"
+    },
+    "IsConstraint": {
+        "body": [
+            "IsConstraint()$0"
+        ],
+        "description": "ENTITY [Server] Returns if entity is constraint or not",
+        "prefix": "IsConstraint"
+    },
+    "IsDormant": {
+        "body": [
+            "IsDormant()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "IsDormant"
+    },
+    "IsEFlagSet": {
+        "body": [
+            "IsEFlagSet(${1:flag})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flag\n  The engine flag to test, see EFL_ Enums",
+        "prefix": "IsEFlagSet"
+    },
+    "IsEffectActive": {
+        "body": [
+            "IsEffectActive(${1:effect})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] effect\n  The effect to check for, see EF_ Enums.",
+        "prefix": "IsEffectActive"
+    },
+    "IsFlagSet": {
+        "body": [
+            "IsFlagSet(${1:flag})$0"
+        ],
+        "description": "ENTITY [Shared] Checks if given flag(s) is set or not.\n\n[number] flag\n  The engine flag(s) to test, see FL_ Enums",
+        "prefix": "IsFlagSet"
+    },
+    "IsInWorld": {
+        "body": [
+            "IsInWorld()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "IsInWorld"
+    },
+    "IsLagCompensated": {
+        "body": [
+            "IsLagCompensated()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "IsLagCompensated"
+    },
+    "IsLineOfSightClear": {
+        "body": [
+            "IsLineOfSightClear(${1:target})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] target\n  The target to test. You can also supply an Entity instead of a Vector",
+        "prefix": "IsLineOfSightClear"
+    },
+    "IsNPC": {
+        "body": [
+            "IsNPC()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "IsNPC"
+    },
+    "IsOnFire": {
+        "body": [
+            "IsOnFire()$0"
+        ],
+        "description": "ENTITY [Shared] Returns whether the entity is on fire.",
+        "prefix": "IsOnFire"
+    },
+    "IsOnGround": {
+        "body": [
+            "IsOnGround()$0"
+        ],
+        "description": "ENTITY [Shared] Returns whether the entity is on ground or not. Internally, this checks if FL_ONGROUND is set on the entity. This function is an alias of Entity:OnGround.",
+        "prefix": "IsOnGround"
+    },
+    "IsPlayer": {
+        "body": [
+            "IsPlayer()$0"
+        ],
+        "description": "ENTITY [Shared] Checks if the entity is a player or not.",
+        "prefix": "IsPlayer"
+    },
+    "IsPlayerHolding": {
+        "body": [
+            "IsPlayerHolding()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "IsPlayerHolding"
+    },
+    "IsPlayingGesture": {
+        "body": [
+            "IsPlayingGesture(${1:activity})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] activity\n  The activity to test. See ACT_ Enums.",
+        "prefix": "IsPlayingGesture"
+    },
+    "IsRagdoll": {
+        "body": [
+            "IsRagdoll()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "IsRagdoll"
+    },
+    "IsScripted": {
+        "body": [
+            "IsScripted()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "IsScripted"
+    },
+    "IsSolid": {
+        "body": [
+            "IsSolid()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "IsSolid"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "ENTITY [Shared] Returns whether the entity is a valid entity or not. An entity is valid if:",
+        "prefix": "IsValid"
+    },
+    "IsValidLayer": {
+        "body": [
+            "IsValidLayer(${1:layerID})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID",
+        "prefix": "IsValidLayer"
+    },
+    "IsVehicle": {
+        "body": [
+            "IsVehicle()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "IsVehicle"
+    },
+    "IsWeapon": {
+        "body": [
+            "IsWeapon()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "IsWeapon"
+    },
+    "IsWidget": {
+        "body": [
+            "IsWidget()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "IsWidget"
+    },
+    "IsWorld": {
+        "body": [
+            "IsWorld()$0"
+        ],
+        "description": "ENTITY [Shared] Returns if the entity is the map's Entity[0] worldspawn",
+        "prefix": "IsWorld"
+    },
+    "LocalToWorld": {
+        "body": [
+            "LocalToWorld(${1:lpos})$0"
+        ],
+        "description": "ENTITY [Shared] Converts a vector local to an entity into a worldspace vector\n\n[Vector] lpos\n  The local vector",
+        "prefix": "LocalToWorld"
+    },
+    "LocalToWorldAngles": {
+        "body": [
+            "LocalToWorldAngles(${1:ang})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Angle] ang\n  The local angle",
+        "prefix": "LocalToWorldAngles"
+    },
+    "LookupAttachment": {
+        "body": [
+            "LookupAttachment(${1:attachmentName})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] attachmentName\n  The name of the attachment.",
+        "prefix": "LookupAttachment"
+    },
+    "LookupBone": {
+        "body": [
+            "LookupBone(${1:boneName})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] boneName\n  The name of the bone.\nCommon generic bones ( for player models and some HL2 models ):\n\n ValveBiped.Bip01_Head1\n ValveBiped.Bip01_Spine\n ValveBiped.Anim_Attachment_RH\n\nCommon hand bones (left hand equivalents also available, replace _R_ with _L_)\n\n ValveBiped.Bip01_R_Hand\n ValveBiped.Bip01_R_Forearm\n ValveBiped.Bip01_R_Foot\n ValveBiped.Bip01_R_Thigh\n ValveBiped.Bip01_R_Calf\n ValveBiped.Bip01_R_Shoulder\n ValveBiped.Bip01_R_Elbow",
+        "prefix": "LookupBone"
+    },
+    "LookupSequence": {
+        "body": [
+            "LookupSequence(${1:name})$0"
+        ],
+        "description": "ENTITY [Shared] Returns sequence ID from its name.\n\n[string] name\n  Sequence name",
+        "prefix": "LookupSequence"
+    },
+    "MakePhysicsObjectAShadow": {
+        "body": [
+            "MakePhysicsObjectAShadow(${1:allowPhysicsMovement}, ${2:allowPhysicsRotation})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] allowPhysicsMovement\n  Whether to allow the physics shadow to move under stress.\n\n[boolean] allowPhysicsRotation\n  Whether to allow the physics shadow to rotate under stress.",
+        "prefix": "MakePhysicsObjectAShadow"
+    },
+    "ManipulateBoneAngles": {
+        "body": [
+            "ManipulateBoneAngles(${1:boneID}, ${2:ang})$0"
+        ],
+        "description": "ENTITY [Shared] Sets custom bone angles.\n\n[number] boneID\n  Index of the bone you want to manipulate\n\n[Angle] ang\n  Angle to apply.\n\nThe angle is relative to the original bone angle, not relative to the world or the entity.",
+        "prefix": "ManipulateBoneAngles"
+    },
+    "ManipulateBoneJiggle": {
+        "body": [
+            "ManipulateBoneJiggle(${1:boneID}, ${2:amount})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneID\n  Index of the bone you want to manipulate.\n\n[number] amount\n  0 = No Jiggle\n\n1 = Jiggle",
+        "prefix": "ManipulateBoneJiggle"
+    },
+    "ManipulateBonePosition": {
+        "body": [
+            "ManipulateBonePosition(${1:boneID}, ${2:pos})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneID\n  Index of the bone you want to manipulate\n\n[Vector] pos\n  Position vector to apply\n\nNote that the position is relative to the original bone position, not relative to the world or the entity.",
+        "prefix": "ManipulateBonePosition"
+    },
+    "ManipulateBoneScale": {
+        "body": [
+            "ManipulateBoneScale(${1:boneID}, ${2:scale})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneID\n  Index of the bone you want to manipulate\n\n[Vector] scale\n  Scale vector to apply.\n\nNote that the scale is relative to the original bone scale, not relative to the world or the entity.",
+        "prefix": "ManipulateBoneScale"
+    },
+    "MapCreationID": {
+        "body": [
+            "MapCreationID()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "MapCreationID"
+    },
+    "MarkShadowAsDirty": {
+        "body": [
+            "MarkShadowAsDirty()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "MarkShadowAsDirty"
+    },
+    "MuzzleFlash": {
+        "body": [
+            "MuzzleFlash()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "MuzzleFlash"
+    },
+    "NearestPoint": {
+        "body": [
+            "NearestPoint(${1:position})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] position\n  The vector to start the intersection from.",
+        "prefix": "NearestPoint"
+    },
+    "NetworkVar": {
+        "body": [
+            "NetworkVar(${1:type}, ${2:slot}, ${3:name}, ${4:extended=nil})$0"
+        ],
+        "description": "ENTITY [Shared] Creates a network variable on the entity and adds Set/Get functions for it. This function should only be called in ENTITY:SetupDataTables.\n\n[string] type\n  Either of:\n\n \"String\"\n \"Bool\"\n \"Float\"\n \"Int\"\n \"Vector\"\n \"Angle\"\n \"Entity\"\n\n[number] slot\n  Each network var has to have a unique slot. The slot is per type - so you can have an int in slot 0, a bool in slot 0 and a float in slot 0 etc.\n\nThe max slots right now are 32 - so you should pick a number between 0 and 31. An exception to this is strings which has a max slots of 4.\n\n[string] name\n  The name will affect how you access it. If you call it \"Foo\" you would add two new functions on your entity - SetFoo and GetFoo. So be careful that what you call it won't collide with any existing functions (don't call it \"Pos\" for example).\n\n[table] extended=nil\n  A table of extended information.\nKeyName\nIf the table contains a \"KeyName\" key the value can be set using Entity:SetKeyValue. This is useful if you're making an entity that you want to be loaded in a map. The sky entity uses this.\nEdit\n\nThe edit key lets you mark this variable as editable. See Editable Entities for more information.",
+        "prefix": "NetworkVar"
+    },
+    "NetworkVarNotify": {
+        "body": [
+            "NetworkVarNotify(${1:name}, ${2:callback})$0"
+        ],
+        "description": "ENTITY [Shared] Creates a callback that will execute when the given network variable changes - that is, when the Set\u003cname\u003e function is run.\n\n[string] name\n  Name of variable to track changes of\n\n[function] callback\n  The function to call when the variable changes. It is passed 4 arugments:\n\n Entity entity - Entity whos variable changed (This will be variable called \"self\" in ENT:CallBack format.)\n string name - Name of changed variable\n any old - Old/current variable value\n any new - New variable value that it was set to",
+        "prefix": "NetworkVarNotify"
+    },
+    "NextThink": {
+        "body": [
+            "NextThink(${1:timestamp})$0"
+        ],
+        "description": "ENTITY [Shared] In the case of a scripted entity, this will cause the next ENTITY:Think event to be run at the given time. Does not work clientside! Use Entity:SetNextClientThink instead.\n\n[number] timestamp\n  The relative to CurTime timestamp, at which the next think should occur.",
+        "prefix": "NextThink"
+    },
+    "OBBCenter": {
+        "body": [
+            "OBBCenter()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "OBBCenter"
+    },
+    "OBBMaxs": {
+        "body": [
+            "OBBMaxs()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "OBBMaxs"
+    },
+    "OBBMins": {
+        "body": [
+            "OBBMins()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "OBBMins"
+    },
+    "ObjectCaps": {
+        "body": [
+            "ObjectCaps()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "ObjectCaps"
+    },
+    "OnGround": {
+        "body": [
+            "OnGround()$0"
+        ],
+        "description": "ENTITY [Shared] Returns true if the entity is on the ground, and false if it isn't. Internally, this checks if FL_ONGROUND is set on the entity. This is only updated for players and NPCs, and thus won't inherently work for other entities.",
+        "prefix": "OnGround"
+    },
+    "PassesDamageFilter": {
+        "body": [
+            "PassesDamageFilter(${1:dmg})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[CTakeDamageInfo] dmg\n  The damage info to test",
+        "prefix": "PassesDamageFilter"
+    },
+    "PassesFilter": {
+        "body": [
+            "PassesFilter(${1:caller}, ${2:ent})$0"
+        ],
+        "description": "ENTITY [Server] Tests whether the entity passes the entity filter. This will call ENTITY:PassesFilter on scripted entities of the type \"filter\".\n\n[Entity] caller\n  The initiator of the test.\n\nFor example the trigger this filter entity is used in.\n\n[Entity] ent\n  The entity to test against the entity filter.",
+        "prefix": "PassesFilter"
+    },
+    "PhysWake": {
+        "body": [
+            "PhysWake()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "PhysWake"
+    },
+    "PhysicsDestroy": {
+        "body": [
+            "PhysicsDestroy()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "PhysicsDestroy"
+    },
+    "PhysicsFromMesh": {
+        "body": [
+            "PhysicsFromMesh(${1:vertices})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[table] vertices\n  A table consisting of MeshVertex structure (only the pos element is taken into account). Every 3 vertices define a triangle in the physics mesh.",
+        "prefix": "PhysicsFromMesh"
+    },
+    "PhysicsInit": {
+        "body": [
+            "PhysicsInit(${1:solidType})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] solidType\n  The solid type of the physics object to create, see SOLID_ Enums. Should be SOLID_VPHYSICS in most cases.",
+        "prefix": "PhysicsInit"
+    },
+    "PhysicsInitBox": {
+        "body": [
+            "PhysicsInitBox(${1:mins}, ${2:maxs})$0"
+        ],
+        "description": "ENTITY [Shared] Makes the physics object of the entity a AABB.\n\n[Vector] mins\n  The minimum position of the box.\n\n[Vector] maxs\n  The maximum position of the box.",
+        "prefix": "PhysicsInitBox"
+    },
+    "PhysicsInitConvex": {
+        "body": [
+            "PhysicsInitConvex(${1:points})$0"
+        ],
+        "description": "ENTITY [Shared] Initializes the physics mesh of the entity with a convex mesh defined by a table of points. The resulting mesh is the convex hull of all the input points. This is the standard way of creating moving physics objects with a custom convex shape. For more complex, concave shapes, see Entity:PhysicsInitMultiConvex.\n\n[table] points\n  A table of Vectors, in local coordinates, to be used in the computation of the convex mesh. Order does not matter.",
+        "prefix": "PhysicsInitConvex"
+    },
+    "PhysicsInitMultiConvex": {
+        "body": [
+            "PhysicsInitMultiConvex(${1:vertices})$0"
+        ],
+        "description": "ENTITY [Shared] An advanced version of Entity:PhysicsInitConvex which initializes a physics object from multiple convex meshes. This should be used for physics objects with a custom shape which cannot be represented by a single convex mesh.\n\n[table] vertices\n  A table consisting of tables of Vectors. Each sub-table defines a set of points to be used in the computation of one convex mesh.",
+        "prefix": "PhysicsInitMultiConvex"
+    },
+    "PhysicsInitShadow": {
+        "body": [
+            "PhysicsInitShadow(${1:allowPhysicsMovement}, ${2:allowPhysicsRotation})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] allowPhysicsMovement\n  Whether to allow the physics shadow to move under stress.\n\n[boolean] allowPhysicsRotation\n  Whether to allow the physics shadow to rotate under stress.",
+        "prefix": "PhysicsInitShadow"
+    },
+    "PhysicsInitSphere": {
+        "body": [
+            "PhysicsInitSphere(${1:radius}, ${2:physmat})$0"
+        ],
+        "description": "ENTITY [Shared] Makes the physics object of the entity a sphere.\n\n[number] radius\n  The radius of the sphere.\n\n[string] physmat\n  Physical Material. From this list: Material surface properties",
+        "prefix": "PhysicsInitSphere"
+    },
+    "PhysicsInitStatic": {
+        "body": [
+            "PhysicsInitStatic(${1:solidType})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] solidType\n  The solid type of the physics object to create, see SOLID_ Enums. Should be SOLID_VPHYSICS in most cases.",
+        "prefix": "PhysicsInitStatic"
+    },
+    "PlayScene": {
+        "body": [
+            "PlayScene(${1:scene}, ${2:delay=0})$0"
+        ],
+        "description": "ENTITY [Server] Makes the entity play a .vcd scene.\n\n[string] scene\n  Filepath to scene\n\n[number] delay=0\n  Delay in seconds until the scene starts playing.",
+        "prefix": "PlayScene"
+    },
+    "PointAtEntity": {
+        "body": [
+            "PointAtEntity(${1:target})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Entity] target\n  The entity to face.",
+        "prefix": "PointAtEntity"
+    },
+    "PrecacheGibs": {
+        "body": [
+            "PrecacheGibs()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "PrecacheGibs"
+    },
+    "RagdollSolve": {
+        "body": [
+            "RagdollSolve()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "RagdollSolve"
+    },
+    "RagdollStopControlling": {
+        "body": [
+            "RagdollStopControlling()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "RagdollStopControlling"
+    },
+    "RagdollUpdatePhysics": {
+        "body": [
+            "RagdollUpdatePhysics()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "RagdollUpdatePhysics"
+    },
+    "Remove": {
+        "body": [
+            "Remove()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "Remove"
+    },
+    "RemoveAllDecals": {
+        "body": [
+            "RemoveAllDecals()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "RemoveAllDecals"
+    },
+    "RemoveAllGestures": {
+        "body": [
+            "RemoveAllGestures()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "RemoveAllGestures"
+    },
+    "RemoveCallOnRemove": {
+        "body": [
+            "RemoveCallOnRemove(${1:identifier})$0"
+        ],
+        "description": "ENTITY [Shared] Removes the CallOnRemove'd function referred to by identifier\n\n[string] identifier\n  Identifier of the function within CallOnRemove",
+        "prefix": "RemoveCallOnRemove"
+    },
+    "RemoveCallback": {
+        "body": [
+            "RemoveCallback(${1:hook}, ${2:callbackid})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] hook\n  The hook name to remove. See Entity Callbacks\n\n[number] callbackid\n  The callback id previously retrieved with the return of Entity:AddCallback or Entity:GetCallbacks",
+        "prefix": "RemoveCallback"
+    },
+    "RemoveEFlags": {
+        "body": [
+            "RemoveEFlags(${1:flag})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flag\n  The flag to remove, see EFL_ Enums",
+        "prefix": "RemoveEFlags"
+    },
+    "RemoveEffects": {
+        "body": [
+            "RemoveEffects(${1:effect})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] effect\n  The effect to remove, see EF_ Enums.",
+        "prefix": "RemoveEffects"
+    },
+    "RemoveFlags": {
+        "body": [
+            "RemoveFlags(${1:flag})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flag\n  The flag(s) to remove, see FL_ Enums",
+        "prefix": "RemoveFlags"
+    },
+    "RemoveFromMotionController": {
+        "body": [
+            "RemoveFromMotionController(${1:physObj})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[PhysObj] physObj\n  The PhysObj to remove from the motion controller.",
+        "prefix": "RemoveFromMotionController"
+    },
+    "RemoveGesture": {
+        "body": [
+            "RemoveGesture(${1:activity})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] activity\n  The activity remove. See ACT_ Enums.",
+        "prefix": "RemoveGesture"
+    },
+    "RemoveSolidFlags": {
+        "body": [
+            "RemoveSolidFlags(${1:flags})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flags\n  The flag(s) to remove, see FSOLID_ Enums.",
+        "prefix": "RemoveSolidFlags"
+    },
+    "ResetSequence": {
+        "body": [
+            "ResetSequence(${1:sequence})$0"
+        ],
+        "description": "ENTITY [Shared] Plays an animation on the entity. This may not always work on engine entities.\n\n[number] sequence\n  Sequence ID to play. See Entity:LookupSequence.\n\nIf set to a string the function will automatically call Entity:LookupSequence to retrieve the sequence ID as a number.",
+        "prefix": "ResetSequence"
+    },
+    "ResetSequenceInfo": {
+        "body": [
+            "ResetSequenceInfo()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "ResetSequenceInfo"
+    },
+    "Respawn": {
+        "body": [
+            "Respawn()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "Respawn"
+    },
+    "RestartGesture": {
+        "body": [
+            "RestartGesture(${1:activity}, ${2:addIfMissing=true}, ${3:autokill=true})$0"
+        ],
+        "description": "ENTITY [Server] Restarts the entity's animation gesture. If the given gesture is already playing, it will reset it and play it from the beginning.\n\n[number] activity\n  The activity number to send to the entity. See ACT_ Enums and Entity:GetSequenceActivity\n\n[boolean] addIfMissing=true\n  Add/start the gesture to if it has not been yet started.\n\n[boolean] autokill=true",
+        "prefix": "RestartGesture"
+    },
+    "SelectWeightedSequence": {
+        "body": [
+            "SelectWeightedSequence(${1:act})$0"
+        ],
+        "description": "ENTITY [Shared] Returns sequence ID corresponding to given activity ID. Opposite of Entity:GetSequenceActivity. Similar to Entity:LookupSequence. See also Entity:SelectWeightedSequenceSeeded.\n\n[number] act\n  The activity ID, see ACT_ Enums.",
+        "prefix": "SelectWeightedSequence"
+    },
+    "SelectWeightedSequenceSeeded": {
+        "body": [
+            "SelectWeightedSequenceSeeded(${1:act}, ${2:seed})$0"
+        ],
+        "description": "ENTITY [Shared] Returns sequence ID corresponding to given activity ID. See Entity:SelectWeightedSequence for simpler version of this function.\n\n[number] act\n  The activity ID, see ACT_ Enums.\n\n[number] seed\n  This article is a stub.\nPlease help the Garry's Mod wiki by adding to it.This article is a stub.\nPlease help the Garry's Mod wiki by adding to it.",
+        "prefix": "SelectWeightedSequenceSeeded"
+    },
+    "SendViewModelMatchingSequence": {
+        "body": [
+            "SendViewModelMatchingSequence(${1:seq})$0"
+        ],
+        "description": "ENTITY [Shared] Sends sequence animation to the view model. It is recommended to use this for view model animations, instead of Entity:ResetSequence. This function is only usable on view models.\n\n[number] seq\n  The sequence ID returned by Entity:LookupSequence or Entity:SelectWeightedSequence.",
+        "prefix": "SendViewModelMatchingSequence"
+    },
+    "SequenceDuration": {
+        "body": [
+            "SequenceDuration(${1:seqid=nil})$0"
+        ],
+        "description": "ENTITY [Shared] Returns length of currently played sequence.\n\n[number] seqid=nil\n  A sequence ID to return the length specific sequence of instead of the entity's main/currently playing sequence.",
+        "prefix": "SequenceDuration"
+    },
+    "SetAbsVelocity": {
+        "body": [
+            "SetAbsVelocity(${1:vel})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] vel\n  The new velocity to set.",
+        "prefix": "SetAbsVelocity"
+    },
+    "SetAngles": {
+        "body": [
+            "SetAngles(${1:angles})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Angle] angles\n  The new angles.",
+        "prefix": "SetAngles"
+    },
+    "SetAnimTime": {
+        "body": [
+            "SetAnimTime(${1:time})$0"
+        ],
+        "description": "ENTITY [Client] Sets the time (relative to CurTime) of the current animation frame, which is used to determine Entity:GetCycle.\n\n[number] time\n  The current animation time.",
+        "prefix": "SetAnimTime"
+    },
+    "SetAnimation": {
+        "body": [
+            "SetAnimation(${1:playerAnim})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] playerAnim\n  Player animation, see PLAYER_ Enums.",
+        "prefix": "SetAnimation"
+    },
+    "SetAttachment": {
+        "body": [
+            "SetAttachment(${1:ent}, ${2:attachment})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Entity] ent\n  The entity to attach/parent to\n\n[number] attachment\n  The attachment ID to parent to",
+        "prefix": "SetAttachment"
+    },
+    "SetBloodColor": {
+        "body": [
+            "SetBloodColor(${1:bloodColor})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] bloodColor\n  An integer corresponding to BLOOD_COLOR_ Enums.",
+        "prefix": "SetBloodColor"
+    },
+    "SetBodyGroups": {
+        "body": [
+            "SetBodyGroups(${1:bodygroups})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the bodygroups from a string. A convenience function for Entity:SetBodygroup.\n\n[string] bodygroups\n  Body groups to set. Each single-digit number in the string represents a separate bodygroup. This make it impossible to set any bodygroup to a value higher than 9! For that you need to use Entity:SetBodygroup.",
+        "prefix": "SetBodyGroups"
+    },
+    "SetBodygroup": {
+        "body": [
+            "SetBodygroup(${1:bodygroup}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] bodygroup\n  The id of the bodygroup you're setting. Starts from 0.\n\n[number] value\n  The value you're setting the bodygroup to. Starts from 0.",
+        "prefix": "SetBodygroup"
+    },
+    "SetBoneController": {
+        "body": [
+            "SetBoneController(${1:boneControllerID}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneControllerID\n  The ID of the bone controller to set the value to.\n\nGoes from 0 to 3.\n\n[number] value\n  The value to set on the specified bone controller.",
+        "prefix": "SetBoneController"
+    },
+    "SetBoneMatrix": {
+        "body": [
+            "SetBoneMatrix(${1:boneid}, ${2:matrix})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneid\n  \n\n[VMatrix] matrix",
+        "prefix": "SetBoneMatrix"
+    },
+    "SetBonePosition": {
+        "body": [
+            "SetBonePosition(${1:bone}, ${2:pos}, ${3:ang})$0"
+        ],
+        "description": "ENTITY [Client] Sets the bone position and angles.\n\n[number] bone\n  The bone ID to manipulate\n\n[Vector] pos\n  The position to set\n\n[Angle] ang\n  The angles to set",
+        "prefix": "SetBonePosition"
+    },
+    "SetCollisionBounds": {
+        "body": [
+            "SetCollisionBounds(${1:mins}, ${2:maxs})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] mins\n  The minimum vector of the bounds. The vector must be smaller than second argument on all axises.\n\n[Vector] maxs\n  The maximum vector of the bounds. The vector must be bigger than first argument on all axises.",
+        "prefix": "SetCollisionBounds"
+    },
+    "SetCollisionBoundsWS": {
+        "body": [
+            "SetCollisionBoundsWS(${1:vec1}, ${2:vec2})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] vec1\n  The first vector of the bounds.\n\n[Vector] vec2\n  The second vector of the bounds.",
+        "prefix": "SetCollisionBoundsWS"
+    },
+    "SetCollisionGroup": {
+        "body": [
+            "SetCollisionGroup(${1:group})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] group\n  Collision group of the entity, see COLLISION_GROUP_ Enums",
+        "prefix": "SetCollisionGroup"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color=Color(255,0,255,255)})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the color of an entity.\n\n[table] color=Color(255,0,255,255)\n  The color to set. Uses the Color structure.",
+        "prefix": "SetColor"
+    },
+    "SetCreator": {
+        "body": [
+            "SetCreator(${1:ply})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Player] ply\n  The creator",
+        "prefix": "SetCreator"
+    },
+    "SetCustomCollisionCheck": {
+        "body": [
+            "SetCustomCollisionCheck(${1:enable})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] enable\n  Enable or disable the custom collision check",
+        "prefix": "SetCustomCollisionCheck"
+    },
+    "SetCycle": {
+        "body": [
+            "SetCycle(${1:value})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the progress of the current animation to a specific value between 0 and 1.\n\n[number] value\n  The desired cycle value",
+        "prefix": "SetCycle"
+    },
+    "SetDTAngle": {
+        "body": [
+            "SetDTAngle(${1:key}, ${2:ang})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 31.\n\n[Angle] ang\n  The angle to write on the entity's datatable.",
+        "prefix": "SetDTAngle"
+    },
+    "SetDTBool": {
+        "body": [
+            "SetDTBool(${1:key}, ${2:bool})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 31.\n\n[boolean] bool\n  The boolean to write on the entity's metatable.",
+        "prefix": "SetDTBool"
+    },
+    "SetDTEntity": {
+        "body": [
+            "SetDTEntity(${1:key}, ${2:ent})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 31.\n\n[Entity] ent\n  The entity to write on this entity's datatable.",
+        "prefix": "SetDTEntity"
+    },
+    "SetDTFloat": {
+        "body": [
+            "SetDTFloat(${1:key}, ${2:float})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 31.\n\n[number] float\n  The float to write on the entity's datatable.",
+        "prefix": "SetDTFloat"
+    },
+    "SetDTInt": {
+        "body": [
+            "SetDTInt(${1:key}, ${2:integer})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 31.\n\n[number] integer\n  The integer to write on the entity's datatable.",
+        "prefix": "SetDTInt"
+    },
+    "SetDTString": {
+        "body": [
+            "SetDTString(${1:key}, ${2:str})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 3.\n\n[string] str\n  The string to write on the entity's datatable, can't be more than 512 characters per string.",
+        "prefix": "SetDTString"
+    },
+    "SetDTVector": {
+        "body": [
+            "SetDTVector(${1:key}, ${2:vec})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] key\n  Goes from 0 to 31.\n\n[Vector] vec\n  The vector to write on the entity's datatable.",
+        "prefix": "SetDTVector"
+    },
+    "SetElasticity": {
+        "body": [
+            "SetElasticity(${1:elasticity})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] elasticity\n  The elasticity to set.",
+        "prefix": "SetElasticity"
+    },
+    "SetEntity": {
+        "body": [
+            "SetEntity(${1:name}, ${2:entity})$0"
+        ],
+        "description": "ENTITY [Shared] Allows you to set the Start or End entity attachment for the rope.\n\n[string] name\n  The name of the variable to modify.\n\nAccepted names are StartEntity and EndEntity.\n\n[Entity] entity\n  The entity to apply to the specific attachment.",
+        "prefix": "SetEntity"
+    },
+    "SetEyeTarget": {
+        "body": [
+            "SetEyeTarget(${1:pos})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the position an entity's eyes look toward.\n\n[Vector] pos\n  The world position the entity is looking toward.",
+        "prefix": "SetEyeTarget"
+    },
+    "SetFlexScale": {
+        "body": [
+            "SetFlexScale(${1:scale})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] scale\n  The new flex scale to set to",
+        "prefix": "SetFlexScale"
+    },
+    "SetFlexWeight": {
+        "body": [
+            "SetFlexWeight(${1:flex}, ${2:weight})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flex\n  The ID of the flex to modify weight of\n\n[number] weight\n  The new weight to set",
+        "prefix": "SetFlexWeight"
+    },
+    "SetFriction": {
+        "body": [
+            "SetFriction(${1:friction})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] friction\n  Friction multiplier",
+        "prefix": "SetFriction"
+    },
+    "SetGravity": {
+        "body": [
+            "SetGravity(${1:gravityMultiplier})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] gravityMultiplier\n  Value which specifies the gravity multiplier.",
+        "prefix": "SetGravity"
+    },
+    "SetGroundEntity": {
+        "body": [
+            "SetGroundEntity(${1:ground})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the ground the entity is standing on.\n\n[Entity] ground\n  The ground entity.",
+        "prefix": "SetGroundEntity"
+    },
+    "SetHealth": {
+        "body": [
+            "SetHealth(${1:newHealth})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the health of the entity.\n\n[number] newHealth\n  New health value.",
+        "prefix": "SetHealth"
+    },
+    "SetHitboxSet": {
+        "body": [
+            "SetHitboxSet(${1:id})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] id\n  The new hitbox set to set. Can be a name as a string, or the ID as a number.",
+        "prefix": "SetHitboxSet"
+    },
+    "SetIK": {
+        "body": [
+            "SetIK(${1:useIK=false})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[boolean] useIK=false\n  The state of the IK.",
+        "prefix": "SetIK"
+    },
+    "SetKeyValue": {
+        "body": [
+            "SetKeyValue(${1:key}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key\n\n[string] value\n  The value",
+        "prefix": "SetKeyValue"
+    },
+    "SetLOD": {
+        "body": [
+            "SetLOD(${1:lod=-1})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[number] lod=-1\n  The Level Of Detail model ID to use. -1 leaves the engine to automatically set the Level of Detail.\n\nThe Level Of Detail may range from 0 to 8, with 0 being the highest quality and 8 the lowest.",
+        "prefix": "SetLOD"
+    },
+    "SetLagCompensated": {
+        "body": [
+            "SetLagCompensated(${1:enable})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[boolean] enable\n  Whether the entity should be lag compensated or not.",
+        "prefix": "SetLagCompensated"
+    },
+    "SetLayerBlendIn": {
+        "body": [
+            "SetLayerBlendIn(${1:layerID}, ${2:blendIn})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID\n\n[number] blendIn",
+        "prefix": "SetLayerBlendIn"
+    },
+    "SetLayerBlendOut": {
+        "body": [
+            "SetLayerBlendOut(${1:layerID}, ${2:blendOut})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID\n\n[number] blendOut",
+        "prefix": "SetLayerBlendOut"
+    },
+    "SetLayerCycle": {
+        "body": [
+            "SetLayerCycle(${1:layerID}, ${2:duration})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID\n\n[number] duration\n  The new animation cycle/frame for given layer.",
+        "prefix": "SetLayerCycle"
+    },
+    "SetLayerDuration": {
+        "body": [
+            "SetLayerDuration(${1:layerID}, ${2:duration})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID\n\n[number] duration\n  The new duration of the layer in seconds.",
+        "prefix": "SetLayerDuration"
+    },
+    "SetLayerLooping": {
+        "body": [
+            "SetLayerLooping(${1:layerID}, ${2:loop})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID\n\n[boolean] loop\n  Whether the layer should loop or not.",
+        "prefix": "SetLayerLooping"
+    },
+    "SetLayerPlaybackRate": {
+        "body": [
+            "SetLayerPlaybackRate(${1:layerID}, ${2:rate})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID\n\n[number] rate\n  The new playback rate.",
+        "prefix": "SetLayerPlaybackRate"
+    },
+    "SetLayerPriority": {
+        "body": [
+            "SetLayerPriority(${1:layerID}, ${2:priority})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID\n\n[number] priority\n  The new priority of the layer.",
+        "prefix": "SetLayerPriority"
+    },
+    "SetLayerWeight": {
+        "body": [
+            "SetLayerWeight(${1:layerID}, ${2:weight})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] layerID\n  The Layer ID\n\n[number] weight\n  The new layer weight.",
+        "prefix": "SetLayerWeight"
+    },
+    "SetLegacyTransform": {
+        "body": [
+            "SetLegacyTransform(${1:enabled})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[boolean] enabled\n  Whether the entity should use the old bone transformation behaviour or not.",
+        "prefix": "SetLegacyTransform"
+    },
+    "SetLocalAngles": {
+        "body": [
+            "SetLocalAngles(${1:ang})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Angle] ang\n  The local angle",
+        "prefix": "SetLocalAngles"
+    },
+    "SetLocalAngularVelocity": {
+        "body": [
+            "SetLocalAngularVelocity(${1:angVel})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Angle] angVel\n  The angular velocity to set.",
+        "prefix": "SetLocalAngularVelocity"
+    },
+    "SetLocalPos": {
+        "body": [
+            "SetLocalPos(${1:pos})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] pos\n  The local position",
+        "prefix": "SetLocalPos"
+    },
+    "SetLocalVelocity": {
+        "body": [
+            "SetLocalVelocity(${1:velocity})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] velocity\n  The velocity the entity will be set with.",
+        "prefix": "SetLocalVelocity"
+    },
+    "SetMaterial": {
+        "body": [
+            "SetMaterial(${1:materialName}, ${2:forceMaterial=false})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] materialName\n  New material name.\n\n[boolean] forceMaterial=false\n  Use it if you wish to apply material other than VertexLitGeneric (such as tools/toolswhite).",
+        "prefix": "SetMaterial"
+    },
+    "SetMaxHealth": {
+        "body": [
+            "SetMaxHealth(${1:maxhealth})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] maxhealth\n  What the max health should be",
+        "prefix": "SetMaxHealth"
+    },
+    "SetModel": {
+        "body": [
+            "SetModel(${1:modelName})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] modelName\n  New model value.",
+        "prefix": "SetModel"
+    },
+    "SetModelName": {
+        "body": [
+            "SetModelName(${1:modelname})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] modelname\n  The new model name.",
+        "prefix": "SetModelName"
+    },
+    "SetModelScale": {
+        "body": [
+            "SetModelScale(${1:scale}, ${2:deltaTime=0})$0"
+        ],
+        "description": "ENTITY [Shared] Scales the model of the entity, if the entity is a Player or an NPC the hitboxes will be scaled as well. For some entities, calling Entity:Activate after this will scale the collision bounds and PhysObj as well; be wary as there's no optimization being done internally and highly complex collision models might crash the server. This is the same system used in TF2 for the Mann Vs Machine robots. To resize the entity along any axis, use Entity:EnableMatrix instead. If your old scales are wrong due to a recent update, use Entity:SetLegacyTransform as a quick fix.\n\n[number] scale\n  A float to scale the model by\n\n[number] deltaTime=0\n  Transition time of the scale change, set to 0 to modify the scale right away.",
+        "prefix": "SetModelScale"
+    },
+    "SetMoveCollide": {
+        "body": [
+            "SetMoveCollide(${1:moveCollideType})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] moveCollideType\n  The move collide type, see MOVECOLLIDE_ Enums",
+        "prefix": "SetMoveCollide"
+    },
+    "SetMoveParent": {
+        "body": [
+            "SetMoveParent(${1:Parent})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the Movement Parent of an entity to another entity. Similar to Entity:SetParent, except the object's coordinates are not translated automatically before parenting.\n\n[Entity] Parent\n  The entity to change this entity's Movement Parent to.",
+        "prefix": "SetMoveParent"
+    },
+    "SetMoveType": {
+        "body": [
+            "SetMoveType(${1:movetype})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] movetype\n  The new movetype, see MOVETYPE_ Enums",
+        "prefix": "SetMoveType"
+    },
+    "SetNWAngle": {
+        "body": [
+            "SetNWAngle(${1:key}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a networked angle value on the entity. The value can then be accessed with Entity:GetNWAngle both from client and server.\n\n[string] key\n  The key to associate the value with\n\n[Angle] value\n  The value to set",
+        "prefix": "SetNWAngle"
+    },
+    "SetNWBool": {
+        "body": [
+            "SetNWBool(${1:key}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a networked boolean value on the entity. The value can then be accessed with Entity:GetNWBool both from client and server.\n\n[string] key\n  The key to associate the value with\n\n[boolean] value\n  The value to set",
+        "prefix": "SetNWBool"
+    },
+    "SetNWEntity": {
+        "body": [
+            "SetNWEntity(${1:key}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a networked entity value on the entity. The value can then be accessed with Entity:GetNWEntity both from client and server.\n\n[string] key\n  The key to associate the value with\n\n[Entity] value\n  The value to set",
+        "prefix": "SetNWEntity"
+    },
+    "SetNWFloat": {
+        "body": [
+            "SetNWFloat(${1:key}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a networked float (number) value on the entity. The value can then be accessed with Entity:GetNWFloat both from client and server. Unlike Entity:SetNWInt, floats don't have to be whole numbers.\n\n[string] key\n  The key to associate the value with\n\n[number] value\n  The value to set",
+        "prefix": "SetNWFloat"
+    },
+    "SetNWInt": {
+        "body": [
+            "SetNWInt(${1:key}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a networked integer (whole number) value on the entity. The value can then be accessed with Entity:GetNWInt both from client and server. See Entity:SetNWFloat for numbers that aren't integers.\n\n[string] key\n  The key to associate the value with\n\n[number] value\n  The value to set. This will be cast into a 128-bit signed int internally",
+        "prefix": "SetNWInt"
+    },
+    "SetNWString": {
+        "body": [
+            "SetNWString(${1:key}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a networked string value on the entity. The value can then be accessed with Entity:GetNWString both from client and server.\n\n[string] key\n  The key to associate the value with\n\n[string] value\n  The value to set, up to 199 characters.",
+        "prefix": "SetNWString"
+    },
+    "SetNWVarProxy": {
+        "body": [
+            "SetNWVarProxy(${1:name}, ${2:callback})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a function to be called when the NWVar changes.\n\n[string] name\n  The name of the NWVar to add callback for.\n\n[function] callback\n  The function to be called when the NWVar changes. It has 3 arguments:\n\n Entity ent - The entity\n string name - Name of the NWVar that has changed\n any oldval - The old value\n any newval - The new value",
+        "prefix": "SetNWVarProxy"
+    },
+    "SetNWVector": {
+        "body": [
+            "SetNWVector(${1:key}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a networked vector value on the entity. The value can then be accessed with Entity:GetNWVector both from client and server.\n\n[string] key\n  The key to associate the value with\n\n[Vector] value\n  The value to set",
+        "prefix": "SetNWVector"
+    },
+    "SetName": {
+        "body": [
+            "SetName(${1:mappingName})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[string] mappingName\n  The name to set for the entity.",
+        "prefix": "SetName"
+    },
+    "SetNetworkAngles": {
+        "body": [
+            "SetNetworkAngles(${1:angle})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[Angle] angle",
+        "prefix": "SetNetworkAngles"
+    },
+    "SetNetworkOrigin": {
+        "body": [
+            "SetNetworkOrigin(${1:origin})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] origin",
+        "prefix": "SetNetworkOrigin"
+    },
+    "SetNetworkedAngle": {
+        "body": [
+            "SetNetworkedAngle(${1:key}, ${2:value=Angle(0,0,0)})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key to associate the value with\n\n[Angle] value=Angle(0,0,0)\n  The value to set",
+        "prefix": "SetNetworkedAngle"
+    },
+    "SetNetworkedBool": {
+        "body": [
+            "SetNetworkedBool(${1:key}, ${2:value=false})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key to associate the value with\n\n[boolean] value=false\n  The value to set",
+        "prefix": "SetNetworkedBool"
+    },
+    "SetNetworkedEntity": {
+        "body": [
+            "SetNetworkedEntity(${1:key}, ${2:value=NULL})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key to associate the value with\n\n[Entity] value=NULL\n  The value to set",
+        "prefix": "SetNetworkedEntity"
+    },
+    "SetNetworkedFloat": {
+        "body": [
+            "SetNetworkedFloat(${1:key}, ${2:value=0})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key to associate the value with\n\n[number] value=0\n  The value to set",
+        "prefix": "SetNetworkedFloat"
+    },
+    "SetNetworkedInt": {
+        "body": [
+            "SetNetworkedInt(${1:key}, ${2:value=0})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key to associate the value with\n\n[number] value=0\n  The value to set",
+        "prefix": "SetNetworkedInt"
+    },
+    "SetNetworkedNumber": {
+        "body": [
+            "SetNetworkedNumber(${1:index}, ${2:number})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a networked number at the specified index on the entity.\n\n[any] index\n  The index that the value is stored in.\n\n[number] number\n  The value to network.",
+        "prefix": "SetNetworkedNumber"
+    },
+    "SetNetworkedString": {
+        "body": [
+            "SetNetworkedString(${1:key}, ${2:value=\"\"})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key to associate the value with\n\n[string] value=\"\"\n  The value to set",
+        "prefix": "SetNetworkedString"
+    },
+    "SetNetworkedVarProxy": {
+        "body": [
+            "SetNetworkedVarProxy(${1:name}, ${2:callback})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] name\n  The name of the NWVar to add callback for.\n\n[function] callback\n  The function to be called when the NWVar changes.",
+        "prefix": "SetNetworkedVarProxy"
+    },
+    "SetNetworkedVector": {
+        "body": [
+            "SetNetworkedVector(${1:key}, ${2:value=Vector(0,0,0)})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] key\n  The key to associate the value with\n\n[Vector] value=Vector(0,0,0)\n  The value to set",
+        "prefix": "SetNetworkedVector"
+    },
+    "SetNextClientThink": {
+        "body": [
+            "SetNextClientThink(${1:nextthink})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[number] nextthink\n  The next time, relative to CurTime, to execute the ENTITY:Think clientside.",
+        "prefix": "SetNextClientThink"
+    },
+    "SetNoDraw": {
+        "body": [
+            "SetNoDraw(${1:shouldNotDraw})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] shouldNotDraw\n  true disables drawing",
+        "prefix": "SetNoDraw"
+    },
+    "SetNotSolid": {
+        "body": [
+            "SetNotSolid(${1:IsNotSolid})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] IsNotSolid\n  True will make the entity not solid, false will make it solid.",
+        "prefix": "SetNotSolid"
+    },
+    "SetOwner": {
+        "body": [
+            "SetOwner(${1:owner=NULL})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the owner of this entity, disabling all physics interaction with it.\n\n[Entity] owner=NULL\n  The entity to be set as owner.",
+        "prefix": "SetOwner"
+    },
+    "SetParent": {
+        "body": [
+            "SetParent(${1:parent=NULL}, ${2:attachmentId=-1})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Entity] parent=NULL\n  The entity to parent to. Setting this to nil will clear the parent.\n\n[number] attachmentId=-1\n  The attachment id to use when parenting, defaults to -1 or whatever the parent had set previously.",
+        "prefix": "SetParent"
+    },
+    "SetParentPhysNum": {
+        "body": [
+            "SetParentPhysNum(${1:bone})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] bone\n  Physics bone number to attach to. Use 0 for objects with only one physics bone. (See Entity:GetPhysicsObjectNum)",
+        "prefix": "SetParentPhysNum"
+    },
+    "SetPersistent": {
+        "body": [
+            "SetPersistent(${1:persist})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] persist\n  Whether or not the entity should be persistent.",
+        "prefix": "SetPersistent"
+    },
+    "SetPhysConstraintObjects": {
+        "body": [
+            "SetPhysConstraintObjects(${1:Phys1}, ${2:Phys2})$0"
+        ],
+        "description": "ENTITY [Server] When called on a constraint entity, sets the two physics objects to be constrained. Usage is not recommended as the Constraint library provides easier ways to deal with constraints.\n\n[PhysObj] Phys1\n  The first physics object to be constrained.\n\n[PhysObj] Phys2\n  The second physics object to be constrained.",
+        "prefix": "SetPhysConstraintObjects"
+    },
+    "SetPhysicsAttacker": {
+        "body": [
+            "SetPhysicsAttacker(${1:ent}, ${2:timeLimit=5})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Player] ent\n  Player who gets the kills. Setting this to a non-player entity will not work.\n\n[number] timeLimit=5\n  Time in seconds until the entity forgets its physics attacker and prevents it from getting the kill credit.",
+        "prefix": "SetPhysicsAttacker"
+    },
+    "SetPlaybackRate": {
+        "body": [
+            "SetPlaybackRate(${1:fSpeed})$0"
+        ],
+        "description": "ENTITY [Shared] Allows you to set how fast an entity's animation will play, with 1.0 being the default speed.\n\n[number] fSpeed\n  How fast the animation will play.",
+        "prefix": "SetPlaybackRate"
+    },
+    "SetPos": {
+        "body": [
+            "SetPos(${1:position})$0"
+        ],
+        "description": "ENTITY [Shared] Moves the entity to the specified position.\n\n[Vector] position\n  The position to move the entity to.",
+        "prefix": "SetPos"
+    },
+    "SetPoseParameter": {
+        "body": [
+            "SetPoseParameter(${1:poseName}, ${2:poseValue})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] poseName\n  Name of the pose parameter.\n\n[number] poseValue\n  The value to set the pose to.",
+        "prefix": "SetPoseParameter"
+    },
+    "SetPredictable": {
+        "body": [
+            "SetPredictable(${1:setPredictable})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[boolean] setPredictable\n  whether to make this entity predictable or not.",
+        "prefix": "SetPredictable"
+    },
+    "SetPreventTransmit": {
+        "body": [
+            "SetPreventTransmit(${1:player}, ${2:stopTransmitting})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Player] player\n  The player to stop networking the entity to.\n\n[boolean] stopTransmitting\n  true to stop the entity from networking, false to make it network again.",
+        "prefix": "SetPreventTransmit"
+    },
+    "SetRagdollAng": {
+        "body": [
+            "SetRagdollAng(${1:boneid}, ${2:pos})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] boneid\n  Bone ID\n\n[Angle] pos\n  Angle to set",
+        "prefix": "SetRagdollAng"
+    },
+    "SetRagdollBuildFunction": {
+        "body": [
+            "SetRagdollBuildFunction(${1:func})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[function] func\n  The build function. This function has one argument:\n\n Entity ragdoll - The ragdoll to build",
+        "prefix": "SetRagdollBuildFunction"
+    },
+    "SetRagdollPos": {
+        "body": [
+            "SetRagdollPos(${1:boneid}, ${2:pos})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] boneid\n  Bone ID\n\n[Vector] pos\n  Position to set",
+        "prefix": "SetRagdollPos"
+    },
+    "SetRenderAngles": {
+        "body": [
+            "SetRenderAngles(${1:newAngles})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[Angle] newAngles\n  The new render angles to be set to.",
+        "prefix": "SetRenderAngles"
+    },
+    "SetRenderBounds": {
+        "body": [
+            "SetRenderBounds(${1:mins}, ${2:maxs}, ${3:add=Vector(0,0,0)})$0"
+        ],
+        "description": "ENTITY [Client] Sets the render bounds for the entity. For world space coordinates see Entity:SetRenderBoundsWS.\n\n[Vector] mins\n  The minimum corner of the bounds, relative to origin of the entity.\n\n[Vector] maxs\n  The maximum corner of the bounds, relative to origin of the entity.\n\n[Vector] add=Vector(0,0,0)\n  If defined, adds this vector to maxs and subtracts this vector from mins.",
+        "prefix": "SetRenderBounds"
+    },
+    "SetRenderBoundsWS": {
+        "body": [
+            "SetRenderBoundsWS(${1:mins}, ${2:maxs}, ${3:add=Vector(0,0,0)})$0"
+        ],
+        "description": "ENTITY [Client] Sets the render bounds for the entity in world space coordinates. For relative coordinates see Entity:SetRenderBounds.\n\n[Vector] mins\n  The minimum corner of the bounds, relative to origin of the world/map.\n\n[Vector] maxs\n  The maximum corner of the bounds, relative to origin of the world/map.\n\n[Vector] add=Vector(0,0,0)\n  If defined, adds this vector to maxs and subtracts this vector from mins.",
+        "prefix": "SetRenderBoundsWS"
+    },
+    "SetRenderClipPlane": {
+        "body": [
+            "SetRenderClipPlane(${1:planeNormal}, ${2:planePosition})$0"
+        ],
+        "description": "ENTITY [Client] Used to specify a plane, past which an object will be visually clipped.\n\n[Vector] planeNormal\n  The normal of the plane. Anything behind the normal will be clipped.\n\n[number] planePosition\n  The position of the plane.",
+        "prefix": "SetRenderClipPlane"
+    },
+    "SetRenderClipPlaneEnabled": {
+        "body": [
+            "SetRenderClipPlaneEnabled(${1:enabled})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[boolean] enabled\n  Enable or disable clipping planes",
+        "prefix": "SetRenderClipPlaneEnabled"
+    },
+    "SetRenderFX": {
+        "body": [
+            "SetRenderFX(${1:renderFX})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] renderFX\n  The new render FX to set, see kRenderFx_ Enums",
+        "prefix": "SetRenderFX"
+    },
+    "SetRenderMode": {
+        "body": [
+            "SetRenderMode(${1:renderMode})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] renderMode\n  New render mode to set, see RENDERMODE_ Enums.",
+        "prefix": "SetRenderMode"
+    },
+    "SetRenderOrigin": {
+        "body": [
+            "SetRenderOrigin(${1:newOrigin})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[Vector] newOrigin\n  The new origin in world coordinates where the Entity's model will now be rendered from.",
+        "prefix": "SetRenderOrigin"
+    },
+    "SetSaveValue": {
+        "body": [
+            "SetSaveValue(${1:name}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] Sets a save value for an entity.\n\n[string] name\n  Name of the save value to set\n\n[any] value\n  Value to set",
+        "prefix": "SetSaveValue"
+    },
+    "SetSequence": {
+        "body": [
+            "SetSequence(${1:sequenceId})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the entity's model sequence. If the specified sequence is already active, the animation will not be restarted. See Entity:ResetSequence for a function that restarts the animation even if it is already playing. In some cases you want to run Entity:ResetSequenceInfo to make this function run.\n\n[number] sequenceId\n  The sequence to play.\n\nIf set to a string the function will automatically call Entity:LookupSequence to retrieve the sequence ID as a number.",
+        "prefix": "SetSequence"
+    },
+    "SetShouldPlayPickupSound": {
+        "body": [
+            "SetShouldPlayPickupSound(${1:playsound})$0"
+        ],
+        "description": "ENTITY [Shared] Sets whether or not the entity should make a physics contact sound when it's been picked up by a player.\n\n[boolean] playsound\n  True to play the pickup sound, false or nil otherwise.",
+        "prefix": "SetShouldPlayPickupSound"
+    },
+    "SetShouldServerRagdoll": {
+        "body": [
+            "SetShouldServerRagdoll(${1:serverragdoll})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] serverragdoll\n  Set true if ragdoll should be created on server, false if on client",
+        "prefix": "SetShouldServerRagdoll"
+    },
+    "SetSkin": {
+        "body": [
+            "SetSkin(${1:skinIndex})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] skinIndex\n  Index of the skin to use.",
+        "prefix": "SetSkin"
+    },
+    "SetSolid": {
+        "body": [
+            "SetSolid(${1:solid_type})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] solid_type\n  The solid type. See the SOLID_ Enums.",
+        "prefix": "SetSolid"
+    },
+    "SetSolidFlags": {
+        "body": [
+            "SetSolidFlags(${1:flags})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] flags\n  The flag(s) to set, see FSOLID_ Enums.",
+        "prefix": "SetSolidFlags"
+    },
+    "SetSpawnEffect": {
+        "body": [
+            "SetSpawnEffect(${1:spawnEffect})$0"
+        ],
+        "description": "ENTITY [Shared] Sets whether the entity should use a spawn effect. See also: Entity:GetSpawnEffect\n\n[boolean] spawnEffect\n  Sets if we should show a spawn effect.",
+        "prefix": "SetSpawnEffect"
+    },
+    "SetSubMaterial": {
+        "body": [
+            "SetSubMaterial(${1:index=nil}, ${2:material=nil})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] index=nil\n  Index of the material to override, acceptable values are from 0 to 31.\nIndexes are by Entity:GetMaterials, but you have to subtract 1 from them.\n\nIf called with no arguments, all sub materials will be reset.\n\n[string] material=nil\n  The material to override the default one with. Set to nil to revert to default material.",
+        "prefix": "SetSubMaterial"
+    },
+    "SetTable": {
+        "body": [
+            "SetTable(${1:tab})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[table] tab\n  Table for the entity to use",
+        "prefix": "SetTable"
+    },
+    "SetTransmitWithParent": {
+        "body": [
+            "SetTransmitWithParent(${1:onoff})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] onoff\n  Will set the TransmitWithParent flag on or off",
+        "prefix": "SetTransmitWithParent"
+    },
+    "SetTrigger": {
+        "body": [
+            "SetTrigger(${1:maketrigger})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[boolean] maketrigger\n  Make the entity trigger or not",
+        "prefix": "SetTrigger"
+    },
+    "SetUnFreezable": {
+        "body": [
+            "SetUnFreezable(${1:freezable})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[boolean] freezable\n  True to make the entity unfreezable, false or nil otherwise.",
+        "prefix": "SetUnFreezable"
+    },
+    "SetUseType": {
+        "body": [
+            "SetUseType(${1:useType})$0"
+        ],
+        "description": "ENTITY [Server] Sets the use type of an entity, affecting how often ENTITY:Use will be called for Lua entities.\n\n[number] useType\n  The use type to apply to the entity. Uses _USE Enums.",
+        "prefix": "SetUseType"
+    },
+    "SetVar": {
+        "body": [
+            "SetVar(${1:name}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] name\n  Name of variable to set\n\n[any] value\n  Value to set the variable to",
+        "prefix": "SetVar"
+    },
+    "SetVelocity": {
+        "body": [
+            "SetVelocity(${1:velocity})$0"
+        ],
+        "description": "ENTITY [Shared] Sets an entity's velocity with a given vector velocity.\nNote: If applied to player, it will ADD velocity, not SET it.\n\n[Vector] velocity\n  The new velocity to set",
+        "prefix": "SetVelocity"
+    },
+    "SetWeaponModel": {
+        "body": [
+            "SetWeaponModel(${1:viewModel}, ${2:weapon=NULL})$0"
+        ],
+        "description": "ENTITY [Shared] Sets the model and associated weapon to this viewmodel entity. This is used internally when the player switches weapon.\n\n[string] viewModel\n  The model string to give to this viewmodel.\n\nExample: \"models/weapons/c_smg1.mdl\"\n\n[Weapon] weapon=NULL\n  The weapon entity to associate this viewmodel to.",
+        "prefix": "SetWeaponModel"
+    },
+    "SetupBones": {
+        "body": [
+            "SetupBones()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "SetupBones"
+    },
+    "SetupPhonemeMappings": {
+        "body": [
+            "SetupPhonemeMappings(${1:fileRoot})$0"
+        ],
+        "description": "ENTITY [Client] Initializes the class names of an entity's phoneme mappings (mouth movement data). This is called by default with argument \"phonemes\" when a flex-based entity (such as an NPC) is created.\n\n[string] fileRoot\n  The file prefix of the phoneme mappings (relative to \"garrysmod/expressions/\").",
+        "prefix": "SetupPhonemeMappings"
+    },
+    "SkinCount": {
+        "body": [
+            "SkinCount()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "SkinCount"
+    },
+    "SnatchModelInstance": {
+        "body": [
+            "SnatchModelInstance(${1:srcEntity})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[Entity] srcEntity\n  Entity to move the model instance from.",
+        "prefix": "SnatchModelInstance"
+    },
+    "Spawn": {
+        "body": [
+            "Spawn()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "Spawn"
+    },
+    "StartLoopingSound": {
+        "body": [
+            "StartLoopingSound(${1:sound})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] sound\n  Sound to play. Can be either a sound script or a filepath.",
+        "prefix": "StartLoopingSound"
+    },
+    "StartMotionController": {
+        "body": [
+            "StartMotionController()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "StartMotionController"
+    },
+    "StopAndDestroyParticles": {
+        "body": [
+            "StopAndDestroyParticles()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "StopAndDestroyParticles"
+    },
+    "StopLoopingSound": {
+        "body": [
+            "StopLoopingSound(${1:id})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] id\n  The sound ID returned by Entity:StartLoopingSound",
+        "prefix": "StopLoopingSound"
+    },
+    "StopMotionController": {
+        "body": [
+            "StopMotionController()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "StopMotionController"
+    },
+    "StopParticleEmission": {
+        "body": [
+            "StopParticleEmission()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "StopParticleEmission"
+    },
+    "StopParticles": {
+        "body": [
+            "StopParticles()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "StopParticles"
+    },
+    "StopParticlesNamed": {
+        "body": [
+            "StopParticlesNamed(${1:name})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[string] name\n  The name of the particle to stop.",
+        "prefix": "StopParticlesNamed"
+    },
+    "StopParticlesWithNameAndAttachment": {
+        "body": [
+            "StopParticlesWithNameAndAttachment(${1:name}, ${2:attachment})$0"
+        ],
+        "description": "ENTITY [Client] \n\n[string] name\n  The name of the particle to stop.\n\n[number] attachment\n  The attachment of the entity to stop particles on.",
+        "prefix": "StopParticlesWithNameAndAttachment"
+    },
+    "StopSound": {
+        "body": [
+            "StopSound(${1:soundscript})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[string] soundscript\n  The name of the sound script to stop playback of.",
+        "prefix": "StopSound"
+    },
+    "TakeDamage": {
+        "body": [
+            "TakeDamage(${1:damageAmount}, ${2:attacker}, ${3:inflictor})$0"
+        ],
+        "description": "ENTITY [Server] Applies the specified amount of damage to the entity.\n\n[number] damageAmount\n  The amount of damage to be applied.\n\n[Entity] attacker\n  The entity that initiated the attack that caused the damage.\n\n[Entity] inflictor\n  The entity that applied the damage, eg. a weapon.",
+        "prefix": "TakeDamage"
+    },
+    "TakeDamageInfo": {
+        "body": [
+            "TakeDamageInfo(${1:damageInfo})$0"
+        ],
+        "description": "ENTITY [Server] Applies the damage specified by the damage info to the entity.\n\n[CTakeDamageInfo] damageInfo\n  The damage to apply.",
+        "prefix": "TakeDamageInfo"
+    },
+    "TakePhysicsDamage": {
+        "body": [
+            "TakePhysicsDamage(${1:dmginfo})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[CTakeDamageInfo] dmginfo\n  The damage to apply",
+        "prefix": "TakePhysicsDamage"
+    },
+    "TestPVS": {
+        "body": [
+            "TestPVS(${1:testPoint})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[any] testPoint\n  Entity or Vector to test against. If an entity is given, this function will test using its bounding box.",
+        "prefix": "TestPVS"
+    },
+    "TranslateBoneToPhysBone": {
+        "body": [
+            "TranslateBoneToPhysBone(${1:boneID})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] boneID\n  The ID of a bone to look up the \"physics root\" bone of.",
+        "prefix": "TranslateBoneToPhysBone"
+    },
+    "TranslatePhysBoneToBone": {
+        "body": [
+            "TranslatePhysBoneToBone(${1:physNum})$0"
+        ],
+        "description": "ENTITY [Shared] Returns the boneID of the bone the given PhysObj is attached to. See Entity:TranslateBoneToPhysBone for reverse function.\n\n[number] physNum\n  The PhysObj number on the entity",
+        "prefix": "TranslatePhysBoneToBone"
+    },
+    "Use": {
+        "body": [
+            "Use(${1:Activator}, ${2:Caller}, ${3:UseType}, ${4:Integer})$0"
+        ],
+        "description": "ENTITY [Server] Activates the entity, as if a player pressed the Use key (Default E) on it.\n\n[Player] Activator\n  The player to credit with activating the entity.\n\n[Entity] Caller\n  Used when an entity instead of a player should trigger the use.\n\n[number] UseType\n  The type of use to trigger. See USE_ Enums\n\n[number] Integer\n  You can usually set this to 1.",
+        "prefix": "Use"
+    },
+    "UseClientSideAnimation": {
+        "body": [
+            "UseClientSideAnimation()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "UseClientSideAnimation"
+    },
+    "UseTriggerBounds": {
+        "body": [
+            "UseTriggerBounds(${1:enable}, ${2:bloat=0})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] enable\n  Should we enable or disable the bounds.\n\n[number] bloat=0\n  The distance/size of the trigger bounds.",
+        "prefix": "UseTriggerBounds"
+    },
+    "ViewModelIndex": {
+        "body": [
+            "ViewModelIndex()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "ViewModelIndex"
+    },
+    "Visible": {
+        "body": [
+            "Visible(${1:Entity})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Entity] Entity\n  Entity to check for visibility to.",
+        "prefix": "Visible"
+    },
+    "VisibleVec": {
+        "body": [
+            "VisibleVec(${1:pos})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Vector] pos\n  The position to check for visibility",
+        "prefix": "VisibleVec"
+    },
+    "WaterLevel": {
+        "body": [
+            "WaterLevel()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "WaterLevel"
+    },
+    "Weapon_SetActivity": {
+        "body": [
+            "Weapon_SetActivity(${1:act}, ${2:duration})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] act\n  See ACT_ Enums\n\n[number] duration\n  Scales playback rate",
+        "prefix": "Weapon_SetActivity"
+    },
+    "Weapon_TranslateActivity": {
+        "body": [
+            "Weapon_TranslateActivity(${1:act})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[number] act\n  The activity to translate",
+        "prefix": "Weapon_TranslateActivity"
+    },
+    "WorldSpaceAABB": {
+        "body": [
+            "WorldSpaceAABB()$0"
+        ],
+        "description": "ENTITY [Shared] Returns two vectors representing the minimum and maximum extent of the entity's bounding box.",
+        "prefix": "WorldSpaceAABB"
+    },
+    "WorldSpaceCenter": {
+        "body": [
+            "WorldSpaceCenter()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "WorldSpaceCenter"
+    },
+    "WorldToLocal": {
+        "body": [
+            "WorldToLocal(${1:wpos})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Vector] wpos\n  The world vector",
+        "prefix": "WorldToLocal"
+    },
+    "WorldToLocalAngles": {
+        "body": [
+            "WorldToLocalAngles(${1:ang})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[Angle] ang\n  The world angles",
+        "prefix": "WorldToLocalAngles"
+    }
+}

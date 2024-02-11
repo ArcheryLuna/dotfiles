@@ -1,0 +1,16 @@
+{
+    "serverlist.PlayerList": {
+        "body": [
+            "serverlist.PlayerList(${1:ip}, ${2:callback})$0"
+        ],
+        "description": "SERVERLIST [Menu] \n\n[string] ip\n  The IP address of the server, including the port.\n\n[function] callback\n  The function to be called if and when the request finishes. Function has one argument, a table containing tables with player info.\nEach table with player info has next fields:\nnumber time - The amount of time the player is playing on the server, in seconds\nstring name - The player name\nnumber score - The players score",
+        "prefix": "serverlist.PlayerList"
+    },
+    "serverlist.Query": {
+        "body": [
+            "serverlist.Query(${1:data})$0"
+        ],
+        "description": "SERVERLIST [Menu] \n\n[table] data\n  The information about what kind of servers we want. See ServerQueryData structure.",
+        "prefix": "serverlist.Query"
+    }
+}

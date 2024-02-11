@@ -1,0 +1,16 @@
+{
+	"construct/Magnet": {
+		"body": [
+			"construct.Magnet(${1:ply}, ${2:pos}, ${3:ang}, ${4:model}, ${5:material}, ${6:key}, ${7:maxObjects}, ${8:strength}, ${9:nopull=0}, ${10:allowrot=0}, ${11:startOn=0}, ${12:toggle}, ${13:)}, ${14:)}, ${15:frozen=false})$0"
+		],
+		"description": "Creates a magnet.",
+		"prefix": "construct.Magnet"
+	},
+	"construct/SetPhysProp": {
+		"body": [
+			"construct.SetPhysProp(${1:ply}, ${2:ent}, ${3:physObjID}, ${4:physObj}, ${5:data})$0"
+		],
+		"description": "Sets props physical properties.",
+		"prefix": "construct.SetPhysProp"
+	}
+}

@@ -1,0 +1,303 @@
+{
+    "string.Comma": {
+        "body": [
+            "string.Comma(${1:InputNumber})$0"
+        ],
+        "description": "STRING [Shared/Menu] Inserts commas for every third digit.\n\n[number] InputNumber\n  The input number to commafy",
+        "prefix": "string.Comma"
+    },
+    "string.EndsWith": {
+        "body": [
+            "string.EndsWith(${1:str}, ${2:end})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns whether or not the second passed string matches the end of the first.\n\n[string] str\n  The string whose end is to be checked.\n\n[string] end\n  The string to be matched with the end of the first.",
+        "prefix": "string.EndsWith"
+    },
+    "string.Explode": {
+        "body": [
+            "string.Explode(${1:separator}, ${2:str}, ${3:use_patterns})$0"
+        ],
+        "description": "STRING [Shared/Menu] Splits a string up wherever it finds the given separator. This is the reverse of string.Implode.\n\n[string] separator\n  The string will be separated wherever this sequence is found.\n\n[string] str\n  The string to split up.\n\n[boolean] use_patterns\n  Set this to true if your separator is a pattern.",
+        "prefix": "string.Explode"
+    },
+    "string.FormattedTime": {
+        "body": [
+            "string.FormattedTime(${1:float}, ${2:format=nil})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns the time as a formatted string or as a table if no format is given.\n\n[number] float\n  The time in seconds to format.\n\n[string] format=nil\n  An optional formatting to use. If no format it specified, a table will be returned instead.",
+        "prefix": "string.FormattedTime"
+    },
+    "string.FromColor": {
+        "body": [
+            "string.FromColor(${1:color})$0"
+        ],
+        "description": "STRING [Shared/Menu] Creates a string from a Color variable.\n\n[table] color\n  The color to put in the string.",
+        "prefix": "string.FromColor"
+    },
+    "string.GetChar": {
+        "body": [
+            "string.GetChar(${1:str}, ${2:index})$0"
+        ],
+        "description": "STRING [Shared/Menu] \n\n[string] str\n  The string that you will be searching with the supplied index.\n\n[number] index\n  The index's value of the string to be returned.",
+        "prefix": "string.GetChar"
+    },
+    "string.GetExtensionFromFilename": {
+        "body": [
+            "string.GetExtensionFromFilename(${1:file})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns extension of the file.\n\n[string] file\n  String eg. file-path to get the file extensions from.",
+        "prefix": "string.GetExtensionFromFilename"
+    },
+    "string.GetFileFromFilename": {
+        "body": [
+            "string.GetFileFromFilename(${1:pathString})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns file name and extension.\n\n[string] pathString\n  The string eg. file-path to get the file-name from.",
+        "prefix": "string.GetFileFromFilename"
+    },
+    "string.GetPathFromFilename": {
+        "body": [
+            "string.GetPathFromFilename(${1:Inputstring})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns the path only from a file's path.\n\n[string] Inputstring\n  String to get path from.",
+        "prefix": "string.GetPathFromFilename"
+    },
+    "string.Implode": {
+        "body": [
+            "string.Implode(${1:separator=\"\"}, ${2:pieces})$0"
+        ],
+        "description": "STRING [Shared/Menu] Joins the values of a table together to form a string. This is the reverse of string.Explode and is functionally identical to table.concat, but with less features.\n\n[string] separator=\"\"\n  The separator to insert between each piece.\n\n[table] pieces\n  The table of pieces to concatenate. The keys for these must be numeric and sequential.",
+        "prefix": "string.Implode"
+    },
+    "string.JavascriptSafe": {
+        "body": [
+            "string.JavascriptSafe(${1:str})$0"
+        ],
+        "description": "STRING [Shared/Menu] Escapes special characters for JavaScript in a string, making the string safe for inclusion in to JavaScript strings.\n\n[string] str\n  The string that should be escaped.",
+        "prefix": "string.JavascriptSafe"
+    },
+    "string.Left": {
+        "body": [
+            "string.Left(${1:str}, ${2:num})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns everything left of supplied place of that string.\n\n[string] str\n  The string to extract from.\n\n[number] num\n  Amount of chars relative to the beginning (starting from 1).",
+        "prefix": "string.Left"
+    },
+    "string.NiceSize": {
+        "body": [
+            "string.NiceSize(${1:bytes})$0"
+        ],
+        "description": "STRING [Shared/Menu] Converts a digital filesize to human-readable text.\n\n[number] bytes\n  The filesize in bytes.",
+        "prefix": "string.NiceSize"
+    },
+    "string.NiceTime": {
+        "body": [
+            "string.NiceTime(${1:num})$0"
+        ],
+        "description": "STRING [Shared/Menu] Formats the supplied number (in seconds) to the highest possible time unit.\n\n[number] num\n  The number to format, in seconds.",
+        "prefix": "string.NiceTime"
+    },
+    "string.PatternSafe": {
+        "body": [
+            "string.PatternSafe(${1:str})$0"
+        ],
+        "description": "STRING [Shared/Menu] Escapes all special characters within a string, making the string safe for inclusion in a Lua pattern.\n\n[string] str\n  The string to be sanitized",
+        "prefix": "string.PatternSafe"
+    },
+    "string.Replace": {
+        "body": [
+            "string.Replace(${1:str}, ${2:find}, ${3:replace})$0"
+        ],
+        "description": "STRING [Shared/Menu] Replaces all occurrences of the supplied second string.\n\n[string] str\n  The string we are seeking to replace an occurrence(s).\n\n[string] find\n  What we are seeking to replace.\n\n[string] replace\n  What to replace find with.",
+        "prefix": "string.Replace"
+    },
+    "string.Right": {
+        "body": [
+            "string.Right(${1:str}, ${2:num})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns the last n-th characters of the string.\n\n[string] str\n  The string to extract from.\n\n[number] num\n  Amount of chars relative to the end (starting from 1).",
+        "prefix": "string.Right"
+    },
+    "string.SetChar": {
+        "body": [
+            "string.SetChar(${1:InputString}, ${2:Index}, ${3:ReplacementChar})$0"
+        ],
+        "description": "STRING [Shared/Menu] Sets the character at the specific index of the string.\n\n[string] InputString\n  The input string\n\n[number] Index\n  The character index, 1 is the first from left.\n\n[string] ReplacementChar\n  String to replace with.",
+        "prefix": "string.SetChar"
+    },
+    "string.Split": {
+        "body": [
+            "string.Split(${1:Inputstring}, ${2:Separator})$0"
+        ],
+        "description": "STRING [Shared/Menu] Splits the string into a table of strings, separated by the second argument.\n\n[string] Inputstring\n  String to split\n\n[string] Separator\n  Character(s) to split with.",
+        "prefix": "string.Split"
+    },
+    "string.StartWith": {
+        "body": [
+            "string.StartWith(${1:inputStr}, ${2:start})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns whether or not the first string starts with the second.\n\n[string] inputStr\n  String to check.\n\n[string] start\n  String to check with.",
+        "prefix": "string.StartWith"
+    },
+    "string.StripExtension": {
+        "body": [
+            "string.StripExtension(${1:Inputstring})$0"
+        ],
+        "description": "STRING [Shared/Menu] Removes the extension of a path.\n\n[string] Inputstring\n  The path to change.",
+        "prefix": "string.StripExtension"
+    },
+    "string.ToColor": {
+        "body": [
+            "string.ToColor(${1:Inputstring})$0"
+        ],
+        "description": "STRING [Shared/Menu] Fetches a Color type from a string.\n\n[string] Inputstring\n  The string to convert from.",
+        "prefix": "string.ToColor"
+    },
+    "string.ToMinutesSeconds": {
+        "body": [
+            "string.ToMinutesSeconds(${1:time})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns given time in \"MM:SS\" format.\n\n[number] time\n  Time in seconds",
+        "prefix": "string.ToMinutesSeconds"
+    },
+    "string.ToMinutesSecondsMilliseconds": {
+        "body": [
+            "string.ToMinutesSecondsMilliseconds(${1:time})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns given time in \"MM:SS:MS\" format.\n\n[number] time\n  Time in seconds",
+        "prefix": "string.ToMinutesSecondsMilliseconds"
+    },
+    "string.ToTable": {
+        "body": [
+            "string.ToTable(${1:string})$0"
+        ],
+        "description": "STRING [Shared/Menu] Splits the string into characters and creates a sequential table.\n\n[string] string\n  The string you'll turn into a table.",
+        "prefix": "string.ToTable"
+    },
+    "string.Trim": {
+        "body": [
+            "string.Trim(${1:Inputstring}, ${2:Char=\"\"})$0"
+        ],
+        "description": "STRING [Shared/Menu] Removes leading and trailing matches of a string.\n\n[string] Inputstring\n  The string to trim.\n\n[string] Char=\"\"\n  String to match.",
+        "prefix": "string.Trim"
+    },
+    "string.TrimLeft": {
+        "body": [
+            "string.TrimLeft(${1:str}, ${2:char=\"\"})$0"
+        ],
+        "description": "STRING [Shared/Menu] Removes leading spaces/characters from a string.\n\n[string] str\n  String to trim\n\n[string] char=\"\"\n  Custom character to remove",
+        "prefix": "string.TrimLeft"
+    },
+    "string.TrimRight": {
+        "body": [
+            "string.TrimRight(${1:str}, ${2:char=\"\"})$0"
+        ],
+        "description": "STRING [Shared/Menu] Removes trailing spaces/passed character from a string.\n\n[string] str\n  String to remove from\n\n[string] char=\"\"\n  Custom character to remove, default is a space",
+        "prefix": "string.TrimRight"
+    },
+    "string.byte": {
+        "body": [
+            "string.byte(${1:string}, ${2:startPos=1}, ${3:endPos=startPos})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns the given string's characters in their numeric ASCII representation.\n\n[string] string\n  The string to get the chars from.\n\n[number] startPos=1\n  The first character of the string to get the byte of.\n\n[number] endPos=startPos\n  The last character of the string to get the byte of.",
+        "prefix": "string.byte"
+    },
+    "string.char": {
+        "body": [
+            "string.char(${1:bytes})$0"
+        ],
+        "description": "STRING [Shared/Menu] Takes the given numerical bytes and converts them to a string.\n\n[vararg] bytes\n  The bytes to create the string from.",
+        "prefix": "string.char"
+    },
+    "string.dump": {
+        "body": [
+            "string.dump(${1:func}, ${2:stripDebugInfo=false})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns the binary bytecode of the given function.\n\n[function] func\n  The function to get the bytecode of\n\n[boolean] stripDebugInfo=false\n  True to strip the debug data, false to keep it",
+        "prefix": "string.dump"
+    },
+    "string.find": {
+        "body": [
+            "string.find(${1:haystack}, ${2:needle}, ${3:startPos=1}, ${4:noPatterns=false})$0"
+        ],
+        "description": "STRING [Shared/Menu] Attempts to find the specified substring in a string, uses Patterns by default.\n\n[string] haystack\n  The string to search in.\n\n[string] needle\n  The string to find, can contain patterns if enabled.\n\n[number] startPos=1\n  The position to start the search from, can be negative start position will be relative to the end position.\n\n[boolean] noPatterns=false\n  Disable patterns.",
+        "prefix": "string.find"
+    },
+    "string.format": {
+        "body": [
+            "string.format(${1:format}, ${2:formatParameters})$0"
+        ],
+        "description": "STRING [Shared/Menu] Formats the specified values into the string given.\n\n[string] format\n  The string to be formatted.\n\nFollows this format: http://www.cplusplus.com/reference/cstdio/printf/\n\n[vararg] formatParameters\n  Values to be formatted into the string.",
+        "prefix": "string.format"
+    },
+    "string.gfind": {
+        "body": [
+            "string.gfind(${1:data}, ${2:pattern})$0"
+        ],
+        "description": "STRING [Shared/Menu] \n\n[string] data\n  The string to search in\n\n[string] pattern\n  The pattern to search for",
+        "prefix": "string.gfind"
+    },
+    "string.gmatch": {
+        "body": [
+            "string.gmatch(${1:data}, ${2:pattern})$0"
+        ],
+        "description": "STRING [Shared/Menu] Using Patterns, returns an iterator which will return either one value if no capture groups are defined, or any capture group matches.\n\n[string] data\n  The string to search in\n\n[string] pattern\n  The pattern to search for",
+        "prefix": "string.gmatch"
+    },
+    "string.gsub": {
+        "body": [
+            "string.gsub(${1:string}, ${2:pattern}, ${3:replacement}, ${4:maxReplaces=nil})$0"
+        ],
+        "description": "STRING [Shared/Menu] This functions main purpose is to replace certain character sequences in a string using Patterns.\n\n[string] string\n  String which should be modified.\n\n[string] pattern\n  The pattern that defines what should be matched and eventually be replaced.\n\n[string] replacement\n  In case of a string the matches sequence will be replaced with it.\nIn case of a table, the matched sequence will be used as key and the table will tested for the key, if a value exists it will be used as replacement.\n\nIn case of a function all matches will be passed as parameters to the function, the return value(s) of the function will then be used as replacement.\n\n[number] maxReplaces=nil\n  Maximum number of replacements to be made.",
+        "prefix": "string.gsub"
+    },
+    "string.len": {
+        "body": [
+            "string.len(${1:str})$0"
+        ],
+        "description": "STRING [Shared/Menu] Counts the number of characters in the string (length). This is equivalent to using the length operator (#).\n\n[string] str\n  The string to find the length of.",
+        "prefix": "string.len"
+    },
+    "string.lower": {
+        "body": [
+            "string.lower(${1:str})$0"
+        ],
+        "description": "STRING [Shared/Menu] Changes any upper-case letters in a string to lower-case letters.\n\n[string] str\n  The string to convert.",
+        "prefix": "string.lower"
+    },
+    "string.match": {
+        "body": [
+            "string.match(${1:string}, ${2:pattern}, ${3:startPosition=1})$0"
+        ],
+        "description": "STRING [Shared/Menu] Finds a Pattern in a string.\n\n[string] string\n  String which should be searched in for matches.\n\n[string] pattern\n  The pattern that defines what should be matched.\n\n[number] startPosition=1\n  The start index to start the matching from, can be negative to start the match from a position relative to the end.",
+        "prefix": "string.match"
+    },
+    "string.rep": {
+        "body": [
+            "string.rep(${1:str}, ${2:repetitions}, ${3:separator=\"\"})$0"
+        ],
+        "description": "STRING [Shared/Menu] Repeats a string by the provided number, with an optional separator.\n\n[string] str\n  The string to convert.\n\n[number] repetitions\n  Timer to repeat, this values gets rounded internally.\n\n[string] separator=\"\"\n  String that will separate the repeated piece. Notice that it doesn't add this string to the start or the end of the result, only between the repeated parts.",
+        "prefix": "string.rep"
+    },
+    "string.reverse": {
+        "body": [
+            "string.reverse(${1:str})$0"
+        ],
+        "description": "STRING [Shared/Menu] Reverses a string.\n\n[string] str\n  The string to be reversed.",
+        "prefix": "string.reverse"
+    },
+    "string.sub": {
+        "body": [
+            "string.sub(${1:string}, ${2:StartPos}, ${3:EndPos=nil})$0"
+        ],
+        "description": "STRING [Shared/Menu] Returns a sub-string, starting from the character at position StartPos of the string (inclusive), and optionally ending at the character at position EndPos of the string (also inclusive). If EndPos is not given, the rest of the string is returned.\n\n[string] string\n  The string you'll take a sub-string out of.\n\n[number] StartPos\n  The position of the first character that will be included in the sub-string.\n\n[number] EndPos=nil\n  The position of the last character to be included in the sub-string. It can be negative to count from the end.",
+        "prefix": "string.sub"
+    },
+    "string.upper": {
+        "body": [
+            "string.upper(${1:str})$0"
+        ],
+        "description": "STRING [Shared/Menu] Changes any lower-case letters in a string to upper-case letters.\n\n[string] str\n  The string to convert.",
+        "prefix": "string.upper"
+    }
+}

@@ -1,0 +1,9 @@
+{
+	"ai_schedule/New": {
+		"body": [
+			"ai_schedule.New(${1:name})$0"
+		],
+		"description": "Creates a schedule for scripted NPC.",
+		"prefix": "ai_schedule.New"
+	}
+}

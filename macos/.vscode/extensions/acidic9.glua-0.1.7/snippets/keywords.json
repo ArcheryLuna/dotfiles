@@ -1,0 +1,169 @@
+{
+	"AndKeyword": {
+		"body": [
+			"and"
+		],
+		"description": "'and' lua keyword.",
+		"prefix": "and"
+	},
+
+	"BreakKeyword": {
+		"body": [
+			"break"
+		],
+		"description": "'break' lua keyword.",
+		"prefix": "break"
+	},
+
+	"DoKeyword": {
+		"body": [
+			"do"
+		],
+		"description": "'do' lua keyword.",
+		"prefix": "do"
+	},
+
+	"ElseKeyword": {
+		"body": [
+			"else"
+		],
+		"description": "'else' lua keyword.",
+		"prefix": "else"
+	},
+
+	"ElseifKeyword": {
+		"body": [
+			"elseif"
+		],
+		"description": "'elseif' lua keyword.",
+		"prefix": "elseif"
+	},
+
+	"EndKeyword": {
+		"body": [
+			"end"
+		],
+		"description": "'end' lua keyword.",
+		"prefix": "end"
+	},
+
+	"FalseKeyword": {
+		"body": [
+			"false"
+		],
+		"description": "'false' lua keyword.",
+		"prefix": "false"
+	},
+
+	"ForKeyword": {
+		"body": [
+			"for"
+		],
+		"description": "'for' lua keyword.",
+		"prefix": "for"
+	},
+
+	"FunctionKeyword": {
+		"body": [
+			"function"
+		],
+		"description": "'function' lua keyword.",
+		"prefix": "function"
+	},
+
+	"IfKeyword": {
+		"body": [
+			"if"
+		],
+		"description": "'if' lua keyword.",
+		"prefix": "if"
+	},
+
+	"InKeyword": {
+		"body": [
+			"in"
+		],
+		"description": "'in' lua keyword.",
+		"prefix": "in"
+	},
+
+	"LocalKeyword": {
+		"body": [
+			"local"
+		],
+		"description": "'local' lua keyword.",
+		"prefix": "local"
+	},
+
+	"NilKeyword": {
+		"body": [
+			"nil"
+		],
+		"description": "'nil' lua keyword.",
+		"prefix": "nil"
+	},
+
+	"NotKeyword": {
+		"body": [
+			"not"
+		],
+		"description": "'not' lua keyword.",
+		"prefix": "not"
+	},
+
+	"OrKeyword": {
+		"body": [
+			"or"
+		],
+		"description": "'or' lua keyword.",
+		"prefix": "or"
+	},
+
+	"RepeatKeyword": {
+		"body": [
+			"repeat"
+		],
+		"description": "'repeat' lua keyword.",
+		"prefix": "repeat"
+	},
+	
+	"ReturnKeyword": {
+		"body": [
+			"return"
+		],
+		"description": "'return' lua keyword.",
+		"prefix": "return"
+	},
+
+	"ThenKeyword": {
+		"body": [
+			"then"
+		],
+		"description": "'then' lua keyword.",
+		"prefix": "then"
+	},
+
+	"TrueKeyword": {
+		"body": [
+			"true"
+		],
+		"description": "'true' lua keyword.",
+		"prefix": "true"
+	},
+
+	"UntilKeyword": {
+		"body": [
+			"until"
+		],
+		"description": "'until' lua keyword.",
+		"prefix": "until"
+	},
+
+	"WhileKeyword": {
+		"body": [
+			"while"
+		],
+		"description": "'while' lua keyword.",
+		"prefix": "while"
+	}
+}

@@ -1,0 +1,247 @@
+{
+	"CMoveData/AddKey": {
+		"body": [
+			"AddKey(${1:keys})$0"
+		],
+		"description": "Adds keys to the move data, as if player pressed them.",
+		"prefix": "AddKey"
+	},
+	"CMoveData/GetAbsMoveAngles": {
+		"body": [
+			"GetAbsMoveAngles()$0"
+		],
+		"description": "Gets the aim angle. Seems to be same as",
+		"prefix": "GetAbsMoveAngles"
+	},
+	"CMoveData/GetAngles": {
+		"body": [
+			"GetAngles()$0"
+		],
+		"description": "Gets the aim angle. On client is the same as",
+		"prefix": "GetAngles"
+	},
+	"CMoveData/GetButtons": {
+		"body": [
+			"GetButtons()$0"
+		],
+		"description": "Gets which buttons are down",
+		"prefix": "GetButtons"
+	},
+	"CMoveData/GetConstraintRadius": {
+		"body": [
+			"GetConstraintRadius()$0"
+		],
+		"description": "Returns the radius that constrains the players movement.",
+		"prefix": "GetConstraintRadius"
+	},
+	"CMoveData/GetForwardSpeed": {
+		"body": [
+			"GetForwardSpeed()$0"
+		],
+		"description": "Returns the players forward speed.",
+		"prefix": "GetForwardSpeed"
+	},
+	"CMoveData/GetImpulseCommand": {
+		"body": [
+			"GetImpulseCommand()$0"
+		],
+		"description": "Gets the number passed to \u0026#34;impulse\u0026#34; console command",
+		"prefix": "GetImpulseCommand"
+	},
+	"CMoveData/GetMaxClientSpeed": {
+		"body": [
+			"GetMaxClientSpeed()$0"
+		],
+		"description": "Returns the maximum client speed of the player",
+		"prefix": "GetMaxClientSpeed"
+	},
+	"CMoveData/GetMaxSpeed": {
+		"body": [
+			"GetMaxSpeed()$0"
+		],
+		"description": "Returns the maximum speed of the player.",
+		"prefix": "GetMaxSpeed"
+	},
+	"CMoveData/GetMoveAngles": {
+		"body": [
+			"GetMoveAngles()$0"
+		],
+		"description": "Returns the angle the player is moving at. For more info, see",
+		"prefix": "GetMoveAngles"
+	},
+	"CMoveData/GetOldAngles": {
+		"body": [
+			"GetOldAngles()$0"
+		],
+		"description": "Gets the aim angle. Only works clientside, server returns same as",
+		"prefix": "GetOldAngles"
+	},
+	"CMoveData/GetOldButtons": {
+		"body": [
+			"GetOldButtons()$0"
+		],
+		"description": "Get which buttons were down last frame",
+		"prefix": "GetOldButtons"
+	},
+	"CMoveData/GetOrigin": {
+		"body": [
+			"GetOrigin()$0"
+		],
+		"description": "Gets the player\u0026#39;s position.",
+		"prefix": "GetOrigin"
+	},
+	"CMoveData/GetSideSpeed": {
+		"body": [
+			"GetSideSpeed()$0"
+		],
+		"description": "Returns the strafe speed of the player.",
+		"prefix": "GetSideSpeed"
+	},
+	"CMoveData/GetUpSpeed": {
+		"body": [
+			"GetUpSpeed()$0"
+		],
+		"description": "Returns the vertical speed of the player. ( Z axis of",
+		"prefix": "GetUpSpeed"
+	},
+	"CMoveData/GetVelocity": {
+		"body": [
+			"GetVelocity()$0"
+		],
+		"description": "Gets the players velocity.",
+		"prefix": "GetVelocity"
+	},
+	"CMoveData/KeyDown": {
+		"body": [
+			"KeyDown(${1:key})$0"
+		],
+		"description": "Returns whether the key is down or not",
+		"prefix": "KeyDown"
+	},
+	"CMoveData/KeyPressed": {
+		"body": [
+			"KeyPressed(${1:key})$0"
+		],
+		"description": "Returns whether the key was pressed. If you want to check if the key is held down, try",
+		"prefix": "KeyPressed"
+	},
+	"CMoveData/KeyReleased": {
+		"body": [
+			"KeyReleased(${1:key})$0"
+		],
+		"description": "Returns whether the key was released",
+		"prefix": "KeyReleased"
+	},
+	"CMoveData/KeyWasDown": {
+		"body": [
+			"KeyWasDown(${1:key})$0"
+		],
+		"description": "Returns whether the key was down or not.",
+		"prefix": "KeyWasDown"
+	},
+	"CMoveData/SetAbsMoveAngles": {
+		"body": [
+			"SetAbsMoveAngles(${1:ang})$0"
+		],
+		"description": "Sets absolute move angles.( ? ) Doesn\u0026#39;t seem to do anything.",
+		"prefix": "SetAbsMoveAngles"
+	},
+	"CMoveData/SetAngles": {
+		"body": [
+			"SetAngles(${1:ang})$0"
+		],
+		"description": "Sets angles ( ? ). Doesn\u0026#39;t seem to be doing anything.",
+		"prefix": "SetAngles"
+	},
+	"CMoveData/SetButtons": {
+		"body": [
+			"SetButtons(${1:buttons})$0"
+		],
+		"description": "Sets the pressed buttons on the move data",
+		"prefix": "SetButtons"
+	},
+	"CMoveData/SetConstraintRadius": {
+		"body": [
+			"SetConstraintRadius(${1:radius})$0"
+		],
+		"description": "Sets the radius that constrains the players movement.",
+		"prefix": "SetConstraintRadius"
+	},
+	"CMoveData/SetForwardSpeed": {
+		"body": [
+			"SetForwardSpeed(${1:speed})$0"
+		],
+		"description": "Sets players forward speed.",
+		"prefix": "SetForwardSpeed"
+	},
+	"CMoveData/SetImpulseCommand": {
+		"body": [
+			"SetImpulseCommand(${1:impulse})$0"
+		],
+		"description": "Sets the impulse command. Seems to be broken.",
+		"prefix": "SetImpulseCommand"
+	},
+	"CMoveData/SetMaxClientSpeed": {
+		"body": [
+			"SetMaxClientSpeed(${1:maxSpeed})$0"
+		],
+		"description": "Sets the maximum player speed. Player won\u0026#39;t be able to run or sprint faster then this value.",
+		"prefix": "SetMaxClientSpeed"
+	},
+	"CMoveData/SetMaxSpeed": {
+		"body": [
+			"SetMaxSpeed(${1:maxSpeed})$0"
+		],
+		"description": "Sets the maximum speed of the player. This must match with",
+		"prefix": "SetMaxSpeed"
+	},
+	"CMoveData/SetMoveAngles": {
+		"body": [
+			"SetMoveAngles(${1:dir})$0"
+		],
+		"description": "Sets the serverside move angles. Means movement keys will act as if player was facing that direction.",
+		"prefix": "SetMoveAngles"
+	},
+	"CMoveData/SetOldAngles": {
+		"body": [
+			"SetOldAngles(${1:aimAng})$0"
+		],
+		"description": "Sets old aim angles. ( ? ) Doesn\u0026#39;t seem to be doing anything.",
+		"prefix": "SetOldAngles"
+	},
+	"CMoveData/SetOldButtons": {
+		"body": [
+			"SetOldButtons(${1:buttons})$0"
+		],
+		"description": "Sets the \u0026#39;old\u0026#39; pressed buttons on the move data. These buttons are used to work out which buttons have been released, which have just been pressed and which are being held down.",
+		"prefix": "SetOldButtons"
+	},
+	"CMoveData/SetOrigin": {
+		"body": [
+			"SetOrigin(${1:pos})$0"
+		],
+		"description": "Sets the players position.",
+		"prefix": "SetOrigin"
+	},
+	"CMoveData/SetSideSpeed": {
+		"body": [
+			"SetSideSpeed(${1:speed})$0"
+		],
+		"description": "Sets players strafe speed.",
+		"prefix": "SetSideSpeed"
+	},
+	"CMoveData/SetUpSpeed": {
+		"body": [
+			"SetUpSpeed(${1:speed})$0"
+		],
+		"description": "Sets vertical speed of the player. ( Z axis of",
+		"prefix": "SetUpSpeed"
+	},
+	"CMoveData/SetVelocity": {
+		"body": [
+			"SetVelocity(${1:velocity})$0"
+		],
+		"description": "Sets the player\u0026#39;s velocity",
+		"prefix": "SetVelocity"
+	}
+}

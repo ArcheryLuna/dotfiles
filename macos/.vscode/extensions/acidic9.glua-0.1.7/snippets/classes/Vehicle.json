@@ -1,0 +1,345 @@
+{
+    "BoostTimeLeft": {
+        "body": [
+            "BoostTimeLeft()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "BoostTimeLeft"
+    },
+    "CheckExitPoint": {
+        "body": [
+            "CheckExitPoint(${1:yaw}, ${2:distance}, ${3:endPoint})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] yaw\n  \n\n[number] distance\n  \n\n[Vector] endPoint",
+        "prefix": "CheckExitPoint"
+    },
+    "EnableEngine": {
+        "body": [
+            "EnableEngine(${1:enable})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[boolean] enable\n  Enable or disable the engine",
+        "prefix": "EnableEngine"
+    },
+    "GetAmmo": {
+        "body": [
+            "GetAmmo()$0"
+        ],
+        "description": "VEHICLE [Client] Returns information about the ammo of the vehicle",
+        "prefix": "GetAmmo"
+    },
+    "GetCameraDistance": {
+        "body": [
+            "GetCameraDistance()$0"
+        ],
+        "description": "VEHICLE [Shared]",
+        "prefix": "GetCameraDistance"
+    },
+    "GetDriver": {
+        "body": [
+            "GetDriver()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetDriver"
+    },
+    "GetHLSpeed": {
+        "body": [
+            "GetHLSpeed()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetHLSpeed"
+    },
+    "GetMaxSpeed": {
+        "body": [
+            "GetMaxSpeed()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetMaxSpeed"
+    },
+    "GetOperatingParams": {
+        "body": [
+            "GetOperatingParams()$0"
+        ],
+        "description": "VEHICLE [Server] Returns some info about the vehicle.",
+        "prefix": "GetOperatingParams"
+    },
+    "GetPassenger": {
+        "body": [
+            "GetPassenger(${1:passenger})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] passenger\n  The index of the passenger",
+        "prefix": "GetPassenger"
+    },
+    "GetPassengerSeatPoint": {
+        "body": [
+            "GetPassengerSeatPoint(${1:role})$0"
+        ],
+        "description": "VEHICLE [Server] Returns the seat position and angle of a given passenger seat.\n\n[number] role\n  The passenger role. ( 1 is the driver )",
+        "prefix": "GetPassengerSeatPoint"
+    },
+    "GetRPM": {
+        "body": [
+            "GetRPM()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetRPM"
+    },
+    "GetSpeed": {
+        "body": [
+            "GetSpeed()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetSpeed"
+    },
+    "GetSteering": {
+        "body": [
+            "GetSteering()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetSteering"
+    },
+    "GetSteeringDegrees": {
+        "body": [
+            "GetSteeringDegrees()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetSteeringDegrees"
+    },
+    "GetThirdPersonMode": {
+        "body": [
+            "GetThirdPersonMode()$0"
+        ],
+        "description": "VEHICLE [Shared]",
+        "prefix": "GetThirdPersonMode"
+    },
+    "GetThrottle": {
+        "body": [
+            "GetThrottle()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetThrottle"
+    },
+    "GetVehicleClass": {
+        "body": [
+            "GetVehicleClass()$0"
+        ],
+        "description": "VEHICLE [Shared] Returns the vehicle class name. This is only useful for Sandbox spawned vehicles or any vehicle that properly sets the vehicle class with Vehicle:SetVehicleClass.",
+        "prefix": "GetVehicleClass"
+    },
+    "GetVehicleParams": {
+        "body": [
+            "GetVehicleParams()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetVehicleParams"
+    },
+    "GetVehicleViewPosition": {
+        "body": [
+            "GetVehicleViewPosition(${1:role})$0"
+        ],
+        "description": "VEHICLE [Server] Returns the view position and forward angle of a given passenger seat.\n\n[number] role\n  The passenger role. ( 1 is the driver )",
+        "prefix": "GetVehicleViewPosition"
+    },
+    "GetWheel": {
+        "body": [
+            "GetWheel(${1:wheel})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] wheel\n  The wheel to retrieve",
+        "prefix": "GetWheel"
+    },
+    "GetWheelBaseHeight": {
+        "body": [
+            "GetWheelBaseHeight(${1:wheel})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] wheel\n  The wheel to get the base wheel height of.",
+        "prefix": "GetWheelBaseHeight"
+    },
+    "GetWheelContactPoint": {
+        "body": [
+            "GetWheelContactPoint(${1:wheel})$0"
+        ],
+        "description": "VEHICLE [Server] Returns the wheel contact point.\n\n[number] wheel\n  The wheel to check",
+        "prefix": "GetWheelContactPoint"
+    },
+    "GetWheelCount": {
+        "body": [
+            "GetWheelCount()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "GetWheelCount"
+    },
+    "GetWheelTotalHeight": {
+        "body": [
+            "GetWheelTotalHeight(${1:wheel})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] wheel\n  The wheel to get the base wheel height of.",
+        "prefix": "GetWheelTotalHeight"
+    },
+    "HasBoost": {
+        "body": [
+            "HasBoost()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "HasBoost"
+    },
+    "HasBrakePedal": {
+        "body": [
+            "HasBrakePedal()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "HasBrakePedal"
+    },
+    "IsBoosting": {
+        "body": [
+            "IsBoosting()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "IsBoosting"
+    },
+    "IsEngineEnabled": {
+        "body": [
+            "IsEngineEnabled()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "IsEngineEnabled"
+    },
+    "IsEngineStarted": {
+        "body": [
+            "IsEngineStarted()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "IsEngineStarted"
+    },
+    "IsValidVehicle": {
+        "body": [
+            "IsValidVehicle()$0"
+        ],
+        "description": "VEHICLE [Shared]",
+        "prefix": "IsValidVehicle"
+    },
+    "IsVehicleBodyInWater": {
+        "body": [
+            "IsVehicleBodyInWater()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "IsVehicleBodyInWater"
+    },
+    "ReleaseHandbrake": {
+        "body": [
+            "ReleaseHandbrake()$0"
+        ],
+        "description": "VEHICLE [Server]",
+        "prefix": "ReleaseHandbrake"
+    },
+    "SetBoost": {
+        "body": [
+            "SetBoost(${1:boost})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] boost\n  The new boost value",
+        "prefix": "SetBoost"
+    },
+    "SetCameraDistance": {
+        "body": [
+            "SetCameraDistance(${1:distance})$0"
+        ],
+        "description": "VEHICLE [Shared] \n\n[number] distance\n  Camera distance to set to",
+        "prefix": "SetCameraDistance"
+    },
+    "SetHandbrake": {
+        "body": [
+            "SetHandbrake(${1:handbrake})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[boolean] handbrake",
+        "prefix": "SetHandbrake"
+    },
+    "SetHasBrakePedal": {
+        "body": [
+            "SetHasBrakePedal(${1:brakePedal})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[boolean] brakePedal\n  Whether this vehicle has a brake pedal",
+        "prefix": "SetHasBrakePedal"
+    },
+    "SetMaxReverseThrottle": {
+        "body": [
+            "SetMaxReverseThrottle(${1:maxRevThrottle})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] maxRevThrottle\n  The new maximum throttle. This number must be negative.",
+        "prefix": "SetMaxReverseThrottle"
+    },
+    "SetMaxThrottle": {
+        "body": [
+            "SetMaxThrottle(${1:maxThrottle})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] maxThrottle\n  The new maximum throttle.",
+        "prefix": "SetMaxThrottle"
+    },
+    "SetSpringLength": {
+        "body": [
+            "SetSpringLength(${1:wheel}, ${2:length})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] wheel\n  The wheel to change spring length of\n\n[number] length\n  The new spring length",
+        "prefix": "SetSpringLength"
+    },
+    "SetSteering": {
+        "body": [
+            "SetSteering(${1:steering})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] steering\n  The new steering value.",
+        "prefix": "SetSteering"
+    },
+    "SetSteeringDegrees": {
+        "body": [
+            "SetSteeringDegrees(${1:steeringDegrees})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] steeringDegrees\n  The new maximum steering degree",
+        "prefix": "SetSteeringDegrees"
+    },
+    "SetThirdPersonMode": {
+        "body": [
+            "SetThirdPersonMode(${1:enable})$0"
+        ],
+        "description": "VEHICLE [Shared] \n\n[boolean] enable\n  Enable or disable the third person mode for this vehicle",
+        "prefix": "SetThirdPersonMode"
+    },
+    "SetThrottle": {
+        "body": [
+            "SetThrottle(${1:throttle})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] throttle\n  The new throttle.",
+        "prefix": "SetThrottle"
+    },
+    "SetVehicleClass": {
+        "body": [
+            "SetVehicleClass(${1:class})$0"
+        ],
+        "description": "VEHICLE [Shared] \n\n[string] class\n  The vehicle class name to set",
+        "prefix": "SetVehicleClass"
+    },
+    "SetVehicleEntryAnim": {
+        "body": [
+            "SetVehicleEntryAnim(${1:bOn})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[boolean] bOn\n  Whether the entry or exit camera animation should be played or not.",
+        "prefix": "SetVehicleEntryAnim"
+    },
+    "SetVehicleParams": {
+        "body": [
+            "SetVehicleParams(${1:params})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[table] params\n  The new new vehicle parameters. See VehicleParams structure",
+        "prefix": "SetVehicleParams"
+    },
+    "SetWheelFriction": {
+        "body": [
+            "SetWheelFriction(${1:wheel}, ${2:friction})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[number] wheel\n  The wheel to change the friction of\n\n[number] friction\n  The new friction to set",
+        "prefix": "SetWheelFriction"
+    },
+    "StartEngine": {
+        "body": [
+            "StartEngine(${1:start})$0"
+        ],
+        "description": "VEHICLE [Server] \n\n[boolean] start\n  True to start, false to stop",
+        "prefix": "StartEngine"
+    }
+}

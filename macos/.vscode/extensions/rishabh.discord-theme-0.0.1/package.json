@@ -1,0 +1,36 @@
+{
+	"name": "discord-theme",
+	"displayName": "DiscordTheme",
+	"description": "dark discord theme for winners",
+	"publisher": "Rishabh",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.48.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "DiscordTheme",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Rider-color-theme.json"
+			}
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/RishabhVerma098/vscode-my-theme"
+	},
+	"__metadata": {
+		"id": "5a136882-af2c-4d9b-b4a7-eac13cdcdd56",
+		"publisherId": "f2f2057e-6748-4f3f-ad18-353f8290a8b8",
+		"publisherDisplayName": "Rishabh",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033172
+	}
+}

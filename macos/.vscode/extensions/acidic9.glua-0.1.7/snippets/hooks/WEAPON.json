@@ -1,0 +1,366 @@
+{
+    "AcceptInput": {
+        "body": [
+            "AcceptInput(${1:inputName}, ${2:activator}, ${3:called}, ${4:data})$0"
+        ],
+        "description": "WEAPON [Server] Called when another entity fires an event to this entity.\n\n[string] inputName\n  The name of the input that was triggered.\n\n[Entity] activator\n  The initial cause for the input getting triggered.\n\n[Entity] called\n  The entity that directly trigger the input.\n\n[string] data\n  The data passed.",
+        "prefix": "AcceptInput"
+    },
+    "AdjustMouseSensitivity": {
+        "body": [
+            "AdjustMouseSensitivity()$0"
+        ],
+        "description": "WEAPON [Client] Allows you to adjust the mouse sensitivity. This hook only works if you haven't overridden GM:AdjustMouseSensitivity.",
+        "prefix": "AdjustMouseSensitivity"
+    },
+    "Ammo1": {
+        "body": [
+            "Ammo1()$0"
+        ],
+        "description": "WEAPON [Shared] Returns how much of primary ammo the player has.",
+        "prefix": "Ammo1"
+    },
+    "Ammo2": {
+        "body": [
+            "Ammo2()$0"
+        ],
+        "description": "WEAPON [Shared] Returns how much of secondary ammo the player has.",
+        "prefix": "Ammo2"
+    },
+    "CalcView": {
+        "body": [
+            "CalcView(${1:ply}, ${2:pos}, ${3:ang}, ${4:fov})$0"
+        ],
+        "description": "WEAPON [Client] Allows you to adjust player view while this weapon in use. This hook is called from the default implementation of GM:CalcView ([1]). Therefore, it will not be called if any other hook added to CalcView returns any value, or if the current gamemode overrides the default hook and does not call the SWEP function.\n\n[Player] ply\n  The owner of weapon\n\n[Vector] pos\n  Current position of players view\n\n[Angle] ang\n  Current angles of players view\n\n[number] fov\n  Current FOV of players view",
+        "prefix": "CalcView"
+    },
+    "CalcViewModelView": {
+        "body": [
+            "CalcViewModelView(${1:vm}, ${2:oldPos}, ${3:oldAng}, ${4:pos}, ${5:ang})$0"
+        ],
+        "description": "WEAPON [Client] Allows overriding the position and angle of the viewmodel. This hook only works if you haven't overridden GM:CalcViewModelView.\n\n[Entity] vm\n  The viewmodel entity\n\n[Vector] oldPos\n  Original position (before viewmodel bobbing and swaying)\n\n[Angle] oldAng\n  Original angle (before viewmodel bobbing and swaying)\n\n[Vector] pos\n  Current position\n\n[Angle] ang\n  Current angle",
+        "prefix": "CalcViewModelView"
+    },
+    "CanPrimaryAttack": {
+        "body": [
+            "CanPrimaryAttack()$0"
+        ],
+        "description": "WEAPON [Shared] Helper function for checking for no ammo.",
+        "prefix": "CanPrimaryAttack"
+    },
+    "CanSecondaryAttack": {
+        "body": [
+            "CanSecondaryAttack()$0"
+        ],
+        "description": "WEAPON [Shared] Helper function for checking for no ammo.",
+        "prefix": "CanSecondaryAttack"
+    },
+    "CustomAmmoDisplay": {
+        "body": [
+            "CustomAmmoDisplay()$0"
+        ],
+        "description": "WEAPON [Client] Allows you to use any numbers you want for the ammo display on the HUD. Can be useful for weapons that don't use standard ammo.",
+        "prefix": "CustomAmmoDisplay"
+    },
+    "Deploy": {
+        "body": [
+            "Deploy()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "Deploy"
+    },
+    "DoDrawCrosshair": {
+        "body": [
+            "DoDrawCrosshair(${1:x}, ${2:y})$0"
+        ],
+        "description": "WEAPON [Client] Called when the crosshair is about to get drawn, and allows you to override it. This function will not be called if SWEP.DrawCrosshair set to false.\n\n[number] x\n  X coordinate of the crosshair.\n\n[number] y\n  Y coordinate of the crosshair.",
+        "prefix": "DoDrawCrosshair"
+    },
+    "DoImpactEffect": {
+        "body": [
+            "DoImpactEffect(${1:tr}, ${2:damageType})$0"
+        ],
+        "description": "WEAPON [Shared] Called so the weapon can override the impact effects it makes.\n\n[table] tr\n  A TraceResult structure from player's eyes to the impact point\n\n[number] damageType\n  The damage type of bullet",
+        "prefix": "DoImpactEffect"
+    },
+    "DrawHUD": {
+        "body": [
+            "DrawHUD()$0"
+        ],
+        "description": "WEAPON [Client]",
+        "prefix": "DrawHUD"
+    },
+    "DrawHUDBackground": {
+        "body": [
+            "DrawHUDBackground()$0"
+        ],
+        "description": "WEAPON [Client]",
+        "prefix": "DrawHUDBackground"
+    },
+    "DrawWeaponSelection": {
+        "body": [
+            "DrawWeaponSelection(${1:x}, ${2:y}, ${3:width}, ${4:height}, ${5:alpha})$0"
+        ],
+        "description": "WEAPON [Client] This hook draws the selection icon in the weapon selection menu.\n\n[number] x\n  X coordinate of the selection panel\n\n[number] y\n  Y coordinate of the selection panel\n\n[number] width\n  Width of the selection panel\n\n[number] height\n  Height of the selection panel\n\n[number] alpha\n  Alpha value of the selection panel",
+        "prefix": "DrawWeaponSelection"
+    },
+    "DrawWorldModel": {
+        "body": [
+            "DrawWorldModel()$0"
+        ],
+        "description": "WEAPON [Client]",
+        "prefix": "DrawWorldModel"
+    },
+    "DrawWorldModelTranslucent": {
+        "body": [
+            "DrawWorldModelTranslucent()$0"
+        ],
+        "description": "WEAPON [Client]",
+        "prefix": "DrawWorldModelTranslucent"
+    },
+    "Equip": {
+        "body": [
+            "Equip(${1:NewOwner})$0"
+        ],
+        "description": "WEAPON [Server] \n\n[Entity] NewOwner\n  The one who picked the weapon up. Can be Player or NPC.",
+        "prefix": "Equip"
+    },
+    "EquipAmmo": {
+        "body": [
+            "EquipAmmo(${1:ply})$0"
+        ],
+        "description": "WEAPON [Server] \n\n[Player] ply\n  The player who picked up the weapon",
+        "prefix": "EquipAmmo"
+    },
+    "FireAnimationEvent": {
+        "body": [
+            "FireAnimationEvent(${1:pos}, ${2:ang}, ${3:event}, ${4:name})$0"
+        ],
+        "description": "WEAPON [Shared] Called before firing animation events, such as muzzle flashes or shell ejections. This will only be called serverside for 3000-range events, and clientside for 5000-range and other events.\n\n[Vector] pos\n  Position of the effect\n\n[Angle] ang\n  Angle of the effect\n\n[number] event\n  The event ID of happened even. See this page.\n\n[string] name\n  Name of the event",
+        "prefix": "FireAnimationEvent"
+    },
+    "FreezeMovement": {
+        "body": [
+            "FreezeMovement()$0"
+        ],
+        "description": "WEAPON [Client]",
+        "prefix": "FreezeMovement"
+    },
+    "GetCapabilities": {
+        "body": [
+            "GetCapabilities()$0"
+        ],
+        "description": "WEAPON [Server] This hook is for NPCs, you return what they should try to do with it.",
+        "prefix": "GetCapabilities"
+    },
+    "GetTracerOrigin": {
+        "body": [
+            "GetTracerOrigin()$0"
+        ],
+        "description": "WEAPON [Client]",
+        "prefix": "GetTracerOrigin"
+    },
+    "GetViewModelPosition": {
+        "body": [
+            "GetViewModelPosition(${1:pos}, ${2:ang})$0"
+        ],
+        "description": "WEAPON [Client] This hook allows you to adjust view model position and angles.\n\n[Vector] pos\n  Current position\n\n[Angle] ang\n  Current angle",
+        "prefix": "GetViewModelPosition"
+    },
+    "HUDShouldDraw": {
+        "body": [
+            "HUDShouldDraw(${1:element})$0"
+        ],
+        "description": "WEAPON [Client] \n\n[string] element\n  The HUD element in question",
+        "prefix": "HUDShouldDraw"
+    },
+    "Holster": {
+        "body": [
+            "Holster(${1:weapon})$0"
+        ],
+        "description": "WEAPON [Shared] Called when weapon tries to holster.\n\n[Entity] weapon\n  The weapon we are trying switch to.",
+        "prefix": "Holster"
+    },
+    "Initialize": {
+        "body": [
+            "Initialize()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "Initialize"
+    },
+    "KeyValue": {
+        "body": [
+            "KeyValue(${1:key}, ${2:value})$0"
+        ],
+        "description": "WEAPON [Server] Called when the engine sets a value for this scripted weapon. See GM:EntityKeyValue for a hook that works for all entities.\nSee ENTITY:KeyValue for an SENT hook that works for scripted entities.\n\n[string] key\n  The key that was affected.\n\n[string] value\n  The new value.",
+        "prefix": "KeyValue"
+    },
+    "OnDrop": {
+        "body": [
+            "OnDrop()$0"
+        ],
+        "description": "WEAPON [Server]",
+        "prefix": "OnDrop"
+    },
+    "OnReloaded": {
+        "body": [
+            "OnReloaded()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "OnReloaded"
+    },
+    "OnRemove": {
+        "body": [
+            "OnRemove()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "OnRemove"
+    },
+    "OnRestore": {
+        "body": [
+            "OnRestore()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "OnRestore"
+    },
+    "OwnerChanged": {
+        "body": [
+            "OwnerChanged()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "OwnerChanged"
+    },
+    "PostDrawViewModel": {
+        "body": [
+            "PostDrawViewModel(${1:vm}, ${2:weapon}, ${3:ply})$0"
+        ],
+        "description": "WEAPON [Client] Called after the view model has been drawn while the weapon in use. This hook is called from the default implementation of GM:PostDrawViewModel, and as such, will not occur if it has been overridden. WEAPON:ViewModelDrawn is an alternative hook which is always called before GM:PostDrawViewModel.\n\n[Entity] vm\n  This is the view model entity after it is drawn\n\n[Weapon] weapon\n  This is the weapon that is from the view model (same as self)\n\n[Player] ply\n  The the owner of the view model",
+        "prefix": "PostDrawViewModel"
+    },
+    "PreDrawViewModel": {
+        "body": [
+            "PreDrawViewModel(${1:vm}, ${2:weapon}, ${3:ply})$0"
+        ],
+        "description": "WEAPON [Client] Allows you to modify viewmodel while the weapon in use before it is drawn. This hook only works if you haven't overridden GM:PreDrawViewModel.\n\n[Entity] vm\n  This is the view model entity before it is drawn.\n\n[Weapon] weapon\n  This is the weapon that is from the view model.\n\n[Player] ply\n  The the owner of the view model.",
+        "prefix": "PreDrawViewModel"
+    },
+    "PrimaryAttack": {
+        "body": [
+            "PrimaryAttack()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "PrimaryAttack"
+    },
+    "PrintWeaponInfo": {
+        "body": [
+            "PrintWeaponInfo(${1:x}, ${2:y}, ${3:alpha})$0"
+        ],
+        "description": "WEAPON [Client] A convenience function that draws the weapon info box, used in WEAPON:DrawWeaponSelection.\n\n[number] x\n  The x co-ordinate of box position\n\n[number] y\n  The y co-ordinate of box position\n\n[number] alpha\n  Alpha value for the box",
+        "prefix": "PrintWeaponInfo"
+    },
+    "Reload": {
+        "body": [
+            "Reload()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "Reload"
+    },
+    "RenderScreen": {
+        "body": [
+            "RenderScreen()$0"
+        ],
+        "description": "WEAPON [Client]",
+        "prefix": "RenderScreen"
+    },
+    "SecondaryAttack": {
+        "body": [
+            "SecondaryAttack()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "SecondaryAttack"
+    },
+    "SetDeploySpeed": {
+        "body": [
+            "SetDeploySpeed(${1:speed})$0"
+        ],
+        "description": "WEAPON [Shared] Sets the weapon deploy speed. This value needs to match on client and server.\n\n[number] speed\n  The value to set deploy speed to. Negative will slow down playback.",
+        "prefix": "SetDeploySpeed"
+    },
+    "SetWeaponHoldType": {
+        "body": [
+            "SetWeaponHoldType(${1:name})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[string] name\n  Name of the hold type. You can find all default hold types here",
+        "prefix": "SetWeaponHoldType"
+    },
+    "SetupDataTables": {
+        "body": [
+            "SetupDataTables()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "SetupDataTables"
+    },
+    "ShootBullet": {
+        "body": [
+            "ShootBullet(${1:damage}, ${2:num_bullets}, ${3:aimcone})$0"
+        ],
+        "description": "WEAPON [Shared] A convenience function to shoot bullets.\n\n[number] damage\n  The damage of the bullet\n\n[number] num_bullets\n  Amount of bullets to shoot\n\n[number] aimcone\n  Spread of bullets",
+        "prefix": "ShootBullet"
+    },
+    "ShootEffects": {
+        "body": [
+            "ShootEffects()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "ShootEffects"
+    },
+    "ShouldDropOnDie": {
+        "body": [
+            "ShouldDropOnDie()$0"
+        ],
+        "description": "WEAPON [Server]",
+        "prefix": "ShouldDropOnDie"
+    },
+    "TakePrimaryAmmo": {
+        "body": [
+            "TakePrimaryAmmo(${1:amount})$0"
+        ],
+        "description": "WEAPON [Shared] A convenience function to remove primary ammo from clip.\n\n[number] amount\n  Amount of primary ammo to remove",
+        "prefix": "TakePrimaryAmmo"
+    },
+    "TakeSecondaryAmmo": {
+        "body": [
+            "TakeSecondaryAmmo(${1:amount})$0"
+        ],
+        "description": "WEAPON [Shared] A convenience function to remove secondary ammo from clip.\n\n[number] amount\n  How much of secondary ammo to remove",
+        "prefix": "TakeSecondaryAmmo"
+    },
+    "Think": {
+        "body": [
+            "Think()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "Think"
+    },
+    "TranslateActivity": {
+        "body": [
+            "TranslateActivity(${1:act})$0"
+        ],
+        "description": "WEAPON [Shared] Translate a player's Activity into a weapon's activity, depending on how you want the player to be holding the weapon. For example, ACT_MP_RUN becomes ACT_HL2MP_RUN_PISTOL.\n\n[number] act\n  The activity to translate",
+        "prefix": "TranslateActivity"
+    },
+    "TranslateFOV": {
+        "body": [
+            "TranslateFOV(${1:fov})$0"
+        ],
+        "description": "WEAPON [Client] Allows to change players Field Of View while player holds the weapon.\n\n[number] fov\n  The current/default FOV.",
+        "prefix": "TranslateFOV"
+    },
+    "ViewModelDrawn": {
+        "body": [
+            "ViewModelDrawn(${1:ViewModel})$0"
+        ],
+        "description": "WEAPON [Client] \n\n[Entity] ViewModel\n  Players view model",
+        "prefix": "ViewModelDrawn"
+    }
+}

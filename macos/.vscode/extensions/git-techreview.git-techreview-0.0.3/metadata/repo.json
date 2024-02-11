@@ -1,0 +1,16 @@
+{
+    "description":  "Hackathon project for enabling tech reviews from Git",
+    "schema":  {
+                   "office":  "1.0.0"
+               },
+    "deployedToProduction":  false,
+    "complianceTypes":  [
+
+                        ],
+    "inventoryId":  [
+            
+                    ],
+    "contacts":  [
+                     "davesw@microsoft.com" ,"derng@microsoft.com", "adudsic@microsoft.com" 
+                 ]
+}

@@ -1,0 +1,16 @@
+{
+    "GetFraction": {
+        "body": [
+            "GetFraction()$0"
+        ],
+        "description": "DPROGRESS [Client]",
+        "prefix": "GetFraction"
+    },
+    "SetFraction": {
+        "body": [
+            "SetFraction(${1:fraction})$0"
+        ],
+        "description": "DPROGRESS [Client] \n\n[number] fraction\n  Fraction of the progress bar. Range is 0 to 1 (0% to 100%).",
+        "prefix": "SetFraction"
+    }
+}

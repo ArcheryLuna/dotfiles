@@ -1,0 +1,79 @@
+{
+	"file/Append": {
+		"body": [
+			"file.Append(${1:name}, ${2:content})$0"
+		],
+		"description": "Appends a file relative to the",
+		"prefix": "file.Append"
+	},
+	"file/CreateDir": {
+		"body": [
+			"file.CreateDir(${1:name})$0"
+		],
+		"description": "Creates a directory that is relative to the",
+		"prefix": "file.CreateDir"
+	},
+	"file/Delete": {
+		"body": [
+			"file.Delete(${1:name})$0"
+		],
+		"description": "Deletes a file or",
+		"prefix": "file.Delete"
+	},
+	"file/Exists": {
+		"body": [
+			"file.Exists(${1:name}, ${2:path})$0"
+		],
+		"description": "Returns a boolean of whether the file or directory exists or not.",
+		"prefix": "file.Exists"
+	},
+	"file/Find": {
+		"body": [
+			"file.Find(${1:name}, ${2:path}, ${3:sorting=\"nameasc\"})$0"
+		],
+		"description": "Returns a list of files and directories inside a single folder.",
+		"prefix": "file.Find"
+	},
+	"file/IsDir": {
+		"body": [
+			"file.IsDir(${1:fileName}, ${2:path})$0"
+		],
+		"description": "Returns if the given file is a directory.",
+		"prefix": "file.IsDir"
+	},
+	"file/Open": {
+		"body": [
+			"file.Open(${1:fileName}, ${2:fileMode}, ${3:path})$0"
+		],
+		"description": "Attempts to open a file with the given mode.",
+		"prefix": "file.Open"
+	},
+	"file/Read": {
+		"body": [
+			"file.Read(${1:fileName}, ${2:path=\"DATA\"})$0"
+		],
+		"description": "Returns the content of a file.",
+		"prefix": "file.Read"
+	},
+	"file/Size": {
+		"body": [
+			"file.Size(${1:fileName}, ${2:path})$0"
+		],
+		"description": "Returns the file\u0026#39;s size in bytes. If the file is not found, returns -1.",
+		"prefix": "file.Size"
+	},
+	"file/Time": {
+		"body": [
+			"file.Time(${1:path}, ${2:gamePath})$0"
+		],
+		"description": "Returns when the file or folder was lasted modified in Unix time.",
+		"prefix": "file.Time"
+	},
+	"file/Write": {
+		"body": [
+			"file.Write(${1:fileName}, ${2:content})$0"
+		],
+		"description": "Writes the given string to a file. Erases all previous data in the file. To add data without deleting previous data, use",
+		"prefix": "file.Write"
+	}
+}

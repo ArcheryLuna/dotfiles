@@ -1,0 +1,135 @@
+{
+	"DImage/DoLoadMaterial": {
+		"body": [
+			"DoLoadMaterial()$0"
+		],
+		"description": "No description available.",
+		"prefix": "DoLoadMaterial"
+	},
+	"DImage/FixVertexLitMaterial": {
+		"body": [
+			"FixVertexLitMaterial()$0"
+		],
+		"description": "No description available.",
+		"prefix": "FixVertexLitMaterial"
+	},
+	"DImage/GetFailsafeMatName": {
+		"body": [
+			"GetFailsafeMatName()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetFailsafeMatName"
+	},
+	"DImage/GetImage": {
+		"body": [
+			"GetImage()$0"
+		],
+		"description": "Returns the image loaded in the image panel.",
+		"prefix": "GetImage"
+	},
+	"DImage/GetImageColor": {
+		"body": [
+			"GetImageColor()$0"
+		],
+		"description": "Returns the color override of the image panel.",
+		"prefix": "GetImageColor"
+	},
+	"DImage/GetKeepAspect": {
+		"body": [
+			"GetKeepAspect()$0"
+		],
+		"description": "Returns whether the",
+		"prefix": "GetKeepAspect"
+	},
+	"DImage/GetMatName": {
+		"body": [
+			"GetMatName()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetMatName"
+	},
+	"DImage/GetMaterial": {
+		"body": [
+			"GetMaterial()$0"
+		],
+		"description": "Returns the current",
+		"prefix": "GetMaterial"
+	},
+	"DImage/LoadMaterial": {
+		"body": [
+			"LoadMaterial()$0"
+		],
+		"description": "No description available.",
+		"prefix": "LoadMaterial"
+	},
+	"DImage/PaintAt": {
+		"body": [
+			"PaintAt(${1:posX}, ${2:posY}, ${3:width}, ${4:height})$0"
+		],
+		"description": "Paints a ghost copy of the DImage panel at the given position and dimensions. This function overrides",
+		"prefix": "PaintAt"
+	},
+	"DImage/SetFailsafeMatName": {
+		"body": [
+			"SetFailsafeMatName(${1:backupMat})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetFailsafeMatName"
+	},
+	"DImage/SetImage": {
+		"body": [
+			"SetImage(${1:strImage}, ${2:strBackup})$0"
+		],
+		"description": "Sets the image to load into the frame. If the first image can\u0026#39;t be loaded and",
+		"prefix": "SetImage"
+	},
+	"DImage/SetImageColor": {
+		"body": [
+			"SetImageColor(${1:col})$0"
+		],
+		"description": "Sets the image\u0026#39;s color override.",
+		"prefix": "SetImageColor"
+	},
+	"DImage/SetKeepAspect": {
+		"body": [
+			"SetKeepAspect(${1:keep})$0"
+		],
+		"description": "Sets whether the",
+		"prefix": "SetKeepAspect"
+	},
+	"DImage/SetMatName": {
+		"body": [
+			"SetMatName(${1:mat})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetMatName"
+	},
+	"DImage/SetMaterial": {
+		"body": [
+			"SetMaterial(${1:mat})$0"
+		],
+		"description": "Sets a",
+		"prefix": "SetMaterial"
+	},
+	"DImage/SetOnViewMaterial": {
+		"body": [
+			"SetOnViewMaterial(${1:mat}, ${2:backupMat})$0"
+		],
+		"description": "Similar to",
+		"prefix": "SetOnViewMaterial"
+	},
+	"DImage/Unloaded": {
+		"body": [
+			"Unloaded()$0"
+		],
+		"description": "Returns true if the image is",
+		"prefix": "Unloaded"
+	},
+	"Panel/SizeToContents": {
+		"body": [
+			"SizeToContents()$0"
+		],
+		"description": "Resizes the panel so that its width and height fit all of the content inside.",
+		"prefix": "SizeToContents"
+	}
+}

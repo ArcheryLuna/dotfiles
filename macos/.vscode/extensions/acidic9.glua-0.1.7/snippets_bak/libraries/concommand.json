@@ -1,0 +1,37 @@
+{
+	"concommand/Add": {
+		"body": [
+			"concommand.Add(${1:name}, ${2:callback}, ${3:autoComplete=nil}, ${4:helpText=nil}, ${5:flags=0})$0"
+		],
+		"description": "Creates a console command that runs a function in lua with optional autocompletion function and help text.",
+		"prefix": "concommand.Add"
+	},
+	"concommand/AutoComplete": {
+		"body": [
+			"concommand.AutoComplete(${1:command}, ${2:arguments})$0"
+		],
+		"description": "No description available.",
+		"prefix": "concommand.AutoComplete"
+	},
+	"concommand/GetTable": {
+		"body": [
+			"concommand.GetTable()$0"
+		],
+		"description": "Returns the tables of all console command callbacks, and autocomplete functions, that were added to the game with",
+		"prefix": "concommand.GetTable"
+	},
+	"concommand/Remove": {
+		"body": [
+			"concommand.Remove(${1:name})$0"
+		],
+		"description": "Removes a console command.",
+		"prefix": "concommand.Remove"
+	},
+	"concommand/Run": {
+		"body": [
+			"concommand.Run(${1:ply}, ${2:cmd}, ${3:args}, ${4:argumentString})$0"
+		],
+		"description": "No description available.",
+		"prefix": "concommand.Run"
+	}
+}

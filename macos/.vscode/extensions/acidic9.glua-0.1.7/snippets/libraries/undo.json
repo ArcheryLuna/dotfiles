@@ -1,0 +1,79 @@
+{
+    "undo.AddEntity": {
+        "body": [
+            "undo.AddEntity(${1:ent})$0"
+        ],
+        "description": "UNDO [Server] Adds an entity to the current undo block\n\n[Entity] ent\n  The entity to add",
+        "prefix": "undo.AddEntity"
+    },
+    "undo.AddFunction": {
+        "body": [
+            "undo.AddFunction(${1:func}, ${2:arg2,...})$0"
+        ],
+        "description": "UNDO [Server] Adds a function to call when the current undo block is undone\n\n[function] func\n  The function to call\n\n[any] arg2,...\n  Arguments to pass to the function (after the undo info table)",
+        "prefix": "undo.AddFunction"
+    },
+    "undo.Create": {
+        "body": [
+            "undo.Create(${1:name})$0"
+        ],
+        "description": "UNDO [Server] Begins a new undo entry\n\n[string] name\n  Name of the undo message to show to players",
+        "prefix": "undo.Create"
+    },
+    "undo.Do_Undo": {
+        "body": [
+            "undo.Do_Undo(${1:tab})$0"
+        ],
+        "description": "UNDO [Server] Processes an undo block (in table form). This is used internally by the undo manager when a player presses Z.\n\n[table] tab\n  The undo block to process as an Undo structure",
+        "prefix": "undo.Do_Undo"
+    },
+    "undo.Finish": {
+        "body": [
+            "undo.Finish()$0"
+        ],
+        "description": "UNDO [Shared]",
+        "prefix": "undo.Finish"
+    },
+    "undo.GetTable": {
+        "body": [
+            "undo.GetTable()$0"
+        ],
+        "description": "UNDO [Shared]",
+        "prefix": "undo.GetTable"
+    },
+    "undo.MakeUIDirty": {
+        "body": [
+            "undo.MakeUIDirty()$0"
+        ],
+        "description": "UNDO [Client]",
+        "prefix": "undo.MakeUIDirty"
+    },
+    "undo.ReplaceEntity": {
+        "body": [
+            "undo.ReplaceEntity(${1:from}, ${2:to})$0"
+        ],
+        "description": "UNDO [Server] Replaces any instance of the \"from\" reference with the \"to\" reference, in any existing undo block. Returns true if something was replaced\n\n[Entity] from\n  The old entity\n\n[Entity] to\n  The new entity to replace the old one",
+        "prefix": "undo.ReplaceEntity"
+    },
+    "undo.SetCustomUndoText": {
+        "body": [
+            "undo.SetCustomUndoText(${1:customText})$0"
+        ],
+        "description": "UNDO [Server] Sets a custom undo text for the current undo block\n\n[string] customText\n  The text to display when the undo block is undone",
+        "prefix": "undo.SetCustomUndoText"
+    },
+    "undo.SetPlayer": {
+        "body": [
+            "undo.SetPlayer(${1:ply})$0"
+        ],
+        "description": "UNDO [Server] Sets the player which the current undo block belongs to\n\n[Player] ply\n  The player responsible for undoing the block",
+        "prefix": "undo.SetPlayer"
+    },
+    "undo.SetupUI": {
+        "body": [
+            "undo.SetupUI()$0"
+        ],
+        "description": "UNDO [Client]",
+        "prefix": "undo.SetupUI"
+    }
+}

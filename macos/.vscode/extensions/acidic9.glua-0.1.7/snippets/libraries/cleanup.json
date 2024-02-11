@@ -1,0 +1,58 @@
+{
+    "cleanup.Add": {
+        "body": [
+            "cleanup.Add(${1:pl}, ${2:type}, ${3:ent})$0"
+        ],
+        "description": "CLEANUP [Server] Adds an entity to a player's cleanup list.\n\n[Player] pl\n  Who's cleanup list to add the entity to.\n\n[string] type\n  The type of cleanup.\n\n[Entity] ent\n  The entity to add to the player's cleanup list.",
+        "prefix": "cleanup.Add"
+    },
+    "cleanup.CC_AdminCleanup": {
+        "body": [
+            "cleanup.CC_AdminCleanup(${1:pl}, ${2:command}, ${3:args})$0"
+        ],
+        "description": "CLEANUP [Server] \n\n[Player] pl\n  The player that called the console command.\n\n[string] command\n  The console command that called this function.\n\n[table] args\n  First and only arg is the cleanup type.",
+        "prefix": "cleanup.CC_AdminCleanup"
+    },
+    "cleanup.CC_Cleanup": {
+        "body": [
+            "cleanup.CC_Cleanup(${1:pl}, ${2:command}, ${3:args})$0"
+        ],
+        "description": "CLEANUP [Server] \n\n[Player] pl\n  The player that called the console command.\n\n[string] command\n  The console command that called this function.\n\n[table] args\n  First and only arg is the cleanup type.",
+        "prefix": "cleanup.CC_Cleanup"
+    },
+    "cleanup.GetList": {
+        "body": [
+            "cleanup.GetList()$0"
+        ],
+        "description": "CLEANUP [Server]",
+        "prefix": "cleanup.GetList"
+    },
+    "cleanup.GetTable": {
+        "body": [
+            "cleanup.GetTable()$0"
+        ],
+        "description": "CLEANUP [Shared]",
+        "prefix": "cleanup.GetTable"
+    },
+    "cleanup.Register": {
+        "body": [
+            "cleanup.Register(${1:type})$0"
+        ],
+        "description": "CLEANUP [Shared] \n\n[string] type\n  Name of type.",
+        "prefix": "cleanup.Register"
+    },
+    "cleanup.ReplaceEntity": {
+        "body": [
+            "cleanup.ReplaceEntity(${1:from}, ${2:to})$0"
+        ],
+        "description": "CLEANUP [Server] Replaces one entity in the cleanup module with another\n\n[Entity] from\n  Old entity\n\n[Entity] to\n  New entity",
+        "prefix": "cleanup.ReplaceEntity"
+    },
+    "cleanup.UpdateUI": {
+        "body": [
+            "cleanup.UpdateUI()$0"
+        ],
+        "description": "CLEANUP [Client]",
+        "prefix": "cleanup.UpdateUI"
+    }
+}

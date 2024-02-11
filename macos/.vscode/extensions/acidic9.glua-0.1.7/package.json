@@ -1,0 +1,893 @@
+{
+	"name": "glua",
+	"displayName": "Gmod Lua",
+	"description": "Gmod lua development snippets and support.",
+	"version": "0.1.7",
+	"publisher": "acidic9",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Snippets",
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:lua"
+	],
+	"main": "./extension",
+	"contributes": {
+		"snippets": [
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Angle.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CEffectData.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CLuaEmitter.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CLuaLocomotion.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CLuaParticle.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CMoveData.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CNavArea.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CNavLadder.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CNewParticleEffect.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CRecipientFilter.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CSEnt.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CSoundPatch.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CTakeDamageInfo.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/CUserCmd.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/ConVar.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Entity.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/File.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/IGModAudioChannel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/IMaterial.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/IMesh.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/IRestore.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/ISave.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/ITexture.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/IVideoWriter.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/MarkupObject.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/NPC.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/NextBot.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Panel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/PathFollower.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/PhysObj.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Player.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/ProjectedTexture.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Schedule.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Stack.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Task.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Tool.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/VMatrix.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Vector.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Vehicle.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/Weapon.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/bf_read.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/classes/navmesh.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/global.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/hooks/EFFECT.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/hooks/ENTITY.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/hooks/GM.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/hooks/NEXTBOT.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/hooks/PANEL.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/hooks/PLAYER.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/hooks/SANDBOX.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/hooks/TOOL.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/hooks/WEAPON.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/keywords.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/GWEN.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/achievements.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/ai.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/ai_schedule.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/ai_task.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/baseclass.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/bit.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/cam.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/chat.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/cleanup.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/concommand.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/constraint.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/construct.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/controlpanel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/cookie.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/coroutine.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/cvars.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/debug.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/debugoverlay.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/derma.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/dragndrop.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/draw.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/drive.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/duplicator.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/effects.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/engine.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/ents.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/file.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/frame_blend.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/game.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/gameevent.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/gamemode.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/gmod.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/gmsave.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/gui.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/halo.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/hammer.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/hook.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/http.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/input.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/jit.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/killicon.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/language.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/list.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/markup.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/math.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/matproxy.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/menu.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/menubar.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/mesh.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/motionsensor.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/navmesh.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/net.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/notification.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/numpad.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/os.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/package.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/physenv.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/player.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/player_manager.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/presets.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/properties.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/render.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/resource.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/saverestore.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/scripted_ents.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/search.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/serverlist.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/sound.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/spawnmenu.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/sql.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/steamworks.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/string.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/surface.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/system.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/table.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/team.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/timer.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/umsg.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/undo.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/usermessage.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/utf8.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/util.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/vgui.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/video.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/weapons.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/libraries/widgets.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/other.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/ContentIcon.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/ContextBase.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/ControlPanel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/ControlPresets.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DAdjustableModelPanel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DAlphaBar.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DBinder.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DBubbleContainer.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DButton.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DCategoryList.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DCheckBox.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DCheckBoxLabel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DCollapsibleCategory.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DColorButton.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DColorCombo.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DColorCube.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DColorMixer.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DColorPalette.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DColumnSheet.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DComboBox.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DDragBase.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DDrawer.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DEntityProperties.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DExpandButton.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DFileBrowser.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DForm.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DFrame.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DGrid.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DHTML.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DHTMLControls.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DHorizontalDivider.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DHorizontalScroller.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DIconBrowser.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DIconLayout.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DImage.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DImageButton.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DKillIcon.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DLabel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DLabelEditable.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DLabelURL.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DListView.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DListView_Column.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DListView_Line.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DMenu.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DMenuBar.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DModelPanel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DModelSelect.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DNotify.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DNumSlider.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DNumberScratch.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DNumberWang.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DPanel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DPanelList.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DProgress.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DProperties.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DPropertySheet.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DProperty_Combo.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DProperty_VectorColor.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DRGBPicker.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DScrollPanel.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DShape.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DSlider.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DSprite.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DTextEntry.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DTileLayout.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DTooltip.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DTree.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DTree_Node.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/DVScrollBar.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/IconEditor.json"
+			},
+			{
+				"language": "lua",
+				"path": "./snippets/panels/Material.json"
+			}
+		]
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"eslint": "^3.6.0",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"icon": "logo.png",
+	"__metadata": {
+		"id": "9d694123-98d0-48bc-8895-e84ff5ace0dd",
+		"publisherId": "b884d4df-5393-43e3-9f64-65e58c80d0df",
+		"publisherDisplayName": "Acidic",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033040
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"bf_read/ReadAngle": {
+		"body": [
+			"ReadAngle()$0"
+		],
+		"description": "Reads an returns an angle object from the bitstream.",
+		"prefix": "ReadAngle"
+	},
+	"bf_read/ReadBool": {
+		"body": [
+			"ReadBool()$0"
+		],
+		"description": "Reads 1 bit an returns a bool representing the bit.",
+		"prefix": "ReadBool"
+	},
+	"bf_read/ReadChar": {
+		"body": [
+			"ReadChar()$0"
+		],
+		"description": "Reads a signed char and returns a number from -127 to 127 representing the ascii value of that char.",
+		"prefix": "ReadChar"
+	},
+	"bf_read/ReadEntity": {
+		"body": [
+			"ReadEntity()$0"
+		],
+		"description": "Reads a short representing an entity index and returns the matching entity handle.",
+		"prefix": "ReadEntity"
+	},
+	"bf_read/ReadFloat": {
+		"body": [
+			"ReadFloat()$0"
+		],
+		"description": "Reads a 4 byte float from the bitstream and returns it.",
+		"prefix": "ReadFloat"
+	},
+	"bf_read/ReadLong": {
+		"body": [
+			"ReadLong()$0"
+		],
+		"description": "Reads a 4 byte long from the bitstream and returns it.",
+		"prefix": "ReadLong"
+	},
+	"bf_read/ReadShort": {
+		"body": [
+			"ReadShort()$0"
+		],
+		"description": "Reads a 2 byte short from the bitstream and returns it.",
+		"prefix": "ReadShort"
+	},
+	"bf_read/ReadString": {
+		"body": [
+			"ReadString()$0"
+		],
+		"description": "Reads a null terminated string from the bitstream.",
+		"prefix": "ReadString"
+	},
+	"bf_read/ReadVector": {
+		"body": [
+			"ReadVector()$0"
+		],
+		"description": "Reads a special encoded vector from the bitstream and returns it, this function is not suitable to send normals.",
+		"prefix": "ReadVector"
+	},
+	"bf_read/ReadVectorNormal": {
+		"body": [
+			"ReadVectorNormal()$0"
+		],
+		"description": "Reads a special encoded vector normal from the bitstream and returns it, this function is not suitable to send vectors that represent a position.",
+		"prefix": "ReadVectorNormal"
+	},
+	"bf_read/Reset": {
+		"body": [
+			"Reset()$0"
+		],
+		"description": "Rewinds the bitstream so it can be read again.",
+		"prefix": "Reset"
+	}
+}

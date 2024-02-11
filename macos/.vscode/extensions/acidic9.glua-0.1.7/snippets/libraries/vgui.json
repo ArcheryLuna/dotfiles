@@ -1,0 +1,93 @@
+{
+    "vgui.Create": {
+        "body": [
+            "vgui.Create(${1:classname}, ${2:parent=nil}, ${3:name=nil})$0"
+        ],
+        "description": "VGUI [Client/Menu] Creates a panel by the specified classname.\n\n[string] classname\n  Classname of the panel to create. Valid classnames are listed at: VGUI Element List.\n\n[Panel] parent=nil\n  Parent of the created panel.\n\n[string] name=nil\n  Name of the created panel.",
+        "prefix": "vgui.Create"
+    },
+    "vgui.CreateFromTable": {
+        "body": [
+            "vgui.CreateFromTable(${1:metatable}, ${2:parent=nil}, ${3:name=nil})$0"
+        ],
+        "description": "VGUI [Client/Menu] Creates a panel from table.\n\n[table] metatable\n  Your PANEL table\n\n[Panel] parent=nil\n  Which panel to parent the newly created panel to\n\n[string] name=nil\n  Name of your panel",
+        "prefix": "vgui.CreateFromTable"
+    },
+    "vgui.CreateX": {
+        "body": [
+            "vgui.CreateX(${1:class}, ${2:parent=nil}, ${3:name=nil})$0"
+        ],
+        "description": "VGUI [Client/Menu] \n\n[string] class\n  Class of the panel to create\n\n[Panel] parent=nil\n  If specified, parents created panel to given one\n\n[string] name=nil\n  Name of the created panel",
+        "prefix": "vgui.CreateX"
+    },
+    "vgui.CursorVisible": {
+        "body": [
+            "vgui.CursorVisible()$0"
+        ],
+        "description": "VGUI [Client/Menu]",
+        "prefix": "vgui.CursorVisible"
+    },
+    "vgui.FocusedHasParent": {
+        "body": [
+            "vgui.FocusedHasParent(${1:parent})$0"
+        ],
+        "description": "VGUI [Client/Menu] \n\n[Panel] parent\n  The parent panel to check the currently focused one against. This doesn't need to be a direct parent (focused panel can be a child of a child and so on).",
+        "prefix": "vgui.FocusedHasParent"
+    },
+    "vgui.GetControlTable": {
+        "body": [
+            "vgui.GetControlTable(${1:Panelname})$0"
+        ],
+        "description": "VGUI [Client/Menu] \n\n[string] Panelname\n  The name of the panel",
+        "prefix": "vgui.GetControlTable"
+    },
+    "vgui.GetHoveredPanel": {
+        "body": [
+            "vgui.GetHoveredPanel()$0"
+        ],
+        "description": "VGUI [Client/Menu]",
+        "prefix": "vgui.GetHoveredPanel"
+    },
+    "vgui.GetKeyboardFocus": {
+        "body": [
+            "vgui.GetKeyboardFocus()$0"
+        ],
+        "description": "VGUI [Client/Menu]",
+        "prefix": "vgui.GetKeyboardFocus"
+    },
+    "vgui.GetWorldPanel": {
+        "body": [
+            "vgui.GetWorldPanel()$0"
+        ],
+        "description": "VGUI [Client/Menu]",
+        "prefix": "vgui.GetWorldPanel"
+    },
+    "vgui.IsHoveringWorld": {
+        "body": [
+            "vgui.IsHoveringWorld()$0"
+        ],
+        "description": "VGUI [Client/Menu]",
+        "prefix": "vgui.IsHoveringWorld"
+    },
+    "vgui.Register": {
+        "body": [
+            "vgui.Register(${1:classname}, ${2:panelTable}, ${3:baseName})$0"
+        ],
+        "description": "VGUI [Client/Menu] Registers a panel for later creation.\n\n[string] classname\n  Classname of the panel to create.\n\n[table] panelTable\n  The table containg the panel information.\n\n[string] baseName\n  Name of the base of the panel.",
+        "prefix": "vgui.Register"
+    },
+    "vgui.RegisterFile": {
+        "body": [
+            "vgui.RegisterFile(${1:file})$0"
+        ],
+        "description": "VGUI [Client/Menu] \n\n[string] file\n  The file to register",
+        "prefix": "vgui.RegisterFile"
+    },
+    "vgui.RegisterTable": {
+        "body": [
+            "vgui.RegisterTable(${1:panel}, ${2:base=Panel})$0"
+        ],
+        "description": "VGUI [Client/Menu] Registers a table to use as a panel. All this function does is assigns Base key to your table and returns the table.\n\n[table] panel\n  The PANEL table\n\n[string] base=Panel\n  A base for the panel",
+        "prefix": "vgui.RegisterTable"
+    }
+}

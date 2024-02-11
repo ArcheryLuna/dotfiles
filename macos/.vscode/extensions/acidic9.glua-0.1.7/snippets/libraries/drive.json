@@ -1,0 +1,86 @@
+{
+    "drive.CalcView": {
+        "body": [
+            "drive.CalcView(${1:ply}, ${2:view})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[Player] ply\n  The player\n\n[table] view\n  The view, see ViewData structure",
+        "prefix": "drive.CalcView"
+    },
+    "drive.CreateMove": {
+        "body": [
+            "drive.CreateMove(${1:cmd})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[CUserCmd] cmd\n  The user command",
+        "prefix": "drive.CreateMove"
+    },
+    "drive.DestroyMethod": {
+        "body": [
+            "drive.DestroyMethod(${1:ply})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[Player] ply\n  The player to affect",
+        "prefix": "drive.DestroyMethod"
+    },
+    "drive.End": {
+        "body": [
+            "drive.End(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[Player] ply\n  The player\n\n[Entity] ent\n  The entity",
+        "prefix": "drive.End"
+    },
+    "drive.FinishMove": {
+        "body": [
+            "drive.FinishMove(${1:ply}, ${2:mv})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[Player] ply\n  The player\n\n[CMoveData] mv\n  The move data",
+        "prefix": "drive.FinishMove"
+    },
+    "drive.GetMethod": {
+        "body": [
+            "drive.GetMethod(${1:ply})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[Player] ply\n  The player",
+        "prefix": "drive.GetMethod"
+    },
+    "drive.Move": {
+        "body": [
+            "drive.Move(${1:ply}, ${2:mv})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[Player] ply\n  The player\n\n[CMoveData] mv\n  The move data",
+        "prefix": "drive.Move"
+    },
+    "drive.PlayerStartDriving": {
+        "body": [
+            "drive.PlayerStartDriving(${1:ply}, ${2:ent}, ${3:mode})$0"
+        ],
+        "description": "DRIVE [Shared] Starts driving for the player.\n\n[Player] ply\n  The player to affect\n\n[Entity] ent\n  The entity to drive\n\n[string] mode\n  The driving mode",
+        "prefix": "drive.PlayerStartDriving"
+    },
+    "drive.PlayerStopDriving": {
+        "body": [
+            "drive.PlayerStopDriving(${1:ply})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[Player] ply\n  The player to affect",
+        "prefix": "drive.PlayerStopDriving"
+    },
+    "drive.Register": {
+        "body": [
+            "drive.Register(${1:name}, ${2:data}, ${3:base})$0"
+        ],
+        "description": "DRIVE [Shared] Registers a new entity drive.\n\n[string] name\n  The name of the drive.\n\n[table] data\n  The data required to create the drive. This includes the functions used by the drive.\n\n[string] base\n  The base of the drive.",
+        "prefix": "drive.Register"
+    },
+    "drive.Start": {
+        "body": [
+            "drive.Start(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[Player] ply\n  The player\n\n[Entity] ent\n  The entity",
+        "prefix": "drive.Start"
+    },
+    "drive.StartMove": {
+        "body": [
+            "drive.StartMove(${1:ply}, ${2:mv}, ${3:cmd})$0"
+        ],
+        "description": "DRIVE [Shared] \n\n[Player] ply\n  The player\n\n[CMoveData] mv\n  The move data\n\n[CUserCmd] cmd\n  The user command",
+        "prefix": "drive.StartMove"
+    }
+}

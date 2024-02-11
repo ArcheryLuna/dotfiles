@@ -1,0 +1,128 @@
+{
+	"engine/ActiveGamemode": {
+		"body": [
+			"engine.ActiveGamemode()$0"
+		],
+		"description": "Returns the name of the currently running gamemode.",
+		"prefix": "engine.ActiveGamemode"
+	},
+	"engine/CloseServer": {
+		"body": [
+			"engine.CloseServer()$0"
+		],
+		"description": "Closes the server and completely exits.",
+		"prefix": "engine.CloseServer"
+	},
+	"engine/GetAddons": {
+		"body": [
+			"engine.GetAddons()$0"
+		],
+		"description": "Gets the addons you have downloaded from the workshop.",
+		"prefix": "engine.GetAddons"
+	},
+	"engine/GetDemoPlaybackStartTick": {
+		"body": [
+			"engine.GetDemoPlaybackStartTick()$0"
+		],
+		"description": "When starting playing a demo,",
+		"prefix": "engine.GetDemoPlaybackStartTick"
+	},
+	"engine/GetDemoPlaybackTick": {
+		"body": [
+			"engine.GetDemoPlaybackTick()$0"
+		],
+		"description": "Current tick of currently loaded demo.",
+		"prefix": "engine.GetDemoPlaybackTick"
+	},
+	"engine/GetDemoPlaybackTimeScale": {
+		"body": [
+			"engine.GetDemoPlaybackTimeScale()$0"
+		],
+		"description": "Returns time scale of demo playback.",
+		"prefix": "engine.GetDemoPlaybackTimeScale"
+	},
+	"engine/GetDemoPlaybackTotalTicks": {
+		"body": [
+			"engine.GetDemoPlaybackTotalTicks()$0"
+		],
+		"description": "Returns total amount of ticks of currently loaded demo.",
+		"prefix": "engine.GetDemoPlaybackTotalTicks"
+	},
+	"engine/GetGamemodes": {
+		"body": [
+			"engine.GetGamemodes()$0"
+		],
+		"description": "Returns a table containing info for all installed gamemodes",
+		"prefix": "engine.GetGamemodes"
+	},
+	"engine/GetGames": {
+		"body": [
+			"engine.GetGames()$0"
+		],
+		"description": "Returns an array of tables corresponding to all games from which Garry\u0026#39;s Mod supports mounting content.",
+		"prefix": "engine.GetGames"
+	},
+	"engine/IsPlayingDemo": {
+		"body": [
+			"engine.IsPlayingDemo()$0"
+		],
+		"description": "Returns true if we\u0026#39;re currently playing a demo.",
+		"prefix": "engine.IsPlayingDemo"
+	},
+	"engine/IsRecordingDemo": {
+		"body": [
+			"engine.IsRecordingDemo()$0"
+		],
+		"description": "Returns true if the game is currently recording a demo file (.dem) using gm_demo",
+		"prefix": "engine.IsRecordingDemo"
+	},
+	"engine/LightStyle": {
+		"body": [
+			"engine.LightStyle(${1:lightstyle}, ${2:pattern})$0"
+		],
+		"description": "This is a direct binding to the function “engine-\u0026gt;LightStyle”. This function allows you to change the default light style of the map - so you can make lighting lighter or darker. You’ll need to call",
+		"prefix": "engine.LightStyle"
+	},
+	"engine/OpenDupe": {
+		"body": [
+			"engine.OpenDupe(${1:dupeName})$0"
+		],
+		"description": "Loads a duplication from the local filesystem.",
+		"prefix": "engine.OpenDupe"
+	},
+	"engine/SetMounted": {
+		"body": [
+			"engine.SetMounted(${1:depotID}, ${2:doMount})$0"
+		],
+		"description": "Sets the mounting options for mountable content.",
+		"prefix": "engine.SetMounted"
+	},
+	"engine/TickInterval": {
+		"body": [
+			"engine.TickInterval()$0"
+		],
+		"description": "Returns the number of seconds between each gametick.",
+		"prefix": "engine.TickInterval"
+	},
+	"engine/VideoSettings": {
+		"body": [
+			"engine.VideoSettings()$0"
+		],
+		"description": "Returns video recording settings set by",
+		"prefix": "engine.VideoSettings"
+	},
+	"engine/WriteDupe": {
+		"body": [
+			"engine.WriteDupe(${1:dupe}, ${2:jpeg})$0"
+		],
+		"description": "Saves a duplication as a file.",
+		"prefix": "engine.WriteDupe"
+	},
+	"engine/WriteSave": {
+		"body": [
+			"engine.WriteSave(${1:saveData}, ${2:name}, ${3:time}, ${4:map})$0"
+		],
+		"description": "Stores savedata into the game (can be loaded using the LoadGame menu)",
+		"prefix": "engine.WriteSave"
+	}
+}

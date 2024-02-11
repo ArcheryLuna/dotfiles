@@ -1,0 +1,11 @@
+{
+	"AddHook": {
+		"body": [
+			"hook.Add(\"${1:eventName}\", \"${2:identifier}\", function($3)",
+			"\t$0",
+			"end)"
+		],
+		"description": "Add a hook to be called upon the given event occurring.",
+		"prefix": "hook.Add"
+	}
+}

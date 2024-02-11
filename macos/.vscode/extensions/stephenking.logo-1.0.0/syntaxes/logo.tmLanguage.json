@@ -1,0 +1,100 @@
+{
+	"scopeName": "source.logo",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#brackets"
+		},
+		{
+			"include": "#function-declarations"
+		},
+		{
+			"include": "#function-calls"
+		},
+		{
+			"include": "#general-variables"
+		}
+	],
+	"repository": {
+		"comment": {
+			"name": "comment.logo",
+			"match": ";.*"
+		},
+		"constants": {
+			"patterns": [
+				  {
+					"name": "constant.numeric.logo",
+					"match": "(?x)        # turn on extended mode\n  -?        # an optional minus\n  (?:\n    0       # a zero\n    |       # ...or...\n    [1-9]   # a 1-9 character\n    \\d*     # followed by zero or more digits\n  )\n  (?:\n    (?:\n      \\.    # a period\n      \\d+   # followed by one or more digits\n    )?\n    (?:\n      [eE]  # an e character\n      [+-]? # followed by an option +/-\n      \\d+   # followed by one or more digits\n    )?      # make exponent optional\n  )?        # make decimal portion optional"
+				  },
+				  {
+					"comment": "Boolean constant",
+					"name": "constant.language.boolean.logo",
+					"match": "\\b(true|false)\\b"
+				  },
+				  {
+					"name": "keyword.operator.logo",
+					"match": "(<=|>=|<|>|\\=|\\+|\\-|\\*|\\/)"
+				  }
+			]
+		},
+		"general-variables": {
+			"patterns": [
+				{
+					"name": "variable.parameter.logo", 
+					"match": ":\\w+"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"match": "\\b(bury|mditem|listboxdelete|listboxaddstring|repcount|messagebox|mdsetitem|setitem|setpencolor|emptyp|memberp|setlabelfont|label|windowcreate|staticcreate|listboxcreate|buttoncreate|buttonupdate|windowdelete|nodribble|dribble|windowfileedit|openwrite|setwrite|close|shell|files|openread|setread|erf|queue|sort|stop|map|copydef|if|list|cancel|list|catch|localmake|new|destroy|attr|method|or|make|se|local|define|word|word|count|and|proclist|pr|op|po|not|member|halt|bf|ask|first|last|ignore|rc|bl|ht|pu|pd|tt|setxy|setpc|fd|bk|rt|lt|run|public|date|time|item|abs|number|thing|eval|for|empty|ss|setx|sety|getxy|dir|xcor|ycor|else|ct|name|array|define|clean|type|char|er|load|int|repeat|while|window|ts|dllload|dllfree|dllcall|ifelse|yesnobox|chdir|popdir|wait|buryname|class|procedure|runreuslt|proplist|pprop|gprop)\\b\\??",
+					"name": "keyword.other.logo"
+				},
+				{
+					"match": "\\W?(hair|\\$)\\S*",
+					"name": "keyword.other.hair.logo"
+				}
+			]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"match": "\"(?:\\|[^|]*\\||[-\\w.]*)+",
+					"name": "string.quoted.single.logo"
+				}
+			]
+		},
+		"brackets": {
+			"patterns": [
+				{
+					"match": "\\[|\\]",
+					"name": "invalid.logo"
+				}
+			]
+		},
+		"function-declarations": {
+			"patterns": [
+				{
+					"match": "^to [\\w.]+",
+					"name": "entity.name.function.logo"
+				},
+				{
+					"match": "^end",
+					"name": "entity.name.function.logo"
+				}
+			]
+		}
+	}
+}

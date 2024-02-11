@@ -1,0 +1,79 @@
+{
+	"CLuaEmitter/Add": {
+		"body": [
+			"Add(${1:material}, ${2:position})$0"
+		],
+		"description": "Creates a new",
+		"prefix": "Add"
+	},
+	"CLuaEmitter/Draw": {
+		"body": [
+			"Draw()$0"
+		],
+		"description": "Manually renders all particles the emitter has created.",
+		"prefix": "Draw"
+	},
+	"CLuaEmitter/Finish": {
+		"body": [
+			"Finish()$0"
+		],
+		"description": "Removes the emitter and all its particles.",
+		"prefix": "Finish"
+	},
+	"CLuaEmitter/GetNumActiveParticles": {
+		"body": [
+			"GetNumActiveParticles()$0"
+		],
+		"description": "Returns the amount of active particles of this emitter.",
+		"prefix": "GetNumActiveParticles"
+	},
+	"CLuaEmitter/GetPos": {
+		"body": [
+			"GetPos()$0"
+		],
+		"description": "Returns the position of this emitter. This is set when creating the emitter with",
+		"prefix": "GetPos"
+	},
+	"CLuaEmitter/Is3D": {
+		"body": [
+			"Is3D()$0"
+		],
+		"description": "Returns whether this emitter is 3D or not. This is set when creating the emitter with",
+		"prefix": "Is3D"
+	},
+	"CLuaEmitter/SetBBox": {
+		"body": [
+			"SetBBox(${1:mins}, ${2:maxs})$0"
+		],
+		"description": "Sets the bounding box for this emitter.",
+		"prefix": "SetBBox"
+	},
+	"CLuaEmitter/SetNearClip": {
+		"body": [
+			"SetNearClip(${1:distanceMin}, ${2:distanceMax})$0"
+		],
+		"description": "This function sets the the distance between the render camera and the emitter at which the particles should start fading and at which distance fade ends ( alpha becomes 0 ).",
+		"prefix": "SetNearClip"
+	},
+	"CLuaEmitter/SetNoDraw": {
+		"body": [
+			"SetNoDraw(${1:noDraw})$0"
+		],
+		"description": "Prevents all particles of the emitter from automatically drawing.",
+		"prefix": "SetNoDraw"
+	},
+	"CLuaEmitter/SetParticleCullRadius": {
+		"body": [
+			"SetParticleCullRadius(${1:radius})$0"
+		],
+		"description": "The function name has not much in common with its actual function, it applies a radius to every particles that affects the building of the bounding box, as it, usually is constructed by the particle that has the lowest x, y and z and the highest x, y and z, this function just adds/subtracts the radius and inflates the bounding box.",
+		"prefix": "SetParticleCullRadius"
+	},
+	"CLuaEmitter/SetPos": {
+		"body": [
+			"SetPos(${1:position})$0"
+		],
+		"description": "Sets the position of the particle emitter.",
+		"prefix": "SetPos"
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"DIconLayout/Layout": {
+		"body": [
+			"Layout()$0"
+		],
+		"description": "Resets layout vars before calling",
+		"prefix": "Layout"
+	},
+	"DIconLayout/SetBorder": {
+		"body": [
+			"SetBorder(${1:width})$0"
+		],
+		"description": "Sets the internal border (padding) within the DIconLayout. This will not change its size, only the positioning of children. You must call",
+		"prefix": "SetBorder"
+	},
+	"DIconLayout/SetSpaceX": {
+		"body": [
+			"SetSpaceX(${1:xSpacing})$0"
+		],
+		"description": "Sets the horizontal (x) spacing between children within the DIconLayout. You must call",
+		"prefix": "SetSpaceX"
+	},
+	"DIconLayout/SetSpaceY": {
+		"body": [
+			"SetSpaceY(${1:ySpacing})$0"
+		],
+		"description": "Sets the vertical (y) spacing between children within the DIconLayout. You must call",
+		"prefix": "SetSpaceY"
+	}
+}

@@ -1,0 +1,114 @@
+{
+    "GetDecimals": {
+        "body": [
+            "GetDecimals()$0"
+        ],
+        "description": "DNUMBERWANG [Client]",
+        "prefix": "GetDecimals"
+    },
+    "GetFloatValue": {
+        "body": [
+            "GetFloatValue()$0"
+        ],
+        "description": "DNUMBERWANG [Client]",
+        "prefix": "GetFloatValue"
+    },
+    "GetFraction": {
+        "body": [
+            "GetFraction(${1:val})$0"
+        ],
+        "description": "DNUMBERWANG [Client] Returns a fraction representing the current number selector value to number selector min/max range ratio. If argument val is supplied, that number will be computed instead.\n\n[number] val\n  The fraction numerator.",
+        "prefix": "GetFraction"
+    },
+    "GetMax": {
+        "body": [
+            "GetMax()$0"
+        ],
+        "description": "DNUMBERWANG [Client]",
+        "prefix": "GetMax"
+    },
+    "GetMin": {
+        "body": [
+            "GetMin()$0"
+        ],
+        "description": "DNUMBERWANG [Client]",
+        "prefix": "GetMin"
+    },
+    "GetTextArea": {
+        "body": [
+            "GetTextArea()$0"
+        ],
+        "description": "DNUMBERWANG [Client]",
+        "prefix": "GetTextArea"
+    },
+    "GetValue": {
+        "body": [
+            "GetValue()$0"
+        ],
+        "description": "DNUMBERWANG [Client]",
+        "prefix": "GetValue"
+    },
+    "HideWang": {
+        "body": [
+            "HideWang()$0"
+        ],
+        "description": "DNUMBERWANG [Client]",
+        "prefix": "HideWang"
+    },
+    "OnValueChanged": {
+        "body": [
+            "OnValueChanged(${1:val})$0"
+        ],
+        "description": "DNUMBERWANG [Client] Internal function which is called when the number selector value is changed. This function is empty by default so it needs to be overridden in order to provide functionality.\n\n[number] val\n  The new value of the number selector.",
+        "prefix": "OnValueChanged"
+    },
+    "SetDecimals": {
+        "body": [
+            "SetDecimals(${1:num})$0"
+        ],
+        "description": "DNUMBERWANG [Client] Sets the amount of decimal places allowed in the number selector.\n\n[number] num\n  The amount of decimal places.",
+        "prefix": "SetDecimals"
+    },
+    "SetFloatValue": {
+        "body": [
+            "SetFloatValue(${1:})$0"
+        ],
+        "description": "DNUMBERWANG [Client] \n\n[number]",
+        "prefix": "SetFloatValue"
+    },
+    "SetFraction": {
+        "body": [
+            "SetFraction(${1:val})$0"
+        ],
+        "description": "DNUMBERWANG [Client] Sets the value of the number selector based on the given fraction number.\n\n[number] val\n  The fraction of the number selector's range.",
+        "prefix": "SetFraction"
+    },
+    "SetMax": {
+        "body": [
+            "SetMax(${1:max})$0"
+        ],
+        "description": "DNUMBERWANG [Client] \n\n[number] max\n  The maximum value.",
+        "prefix": "SetMax"
+    },
+    "SetMin": {
+        "body": [
+            "SetMin(${1:min})$0"
+        ],
+        "description": "DNUMBERWANG [Client] \n\n[number] min\n  The minimum value.",
+        "prefix": "SetMin"
+    },
+    "SetMinMax": {
+        "body": [
+            "SetMinMax(${1:min}, ${2:max})$0"
+        ],
+        "description": "DNUMBERWANG [Client] \n\n[number] min\n  The minimum value.\n\n[number] max\n  The maximum value.",
+        "prefix": "SetMinMax"
+    },
+    "SetValue": {
+        "body": [
+            "SetValue(${1:val})$0"
+        ],
+        "description": "DNUMBERWANG [Client] \n\n[number] val\n  The value to set.",
+        "prefix": "SetValue"
+    }
+}

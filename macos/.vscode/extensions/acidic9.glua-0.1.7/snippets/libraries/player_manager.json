@@ -1,0 +1,86 @@
+{
+    "player_manager.AddValidHands": {
+        "body": [
+            "player_manager.AddValidHands(${1:name}, ${2:model}, ${3:skin}, ${4:bodygroups})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] Assigns view model hands to player model.\n\n[string] name\n  Player model name\n\n[string] model\n  Hands model\n\n[number] skin\n  Skin to apply to the hands\n\n[string] bodygroups\n  Bodygroups to apply to the hands",
+        "prefix": "player_manager.AddValidHands"
+    },
+    "player_manager.AddValidModel": {
+        "body": [
+            "player_manager.AddValidModel(${1:name}, ${2:model})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] \n\n[string] name\n  Simplified name\n\n[string] model\n  Valid PlayerModel path",
+        "prefix": "player_manager.AddValidModel"
+    },
+    "player_manager.AllValidModels": {
+        "body": [
+            "player_manager.AllValidModels()$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared]",
+        "prefix": "player_manager.AllValidModels"
+    },
+    "player_manager.ClearPlayerClass": {
+        "body": [
+            "player_manager.ClearPlayerClass(${1:ply})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] Clears a player's class association by setting their ClassID to 0\n\n[Player] ply\n  Player to clear class from",
+        "prefix": "player_manager.ClearPlayerClass"
+    },
+    "player_manager.GetPlayerClass": {
+        "body": [
+            "player_manager.GetPlayerClass(${1:ply})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] \n\n[Player] ply\n  Player to get class",
+        "prefix": "player_manager.GetPlayerClass"
+    },
+    "player_manager.OnPlayerSpawn": {
+        "body": [
+            "player_manager.OnPlayerSpawn(${1:ply})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] Applies basic class variables when the player spawns. Called from GM:PlayerSpawn in the base gamemode.\n\n[Player] ply\n  Player to setup",
+        "prefix": "player_manager.OnPlayerSpawn"
+    },
+    "player_manager.RegisterClass": {
+        "body": [
+            "player_manager.RegisterClass(${1:name}, ${2:table}, ${3:base})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] Register a class metatable to be assigned to players later\n\n[string] name\n  Class name\n\n[table] table\n  Class metatable\n\n[string] base\n  Base class name",
+        "prefix": "player_manager.RegisterClass"
+    },
+    "player_manager.RunClass": {
+        "body": [
+            "player_manager.RunClass(${1:ply}, ${2:funcName}, ${3:arguments})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] Execute a named function within the player's set class\n\n[Player] ply\n  Player to execute function on.\n\n[string] funcName\n  Name of function.\n\n[vararg] arguments\n  Optional arguments. Can be of any type.",
+        "prefix": "player_manager.RunClass"
+    },
+    "player_manager.SetPlayerClass": {
+        "body": [
+            "player_manager.SetPlayerClass(${1:ply}, ${2:classname})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] Sets a player's class\n\n[Player] ply\n  Player to set class\n\n[string] classname\n  Name of class to set",
+        "prefix": "player_manager.SetPlayerClass"
+    },
+    "player_manager.TranslatePlayerHands": {
+        "body": [
+            "player_manager.TranslatePlayerHands(${1:name})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] \n\n[string] name\n  Player model name",
+        "prefix": "player_manager.TranslatePlayerHands"
+    },
+    "player_manager.TranslatePlayerModel": {
+        "body": [
+            "player_manager.TranslatePlayerModel(${1:shortName})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] Returns the valid model path for a simplified name.\n\n[string] shortName\n  The short name of the model.",
+        "prefix": "player_manager.TranslatePlayerModel"
+    },
+    "player_manager.TranslateToPlayerModelName": {
+        "body": [
+            "player_manager.TranslateToPlayerModelName(${1:model})$0"
+        ],
+        "description": "PLAYER_MANAGER [Shared] \n\n[string] model\n  The model path to a player model",
+        "prefix": "player_manager.TranslateToPlayerModelName"
+    }
+}

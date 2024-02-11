@@ -1,0 +1,261 @@
+{
+    "AddColumn": {
+        "body": [
+            "AddColumn(${1:column}, ${2:material}, ${3:position})$0"
+        ],
+        "description": "DLISTVIEW [Client] Adds a column to the listview.\n\n[string] column\n  The name of the column to add.\n\n[string] material\n  The material to apply to the column.\n\nAppears to only get applied if the listview is set to not be sortable.\n\n[number] position\n  Sets the ordering of this column compared to other columns.\n\nDoes not appear to be implemented.",
+        "prefix": "AddColumn"
+    },
+    "AddLine": {
+        "body": [
+            "AddLine(${1:text})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[vararg] text\n  Values for a new row in the DListView, If several arguments are supplied, each argument will correspond to a respective column in the DListView.",
+        "prefix": "AddLine"
+    },
+    "Clear": {
+        "body": [
+            "Clear()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "Clear"
+    },
+    "ClearSelection": {
+        "body": [
+            "ClearSelection()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "ClearSelection"
+    },
+    "ColumnWidth": {
+        "body": [
+            "ColumnWidth(${1:column})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[number] column\n  The column to get the width of.",
+        "prefix": "ColumnWidth"
+    },
+    "DataLayout": {
+        "body": [
+            "DataLayout()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "DataLayout"
+    },
+    "DisableScrollbar": {
+        "body": [
+            "DisableScrollbar()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "DisableScrollbar"
+    },
+    "DoDoubleClick": {
+        "body": [
+            "DoDoubleClick(${1:lineID}, ${2:line})$0"
+        ],
+        "description": "DLISTVIEW [Client] Called when a line in the DListView is double clicked.\n\n[number] lineID\n  The line number of the double clicked line.\n\n[Panel] line\n  The double clicked DListView_Line.",
+        "prefix": "DoDoubleClick"
+    },
+    "FixColumnsLayout": {
+        "body": [
+            "FixColumnsLayout()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "FixColumnsLayout"
+    },
+    "GetCanvas": {
+        "body": [
+            "GetCanvas()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetCanvas"
+    },
+    "GetDataHeight": {
+        "body": [
+            "GetDataHeight()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetDataHeight"
+    },
+    "GetDirty": {
+        "body": [
+            "GetDirty()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetDirty"
+    },
+    "GetHeaderHeight": {
+        "body": [
+            "GetHeaderHeight()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetHeaderHeight"
+    },
+    "GetHideHeaders": {
+        "body": [
+            "GetHideHeaders()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetHideHeaders"
+    },
+    "GetInnerTall": {
+        "body": [
+            "GetInnerTall()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetInnerTall"
+    },
+    "GetLine": {
+        "body": [
+            "GetLine(${1:id})$0"
+        ],
+        "description": "DLISTVIEW [Client] Gets the DListView_Line at the given index.\n\n[number] id\n  The index of the line to get.",
+        "prefix": "GetLine"
+    },
+    "GetLines": {
+        "body": [
+            "GetLines()$0"
+        ],
+        "description": "DLISTVIEW [Client] Gets all of the lines added to the DListView.",
+        "prefix": "GetLines"
+    },
+    "GetMultiSelect": {
+        "body": [
+            "GetMultiSelect()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetMultiSelect"
+    },
+    "GetSelected": {
+        "body": [
+            "GetSelected()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetSelected"
+    },
+    "GetSelectedLine": {
+        "body": [
+            "GetSelectedLine()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetSelectedLine"
+    },
+    "GetSortable": {
+        "body": [
+            "GetSortable()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "GetSortable"
+    },
+    "GetSortedID": {
+        "body": [
+            "GetSortedID(${1:lineId})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[number] lineId\n  The DListView_Line:GetID of a line to look up",
+        "prefix": "GetSortedID"
+    },
+    "OnClickLine": {
+        "body": [
+            "OnClickLine(${1:line}, ${2:isSelected})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[Panel] line\n  The selected line.\n\n[boolean] isSelected\n  Boolean indicating whether the line is selected.",
+        "prefix": "OnClickLine"
+    },
+    "OnRequestResize": {
+        "body": [
+            "OnRequestResize(${1:column}, ${2:size})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[Panel] column\n  The column which initialized the resize\n\n[number] size",
+        "prefix": "OnRequestResize"
+    },
+    "OnRowRightClick": {
+        "body": [
+            "OnRowRightClick(${1:lineID}, ${2:line})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[number] lineID\n  The line ID of the right clicked line\n\n[Panel] line\n  The line panel itself, a DListView_Line.",
+        "prefix": "OnRowRightClick"
+    },
+    "OnRowSelected": {
+        "body": [
+            "OnRowSelected(${1:rowIndex}, ${2:row})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[number] rowIndex\n  The index of the row that the user clicked on.\n\n[Panel] row\n  The DListView_Line that the user clicked on.",
+        "prefix": "OnRowSelected"
+    },
+    "RemoveLine": {
+        "body": [
+            "RemoveLine(${1:line})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[number] line\n  Removes the given row, by row id (same number as DListView:GetLine).",
+        "prefix": "RemoveLine"
+    },
+    "SelectFirstItem": {
+        "body": [
+            "SelectFirstItem()$0"
+        ],
+        "description": "DLISTVIEW [Client]",
+        "prefix": "SelectFirstItem"
+    },
+    "SelectItem": {
+        "body": [
+            "SelectItem(${1:Line})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[Panel] Line\n  The line to select.",
+        "prefix": "SelectItem"
+    },
+    "SetDataHeight": {
+        "body": [
+            "SetDataHeight(${1:height})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[number] height\n  The new height to set. Default value is 17.",
+        "prefix": "SetDataHeight"
+    },
+    "SetDirty": {
+        "body": [
+            "SetDirty(${1:isDirty})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[boolean] isDirty",
+        "prefix": "SetDirty"
+    },
+    "SetHeaderHeight": {
+        "body": [
+            "SetHeaderHeight(${1:height})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[number] height\n  The new height to set. Default value is 16.",
+        "prefix": "SetHeaderHeight"
+    },
+    "SetHideHeaders": {
+        "body": [
+            "SetHideHeaders(${1:hide})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[boolean] hide\n  Whether the header line should be visible on not.",
+        "prefix": "SetHideHeaders"
+    },
+    "SetMultiSelect": {
+        "body": [
+            "SetMultiSelect(${1:allowMultiSelect})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[boolean] allowMultiSelect\n  Whether multiple lines can be selected or not",
+        "prefix": "SetMultiSelect"
+    },
+    "SetSortable": {
+        "body": [
+            "SetSortable(${1:isSortable})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[boolean] isSortable\n  Whether sorting columns with clicking is allowed or not.",
+        "prefix": "SetSortable"
+    },
+    "SortByColumn": {
+        "body": [
+            "SortByColumn(${1:columnIndex}, ${2:descending=false})$0"
+        ],
+        "description": "DLISTVIEW [Client] \n\n[number] columnIndex\n  The index of the column that should be sorted.\n\n[boolean] descending=false\n  Whether the items should be sorted in descending order or not.",
+        "prefix": "SortByColumn"
+    },
+    "SortByColumns": {
+        "body": [
+            "SortByColumns(${1:column1=nil}, ${2:descrending1=false}, ${3:column2=nil}, ${4:descrending2=false}, ${5:column3=nil}, ${6:descrending3=false}, ${7:column4=nil}, ${8:descrending4=false})$0"
+        ],
+        "description": "DLISTVIEW [Client] Sorts the list based on given columns. All arguments are optional\n\n[number] column1=nil\n  \n\n[boolean] descrending1=false\n  \n\n[number] column2=nil\n  \n\n[boolean] descrending2=false\n  \n\n[number] column3=nil\n  \n\n[boolean] descrending3=false\n  \n\n[number] column4=nil\n  \n\n[boolean] descrending4=false",
+        "prefix": "SortByColumns"
+    }
+}

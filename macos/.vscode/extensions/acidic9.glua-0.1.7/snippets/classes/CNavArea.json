@@ -1,0 +1,422 @@
+{
+    "AddToClosedList": {
+        "body": [
+            "AddToClosedList()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "AddToClosedList"
+    },
+    "AddToOpenList": {
+        "body": [
+            "AddToOpenList()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "AddToOpenList"
+    },
+    "ClearSearchLists": {
+        "body": [
+            "ClearSearchLists()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "ClearSearchLists"
+    },
+    "ComputeAdjacentConnectionHeightChange": {
+        "body": [
+            "ComputeAdjacentConnectionHeightChange(${1:navarea})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[CNavArea] navarea",
+        "prefix": "ComputeAdjacentConnectionHeightChange"
+    },
+    "ComputeDirection": {
+        "body": [
+            "ComputeDirection(${1:pos})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[Vector] pos\n  The position to compute direction towards.",
+        "prefix": "ComputeDirection"
+    },
+    "ComputeGroundHeightChange": {
+        "body": [
+            "ComputeGroundHeightChange(${1:navArea})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[CNavArea] navArea\n  The nav area to test against.",
+        "prefix": "ComputeGroundHeightChange"
+    },
+    "ConnectTo": {
+        "body": [
+            "ConnectTo(${1:area})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[CNavArea] area\n  The CNavArea or CNavLadder this area leads to.",
+        "prefix": "ConnectTo"
+    },
+    "Contains": {
+        "body": [
+            "Contains(${1:pos})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[Vector] pos\n  The position to test.",
+        "prefix": "Contains"
+    },
+    "Disconnect": {
+        "body": [
+            "Disconnect(${1:area})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[CNavArea] area\n  The CNavArea or CNavLadder this to disconnect from.",
+        "prefix": "Disconnect"
+    },
+    "Draw": {
+        "body": [
+            "Draw()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "Draw"
+    },
+    "DrawSpots": {
+        "body": [
+            "DrawSpots()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "DrawSpots"
+    },
+    "GetAdjacentAreas": {
+        "body": [
+            "GetAdjacentAreas()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetAdjacentAreas"
+    },
+    "GetAdjacentAreasAtSide": {
+        "body": [
+            "GetAdjacentAreasAtSide(${1:navDir})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] navDir\n  The direction, in which to look for CNavAreas, see NavDir_ Enums.",
+        "prefix": "GetAdjacentAreasAtSide"
+    },
+    "GetAdjacentCount": {
+        "body": [
+            "GetAdjacentCount()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetAdjacentCount"
+    },
+    "GetAdjacentCountAtSide": {
+        "body": [
+            "GetAdjacentCountAtSide(${1:navDir})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] navDir\n  The direction, in which to look for CNavAreas, see NavDir_ Enums.",
+        "prefix": "GetAdjacentCountAtSide"
+    },
+    "GetAttributes": {
+        "body": [
+            "GetAttributes()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetAttributes"
+    },
+    "GetCenter": {
+        "body": [
+            "GetCenter()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetCenter"
+    },
+    "GetClosestPointOnArea": {
+        "body": [
+            "GetClosestPointOnArea(${1:pos})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[Vector] pos\n  The given position, can be outside of the Nav Area bounds.",
+        "prefix": "GetClosestPointOnArea"
+    },
+    "GetCorner": {
+        "body": [
+            "GetCorner(${1:cornerid})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] cornerid\n  The target corner to get the position of, takes NavCorner_ Enums.",
+        "prefix": "GetCorner"
+    },
+    "GetCostSoFar": {
+        "body": [
+            "GetCostSoFar()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetCostSoFar"
+    },
+    "GetExposedSpots": {
+        "body": [
+            "GetExposedSpots()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetExposedSpots"
+    },
+    "GetExtentInfo": {
+        "body": [
+            "GetExtentInfo()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetExtentInfo"
+    },
+    "GetHidingSpots": {
+        "body": [
+            "GetHidingSpots()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetHidingSpots"
+    },
+    "GetID": {
+        "body": [
+            "GetID()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetID"
+    },
+    "GetIncomingConnections": {
+        "body": [
+            "GetIncomingConnections()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetIncomingConnections"
+    },
+    "GetIncomingConnectionsAtSide": {
+        "body": [
+            "GetIncomingConnectionsAtSide(${1:navDir})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] navDir\n  The direction, from which to look for CNavAreas, see NavDir_ Enums.",
+        "prefix": "GetIncomingConnectionsAtSide"
+    },
+    "GetLadders": {
+        "body": [
+            "GetLadders()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetLadders"
+    },
+    "GetLaddersAtSide": {
+        "body": [
+            "GetLaddersAtSide(${1:navDir})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] navDir\n  The direction, in which to look for CNavLadders.\n0 = Up ( LadderDirectionType::LADDER_UP )\n\n1 = Down ( LadderDirectionType::LADDER_DOWN )",
+        "prefix": "GetLaddersAtSide"
+    },
+    "GetParent": {
+        "body": [
+            "GetParent()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetParent"
+    },
+    "GetParentHow": {
+        "body": [
+            "GetParentHow()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetParentHow"
+    },
+    "GetRandomAdjacentAreaAtSide": {
+        "body": [
+            "GetRandomAdjacentAreaAtSide(${1:navDir})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] navDir\n  The direction, in which to look for CNavAreas, see NavDir_ Enums.",
+        "prefix": "GetRandomAdjacentAreaAtSide"
+    },
+    "GetRandomPoint": {
+        "body": [
+            "GetRandomPoint()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetRandomPoint"
+    },
+    "GetSizeX": {
+        "body": [
+            "GetSizeX()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetSizeX"
+    },
+    "GetSizeY": {
+        "body": [
+            "GetSizeY()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetSizeY"
+    },
+    "GetTotalCost": {
+        "body": [
+            "GetTotalCost()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "GetTotalCost"
+    },
+    "GetZ": {
+        "body": [
+            "GetZ(${1:pos})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[Vector] pos\n  The position to get the elevation from, the z value from this position is ignored and only the X and Y values are used to this task.",
+        "prefix": "GetZ"
+    },
+    "HasAttributes": {
+        "body": [
+            "HasAttributes(${1:attribs})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] attribs\n  Attribute mask to check for, see NAV_MESH_ Enums",
+        "prefix": "HasAttributes"
+    },
+    "IsBlocked": {
+        "body": [
+            "IsBlocked(${1:teamID}, ${2:ignoreNavBlockers=false})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] teamID\n  \n\n[boolean] ignoreNavBlockers=false",
+        "prefix": "IsBlocked"
+    },
+    "IsClosed": {
+        "body": [
+            "IsClosed()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "IsClosed"
+    },
+    "IsConnected": {
+        "body": [
+            "IsConnected(${1:navArea})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[CNavArea] navArea\n  The CNavArea to test against.",
+        "prefix": "IsConnected"
+    },
+    "IsConnectedAtSide": {
+        "body": [
+            "IsConnectedAtSide(${1:navArea}, ${2:navDirType})$0"
+        ],
+        "description": "CNAVAREA [Server] Returns whether this CNavArea has an outgoing ( one or two way ) connection to given CNavArea in given direction. See CNavArea:IsConnected for a function that checks all sides.\n\n[CNavArea] navArea\n  The CNavArea to test against.\n\n[number] navDirType\n  The direction, in which to look for the connection. See NavDir_ Enums",
+        "prefix": "IsConnectedAtSide"
+    },
+    "IsCoplanar": {
+        "body": [
+            "IsCoplanar(${1:navArea})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[CNavArea] navArea\n  The Nav Area to test.",
+        "prefix": "IsCoplanar"
+    },
+    "IsFlat": {
+        "body": [
+            "IsFlat()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "IsFlat"
+    },
+    "IsOpen": {
+        "body": [
+            "IsOpen()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "IsOpen"
+    },
+    "IsOpenListEmpty": {
+        "body": [
+            "IsOpenListEmpty()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "IsOpenListEmpty"
+    },
+    "IsOverlapping": {
+        "body": [
+            "IsOverlapping(${1:pos}, ${2:tolerance=0})$0"
+        ],
+        "description": "CNAVAREA [Server] Returns if this position overlaps the Nav Area within the given tolerance.\n\n[Vector] pos\n  The overlapping position to test.\n\n[number] tolerance=0\n  The tolerance of the overlapping, set to 0 for no tolerance.",
+        "prefix": "IsOverlapping"
+    },
+    "IsOverlappingArea": {
+        "body": [
+            "IsOverlappingArea(${1:navArea})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[CNavArea] navArea\n  The CNavArea to test against.",
+        "prefix": "IsOverlappingArea"
+    },
+    "IsRoughlySquare": {
+        "body": [
+            "IsRoughlySquare()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "IsRoughlySquare"
+    },
+    "IsUnderwater": {
+        "body": [
+            "IsUnderwater()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "IsUnderwater"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "IsValid"
+    },
+    "IsVisible": {
+        "body": [
+            "IsVisible(${1:pos})$0"
+        ],
+        "description": "CNAVAREA [Server] Returns whether we can be seen from the given position.\n\n[Vector] pos\n  The position to check.",
+        "prefix": "IsVisible"
+    },
+    "PlaceOnGround": {
+        "body": [
+            "PlaceOnGround(${1:corner})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] corner\n  The corner(s) to drop, uses NavCorner_ Enums",
+        "prefix": "PlaceOnGround"
+    },
+    "PopOpenList": {
+        "body": [
+            "PopOpenList()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "PopOpenList"
+    },
+    "Remove": {
+        "body": [
+            "Remove()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "Remove"
+    },
+    "RemoveFromClosedList": {
+        "body": [
+            "RemoveFromClosedList()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "RemoveFromClosedList"
+    },
+    "SetAttributes": {
+        "body": [
+            "SetAttributes(${1:attribs})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] attribs\n  The attribute bitflag. See NAV_MESH_ Enums",
+        "prefix": "SetAttributes"
+    },
+    "SetCorner": {
+        "body": [
+            "SetCorner(${1:corner}, ${2:position})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] corner\n  The corner to set, uses NavCorner_ Enums\n\n[Vector] position\n  The new position to set.",
+        "prefix": "SetCorner"
+    },
+    "SetParent": {
+        "body": [
+            "SetParent(${1:parent})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[CNavArea] parent\n  The new parent to set",
+        "prefix": "SetParent"
+    },
+    "SetTotalCost": {
+        "body": [
+            "SetTotalCost(${1:cost})$0"
+        ],
+        "description": "CNAVAREA [Server] \n\n[number] cost\n  The total cost of the path to set.\n\nMust be above or equal 0.",
+        "prefix": "SetTotalCost"
+    },
+    "UpdateOnOpenList": {
+        "body": [
+            "UpdateOnOpenList()$0"
+        ],
+        "description": "CNAVAREA [Server]",
+        "prefix": "UpdateOnOpenList"
+    }
+}

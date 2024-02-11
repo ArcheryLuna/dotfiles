@@ -1,0 +1,9 @@
+{
+	"gmod/GetGamemode": {
+		"body": [
+			"gmod.GetGamemode()$0"
+		],
+		"description": "Returns",
+		"prefix": "gmod.GetGamemode"
+	}
+}

@@ -1,0 +1,16 @@
+{
+    "GetName": {
+        "body": [
+            "GetName()$0"
+        ],
+        "description": "DKILLICON [Client]",
+        "prefix": "GetName"
+    },
+    "SetName": {
+        "body": [
+            "SetName(${1:iconName})$0"
+        ],
+        "description": "DKILLICON [Client] \n\n[string] iconName\n  The name of the killicon to be displayed.",
+        "prefix": "SetName"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "construct.Magnet": {
+        "body": [
+            "construct.Magnet(${1:ply}, ${2:pos}, ${3:ang}, ${4:model}, ${5:material}, ${6:key}, ${7:maxObjects}, ${8:strength}, ${9:nopull=0}, ${10:allowrot=0}, ${11:startOn=0}, ${12:toggle}, ${13:vel=Vector(0,0,0)}, ${14:aVel=Angle(0,0,0)}, ${15:frozen=false})$0"
+        ],
+        "description": "CONSTRUCT [Server] Creates a magnet.\n\n[Player] ply\n  Player that will have the numpad control over the magnet\n\n[Vector] pos\n  The position of the magnet\n\n[Angle] ang\n  The angles of the magnet\n\n[string] model\n  The model of the maget\n\n[string] material\n  Material of the magnet ( texture )\n\n[number] key\n  The key to toggle the magnet, see KEY_ Enums\n\n[number] maxObjects\n  Maximum amount of objects the magnet can hold\n\n[number] strength\n  Strength of the magnet\n\n[number] nopull=0\n  If \u003e 0, disallows the magnet to pull objects towards it\n\n[number] allowrot=0\n  If \u003e 0, allows rotation of the objects attached\n\n[number] startOn=0\n  If \u003e 0, enabled from spawn\n\n[number] toggle\n  If != 0, pressing the key toggles the magnet, otherwise you'll have to hold the key to keep it enabled\n\n[Vector] vel=Vector(0,0,0)\n  Velocity to set on spawn\n\n[Angle] aVel=Angle(0,0,0)\n  Angular velocity to set on spawn\n\n[boolean] frozen=false\n  Freeze the magnet on start",
+        "prefix": "construct.Magnet"
+    },
+    "construct.SetPhysProp": {
+        "body": [
+            "construct.SetPhysProp(${1:ply}, ${2:ent}, ${3:physObjID}, ${4:physObj}, ${5:data})$0"
+        ],
+        "description": "CONSTRUCT [Server] Sets props physical properties.\n\n[Player] ply\n  The player. This variable is not used and can be left out.\n\n[Entity] ent\n  The entity to apply properties to\n\n[number] physObjID\n  You can use this or the argument below. This will be used in case you don't provide argument below.\n\n[PhysObj] physObj\n  The physics object to apply the properties to\n\n[table] data\n  The table containing properties to apply. See PhysProperties structure",
+        "prefix": "construct.SetPhysProp"
+    }
+}

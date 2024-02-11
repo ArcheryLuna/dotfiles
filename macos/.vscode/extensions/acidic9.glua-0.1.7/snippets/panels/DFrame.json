@@ -1,0 +1,184 @@
+{
+    "Center": {
+        "body": [
+            "Center()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "Center"
+    },
+    "Close": {
+        "body": [
+            "Close()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "Close"
+    },
+    "GetBackgroundBlur": {
+        "body": [
+            "GetBackgroundBlur()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetBackgroundBlur"
+    },
+    "GetDeleteOnClose": {
+        "body": [
+            "GetDeleteOnClose()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetDeleteOnClose"
+    },
+    "GetDraggable": {
+        "body": [
+            "GetDraggable()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetDraggable"
+    },
+    "GetIsMenu": {
+        "body": [
+            "GetIsMenu()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetIsMenu"
+    },
+    "GetMinHeight": {
+        "body": [
+            "GetMinHeight()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetMinHeight"
+    },
+    "GetMinWidth": {
+        "body": [
+            "GetMinWidth()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetMinWidth"
+    },
+    "GetPaintShadow": {
+        "body": [
+            "GetPaintShadow()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetPaintShadow"
+    },
+    "GetScreenLock": {
+        "body": [
+            "GetScreenLock()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetScreenLock"
+    },
+    "GetSizable": {
+        "body": [
+            "GetSizable()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetSizable"
+    },
+    "GetTitle": {
+        "body": [
+            "GetTitle()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "GetTitle"
+    },
+    "IsActive": {
+        "body": [
+            "IsActive()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "IsActive"
+    },
+    "OnClose": {
+        "body": [
+            "OnClose()$0"
+        ],
+        "description": "DFRAME [Client]",
+        "prefix": "OnClose"
+    },
+    "SetBackgroundBlur": {
+        "body": [
+            "SetBackgroundBlur(${1:blur})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[boolean] blur\n  Whether or not to create background blur or not.",
+        "prefix": "SetBackgroundBlur"
+    },
+    "SetDeleteOnClose": {
+        "body": [
+            "SetDeleteOnClose(${1:shouldDelete})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[boolean] shouldDelete\n  Whether or not to delete the frame on close. This is true by default.",
+        "prefix": "SetDeleteOnClose"
+    },
+    "SetDraggable": {
+        "body": [
+            "SetDraggable(${1:draggable})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[boolean] draggable\n  Whether to be draggable or not.",
+        "prefix": "SetDraggable"
+    },
+    "SetIcon": {
+        "body": [
+            "SetIcon(${1:path})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[string] path\n  Set to nil to remove the icon.\n\nOtherwise, set to file path to create the icon.",
+        "prefix": "SetIcon"
+    },
+    "SetIsMenu": {
+        "body": [
+            "SetIsMenu(${1:isMenu})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[boolean] isMenu\n  Whether or not this frame is a menu component.",
+        "prefix": "SetIsMenu"
+    },
+    "SetMinHeight": {
+        "body": [
+            "SetMinHeight(${1:minH})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[number] minH\n  The minimum height the user can resize the frame to.",
+        "prefix": "SetMinHeight"
+    },
+    "SetMinWidth": {
+        "body": [
+            "SetMinWidth(${1:minW})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[number] minW\n  The minimum width the user can resize the frame to.",
+        "prefix": "SetMinWidth"
+    },
+    "SetPaintShadow": {
+        "body": [
+            "SetPaintShadow(${1:shouldPaint})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[boolean] shouldPaint\n  Whether or not to draw the shadow. This is true by default.",
+        "prefix": "SetPaintShadow"
+    },
+    "SetScreenLock": {
+        "body": [
+            "SetScreenLock(${1:lock})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[boolean] lock\n  If true, the frame cannot be dragged outside of the screen bounds",
+        "prefix": "SetScreenLock"
+    },
+    "SetSizable": {
+        "body": [
+            "SetSizable(${1:sizeable})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[boolean] sizeable\n  Whether the frame should be resizeable or not.",
+        "prefix": "SetSizable"
+    },
+    "SetTitle": {
+        "body": [
+            "SetTitle(${1:title})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[string] title\n  New title of the frame.",
+        "prefix": "SetTitle"
+    },
+    "ShowCloseButton": {
+        "body": [
+            "ShowCloseButton(${1:show})$0"
+        ],
+        "description": "DFRAME [Client] \n\n[boolean] show\n  false hides the control box; this is true by default.",
+        "prefix": "ShowCloseButton"
+    }
+}

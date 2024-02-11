@@ -1,0 +1,87 @@
+{
+	"name": "git-techreview",
+	"displayName": "Git-TechReview",
+	"description": "Convert between a Markdown topic store in a Git repo to a Word .docx file stored in OneDrive, and vice versa. The purpose is to enable writers authoring topics in Markdown to use the review and collaboration capabilities of Word Online while developing their content.",
+	"version": "0.0.3",
+	"publisher": "Git-TechReview",
+	"engines": {
+		"vscode": "^1.25.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"git",
+		"markdown",
+		"word",
+		"docx",
+		"tech review"
+	],
+	"activationEvents": [
+		"onLanguage:markdown"
+	],
+	"main": "./extension",
+	"markdown": "github",
+	"contributes": {
+		"commands": [
+			{
+				"category": "GitTechReview",
+				"command": "extension.exportToWord",
+				"title": "Export to .docx",
+				"icon": {
+					"light": "./images/export-to-word_light.png",
+					"dark": "./images/export-to-word_dark.png"
+				}
+			},
+			{
+				"category": "GitTechReview",
+				"command": "extension.importToMd",
+				"title": "Import to .md",
+				"icon": {
+					"light": "./images/import-to-md_light.png",
+					"dark": "./images/import-to-md_dark.png"
+				}
+			}
+		],
+		"menus": {
+			"editor/title": [
+				{
+					"when": "resourceLangId == markdown",
+					"command": "extension.exportToWord",
+					"group": "navigation"
+				},
+				{
+					"when": "resourceLangId == markdown",
+					"command": "extension.importToMd",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^7.0.43",
+		"eslint": "^4.11.0",
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6"
+	},
+	"dependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "https://office.visualstudio.com/MAX/PIE/_git/Git-TechReview"
+	},
+	"__metadata": {
+		"id": "2ff045a6-7f6c-4b43-a0ba-7bc99e45d29c",
+		"publisherId": "6d06d1db-5c21-4dd0-be43-740ebdc55881",
+		"publisherDisplayName": "Git-TechReview",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033020
+	}
+}

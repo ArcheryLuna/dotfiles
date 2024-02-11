@@ -1,0 +1,9 @@
+{
+    "package.seeall": {
+        "body": [
+            "package.seeall(${1:module})$0"
+        ],
+        "description": "PACKAGE [Shared/Menu] \n\n[table] module\n  The module table to be given a metatable",
+        "prefix": "package.seeall"
+    }
+}

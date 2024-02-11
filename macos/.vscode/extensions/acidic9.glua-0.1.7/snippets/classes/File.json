@@ -1,0 +1,149 @@
+{
+    "Close": {
+        "body": [
+            "Close()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "Close"
+    },
+    "Flush": {
+        "body": [
+            "Flush()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "Flush"
+    },
+    "Read": {
+        "body": [
+            "Read(${1:length})$0"
+        ],
+        "description": "FILE [Shared] Reads the specified amount of chars and returns them as a binary string.\n\n[number] length\n  Reads the specified amount of chars.",
+        "prefix": "Read"
+    },
+    "ReadBool": {
+        "body": [
+            "ReadBool()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "ReadBool"
+    },
+    "ReadByte": {
+        "body": [
+            "ReadByte()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "ReadByte"
+    },
+    "ReadDouble": {
+        "body": [
+            "ReadDouble()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "ReadDouble"
+    },
+    "ReadFloat": {
+        "body": [
+            "ReadFloat()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "ReadFloat"
+    },
+    "ReadLine": {
+        "body": [
+            "ReadLine()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "ReadLine"
+    },
+    "ReadLong": {
+        "body": [
+            "ReadLong()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "ReadLong"
+    },
+    "ReadShort": {
+        "body": [
+            "ReadShort()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "ReadShort"
+    },
+    "Seek": {
+        "body": [
+            "Seek(${1:pos})$0"
+        ],
+        "description": "FILE [Shared] \n\n[number] pos\n  Pointer position.",
+        "prefix": "Seek"
+    },
+    "Size": {
+        "body": [
+            "Size()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "Size"
+    },
+    "Skip": {
+        "body": [
+            "Skip(${1:amount})$0"
+        ],
+        "description": "FILE [Shared] \n\n[number] amount\n  The amount of chars to skip, can be negative to skip backwards.",
+        "prefix": "Skip"
+    },
+    "Tell": {
+        "body": [
+            "Tell()$0"
+        ],
+        "description": "FILE [Shared]",
+        "prefix": "Tell"
+    },
+    "Write": {
+        "body": [
+            "Write(${1:data})$0"
+        ],
+        "description": "FILE [Shared] \n\n[string] data\n  Binary data to write to the file.",
+        "prefix": "Write"
+    },
+    "WriteBool": {
+        "body": [
+            "WriteBool(${1:bool})$0"
+        ],
+        "description": "FILE [Shared] \n\n[boolean] bool\n  The bool to be written to the file.",
+        "prefix": "WriteBool"
+    },
+    "WriteByte": {
+        "body": [
+            "WriteByte(${1:uint8})$0"
+        ],
+        "description": "FILE [Shared] \n\n[number] uint8\n  The 8-bit unsigned integer to be written to the file.",
+        "prefix": "WriteByte"
+    },
+    "WriteDouble": {
+        "body": [
+            "WriteDouble(${1:double})$0"
+        ],
+        "description": "FILE [Shared] \n\n[number] double\n  The double to be written to the file.",
+        "prefix": "WriteDouble"
+    },
+    "WriteFloat": {
+        "body": [
+            "WriteFloat(${1:float})$0"
+        ],
+        "description": "FILE [Shared] \n\n[number] float\n  The float to be written to the file.",
+        "prefix": "WriteFloat"
+    },
+    "WriteLong": {
+        "body": [
+            "WriteLong(${1:int32})$0"
+        ],
+        "description": "FILE [Shared] \n\n[number] int32\n  The 32-bit signed integer to be written to the file.",
+        "prefix": "WriteLong"
+    },
+    "WriteShort": {
+        "body": [
+            "WriteShort(${1:int16})$0"
+        ],
+        "description": "FILE [Shared] \n\n[number] int16\n  The 16-bit signed integer to be written to the file.",
+        "prefix": "WriteShort"
+    }
+}

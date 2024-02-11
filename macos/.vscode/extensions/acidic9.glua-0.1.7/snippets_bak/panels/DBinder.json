@@ -1,0 +1,44 @@
+{
+	"DBinder/GetSelectedNumber": {
+		"body": [
+			"GetSelectedNumber()$0"
+		],
+		"description": "Gets the code of the key currently bound by the DBinder. Same as",
+		"prefix": "GetSelectedNumber"
+	},
+	"DBinder/GetValue": {
+		"body": [
+			"GetValue()$0"
+		],
+		"description": "Gets the code of the key currently bound by the DBinder. Same as",
+		"prefix": "GetValue"
+	},
+	"DBinder/SetSelected": {
+		"body": [
+			"SetSelected(${1:keyCode})$0"
+		],
+		"description": "Sets the current key bound by the DBinder, and updates the button\u0026#39;s text.",
+		"prefix": "SetSelected"
+	},
+	"DBinder/SetSelectedNumber": {
+		"body": [
+			"SetSelectedNumber(${1:keyCode})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetSelectedNumber"
+	},
+	"DBinder/SetValue": {
+		"body": [
+			"SetValue(${1:keyCode})$0"
+		],
+		"description": "Alias of",
+		"prefix": "SetValue"
+	},
+	"DBinder/UpdateText": {
+		"body": [
+			"UpdateText()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UpdateText"
+	}
+}

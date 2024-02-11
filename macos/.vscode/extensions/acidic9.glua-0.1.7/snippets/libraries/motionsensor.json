@@ -1,0 +1,79 @@
+{
+    "motionsensor.BuildSkeleton": {
+        "body": [
+            "motionsensor.BuildSkeleton(${1:translator}, ${2:player}, ${3:rotation})$0"
+        ],
+        "description": "MOTIONSENSOR [Shared] \n\n[table] translator\n  \n\n[Player] player\n  \n\n[Angle] rotation",
+        "prefix": "motionsensor.BuildSkeleton"
+    },
+    "motionsensor.ChooseBuilderFromEntity": {
+        "body": [
+            "motionsensor.ChooseBuilderFromEntity(${1:ent})$0"
+        ],
+        "description": "MOTIONSENSOR [Shared] \n\n[Entity] ent\n  Entity to choose builder for",
+        "prefix": "motionsensor.ChooseBuilderFromEntity"
+    },
+    "motionsensor.GetColourMaterial": {
+        "body": [
+            "motionsensor.GetColourMaterial()$0"
+        ],
+        "description": "MOTIONSENSOR [Client/Menu]",
+        "prefix": "motionsensor.GetColourMaterial"
+    },
+    "motionsensor.GetSkeleton": {
+        "body": [
+            "motionsensor.GetSkeleton()$0"
+        ],
+        "description": "MOTIONSENSOR [Client]",
+        "prefix": "motionsensor.GetSkeleton"
+    },
+    "motionsensor.IsActive": {
+        "body": [
+            "motionsensor.IsActive()$0"
+        ],
+        "description": "MOTIONSENSOR [Client]",
+        "prefix": "motionsensor.IsActive"
+    },
+    "motionsensor.IsAvailable": {
+        "body": [
+            "motionsensor.IsAvailable()$0"
+        ],
+        "description": "MOTIONSENSOR [Client/Menu]",
+        "prefix": "motionsensor.IsAvailable"
+    },
+    "motionsensor.ProcessAngle": {
+        "body": [
+            "motionsensor.ProcessAngle(${1:translator}, ${2:sensor}, ${3:pos}, ${4:ang}, ${5:special_vectors}, ${6:boneid}, ${7:v})$0"
+        ],
+        "description": "MOTIONSENSOR [Shared] \n\n[table] translator\n  \n\n[table] sensor\n  \n\n[Vector] pos\n  \n\n[Angle] ang\n  \n\n[table] special_vectors\n  \n\n[number] boneid\n  \n\n[table] v",
+        "prefix": "motionsensor.ProcessAngle"
+    },
+    "motionsensor.ProcessAnglesTable": {
+        "body": [
+            "motionsensor.ProcessAnglesTable(${1:translator}, ${2:sensor}, ${3:pos}, ${4:rotation})$0"
+        ],
+        "description": "MOTIONSENSOR [Shared] \n\n[table] translator\n  \n\n[table] sensor\n  \n\n[Vector] pos\n  \n\n[Angle] rotation",
+        "prefix": "motionsensor.ProcessAnglesTable"
+    },
+    "motionsensor.ProcessPositionTable": {
+        "body": [
+            "motionsensor.ProcessPositionTable(${1:translator}, ${2:sensor})$0"
+        ],
+        "description": "MOTIONSENSOR [Shared] \n\n[table] translator\n  \n\n[table] sensor",
+        "prefix": "motionsensor.ProcessPositionTable"
+    },
+    "motionsensor.Start": {
+        "body": [
+            "motionsensor.Start()$0"
+        ],
+        "description": "MOTIONSENSOR [Client/Menu]",
+        "prefix": "motionsensor.Start"
+    },
+    "motionsensor.Stop": {
+        "body": [
+            "motionsensor.Stop()$0"
+        ],
+        "description": "MOTIONSENSOR [Client]",
+        "prefix": "motionsensor.Stop"
+    }
+}

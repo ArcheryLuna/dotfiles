@@ -1,0 +1,23 @@
+{
+	"DKillIcon/GetName": {
+		"body": [
+			"GetName()$0"
+		],
+		"description": "Gets the killicon being shown.",
+		"prefix": "GetName"
+	},
+	"DKillIcon/SetName": {
+		"body": [
+			"SetName(${1:iconName})$0"
+		],
+		"description": "Sets the killicon to be displayed. You should call",
+		"prefix": "SetName"
+	},
+	"DKillIcon/SizeToContents": {
+		"body": [
+			"SizeToContents()$0"
+		],
+		"description": "Resizes the DKillIcon to fit the icon currently being shown. You should call this after",
+		"prefix": "SizeToContents"
+	}
+}

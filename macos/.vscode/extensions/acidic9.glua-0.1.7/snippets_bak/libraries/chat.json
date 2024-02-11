@@ -1,0 +1,44 @@
+{
+	"chat/AddText": {
+		"body": [
+			"chat.AddText(${1:arguments})$0"
+		],
+		"description": "Adds text to the local player\u0026#39;s chat box (which only they can read).",
+		"prefix": "chat.AddText"
+	},
+	"chat/Close": {
+		"body": [
+			"chat.Close()$0"
+		],
+		"description": "Closes the chat window.",
+		"prefix": "chat.Close"
+	},
+	"chat/GetChatBoxPos": {
+		"body": [
+			"chat.GetChatBoxPos()$0"
+		],
+		"description": "Returns the chatbox position.",
+		"prefix": "chat.GetChatBoxPos"
+	},
+	"chat/GetChatBoxSize": {
+		"body": [
+			"chat.GetChatBoxSize()$0"
+		],
+		"description": "Returns the chatbox size.",
+		"prefix": "chat.GetChatBoxSize"
+	},
+	"chat/Open": {
+		"body": [
+			"chat.Open(${1:mode})$0"
+		],
+		"description": "Opens the chat window.",
+		"prefix": "chat.Open"
+	},
+	"chat/PlaySound": {
+		"body": [
+			"chat.PlaySound()$0"
+		],
+		"description": "Plays the chat \u0026#34;tick\u0026#34; sound.",
+		"prefix": "chat.PlaySound"
+	}
+}

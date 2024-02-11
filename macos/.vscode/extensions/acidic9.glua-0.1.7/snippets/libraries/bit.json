@@ -1,0 +1,86 @@
+{
+    "bit.arshift": {
+        "body": [
+            "bit.arshift(${1:value}, ${2:shiftCount})$0"
+        ],
+        "description": "BIT [Shared/Menu] Returns the arithmetically shifted value.\n\n[number] value\n  The value to be manipulated.\n\n[number] shiftCount\n  Amounts of bits to shift.",
+        "prefix": "bit.arshift"
+    },
+    "bit.band": {
+        "body": [
+            "bit.band(${1:value}, ${2:otherValues=nil})$0"
+        ],
+        "description": "BIT [Shared/Menu] Performs the bitwise \"and\" for all values specified.\n\n[number] value\n  The value to be manipulated.\n\n[number] otherValues=nil\n  Values bit to perform bitwise \"and\" with. Optional.",
+        "prefix": "bit.band"
+    },
+    "bit.bnot": {
+        "body": [
+            "bit.bnot(${1:value})$0"
+        ],
+        "description": "BIT [Shared/Menu] \n\n[number] value\n  The value to be inverted.",
+        "prefix": "bit.bnot"
+    },
+    "bit.bor": {
+        "body": [
+            "bit.bor(${1:value1}, ${2:...})$0"
+        ],
+        "description": "BIT [Shared/Menu] Returns the bitwise OR of all values specified.\n\n[number] value1\n  The first value.\n\n[vararg] ...\n  Extra values to be evaluated. (must all be numbers)",
+        "prefix": "bit.bor"
+    },
+    "bit.bswap": {
+        "body": [
+            "bit.bswap(${1:value})$0"
+        ],
+        "description": "BIT [Shared/Menu] \n\n[number] value\n  The value to be byte swapped.",
+        "prefix": "bit.bswap"
+    },
+    "bit.bxor": {
+        "body": [
+            "bit.bxor(${1:value}, ${2:otherValues=nil})$0"
+        ],
+        "description": "BIT [Shared/Menu] Returns the bitwise xor of all values specified.\n\n[number] value\n  The value to be manipulated.\n\n[number] otherValues=nil\n  Values bit xor with. Optional.",
+        "prefix": "bit.bxor"
+    },
+    "bit.lshift": {
+        "body": [
+            "bit.lshift(${1:value}, ${2:shiftCount})$0"
+        ],
+        "description": "BIT [Shared/Menu] Returns the left shifted value.\n\n[number] value\n  The value to be manipulated.\n\n[number] shiftCount\n  Amounts of bits to shift left by.",
+        "prefix": "bit.lshift"
+    },
+    "bit.rol": {
+        "body": [
+            "bit.rol(${1:value}, ${2:shiftCount})$0"
+        ],
+        "description": "BIT [Shared/Menu] Returns the left rotated value.\n\n[number] value\n  The value to be manipulated.\n\n[number] shiftCount\n  Amounts of bits to rotate left by.",
+        "prefix": "bit.rol"
+    },
+    "bit.ror": {
+        "body": [
+            "bit.ror(${1:value}, ${2:shiftCount})$0"
+        ],
+        "description": "BIT [Shared/Menu] Returns the right rotated value.\n\n[number] value\n  The value to be manipulated.\n\n[number] shiftCount\n  Amounts of bits to rotate right by.",
+        "prefix": "bit.ror"
+    },
+    "bit.rshift": {
+        "body": [
+            "bit.rshift(${1:value}, ${2:shiftCount})$0"
+        ],
+        "description": "BIT [Shared/Menu] Returns the right shifted value.\n\n[number] value\n  The value to be manipulated.\n\n[number] shiftCount\n  Amounts of bits to shift right by.",
+        "prefix": "bit.rshift"
+    },
+    "bit.tobit": {
+        "body": [
+            "bit.tobit(${1:value})$0"
+        ],
+        "description": "BIT [Shared/Menu] \n\n[number] value\n  The value to be normalized.",
+        "prefix": "bit.tobit"
+    },
+    "bit.tohex": {
+        "body": [
+            "bit.tohex(${1:value}, ${2:digits=8})$0"
+        ],
+        "description": "BIT [Shared/Menu] Returns the hexadecimal representation of the number with the specified digits.\n\n[number] value\n  The value to be normalized.\n\n[number] digits=8\n  The number of digits. Optional",
+        "prefix": "bit.tohex"
+    }
+}

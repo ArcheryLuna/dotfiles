@@ -1,0 +1,9 @@
+{
+    "OpenForPos": {
+        "body": [
+            "OpenForPos(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "DBUBBLECONTAINER [Client] Sets the speech bubble position and size along with the dialog point position.\n\n[number] x\n  The x position of the dialog point. If this is set to a value greater than half of the set width, the entire bubble container will be moved in addition to the dialog point.\n\n[number] y\n  The y position of the bubble container. Has no effect unless set to a value greater than the set height + 64 pixels.\n\n[number] w\n  The width of the bubble container.\n\n[number] h\n  The height of the bubble container.",
+        "prefix": "OpenForPos"
+    }
+}

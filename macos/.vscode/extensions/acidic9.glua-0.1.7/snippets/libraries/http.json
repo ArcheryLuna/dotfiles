@@ -1,0 +1,16 @@
+{
+    "http.Fetch": {
+        "body": [
+            "http.Fetch(${1:url}, ${2:onSuccess=nil}, ${3:onFailure=nil}, ${4:headers={}})$0"
+        ],
+        "description": "HTTP [Shared/Menu] Launches a GET request.\n\n[string] url\n  The URL of the website to fetch.\n\n[function] onSuccess=nil\n  Function to be called on success. Arguments are\n\n string body\n string size - equal to string.len(body)\n table headers\n number code - The HTTP success code\n\n[function] onFailure=nil\n  Function to be called on failure. Arguments are\n\n string error - The error message\n\n[table] headers={}\n  KeyValue table for headers",
+        "prefix": "http.Fetch"
+    },
+    "http.Post": {
+        "body": [
+            "http.Post(${1:url}, ${2:parameters}, ${3:onSuccess=nil}, ${4:onFailure=nil}, ${5:headers={}})$0"
+        ],
+        "description": "HTTP [Shared/Menu] Sends an asynchronous POST request to a HTTP server. HTTP requests returning a status code \u003e= 400 are still considered a success and will call the onSuccess callback. The onFailure callback is usually only called on DNS or TCP errors (e.g. the website is unavailable or the domain does not exist)\n\n[string] url\n  The url to of the website to fetch.\n\n[table] parameters\n  The post parameters to be send to the server. Keys and values must be strings.\n\n[function] onSuccess=nil\n  The function called on success: function( string responseText, number contentLength, table responseHeaders, number statusCode )\n\n[function] onFailure=nil\n  The function called on failure: function( string errorMessage )\n\n[table] headers={}\n  KeyValue table for headers",
+        "prefix": "http.Post"
+    }
+}

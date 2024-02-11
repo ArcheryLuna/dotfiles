@@ -1,0 +1,79 @@
+{
+    "GetBool": {
+        "body": [
+            "GetBool()$0"
+        ],
+        "description": "CONVAR [Shared]",
+        "prefix": "GetBool"
+    },
+    "GetDefault": {
+        "body": [
+            "GetDefault()$0"
+        ],
+        "description": "CONVAR [Shared]",
+        "prefix": "GetDefault"
+    },
+    "GetFloat": {
+        "body": [
+            "GetFloat()$0"
+        ],
+        "description": "CONVAR [Shared]",
+        "prefix": "GetFloat"
+    },
+    "GetHelpText": {
+        "body": [
+            "GetHelpText()$0"
+        ],
+        "description": "CONVAR [Shared]",
+        "prefix": "GetHelpText"
+    },
+    "GetInt": {
+        "body": [
+            "GetInt()$0"
+        ],
+        "description": "CONVAR [Shared]",
+        "prefix": "GetInt"
+    },
+    "GetName": {
+        "body": [
+            "GetName()$0"
+        ],
+        "description": "CONVAR [Shared]",
+        "prefix": "GetName"
+    },
+    "GetString": {
+        "body": [
+            "GetString()$0"
+        ],
+        "description": "CONVAR [Shared] Returns the current ConVar value as a string.",
+        "prefix": "GetString"
+    },
+    "SetBool": {
+        "body": [
+            "SetBool(${1:value})$0"
+        ],
+        "description": "CONVAR [Shared] \n\n[boolean] value\n  Value to set the ConVar to.",
+        "prefix": "SetBool"
+    },
+    "SetFloat": {
+        "body": [
+            "SetFloat(${1:value})$0"
+        ],
+        "description": "CONVAR [Shared] \n\n[number] value\n  Value to set the ConVar to.",
+        "prefix": "SetFloat"
+    },
+    "SetInt": {
+        "body": [
+            "SetInt(${1:value})$0"
+        ],
+        "description": "CONVAR [Shared] \n\n[number] value\n  Value to set the ConVar to.",
+        "prefix": "SetInt"
+    },
+    "SetString": {
+        "body": [
+            "SetString(${1:value})$0"
+        ],
+        "description": "CONVAR [Shared] \n\n[string] value\n  Value to set the ConVar to.",
+        "prefix": "SetString"
+    }
+}

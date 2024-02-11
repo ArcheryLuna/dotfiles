@@ -1,0 +1,58 @@
+{
+	"ITexture/Download": {
+		"body": [
+			"Download()$0"
+		],
+		"description": "Invokes the generator of the texture. Reloads file based textures from disk and clears render target textures.",
+		"prefix": "Download"
+	},
+	"ITexture/GetColor": {
+		"body": [
+			"GetColor(${1:x}, ${2:y})$0"
+		],
+		"description": "Returns the color of the specified pixel, only works for textures created from PNG files.",
+		"prefix": "GetColor"
+	},
+	"ITexture/GetMappingHeight": {
+		"body": [
+			"GetMappingHeight()$0"
+		],
+		"description": "Returns the true unmodified height of the texture.",
+		"prefix": "GetMappingHeight"
+	},
+	"ITexture/GetMappingWidth": {
+		"body": [
+			"GetMappingWidth()$0"
+		],
+		"description": "Returns the true unmodified width of the texture.",
+		"prefix": "GetMappingWidth"
+	},
+	"ITexture/GetName": {
+		"body": [
+			"GetName()$0"
+		],
+		"description": "Returns the name of the texture, in most cases the path.",
+		"prefix": "GetName"
+	},
+	"ITexture/Height": {
+		"body": [
+			"Height()$0"
+		],
+		"description": "Returns the modified height of the texture, this value may be affected by mipmapping and other factors.",
+		"prefix": "Height"
+	},
+	"ITexture/IsError": {
+		"body": [
+			"IsError()$0"
+		],
+		"description": "Returns whenever the texture is invalid or not.",
+		"prefix": "IsError"
+	},
+	"ITexture/Width": {
+		"body": [
+			"Width()$0"
+		],
+		"description": "Returns the modified width of the texture, this value may be affected by mipmapping and other factors.",
+		"prefix": "Width"
+	}
+}

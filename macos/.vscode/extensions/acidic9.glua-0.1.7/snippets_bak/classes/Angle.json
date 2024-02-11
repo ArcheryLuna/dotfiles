@@ -1,0 +1,65 @@
+{
+	"Angle/Forward": {
+		"body": [
+			"Forward()$0"
+		],
+		"description": "Returns a normal vector facing in the direction that the angle points.",
+		"prefix": "Forward"
+	},
+	"Angle/IsZero": {
+		"body": [
+			"IsZero()$0"
+		],
+		"description": "Returns whether the pitch, yaw and roll are 0 or not.",
+		"prefix": "IsZero"
+	},
+	"Angle/Normalize": {
+		"body": [
+			"Normalize()$0"
+		],
+		"description": "Normalizes the angles by applying a module with 360 to pitch, yaw and roll.",
+		"prefix": "Normalize"
+	},
+	"Angle/Right": {
+		"body": [
+			"Right()$0"
+		],
+		"description": "Returns a normal vector facing in the direction that points right relative to the angle\u0026#39;s direction.",
+		"prefix": "Right"
+	},
+	"Angle/RotateAroundAxis": {
+		"body": [
+			"RotateAroundAxis(${1:axis}, ${2:rotation})$0"
+		],
+		"description": "Rotates the angle around the specified axis by the specified degrees.",
+		"prefix": "RotateAroundAxis"
+	},
+	"Angle/Set": {
+		"body": [
+			"Set(${1:originalAngle})$0"
+		],
+		"description": "Copies pitch, yaw and roll from the second angle to the first.",
+		"prefix": "Set"
+	},
+	"Angle/SnapTo": {
+		"body": [
+			"SnapTo(${1:axis}, ${2:target})$0"
+		],
+		"description": "Snaps the angle to nearest interval of degrees.",
+		"prefix": "SnapTo"
+	},
+	"Angle/Up": {
+		"body": [
+			"Up()$0"
+		],
+		"description": "Returns a normal vector facing in the direction that points up relative to the angle\u0026#39;s direction.",
+		"prefix": "Up"
+	},
+	"Angle/Zero": {
+		"body": [
+			"Zero()$0"
+		],
+		"description": "Sets pitch, yaw and roll to 0. This function is faster than doing it manually.",
+		"prefix": "Zero"
+	}
+}

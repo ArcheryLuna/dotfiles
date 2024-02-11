@@ -1,0 +1,163 @@
+{
+	"CNewParticleEffect/AddControlPoint": {
+		"body": [
+			"AddControlPoint(${1:cpID}, ${2:ent}, ${3:partAttachment}, ${4:entAttachment=0}, ${5:)})$0"
+		],
+		"description": "Adds a control point to the particle system.",
+		"prefix": "AddControlPoint"
+	},
+	"CNewParticleEffect/GetAutoUpdateBBox": {
+		"body": [
+			"GetAutoUpdateBBox()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetAutoUpdateBBox"
+	},
+	"CNewParticleEffect/GetEffectName": {
+		"body": [
+			"GetEffectName()$0"
+		],
+		"description": "Returns the name of the particle effect this system is set to emit.",
+		"prefix": "GetEffectName"
+	},
+	"CNewParticleEffect/GetHighestControlPoint": {
+		"body": [
+			"GetHighestControlPoint()$0"
+		],
+		"description": "Returns the highest control point number for given particle system.",
+		"prefix": "GetHighestControlPoint"
+	},
+	"CNewParticleEffect/GetOwner": {
+		"body": [
+			"GetOwner()$0"
+		],
+		"description": "Returns the owner of the particle system, the entity the particle system is attached to.",
+		"prefix": "GetOwner"
+	},
+	"CNewParticleEffect/IsFinished": {
+		"body": [
+			"IsFinished()$0"
+		],
+		"description": "Returns whether the particle system has finished emitting particles or not.",
+		"prefix": "IsFinished"
+	},
+	"CNewParticleEffect/IsValid": {
+		"body": [
+			"IsValid()$0"
+		],
+		"description": "Returns whether the particle system is valid or not.",
+		"prefix": "IsValid"
+	},
+	"CNewParticleEffect/IsViewModelEffect": {
+		"body": [
+			"IsViewModelEffect()$0"
+		],
+		"description": "Returns whether the particle system is intended to be used on a view model?",
+		"prefix": "IsViewModelEffect"
+	},
+	"CNewParticleEffect/Render": {
+		"body": [
+			"Render()$0"
+		],
+		"description": "Forces the particle system to render using current rendering context.",
+		"prefix": "Render"
+	},
+	"CNewParticleEffect/Restart": {
+		"body": [
+			"Restart()$0"
+		],
+		"description": "Forces the particle system to restart emitting particles.",
+		"prefix": "Restart"
+	},
+	"CNewParticleEffect/SetControlPoint": {
+		"body": [
+			"SetControlPoint(${1:cpID}, ${2:value})$0"
+		],
+		"description": "Sets a value for given control point.",
+		"prefix": "SetControlPoint"
+	},
+	"CNewParticleEffect/SetControlPointEntity": {
+		"body": [
+			"SetControlPointEntity(${1:child}, ${2:parent})$0"
+		],
+		"description": "Essentially makes child control point follow the parent entity.",
+		"prefix": "SetControlPointEntity"
+	},
+	"CNewParticleEffect/SetControlPointForwardVector": {
+		"body": [
+			"SetControlPointForwardVector(${1:cpID}, ${2:forward})$0"
+		],
+		"description": "Sets the forward direction for given control point.",
+		"prefix": "SetControlPointForwardVector"
+	},
+	"CNewParticleEffect/SetControlPointOrientation": {
+		"body": [
+			"SetControlPointOrientation(${1:cpID}, ${2:forward}, ${3:right}, ${4:up})$0"
+		],
+		"description": "Sets the orientation for given control point.",
+		"prefix": "SetControlPointOrientation"
+	},
+	"CNewParticleEffect/SetControlPointParent": {
+		"body": [
+			"SetControlPointParent(${1:child}, ${2:parent})$0"
+		],
+		"description": "Essentially makes child control point follow the parent control point.",
+		"prefix": "SetControlPointParent"
+	},
+	"CNewParticleEffect/SetControlPointRightVector": {
+		"body": [
+			"SetControlPointRightVector(${1:cpID}, ${2:right})$0"
+		],
+		"description": "Sets the right direction for given control point.",
+		"prefix": "SetControlPointRightVector"
+	},
+	"CNewParticleEffect/SetControlPointUpVector": {
+		"body": [
+			"SetControlPointUpVector(${1:cpID}, ${2:upward})$0"
+		],
+		"description": "Sets the upward direction for given control point.",
+		"prefix": "SetControlPointUpVector"
+	},
+	"CNewParticleEffect/SetIsViewModelEffect": {
+		"body": [
+			"SetIsViewModelEffect(${1:isViewModel})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetIsViewModelEffect"
+	},
+	"CNewParticleEffect/SetShouldDraw": {
+		"body": [
+			"SetShouldDraw(${1:should})$0"
+		],
+		"description": "Forces the particle system to stop automatically rendering.",
+		"prefix": "SetShouldDraw"
+	},
+	"CNewParticleEffect/SetSortOrigin": {
+		"body": [
+			"SetSortOrigin(${1:origin})$0"
+		],
+		"description": "Sets the sort origin for given particle system. This is used as a helper to determine which particles are in front of which.",
+		"prefix": "SetSortOrigin"
+	},
+	"CNewParticleEffect/StartEmission": {
+		"body": [
+			"StartEmission(${1:infiniteOnly=false})$0"
+		],
+		"description": "Starts the particle emission.",
+		"prefix": "StartEmission"
+	},
+	"CNewParticleEffect/StopEmission": {
+		"body": [
+			"StopEmission(${1:infiniteOnly=false}, ${2:removeAllParticles=false}, ${3:wakeOnStop=false})$0"
+		],
+		"description": "Stops the particle emission.",
+		"prefix": "StopEmission"
+	},
+	"CNewParticleEffect/StopEmissionAndDestroyImmediately": {
+		"body": [
+			"StopEmissionAndDestroyImmediately()$0"
+		],
+		"description": "Stops particle emission and destroys all particles instantly.",
+		"prefix": "StopEmissionAndDestroyImmediately"
+	}
+}

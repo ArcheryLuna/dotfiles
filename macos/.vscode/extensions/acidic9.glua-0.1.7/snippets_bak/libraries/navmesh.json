@@ -1,0 +1,156 @@
+{
+	"navmesh/AddWalkableSeed": {
+		"body": [
+			"navmesh.AddWalkableSeed(${1:pos}, ${2:dir})$0"
+		],
+		"description": "Add this position and normal to the list of walkable positions, used before map generation with",
+		"prefix": "navmesh.AddWalkableSeed"
+	},
+	"navmesh/BeginGeneration": {
+		"body": [
+			"navmesh.BeginGeneration()$0"
+		],
+		"description": "Starts the generation of a new navmesh.",
+		"prefix": "navmesh.BeginGeneration"
+	},
+	"navmesh/ClearWalkableSeeds": {
+		"body": [
+			"navmesh.ClearWalkableSeeds()$0"
+		],
+		"description": "Clears all the walkable positions, used before calling",
+		"prefix": "navmesh.ClearWalkableSeeds"
+	},
+	"navmesh/Find": {
+		"body": [
+			"navmesh.Find(${1:pos}, ${2:radius}, ${3:stepdown}, ${4:stepup})$0"
+		],
+		"description": "Returns a bunch of areas within distance, used to find hiding spots by",
+		"prefix": "navmesh.Find"
+	},
+	"navmesh/GetAllNavAreas": {
+		"body": [
+			"navmesh.GetAllNavAreas()$0"
+		],
+		"description": "Returns an integer indexed table of all",
+		"prefix": "navmesh.GetAllNavAreas"
+	},
+	"navmesh/GetEditCursorPosition": {
+		"body": [
+			"navmesh.GetEditCursorPosition()$0"
+		],
+		"description": "Returns the position of the edit cursor when nav_edit is set to 1.",
+		"prefix": "navmesh.GetEditCursorPosition"
+	},
+	"navmesh/GetMarkedArea": {
+		"body": [
+			"navmesh.GetMarkedArea()$0"
+		],
+		"description": "Returns the currently marked",
+		"prefix": "navmesh.GetMarkedArea"
+	},
+	"navmesh/GetMarkedLadder": {
+		"body": [
+			"navmesh.GetMarkedLadder()$0"
+		],
+		"description": "Returns the currently marked",
+		"prefix": "navmesh.GetMarkedLadder"
+	},
+	"navmesh/GetNavArea": {
+		"body": [
+			"navmesh.GetNavArea(${1:pos}, ${2:beneathLimit})$0"
+		],
+		"description": "Returns the Nav Area contained in this position that also satisfies the elevation limit.",
+		"prefix": "navmesh.GetNavArea"
+	},
+	"navmesh/GetNavAreaByID": {
+		"body": [
+			"navmesh.GetNavAreaByID(${1:id})$0"
+		],
+		"description": "Returns a",
+		"prefix": "navmesh.GetNavAreaByID"
+	},
+	"navmesh/GetNavAreaCount": {
+		"body": [
+			"navmesh.GetNavAreaCount()$0"
+		],
+		"description": "Returns the highest ID of all nav areas on the map. While this can be used to get all nav areas, this number may not actually be the actual number of nav areas on the map.",
+		"prefix": "navmesh.GetNavAreaCount"
+	},
+	"navmesh/GetNavLadderByID": {
+		"body": [
+			"navmesh.GetNavLadderByID(${1:id})$0"
+		],
+		"description": "Returns a",
+		"prefix": "navmesh.GetNavLadderByID"
+	},
+	"navmesh/GetNearestNavArea": {
+		"body": [
+			"navmesh.GetNearestNavArea(${1:pos}, ${2:anyZ=false}, ${3:maxDist=10000}, ${4:checkLOS=false}, ${5:checkGround=true}, ${6:team=TEAM_ANY=-2})$0"
+		],
+		"description": "Returns the closest",
+		"prefix": "navmesh.GetNearestNavArea"
+	},
+	"navmesh/GetPlayerSpawnName": {
+		"body": [
+			"navmesh.GetPlayerSpawnName()$0"
+		],
+		"description": "Returns the classname of the player spawn entity.",
+		"prefix": "navmesh.GetPlayerSpawnName"
+	},
+	"navmesh/IsGenerating": {
+		"body": [
+			"navmesh.IsGenerating()$0"
+		],
+		"description": "Whether we\u0026#39;re currently generating a new navmesh with",
+		"prefix": "navmesh.IsGenerating"
+	},
+	"navmesh/IsLoaded": {
+		"body": [
+			"navmesh.IsLoaded()$0"
+		],
+		"description": "Returns true if a",
+		"prefix": "navmesh.IsLoaded"
+	},
+	"navmesh/Load": {
+		"body": [
+			"navmesh.Load()$0"
+		],
+		"description": "Loads a new",
+		"prefix": "navmesh.Load"
+	},
+	"navmesh/Reset": {
+		"body": [
+			"navmesh.Reset()$0"
+		],
+		"description": "Deletes every",
+		"prefix": "navmesh.Reset"
+	},
+	"navmesh/Save": {
+		"body": [
+			"navmesh.Save()$0"
+		],
+		"description": "Saves any changes made to",
+		"prefix": "navmesh.Save"
+	},
+	"navmesh/SetMarkedArea": {
+		"body": [
+			"navmesh.SetMarkedArea(${1:area})$0"
+		],
+		"description": "Sets the",
+		"prefix": "navmesh.SetMarkedArea"
+	},
+	"navmesh/SetMarkedLadder": {
+		"body": [
+			"navmesh.SetMarkedLadder(${1:area})$0"
+		],
+		"description": "Sets the",
+		"prefix": "navmesh.SetMarkedLadder"
+	},
+	"navmesh/SetPlayerSpawnName": {
+		"body": [
+			"navmesh.SetPlayerSpawnName(${1:spawnPointClass})$0"
+		],
+		"description": "Sets the classname of the default spawn point entity, used before generating a new navmesh with",
+		"prefix": "navmesh.SetPlayerSpawnName"
+	}
+}

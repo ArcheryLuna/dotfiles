@@ -1,0 +1,198 @@
+{
+	"duplicator/Allow": {
+		"body": [
+			"duplicator.Allow(${1:classname})$0"
+		],
+		"description": "Allow this entity to be duplicated",
+		"prefix": "duplicator.Allow"
+	},
+	"duplicator/ApplyBoneModifiers": {
+		"body": [
+			"duplicator.ApplyBoneModifiers(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Calls every function registered with",
+		"prefix": "duplicator.ApplyBoneModifiers"
+	},
+	"duplicator/ApplyEntityModifiers": {
+		"body": [
+			"duplicator.ApplyEntityModifiers(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Calls every function registered with",
+		"prefix": "duplicator.ApplyEntityModifiers"
+	},
+	"duplicator/ClearEntityModifier": {
+		"body": [
+			"duplicator.ClearEntityModifier(${1:ent}, ${2:key})$0"
+		],
+		"description": "Clears/removes the chosen entity modifier from the entity.",
+		"prefix": "duplicator.ClearEntityModifier"
+	},
+	"duplicator/Copy": {
+		"body": [
+			"duplicator.Copy(${1:ent}, ${2:tableToAdd={}})$0"
+		],
+		"description": "Copies the entity, and all of its constraints and entities, then returns them in a table.",
+		"prefix": "duplicator.Copy"
+	},
+	"duplicator/CopyEntTable": {
+		"body": [
+			"duplicator.CopyEntTable(${1:ent})$0"
+		],
+		"description": "Returns a table with some entity data that can be used to create a new entity with",
+		"prefix": "duplicator.CopyEntTable"
+	},
+	"duplicator/CopyEnts": {
+		"body": [
+			"duplicator.CopyEnts(${1:ents})$0"
+		],
+		"description": "Copies the passed table of entities to save for later.",
+		"prefix": "duplicator.CopyEnts"
+	},
+	"duplicator/CreateConstraintFromTable": {
+		"body": [
+			"duplicator.CreateConstraintFromTable(${1:constraint}, ${2:entityList})$0"
+		],
+		"description": "No description available.",
+		"prefix": "duplicator.CreateConstraintFromTable"
+	},
+	"duplicator/CreateEntityFromTable": {
+		"body": [
+			"duplicator.CreateEntityFromTable(${1:ply}, ${2:entTable})$0"
+		],
+		"description": "\u0026#34;Create an entity from a table.\u0026#34;",
+		"prefix": "duplicator.CreateEntityFromTable"
+	},
+	"duplicator/DoBoneManipulator": {
+		"body": [
+			"duplicator.DoBoneManipulator(${1:ent}, ${2:bones})$0"
+		],
+		"description": "\u0026#34;Restores the bone\u0026#39;s data.\u0026#34;",
+		"prefix": "duplicator.DoBoneManipulator"
+	},
+	"duplicator/DoFlex": {
+		"body": [
+			"duplicator.DoFlex(${1:ent}, ${2:flex}, ${3:scale=nil})$0"
+		],
+		"description": "Restores the flex data using",
+		"prefix": "duplicator.DoFlex"
+	},
+	"duplicator/DoGeneric": {
+		"body": [
+			"duplicator.DoGeneric(${1:ent}, ${2:data})$0"
+		],
+		"description": "\u0026#34;Applies generic every-day entity stuff for ent from table data.\u0026#34;",
+		"prefix": "duplicator.DoGeneric"
+	},
+	"duplicator/DoGenericPhysics": {
+		"body": [
+			"duplicator.DoGenericPhysics(${1:ent}, ${2:ply=nil}, ${3:data})$0"
+		],
+		"description": "\u0026#34;Applies bone data, generically.\u0026#34;",
+		"prefix": "duplicator.DoGenericPhysics"
+	},
+	"duplicator/FindEntityClass": {
+		"body": [
+			"duplicator.FindEntityClass(${1:name})$0"
+		],
+		"description": "Returns the entity class factory registered with",
+		"prefix": "duplicator.FindEntityClass"
+	},
+	"duplicator/GenericDuplicatorFunction": {
+		"body": [
+			"duplicator.GenericDuplicatorFunction(${1:ply}, ${2:data})$0"
+		],
+		"description": "\u0026#34;Generic function for duplicating stuff\u0026#34;",
+		"prefix": "duplicator.GenericDuplicatorFunction"
+	},
+	"duplicator/GetAllConstrainedEntitiesAndConstraints": {
+		"body": [
+			"duplicator.GetAllConstrainedEntitiesAndConstraints(${1:ent}, ${2:entStorageTable}, ${3:constraintStorageTable})$0"
+		],
+		"description": "No description available.",
+		"prefix": "duplicator.GetAllConstrainedEntitiesAndConstraints"
+	},
+	"duplicator/IsAllowed": {
+		"body": [
+			"duplicator.IsAllowed(${1:classname})$0"
+		],
+		"description": "Returns whether the entity can be duplicated or not",
+		"prefix": "duplicator.IsAllowed"
+	},
+	"duplicator/Paste": {
+		"body": [
+			"duplicator.Paste(${1:Player}, ${2:EntityList}, ${3:ConstraintList})$0"
+		],
+		"description": "\u0026#34;Given entity list and constraint list, create all entities and return their tables\u0026#34;",
+		"prefix": "duplicator.Paste"
+	},
+	"duplicator/RegisterBoneModifier": {
+		"body": [
+			"duplicator.RegisterBoneModifier(${1:key}, ${2:boneModifier})$0"
+		],
+		"description": "Registers a function to be called on each of an entity\u0026#39;s bones when",
+		"prefix": "duplicator.RegisterBoneModifier"
+	},
+	"duplicator/RegisterConstraint": {
+		"body": [
+			"duplicator.RegisterConstraint(${1:name}, ${2:callback}, ${3:...})$0"
+		],
+		"description": "Register a function used for creating a duplicated constraint.",
+		"prefix": "duplicator.RegisterConstraint"
+	},
+	"duplicator/RegisterEntityClass": {
+		"body": [
+			"duplicator.RegisterEntityClass(${1:name}, ${2:function}, ${3:args})$0"
+		],
+		"description": "This allows you to specify a specific function to be run when your SENT is pasted with the duplicator, instead of relying on the generic automatic functions.",
+		"prefix": "duplicator.RegisterEntityClass"
+	},
+	"duplicator/RegisterEntityModifier": {
+		"body": [
+			"duplicator.RegisterEntityModifier(${1:name}, ${2:func})$0"
+		],
+		"description": "This allows you to register tweaks to entities. For instance, if you were making an \u0026#34;unbreakable\u0026#34; addon, you would use this to enable saving the \u0026#34;unbreakable\u0026#34; state of entities between duplications.",
+		"prefix": "duplicator.RegisterEntityModifier"
+	},
+	"duplicator/RemoveMapCreatedEntities": {
+		"body": [
+			"duplicator.RemoveMapCreatedEntities()$0"
+		],
+		"description": "Help to remove certain map created entities before creating the saved entities This is obviously so we don\u0026#39;t get duplicate props everywhere. It should be called before calling Paste.",
+		"prefix": "duplicator.RemoveMapCreatedEntities"
+	},
+	"duplicator/SetLocalAng": {
+		"body": [
+			"duplicator.SetLocalAng(${1:v})$0"
+		],
+		"description": "\u0026#34;When a copy is copied it will be translated according to these. If you set them - make sure to set them back to 0 0 0!\u0026#34;",
+		"prefix": "duplicator.SetLocalAng"
+	},
+	"duplicator/SetLocalPos": {
+		"body": [
+			"duplicator.SetLocalPos(${1:v})$0"
+		],
+		"description": "\u0026#34;When a copy is copied it will be translated according to these. If you set them - make sure to set them back to 0 0 0!\u0026#34;",
+		"prefix": "duplicator.SetLocalPos"
+	},
+	"duplicator/StoreBoneModifier": {
+		"body": [
+			"duplicator.StoreBoneModifier(${1:ent}, ${2:boneID}, ${3:key}, ${4:data})$0"
+		],
+		"description": "Stores bone mod data for a registered bone modification function",
+		"prefix": "duplicator.StoreBoneModifier"
+	},
+	"duplicator/StoreEntityModifier": {
+		"body": [
+			"duplicator.StoreEntityModifier(${1:entity}, ${2:name}, ${3:data})$0"
+		],
+		"description": "Stores an entity modifier into an entity for saving",
+		"prefix": "duplicator.StoreEntityModifier"
+	},
+	"duplicator/WorkoutSize": {
+		"body": [
+			"duplicator.WorkoutSize(${1:Ents})$0"
+		],
+		"description": "\u0026#34;Work out the AABB size\u0026#34;",
+		"prefix": "duplicator.WorkoutSize"
+	}
+}

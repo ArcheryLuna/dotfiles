@@ -1,0 +1,65 @@
+{
+    "EndBlock": {
+        "body": [
+            "EndBlock()$0"
+        ],
+        "description": "IRESTORE [Shared]",
+        "prefix": "EndBlock"
+    },
+    "ReadAngle": {
+        "body": [
+            "ReadAngle()$0"
+        ],
+        "description": "IRESTORE [Shared]",
+        "prefix": "ReadAngle"
+    },
+    "ReadBool": {
+        "body": [
+            "ReadBool()$0"
+        ],
+        "description": "IRESTORE [Shared]",
+        "prefix": "ReadBool"
+    },
+    "ReadEntity": {
+        "body": [
+            "ReadEntity()$0"
+        ],
+        "description": "IRESTORE [Shared]",
+        "prefix": "ReadEntity"
+    },
+    "ReadFloat": {
+        "body": [
+            "ReadFloat()$0"
+        ],
+        "description": "IRESTORE [Shared]",
+        "prefix": "ReadFloat"
+    },
+    "ReadInt": {
+        "body": [
+            "ReadInt()$0"
+        ],
+        "description": "IRESTORE [Shared]",
+        "prefix": "ReadInt"
+    },
+    "ReadString": {
+        "body": [
+            "ReadString()$0"
+        ],
+        "description": "IRESTORE [Shared]",
+        "prefix": "ReadString"
+    },
+    "ReadVector": {
+        "body": [
+            "ReadVector()$0"
+        ],
+        "description": "IRESTORE [Shared]",
+        "prefix": "ReadVector"
+    },
+    "StartBlock": {
+        "body": [
+            "StartBlock()$0"
+        ],
+        "description": "IRESTORE [Shared] Loads next block of data to be read inside current block. Blocks must be ended with IRestore:EndBlock.",
+        "prefix": "StartBlock"
+    }
+}

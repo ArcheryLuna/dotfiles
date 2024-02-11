@@ -1,0 +1,23 @@
+{
+    "AddConVar": {
+        "body": [
+            "AddConVar(${1:convar})$0"
+        ],
+        "description": "CONTROLPRESETS [Client] \n\n[string] convar\n  The convar to add.",
+        "prefix": "AddConVar"
+    },
+    "GetConVars": {
+        "body": [
+            "GetConVars()$0"
+        ],
+        "description": "CONTROLPRESETS [Client]",
+        "prefix": "GetConVars"
+    },
+    "SetLabel": {
+        "body": [
+            "SetLabel(${1:name})$0"
+        ],
+        "description": "CONTROLPRESETS [Client] \n\n[string] name\n  The text to put in the label",
+        "prefix": "SetLabel"
+    }
+}

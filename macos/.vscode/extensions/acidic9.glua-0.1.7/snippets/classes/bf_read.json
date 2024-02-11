@@ -1,0 +1,79 @@
+{
+    "ReadAngle": {
+        "body": [
+            "ReadAngle()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadAngle"
+    },
+    "ReadBool": {
+        "body": [
+            "ReadBool()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadBool"
+    },
+    "ReadChar": {
+        "body": [
+            "ReadChar()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadChar"
+    },
+    "ReadEntity": {
+        "body": [
+            "ReadEntity()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadEntity"
+    },
+    "ReadFloat": {
+        "body": [
+            "ReadFloat()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadFloat"
+    },
+    "ReadLong": {
+        "body": [
+            "ReadLong()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadLong"
+    },
+    "ReadShort": {
+        "body": [
+            "ReadShort()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadShort"
+    },
+    "ReadString": {
+        "body": [
+            "ReadString()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadString"
+    },
+    "ReadVector": {
+        "body": [
+            "ReadVector()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadVector"
+    },
+    "ReadVectorNormal": {
+        "body": [
+            "ReadVectorNormal()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "ReadVectorNormal"
+    },
+    "Reset": {
+        "body": [
+            "Reset()$0"
+        ],
+        "description": "BF_READ [Client]",
+        "prefix": "Reset"
+    }
+}

@@ -1,0 +1,478 @@
+{
+    "util.AddNetworkString": {
+        "body": [
+            "util.AddNetworkString(${1:str})$0"
+        ],
+        "description": "UTIL [Server] \n\n[string] str\n  Adds the specified string to the string table.",
+        "prefix": "util.AddNetworkString"
+    },
+    "util.AimVector": {
+        "body": [
+            "util.AimVector(${1:ViewAngles}, ${2:ViewFOV}, ${3:x}, ${4:y}, ${5:scrWidth}, ${6:scrHeight})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Function used to calculate aim vector from 2D screen position. It is used in SuperDOF calculate Distance. Essentially a generic version of gui.ScreenToVector.\n\n[Angle] ViewAngles\n  View angles\n\n[number] ViewFOV\n  View Field of View\n\n[number] x\n  Mouse X position\n\n[number] y\n  Mouse Y position\n\n[number] scrWidth\n  Screen width\n\n[number] scrHeight\n  Screen height",
+        "prefix": "util.AimVector"
+    },
+    "util.Base64Encode": {
+        "body": [
+            "util.Base64Encode(${1:str})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[string] str\n  String to encode.",
+        "prefix": "util.Base64Encode"
+    },
+    "util.BlastDamage": {
+        "body": [
+            "util.BlastDamage(${1:inflictor}, ${2:attacker}, ${3:damageOrigin}, ${4:damageRadius}, ${5:damage})$0"
+        ],
+        "description": "UTIL [Server] Applies explosion damage to all entities in the specified radius.\n\n[Entity] inflictor\n  The entity that caused the damage.\n\n[Entity] attacker\n  The entity that attacked.\n\n[Vector] damageOrigin\n  The center of the explosion\n\n[number] damageRadius\n  The radius in which entities will be damaged.\n\n[number] damage\n  The amount of damage to be applied.",
+        "prefix": "util.BlastDamage"
+    },
+    "util.BlastDamageInfo": {
+        "body": [
+            "util.BlastDamageInfo(${1:dmg}, ${2:damageOrigin}, ${3:damageRadius})$0"
+        ],
+        "description": "UTIL [Server] Applies spherical damage based on damage info to all entities in the specified radius.\n\n[CTakeDamageInfo] dmg\n  The information about the damage\n\n[Vector] damageOrigin\n  Center of the spherical damage\n\n[number] damageRadius\n  The radius in which entities will be damaged.",
+        "prefix": "util.BlastDamageInfo"
+    },
+    "util.CRC": {
+        "body": [
+            "util.CRC(${1:stringToHash})$0"
+        ],
+        "description": "UTIL [Shared] Generates the CRC checksum of the specified string.\n\n[string] stringToHash\n  The string to calculate the checksum of.",
+        "prefix": "util.CRC"
+    },
+    "util.Compress": {
+        "body": [
+            "util.Compress(${1:str})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[string] str\n  String to compress.",
+        "prefix": "util.Compress"
+    },
+    "util.DateStamp": {
+        "body": [
+            "util.DateStamp()$0"
+        ],
+        "description": "UTIL [Shared/Menu]",
+        "prefix": "util.DateStamp"
+    },
+    "util.Decal": {
+        "body": [
+            "util.Decal(${1:name}, ${2:start}, ${3:end}, ${4:filter=NULL})$0"
+        ],
+        "description": "UTIL [Shared] Performs a trace and paints a decal to the surface hit.\n\n[string] name\n  The name of the decal to paint.\n\n[Vector] start\n  The start of the trace.\n\n[Vector] end\n  The end of the trace.\n\n[Entity] filter=NULL\n  If set, the decal will not be able to be placed on given entity. Can also be a table of entities.",
+        "prefix": "util.Decal"
+    },
+    "util.DecalEx": {
+        "body": [
+            "util.DecalEx(${1:material}, ${2:ent}, ${3:position}, ${4:normal}, ${5:color}, ${6:w}, ${7:h})$0"
+        ],
+        "description": "UTIL [Client] Performs a trace and paints a decal to the surface hit.\n\n[IMaterial] material\n  The name of the decal to paint. Can be retrieved with util.DecalMaterial.\n\n[Entity] ent\n  The entity to apply the decal to\n\n[Vector] position\n  The position of the decal.\n\n[Vector] normal\n  The direction of the decal.\n\n[table] color\n  The color of the decal. Uses the Color structure.\n\nThis only works when used on a brush model and only if the decal material has set $vertexcolor to 1.\n\n[number] w\n  The width of the decal.\n\nCurrently broken.\n\n[number] h\n  The height of the decal.\n\nCurrently broken.",
+        "prefix": "util.DecalEx"
+    },
+    "util.DecalMaterial": {
+        "body": [
+            "util.DecalMaterial(${1:decalName})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] decalName\n  Name of the decal.",
+        "prefix": "util.DecalMaterial"
+    },
+    "util.Decompress": {
+        "body": [
+            "util.Decompress(${1:compressedString})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[string] compressedString\n  The compressed string to decompress.",
+        "prefix": "util.Decompress"
+    },
+    "util.DistanceToLine": {
+        "body": [
+            "util.DistanceToLine(${1:lineStart}, ${2:lineEnd}, ${3:pointPos})$0"
+        ],
+        "description": "UTIL [Shared] Gets the distance between a line and a point in 3d space.\n\n[Vector] lineStart\n  Start of the line.\n\n[Vector] lineEnd\n  End of the line.\n\n[Vector] pointPos\n  The position of the point.",
+        "prefix": "util.DistanceToLine"
+    },
+    "util.Effect": {
+        "body": [
+            "util.Effect(${1:effectName}, ${2:effectData}, ${3:allowOverride=true}, ${4:ignorePredictionOrRecipientFilter=nil})$0"
+        ],
+        "description": "UTIL [Shared] Creates a effect with the specified data. You can find a list of built-in engine effects here. You can create your own. Example effects can be found here and here.\n\n[string] effectName\n  The name of the effect to create.\n\n[CEffectData] effectData\n  The effect data describing the effect.\n\n[boolean] allowOverride=true\n  Whether Lua-defined effects should override engine-defined effects with the same name for this/single function call.\n\n[any] ignorePredictionOrRecipientFilter=nil\n  Can either be a boolean to ignore the prediction filter or a CRecipientFilter.\n\nSet this to true if you wish to call this function in multiplayer from server.",
+        "prefix": "util.Effect"
+    },
+    "util.GetModelInfo": {
+        "body": [
+            "util.GetModelInfo(${1:mdl})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] mdl\n  Model path",
+        "prefix": "util.GetModelInfo"
+    },
+    "util.GetPData": {
+        "body": [
+            "util.GetPData(${1:steamID}, ${2:name}, ${3:default})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Gets PData of an offline player using their SteamID\n\n[string] steamID\n  SteamID of the player\n\n[string] name\n  Variable name to get the value of\n\n[string] default\n  The default value, in case there's nothing stored",
+        "prefix": "util.GetPData"
+    },
+    "util.GetPixelVisibleHandle": {
+        "body": [
+            "util.GetPixelVisibleHandle()$0"
+        ],
+        "description": "UTIL [Client]",
+        "prefix": "util.GetPixelVisibleHandle"
+    },
+    "util.GetPlayerTrace": {
+        "body": [
+            "util.GetPlayerTrace(${1:ply}, ${2:dir=ply:GetAimVector()})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Utility function to quickly generate a trace table that starts at the players view position, and ends 16384 units along a specified direction.\n\n[Player] ply\n  The player the trace should be based on\n\n[Vector] dir=ply:GetAimVector()\n  The direction of the trace",
+        "prefix": "util.GetPlayerTrace"
+    },
+    "util.GetSunInfo": {
+        "body": [
+            "util.GetSunInfo()$0"
+        ],
+        "description": "UTIL [Client]",
+        "prefix": "util.GetSunInfo"
+    },
+    "util.GetSurfaceIndex": {
+        "body": [
+            "util.GetSurfaceIndex(${1:surfaceName})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] surfaceName\n  The name of the surface.",
+        "prefix": "util.GetSurfaceIndex"
+    },
+    "util.GetSurfacePropName": {
+        "body": [
+            "util.GetSurfacePropName(${1:id})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[number] id\n  Surface properties ID. You can get it from TraceResult structure.",
+        "prefix": "util.GetSurfacePropName"
+    },
+    "util.GetUserGroups": {
+        "body": [
+            "util.GetUserGroups()$0"
+        ],
+        "description": "UTIL [Server]",
+        "prefix": "util.GetUserGroups"
+    },
+    "util.IntersectRayWithOBB": {
+        "body": [
+            "util.IntersectRayWithOBB(${1:rayStart}, ${2:rayDirection}, ${3:boxOrigin}, ${4:boxAngles}, ${5:boxMins}, ${6:boxMaxs})$0"
+        ],
+        "description": "UTIL [Shared] Performs a ray box intersection and returns position, normal and the fraction.\n\n[Vector] rayStart\n  Origin/start position of the ray.\n\n[Vector] rayDirection\n  The direction of the ray. Note that this is not a true ray: the trace is only as long as the length.\n\nValidation required.\nThis page contains eventual incorrect information and requires validation.Clarification needed for the above.Validation required.\nThis page contains eventual incorrect information and requires validation.Clarification needed for the above.\n\n[Vector] boxOrigin\n  The center of the box.\n\n[Angle] boxAngles\n  The angles of the box.\n\n[Vector] boxMins\n  The min position of the box.\n\n[Vector] boxMaxs\n  The max position of the box.",
+        "prefix": "util.IntersectRayWithOBB"
+    },
+    "util.IntersectRayWithPlane": {
+        "body": [
+            "util.IntersectRayWithPlane(${1:rayOrigin}, ${2:rayDirection}, ${3:planePosition}, ${4:planeNormal})$0"
+        ],
+        "description": "UTIL [Shared] Performs a ray-plane intersection and returns the hit position or nil.\n\n[Vector] rayOrigin\n  Origin/start position of the ray.\n\n[Vector] rayDirection\n  The direction of the ray.\n\n[Vector] planePosition\n  Any position of the plane.\n\n[Vector] planeNormal\n  The normal vector of the plane.",
+        "prefix": "util.IntersectRayWithPlane"
+    },
+    "util.IsInWorld": {
+        "body": [
+            "util.IsInWorld(${1:position})$0"
+        ],
+        "description": "UTIL [Server] \n\n[Vector] position\n  Position to check.",
+        "prefix": "util.IsInWorld"
+    },
+    "util.IsModelLoaded": {
+        "body": [
+            "util.IsModelLoaded(${1:modelName})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] modelName\n  Name/Path of the model to check.",
+        "prefix": "util.IsModelLoaded"
+    },
+    "util.IsSkyboxVisibleFromPoint": {
+        "body": [
+            "util.IsSkyboxVisibleFromPoint(${1:position})$0"
+        ],
+        "description": "UTIL [Client] \n\n[Vector] position\n  The position to check the skybox visibility from.",
+        "prefix": "util.IsSkyboxVisibleFromPoint"
+    },
+    "util.IsValidModel": {
+        "body": [
+            "util.IsValidModel(${1:modelName})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] modelName\n  Name/Path of the model to check.",
+        "prefix": "util.IsValidModel"
+    },
+    "util.IsValidPhysicsObject": {
+        "body": [
+            "util.IsValidPhysicsObject(${1:ent}, ${2:physobj})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Checks if given numbered physics object of given entity is valid or not. Most useful for ragdolls.\n\n[Entity] ent\n  The entity\n\n[number] physobj\n  Number of the physics object to test",
+        "prefix": "util.IsValidPhysicsObject"
+    },
+    "util.IsValidProp": {
+        "body": [
+            "util.IsValidProp(${1:modelName})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] modelName\n  Name/Path of the model to check.",
+        "prefix": "util.IsValidProp"
+    },
+    "util.IsValidRagdoll": {
+        "body": [
+            "util.IsValidRagdoll(${1:ragdollName})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] ragdollName\n  Name/Path of the ragdoll model to check.",
+        "prefix": "util.IsValidRagdoll"
+    },
+    "util.JSONToTable": {
+        "body": [
+            "util.JSONToTable(${1:json})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[string] json\n  The JSON string to convert.",
+        "prefix": "util.JSONToTable"
+    },
+    "util.KeyValuesToTable": {
+        "body": [
+            "util.KeyValuesToTable(${1:keyValues}, ${2:usesEscapeSequences=false}, ${3:preserveKeyCase=false})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Converts a KeyValue string to a Lua table.\n\n[string] keyValues\n  The KeyValue string to convert.\n\n[boolean] usesEscapeSequences=false\n  \n\n[boolean] preserveKeyCase=false\n  Whether we should preserve key case or not.",
+        "prefix": "util.KeyValuesToTable"
+    },
+    "util.KeyValuesToTablePreserveOrder": {
+        "body": [
+            "util.KeyValuesToTablePreserveOrder(${1:keyvals}, ${2:usesEscapeSequences=false}, ${3:preserveKeyCase=false})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Similar to util.KeyValuesToTable but it also preserves order of keys.\n\n[string] keyvals\n  The key value string\n\n[boolean] usesEscapeSequences=false\n  \n\n[boolean] preserveKeyCase=false\n  Whether we should preserve key case or not.",
+        "prefix": "util.KeyValuesToTablePreserveOrder"
+    },
+    "util.LocalToWorld": {
+        "body": [
+            "util.LocalToWorld(${1:ent}, ${2:lpos}, ${3:bonenum})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Returns a vector in world coordinates based on an entity and local coordinates\n\n[Entity] ent\n  The entity lpos is local to\n\n[Vector] lpos\n  Coordinates local to the ent\n\n[number] bonenum\n  The bonenumber of the ent lpos is local to",
+        "prefix": "util.LocalToWorld"
+    },
+    "util.NetworkIDToString": {
+        "body": [
+            "util.NetworkIDToString(${1:stringTableID})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[number] stringTableID\n  ID to get the associated string from.",
+        "prefix": "util.NetworkIDToString"
+    },
+    "util.NetworkStringToID": {
+        "body": [
+            "util.NetworkStringToID(${1:networkString})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] networkString\n  String to get the associated networked ID from.",
+        "prefix": "util.NetworkStringToID"
+    },
+    "util.NiceFloat": {
+        "body": [
+            "util.NiceFloat(${1:float})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[number] float\n  The float to format",
+        "prefix": "util.NiceFloat"
+    },
+    "util.ParticleTracer": {
+        "body": [
+            "util.ParticleTracer(${1:name}, ${2:startPos}, ${3:endPos}, ${4:doWhiz})$0"
+        ],
+        "description": "UTIL [Shared] Creates a tracer effect with the given parameters.\n\n[string] name\n  The name of the tracer effect.\n\n[Vector] startPos\n  The start position of the tracer.\n\n[Vector] endPos\n  The end position of the tracer.\n\n[boolean] doWhiz\n  Play the hit miss(whiz) sound.",
+        "prefix": "util.ParticleTracer"
+    },
+    "util.ParticleTracerEx": {
+        "body": [
+            "util.ParticleTracerEx(${1:name}, ${2:startPos}, ${3:endPos}, ${4:doWhiz}, ${5:entityIndex}, ${6:attachmentIndex})$0"
+        ],
+        "description": "UTIL [Shared] Creates a tracer effect with the given parameters.\n\n[string] name\n  The name of the tracer effect.\n\n[Vector] startPos\n  The start position of the tracer.\n\n[Vector] endPos\n  The end position of the tracer.\n\n[boolean] doWhiz\n  Play the hit miss(whiz) sound.\n\n[number] entityIndex\n  Entity index of the emitting entity.\n\n[number] attachmentIndex\n  Attachment index to be used as origin.",
+        "prefix": "util.ParticleTracerEx"
+    },
+    "util.PixelVisible": {
+        "body": [
+            "util.PixelVisible(${1:position}, ${2:radius}, ${3:PixVis})$0"
+        ],
+        "description": "UTIL [Client] Returns the visibility of a sphere in the world.\n\n[Vector] position\n  The center of the visibility test.\n\n[number] radius\n  The radius of the sphere to check for visibility.\n\n[pixelvishandlet] PixVis\n  The PixVis handle. Created with util.GetPixelVisibleHandle. Don't use the same handle twice per tick or it will give unpredictable results.",
+        "prefix": "util.PixelVisible"
+    },
+    "util.PointContents": {
+        "body": [
+            "util.PointContents(${1:position})$0"
+        ],
+        "description": "UTIL [Shared] Returns the contents of the position specified.\n\n[Vector] position\n  Position to get the contents sample from.",
+        "prefix": "util.PointContents"
+    },
+    "util.PrecacheModel": {
+        "body": [
+            "util.PrecacheModel(${1:modelName})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] modelName\n  The model to precache.",
+        "prefix": "util.PrecacheModel"
+    },
+    "util.PrecacheSound": {
+        "body": [
+            "util.PrecacheSound(${1:soundName})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] soundName\n  The sound to precache.",
+        "prefix": "util.PrecacheSound"
+    },
+    "util.QuickTrace": {
+        "body": [
+            "util.QuickTrace(${1:origin}, ${2:direction}, ${3:filter=nil})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Performs a trace with the given origin, direction and filter.\n\n[Vector] origin\n  The origin of the trace.\n\n[Vector] direction\n  The end point of the trace, relative to the start.\n\nThis is the direction of the trace times the distance of the trace.\n\n[Entity] filter=nil\n  Entity which should be ignored by the trace. Can also be a table of entities.",
+        "prefix": "util.QuickTrace"
+    },
+    "util.RelativePathToFull": {
+        "body": [
+            "util.RelativePathToFull(${1:file})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] file\n  The file to get the absolute path of.",
+        "prefix": "util.RelativePathToFull"
+    },
+    "util.RemovePData": {
+        "body": [
+            "util.RemovePData(${1:steamID}, ${2:name})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[string] steamID\n  SteamID of the player\n\n[string] name\n  Variable name to remove",
+        "prefix": "util.RemovePData"
+    },
+    "util.ScreenShake": {
+        "body": [
+            "util.ScreenShake(${1:pos}, ${2:amplitude}, ${3:frequency}, ${4:duration}, ${5:radius})$0"
+        ],
+        "description": "UTIL [Shared] Makes the screen shake\n\n[Vector] pos\n  The origin of the effect\n\n[number] amplitude\n  The strength of the effect\n\n[number] frequency\n  The frequency of the effect in hz\n\n[number] duration\n  The duration of the effect in seconds\n\n[number] radius\n  The range from the origin within which views will be affected, in Hammer Units",
+        "prefix": "util.ScreenShake"
+    },
+    "util.SetPData": {
+        "body": [
+            "util.SetPData(${1:steamID}, ${2:name}, ${3:value})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Sets PData for offline player using his SteamID\n\n[string] steamID\n  SteamID of the player\n\n[string] name\n  Variable name to store the value in\n\n[any] value\n  The value to store",
+        "prefix": "util.SetPData"
+    },
+    "util.SharedRandom": {
+        "body": [
+            "util.SharedRandom(${1:uniqueName}, ${2:min}, ${3:max}, ${4:additionalSeed=0})$0"
+        ],
+        "description": "UTIL [Shared] Generates a random float value that should be the same on client and server.\n\n[string] uniqueName\n  The seed for the random value\n\n[number] min\n  The minimum value of the random range\n\n[number] max\n  The maximum value of the random range\n\n[number] additionalSeed=0\n  The additional seed",
+        "prefix": "util.SharedRandom"
+    },
+    "util.SpriteTrail": {
+        "body": [
+            "util.SpriteTrail(${1:ent}, ${2:attachmentID}, ${3:color}, ${4:additive}, ${5:startWidth}, ${6:endWidth}, ${7:lifetime}, ${8:textureRes}, ${9:texture})$0"
+        ],
+        "description": "UTIL [Server] Adds a trail to the specified entity.\n\n[Entity] ent\n  Entity to attach trail to\n\n[number] attachmentID\n  Attachment ID of the entitiys model to attach trail to. If you are not sure, set this to 0\n\n[table] color\n  Color of the trail, use Color\n\n[boolean] additive\n  Should the trail be additive or not\n\n[number] startWidth\n  Start width of the trail\n\n[number] endWidth\n  End width of the trail\n\n[number] lifetime\n  How long it takes to transition from startWidth to endWidth\n\n[number] textureRes\n  The resolution of trails texture. A good value can be calculated using this formula: 1 / ( startWidth + endWidth ) * 0.5\n\n[string] texture\n  Path to the texture to use as a trail. Note that you should also include the \".vmt\" or the game WILL crash!",
+        "prefix": "util.SpriteTrail"
+    },
+    "util.Stack": {
+        "body": [
+            "util.Stack()$0"
+        ],
+        "description": "UTIL [Shared/Menu]",
+        "prefix": "util.Stack"
+    },
+    "util.SteamIDFrom64": {
+        "body": [
+            "util.SteamIDFrom64(${1:id})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] id\n  The 64 bit Steam ID",
+        "prefix": "util.SteamIDFrom64"
+    },
+    "util.SteamIDTo64": {
+        "body": [
+            "util.SteamIDTo64(${1:id})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[string] id\n  The STEAM_0 style id",
+        "prefix": "util.SteamIDTo64"
+    },
+    "util.StringToType": {
+        "body": [
+            "util.StringToType(${1:str}, ${2:typename})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Converts a string to the specified type. This can be useful when dealing with ConVars.\n\n[string] str\n  The string to convert\n\n[string] typename\n  The type to attempt to convert the string to. This can be vector, angle, float, int, bool, or string (case insensitive).",
+        "prefix": "util.StringToType"
+    },
+    "util.TableToJSON": {
+        "body": [
+            "util.TableToJSON(${1:table}, ${2:prettyPrint=false})$0"
+        ],
+        "description": "UTIL [Shared/Menu] Converts a table to a JSON string.\n\n[table] table\n  Table to convert.\n\n[boolean] prettyPrint=false\n  Format and indent the JSON.",
+        "prefix": "util.TableToJSON"
+    },
+    "util.TableToKeyValues": {
+        "body": [
+            "util.TableToKeyValues(${1:table})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[table] table\n  The table to convert.",
+        "prefix": "util.TableToKeyValues"
+    },
+    "util.Timer": {
+        "body": [
+            "util.Timer(${1:startdelay=0})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[number] startdelay=0\n  How long you want the timer to be.",
+        "prefix": "util.Timer"
+    },
+    "util.TimerCycle": {
+        "body": [
+            "util.TimerCycle()$0"
+        ],
+        "description": "UTIL [Shared/Menu]",
+        "prefix": "util.TimerCycle"
+    },
+    "util.TraceEntity": {
+        "body": [
+            "util.TraceEntity(${1:tracedata}, ${2:ent})$0"
+        ],
+        "description": "UTIL [Shared] Runs a trace using the ent's collisionmodel between two points.\n\n[table] tracedata\n  Trace data. See Trace structure\n\n[Entity] ent\n  The entity to use",
+        "prefix": "util.TraceEntity"
+    },
+    "util.TraceEntityHull": {
+        "body": [
+            "util.TraceEntityHull(${1:ent1}, ${2:ent2})$0"
+        ],
+        "description": "UTIL [Shared] \n\n[Entity] ent1\n  The first entity to trace from\n\n[Entity] ent2\n  The second entity to trace to",
+        "prefix": "util.TraceEntityHull"
+    },
+    "util.TraceHull": {
+        "body": [
+            "util.TraceHull(${1:TraceData})$0"
+        ],
+        "description": "UTIL [Shared] Performs a hull trace with the given trace data. This function is shared but will not give the desired results on the client; you should only use this serverside as the function utilizes certain physics mechanisms that do not exist on the client.\n\n[table] TraceData\n  The trace data to use. See HullTrace structure",
+        "prefix": "util.TraceHull"
+    },
+    "util.TraceLine": {
+        "body": [
+            "util.TraceLine(${1:TraceData})$0"
+        ],
+        "description": "UTIL [Shared] Performs a trace with the given trace data.\n\n[table] TraceData\n  The trace data to use. See Trace structure",
+        "prefix": "util.TraceLine"
+    },
+    "util.TypeToString": {
+        "body": [
+            "util.TypeToString(${1:input})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[any] input\n  What to convert",
+        "prefix": "util.TypeToString"
+    },
+    "util.tobool": {
+        "body": [
+            "util.tobool(${1:input})$0"
+        ],
+        "description": "UTIL [Shared/Menu] \n\n[any] input\n  A string or a number to convert.",
+        "prefix": "util.tobool"
+    },
+    "util.worldpicker.Active": {
+        "body": [
+            "util.worldpicker.Active()$0"
+        ],
+        "description": "UTIL [Client]",
+        "prefix": "util.worldpicker.Active"
+    },
+    "util.worldpicker.Finish": {
+        "body": [
+            "util.worldpicker.Finish(${1:tr})$0"
+        ],
+        "description": "UTIL [Client] \n\n[table] tr\n  TraceResult structure from the mouse press",
+        "prefix": "util.worldpicker.Finish"
+    },
+    "util.worldpicker.Start": {
+        "body": [
+            "util.worldpicker.Start(${1:callback})$0"
+        ],
+        "description": "UTIL [Client] \n\n[function] callback\n  Function to call after an entity choice has been made. Argument is:\n\ntable tr - TraceResult structure from the mouse press. tr.Entity will return the entity clicked",
+        "prefix": "util.worldpicker.Start"
+    }
+}

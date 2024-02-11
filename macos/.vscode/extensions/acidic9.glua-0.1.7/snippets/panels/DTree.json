@@ -1,0 +1,149 @@
+{
+    "AddNode": {
+        "body": [
+            "AddNode(${1:name}, ${2:icon=\"icon16/folder.png\"})$0"
+        ],
+        "description": "DTREE [Client] Add a node to the DTree\n\n[string] name\n  Name of the option.\n\n[string] icon=\"icon16/folder.png\"\n  The icon that will show nexto the node in the DTree.",
+        "prefix": "AddNode"
+    },
+    "ChildExpanded": {
+        "body": [
+            "ChildExpanded(${1:bExpand})$0"
+        ],
+        "description": "DTREE [Client] \n\n[boolean] bExpand",
+        "prefix": "ChildExpanded"
+    },
+    "DoClick": {
+        "body": [
+            "DoClick()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "DoClick"
+    },
+    "DoRightClick": {
+        "body": [
+            "DoRightClick()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "DoRightClick"
+    },
+    "ExpandTo": {
+        "body": [
+            "ExpandTo(${1:bExpand})$0"
+        ],
+        "description": "DTREE [Client] \n\n[boolean] bExpand",
+        "prefix": "ExpandTo"
+    },
+    "GetClickOnDragHover": {
+        "body": [
+            "GetClickOnDragHover()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "GetClickOnDragHover"
+    },
+    "GetIndentSize": {
+        "body": [
+            "GetIndentSize()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "GetIndentSize"
+    },
+    "GetLineHeight": {
+        "body": [
+            "GetLineHeight()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "GetLineHeight"
+    },
+    "GetSelectedItem": {
+        "body": [
+            "GetSelectedItem()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "GetSelectedItem"
+    },
+    "GetShowIcons": {
+        "body": [
+            "GetShowIcons()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "GetShowIcons"
+    },
+    "LayoutTree": {
+        "body": [
+            "LayoutTree()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "LayoutTree"
+    },
+    "MoveChildTo": {
+        "body": [
+            "MoveChildTo(${1:child}, ${2:pos})$0"
+        ],
+        "description": "DTREE [Client] \n\n[Panel] child\n  The node to move\n\n[number] pos\n  This feature is deprecated.\nYou should avoid using it as it may be removed in a future version. Unused, does nothing.This feature is deprecated.\nYou should avoid using it as it may be removed in a future version.",
+        "prefix": "MoveChildTo"
+    },
+    "OnNodeSelected": {
+        "body": [
+            "OnNodeSelected(${1:node})$0"
+        ],
+        "description": "DTREE [Client] \n\n[Panel] node\n  The node that was selected.",
+        "prefix": "OnNodeSelected"
+    },
+    "Root": {
+        "body": [
+            "Root()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "Root"
+    },
+    "SetClickOnDragHover": {
+        "body": [
+            "SetClickOnDragHover(${1:enable})$0"
+        ],
+        "description": "DTREE [Client] \n\n[boolean] enable",
+        "prefix": "SetClickOnDragHover"
+    },
+    "SetExpanded": {
+        "body": [
+            "SetExpanded(${1:bExpand})$0"
+        ],
+        "description": "DTREE [Client] \n\n[boolean] bExpand",
+        "prefix": "SetExpanded"
+    },
+    "SetIndentSize": {
+        "body": [
+            "SetIndentSize(${1:size})$0"
+        ],
+        "description": "DTREE [Client] \n\n[number] size\n  The new indentation size.",
+        "prefix": "SetIndentSize"
+    },
+    "SetLineHeight": {
+        "body": [
+            "SetLineHeight(${1:h})$0"
+        ],
+        "description": "DTREE [Client] \n\n[number] h\n  The height to set.",
+        "prefix": "SetLineHeight"
+    },
+    "SetSelectedItem": {
+        "body": [
+            "SetSelectedItem(${1:node})$0"
+        ],
+        "description": "DTREE [Client] \n\n[Panel] node\n  DTree_Node to select.",
+        "prefix": "SetSelectedItem"
+    },
+    "SetShowIcons": {
+        "body": [
+            "SetShowIcons(${1:show})$0"
+        ],
+        "description": "DTREE [Client] \n\n[boolean] show\n  Whether or not to show icons.",
+        "prefix": "SetShowIcons"
+    },
+    "ShowIcons": {
+        "body": [
+            "ShowIcons()$0"
+        ],
+        "description": "DTREE [Client]",
+        "prefix": "ShowIcons"
+    }
+}

@@ -1,0 +1,62 @@
+{
+	"name": "vscode-lua",
+	"displayName": "Lua",
+	"description": "Lua language support for VS Code",
+	"version": "0.1.2",
+	"publisher": "gccfeli",
+	"license": "SEE LICENSE IN LICENSE or README.MD",
+	"homepage": "https://github.com/gccfeli/vscode-lua/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gccfeli/vscode-lua"
+	},
+	"bugs": {
+		"url": "https://github.com/gccfeli/vscode-lua/issues"
+	},
+	"icon": "images/lua.png",
+	"engines": {
+		"vscode": "^0.10.10"
+	},
+	"categories": [
+		"Languages"
+	],
+	"activationEvents": [
+		"onLanguage:lua"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Example configuration",
+			"properties": {
+				"languageServerExample.maxNumberOfProblems": {
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems produced by the server."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^1.4.2"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.9",
+		"vscode": "^0.11.0"
+	},
+	"__metadata": {
+		"id": "f4b709e3-29df-402b-a0af-de33c3112c8a",
+		"publisherId": "db65e410-298f-45e6-aec9-4635c244deb7",
+		"publisherDisplayName": "gccfeli",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033007
+	}
+}

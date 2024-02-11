@@ -1,0 +1,68 @@
+{
+	"name": "java-run",
+	"displayName": "Java Run",
+	"description": "run java code fast and simple",
+	"version": "1.1.4",
+	"publisher": "caolin",
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"bugs": {
+		"url": "https://github.com/NeverCL/vscode-java-run/issues"
+	},
+	"homepage": "https://github.com/NeverCL/vscode-java-run",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NeverCL/vscode-java-run.git"
+	},
+	"activationEvents": [
+		"onCommand:java.run"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "java.run",
+				"title": "Java.Run"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "java.run",
+				"key": "alt+b",
+				"mac": "alt+b",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"dependencies": {
+		"iconv-lite": "^0.4.15"
+	},
+	"__metadata": {
+		"id": "167f8587-016d-4d2b-91c2-9b10089983f4",
+		"publisherId": "e8c29f2c-7636-4677-98dc-2446432097f8",
+		"publisherDisplayName": "caolin",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033101
+	}
+}

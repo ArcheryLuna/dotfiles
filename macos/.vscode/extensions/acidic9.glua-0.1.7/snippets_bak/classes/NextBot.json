@@ -1,0 +1,93 @@
+{
+	"NextBot/BecomeRagdoll": {
+		"body": [
+			"BecomeRagdoll(${1:info})$0"
+		],
+		"description": "Become a ragdoll and remove the entity.",
+		"prefix": "BecomeRagdoll"
+	},
+	"NextBot/BodyMoveXY": {
+		"body": [
+			"BodyMoveXY()$0"
+		],
+		"description": "Should only be called in BodyUpdate. This sets the move_x and move_y pose parameters of the bot to fit how they\u0026#39;re currently moving, sets the animation speed to suit the ground speed and calls FrameAdvance.",
+		"prefix": "BodyMoveXY"
+	},
+	"NextBot/FindSpot": {
+		"body": [
+			"FindSpot(${1:type}, ${2:options})$0"
+		],
+		"description": "Like",
+		"prefix": "FindSpot"
+	},
+	"NextBot/FindSpots": {
+		"body": [
+			"FindSpots(${1:specs})$0"
+		],
+		"description": "Returns a table of hiding spots.",
+		"prefix": "FindSpots"
+	},
+	"NextBot/GetActivity": {
+		"body": [
+			"GetActivity()$0"
+		],
+		"description": "Returns the currently running activity",
+		"prefix": "GetActivity"
+	},
+	"NextBot/GetRangeSquaredTo": {
+		"body": [
+			"GetRangeSquaredTo(${1:to})$0"
+		],
+		"description": "Returns the distance to an entity or position. It is supposed to return a squared distance, however.",
+		"prefix": "GetRangeSquaredTo"
+	},
+	"NextBot/GetRangeTo": {
+		"body": [
+			"GetRangeTo(${1:to})$0"
+		],
+		"description": "Returns the distance to an entity or position",
+		"prefix": "GetRangeTo"
+	},
+	"NextBot/GetSolidMask": {
+		"body": [
+			"GetSolidMask()$0"
+		],
+		"description": "Returns the solid mask for given NextBot.",
+		"prefix": "GetSolidMask"
+	},
+	"NextBot/HandleStuck": {
+		"body": [
+			"HandleStuck()$0"
+		],
+		"description": "Called from Lua when the NPC is stuck. This should only be called from the behaviour coroutine - so if you want to override this function and do something special that yields - then go for it.",
+		"prefix": "HandleStuck"
+	},
+	"NextBot/MoveToPos": {
+		"body": [
+			"MoveToPos(${1:pos}, ${2:options})$0"
+		],
+		"description": "To be called in the behaviour coroutine only! Will yield until the bot has reached the goal or is stuck",
+		"prefix": "MoveToPos"
+	},
+	"NextBot/PlaySequenceAndWait": {
+		"body": [
+			"PlaySequenceAndWait(${1:name}, ${2:speed=1})$0"
+		],
+		"description": "To be called in the behaviour coroutine only! Plays an animation sequence and waits for it to end before returning.",
+		"prefix": "PlaySequenceAndWait"
+	},
+	"NextBot/SetSolidMask": {
+		"body": [
+			"SetSolidMask(${1:mask})$0"
+		],
+		"description": "Sets the solid mask for given NextBot.",
+		"prefix": "SetSolidMask"
+	},
+	"NextBot/StartActivity": {
+		"body": [
+			"StartActivity(${1:activity})$0"
+		],
+		"description": "Start doing an activity (animation)",
+		"prefix": "StartActivity"
+	}
+}

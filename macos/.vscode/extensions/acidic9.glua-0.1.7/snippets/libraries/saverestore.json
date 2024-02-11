@@ -1,0 +1,93 @@
+{
+    "saverestore.AddRestoreHook": {
+        "body": [
+            "saverestore.AddRestoreHook(${1:identifier}, ${2:callback})$0"
+        ],
+        "description": "SAVERESTORE [Shared] Adds a restore/load hook for the Half-Life 2 save system.\n\n[string] identifier\n  The unique identifier for this hook.\n\n[function] callback\n  The function to be called when an engine save is being loaded. It has one argument:\nIRestore save - The restore object to be used to read data from save file that is being loaded\n\nYou can also use those functions to read data:\nsaverestore.ReadVar\nsaverestore.ReadTable\nsaverestore.LoadEntity",
+        "prefix": "saverestore.AddRestoreHook"
+    },
+    "saverestore.AddSaveHook": {
+        "body": [
+            "saverestore.AddSaveHook(${1:identifier}, ${2:callback})$0"
+        ],
+        "description": "SAVERESTORE [Shared] Adds a save hook for the Half-Life 2 save system. You can this to carry data through level transitions in Half-Life 2.\n\n[string] identifier\n  The unique identifier for this hook.\n\n[function] callback\n  The function to be called when an engine save is being saved. It has one argument:\nISave save - The save object to be used to write data to the save file that is being saved\n\nYou can also use those functions to save data:\nsaverestore.WriteVar\nsaverestore.WriteTable\nsaverestore.SaveEntity",
+        "prefix": "saverestore.AddSaveHook"
+    },
+    "saverestore.LoadEntity": {
+        "body": [
+            "saverestore.LoadEntity(${1:ent}, ${2:save})$0"
+        ],
+        "description": "SAVERESTORE [Shared] \n\n[Entity] ent\n  The entity which will receive the loaded values from the save.\n\n[IRestore] save\n  The restore object to read the Entity:GetTable from.",
+        "prefix": "saverestore.LoadEntity"
+    },
+    "saverestore.LoadGlobal": {
+        "body": [
+            "saverestore.LoadGlobal(${1:save})$0"
+        ],
+        "description": "SAVERESTORE [Shared] \n\n[IRestore] save\n  The restore object to read data from the save file with.",
+        "prefix": "saverestore.LoadGlobal"
+    },
+    "saverestore.PreRestore": {
+        "body": [
+            "saverestore.PreRestore()$0"
+        ],
+        "description": "SAVERESTORE [Shared]",
+        "prefix": "saverestore.PreRestore"
+    },
+    "saverestore.PreSave": {
+        "body": [
+            "saverestore.PreSave()$0"
+        ],
+        "description": "SAVERESTORE [Shared]",
+        "prefix": "saverestore.PreSave"
+    },
+    "saverestore.ReadTable": {
+        "body": [
+            "saverestore.ReadTable(${1:save})$0"
+        ],
+        "description": "SAVERESTORE [Shared] \n\n[IRestore] save\n  The restore object to read the table from.",
+        "prefix": "saverestore.ReadTable"
+    },
+    "saverestore.ReadVar": {
+        "body": [
+            "saverestore.ReadVar(${1:save})$0"
+        ],
+        "description": "SAVERESTORE [Shared] \n\n[IRestore] save\n  The restore object to read variables from.",
+        "prefix": "saverestore.ReadVar"
+    },
+    "saverestore.SaveEntity": {
+        "body": [
+            "saverestore.SaveEntity(${1:ent}, ${2:save})$0"
+        ],
+        "description": "SAVERESTORE [Shared] \n\n[Entity] ent\n  The entity to save Entity:GetTable of.\n\n[ISave] save\n  The save object to save Entity:GetTable to.",
+        "prefix": "saverestore.SaveEntity"
+    },
+    "saverestore.SaveGlobal": {
+        "body": [
+            "saverestore.SaveGlobal(${1:save})$0"
+        ],
+        "description": "SAVERESTORE [Shared] \n\n[ISave] save\n  The save object to write data into the save file.",
+        "prefix": "saverestore.SaveGlobal"
+    },
+    "saverestore.WritableKeysInTable": {
+        "body": [
+            "saverestore.WritableKeysInTable(${1:table})$0"
+        ],
+        "description": "SAVERESTORE [Shared] \n\n[table] table\n  The table to test.",
+        "prefix": "saverestore.WritableKeysInTable"
+    },
+    "saverestore.WriteTable": {
+        "body": [
+            "saverestore.WriteTable(${1:table}, ${2:save})$0"
+        ],
+        "description": "SAVERESTORE [Shared] \n\n[table] table\n  The table to write\n\n[ISave] save\n  The save object to write the table to.",
+        "prefix": "saverestore.WriteTable"
+    },
+    "saverestore.WriteVar": {
+        "body": [
+            "saverestore.WriteVar(${1:value}, ${2:save})$0"
+        ],
+        "description": "SAVERESTORE [Shared] \n\n[any] value\n  The value to save.It can be one of the following types: number, boolean, string, Entity, Angle, Vector or table.\n\n[ISave] save\n  The save object to write the variable to.",
+        "prefix": "saverestore.WriteVar"
+    }
+}

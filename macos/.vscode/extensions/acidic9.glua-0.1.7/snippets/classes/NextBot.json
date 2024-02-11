@@ -1,0 +1,93 @@
+{
+    "BecomeRagdoll": {
+        "body": [
+            "BecomeRagdoll(${1:info})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[CTakeDamageInfo] info\n  Damage info passed from an onkilled event",
+        "prefix": "BecomeRagdoll"
+    },
+    "BodyMoveXY": {
+        "body": [
+            "BodyMoveXY()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "BodyMoveXY"
+    },
+    "FindSpot": {
+        "body": [
+            "FindSpot(${1:type}, ${2:options})$0"
+        ],
+        "description": "NEXTBOT [Server] Like NextBot:FindSpots but only returns a vector.\n\n[string] type\n  Either \"random\", \"near\", \"far\"\n\n[table] options\n  This table should contain the search info.\n\nstring type - The type (Only'hiding' for now)Vector pos - the position to search.number radius - the radius to search.number stepup - the highest step to step up.number stepdown - the highest we can step down without being hurt.",
+        "prefix": "FindSpot"
+    },
+    "FindSpots": {
+        "body": [
+            "FindSpots(${1:specs})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[table] specs\n  This table should contain the search info.\n\nstring type - The type (either 'hiding')Vector pos - the position to search.number radius - the radius to search.number stepup - the highest step to step up.number stepdown - the highest we can step down without being hurt.",
+        "prefix": "FindSpots"
+    },
+    "GetActivity": {
+        "body": [
+            "GetActivity()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "GetActivity"
+    },
+    "GetRangeSquaredTo": {
+        "body": [
+            "GetRangeSquaredTo(${1:to})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[Vector] to\n  Position to measure distance to. Can be an entity.",
+        "prefix": "GetRangeSquaredTo"
+    },
+    "GetRangeTo": {
+        "body": [
+            "GetRangeTo(${1:to})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[Vector] to\n  Either an entity or a Vector position",
+        "prefix": "GetRangeTo"
+    },
+    "GetSolidMask": {
+        "body": [
+            "GetSolidMask()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "GetSolidMask"
+    },
+    "HandleStuck": {
+        "body": [
+            "HandleStuck()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "HandleStuck"
+    },
+    "MoveToPos": {
+        "body": [
+            "MoveToPos(${1:pos}, ${2:options})$0"
+        ],
+        "description": "NEXTBOT [Server] To be called in the behaviour coroutine only! Will yield until the bot has reached the goal or is stuck\n\n[Vector] pos\n  The position we want to get to\n\n[table] options\n  A table containing a bunch of tweakable options.\nnumber lookahead - Minimum look ahead distance.\nnumber tolerance - How close we must be to the goal before it can be considered complete.\nboolean draw - Draw the path. Only visible on listen servers and single player.\nnumber maxage - Maximum age of the path before it times out.\n\nnumber repath - Rebuilds the path after this number of seconds.",
+        "prefix": "MoveToPos"
+    },
+    "PlaySequenceAndWait": {
+        "body": [
+            "PlaySequenceAndWait(${1:name}, ${2:speed=1})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[string] name\n  The sequence name\n\n[number] speed=1\n  Playback Rate of that sequence",
+        "prefix": "PlaySequenceAndWait"
+    },
+    "SetSolidMask": {
+        "body": [
+            "SetSolidMask(${1:mask})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[number] mask\n  The new mask, see CONTENTS_ Enums and MASK_ Enums",
+        "prefix": "SetSolidMask"
+    },
+    "StartActivity": {
+        "body": [
+            "StartActivity(${1:activity})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[number] activity\n  One of the ACT_ Enums",
+        "prefix": "StartActivity"
+    }
+}

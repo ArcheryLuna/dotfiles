@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.CodeAnalysis.Razor.Workspaces</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.CodeAnalysis.Razor.Workspaces.BatchableWorkItem">
+            <summary>
+            A work item that represents a unit of work. This is intended to be overridden so consumers can represent any
+            unit of work that fits their need.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Razor.Workspaces.BatchableWorkItem.ProcessAsync(System.Threading.CancellationToken)">
+            <summary>
+            Processes a unit of work.
+            </summary>
+            <param name="cancellationToken">A cancellation token for the unit of work</param>
+            <returns>A task</returns>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Razor.Workspaces.BatchingWorkQueue.Enqueue(System.String,Microsoft.CodeAnalysis.Razor.Workspaces.BatchableWorkItem)">
+            <summary>
+            Adds the provided <paramref name="workItem"/> to a work queue under the specified <paramref name="key"/>.
+            Multiple enqueues under the same <paramref name="key"/> will use the last enqueued <paramref name="workItem"/>.
+            </summary>
+            <param name="key">An identifier used to track <paramref name="workItem"/>'s.</param>
+            <param name="workItem">An item to process</param>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Razor.Workspaces.Extensions.RazorSyntaxNodeExtensions.GetOutermostNode(Microsoft.AspNetCore.Razor.Language.Syntax.SyntaxNode)">
+            <summary>
+            Walks up the tree through the <paramref name="owner"/>'s parents to find the outermost node that starts at the same position.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Razor.Workspaces.Extensions.RazorSyntaxNodeExtensions.FindInnermostNode(Microsoft.AspNetCore.Razor.Language.Syntax.SyntaxNode,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            Finds the innermost SyntaxNode for a given location in source, within a given node.
+            </summary>
+            <param name="node">The parent node to search inside.</param>
+            <param name="index">The location to find the innermost node at.</param>
+            <param name="includeWhitespace">Whether to include whitespace in the search.</param>
+            <param name="walkMarkersBack">When true, if there are multiple <see cref="F:Microsoft.AspNetCore.Razor.Language.SyntaxKind.Marker"/> tokens in a single location, return the parent node of the
+            first one in the tree.</param>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Workspaces.LanguageServerFeatureOptions.IncludeProjectKeyInGeneratedFilePath">
+            <summary>
+            Whether the file path for the generated C# and Html documents should utilize the project key to
+            ensure a unique file path per project.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Workspaces.LanguageServerFeatureOptions.MonitorWorkspaceFolderForConfigurationFiles">
+            <summary>
+            Whether to monitor the entire workspace folder for any project.razor.bin files
+            </summary>
+            <remarks>
+            When this is off, the language server won't have any project knowledge unless the
+            razor/monitorProjectConfigurationFilePath notification is sent.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Razor.Workspaces.LSPEditorFeatureDetector.IsRemoteClient">
+            <summary>
+            A remote client is a LiveShare guest or a Codespaces instance
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Razor.Workspaces.Serialization.RazorUriJsonConverter">
+            <summary>
+            To workaround https://github.com/JamesNK/Newtonsoft.Json/issues/2128 we need to provide a Uri converter.
+            The LSP client has one, but it is not hooked up automatically and doesn't implement CanConvert, but we can
+            just do that on their behalf.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Workspaces.Resources.SR.ArgumentCannotBeNullOrEmpty">
+            <summary>Value cannot be null or an empty string.</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Workspaces.Resources.SR.DirectiveSnippetDescription">
+            <summary>Insert a directive code snippet
+            [Tab] to navigate between elements, [Enter] to complete</summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Razor.Completion.CompletionSortTextHelper">
+            <summary>
+            Provides pre-filled sort text items to make setting <see cref="P:Microsoft.CodeAnalysis.Razor.Completion.RazorCompletionItem.SortText"/> consistent.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Completion.CompletionSortTextHelper.DefaultSortPriority">
+            <summary>
+            The default sort priority. Typically this means an LSP client will fall-back to sorting the completion item
+            based off of the displayed label in the completion list.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Completion.CompletionSortTextHelper.HighSortPriority">
+            <summary>
+            A high sort priority. Displayed above <see cref="P:Microsoft.CodeAnalysis.Razor.Completion.CompletionSortTextHelper.DefaultSortPriority"/> items.
+            </summary>
+            <remarks>
+            Note how this property doesn't take into account the actual completion items content. Ultimately this property
+            simply returns whitespace. The reason it returns whitespace is that whitespace is alphabetically ordered at the
+            top of all other characters. Meaning, for a reasonable client to interpret this sort priority it'll sort by the
+            whitespace sort text then will need to fallback to something else to handle collisions (items that have the same
+            sort text). The only reasonable fallback will be the display text of a completion item; meaning, we'll have all
+            of our "high priority" completion items appear above any other completion item because it'll first sort by whitespace
+            and then by display text.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Razor.Completion.RazorCompletionItem.#ctor(System.String,System.String,Microsoft.CodeAnalysis.Razor.Completion.RazorCompletionItemKind,System.String,System.Collections.Generic.IReadOnlyList{Microsoft.CodeAnalysis.Razor.Completion.RazorCommitCharacter},System.Boolean)">
+            <summary>
+            Creates a new Razor completion item
+            </summary>
+            <param name="displayText">The text to display in the completion list</param>
+            <param name="insertText">Content to insert when completion item is committed</param>
+            <param name="kind">The type of completion item this is. Used for icons and resolving extra information like tooltip text.</param>
+            <param name="sortText">A string that is used to alphabetically sort the completion item. If omitted defaults to <paramref name="displayText"/>.</param>
+            <param name="commitCharacters">Characters that can be used to commit the completion item.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="displayText"/> or <paramref name="insertText"/> are <c>null</c>.</exception>
+            <param name="isSnippet">Indicates whether the completion item's <see cref="P:Microsoft.CodeAnalysis.Razor.Completion.RazorCompletionItem.InsertText"/> is an LSP snippet or not.</param>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Completion.RazorCompletionItem.SortText">
+            <summary>
+            A string that is used to alphabetically sort the completion item.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Razor.Editor.ClientSettings">
+            <summary>
+            Settings that are set and handled on the client, but needed by the LSP Server to function correctly. When these are
+            updated a workspace/didchangeconfiguration should be sent from client to the server. Then the server requests
+            workspace/configuration to get the latest settings. For VS, the razor protocol also handles this and serializes the
+            settings back to the server.
+            </summary>
+            <param name="ClientSpaceSettings"></param>
+            <param name="ClientCompletionSettings"></param>
+            <param name="AdvancedSettings"></param>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Razor.Editor.ClientSettings.#ctor(Microsoft.CodeAnalysis.Razor.Editor.ClientSpaceSettings,Microsoft.CodeAnalysis.Razor.Editor.ClientCompletionSettings,Microsoft.CodeAnalysis.Razor.Editor.ClientAdvancedSettings)">
+            <summary>
+            Settings that are set and handled on the client, but needed by the LSP Server to function correctly. When these are
+            updated a workspace/didchangeconfiguration should be sent from client to the server. Then the server requests
+            workspace/configuration to get the latest settings. For VS, the razor protocol also handles this and serializes the
+            settings back to the server.
+            </summary>
+            <param name="ClientSpaceSettings"></param>
+            <param name="ClientCompletionSettings"></param>
+            <param name="AdvancedSettings"></param>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Editor.ClientSettings.ClientSpaceSettings">
+            <summary></summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Editor.ClientSettings.ClientCompletionSettings">
+            <summary></summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.Editor.ClientSettings.AdvancedSettings">
+            <summary></summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Razor.ProjectSystem.FallbackProjectManager">
+            <summary>
+            This class is responsible for maintaining project information for projects that don't
+            use the Razor or Web SDK, or otherwise don't get picked up by our CPS bits, but have
+            .razor or .cshtml files regardless.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Razor.ProjectSystem.FallbackProjectManager.#ctor(Microsoft.CodeAnalysis.Razor.ProjectSystem.ProjectConfigurationFilePathStore,Microsoft.CodeAnalysis.Razor.Workspaces.LanguageServerFeatureOptions,Microsoft.CodeAnalysis.Razor.Workspaces.ProjectSnapshotManagerAccessor,Microsoft.AspNetCore.Razor.Telemetry.ITelemetryReporter)">
+            <summary>
+            This class is responsible for maintaining project information for projects that don't
+            use the Razor or Web SDK, or otherwise don't get picked up by our CPS bits, but have
+            .razor or .cshtml files regardless.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.HostProject.FilePath">
+            <summary>
+            Gets the full path to the .csproj file for this project
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.HostProject.IntermediateOutputPath">
+            <summary>
+            Gets the full path to the folder under 'obj' where the project.razor.bin file will live
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.HostProject.DisplayName">
+            <summary>
+            An extra user-friendly string to show in the VS navigation bar to help the user, of the form "{ProjectFileName} ({Flavor})"
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.IProjectSnapshot.FilePath">
+            <summary>
+            Gets the full path to the .csproj file for this project
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.IProjectSnapshot.IntermediateOutputPath">
+            <summary>
+            Gets the full path to the folder under 'obj' where the project.razor.bin file will live
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Razor.ProjectSystem.IProjectSnapshot.GetRelatedDocuments(Microsoft.CodeAnalysis.Razor.ProjectSystem.IDocumentSnapshot)">
+            <summary>
+            If the provided document is an import document, gets the other documents in the project
+            that include directives specified by the provided document. Otherwise returns an empty
+            list.
+            </summary>
+            <param name="document">The document.</param>
+            <returns>A list of related documents.</returns>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.Razor.ProjectSystem.ProjectKey">
+            <summary>
+            A very light wrapper around a file path, used to ensure consistency across the code base for what constitutes the unique
+            identifier for a project.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.ProjectState.Version">
+            <summary>
+            Gets the version of this project, INCLUDING content changes. The <see cref="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.ProjectState.Version"/> is
+            incremented for each new <see cref="T:Microsoft.CodeAnalysis.Razor.ProjectSystem.ProjectState"/> instance created.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.ProjectState.DocumentCollectionVersion">
+            <summary>
+            Gets the version of this project, NOT INCLUDING computed or content changes. The
+            <see cref="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.ProjectState.DocumentCollectionVersion"/> is incremented each time the configuration changes or
+            a document is added or removed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.Razor.ProjectSystem.ProjectState.ProjectWorkspaceStateVersion">
+            <summary>
+            Gets the version of this project based on the project workspace state, NOT INCLUDING content
+            changes. The computed state is guaranteed to change when the configuration or tag helpers
+            change.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.TextDifferencing.SourceTextDiffer.RentArray(System.Int32)">
+            <summary>
+             Rents a char array of at least <paramref name="minimumLength"/> from the shared array pool.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.TextDifferencing.SourceTextDiffer.ReturnArray(System.Char[],System.Boolean)">
+            <summary>
+             Returns a char array to the shared array pool.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.TextDifferencing.SourceTextDiffer.EnsureBuffer(System.Char[]@,System.Int32)">
+            <summary>
+             Ensures that <paramref name="array"/> references a char array of at least <paramref name="minimumLength"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.TextDifferencing.TextDiffer.IntArray">
+            <summary>
+             This is a simple wrapper for either a single small int array, or
+             an array of int array pages.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.TextDifferencing.TextDiffer.IntArray.RentArray(System.Int32)">
+            <summary>
+             Rents an int array of at least <paramref name="minimumLength"/> from the shared array pool.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.TextDifferencing.TextDiffer.IntArray.ReturnArray(System.Int32[],System.Boolean)">
+            <summary>
+             Returns an int array to the shared array pool.
+            </summary>
+        </member>
+    </members>
+</doc>

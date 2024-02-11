@@ -1,0 +1,93 @@
+{
+    "ChangePitch": {
+        "body": [
+            "ChangePitch(${1:pitch}, ${2:deltaTime=0})$0"
+        ],
+        "description": "CSOUNDPATCH [Shared] \n\n[number] pitch\n  The pitch can range from 0-255.\n\n[number] deltaTime=0\n  The time to fade from previous to the new pitch.",
+        "prefix": "ChangePitch"
+    },
+    "ChangeVolume": {
+        "body": [
+            "ChangeVolume(${1:volume}, ${2:deltaTime=0})$0"
+        ],
+        "description": "CSOUNDPATCH [Shared] \n\n[number] volume\n  The volume ranges from 0 to 1.\n\n[number] deltaTime=0\n  Time to fade the volume from previous to new value from.",
+        "prefix": "ChangeVolume"
+    },
+    "FadeOut": {
+        "body": [
+            "FadeOut(${1:seconds})$0"
+        ],
+        "description": "CSOUNDPATCH [Shared] \n\n[number] seconds\n  Fade time.",
+        "prefix": "FadeOut"
+    },
+    "GetDSP": {
+        "body": [
+            "GetDSP()$0"
+        ],
+        "description": "CSOUNDPATCH [Shared]",
+        "prefix": "GetDSP"
+    },
+    "GetPitch": {
+        "body": [
+            "GetPitch()$0"
+        ],
+        "description": "CSOUNDPATCH [Shared]",
+        "prefix": "GetPitch"
+    },
+    "GetSoundLevel": {
+        "body": [
+            "GetSoundLevel()$0"
+        ],
+        "description": "CSOUNDPATCH [Shared]",
+        "prefix": "GetSoundLevel"
+    },
+    "GetVolume": {
+        "body": [
+            "GetVolume()$0"
+        ],
+        "description": "CSOUNDPATCH [Shared]",
+        "prefix": "GetVolume"
+    },
+    "IsPlaying": {
+        "body": [
+            "IsPlaying()$0"
+        ],
+        "description": "CSOUNDPATCH [Shared]",
+        "prefix": "IsPlaying"
+    },
+    "Play": {
+        "body": [
+            "Play()$0"
+        ],
+        "description": "CSOUNDPATCH [Shared]",
+        "prefix": "Play"
+    },
+    "PlayEx": {
+        "body": [
+            "PlayEx(${1:volume}, ${2:pitch})$0"
+        ],
+        "description": "CSOUNDPATCH [Shared] \n\n[number] volume\n  The volume ranges from 0 to 1.\n\n[number] pitch\n  The pitch can range from 0-255.",
+        "prefix": "PlayEx"
+    },
+    "SetDSP": {
+        "body": [
+            "SetDSP(${1:dsp})$0"
+        ],
+        "description": "CSOUNDPATCH [Shared] \n\n[number] dsp\n  The DSP effect to set.\n\nPick from the list of DSP's",
+        "prefix": "SetDSP"
+    },
+    "SetSoundLevel": {
+        "body": [
+            "SetSoundLevel(${1:level})$0"
+        ],
+        "description": "CSOUNDPATCH [Shared] \n\n[number] level\n  The sound level in decibel. See SNDLVL_ Enums",
+        "prefix": "SetSoundLevel"
+    },
+    "Stop": {
+        "body": [
+            "Stop()$0"
+        ],
+        "description": "CSOUNDPATCH [Shared]",
+        "prefix": "Stop"
+    }
+}

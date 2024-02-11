@@ -1,0 +1,86 @@
+{
+    "AboveLayout": {
+        "body": [
+            "AboveLayout()$0"
+        ],
+        "description": "ICONEDITOR [Client]",
+        "prefix": "AboveLayout"
+    },
+    "BestGuessLayout": {
+        "body": [
+            "BestGuessLayout()$0"
+        ],
+        "description": "ICONEDITOR [Client]",
+        "prefix": "BestGuessLayout"
+    },
+    "FillAnimations": {
+        "body": [
+            "FillAnimations(${1:ent})$0"
+        ],
+        "description": "ICONEDITOR [Client] \n\n[Entity] ent\n  The entity being rendered within the model panel.",
+        "prefix": "FillAnimations"
+    },
+    "FullFrontalLayout": {
+        "body": [
+            "FullFrontalLayout()$0"
+        ],
+        "description": "ICONEDITOR [Client]",
+        "prefix": "FullFrontalLayout"
+    },
+    "OriginLayout": {
+        "body": [
+            "OriginLayout()$0"
+        ],
+        "description": "ICONEDITOR [Client]",
+        "prefix": "OriginLayout"
+    },
+    "Refresh": {
+        "body": [
+            "Refresh()$0"
+        ],
+        "description": "ICONEDITOR [Client]",
+        "prefix": "Refresh"
+    },
+    "RenderIcon": {
+        "body": [
+            "RenderIcon()$0"
+        ],
+        "description": "ICONEDITOR [Client]",
+        "prefix": "RenderIcon"
+    },
+    "RightLayout": {
+        "body": [
+            "RightLayout()$0"
+        ],
+        "description": "ICONEDITOR [Client]",
+        "prefix": "RightLayout"
+    },
+    "SetDefaultLighting": {
+        "body": [
+            "SetDefaultLighting()$0"
+        ],
+        "description": "ICONEDITOR [Client]",
+        "prefix": "SetDefaultLighting"
+    },
+    "SetFromEntity": {
+        "body": [
+            "SetFromEntity(${1:ent})$0"
+        ],
+        "description": "ICONEDITOR [Client] \n\n[Entity] ent\n  The entity to retrieve the model and skin from.",
+        "prefix": "SetFromEntity"
+    },
+    "SetIcon": {
+        "body": [
+            "SetIcon(${1:icon})$0"
+        ],
+        "description": "ICONEDITOR [Client] \n\n[Panel] icon\n  The SpawnIcon object to be modified.",
+        "prefix": "SetIcon"
+    },
+    "UpdateEntity": {
+        "body": [
+            "UpdateEntity(${1:ent})$0"
+        ],
+        "description": "ICONEDITOR [Client] \n\n[Entity] ent\n  The entity being rendered within the model panel.",
+        "prefix": "UpdateEntity"
+    }
+}

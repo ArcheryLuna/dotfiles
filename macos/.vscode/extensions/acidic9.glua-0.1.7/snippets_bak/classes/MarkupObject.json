@@ -1,0 +1,37 @@
+{
+	"MarkupObject/Create": {
+		"body": [
+			"Create()$0"
+		],
+		"description": "No description available.",
+		"prefix": "Create"
+	},
+	"MarkupObject/Draw": {
+		"body": [
+			"Draw(${1:xOffset}, ${2:yOffset}, ${3:xAlign}, ${4:yAlign}, ${5:alphaoverride=255})$0"
+		],
+		"description": "Draws the computed markupobject to the screen.",
+		"prefix": "Draw"
+	},
+	"MarkupObject/GetHeight": {
+		"body": [
+			"GetHeight()$0"
+		],
+		"description": "Gets computed the height of the markupobject.",
+		"prefix": "GetHeight"
+	},
+	"MarkupObject/GetWidth": {
+		"body": [
+			"GetWidth()$0"
+		],
+		"description": "Gets computed the width of the markupobject.",
+		"prefix": "GetWidth"
+	},
+	"MarkupObject/Size": {
+		"body": [
+			"Size()$0"
+		],
+		"description": "Gets computed the width and height of the markupobject.",
+		"prefix": "Size"
+	}
+}

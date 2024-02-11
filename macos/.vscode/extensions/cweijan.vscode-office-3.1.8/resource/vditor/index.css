@@ -1,0 +1,20 @@
+body {
+    padding: 0;
+}
+
+code {
+    color: #24292e;
+}
+
+a {
+    text-decoration: none;
+}
+
+.vditor-panel span[aria-label="ID<Alt+Enter>"],
+.vditor-panel .vditor-icon[data-type="down"] {
+    display: none !important;
+}
+
+.vditor-reset {
+    padding: 0 5% !important;
+}

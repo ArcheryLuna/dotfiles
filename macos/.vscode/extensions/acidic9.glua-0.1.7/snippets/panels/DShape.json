@@ -1,0 +1,44 @@
+{
+    "GetBorderColor": {
+        "body": [
+            "GetBorderColor()$0"
+        ],
+        "description": "DSHAPE [Client]",
+        "prefix": "GetBorderColor"
+    },
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "DSHAPE [Client]",
+        "prefix": "GetColor"
+    },
+    "GetType": {
+        "body": [
+            "GetType()$0"
+        ],
+        "description": "DSHAPE [Client]",
+        "prefix": "GetType"
+    },
+    "SetBorderColor": {
+        "body": [
+            "SetBorderColor(${1:clr})$0"
+        ],
+        "description": "DSHAPE [Client] \n\n[table] clr\n  The desired border color.\n\nSee Color structure",
+        "prefix": "SetBorderColor"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:clr})$0"
+        ],
+        "description": "DSHAPE [Client] \n\n[table] clr\n  The Color structure",
+        "prefix": "SetColor"
+    },
+    "SetType": {
+        "body": [
+            "SetType(${1:type})$0"
+        ],
+        "description": "DSHAPE [Client] Sets the shape to be drawn.\n\n[string] type\n  The render type of the DShape. Only rectangles (Rect) work currently. If you don't define a type immediately, the PANEL:Paint method will generate errors until you do.",
+        "prefix": "SetType"
+    }
+}

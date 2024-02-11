@@ -1,0 +1,93 @@
+{
+	"CRecipientFilter/AddAllPlayers": {
+		"body": [
+			"AddAllPlayers()$0"
+		],
+		"description": "Adds all players to the recipient filter.",
+		"prefix": "AddAllPlayers"
+	},
+	"CRecipientFilter/AddPAS": {
+		"body": [
+			"AddPAS(${1:pos})$0"
+		],
+		"description": "Adds all players that are in the same PAS as this position.",
+		"prefix": "AddPAS"
+	},
+	"CRecipientFilter/AddPVS": {
+		"body": [
+			"AddPVS(${1:Position})$0"
+		],
+		"description": "Adds all players that are in the same PVS as this position.",
+		"prefix": "AddPVS"
+	},
+	"CRecipientFilter/AddPlayer": {
+		"body": [
+			"AddPlayer(${1:Player})$0"
+		],
+		"description": "Adds a player to the recipient filter",
+		"prefix": "AddPlayer"
+	},
+	"CRecipientFilter/AddRecipientsByTeam": {
+		"body": [
+			"AddRecipientsByTeam(${1:teamid})$0"
+		],
+		"description": "Adds all players that are on the given team to the filter.",
+		"prefix": "AddRecipientsByTeam"
+	},
+	"CRecipientFilter/GetCount": {
+		"body": [
+			"GetCount()$0"
+		],
+		"description": "Returns the number of valid players in the recipient filter.",
+		"prefix": "GetCount"
+	},
+	"CRecipientFilter/GetPlayers": {
+		"body": [
+			"GetPlayers()$0"
+		],
+		"description": "Returns a table of all valid players currently in the recipient filter.",
+		"prefix": "GetPlayers"
+	},
+	"CRecipientFilter/RemoveAllPlayers": {
+		"body": [
+			"RemoveAllPlayers()$0"
+		],
+		"description": "Removes all players from the recipient filter.",
+		"prefix": "RemoveAllPlayers"
+	},
+	"CRecipientFilter/RemovePAS": {
+		"body": [
+			"RemovePAS(${1:position})$0"
+		],
+		"description": "Removes all players from the filter that are in Potentially Audible Set for given position.",
+		"prefix": "RemovePAS"
+	},
+	"CRecipientFilter/RemovePVS": {
+		"body": [
+			"RemovePVS(${1:pos})$0"
+		],
+		"description": "Removes all players that can see this PVS from the recipient filter.",
+		"prefix": "RemovePVS"
+	},
+	"CRecipientFilter/RemovePlayer": {
+		"body": [
+			"RemovePlayer(${1:Player})$0"
+		],
+		"description": "Removes the player from the recipient filter.",
+		"prefix": "RemovePlayer"
+	},
+	"CRecipientFilter/RemoveRecipientsByTeam": {
+		"body": [
+			"RemoveRecipientsByTeam(${1:teamid})$0"
+		],
+		"description": "Removes all players that are on the given team from the filter.",
+		"prefix": "RemoveRecipientsByTeam"
+	},
+	"CRecipientFilter/RemoveRecipientsNotOnTeam": {
+		"body": [
+			"RemoveRecipientsNotOnTeam(${1:teamid})$0"
+		],
+		"description": "Removes all players that are not on the given team from the filter.",
+		"prefix": "RemoveRecipientsNotOnTeam"
+	}
+}

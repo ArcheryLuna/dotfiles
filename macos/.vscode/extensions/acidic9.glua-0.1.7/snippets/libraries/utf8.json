@@ -1,0 +1,44 @@
+{
+    "utf8.char": {
+        "body": [
+            "utf8.char(${1:codepoints})$0"
+        ],
+        "description": "UTF8 [Shared] \n\n[vararg] codepoints\n  Unicode code points to be converted in to a UTF-8 string.",
+        "prefix": "utf8.char"
+    },
+    "utf8.codepoint": {
+        "body": [
+            "utf8.codepoint(${1:string}, ${2:startPos=1}, ${3:endPos=1})$0"
+        ],
+        "description": "UTF8 [Shared] Returns the codepoints (as numbers) from all characters in the given string that start between byte position startPos and endPos. It raises an error if it meets any invalid byte sequence. This functions similarly to string.byte.\n\n[string] string\n  The string that you will get the code(s) from.\n\n[number] startPos=1\n  The starting byte of the string to get the codepoint of.\n\n[number] endPos=1\n  The ending byte of the string to get the codepoint of.",
+        "prefix": "utf8.codepoint"
+    },
+    "utf8.codes": {
+        "body": [
+            "utf8.codes(${1:string})$0"
+        ],
+        "description": "UTF8 [Shared] Returns an iterator (like string.gmatch) which returns both the position and codepoint of each utf8 character in the string. It raises an error if it meets any invalid byte sequence.\n\n[string] string\n  The string that you will get the codes from.",
+        "prefix": "utf8.codes"
+    },
+    "utf8.force": {
+        "body": [
+            "utf8.force(${1:string})$0"
+        ],
+        "description": "UTF8 [Shared] \n\n[string] string\n  The string that will become a valid UTF-8 string.",
+        "prefix": "utf8.force"
+    },
+    "utf8.len": {
+        "body": [
+            "utf8.len(${1:string}, ${2:startPos=1}, ${3:endPos=-1})$0"
+        ],
+        "description": "UTF8 [Shared] Returns the number of UTF-8 sequences in the given string between positions startPos and endPos (both inclusive). If it finds any invalid UTF-8 byte sequence, returns false as well as the position of the first invalid byte.\n\n[string] string\n  The string to calculate the length of.\n\n[number] startPos=1\n  The starting position to get the length from.\n\n[number] endPos=-1\n  The ending position to get the length from.",
+        "prefix": "utf8.len"
+    },
+    "utf8.offset": {
+        "body": [
+            "utf8.offset(${1:string}, ${2:n}, ${3:startPos=1whenn\u003e=0,-1otherwise})$0"
+        ],
+        "description": "UTF8 [Shared] Returns the byte-index of the n'th UTF-8-character after the given startPos (nil if none). startPos defaults to 1 when n is positive and -1 when n is negative. If n is zero, this function instead returns the byte-index of the UTF-8-character startPos lies within.\n\n[string] string\n  The string that you will get the byte position from.\n\n[number] n\n  The position to get the beginning byte position from.\n\n[number] startPos=1whenn\u003e=0,-1otherwise\n  The offset for n.",
+        "prefix": "utf8.offset"
+    }
+}

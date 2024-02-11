@@ -1,0 +1,933 @@
+{
+    "render.AddBeam": {
+        "body": [
+            "render.AddBeam(${1:startPos}, ${2:width}, ${3:textureEnd}, ${4:color})$0"
+        ],
+        "description": "RENDER [Client] Adds a beam segment to the beam started by render.StartBeam.\n\n[Vector] startPos\n  Beam start position.\n\n[number] width\n  The width of the beam.\n\n[number] textureEnd\n  The end coordinate of the texture used.\n\n[table] color\n  The color to be used. Uses the Color structure.",
+        "prefix": "render.AddBeam"
+    },
+    "render.BlurRenderTarget": {
+        "body": [
+            "render.BlurRenderTarget(${1:rendertarget}, ${2:blurx}, ${3:blury}, ${4:passes})$0"
+        ],
+        "description": "RENDER [Client] Blurs the render target ( or a given texture )\n\n[ITexture] rendertarget\n  The texture to blur\n\n[number] blurx\n  Horizontal amount of blur\n\n[number] blury\n  Vertical amount of blur\n\n[number] passes\n  Amount of passes to go through",
+        "prefix": "render.BlurRenderTarget"
+    },
+    "render.BrushMaterialOverride": {
+        "body": [
+            "render.BrushMaterialOverride(${1:mat=nil})$0"
+        ],
+        "description": "RENDER [Client] \n\n[IMaterial] mat=nil",
+        "prefix": "render.BrushMaterialOverride"
+    },
+    "render.Capture": {
+        "body": [
+            "render.Capture(${1:captureData})$0"
+        ],
+        "description": "RENDER [Client] Captures a part of the current render target and returns the data as a binary string in the given format.\n\n[table] captureData\n  Parameters of the capture. See RenderCaptureData structure",
+        "prefix": "render.Capture"
+    },
+    "render.CapturePixels": {
+        "body": [
+            "render.CapturePixels()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.CapturePixels"
+    },
+    "render.Clear": {
+        "body": [
+            "render.Clear(${1:r}, ${2:g}, ${3:b}, ${4:a}, ${5:clearDepth}, ${6:clearStencil})$0"
+        ],
+        "description": "RENDER [Client] Clears the current render target and the specified buffers.\n\n[number] r\n  Red component to clear to.\n\n[number] g\n  Green component to clear to.\n\n[number] b\n  Blue component to clear to.\n\n[number] a\n  Alpha component to clear to.\n\n[boolean] clearDepth\n  Clear the depth.\n\n[boolean] clearStencil\n  Clear the stencil.",
+        "prefix": "render.Clear"
+    },
+    "render.ClearBuffersObeyStencil": {
+        "body": [
+            "render.ClearBuffersObeyStencil(${1:r}, ${2:g}, ${3:b}, ${4:a}, ${5:depth})$0"
+        ],
+        "description": "RENDER [Client] Clears the current rendertarget for obeying the current stencil buffer conditions.\n\n[number] r\n  Value of the red channel to clear the current rt with.\n\n[number] g\n  Value of the green channel to clear the current rt with.\n\n[number] b\n  Value of the blue channel to clear the current rt with.\n\n[number] a\n  Value of the alpha channel to clear the current rt with.\n\n[boolean] depth\n  Clear the depth buffer.",
+        "prefix": "render.ClearBuffersObeyStencil"
+    },
+    "render.ClearDepth": {
+        "body": [
+            "render.ClearDepth()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.ClearDepth"
+    },
+    "render.ClearRenderTarget": {
+        "body": [
+            "render.ClearRenderTarget(${1:texture}, ${2:color})$0"
+        ],
+        "description": "RENDER [Client] \n\n[ITexture] texture\n  \n\n[table] color\n  The color, see Color structure",
+        "prefix": "render.ClearRenderTarget"
+    },
+    "render.ClearStencil": {
+        "body": [
+            "render.ClearStencil()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.ClearStencil"
+    },
+    "render.ClearStencilBufferRectangle": {
+        "body": [
+            "render.ClearStencilBufferRectangle(${1:originX}, ${2:originY}, ${3:endX}, ${4:endY}, ${5:stencilValue})$0"
+        ],
+        "description": "RENDER [Client] Sets the stencil value in a specified rect.\n\n[number] originX\n  X origin of the rectangle.\n\n[number] originY\n  Y origin of the rectangle.\n\n[number] endX\n  The end X coordinate of the rectangle.\n\n[number] endY\n  The end Y coordinate of the rectangle.\n\n[number] stencilValue\n  Value to set cleared stencil buffer to.",
+        "prefix": "render.ClearStencilBufferRectangle"
+    },
+    "render.ComputeDynamicLighting": {
+        "body": [
+            "render.ComputeDynamicLighting(${1:position}, ${2:normal})$0"
+        ],
+        "description": "RENDER [Client] Calculates the lighting caused by dynamic lights for the specified surface.\n\n[Vector] position\n  The position to sample from.\n\n[Vector] normal\n  The normal of the surface.",
+        "prefix": "render.ComputeDynamicLighting"
+    },
+    "render.ComputeLighting": {
+        "body": [
+            "render.ComputeLighting(${1:position}, ${2:normal})$0"
+        ],
+        "description": "RENDER [Client] Calculates the light color of a certain surface.\n\n[Vector] position\n  The position of the surface to get the light from.\n\n[Vector] normal\n  The normal of the surface to get the light from.",
+        "prefix": "render.ComputeLighting"
+    },
+    "render.CopyRenderTargetToTexture": {
+        "body": [
+            "render.CopyRenderTargetToTexture(${1:Target})$0"
+        ],
+        "description": "RENDER [Client] Copies the currently active Render Target to the specified texture.\n\n[ITexture] Target\n  The texture to copy to",
+        "prefix": "render.CopyRenderTargetToTexture"
+    },
+    "render.CopyTexture": {
+        "body": [
+            "render.CopyTexture(${1:texture_from}, ${2:texture_to})$0"
+        ],
+        "description": "RENDER [Client] \n\n[ITexture] texture_from\n  \n\n[ITexture] texture_to",
+        "prefix": "render.CopyTexture"
+    },
+    "render.CullMode": {
+        "body": [
+            "render.CullMode(${1:cullMode})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] cullMode\n  Cullmode, see MATERIAL_CULLMODE_ Enums",
+        "prefix": "render.CullMode"
+    },
+    "render.DepthRange": {
+        "body": [
+            "render.DepthRange(${1:depthmin}, ${2:depthmax})$0"
+        ],
+        "description": "RENDER [Client] Set's the depth range of the upcoming render.\n\n[number] depthmin\n  The minimum depth of the upcoming render. 0.0 = render normally; 1.0 = render nothing\n\n[number] depthmax\n  The maximum depth of the upcoming render. 0.0 = render everything (through walls); 1.0 = render normally",
+        "prefix": "render.DepthRange"
+    },
+    "render.DrawBeam": {
+        "body": [
+            "render.DrawBeam(${1:startPos}, ${2:endPos}, ${3:width}, ${4:textureStart}, ${5:textureEnd}, ${6:color})$0"
+        ],
+        "description": "RENDER [Client] Draws textured beam.\n\n[Vector] startPos\n  Beam start position.\n\n[Vector] endPos\n  Beam end position.\n\n[number] width\n  The width of the beam.\n\n[number] textureStart\n  The start coordinate of the texture used.\n\n[number] textureEnd\n  The end coordinate of the texture used.\n\n[table] color\n  The color to be used. Uses the Color structure.",
+        "prefix": "render.DrawBeam"
+    },
+    "render.DrawBox": {
+        "body": [
+            "render.DrawBox(${1:position}, ${2:angles}, ${3:mins}, ${4:maxs}, ${5:color}, ${6:writeZ})$0"
+        ],
+        "description": "RENDER [Client] Draws a box in 3D space.\n\n[Vector] position\n  Origin of the box.\n\n[Angle] angles\n  Orientation of the box.\n\n[Vector] mins\n  Start position of the box, relative to origin.\n\n[Vector] maxs\n  End position of the box, relative to origin.\n\n[table] color\n  The color of the box. Uses the Color structure.\n\n[boolean] writeZ\n  Should this render call write to the depth buffer.",
+        "prefix": "render.DrawBox"
+    },
+    "render.DrawLine": {
+        "body": [
+            "render.DrawLine(${1:startPos}, ${2:endPos}, ${3:color}, ${4:writeZ=false})$0"
+        ],
+        "description": "RENDER [Client] Draws a line in 3D space.\n\n[Vector] startPos\n  Line start position in world coordinates.\n\n[Vector] endPos\n  Line end position in world coordinates.\n\n[table] color\n  The color to be used. Uses the Color structure.\n\n[boolean] writeZ=false\n  Whether or not to consider the Z buffer. If false, the line will be drawn over everything currently drawn, if true, the line will be drawn with depth considered, as if it were a regular object in 3D space.",
+        "prefix": "render.DrawLine"
+    },
+    "render.DrawQuad": {
+        "body": [
+            "render.DrawQuad(${1:vert1}, ${2:vert2}, ${3:vert3}, ${4:vert4}, ${5:color=Color(255,255,255)})$0"
+        ],
+        "description": "RENDER [Client] Draws 2 connected triangles.\n\n[Vector] vert1\n  First vertex.\n\n[Vector] vert2\n  The second vertex.\n\n[Vector] vert3\n  The third vertex.\n\n[Vector] vert4\n  The fourth vertex.\n\n[table] color=Color(255,255,255)\n  The color of the quad. See Color",
+        "prefix": "render.DrawQuad"
+    },
+    "render.DrawQuadEasy": {
+        "body": [
+            "render.DrawQuadEasy(${1:position}, ${2:normal}, ${3:width}, ${4:height}, ${5:color}, ${6:rotation})$0"
+        ],
+        "description": "RENDER [Client] Draws a quad.\n\n[Vector] position\n  Origin of the sprite.\n\n[Vector] normal\n  The face direction of the quad.\n\n[number] width\n  The width of the quad.\n\n[number] height\n  The height of the quad.\n\n[table] color\n  The color of the quad. Uses the Color structure.\n\n[number] rotation\n  The rotation of the quad in degrees.",
+        "prefix": "render.DrawQuadEasy"
+    },
+    "render.DrawScreenQuad": {
+        "body": [
+            "render.DrawScreenQuad()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.DrawScreenQuad"
+    },
+    "render.DrawScreenQuadEx": {
+        "body": [
+            "render.DrawScreenQuadEx(${1:startX}, ${2:startY}, ${3:width}, ${4:height})$0"
+        ],
+        "description": "RENDER [Client] Draws the the current material set by render.SetMaterial to the area specified.\n\n[number] startX\n  X start position of the rect.\n\n[number] startY\n  Y start position of the rect.\n\n[number] width\n  Width of the rect.\n\n[number] height\n  Height of the rect.",
+        "prefix": "render.DrawScreenQuadEx"
+    },
+    "render.DrawSphere": {
+        "body": [
+            "render.DrawSphere(${1:position}, ${2:radius}, ${3:longitudeSteps}, ${4:latitudeSteps}, ${5:color})$0"
+        ],
+        "description": "RENDER [Client] Draws a sphere in 3D space. The material previously set with render.SetMaterial will be applied the sphere's surface. See also render.DrawWireframeSphere for a wireframe equivalent.\n\n[Vector] position\n  Position of the sphere.\n\n[number] radius\n  Radius of the sphere.\n\n[number] longitudeSteps\n  The number of longitude steps. This controls the quality of the sphere. Higher quality will lower performance significantly. 50 is a good number to start with.\n\nIn reality, the sphere has one less than the specified value.\n\n[number] latitudeSteps\n  The number of latitude steps. This controls the quality of the sphere. Higher quality will lower performance significantly. 50 is a good number to start with.\n\nIn reality, the sphere has one less than the specified value.\n\n[table] color\n  The color of the sphere. Uses the Color structure.",
+        "prefix": "render.DrawSphere"
+    },
+    "render.DrawSprite": {
+        "body": [
+            "render.DrawSprite(${1:position}, ${2:width}, ${3:height}, ${4:color})$0"
+        ],
+        "description": "RENDER [Client] Draws a sprite in 3d space.\n\n[Vector] position\n  Position of the sprite.\n\n[number] width\n  Width of the sprite.\n\n[number] height\n  Height of the sprite.\n\n[table] color\n  Color of the sprite. Uses the Color structure.",
+        "prefix": "render.DrawSprite"
+    },
+    "render.DrawTextureToScreen": {
+        "body": [
+            "render.DrawTextureToScreen(${1:tex})$0"
+        ],
+        "description": "RENDER [Client] \n\n[ITexture] tex\n  The texture to draw",
+        "prefix": "render.DrawTextureToScreen"
+    },
+    "render.DrawTextureToScreenRect": {
+        "body": [
+            "render.DrawTextureToScreenRect(${1:tex}, ${2:x}, ${3:y}, ${4:width}, ${5:height})$0"
+        ],
+        "description": "RENDER [Client] Draws a textured rectangle.\n\n[ITexture] tex\n  The texture to draw\n\n[number] x\n  The x coordinate of the rectangle to draw.\n\n[number] y\n  The y coordinate of the rectangle to draw.\n\n[number] width\n  The width of the rectangle to draw.\n\n[number] height\n  The height of the rectangle to draw.",
+        "prefix": "render.DrawTextureToScreenRect"
+    },
+    "render.DrawWireframeBox": {
+        "body": [
+            "render.DrawWireframeBox(${1:position}, ${2:angle}, ${3:mins}, ${4:maxs}, ${5:color}, ${6:writeZ})$0"
+        ],
+        "description": "RENDER [Client] Draws a wireframe box in 3D space.\n\n[Vector] position\n  Position of the box.\n\n[Angle] angle\n  Angles of the box.\n\n[Vector] mins\n  The lowest corner of the box.\n\n[Vector] maxs\n  The highest corner of the box.\n\n[table] color\n  The color of the box. Uses the Color structure.\n\n[boolean] writeZ\n  Sets whenever to write to the zBuffer.",
+        "prefix": "render.DrawWireframeBox"
+    },
+    "render.DrawWireframeSphere": {
+        "body": [
+            "render.DrawWireframeSphere(${1:position}, ${2:radius}, ${3:longitudeSteps}, ${4:latitudeSteps}, ${5:color}, ${6:writeZ=false})$0"
+        ],
+        "description": "RENDER [Client] Draws a wireframe sphere in 3d space.\n\n[Vector] position\n  Position of the sphere.\n\n[number] radius\n  The size of the sphere.\n\n[number] longitudeSteps\n  The amount of longitude steps.\n\nThe larger this number is, the smoother the sphere is.\n\n[number] latitudeSteps\n  The amount of latitude steps.\n\nThe larger this number is, the smoother the sphere is.\n\n[table] color\n  The color of the wireframe. Uses the Color structure.\n\n[boolean] writeZ=false\n  Whether or not to consider the Z buffer. If false, the wireframe will be drawn over everything currently drawn. If true, it will be drawn with depth considered, as if it were a regular object in 3D space.",
+        "prefix": "render.DrawWireframeSphere"
+    },
+    "render.EnableClipping": {
+        "body": [
+            "render.EnableClipping(${1:state})$0"
+        ],
+        "description": "RENDER [Client] Sets the status of the clip renderer, returning previous state.\n\n[boolean] state\n  New clipping state.",
+        "prefix": "render.EnableClipping"
+    },
+    "render.EndBeam": {
+        "body": [
+            "render.EndBeam()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.EndBeam"
+    },
+    "render.FogColor": {
+        "body": [
+            "render.FogColor(${1:red}, ${2:green}, ${3:blue})$0"
+        ],
+        "description": "RENDER [Client] Sets the color of the fog.\n\n[number] red\n  Red channel of the fog color, 0 - 255.\n\n[number] green\n  Green channel of the fog color, 0 - 255.\n\n[number] blue\n  Blue channel of the fog color, 0 - 255.",
+        "prefix": "render.FogColor"
+    },
+    "render.FogEnd": {
+        "body": [
+            "render.FogEnd(${1:distance})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] distance\n  The distance at which the fog reaches its max density.",
+        "prefix": "render.FogEnd"
+    },
+    "render.FogMaxDensity": {
+        "body": [
+            "render.FogMaxDensity(${1:maxDensity})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] maxDensity\n  The maximum density of the fog, 0-1.",
+        "prefix": "render.FogMaxDensity"
+    },
+    "render.FogMode": {
+        "body": [
+            "render.FogMode(${1:fogMode})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] fogMode\n  Fog mode, see MATERIAL_FOG_ Enums.",
+        "prefix": "render.FogMode"
+    },
+    "render.FogStart": {
+        "body": [
+            "render.FogStart(${1:fogStart})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] fogStart\n  The distance at which the fog starts showing up.",
+        "prefix": "render.FogStart"
+    },
+    "render.GetAmbientLightColor": {
+        "body": [
+            "render.GetAmbientLightColor()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetAmbientLightColor"
+    },
+    "render.GetBlend": {
+        "body": [
+            "render.GetBlend()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetBlend"
+    },
+    "render.GetBloomTex0": {
+        "body": [
+            "render.GetBloomTex0()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetBloomTex0"
+    },
+    "render.GetBloomTex1": {
+        "body": [
+            "render.GetBloomTex1()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetBloomTex1"
+    },
+    "render.GetColorModulation": {
+        "body": [
+            "render.GetColorModulation()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetColorModulation"
+    },
+    "render.GetDXLevel": {
+        "body": [
+            "render.GetDXLevel()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetDXLevel"
+    },
+    "render.GetFogColor": {
+        "body": [
+            "render.GetFogColor()$0"
+        ],
+        "description": "RENDER [Client] Returns the current fog color.",
+        "prefix": "render.GetFogColor"
+    },
+    "render.GetFogDistances": {
+        "body": [
+            "render.GetFogDistances()$0"
+        ],
+        "description": "RENDER [Client] Returns the fog start and end distance.",
+        "prefix": "render.GetFogDistances"
+    },
+    "render.GetFogMode": {
+        "body": [
+            "render.GetFogMode()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetFogMode"
+    },
+    "render.GetFullScreenDepthTexture": {
+        "body": [
+            "render.GetFullScreenDepthTexture()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetFullScreenDepthTexture"
+    },
+    "render.GetLightColor": {
+        "body": [
+            "render.GetLightColor(${1:position})$0"
+        ],
+        "description": "RENDER [Client] \n\n[Vector] position\n  The position of the surface to get the light from.",
+        "prefix": "render.GetLightColor"
+    },
+    "render.GetMoBlurTex0": {
+        "body": [
+            "render.GetMoBlurTex0()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetMoBlurTex0"
+    },
+    "render.GetMoBlurTex1": {
+        "body": [
+            "render.GetMoBlurTex1()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetMoBlurTex1"
+    },
+    "render.GetMorphTex0": {
+        "body": [
+            "render.GetMorphTex0()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetMorphTex0"
+    },
+    "render.GetMorphTex1": {
+        "body": [
+            "render.GetMorphTex1()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetMorphTex1"
+    },
+    "render.GetPowerOfTwoTexture": {
+        "body": [
+            "render.GetPowerOfTwoTexture()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetPowerOfTwoTexture"
+    },
+    "render.GetRefractTexture": {
+        "body": [
+            "render.GetRefractTexture()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetRefractTexture"
+    },
+    "render.GetRenderTarget": {
+        "body": [
+            "render.GetRenderTarget()$0"
+        ],
+        "description": "RENDER [Client] Returns the currently active render target. Instead of saving the current render target using this function and restoring to it later, it is generally better practice to use render.PushRenderTarget and render.PopRenderTarget.",
+        "prefix": "render.GetRenderTarget"
+    },
+    "render.GetResolvedFullFrameDepth": {
+        "body": [
+            "render.GetResolvedFullFrameDepth()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetResolvedFullFrameDepth"
+    },
+    "render.GetScreenEffectTexture": {
+        "body": [
+            "render.GetScreenEffectTexture(${1:textureIndex=0})$0"
+        ],
+        "description": "RENDER [Client] Obtain an ITexture of the screen. You must call render.UpdateScreenEffectTexture in order to update this texture with the currently rendered scene. This texture is mainly used within GM:RenderScreenspaceEffects\n\n[number] textureIndex=0\n  Max index is 3, but engine only creates the first two for you.",
+        "prefix": "render.GetScreenEffectTexture"
+    },
+    "render.GetSmallTex0": {
+        "body": [
+            "render.GetSmallTex0()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetSmallTex0"
+    },
+    "render.GetSmallTex1": {
+        "body": [
+            "render.GetSmallTex1()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetSmallTex1"
+    },
+    "render.GetSuperFPTex": {
+        "body": [
+            "render.GetSuperFPTex()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetSuperFPTex"
+    },
+    "render.GetSuperFPTex2": {
+        "body": [
+            "render.GetSuperFPTex2()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetSuperFPTex2"
+    },
+    "render.GetSurfaceColor": {
+        "body": [
+            "render.GetSurfaceColor(${1:startPos}, ${2:endPos})$0"
+        ],
+        "description": "RENDER [Client] Performs a render trace and returns the color of the surface hit, this uses a low res version of the texture.\n\n[Vector] startPos\n  The start position to trace from.\n\n[Vector] endPos\n  The end position of the trace.",
+        "prefix": "render.GetSurfaceColor"
+    },
+    "render.GetToneMappingScaleLinear": {
+        "body": [
+            "render.GetToneMappingScaleLinear()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.GetToneMappingScaleLinear"
+    },
+    "render.MaterialOverride": {
+        "body": [
+            "render.MaterialOverride(${1:material})$0"
+        ],
+        "description": "RENDER [Client] \n\n[IMaterial] material\n  The material to use as override, use nil to disable.",
+        "prefix": "render.MaterialOverride"
+    },
+    "render.MaterialOverrideByIndex": {
+        "body": [
+            "render.MaterialOverrideByIndex(${1:index}, ${2:material})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] index\n  Starts with 0, the index of the material to override\n\n[IMaterial] material\n  The material to override with",
+        "prefix": "render.MaterialOverrideByIndex"
+    },
+    "render.MaxTextureHeight": {
+        "body": [
+            "render.MaxTextureHeight()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.MaxTextureHeight"
+    },
+    "render.MaxTextureWidth": {
+        "body": [
+            "render.MaxTextureWidth()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.MaxTextureWidth"
+    },
+    "render.Model": {
+        "body": [
+            "render.Model(${1:settings}, ${2:ent=nil})$0"
+        ],
+        "description": "RENDER [Client] \n\n[table] settings\n  Requires:\n\n string model - The model to draw\n Vector pos - The position to draw the model at\n Angle angle - The angles to draw the model at\n\n[CSEnt] ent=nil\n  If provided, this entity will be reused instead of creating a new one with ClientsideModel. Note that the ent's model, position and angles will be changed, and Entity:SetNoDraw will be set to true.",
+        "prefix": "render.Model"
+    },
+    "render.ModelMaterialOverride": {
+        "body": [
+            "render.ModelMaterialOverride(${1:material})$0"
+        ],
+        "description": "RENDER [Client] Sets a material to override a model's default material. Similar to Entity:SetMaterial except it uses an IMaterial argument and it can be used to change materials on models which are part of the world geometry.\n\n[IMaterial] material\n  The material override.",
+        "prefix": "render.ModelMaterialOverride"
+    },
+    "render.OverrideAlphaWriteEnable": {
+        "body": [
+            "render.OverrideAlphaWriteEnable(${1:enable}, ${2:shouldWrite})$0"
+        ],
+        "description": "RENDER [Client] Overrides the write behaviour of all next rendering operations towards the alpha channel of the current render target. See also render.OverrideBlendFunc.\n\n[boolean] enable\n  Enable or disable the override.\n\n[boolean] shouldWrite\n  If the previous argument is true, sets whether the next rendering operations should write to the alpha channel or not. Has no effect if the previous argument is false.",
+        "prefix": "render.OverrideAlphaWriteEnable"
+    },
+    "render.OverrideBlendFunc": {
+        "body": [
+            "render.OverrideBlendFunc(${1:enabled}, ${2:srcBlend}, ${3:destBlend}, ${4:srcBlendAlpha=nil}, ${5:destBlendAlpha=nil})$0"
+        ],
+        "description": "RENDER [Client] Overrides the internal graphical functions used to determine the final color and alpha of a rendered texture. See also render.OverrideAlphaWriteEnable.\n\n[boolean] enabled\n  true to enable, false to disable. No other arguments are required when disabling.\n\n[number] srcBlend\n  The source color blend function BLEND_ Enums. Determines how a rendered texture's final color should be calculated.\n\n[number] destBlend\n  \n\n[number] srcBlendAlpha=nil\n  The source alpha blend function BLEND_ Enums. Determines how a rendered texture's final alpha should be calculated.\n\n[number] destBlendAlpha=nil",
+        "prefix": "render.OverrideBlendFunc"
+    },
+    "render.OverrideColorWriteEnable": {
+        "body": [
+            "render.OverrideColorWriteEnable(${1:enable}, ${2:shouldWrite})$0"
+        ],
+        "description": "RENDER [Client] \n\n[boolean] enable\n  Enable or disable the override.\n\n[boolean] shouldWrite\n  If the previous argument is true, sets whether the next rendering operations should write to the color channel or not. Has no effect if the previous argument is false.",
+        "prefix": "render.OverrideColorWriteEnable"
+    },
+    "render.OverrideDepthEnable": {
+        "body": [
+            "render.OverrideDepthEnable(${1:enable}, ${2:shouldWrite})$0"
+        ],
+        "description": "RENDER [Client] \n\n[boolean] enable\n  Enable or disable the override.\n\n[boolean] shouldWrite\n  If the previous argument is true, sets whether the next rendering operations should write to the depth buffer or not. Has no effect if the previous argument is false.",
+        "prefix": "render.OverrideDepthEnable"
+    },
+    "render.PerformFullScreenStencilOperation": {
+        "body": [
+            "render.PerformFullScreenStencilOperation()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.PerformFullScreenStencilOperation"
+    },
+    "render.PopCustomClipPlane": {
+        "body": [
+            "render.PopCustomClipPlane()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.PopCustomClipPlane"
+    },
+    "render.PopFilterMag": {
+        "body": [
+            "render.PopFilterMag()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.PopFilterMag"
+    },
+    "render.PopFilterMin": {
+        "body": [
+            "render.PopFilterMin()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.PopFilterMin"
+    },
+    "render.PopFlashlightMode": {
+        "body": [
+            "render.PopFlashlightMode()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.PopFlashlightMode"
+    },
+    "render.PopRenderTarget": {
+        "body": [
+            "render.PopRenderTarget()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.PopRenderTarget"
+    },
+    "render.PushCustomClipPlane": {
+        "body": [
+            "render.PushCustomClipPlane(${1:normal}, ${2:distance})$0"
+        ],
+        "description": "RENDER [Client] Pushes a new clipping plane of the clip plane stack and sets it as active.\n\n[Vector] normal\n  The normal of the clipping plane.\n\n[number] distance\n  The distance of the plane from the world origin. You can use Vector:Dot between the normal and any point on the plane to find this, see Example 1.",
+        "prefix": "render.PushCustomClipPlane"
+    },
+    "render.PushFilterMag": {
+        "body": [
+            "render.PushFilterMag(${1:texFilterType})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] texFilterType\n  The texture filter type, see TEXFILTER_ Enums",
+        "prefix": "render.PushFilterMag"
+    },
+    "render.PushFilterMin": {
+        "body": [
+            "render.PushFilterMin(${1:texFilterType})$0"
+        ],
+        "description": "RENDER [Client] Pushes a texture filter onto the minification texture filter stack.\n\n[number] texFilterType\n  The texture filter type, see TEXFILTER_ Enums",
+        "prefix": "render.PushFilterMin"
+    },
+    "render.PushFlashlightMode": {
+        "body": [
+            "render.PushFlashlightMode(${1:enable=false})$0"
+        ],
+        "description": "RENDER [Client] \n\n[boolean] enable=false\n  Whether the flashlight mode should be enabled or disabled.",
+        "prefix": "render.PushFlashlightMode"
+    },
+    "render.PushRenderTarget": {
+        "body": [
+            "render.PushRenderTarget(${1:texture}, ${2:x=0}, ${3:y=0}, ${4:w=texture:Width()}, ${5:h=texture:Height()})$0"
+        ],
+        "description": "RENDER [Client] Pushes the current render target and viewport to the RT stack then sets a new current render target and viewport. If the viewport is not specified, the dimensions of the render target are used instead. This is similar to a call to render.SetRenderTarget and render.SetViewPort where the current render target and viewport have been saved beforehand, except the viewport isn't clipped to screen bounds. See also render.PopRenderTarget.\n\n[ITexture] texture\n  The new render target to be used.\n\n[number] x=0\n  X origin of the viewport.\n\n[number] y=0\n  Y origin of the viewport.\n\n[number] w=texture:Width()\n  Width of the viewport.\n\n[number] h=texture:Height()\n  Height of the viewport",
+        "prefix": "render.PushRenderTarget"
+    },
+    "render.ReadPixel": {
+        "body": [
+            "render.ReadPixel(${1:x}, ${2:y})$0"
+        ],
+        "description": "RENDER [Client] Reads the color of the specified pixel from the RenderTarget sent by render.CapturePixels\n\n[number] x\n  The x coordinate.\n\n[number] y\n  The y coordinate.",
+        "prefix": "render.ReadPixel"
+    },
+    "render.RedownloadAllLightmaps": {
+        "body": [
+            "render.RedownloadAllLightmaps(${1:DoStaticProps=false})$0"
+        ],
+        "description": "RENDER [Client] \n\n[boolean] DoStaticProps=false\n  When true, this will also apply lighting changes to static props. This is really slow on large maps.",
+        "prefix": "render.RedownloadAllLightmaps"
+    },
+    "render.RenderHUD": {
+        "body": [
+            "render.RenderHUD(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "RENDER [Client] Renders the HUD on the screen.\n\n[number] x\n  X position for the HUD draw origin.\n\n[number] y\n  Y position for the HUD draw origin.\n\n[number] w\n  Width of the HUD draw.\n\n[number] h\n  Height of the HUD draw.",
+        "prefix": "render.RenderHUD"
+    },
+    "render.RenderView": {
+        "body": [
+            "render.RenderView(${1:view=nil})$0"
+        ],
+        "description": "RENDER [Client] Renders the scene with the specified viewData to the current active render target.\n\n[table] view=nil\n  The view data to be used in the rendering. See ViewData structure. Any missing value is assumed to be that of the current view. Similarly, you can make a normal render by simply not passing this table at all.",
+        "prefix": "render.RenderView"
+    },
+    "render.ResetModelLighting": {
+        "body": [
+            "render.ResetModelLighting(${1:r}, ${2:g}, ${3:b})$0"
+        ],
+        "description": "RENDER [Client] Resets the model lighting to the specified color. Calls render.SetModelLighting for every direction with given color.\n\n[number] r\n  The red part of the color, 0-1\n\n[number] g\n  The green part of the color, 0-1\n\n[number] b\n  The blue part of the color, 0-1",
+        "prefix": "render.ResetModelLighting"
+    },
+    "render.ResetToneMappingScale": {
+        "body": [
+            "render.ResetToneMappingScale(${1:scale})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] scale\n  The value which should be used as multiplier.",
+        "prefix": "render.ResetToneMappingScale"
+    },
+    "render.SetAmbientLight": {
+        "body": [
+            "render.SetAmbientLight(${1:r}, ${2:g}, ${3:b})$0"
+        ],
+        "description": "RENDER [Client] Sets the ambient lighting for any upcoming render operation.\n\n[number] r\n  The red part of the color, 0-1.\n\n[number] g\n  The green part of the color, 0-1.\n\n[number] b\n  The blue part of the color, 0-1.",
+        "prefix": "render.SetAmbientLight"
+    },
+    "render.SetBlend": {
+        "body": [
+            "render.SetBlend(${1:blending})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] blending\n  Blending value from 0-1.",
+        "prefix": "render.SetBlend"
+    },
+    "render.SetColorMaterial": {
+        "body": [
+            "render.SetColorMaterial()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.SetColorMaterial"
+    },
+    "render.SetColorMaterialIgnoreZ": {
+        "body": [
+            "render.SetColorMaterialIgnoreZ()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.SetColorMaterialIgnoreZ"
+    },
+    "render.SetColorModulation": {
+        "body": [
+            "render.SetColorModulation(${1:r}, ${2:g}, ${3:b})$0"
+        ],
+        "description": "RENDER [Client] Sets the color modulation.\n\n[number] r\n  The red channel multiplier normal ranging from 0-1.\n\n[number] g\n  The green channel multiplier normal ranging from 0-1.\n\n[number] b\n  The blue channel multiplier normal ranging from 0-1.",
+        "prefix": "render.SetColorModulation"
+    },
+    "render.SetFogZ": {
+        "body": [
+            "render.SetFogZ(${1:fogZ})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] fogZ\n  The fog Z.",
+        "prefix": "render.SetFogZ"
+    },
+    "render.SetGoalToneMappingScale": {
+        "body": [
+            "render.SetGoalToneMappingScale(${1:scale})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] scale\n  The target scale.",
+        "prefix": "render.SetGoalToneMappingScale"
+    },
+    "render.SetLightingMode": {
+        "body": [
+            "render.SetLightingMode(${1:Mode})$0"
+        ],
+        "description": "RENDER [Client] Sets lighting mode when rendering something.\n\n[number] Mode\n  Lighting render mode\nPossible values are:\n\n 0 - Default\n 1 - Total fullbright, similar to mat_fullbright 1 but excluding some weapon view models\n 2 - Increased brightness(?), models look fullbright",
+        "prefix": "render.SetLightingMode"
+    },
+    "render.SetLightingOrigin": {
+        "body": [
+            "render.SetLightingOrigin(${1:lightingOrigin})$0"
+        ],
+        "description": "RENDER [Client] \n\n[Vector] lightingOrigin\n  The position from which the light should be \"emitted\".",
+        "prefix": "render.SetLightingOrigin"
+    },
+    "render.SetLightmapTexture": {
+        "body": [
+            "render.SetLightmapTexture(${1:tex})$0"
+        ],
+        "description": "RENDER [Client] Sets the texture to be used as the lightmap in upcoming rendering operations. This is required when rendering meshes using a material with a lightmapped shader such as LightmappedGeneric.\n\n[ITexture] tex\n  The texture to be used as the lightmap.",
+        "prefix": "render.SetLightmapTexture"
+    },
+    "render.SetLocalModelLights": {
+        "body": [
+            "render.SetLocalModelLights(${1:lights={}})$0"
+        ],
+        "description": "RENDER [Client] \n\n[table] lights={}\n  A table containing up to 4 tables for each light source that should be set up. Each of these tables should contain the properties of its associated light source, see LocalLight structure.",
+        "prefix": "render.SetLocalModelLights"
+    },
+    "render.SetMaterial": {
+        "body": [
+            "render.SetMaterial(${1:mat})$0"
+        ],
+        "description": "RENDER [Client] \n\n[IMaterial] mat\n  The material to be used.",
+        "prefix": "render.SetMaterial"
+    },
+    "render.SetModelLighting": {
+        "body": [
+            "render.SetModelLighting(${1:lightDirection}, ${2:red}, ${3:green}, ${4:blue})$0"
+        ],
+        "description": "RENDER [Client] Sets up the ambient lighting for any upcoming render operation. Ambient lighting can be seen as a cube enclosing the object to be drawn, each of its faces representing a directional light source that shines towards the object. Thus, there is a total of six different light sources that can be configured separately. Light color components are not restricted to a specific range (i.e. 0-255), instead, higher values will result in a brighter light.\n\n[number] lightDirection\n  The light source to edit, see BOX_ Enums.\n\n[number] red\n  The red component of the light color.\n\n[number] green\n  The green component of the light color.\n\n[number] blue\n  The blue component of the light color.",
+        "prefix": "render.SetModelLighting"
+    },
+    "render.SetRenderTarget": {
+        "body": [
+            "render.SetRenderTarget(${1:texture})$0"
+        ],
+        "description": "RENDER [Client] \n\n[ITexture] texture\n  The new render target to be used.",
+        "prefix": "render.SetRenderTarget"
+    },
+    "render.SetRenderTargetEx": {
+        "body": [
+            "render.SetRenderTargetEx(${1:rtIndex}, ${2:texture})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] rtIndex\n  The index of the rt to set.\n\n[ITexture] texture\n  The new render target to be used.",
+        "prefix": "render.SetRenderTargetEx"
+    },
+    "render.SetScissorRect": {
+        "body": [
+            "render.SetScissorRect(${1:startX}, ${2:startY}, ${3:endX}, ${4:endY}, ${5:enable})$0"
+        ],
+        "description": "RENDER [Client] Sets a scissoring rect which limits the drawing area.\n\n[number] startX\n  X start coordinate of the scissor rect.\n\n[number] startY\n  Y start coordinate of the scissor rect.\n\n[number] endX\n  X end coordinate of the scissor rect.\n\n[number] endY\n  Y end coordinate of the scissor rect.\n\n[boolean] enable\n  Enable or disable the scissor rect.",
+        "prefix": "render.SetScissorRect"
+    },
+    "render.SetShadowColor": {
+        "body": [
+            "render.SetShadowColor(${1:red}, ${2:green}, ${3:blue})$0"
+        ],
+        "description": "RENDER [Client] Sets the shadow color.\n\n[number] red\n  The red channel of the shadow color.\n\n[number] green\n  The green channel of the shadow color.\n\n[number] blue\n  The blue channel of the shadow color.",
+        "prefix": "render.SetShadowColor"
+    },
+    "render.SetShadowDirection": {
+        "body": [
+            "render.SetShadowDirection(${1:shadowDirections})$0"
+        ],
+        "description": "RENDER [Client] \n\n[Vector] shadowDirections\n  The new shadow direction.",
+        "prefix": "render.SetShadowDirection"
+    },
+    "render.SetShadowDistance": {
+        "body": [
+            "render.SetShadowDistance(${1:shadowDistance})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] shadowDistance\n  The new maximum shadow distance.",
+        "prefix": "render.SetShadowDistance"
+    },
+    "render.SetShadowsDisabled": {
+        "body": [
+            "render.SetShadowsDisabled(${1:})$0"
+        ],
+        "description": "RENDER [Client] \n\n[boolean]",
+        "prefix": "render.SetShadowsDisabled"
+    },
+    "render.SetStencilCompareFunction": {
+        "body": [
+            "render.SetStencilCompareFunction(${1:compareFunction})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] compareFunction\n  Compare function, see STENCILCOMPARISONFUNCTION_ Enums, and STENCIL_ Enums for short.",
+        "prefix": "render.SetStencilCompareFunction"
+    },
+    "render.SetStencilEnable": {
+        "body": [
+            "render.SetStencilEnable(${1:newState})$0"
+        ],
+        "description": "RENDER [Client] \n\n[boolean] newState\n  The new state.",
+        "prefix": "render.SetStencilEnable"
+    },
+    "render.SetStencilFailOperation": {
+        "body": [
+            "render.SetStencilFailOperation(${1:failOperation})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] failOperation\n  Fail operation function, see STENCILOPERATION_ Enums",
+        "prefix": "render.SetStencilFailOperation"
+    },
+    "render.SetStencilPassOperation": {
+        "body": [
+            "render.SetStencilPassOperation(${1:passOperation})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] passOperation\n  Pass operation function, see STENCILOPERATION_ Enums",
+        "prefix": "render.SetStencilPassOperation"
+    },
+    "render.SetStencilReferenceValue": {
+        "body": [
+            "render.SetStencilReferenceValue(${1:referenceValue})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] referenceValue\n  Reference value.",
+        "prefix": "render.SetStencilReferenceValue"
+    },
+    "render.SetStencilTestMask": {
+        "body": [
+            "render.SetStencilTestMask(${1:mask})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] mask\n  The mask bitflag.",
+        "prefix": "render.SetStencilTestMask"
+    },
+    "render.SetStencilWriteMask": {
+        "body": [
+            "render.SetStencilWriteMask(${1:mask})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] mask\n  The mask bitflag.",
+        "prefix": "render.SetStencilWriteMask"
+    },
+    "render.SetStencilZFailOperation": {
+        "body": [
+            "render.SetStencilZFailOperation(${1:zFailOperation})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] zFailOperation\n  Z fail operation function, see STENCILOPERATION_ Enums",
+        "prefix": "render.SetStencilZFailOperation"
+    },
+    "render.SetToneMappingScaleLinear": {
+        "body": [
+            "render.SetToneMappingScaleLinear(${1:vec})$0"
+        ],
+        "description": "RENDER [Client] \n\n[Vector] vec",
+        "prefix": "render.SetToneMappingScaleLinear"
+    },
+    "render.SetViewPort": {
+        "body": [
+            "render.SetViewPort(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "RENDER [Client] Changes the view port position and size.\n\n[number] x\n  X origin of the view port.\n\n[number] y\n  Y origin of the view port.\n\n[number] w\n  Width of the view port.\n\n[number] h\n  Height of the view port.",
+        "prefix": "render.SetViewPort"
+    },
+    "render.SetWriteDepthToDestAlpha": {
+        "body": [
+            "render.SetWriteDepthToDestAlpha(${1:enable})$0"
+        ],
+        "description": "RENDER [Client] \n\n[boolean] enable",
+        "prefix": "render.SetWriteDepthToDestAlpha"
+    },
+    "render.Spin": {
+        "body": [
+            "render.Spin()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.Spin"
+    },
+    "render.StartBeam": {
+        "body": [
+            "render.StartBeam(${1:segmentCount})$0"
+        ],
+        "description": "RENDER [Client] \n\n[number] segmentCount\n  Amount of beam segments that are about to be drawn.",
+        "prefix": "render.StartBeam"
+    },
+    "render.SupportsHDR": {
+        "body": [
+            "render.SupportsHDR()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.SupportsHDR"
+    },
+    "render.SupportsPixelShaders_1_4": {
+        "body": [
+            "render.SupportsPixelShaders_1_4()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.SupportsPixelShaders_1_4"
+    },
+    "render.SupportsPixelShaders_2_0": {
+        "body": [
+            "render.SupportsPixelShaders_2_0()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.SupportsPixelShaders_2_0"
+    },
+    "render.SupportsVertexShaders_2_0": {
+        "body": [
+            "render.SupportsVertexShaders_2_0()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.SupportsVertexShaders_2_0"
+    },
+    "render.SuppressEngineLighting": {
+        "body": [
+            "render.SuppressEngineLighting(${1:suppressLighting})$0"
+        ],
+        "description": "RENDER [Client] \n\n[boolean] suppressLighting\n  True to suppress false to enable.",
+        "prefix": "render.SuppressEngineLighting"
+    },
+    "render.TurnOnToneMapping": {
+        "body": [
+            "render.TurnOnToneMapping()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.TurnOnToneMapping"
+    },
+    "render.UpdateFullScreenDepthTexture": {
+        "body": [
+            "render.UpdateFullScreenDepthTexture()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.UpdateFullScreenDepthTexture"
+    },
+    "render.UpdatePowerOfTwoTexture": {
+        "body": [
+            "render.UpdatePowerOfTwoTexture()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.UpdatePowerOfTwoTexture"
+    },
+    "render.UpdateRefractTexture": {
+        "body": [
+            "render.UpdateRefractTexture()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.UpdateRefractTexture"
+    },
+    "render.UpdateScreenEffectTexture": {
+        "body": [
+            "render.UpdateScreenEffectTexture()$0"
+        ],
+        "description": "RENDER [Client]",
+        "prefix": "render.UpdateScreenEffectTexture"
+    }
+}

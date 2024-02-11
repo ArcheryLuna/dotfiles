@@ -1,0 +1,58 @@
+{
+    "EndTouch": {
+        "body": [
+            "EndTouch()$0"
+        ],
+        "description": "EFFECT [Client]",
+        "prefix": "EndTouch"
+    },
+    "GetTracerShootPos": {
+        "body": [
+            "GetTracerShootPos(${1:pos}, ${2:ent}, ${3:attachment})$0"
+        ],
+        "description": "EFFECT [Client] Used to get the \"real\" start position of a trace, for weapon tracer effects. \"real\" meaning in 3rd person, the 3rd person position will be used, in first person the first person position will be used.\n\n[Vector] pos\n  Default position if we fail\n\n[Weapon] ent\n  The weapon to use.\n\n[number] attachment\n  Attachment ID of on the weapon \"muzzle\", to use as the start position.",
+        "prefix": "GetTracerShootPos"
+    },
+    "Init": {
+        "body": [
+            "Init(${1:effectData})$0"
+        ],
+        "description": "EFFECT [Client] \n\n[CEffectData] effectData\n  The effect data used to create the effect.",
+        "prefix": "Init"
+    },
+    "PhysicsCollide": {
+        "body": [
+            "PhysicsCollide(${1:colData}, ${2:collider})$0"
+        ],
+        "description": "EFFECT [Client] \n\n[table] colData\n  Information regarding the collision. See CollisionData structure\n\n[PhysObj] collider\n  The physics object of the entity that collided with the effect.",
+        "prefix": "PhysicsCollide"
+    },
+    "Render": {
+        "body": [
+            "Render()$0"
+        ],
+        "description": "EFFECT [Client]",
+        "prefix": "Render"
+    },
+    "StartTouch": {
+        "body": [
+            "StartTouch()$0"
+        ],
+        "description": "EFFECT [Client]",
+        "prefix": "StartTouch"
+    },
+    "Think": {
+        "body": [
+            "Think()$0"
+        ],
+        "description": "EFFECT [Client]",
+        "prefix": "Think"
+    },
+    "Touch": {
+        "body": [
+            "Touch()$0"
+        ],
+        "description": "EFFECT [Client]",
+        "prefix": "Touch"
+    }
+}

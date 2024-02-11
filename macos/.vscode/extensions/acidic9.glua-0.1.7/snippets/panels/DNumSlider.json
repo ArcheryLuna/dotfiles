@@ -1,0 +1,128 @@
+{
+    "GetDecimals": {
+        "body": [
+            "GetDecimals()$0"
+        ],
+        "description": "DNUMSLIDER [Client]",
+        "prefix": "GetDecimals"
+    },
+    "GetMax": {
+        "body": [
+            "GetMax()$0"
+        ],
+        "description": "DNUMSLIDER [Client]",
+        "prefix": "GetMax"
+    },
+    "GetMin": {
+        "body": [
+            "GetMin()$0"
+        ],
+        "description": "DNUMSLIDER [Client]",
+        "prefix": "GetMin"
+    },
+    "GetRange": {
+        "body": [
+            "GetRange()$0"
+        ],
+        "description": "DNUMSLIDER [Client]",
+        "prefix": "GetRange"
+    },
+    "GetTextArea": {
+        "body": [
+            "GetTextArea()$0"
+        ],
+        "description": "DNUMSLIDER [Client]",
+        "prefix": "GetTextArea"
+    },
+    "GetValue": {
+        "body": [
+            "GetValue()$0"
+        ],
+        "description": "DNUMSLIDER [Client]",
+        "prefix": "GetValue"
+    },
+    "IsEditing": {
+        "body": [
+            "IsEditing()$0"
+        ],
+        "description": "DNUMSLIDER [Client]",
+        "prefix": "IsEditing"
+    },
+    "OnValueChanged": {
+        "body": [
+            "OnValueChanged(${1:value})$0"
+        ],
+        "description": "DNUMSLIDER [Client] \n\n[number] value\n  The new value of the DNumSlider",
+        "prefix": "OnValueChanged"
+    },
+    "SetConVar": {
+        "body": [
+            "SetConVar(${1:cvar})$0"
+        ],
+        "description": "DNUMSLIDER [Client] \n\n[string] cvar\n  The name of the ConVar to be updated.",
+        "prefix": "SetConVar"
+    },
+    "SetDark": {
+        "body": [
+            "SetDark(${1:dark})$0"
+        ],
+        "description": "DNUMSLIDER [Client] \n\n[boolean] dark",
+        "prefix": "SetDark"
+    },
+    "SetDecimals": {
+        "body": [
+            "SetDecimals(${1:decimals})$0"
+        ],
+        "description": "DNUMSLIDER [Client] \n\n[number] decimals\n  0 for whole numbers only, 1 for one number after the decimal point, etc.",
+        "prefix": "SetDecimals"
+    },
+    "SetMax": {
+        "body": [
+            "SetMax(${1:max})$0"
+        ],
+        "description": "DNUMSLIDER [Client] \n\n[number] max\n  The value to set as maximum for the slider.",
+        "prefix": "SetMax"
+    },
+    "SetMin": {
+        "body": [
+            "SetMin(${1:min})$0"
+        ],
+        "description": "DNUMSLIDER [Client] Sets the minimum value for the slider\n\n[number] min\n  The value to set as minimum for the slider.",
+        "prefix": "SetMin"
+    },
+    "SetMinMax": {
+        "body": [
+            "SetMinMax(${1:min}, ${2:max})$0"
+        ],
+        "description": "DNUMSLIDER [Client] \n\n[number] min\n  The minimum value of the slider.\n\n[number] max\n  The maximum value of the slider.",
+        "prefix": "SetMinMax"
+    },
+    "SetValue": {
+        "body": [
+            "SetValue(${1:val})$0"
+        ],
+        "description": "DNUMSLIDER [Client] \n\n[number] val\n  The value to set.",
+        "prefix": "SetValue"
+    },
+    "TranslateSliderValues": {
+        "body": [
+            "TranslateSliderValues(${1:x}, ${2:y})$0"
+        ],
+        "description": "DNUMSLIDER [Client] \n\n[number] x\n  \n\n[number] y",
+        "prefix": "TranslateSliderValues"
+    },
+    "UpdateNotches": {
+        "body": [
+            "UpdateNotches()$0"
+        ],
+        "description": "DNUMSLIDER [Client]",
+        "prefix": "UpdateNotches"
+    },
+    "ValueChanged": {
+        "body": [
+            "ValueChanged(${1:value})$0"
+        ],
+        "description": "DNUMSLIDER [Client] \n\n[number] value\n  The value the slider has been changed to.",
+        "prefix": "ValueChanged"
+    }
+}

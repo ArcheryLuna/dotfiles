@@ -1,0 +1,114 @@
+{
+    "achievements.BalloonPopped": {
+        "body": [
+            "achievements.BalloonPopped()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.BalloonPopped"
+    },
+    "achievements.Count": {
+        "body": [
+            "achievements.Count()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client/Menu]",
+        "prefix": "achievements.Count"
+    },
+    "achievements.EatBall": {
+        "body": [
+            "achievements.EatBall()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.EatBall"
+    },
+    "achievements.GetCount": {
+        "body": [
+            "achievements.GetCount(${1:achievementID})$0"
+        ],
+        "description": "ACHIEVEMENTS [Client/Menu] Retrieves progress of given achievement\n\n[number] achievementID\n  The ID of achievement to retrieve progress of. Note: IDs start from 0, not 1.",
+        "prefix": "achievements.GetCount"
+    },
+    "achievements.GetDesc": {
+        "body": [
+            "achievements.GetDesc(${1:achievementID})$0"
+        ],
+        "description": "ACHIEVEMENTS [Client/Menu] Retrieves description of given achievement\n\n[number] achievementID\n  The ID of achievement to retrieve description of. Note: IDs start from 0, not 1.",
+        "prefix": "achievements.GetDesc"
+    },
+    "achievements.GetGoal": {
+        "body": [
+            "achievements.GetGoal(${1:achievementID})$0"
+        ],
+        "description": "ACHIEVEMENTS [Client/Menu] Retrieves progress goal of given achievement\n\n[number] achievementID\n  The ID of achievement to retrieve goal of. Note: IDs start from 0, not 1.",
+        "prefix": "achievements.GetGoal"
+    },
+    "achievements.GetName": {
+        "body": [
+            "achievements.GetName(${1:achievementID})$0"
+        ],
+        "description": "ACHIEVEMENTS [Client/Menu] Retrieves name of given achievement\n\n[number] achievementID\n  The ID of achievement to retrieve name of. Note: IDs start from 0, not 1.",
+        "prefix": "achievements.GetName"
+    },
+    "achievements.IncBaddies": {
+        "body": [
+            "achievements.IncBaddies()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.IncBaddies"
+    },
+    "achievements.IncBystander": {
+        "body": [
+            "achievements.IncBystander()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.IncBystander"
+    },
+    "achievements.IncGoodies": {
+        "body": [
+            "achievements.IncGoodies()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.IncGoodies"
+    },
+    "achievements.IsAchieved": {
+        "body": [
+            "achievements.IsAchieved(${1:AchievementID})$0"
+        ],
+        "description": "ACHIEVEMENTS [Client/Menu] Used in GMod 12 in the achievements menu to show the user if they have unlocked certain achievements.\n\n[number] AchievementID\n  Internal Achievement ID number",
+        "prefix": "achievements.IsAchieved"
+    },
+    "achievements.Remover": {
+        "body": [
+            "achievements.Remover()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.Remover"
+    },
+    "achievements.SpawnMenuOpen": {
+        "body": [
+            "achievements.SpawnMenuOpen()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.SpawnMenuOpen"
+    },
+    "achievements.SpawnedNPC": {
+        "body": [
+            "achievements.SpawnedNPC()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.SpawnedNPC"
+    },
+    "achievements.SpawnedProp": {
+        "body": [
+            "achievements.SpawnedProp()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.SpawnedProp"
+    },
+    "achievements.SpawnedRagdoll": {
+        "body": [
+            "achievements.SpawnedRagdoll()$0"
+        ],
+        "description": "ACHIEVEMENTS [Client]",
+        "prefix": "achievements.SpawnedRagdoll"
+    }
+}

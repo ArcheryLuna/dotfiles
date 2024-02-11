@@ -1,0 +1,149 @@
+{
+    "gui.ActivateGameUI": {
+        "body": [
+            "gui.ActivateGameUI()$0"
+        ],
+        "description": "GUI [Client/Menu]",
+        "prefix": "gui.ActivateGameUI"
+    },
+    "gui.EnableScreenClicker": {
+        "body": [
+            "gui.EnableScreenClicker(${1:enabled})$0"
+        ],
+        "description": "GUI [Client] \n\n[boolean] enabled\n  Whether the cursor should be enabled or not. (true = enable, false = disable)",
+        "prefix": "gui.EnableScreenClicker"
+    },
+    "gui.HideGameUI": {
+        "body": [
+            "gui.HideGameUI()$0"
+        ],
+        "description": "GUI [Client/Menu]",
+        "prefix": "gui.HideGameUI"
+    },
+    "gui.InternalCursorMoved": {
+        "body": [
+            "gui.InternalCursorMoved(${1:deltaX}, ${2:deltaY})$0"
+        ],
+        "description": "GUI [Client/Menu] \n\n[number] deltaX\n  The movement delta on the x axis.\n\n[number] deltaY\n  The movement delta on the y axis.",
+        "prefix": "gui.InternalCursorMoved"
+    },
+    "gui.InternalKeyCodePressed": {
+        "body": [
+            "gui.InternalKeyCodePressed(${1:key})$0"
+        ],
+        "description": "GUI [Client/Menu] \n\n[number] key\n  The key, see KEY_ Enums.",
+        "prefix": "gui.InternalKeyCodePressed"
+    },
+    "gui.InternalKeyCodeReleased": {
+        "body": [
+            "gui.InternalKeyCodeReleased(${1:key})$0"
+        ],
+        "description": "GUI [Client/Menu] \n\n[number] key\n  The key, see KEY_ Enums.",
+        "prefix": "gui.InternalKeyCodeReleased"
+    },
+    "gui.InternalKeyCodeTyped": {
+        "body": [
+            "gui.InternalKeyCodeTyped(${1:key})$0"
+        ],
+        "description": "GUI [Client/Menu] \n\n[number] key\n  The key, see KEY_ Enums.",
+        "prefix": "gui.InternalKeyCodeTyped"
+    },
+    "gui.InternalKeyTyped": {
+        "body": [
+            "gui.InternalKeyTyped(${1:code})$0"
+        ],
+        "description": "GUI [Client/Menu] Simulates an ASCII symbol writing.\nUse to write text in the chat or in VGUI.\nDoesn't work while the main menu is open!\n\n[number] code\n  ASCII code of symbol, see http://www.mikroe.com/img/publication/spa/pic-books/programming-in-basic/chapter/04/fig4-24.gif",
+        "prefix": "gui.InternalKeyTyped"
+    },
+    "gui.InternalMouseDoublePressed": {
+        "body": [
+            "gui.InternalMouseDoublePressed(${1:key})$0"
+        ],
+        "description": "GUI [Client/Menu] \n\n[number] key\n  The key, see MOUSE_ Enums.",
+        "prefix": "gui.InternalMouseDoublePressed"
+    },
+    "gui.InternalMousePressed": {
+        "body": [
+            "gui.InternalMousePressed(${1:key})$0"
+        ],
+        "description": "GUI [Client/Menu] \n\n[number] key\n  The key, see MOUSE_ Enums.",
+        "prefix": "gui.InternalMousePressed"
+    },
+    "gui.InternalMouseReleased": {
+        "body": [
+            "gui.InternalMouseReleased(${1:key})$0"
+        ],
+        "description": "GUI [Client/Menu] \n\n[number] key\n  The key, see MOUSE_ Enums.",
+        "prefix": "gui.InternalMouseReleased"
+    },
+    "gui.InternalMouseWheeled": {
+        "body": [
+            "gui.InternalMouseWheeled(${1:delta})$0"
+        ],
+        "description": "GUI [Client/Menu] \n\n[number] delta\n  The amount of scrolling to simulate.",
+        "prefix": "gui.InternalMouseWheeled"
+    },
+    "gui.IsConsoleVisible": {
+        "body": [
+            "gui.IsConsoleVisible()$0"
+        ],
+        "description": "GUI [Client/Menu]",
+        "prefix": "gui.IsConsoleVisible"
+    },
+    "gui.IsGameUIVisible": {
+        "body": [
+            "gui.IsGameUIVisible()$0"
+        ],
+        "description": "GUI [Client/Menu]",
+        "prefix": "gui.IsGameUIVisible"
+    },
+    "gui.MousePos": {
+        "body": [
+            "gui.MousePos()$0"
+        ],
+        "description": "GUI [Client/Menu]",
+        "prefix": "gui.MousePos"
+    },
+    "gui.MouseX": {
+        "body": [
+            "gui.MouseX()$0"
+        ],
+        "description": "GUI [Client/Menu]",
+        "prefix": "gui.MouseX"
+    },
+    "gui.MouseY": {
+        "body": [
+            "gui.MouseY()$0"
+        ],
+        "description": "GUI [Client/Menu]",
+        "prefix": "gui.MouseY"
+    },
+    "gui.OpenURL": {
+        "body": [
+            "gui.OpenURL(${1:url})$0"
+        ],
+        "description": "GUI [Client/Menu] Opens specified URL in the steam overlay browser. The URL has to start with either http:// or https://\n\n[string] url\n  URL to open",
+        "prefix": "gui.OpenURL"
+    },
+    "gui.ScreenToVector": {
+        "body": [
+            "gui.ScreenToVector(${1:x}, ${2:y})$0"
+        ],
+        "description": "GUI [Client] Converts the specified screen position to a direction vector local to the player's view. A related function is Vector:ToScreen, which translates a 3D position to a screen coordinate. util.AimVector is a more generic version of this, using a custom view instead of the player's current view.\n\n[number] x\n  X coordinate on the screen.\n\n[number] y\n  Y coordinate on the screen.",
+        "prefix": "gui.ScreenToVector"
+    },
+    "gui.SetMousePos": {
+        "body": [
+            "gui.SetMousePos(${1:mouseX}, ${2:mouseY})$0"
+        ],
+        "description": "GUI [Client/Menu] \n\n[number] mouseX\n  The X coordinate to move the cursor to.\n\n[number] mouseY\n  The Y coordinate to move the cursor to.",
+        "prefix": "gui.SetMousePos"
+    },
+    "gui.ShowConsole": {
+        "body": [
+            "gui.ShowConsole()$0"
+        ],
+        "description": "GUI [Menu]",
+        "prefix": "gui.ShowConsole"
+    }
+}

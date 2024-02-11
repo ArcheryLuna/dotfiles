@@ -1,0 +1,65 @@
+{
+    "GetDrawBorder": {
+        "body": [
+            "GetDrawBorder()$0"
+        ],
+        "description": "DBUTTON [Client]",
+        "prefix": "GetDrawBorder"
+    },
+    "IsDown": {
+        "body": [
+            "IsDown()$0"
+        ],
+        "description": "DBUTTON [Client]",
+        "prefix": "IsDown"
+    },
+    "SetConsoleCommand": {
+        "body": [
+            "SetConsoleCommand(${1:command}, ${2:args})$0"
+        ],
+        "description": "DBUTTON [Client] Sets a console command to be called when the button is clicked. This overrides the button's DoClick method.\n\n[string] command\n  The console command to be called.\n\n[string] args\n  The arguments for the command.",
+        "prefix": "SetConsoleCommand"
+    },
+    "SetDisabled": {
+        "body": [
+            "SetDisabled(${1:disable})$0"
+        ],
+        "description": "DBUTTON [Client] \n\n[boolean] disable\n  true to disable the button, false to enable it.",
+        "prefix": "SetDisabled"
+    },
+    "SetDrawBorder": {
+        "body": [
+            "SetDrawBorder(${1:draw})$0"
+        ],
+        "description": "DBUTTON [Client] \n\n[boolean] draw",
+        "prefix": "SetDrawBorder"
+    },
+    "SetEnabled": {
+        "body": [
+            "SetEnabled(${1:enable})$0"
+        ],
+        "description": "DBUTTON [Client] \n\n[boolean] enable\n  true to enable the button, false to disable it.",
+        "prefix": "SetEnabled"
+    },
+    "SetIcon": {
+        "body": [
+            "SetIcon(${1:img=nil})$0"
+        ],
+        "description": "DBUTTON [Client] \n\n[string] img=nil\n  The image file to use, relative to /materials. If this is nil, the image background is removed.",
+        "prefix": "SetIcon"
+    },
+    "SetImage": {
+        "body": [
+            "SetImage(${1:img=nil})$0"
+        ],
+        "description": "DBUTTON [Client] \n\n[string] img=nil\n  The image file to use, relative to /materials. If this is nil, the image background is removed.",
+        "prefix": "SetImage"
+    },
+    "UpdateColours": {
+        "body": [
+            "UpdateColours(${1:skin})$0"
+        ],
+        "description": "DBUTTON [Client] \n\n[table] skin\n  A table supposed to contain the color values listed above.",
+        "prefix": "UpdateColours"
+    }
+}

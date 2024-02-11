@@ -1,0 +1,16 @@
+{
+	"Panel/SetPlayer": {
+		"body": [
+			"SetPlayer(${1:player}, ${2:size})$0"
+		],
+		"description": "Used by",
+		"prefix": "SetPlayer"
+	},
+	"Panel/SetSteamID": {
+		"body": [
+			"SetSteamID(${1:steamid}, ${2:size})$0"
+		],
+		"description": "Used by",
+		"prefix": "SetSteamID"
+	}
+}

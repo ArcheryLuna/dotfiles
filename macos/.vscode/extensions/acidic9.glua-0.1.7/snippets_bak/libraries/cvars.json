@@ -1,0 +1,51 @@
+{
+	"cvars/AddChangeCallback": {
+		"body": [
+			"cvars.AddChangeCallback(${1:name}, ${2:callback}, ${3:indentifier=nil})$0"
+		],
+		"description": "Adds a callback to be called when the named convar changes.",
+		"prefix": "cvars.AddChangeCallback"
+	},
+	"cvars/Bool": {
+		"body": [
+			"cvars.Bool(${1:cvar}, ${2:default=false})$0"
+		],
+		"description": "Retrieves console variable as a boolean.",
+		"prefix": "cvars.Bool"
+	},
+	"cvars/GetConVarCallbacks": {
+		"body": [
+			"cvars.GetConVarCallbacks(${1:name}, ${2:createIfNotFound=false})$0"
+		],
+		"description": "Returns a table of the given",
+		"prefix": "cvars.GetConVarCallbacks"
+	},
+	"cvars/Number": {
+		"body": [
+			"cvars.Number(${1:cvar}, ${2:default=nil})$0"
+		],
+		"description": "Retrieves console variable as a number.",
+		"prefix": "cvars.Number"
+	},
+	"cvars/OnConVarChanged": {
+		"body": [
+			"cvars.OnConVarChanged(${1:name}, ${2:oldVal}, ${3:newVal})$0"
+		],
+		"description": "No description available.",
+		"prefix": "cvars.OnConVarChanged"
+	},
+	"cvars/RemoveChangeCallback": {
+		"body": [
+			"cvars.RemoveChangeCallback(${1:name}, ${2:indentifier})$0"
+		],
+		"description": "Removes a callback for a convar using the the callback\u0026#39;s identifier. The identifier should be the third argument specified for",
+		"prefix": "cvars.RemoveChangeCallback"
+	},
+	"cvars/String": {
+		"body": [
+			"cvars.String(${1:cvar}, ${2:default=nil})$0"
+		],
+		"description": "Retrieves console variable as a string.",
+		"prefix": "cvars.String"
+	}
+}

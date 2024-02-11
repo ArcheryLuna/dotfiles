@@ -1,0 +1,156 @@
+{
+	"name": "php-intellisense",
+	"displayName": "PHP IntelliSense",
+	"description": "Advanced Autocompletion and Refactoring support for PHP",
+	"publisher": "zobo",
+	"author": "Felix Becker <felix.b@outlook.com>",
+	"license": "MIT",
+	"private": true,
+	"preview": false,
+	"version": "1.3.3",
+	"engines": {
+		"vscode": "^1.68.1",
+		"node": "^16.15.1"
+	},
+	"keywords": [
+		"php",
+		"intellisense",
+		"autocompletion",
+		"help",
+		"refactor"
+	],
+	"categories": [
+		"Programming Languages"
+	],
+	"icon": "images/logo.png",
+	"galleryBanner": {
+		"color": "#6682BA",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zobo/vscode-php-intellisense.git"
+	},
+	"bugs": {
+		"url": "https://github.com/zobo/php-language-server/issues"
+	},
+	"activationEvents": [
+		"onLanguage:php",
+		"workspaceContains:**/*.php"
+	],
+	"main": "./out/extension",
+	"scripts": {
+		"build": "tsc -p .",
+		"watch": "tsc -w -p .",
+		"composer": "composer install",
+		"lint": "npm run prettier && npm run tslint",
+		"tslint": "tslint -p tsconfig.json -c tslint.json 'src/**/*.ts'",
+		"prettier": "prettier \"**/{*.json,*.yml,.*.yml,*.ts,.prettierrc,*.md}\" --write --list-different",
+		"prettier-check": "npm run prettier -- --write=false",
+		"semantic-release": "semantic-release"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "16.3.0",
+		"@commitlint/config-conventional": "16.2.4",
+		"@types/mocha": "9.1.1",
+		"@types/node": "^16.11.26",
+		"@types/semver": "^7.3.10",
+		"@types/vscode": "^1.68.0",
+		"prettier": "^2.7.1",
+		"semantic-release": "^19.0.2",
+		"semantic-release-vsce": "^5.0.20",
+		"tslint": "^5.20.1",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^4.7.4",
+		"vsce": "^2.9.1"
+	},
+	"dependencies": {
+		"execa": "5.1.1",
+		"semver": "^7.3.7",
+		"vscode-languageclient": "^8.0"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"release": {
+		"branches": [
+			"main"
+		],
+		"verifyConditions": [
+			"semantic-release-vsce",
+			"@semantic-release/github"
+		],
+		"prepare": {
+			"path": "semantic-release-vsce",
+			"packageVsix": true
+		},
+		"publish": [
+			"semantic-release-vsce",
+			{
+				"path": "@semantic-release/github",
+				"assets": "*.vsix",
+				"addReleases": "bottom"
+			}
+		]
+	},
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": "limited",
+			"description": "Workspace level overrides to php.executablePath and php.memoryLimit cannot be provided until workspace is trusted.",
+			"restrictedConfigurations": [
+				"php.executablePath",
+				"php.memoryLimit"
+			]
+		}
+	},
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "PHP IntelliSense",
+			"properties": {
+				"php.memoryLimit": {
+					"type": "string",
+					"default": "4095M",
+					"description": "The memory limit of the php language server. [Number][K|M|G]. Use '-1' to allow unlimited use of the RAM (default is 4G).",
+					"pattern": "^\\d+[KMG]?$"
+				},
+				"php.executablePath": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "The path to a PHP 7+ executable."
+				},
+				"php-intellisense.trace.server": {
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VSCode and the intellisense language server.",
+					"scope": "window"
+				},
+				"php.files.exclude": {
+					"type": "array",
+					"items": "string",
+					"description": "Configure glob patterns for excluding files and folders from initial indexing. Paths are relative to root folder."
+				}
+			}
+		}
+	},
+	"__metadata": {
+		"id": "3eddb68d-a5dd-43fb-be03-6f508d98fe97",
+		"publisherId": "2a621670-b579-442f-86a8-3502b16f8806",
+		"publisherDisplayName": "Damjan Cvetko",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033148
+	}
+}

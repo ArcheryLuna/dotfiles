@@ -1,0 +1,30 @@
+{
+    "GetPosColor": {
+        "body": [
+            "GetPosColor(${1:x}, ${2:y})$0"
+        ],
+        "description": "DRGBPICKER [Client] \n\n[number] x\n  The X coordinate on the texture to get the color from\n\n[number] y\n  The Y coordinate on the texture to get the color from",
+        "prefix": "GetPosColor"
+    },
+    "GetRGB": {
+        "body": [
+            "GetRGB()$0"
+        ],
+        "description": "DRGBPICKER [Client] Returns the color currently set on the color picker.",
+        "prefix": "GetRGB"
+    },
+    "OnChange": {
+        "body": [
+            "OnChange(${1:col})$0"
+        ],
+        "description": "DRGBPICKER [Client] Function which is called when the cursor is clicked and/or moved on the color picker. Meant to be overridden.\n\n[table] col\n  The color that is selected on the color picker (Color structure form).",
+        "prefix": "OnChange"
+    },
+    "SetRGB": {
+        "body": [
+            "SetRGB(${1:color})$0"
+        ],
+        "description": "DRGBPICKER [Client] Sets the color stored in the color picker.\n\n[table] color\n  The color to set, see Color structure.",
+        "prefix": "SetRGB"
+    }
+}

@@ -1,0 +1,72 @@
+{
+    "Fill": {
+        "body": [
+            "Fill()$0"
+        ],
+        "description": "DICONBROWSER [Client]",
+        "prefix": "Fill"
+    },
+    "FilterByText": {
+        "body": [
+            "FilterByText(${1:text})$0"
+        ],
+        "description": "DICONBROWSER [Client] \n\n[string] text\n  The text to search for",
+        "prefix": "FilterByText"
+    },
+    "GetManual": {
+        "body": [
+            "GetManual()$0"
+        ],
+        "description": "DICONBROWSER [Client]",
+        "prefix": "GetManual"
+    },
+    "GetSelectedIcon": {
+        "body": [
+            "GetSelectedIcon()$0"
+        ],
+        "description": "DICONBROWSER [Client]",
+        "prefix": "GetSelectedIcon"
+    },
+    "OnChange": {
+        "body": [
+            "OnChange()$0"
+        ],
+        "description": "DICONBROWSER [Client]",
+        "prefix": "OnChange"
+    },
+    "OnChangeInternal": {
+        "body": [
+            "OnChangeInternal()$0"
+        ],
+        "description": "DICONBROWSER [Client]",
+        "prefix": "OnChangeInternal"
+    },
+    "ScrollToSelected": {
+        "body": [
+            "ScrollToSelected()$0"
+        ],
+        "description": "DICONBROWSER [Client]",
+        "prefix": "ScrollToSelected"
+    },
+    "SelectIcon": {
+        "body": [
+            "SelectIcon(${1:icon})$0"
+        ],
+        "description": "DICONBROWSER [Client] \n\n[string] icon\n  The file path of the icon to select. Do not include the \"materials/\" part.",
+        "prefix": "SelectIcon"
+    },
+    "SetManual": {
+        "body": [
+            "SetManual(${1:manual})$0"
+        ],
+        "description": "DICONBROWSER [Client] \n\n[boolean] manual",
+        "prefix": "SetManual"
+    },
+    "SetSelectedIcon": {
+        "body": [
+            "SetSelectedIcon(${1:str})$0"
+        ],
+        "description": "DICONBROWSER [Client] \n\n[string] str",
+        "prefix": "SetSelectedIcon"
+    }
+}

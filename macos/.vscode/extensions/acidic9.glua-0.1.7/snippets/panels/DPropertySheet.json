@@ -1,0 +1,114 @@
+{
+    "AddSheet": {
+        "body": [
+            "AddSheet(${1:name}, ${2:pnl}, ${3:icon=nil}, ${4:noStretchX=false}, ${5:noStretchY=false}, ${6:tooltip=nil})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] Adds a new tab.\n\n[string] name\n  Name of the tab\n\n[Panel] pnl\n  Panel to be used as contents of the tab. This normally should be a DPanel\n\n[string] icon=nil\n  Icon for the tab. This will ideally be a silkicon, but any material name can be used.\n\n[boolean] noStretchX=false\n  Should DPropertySheet try to fill itself with given panel horizontally.\n\n[boolean] noStretchY=false\n  Should DPropertySheet try to fill itself with given panel vertically.\n\n[string] tooltip=nil\n  Tooltip for the tab when user hovers over it with his cursor",
+        "prefix": "AddSheet"
+    },
+    "CloseTab": {
+        "body": [
+            "CloseTab(${1:tab}, ${2:removePanel})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] Removes tab and/or panel from the parent DPropertySheet.\n\n[Panel] tab\n  The DTab of the sheet from DPropertySheet.\n\nSee DPropertySheet:GetItems.\n\n[boolean] removePanel\n  Set to true to remove the associated panel object as well.",
+        "prefix": "CloseTab"
+    },
+    "CrossFade": {
+        "body": [
+            "CrossFade(${1:anim}, ${2:delta}, ${3:data})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] \n\n[table] anim\n  \n\n[number] delta\n  \n\n[table] data",
+        "prefix": "CrossFade"
+    },
+    "GetActiveTab": {
+        "body": [
+            "GetActiveTab()$0"
+        ],
+        "description": "DPROPERTYSHEET [Client]",
+        "prefix": "GetActiveTab"
+    },
+    "GetFadeTime": {
+        "body": [
+            "GetFadeTime()$0"
+        ],
+        "description": "DPROPERTYSHEET [Client]",
+        "prefix": "GetFadeTime"
+    },
+    "GetItems": {
+        "body": [
+            "GetItems()$0"
+        ],
+        "description": "DPROPERTYSHEET [Client]",
+        "prefix": "GetItems"
+    },
+    "GetPadding": {
+        "body": [
+            "GetPadding()$0"
+        ],
+        "description": "DPROPERTYSHEET [Client]",
+        "prefix": "GetPadding"
+    },
+    "GetShowIcons": {
+        "body": [
+            "GetShowIcons()$0"
+        ],
+        "description": "DPROPERTYSHEET [Client]",
+        "prefix": "GetShowIcons"
+    },
+    "OnActiveTabChanged": {
+        "body": [
+            "OnActiveTabChanged(${1:old}, ${2:new})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] \n\n[Panel] old\n  The previously active DTab\n\n[Panel] new\n  The newly active DTab",
+        "prefix": "OnActiveTabChanged"
+    },
+    "SetActiveTab": {
+        "body": [
+            "SetActiveTab(${1:tab})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] \n\n[Panel] tab\n  The DTab to set active.\n\nSee DPropertySheet:GetItems",
+        "prefix": "SetActiveTab"
+    },
+    "SetFadeTime": {
+        "body": [
+            "SetFadeTime(${1:time=0.1})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] Sets the amount of time (in seconds) it takes to fade between tabs.\n\n[number] time=0.1\n  The amount of time it takes (in seconds) to fade between tabs.",
+        "prefix": "SetFadeTime"
+    },
+    "SetPadding": {
+        "body": [
+            "SetPadding(${1:padding=8})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] \n\n[number] padding=8\n  Amount of padding",
+        "prefix": "SetPadding"
+    },
+    "SetShowIcons": {
+        "body": [
+            "SetShowIcons(${1:show})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] \n\n[boolean] show",
+        "prefix": "SetShowIcons"
+    },
+    "SetupCloseButton": {
+        "body": [
+            "SetupCloseButton(${1:func})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] \n\n[function] func\n  Callback function to be called when the close button is pressed.",
+        "prefix": "SetupCloseButton"
+    },
+    "SizeToContentWidth": {
+        "body": [
+            "SizeToContentWidth()$0"
+        ],
+        "description": "DPROPERTYSHEET [Client]",
+        "prefix": "SizeToContentWidth"
+    },
+    "SwitchToName": {
+        "body": [
+            "SwitchToName(${1:name})$0"
+        ],
+        "description": "DPROPERTYSHEET [Client] \n\n[string] name\n  Case sensitive name of the tab.",
+        "prefix": "SwitchToName"
+    }
+}

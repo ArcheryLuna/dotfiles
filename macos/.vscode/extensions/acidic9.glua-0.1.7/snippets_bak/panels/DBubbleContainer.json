@@ -1,0 +1,9 @@
+{
+	"DBubbleContainer/OpenForPos": {
+		"body": [
+			"OpenForPos(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+		],
+		"description": "Sets the speech bubble position and size along with the dialog point position.",
+		"prefix": "OpenForPos"
+	}
+}

@@ -1,0 +1,44 @@
+{
+    "chat.AddText": {
+        "body": [
+            "chat.AddText(${1:arguments})$0"
+        ],
+        "description": "CHAT [Client] Adds text to the local player's chat box (which only they can read).\n\n[vararg] arguments\n  The arguments. Arguments can be:\n\n table - Color structure. Will set the color for all following strings until the next Color argument.\n string - Text to be added to the chat box.\n Player - Adds the name of the player in the player's team color to the chat box.\n any - Any other type, such as Entity will be converted to string and added as text.",
+        "prefix": "chat.AddText"
+    },
+    "chat.Close": {
+        "body": [
+            "chat.Close()$0"
+        ],
+        "description": "CHAT [Client]",
+        "prefix": "chat.Close"
+    },
+    "chat.GetChatBoxPos": {
+        "body": [
+            "chat.GetChatBoxPos()$0"
+        ],
+        "description": "CHAT [Client] Returns the chatbox position.",
+        "prefix": "chat.GetChatBoxPos"
+    },
+    "chat.GetChatBoxSize": {
+        "body": [
+            "chat.GetChatBoxSize()$0"
+        ],
+        "description": "CHAT [Client] Returns the chatbox size.",
+        "prefix": "chat.GetChatBoxSize"
+    },
+    "chat.Open": {
+        "body": [
+            "chat.Open(${1:mode})$0"
+        ],
+        "description": "CHAT [Client] \n\n[number] mode\n  If equals 1, opens public chat, otherwise opens team chat",
+        "prefix": "chat.Open"
+    },
+    "chat.PlaySound": {
+        "body": [
+            "chat.PlaySound()$0"
+        ],
+        "description": "CHAT [Client]",
+        "prefix": "chat.PlaySound"
+    }
+}

@@ -1,0 +1,16 @@
+{
+	"ai/GetScheduleID": {
+		"body": [
+			"ai.GetScheduleID(${1:sched})$0"
+		],
+		"description": "No description available.",
+		"prefix": "ai.GetScheduleID"
+	},
+	"ai/GetTaskID": {
+		"body": [
+			"ai.GetTaskID(${1:taskName})$0"
+		],
+		"description": "Returns the task Id corresponding to the given task name.",
+		"prefix": "ai.GetTaskID"
+	}
+}

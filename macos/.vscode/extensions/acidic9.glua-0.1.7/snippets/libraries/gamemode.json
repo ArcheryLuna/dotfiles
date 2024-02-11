@@ -1,0 +1,23 @@
+{
+    "gamemode.Call": {
+        "body": [
+            "gamemode.Call(${1:name}, ${2:args})$0"
+        ],
+        "description": "GAMEMODE [Shared] Called by the engine to call a hook within the loaded gamemode. The supplied event 'name' must be defined in the active gamemode. Otherwise, nothing will happen - not even hooks added with hook.Add will be called. This is similar to hook.Run and hook.Call, except the hook library will call hooks created with hook.Add even if there is no corresponding gamemode function.\n\n[string] name\n  The name of the hook to call.\n\n[vararg] args\n  The arguments",
+        "prefix": "gamemode.Call"
+    },
+    "gamemode.Get": {
+        "body": [
+            "gamemode.Get(${1:name})$0"
+        ],
+        "description": "GAMEMODE [Shared] \n\n[string] name\n  The name of the gamemode you want to get",
+        "prefix": "gamemode.Get"
+    },
+    "gamemode.Register": {
+        "body": [
+            "gamemode.Register(${1:gm}, ${2:name}, ${3:derived})$0"
+        ],
+        "description": "GAMEMODE [Shared] \n\n[table] gm\n  Your GM table\n\n[string] name\n  Name of your gamemode, lowercase, no spaces.\n\n[string] derived\n  The gamemode name that your gamemode is derived from",
+        "prefix": "gamemode.Register"
+    }
+}

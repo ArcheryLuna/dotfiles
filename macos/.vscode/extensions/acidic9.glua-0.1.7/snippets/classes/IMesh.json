@@ -1,0 +1,23 @@
+{
+    "BuildFromTriangles": {
+        "body": [
+            "BuildFromTriangles(${1:vertexes})$0"
+        ],
+        "description": "IMESH [Client] \n\n[table] vertexes\n  A table consisting of MeshVertex structures.",
+        "prefix": "BuildFromTriangles"
+    },
+    "Destroy": {
+        "body": [
+            "Destroy()$0"
+        ],
+        "description": "IMESH [Client]",
+        "prefix": "Destroy"
+    },
+    "Draw": {
+        "body": [
+            "Draw()$0"
+        ],
+        "description": "IMESH [Client]",
+        "prefix": "Draw"
+    }
+}

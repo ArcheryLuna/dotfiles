@@ -1,0 +1,9 @@
+{
+	"DDragBase/MakeDroppable": {
+		"body": [
+			"MakeDroppable(${1:name}, ${2:allowCopy})$0"
+		],
+		"description": "Makes the panel a receiver for any droppable panel with the same DnD name.",
+		"prefix": "MakeDroppable"
+	}
+}

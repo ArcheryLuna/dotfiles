@@ -1,0 +1,37 @@
+{
+	"gmsave/LoadMap": {
+		"body": [
+			"gmsave.LoadMap(${1:mapData}, ${2:ply})$0"
+		],
+		"description": "Loads a saved map.",
+		"prefix": "gmsave.LoadMap"
+	},
+	"gmsave/PlayerLoad": {
+		"body": [
+			"gmsave.PlayerLoad(${1:ply}, ${2:data})$0"
+		],
+		"description": "Sets player position and angles from supplied table",
+		"prefix": "gmsave.PlayerLoad"
+	},
+	"gmsave/PlayerSave": {
+		"body": [
+			"gmsave.PlayerSave(${1:ply})$0"
+		],
+		"description": "Returns a table containing player position and angles. Used by",
+		"prefix": "gmsave.PlayerSave"
+	},
+	"gmsave/SaveMap": {
+		"body": [
+			"gmsave.SaveMap(${1:ply})$0"
+		],
+		"description": "Saves the map",
+		"prefix": "gmsave.SaveMap"
+	},
+	"gmsave/ShouldSaveEntity": {
+		"body": [
+			"gmsave.ShouldSaveEntity(${1:ent}, ${2:t})$0"
+		],
+		"description": "Returns if we should save this entity in a duplication or a map save or not.",
+		"prefix": "gmsave.ShouldSaveEntity"
+	}
+}

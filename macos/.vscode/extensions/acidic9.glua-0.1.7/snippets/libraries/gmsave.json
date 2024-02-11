@@ -1,0 +1,37 @@
+{
+    "gmsave.LoadMap": {
+        "body": [
+            "gmsave.LoadMap(${1:mapData}, ${2:ply})$0"
+        ],
+        "description": "GMSAVE [Server] \n\n[string] mapData\n  The JSON encoded string containing all the map data.\n\n[Player] ply\n  The player to load positions for",
+        "prefix": "gmsave.LoadMap"
+    },
+    "gmsave.PlayerLoad": {
+        "body": [
+            "gmsave.PlayerLoad(${1:ply}, ${2:data})$0"
+        ],
+        "description": "GMSAVE [Server] \n\n[Player] ply\n  The player to \"load\" values for\n\n[table] data\n  A table containing Origin and Angle keys for position and angles to set.",
+        "prefix": "gmsave.PlayerLoad"
+    },
+    "gmsave.PlayerSave": {
+        "body": [
+            "gmsave.PlayerSave(${1:ply})$0"
+        ],
+        "description": "GMSAVE [Server] \n\n[Player] ply\n  The player to \"save\"",
+        "prefix": "gmsave.PlayerSave"
+    },
+    "gmsave.SaveMap": {
+        "body": [
+            "gmsave.SaveMap(${1:ply})$0"
+        ],
+        "description": "GMSAVE [Server] \n\n[Player] ply\n  The player, whose position should be saved for loading the save",
+        "prefix": "gmsave.SaveMap"
+    },
+    "gmsave.ShouldSaveEntity": {
+        "body": [
+            "gmsave.ShouldSaveEntity(${1:ent}, ${2:t})$0"
+        ],
+        "description": "GMSAVE [Server] Returns if we should save this entity in a duplication or a map save or not.\n\n[Entity] ent\n  The entity\n\n[table] t\n  A table containing classname key with entities classname.",
+        "prefix": "gmsave.ShouldSaveEntity"
+    }
+}

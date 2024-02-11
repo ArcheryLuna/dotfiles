@@ -1,0 +1,149 @@
+{
+    "Add": {
+        "body": [
+            "Add(${1:name})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[string] name\n  The name of the button",
+        "prefix": "Add"
+    },
+    "AnimSlide": {
+        "body": [
+            "AnimSlide(${1:anim}, ${2:delta}, ${3:data})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[table] anim\n  \n\n[number] delta\n  \n\n[table] data",
+        "prefix": "AnimSlide"
+    },
+    "DoExpansion": {
+        "body": [
+            "DoExpansion(${1:expand})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[boolean] expand\n  True to open, false to collapse",
+        "prefix": "DoExpansion"
+    },
+    "GetAnimTime": {
+        "body": [
+            "GetAnimTime()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "GetAnimTime"
+    },
+    "GetExpanded": {
+        "body": [
+            "GetExpanded()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "GetExpanded"
+    },
+    "GetList": {
+        "body": [
+            "GetList()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "GetList"
+    },
+    "GetPadding": {
+        "body": [
+            "GetPadding()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "GetPadding"
+    },
+    "GetPaintBackground": {
+        "body": [
+            "GetPaintBackground()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "GetPaintBackground"
+    },
+    "GetStartHeight": {
+        "body": [
+            "GetStartHeight()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "GetStartHeight"
+    },
+    "OnToggle": {
+        "body": [
+            "OnToggle()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "OnToggle"
+    },
+    "SetAnimTime": {
+        "body": [
+            "SetAnimTime(${1:time})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[number] time\n  The time in seconds it takes to expand",
+        "prefix": "SetAnimTime"
+    },
+    "SetContents": {
+        "body": [
+            "SetContents(${1:pnl})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[Panel] pnl\n  The panel, containing the contents for the DCollapsibleCategory, mostly an DScrollPanel",
+        "prefix": "SetContents"
+    },
+    "SetExpanded": {
+        "body": [
+            "SetExpanded(${1:expanded=true})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[boolean] expanded=true\n  Whether it shall be expanded or not by default",
+        "prefix": "SetExpanded"
+    },
+    "SetLabel": {
+        "body": [
+            "SetLabel(${1:label})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[string] label\n  The label/name of the DCollapsibleCategory.",
+        "prefix": "SetLabel"
+    },
+    "SetList": {
+        "body": [
+            "SetList(${1:pnl})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[Panel] pnl",
+        "prefix": "SetList"
+    },
+    "SetPadding": {
+        "body": [
+            "SetPadding(${1:padding})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[number] padding",
+        "prefix": "SetPadding"
+    },
+    "SetPaintBackground": {
+        "body": [
+            "SetPaintBackground(${1:paint})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[boolean] paint",
+        "prefix": "SetPaintBackground"
+    },
+    "SetStartHeight": {
+        "body": [
+            "SetStartHeight(${1:height})$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client] \n\n[number] height",
+        "prefix": "SetStartHeight"
+    },
+    "Toggle": {
+        "body": [
+            "Toggle()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "Toggle"
+    },
+    "UnselectAll": {
+        "body": [
+            "UnselectAll()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "UnselectAll"
+    },
+    "UpdateAltLines": {
+        "body": [
+            "UpdateAltLines()$0"
+        ],
+        "description": "DCOLLAPSIBLECATEGORY [Client]",
+        "prefix": "UpdateAltLines"
+    }
+}

@@ -1,0 +1,226 @@
+{
+    "GetAngles": {
+        "body": [
+            "GetAngles()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetAngles"
+    },
+    "GetAttachment": {
+        "body": [
+            "GetAttachment()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetAttachment"
+    },
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetColor"
+    },
+    "GetDamageType": {
+        "body": [
+            "GetDamageType()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetDamageType"
+    },
+    "GetEntIndex": {
+        "body": [
+            "GetEntIndex()$0"
+        ],
+        "description": "CEFFECTDATA [Server]",
+        "prefix": "GetEntIndex"
+    },
+    "GetEntity": {
+        "body": [
+            "GetEntity()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetEntity"
+    },
+    "GetFlags": {
+        "body": [
+            "GetFlags()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetFlags"
+    },
+    "GetHitBox": {
+        "body": [
+            "GetHitBox()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetHitBox"
+    },
+    "GetMagnitude": {
+        "body": [
+            "GetMagnitude()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetMagnitude"
+    },
+    "GetMaterialIndex": {
+        "body": [
+            "GetMaterialIndex()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetMaterialIndex"
+    },
+    "GetNormal": {
+        "body": [
+            "GetNormal()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetNormal"
+    },
+    "GetOrigin": {
+        "body": [
+            "GetOrigin()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetOrigin"
+    },
+    "GetRadius": {
+        "body": [
+            "GetRadius()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetRadius"
+    },
+    "GetScale": {
+        "body": [
+            "GetScale()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetScale"
+    },
+    "GetStart": {
+        "body": [
+            "GetStart()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetStart"
+    },
+    "GetSurfaceProp": {
+        "body": [
+            "GetSurfaceProp()$0"
+        ],
+        "description": "CEFFECTDATA [Shared]",
+        "prefix": "GetSurfaceProp"
+    },
+    "SetAngles": {
+        "body": [
+            "SetAngles(${1:ang})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[Angle] ang\n  The new angles to be set.",
+        "prefix": "SetAngles"
+    },
+    "SetAttachment": {
+        "body": [
+            "SetAttachment(${1:attachment})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] attachment\n  New attachment ID of the effect.",
+        "prefix": "SetAttachment"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] color\n  Color represented by a byte.",
+        "prefix": "SetColor"
+    },
+    "SetDamageType": {
+        "body": [
+            "SetDamageType(${1:damageType})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] damageType\n  Damage type, see DMG_ Enums.",
+        "prefix": "SetDamageType"
+    },
+    "SetEntIndex": {
+        "body": [
+            "SetEntIndex(${1:entIndex})$0"
+        ],
+        "description": "CEFFECTDATA [Server] \n\n[number] entIndex\n  The entity index to be set.",
+        "prefix": "SetEntIndex"
+    },
+    "SetEntity": {
+        "body": [
+            "SetEntity(${1:entity})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[Entity] entity\n  Entity of the effect, mostly used for parenting.",
+        "prefix": "SetEntity"
+    },
+    "SetFlags": {
+        "body": [
+            "SetFlags(${1:flags})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] flags\n  The flags of the effect. Each effect has their own flags.",
+        "prefix": "SetFlags"
+    },
+    "SetHitBox": {
+        "body": [
+            "SetHitBox(${1:hitBoxIndex})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] hitBoxIndex\n  The hit box index of the effect.",
+        "prefix": "SetHitBox"
+    },
+    "SetMagnitude": {
+        "body": [
+            "SetMagnitude(${1:magnitude})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] magnitude\n  The magnitude of the effect.",
+        "prefix": "SetMagnitude"
+    },
+    "SetMaterialIndex": {
+        "body": [
+            "SetMaterialIndex(${1:materialIndex})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] materialIndex\n  The material index of the effect.",
+        "prefix": "SetMaterialIndex"
+    },
+    "SetNormal": {
+        "body": [
+            "SetNormal(${1:normal})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[Vector] normal\n  The normalized direction vector of the effect.",
+        "prefix": "SetNormal"
+    },
+    "SetOrigin": {
+        "body": [
+            "SetOrigin(${1:origin})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[Vector] origin\n  Origin of the effect.",
+        "prefix": "SetOrigin"
+    },
+    "SetRadius": {
+        "body": [
+            "SetRadius(${1:radius})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] radius\n  Radius of the effect.",
+        "prefix": "SetRadius"
+    },
+    "SetScale": {
+        "body": [
+            "SetScale(${1:scale})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] scale\n  Scale of the effect.",
+        "prefix": "SetScale"
+    },
+    "SetStart": {
+        "body": [
+            "SetStart(${1:start})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[Vector] start\n  Start of the effect.",
+        "prefix": "SetStart"
+    },
+    "SetSurfaceProp": {
+        "body": [
+            "SetSurfaceProp(${1:surfaceProperties})$0"
+        ],
+        "description": "CEFFECTDATA [Shared] \n\n[number] surfaceProperties\n  The surface property index of the effect.",
+        "prefix": "SetSurfaceProp"
+    }
+}

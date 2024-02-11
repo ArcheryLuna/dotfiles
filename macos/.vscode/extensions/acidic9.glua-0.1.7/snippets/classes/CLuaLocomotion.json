@@ -1,0 +1,205 @@
+{
+    "Approach": {
+        "body": [
+            "Approach(${1:goal}, ${2:goalweight})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[Vector] goal\n  The vector we want to get to\n\n[number] goalweight\n  If unsure then set this to 1",
+        "prefix": "Approach"
+    },
+    "ClearStuck": {
+        "body": [
+            "ClearStuck()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "ClearStuck"
+    },
+    "FaceTowards": {
+        "body": [
+            "FaceTowards(${1:goal})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[Vector] goal\n  The vector we want to face",
+        "prefix": "FaceTowards"
+    },
+    "GetAcceleration": {
+        "body": [
+            "GetAcceleration()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetAcceleration"
+    },
+    "GetCurrentAcceleration": {
+        "body": [
+            "GetCurrentAcceleration()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetCurrentAcceleration"
+    },
+    "GetDeathDropHeight": {
+        "body": [
+            "GetDeathDropHeight()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetDeathDropHeight"
+    },
+    "GetDeceleration": {
+        "body": [
+            "GetDeceleration()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetDeceleration"
+    },
+    "GetGroundMotionVector": {
+        "body": [
+            "GetGroundMotionVector()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetGroundMotionVector"
+    },
+    "GetJumpHeight": {
+        "body": [
+            "GetJumpHeight()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetJumpHeight"
+    },
+    "GetMaxJumpHeight": {
+        "body": [
+            "GetMaxJumpHeight()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetMaxJumpHeight"
+    },
+    "GetMaxYawRate": {
+        "body": [
+            "GetMaxYawRate()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetMaxYawRate"
+    },
+    "GetStepHeight": {
+        "body": [
+            "GetStepHeight()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetStepHeight"
+    },
+    "GetVelocity": {
+        "body": [
+            "GetVelocity()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "GetVelocity"
+    },
+    "IsAreaTraversable": {
+        "body": [
+            "IsAreaTraversable(${1:area})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[CNavArea] area\n  The area to test",
+        "prefix": "IsAreaTraversable"
+    },
+    "IsAttemptingToMove": {
+        "body": [
+            "IsAttemptingToMove()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "IsAttemptingToMove"
+    },
+    "IsClimbingOrJumping": {
+        "body": [
+            "IsClimbingOrJumping()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "IsClimbingOrJumping"
+    },
+    "IsOnGround": {
+        "body": [
+            "IsOnGround()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "IsOnGround"
+    },
+    "IsStuck": {
+        "body": [
+            "IsStuck()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "IsStuck"
+    },
+    "IsUsingLadder": {
+        "body": [
+            "IsUsingLadder()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "IsUsingLadder"
+    },
+    "Jump": {
+        "body": [
+            "Jump()$0"
+        ],
+        "description": "CLUALOCOMOTION [Server]",
+        "prefix": "Jump"
+    },
+    "JumpAcrossGap": {
+        "body": [
+            "JumpAcrossGap(${1:landingGoal}, ${2:landingForward})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[Vector] landingGoal\n  \n\n[Vector] landingForward",
+        "prefix": "JumpAcrossGap"
+    },
+    "SetAcceleration": {
+        "body": [
+            "SetAcceleration(${1:speed})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[number] speed\n  Speed acceleration (default is 400)",
+        "prefix": "SetAcceleration"
+    },
+    "SetDeathDropHeight": {
+        "body": [
+            "SetDeathDropHeight(${1:height})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[number] height\n  Height (default is 200)",
+        "prefix": "SetDeathDropHeight"
+    },
+    "SetDeceleration": {
+        "body": [
+            "SetDeceleration(${1:deceleration})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[number] deceleration\n  New deceleration speed (default is 400)",
+        "prefix": "SetDeceleration"
+    },
+    "SetDesiredSpeed": {
+        "body": [
+            "SetDesiredSpeed(${1:speed})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[number] speed\n  The new desired speed",
+        "prefix": "SetDesiredSpeed"
+    },
+    "SetJumpHeight": {
+        "body": [
+            "SetJumpHeight(${1:height})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[number] height\n  Height (default is 58)",
+        "prefix": "SetJumpHeight"
+    },
+    "SetMaxYawRate": {
+        "body": [
+            "SetMaxYawRate(${1:yawRate})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[number] yawRate\n  Desired new maximum yaw rate",
+        "prefix": "SetMaxYawRate"
+    },
+    "SetStepHeight": {
+        "body": [
+            "SetStepHeight(${1:height})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[number] height\n  Height (default is 18)",
+        "prefix": "SetStepHeight"
+    },
+    "SetVelocity": {
+        "body": [
+            "SetVelocity(${1:velocity})$0"
+        ],
+        "description": "CLUALOCOMOTION [Server] \n\n[Vector] velocity",
+        "prefix": "SetVelocity"
+    }
+}

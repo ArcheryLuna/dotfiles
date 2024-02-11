@@ -1,0 +1,30 @@
+{
+    "AddChoice": {
+        "body": [
+            "AddChoice(${1:Text}, ${2:data}, ${3:select=false})$0"
+        ],
+        "description": "DPROPERTY_COMBO [Client] Add a choice to your combo control.\n\n[string] Text\n  Shown text.\n\n[any] data\n  Stored Data.\n\n[boolean] select=false\n  Select this element?",
+        "prefix": "AddChoice"
+    },
+    "DataChanged": {
+        "body": [
+            "DataChanged(${1:data})$0"
+        ],
+        "description": "DPROPERTY_COMBO [Client] Called after the user selects a new value.\n\n[any] data\n  The new data that was selected.",
+        "prefix": "DataChanged"
+    },
+    "SetSelected": {
+        "body": [
+            "SetSelected(${1:Id})$0"
+        ],
+        "description": "DPROPERTY_COMBO [Client] Set the selected option.\n\n[number] Id\n  Id of the choice to be selected.",
+        "prefix": "SetSelected"
+    },
+    "Setup": {
+        "body": [
+            "Setup(${1:prop=\"Combo\"}, ${2:data={text=\"Select...\"}})$0"
+        ],
+        "description": "DPROPERTY_COMBO [Client] Sets up a combo control.\n\n[string] prop=\"Combo\"\n  The name of DProperty sub control to add.\n\n[table] data={text=\"Select...\"}\n  Data to use to set up the combo box control.\nStructure:\n\n string text - The default label for this combo box\n table values - The values to add to the combo box",
+        "prefix": "Setup"
+    }
+}

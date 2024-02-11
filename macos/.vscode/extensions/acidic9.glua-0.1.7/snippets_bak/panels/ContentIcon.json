@@ -1,0 +1,86 @@
+{
+	"ContentIcon/GetColor": {
+		"body": [
+			"GetColor()$0"
+		],
+		"description": "Returns the color set by",
+		"prefix": "GetColor"
+	},
+	"ContentIcon/GetContentType": {
+		"body": [
+			"GetContentType()$0"
+		],
+		"description": "Returns the content type used to save and restore the content icon in a spawnlist.",
+		"prefix": "GetContentType"
+	},
+	"ContentIcon/GetNPCWeapon": {
+		"body": [
+			"GetNPCWeapon()$0"
+		],
+		"description": "Returns a table of weapon classes for the content icon with \u0026#34;NPC\u0026#34; content type to be randomly chosen from when user tries to spawn the NPC.",
+		"prefix": "GetNPCWeapon"
+	},
+	"ContentIcon/GetSpawnName": {
+		"body": [
+			"GetSpawnName()$0"
+		],
+		"description": "Returns the internal \u0026#34;name\u0026#34; for the content icon, usually a class name for an entity.",
+		"prefix": "GetSpawnName"
+	},
+	"ContentIcon/OpenMenu": {
+		"body": [
+			"OpenMenu()$0"
+		],
+		"description": "A hook for override, by default does nothing. Called when user right clicks on the content icon, you are supposed to open a",
+		"prefix": "OpenMenu"
+	},
+	"ContentIcon/SetAdminOnly": {
+		"body": [
+			"SetAdminOnly(${1:adminOnly})$0"
+		],
+		"description": "Sets whether the content item is admin only. This makes the icon to display a admin icon in the top left corner of the icon.",
+		"prefix": "SetAdminOnly"
+	},
+	"ContentIcon/SetColor": {
+		"body": [
+			"SetColor(${1:clr})$0"
+		],
+		"description": "Sets the color for the content icon. Currently is not used by the content icon panel.",
+		"prefix": "SetColor"
+	},
+	"ContentIcon/SetContentType": {
+		"body": [
+			"SetContentType(${1:type})$0"
+		],
+		"description": "Sets the content type used to save and restore the content icon in a spawnlist.",
+		"prefix": "SetContentType"
+	},
+	"ContentIcon/SetMaterial": {
+		"body": [
+			"SetMaterial(${1:path})$0"
+		],
+		"description": "Sets the material to be displayed as the content icon.",
+		"prefix": "SetMaterial"
+	},
+	"ContentIcon/SetNPCWeapon": {
+		"body": [
+			"SetNPCWeapon(${1:weapons})$0"
+		],
+		"description": "Sets a table of weapon classes for the content icon with \u0026#34;NPC\u0026#34; content type to be randomly chosen from when user tries to spawn the NPC.",
+		"prefix": "SetNPCWeapon"
+	},
+	"ContentIcon/SetName": {
+		"body": [
+			"SetName(${1:name})$0"
+		],
+		"description": "Sets the tool tip and the \u0026#34;nice\u0026#34; name to be displayed by the content icon.",
+		"prefix": "SetName"
+	},
+	"ContentIcon/SetSpawnName": {
+		"body": [
+			"SetSpawnName(${1:name})$0"
+		],
+		"description": "Sets the internal \u0026#34;name\u0026#34; for the content icon, usually a class name for an entity.",
+		"prefix": "SetSpawnName"
+	}
+}

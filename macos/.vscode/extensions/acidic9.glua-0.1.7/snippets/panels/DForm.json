@@ -1,0 +1,93 @@
+{
+    "AddItem": {
+        "body": [
+            "AddItem(${1:left}, ${2:right})$0"
+        ],
+        "description": "DFORM [Client] \n\n[Panel] left\n  Left-hand element to add to the DForm.\n\n[Panel] right\n  Right-hand element to add to the DForm.",
+        "prefix": "AddItem"
+    },
+    "Button": {
+        "body": [
+            "Button(${1:text}, ${2:concmd}, ${3:concmdargs})$0"
+        ],
+        "description": "DFORM [Client] Adds a DButton onto the DForm\n\n[string] text\n  The text on the button\n\n[string] concmd\n  The concommand to run when the button is clicked\n\n[vararg] concmdargs\n  The arguments to pass on to the concommand when the button is clicked",
+        "prefix": "Button"
+    },
+    "CheckBox": {
+        "body": [
+            "CheckBox(${1:label}, ${2:convar})$0"
+        ],
+        "description": "DFORM [Client] Adds a DCheckBoxLabel onto the DForm\n\n[string] label\n  The label to be set next to the check box\n\n[string] convar\n  The console variable to change when this is changed",
+        "prefix": "CheckBox"
+    },
+    "ComboBox": {
+        "body": [
+            "ComboBox(${1:title}, ${2:convar})$0"
+        ],
+        "description": "DFORM [Client] Adds a DComboBox onto the DForm\n\n[string] title\n  Text to the left of the combo box\n\n[string] convar\n  Console variable to change when the user selects something from the dropdown.",
+        "prefix": "ComboBox"
+    },
+    "ControlHelp": {
+        "body": [
+            "ControlHelp(${1:help})$0"
+        ],
+        "description": "DFORM [Client] \n\n[string] help\n  The help message to be displayed.",
+        "prefix": "ControlHelp"
+    },
+    "Help": {
+        "body": [
+            "Help(${1:help})$0"
+        ],
+        "description": "DFORM [Client] \n\n[string] help\n  The help message to be displayed",
+        "prefix": "Help"
+    },
+    "ListBox": {
+        "body": [
+            "ListBox(${1:label})$0"
+        ],
+        "description": "DFORM [Client] Adds a DListBox onto the DForm\n\n[string] label\n  The label to set on the DListBox",
+        "prefix": "ListBox"
+    },
+    "NumSlider": {
+        "body": [
+            "NumSlider(${1:label}, ${2:convar}, ${3:min}, ${4:max}, ${5:decimals=nil})$0"
+        ],
+        "description": "DFORM [Client] Adds a DNumSlider onto the DForm\n\n[string] label\n  The label of the DNumSlider\n\n[string] convar\n  The console variable to change when the slider is changed\n\n[number] min\n  The minimum value of the slider\n\n[number] max\n  The maximum value of the slider\n\n[number] decimals=nil\n  The number of decimals to allow on the slider. (Optional)",
+        "prefix": "NumSlider"
+    },
+    "NumberWang": {
+        "body": [
+            "NumberWang(${1:label}, ${2:convar}, ${3:min}, ${4:max}, ${5:decimals=nil})$0"
+        ],
+        "description": "DFORM [Client] Adds a DNumberWang onto the DForm\n\n[string] label\n  The label to be placed next to the DNumberWang\n\n[string] convar\n  The console variable to change when the slider is changed\n\n[number] min\n  The minimum value of the slider\n\n[number] max\n  The maximum value of the slider\n\n[number] decimals=nil\n  The number of decimals to allow in the slider (Optional)",
+        "prefix": "NumberWang"
+    },
+    "PanelSelect": {
+        "body": [
+            "PanelSelect()$0"
+        ],
+        "description": "DFORM [Client]",
+        "prefix": "PanelSelect"
+    },
+    "Rebuild": {
+        "body": [
+            "Rebuild()$0"
+        ],
+        "description": "DFORM [Client]",
+        "prefix": "Rebuild"
+    },
+    "SetName": {
+        "body": [
+            "SetName(${1:name})$0"
+        ],
+        "description": "DFORM [Client] \n\n[string] name\n  The new header name.",
+        "prefix": "SetName"
+    },
+    "TextEntry": {
+        "body": [
+            "TextEntry(${1:label}, ${2:convar})$0"
+        ],
+        "description": "DFORM [Client] Adds a DTextEntry to a DForm\n\n[string] label\n  The label to be next to the text entry\n\n[string] convar\n  The console variable to be changed when the text entry is changed",
+        "prefix": "TextEntry"
+    }
+}

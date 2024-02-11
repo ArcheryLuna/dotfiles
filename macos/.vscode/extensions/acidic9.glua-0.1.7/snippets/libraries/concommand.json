@@ -1,0 +1,37 @@
+{
+    "concommand.Add": {
+        "body": [
+            "concommand.Add(${1:name}, ${2:callback}, ${3:autoComplete=nil}, ${4:helpText=nil}, ${5:flags=0})$0"
+        ],
+        "description": "CONCOMMAND [Shared/Menu] Creates a console command that runs a function in lua with optional autocompletion function and help text.\n\n[string] name\n  The command name to be used in console.\n\nThis cannot be a name of existing console command or console variable. It will silently fail if it is.\n\n[function] callback\n  The function to run when the concommand is executed. Arguments passed are:\n\n Player ply - The player the ran the concommand. NULL entity if command was entered with the dedicated server console.\n string cmd - The concommand string (if one callback is used for several concommands).\n table args - A table of all string arguments.\n string argStr - The arguments as a string.\n\n[function] autoComplete=nil\n  The function to call which should return a table of options for autocompletion. (Autocompletion Tutorial)\nThis only properly works on the client since it is not networked. Arguments passed are:\n\n string cmd - The concommand this autocompletion is for.\n string args - The arguments typed so far.\n\n[string] helpText=nil\n  The text to display should a user run 'help cmdName'.\n\n[number] flags=0\n  Concommand modifier flags. See FCVAR_ Enums.",
+        "prefix": "concommand.Add"
+    },
+    "concommand.AutoComplete": {
+        "body": [
+            "concommand.AutoComplete(${1:command}, ${2:arguments})$0"
+        ],
+        "description": "CONCOMMAND [Shared/Menu] \n\n[string] command\n  Name of command\n\n[string] arguments\n  Arguments given to the command",
+        "prefix": "concommand.AutoComplete"
+    },
+    "concommand.GetTable": {
+        "body": [
+            "concommand.GetTable()$0"
+        ],
+        "description": "CONCOMMAND [Shared/Menu]",
+        "prefix": "concommand.GetTable"
+    },
+    "concommand.Remove": {
+        "body": [
+            "concommand.Remove(${1:name})$0"
+        ],
+        "description": "CONCOMMAND [Shared/Menu] Removes a console command.\n\n[string] name\n  The name of the command to be removed.",
+        "prefix": "concommand.Remove"
+    },
+    "concommand.Run": {
+        "body": [
+            "concommand.Run(${1:ply}, ${2:cmd}, ${3:args}, ${4:argumentString})$0"
+        ],
+        "description": "CONCOMMAND [Shared/Menu] \n\n[Player] ply\n  Player to run concommand on\n\n[string] cmd\n  Command name\n\n[any] args\n  Command arguments.\n\nCan be table or string\n\n[string] argumentString\n  string of all arguments sent to the command",
+        "prefix": "concommand.Run"
+    }
+}

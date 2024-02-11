@@ -1,0 +1,9 @@
+{
+    "ai_schedule.New": {
+        "body": [
+            "ai_schedule.New(${1:name})$0"
+        ],
+        "description": "AI_SCHEDULE [Server] \n\n[string] name\n  Name of the schedule.",
+        "prefix": "ai_schedule.New"
+    }
+}

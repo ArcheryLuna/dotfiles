@@ -1,0 +1,51 @@
+{
+    "physenv.AddSurfaceData": {
+        "body": [
+            "physenv.AddSurfaceData(${1:properties})$0"
+        ],
+        "description": "PHYSENV [Shared] \n\n[string] properties\n  The properties to add.",
+        "prefix": "physenv.AddSurfaceData"
+    },
+    "physenv.GetAirDensity": {
+        "body": [
+            "physenv.GetAirDensity()$0"
+        ],
+        "description": "PHYSENV [Shared]",
+        "prefix": "physenv.GetAirDensity"
+    },
+    "physenv.GetGravity": {
+        "body": [
+            "physenv.GetGravity()$0"
+        ],
+        "description": "PHYSENV [Shared]",
+        "prefix": "physenv.GetGravity"
+    },
+    "physenv.GetPerformanceSettings": {
+        "body": [
+            "physenv.GetPerformanceSettings()$0"
+        ],
+        "description": "PHYSENV [Shared]",
+        "prefix": "physenv.GetPerformanceSettings"
+    },
+    "physenv.SetAirDensity": {
+        "body": [
+            "physenv.SetAirDensity(${1:airDensity})$0"
+        ],
+        "description": "PHYSENV [Shared] \n\n[number] airDensity\n  The new air density.",
+        "prefix": "physenv.SetAirDensity"
+    },
+    "physenv.SetGravity": {
+        "body": [
+            "physenv.SetGravity(${1:gravity})$0"
+        ],
+        "description": "PHYSENV [Shared] \n\n[Vector] gravity\n  The new gravity.",
+        "prefix": "physenv.SetGravity"
+    },
+    "physenv.SetPerformanceSettings": {
+        "body": [
+            "physenv.SetPerformanceSettings(${1:performanceSettings})$0"
+        ],
+        "description": "PHYSENV [Shared] \n\n[table] performanceSettings\n  The new performance settings. See PhysEnvPerformanceSettings structure",
+        "prefix": "physenv.SetPerformanceSettings"
+    }
+}

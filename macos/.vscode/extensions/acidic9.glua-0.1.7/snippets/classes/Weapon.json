@@ -1,0 +1,226 @@
+{
+    "AllowsAutoSwitchFrom": {
+        "body": [
+            "AllowsAutoSwitchFrom()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "AllowsAutoSwitchFrom"
+    },
+    "AllowsAutoSwitchTo": {
+        "body": [
+            "AllowsAutoSwitchTo()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "AllowsAutoSwitchTo"
+    },
+    "CallOnClient": {
+        "body": [
+            "CallOnClient(${1:functionName}, ${2:arguments=\"\"})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[string] functionName\n  Name of function to call. If you want to call SWEP:MyFunc() on client, you type in \"MyFunc\"\n\n[string] arguments=\"\"\n  Arguments for the function, separated by spaces.",
+        "prefix": "CallOnClient"
+    },
+    "Clip1": {
+        "body": [
+            "Clip1()$0"
+        ],
+        "description": "WEAPON [Shared] Returns how much primary ammo is in the magazine.",
+        "prefix": "Clip1"
+    },
+    "Clip2": {
+        "body": [
+            "Clip2()$0"
+        ],
+        "description": "WEAPON [Shared] Returns how much secondary ammo is in magazine.",
+        "prefix": "Clip2"
+    },
+    "DefaultReload": {
+        "body": [
+            "DefaultReload(${1:act})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[number] act\n  Sequence to use as reload animation. Uses the ACT_ Enums.",
+        "prefix": "DefaultReload"
+    },
+    "GetActivity": {
+        "body": [
+            "GetActivity()$0"
+        ],
+        "description": "WEAPON [Shared] Returns the sequence enumeration number that the weapon is playing.",
+        "prefix": "GetActivity"
+    },
+    "GetHoldType": {
+        "body": [
+            "GetHoldType()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetHoldType"
+    },
+    "GetMaxClip1": {
+        "body": [
+            "GetMaxClip1()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetMaxClip1"
+    },
+    "GetMaxClip2": {
+        "body": [
+            "GetMaxClip2()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetMaxClip2"
+    },
+    "GetNextPrimaryFire": {
+        "body": [
+            "GetNextPrimaryFire()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetNextPrimaryFire"
+    },
+    "GetNextSecondaryFire": {
+        "body": [
+            "GetNextSecondaryFire()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetNextSecondaryFire"
+    },
+    "GetPrimaryAmmoType": {
+        "body": [
+            "GetPrimaryAmmoType()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetPrimaryAmmoType"
+    },
+    "GetPrintName": {
+        "body": [
+            "GetPrintName()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetPrintName"
+    },
+    "GetSecondaryAmmoType": {
+        "body": [
+            "GetSecondaryAmmoType()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetSecondaryAmmoType"
+    },
+    "GetSlot": {
+        "body": [
+            "GetSlot()$0"
+        ],
+        "description": "WEAPON [Shared] Returns the slot of the weapon (slot numbers start from 0)",
+        "prefix": "GetSlot"
+    },
+    "GetSlotPos": {
+        "body": [
+            "GetSlotPos()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetSlotPos"
+    },
+    "GetWeaponViewModel": {
+        "body": [
+            "GetWeaponViewModel()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetWeaponViewModel"
+    },
+    "GetWeaponWorldModel": {
+        "body": [
+            "GetWeaponWorldModel()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetWeaponWorldModel"
+    },
+    "GetWeight": {
+        "body": [
+            "GetWeight()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "GetWeight"
+    },
+    "HasAmmo": {
+        "body": [
+            "HasAmmo()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "HasAmmo"
+    },
+    "IsCarriedByLocalPlayer": {
+        "body": [
+            "IsCarriedByLocalPlayer()$0"
+        ],
+        "description": "WEAPON [Client]",
+        "prefix": "IsCarriedByLocalPlayer"
+    },
+    "IsScripted": {
+        "body": [
+            "IsScripted()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "IsScripted"
+    },
+    "IsWeaponVisible": {
+        "body": [
+            "IsWeaponVisible()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "IsWeaponVisible"
+    },
+    "LastShootTime": {
+        "body": [
+            "LastShootTime()$0"
+        ],
+        "description": "WEAPON [Shared]",
+        "prefix": "LastShootTime"
+    },
+    "SendWeaponAnim": {
+        "body": [
+            "SendWeaponAnim(${1:act})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[number] act\n  Activity to play. See the ACT_ Enums (specifically ACT_VM_).",
+        "prefix": "SendWeaponAnim"
+    },
+    "SetClip1": {
+        "body": [
+            "SetClip1(${1:ammo})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[number] ammo\n  The amount of bullets the clip should contain",
+        "prefix": "SetClip1"
+    },
+    "SetClip2": {
+        "body": [
+            "SetClip2(${1:ammo})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[number] ammo\n  The amount of bullets the clip should contain",
+        "prefix": "SetClip2"
+    },
+    "SetHoldType": {
+        "body": [
+            "SetHoldType(${1:name})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[string] name\n  Name of the hold type. You can find all default hold types here",
+        "prefix": "SetHoldType"
+    },
+    "SetLastShootTime": {
+        "body": [
+            "SetLastShootTime(${1:time=CurTime()})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[number] time=CurTime()\n  The time in seconds when the last time the weapon was fired.",
+        "prefix": "SetLastShootTime"
+    },
+    "SetNextPrimaryFire": {
+        "body": [
+            "SetNextPrimaryFire(${1:time})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[number] time\n  Time when player should be able to use primary fire again",
+        "prefix": "SetNextPrimaryFire"
+    },
+    "SetNextSecondaryFire": {
+        "body": [
+            "SetNextSecondaryFire(${1:time})$0"
+        ],
+        "description": "WEAPON [Shared] \n\n[number] time\n  Time when player should be able to use secondary fire again",
+        "prefix": "SetNextSecondaryFire"
+    }
+}

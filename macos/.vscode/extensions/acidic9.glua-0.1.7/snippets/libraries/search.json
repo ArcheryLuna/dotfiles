@@ -1,0 +1,16 @@
+{
+    "search.AddProvider": {
+        "body": [
+            "search.AddProvider(${1:provider}, ${2:id=nil})$0"
+        ],
+        "description": "SEARCH [Client] \n\n[function] provider\n  Provider function. It has one argument: string searchQuery\nYou must return a list of tables structured like this:\n\n string text - Text to \"Copy to clipboard\"\n function func - Function to use/spawn the item\n Panel icon - A panel to add to spawnmenu\n table words - A table of words?\n\n[string] id=nil\n  If provided, ensures that only one provider exists with the given ID at a time.",
+        "prefix": "search.AddProvider"
+    },
+    "search.GetResults": {
+        "body": [
+            "search.GetResults(${1:query})$0"
+        ],
+        "description": "SEARCH [Client] \n\n[string] query\n  Search query",
+        "prefix": "search.GetResults"
+    }
+}

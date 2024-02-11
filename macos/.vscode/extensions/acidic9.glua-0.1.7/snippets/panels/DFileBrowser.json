@@ -1,0 +1,184 @@
+{
+    "Clear": {
+        "body": [
+            "Clear()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "Clear"
+    },
+    "GetBaseFolder": {
+        "body": [
+            "GetBaseFolder()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "GetBaseFolder"
+    },
+    "GetCurrentFolder": {
+        "body": [
+            "GetCurrentFolder()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "GetCurrentFolder"
+    },
+    "GetFileTypes": {
+        "body": [
+            "GetFileTypes()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "GetFileTypes"
+    },
+    "GetFolderNode": {
+        "body": [
+            "GetFolderNode()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "GetFolderNode"
+    },
+    "GetModels": {
+        "body": [
+            "GetModels()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "GetModels"
+    },
+    "GetName": {
+        "body": [
+            "GetName()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "GetName"
+    },
+    "GetOpen": {
+        "body": [
+            "GetOpen()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "GetOpen"
+    },
+    "GetPath": {
+        "body": [
+            "GetPath()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "GetPath"
+    },
+    "GetSearch": {
+        "body": [
+            "GetSearch()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "GetSearch"
+    },
+    "OnDoubleClick": {
+        "body": [
+            "OnDoubleClick(${1:filePath}, ${2:selectedPanel})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] filePath\n  The path to the file that was double-clicked.\n\n[Panel] selectedPanel\n  The panel that was double-clicked to select this file.This will either be a DListView_Line or SpawnIcon depending on whether the model viewer mode is enabled. See DFileBrowser:SetModels.",
+        "prefix": "OnDoubleClick"
+    },
+    "OnRightClick": {
+        "body": [
+            "OnRightClick(${1:filePath}, ${2:selectedPanel})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] filePath\n  The path to the file that was right-clicked.\n\n[Panel] selectedPanel\n  The panel that was right-clicked to select this file.This will either be a DListView_Line or SpawnIcon depending on whether the model viewer mode is enabled. See DFileBrowser:SetModels.",
+        "prefix": "OnRightClick"
+    },
+    "OnSelect": {
+        "body": [
+            "OnSelect(${1:filePath}, ${2:selectedPanel})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] filePath\n  The path to the file that was selected.\n\n[Panel] selectedPanel\n  The panel that was clicked to select this file.This will either be a DListView_Line or SpawnIcon depending on whether the model viewer mode is enabled. See DFileBrowser:SetModels.",
+        "prefix": "OnSelect"
+    },
+    "SetBaseFolder": {
+        "body": [
+            "SetBaseFolder(${1:baseDir})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] baseDir\n  The path to the folder to use as the root.",
+        "prefix": "SetBaseFolder"
+    },
+    "SetCurrentFolder": {
+        "body": [
+            "SetCurrentFolder(${1:currentDir})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] currentDir\n  The directory to display files from.",
+        "prefix": "SetCurrentFolder"
+    },
+    "SetFileTypes": {
+        "body": [
+            "SetFileTypes(${1:fileTypes=\"*.*\"})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] fileTypes=\"*.*\"\n  A list of file types to display, separated by spaces e.g.\"*.lua *.txt *.mdl\"",
+        "prefix": "SetFileTypes"
+    },
+    "SetModels": {
+        "body": [
+            "SetModels(${1:showModels=false})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[boolean] showModels=false\n  Whether or not to display files using SpawnIcons.",
+        "prefix": "SetModels"
+    },
+    "SetName": {
+        "body": [
+            "SetName(${1:treeName=})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] treeName=\n  The name for the root of the file tree. Passing no value causes this to be the base folder name. See DFileBrowser:SetBaseFolder.",
+        "prefix": "SetName"
+    },
+    "SetOpen": {
+        "body": [
+            "SetOpen(${1:open=false}, ${2:useAnim=false})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[boolean] open=false\n  true to open the tree, false to close it.\n\n[boolean] useAnim=false\n  If true, the DTree's open/close animation is used.",
+        "prefix": "SetOpen"
+    },
+    "SetPath": {
+        "body": [
+            "SetPath(${1:path})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] path\n  The access path i.e. \"GAME\", \"LUA\", \"DATA\" etc.",
+        "prefix": "SetPath"
+    },
+    "SetSearch": {
+        "body": [
+            "SetSearch(${1:filter=\"*\"})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] filter=\"*\"\n  The filter to use on the file tree.",
+        "prefix": "SetSearch"
+    },
+    "Setup": {
+        "body": [
+            "Setup()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "Setup"
+    },
+    "SetupFiles": {
+        "body": [
+            "SetupFiles()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "SetupFiles"
+    },
+    "SetupTree": {
+        "body": [
+            "SetupTree()$0"
+        ],
+        "description": "DFILEBROWSER [Client]",
+        "prefix": "SetupTree"
+    },
+    "ShowFolder": {
+        "body": [
+            "ShowFolder(${1:currentDir})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[string] currentDir\n  The directory to populate the list from.",
+        "prefix": "ShowFolder"
+    },
+    "SortFiles": {
+        "body": [
+            "SortFiles(${1:descending=false})$0"
+        ],
+        "description": "DFILEBROWSER [Client] \n\n[boolean] descending=false\n  The sort order. true for descending (z-a), false for ascending (a-z).",
+        "prefix": "SortFiles"
+    }
+}

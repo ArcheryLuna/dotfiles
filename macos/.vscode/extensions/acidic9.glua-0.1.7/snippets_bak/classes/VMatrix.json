@@ -1,0 +1,191 @@
+{
+	"VMatrix/GetAngles": {
+		"body": [
+			"GetAngles()$0"
+		],
+		"description": "Returns the absolute rotation of the matrix.",
+		"prefix": "GetAngles"
+	},
+	"VMatrix/GetField": {
+		"body": [
+			"GetField(${1:row}, ${2:column})$0"
+		],
+		"description": "Returns a specific field in the matrix.",
+		"prefix": "GetField"
+	},
+	"VMatrix/GetForward": {
+		"body": [
+			"GetForward()$0"
+		],
+		"description": "Gets the forward direction of the matrix.",
+		"prefix": "GetForward"
+	},
+	"VMatrix/GetInverse": {
+		"body": [
+			"GetInverse()$0"
+		],
+		"description": "Returns an inverted matrix without modifying the original matrix.",
+		"prefix": "GetInverse"
+	},
+	"VMatrix/GetInverseTR": {
+		"body": [
+			"GetInverseTR()$0"
+		],
+		"description": "Returns an inverted matrix without modifying the original matrix. This function will not fail, but only works correctly on matrices that contain only translation and/or rotation.",
+		"prefix": "GetInverseTR"
+	},
+	"VMatrix/GetRight": {
+		"body": [
+			"GetRight()$0"
+		],
+		"description": "Gets the right direction of the matrix.",
+		"prefix": "GetRight"
+	},
+	"VMatrix/GetScale": {
+		"body": [
+			"GetScale()$0"
+		],
+		"description": "Returns the absolute scale of the matrix.",
+		"prefix": "GetScale"
+	},
+	"VMatrix/GetTranslation": {
+		"body": [
+			"GetTranslation()$0"
+		],
+		"description": "Returns the absolute translation of the matrix.",
+		"prefix": "GetTranslation"
+	},
+	"VMatrix/GetUp": {
+		"body": [
+			"GetUp()$0"
+		],
+		"description": "Gets the up direction of the matrix.",
+		"prefix": "GetUp"
+	},
+	"VMatrix/Identity": {
+		"body": [
+			"Identity()$0"
+		],
+		"description": "Initializes the matrix as Identity matrix.",
+		"prefix": "Identity"
+	},
+	"VMatrix/Invert": {
+		"body": [
+			"Invert()$0"
+		],
+		"description": "Inverts the matrix.",
+		"prefix": "Invert"
+	},
+	"VMatrix/InvertTR": {
+		"body": [
+			"InvertTR()$0"
+		],
+		"description": "Inverts the matrix. This function will not fail, but only works correctly on matrices that contain only translation and/or rotation.",
+		"prefix": "InvertTR"
+	},
+	"VMatrix/IsIdentity": {
+		"body": [
+			"IsIdentity()$0"
+		],
+		"description": "Returns whether the matrix is equal to Identity matrix or not.",
+		"prefix": "IsIdentity"
+	},
+	"VMatrix/IsRotationMatrix": {
+		"body": [
+			"IsRotationMatrix()$0"
+		],
+		"description": "Returns whether the matrix is a rotation matrix or not.",
+		"prefix": "IsRotationMatrix"
+	},
+	"VMatrix/Rotate": {
+		"body": [
+			"Rotate(${1:rotation})$0"
+		],
+		"description": "Rotates the matrix by the given angle.",
+		"prefix": "Rotate"
+	},
+	"VMatrix/Scale": {
+		"body": [
+			"Scale(${1:scale})$0"
+		],
+		"description": "Scales the matrix by the given vector.",
+		"prefix": "Scale"
+	},
+	"VMatrix/ScaleTranslation": {
+		"body": [
+			"ScaleTranslation(${1:scale})$0"
+		],
+		"description": "Scales the absolute translation with the given value.",
+		"prefix": "ScaleTranslation"
+	},
+	"VMatrix/Set": {
+		"body": [
+			"Set(${1:src})$0"
+		],
+		"description": "Copies values from the given matrix object.",
+		"prefix": "Set"
+	},
+	"VMatrix/SetAngles": {
+		"body": [
+			"SetAngles(${1:angle})$0"
+		],
+		"description": "Sets the absolute rotation of the matrix.",
+		"prefix": "SetAngles"
+	},
+	"VMatrix/SetField": {
+		"body": [
+			"SetField(${1:row}, ${2:column}, ${3:value})$0"
+		],
+		"description": "Sets a specific field in the matrix.",
+		"prefix": "SetField"
+	},
+	"VMatrix/SetForward": {
+		"body": [
+			"SetForward(${1:forward})$0"
+		],
+		"description": "Sets the forward direction of the matrix.",
+		"prefix": "SetForward"
+	},
+	"VMatrix/SetRight": {
+		"body": [
+			"SetRight(${1:forward})$0"
+		],
+		"description": "Sets the right direction of the matrix.",
+		"prefix": "SetRight"
+	},
+	"VMatrix/SetScale": {
+		"body": [
+			"SetScale(${1:scale})$0"
+		],
+		"description": "Modifies the scale of the matrix while preserving the rotation and translation.",
+		"prefix": "SetScale"
+	},
+	"VMatrix/SetTranslation": {
+		"body": [
+			"SetTranslation(${1:translation})$0"
+		],
+		"description": "Sets the absolute translation of the matrix.",
+		"prefix": "SetTranslation"
+	},
+	"VMatrix/SetUp": {
+		"body": [
+			"SetUp(${1:forward})$0"
+		],
+		"description": "Sets the up direction of the matrix.",
+		"prefix": "SetUp"
+	},
+	"VMatrix/ToTable": {
+		"body": [
+			"ToTable()$0"
+		],
+		"description": "Converts the matrix to a 4x4 table. See",
+		"prefix": "ToTable"
+	},
+	"VMatrix/Translate": {
+		"body": [
+			"Translate(${1:translation})$0"
+		],
+		"description": "Translates the matrix by the given vector aka. adds the vector to the translation.",
+		"prefix": "Translate"
+	}
+}

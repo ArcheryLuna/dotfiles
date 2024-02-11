@@ -1,0 +1,9 @@
+{
+    "markup.Parse": {
+        "body": [
+            "markup.Parse(${1:markup}, ${2:maxwidth})$0"
+        ],
+        "description": "MARKUP [Client] Parses markup into a  MarkupObject. Currently, this only supports fonts and colors as demonstrated in the example.\n\n[string] markup\n  The markup to be parsed.\n\n[number] maxwidth\n  The max width of the output",
+        "prefix": "markup.Parse"
+    }
+}

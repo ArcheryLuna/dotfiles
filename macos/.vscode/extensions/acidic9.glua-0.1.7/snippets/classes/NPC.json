@@ -1,0 +1,590 @@
+{
+    "AddEntityRelationship": {
+        "body": [
+            "AddEntityRelationship(${1:target}, ${2:disposition}, ${3:priority})$0"
+        ],
+        "description": "NPC [Server] Makes the NPC like, hate, feel neutral towards, or fear the entity in question. If you want to setup relationship towards a certain entity class, use NPC:AddRelationship.\n\n[Entity] target\n  The entity for the relationship to be applied to.\n\n[number] disposition\n  A D_ Enums representing the relationship type.\n\n[number] priority\n  How strong the relationship is.",
+        "prefix": "AddEntityRelationship"
+    },
+    "AddRelationship": {
+        "body": [
+            "AddRelationship(${1:relationstring})$0"
+        ],
+        "description": "NPC [Server] Changes how an NPC feels towards another NPC. If you want to setup relationship towards a certain entity, use NPC:AddEntityRelationship.\n\n[string] relationstring\n  A string representing how the relationship should be set up.\n\nShould be formatted as \"npc_class D_ Enums numberPriority\".",
+        "prefix": "AddRelationship"
+    },
+    "AlertSound": {
+        "body": [
+            "AlertSound()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "AlertSound"
+    },
+    "CapabilitiesAdd": {
+        "body": [
+            "CapabilitiesAdd(${1:capabilities})$0"
+        ],
+        "description": "NPC [Server] Adds a capability to the NPC.\n\n[number] capabilities\n  Capabilities to add, see CAP_ Enums",
+        "prefix": "CapabilitiesAdd"
+    },
+    "CapabilitiesClear": {
+        "body": [
+            "CapabilitiesClear()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "CapabilitiesClear"
+    },
+    "CapabilitiesGet": {
+        "body": [
+            "CapabilitiesGet()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "CapabilitiesGet"
+    },
+    "CapabilitiesRemove": {
+        "body": [
+            "CapabilitiesRemove(${1:capabilities})$0"
+        ],
+        "description": "NPC [Server] Remove a certain capability.\n\n[number] capabilities\n  Capabilities to remove, see CAP_ Enums",
+        "prefix": "CapabilitiesRemove"
+    },
+    "Classify": {
+        "body": [
+            "Classify()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "Classify"
+    },
+    "ClearCondition": {
+        "body": [
+            "ClearCondition(${1:condition})$0"
+        ],
+        "description": "NPC [Server] \n\n[number] condition\n  The COND_ Enums to clear out.",
+        "prefix": "ClearCondition"
+    },
+    "ClearEnemyMemory": {
+        "body": [
+            "ClearEnemyMemory()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "ClearEnemyMemory"
+    },
+    "ClearExpression": {
+        "body": [
+            "ClearExpression()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "ClearExpression"
+    },
+    "ClearGoal": {
+        "body": [
+            "ClearGoal()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "ClearGoal"
+    },
+    "ClearSchedule": {
+        "body": [
+            "ClearSchedule()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "ClearSchedule"
+    },
+    "ConditionName": {
+        "body": [
+            "ConditionName(${1:cond})$0"
+        ],
+        "description": "NPC [Server] \n\n[number] cond\n  The NPCs condition ID, see COND_ Enums",
+        "prefix": "ConditionName"
+    },
+    "Disposition": {
+        "body": [
+            "Disposition(${1:ent})$0"
+        ],
+        "description": "NPC [Server] Returns the way the NPC \"feels\" about the entity.\n\n[Entity] ent\n  The entity to get the disposition from.",
+        "prefix": "Disposition"
+    },
+    "ExitScriptedSequence": {
+        "body": [
+            "ExitScriptedSequence()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "ExitScriptedSequence"
+    },
+    "FearSound": {
+        "body": [
+            "FearSound()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "FearSound"
+    },
+    "FoundEnemySound": {
+        "body": [
+            "FoundEnemySound()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "FoundEnemySound"
+    },
+    "GetActiveWeapon": {
+        "body": [
+            "GetActiveWeapon()$0"
+        ],
+        "description": "NPC [Shared]",
+        "prefix": "GetActiveWeapon"
+    },
+    "GetActivity": {
+        "body": [
+            "GetActivity()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetActivity"
+    },
+    "GetAimVector": {
+        "body": [
+            "GetAimVector()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetAimVector"
+    },
+    "GetArrivalActivity": {
+        "body": [
+            "GetArrivalActivity()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetArrivalActivity"
+    },
+    "GetArrivalSequence": {
+        "body": [
+            "GetArrivalSequence()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetArrivalSequence"
+    },
+    "GetBlockingEntity": {
+        "body": [
+            "GetBlockingEntity()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetBlockingEntity"
+    },
+    "GetCurrentWeaponProficiency": {
+        "body": [
+            "GetCurrentWeaponProficiency()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetCurrentWeaponProficiency"
+    },
+    "GetEnemy": {
+        "body": [
+            "GetEnemy()$0"
+        ],
+        "description": "NPC [Server] Returns the entity that this NPC is trying to fight",
+        "prefix": "GetEnemy"
+    },
+    "GetExpression": {
+        "body": [
+            "GetExpression()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetExpression"
+    },
+    "GetHullType": {
+        "body": [
+            "GetHullType()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetHullType"
+    },
+    "GetMovementActivity": {
+        "body": [
+            "GetMovementActivity()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetMovementActivity"
+    },
+    "GetMovementSequence": {
+        "body": [
+            "GetMovementSequence()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetMovementSequence"
+    },
+    "GetNPCState": {
+        "body": [
+            "GetNPCState()$0"
+        ],
+        "description": "NPC [Server] Returns the NPC's state.",
+        "prefix": "GetNPCState"
+    },
+    "GetPathDistanceToGoal": {
+        "body": [
+            "GetPathDistanceToGoal()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetPathDistanceToGoal"
+    },
+    "GetPathTimeToGoal": {
+        "body": [
+            "GetPathTimeToGoal()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetPathTimeToGoal"
+    },
+    "GetShootPos": {
+        "body": [
+            "GetShootPos()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetShootPos"
+    },
+    "GetTarget": {
+        "body": [
+            "GetTarget()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "GetTarget"
+    },
+    "Give": {
+        "body": [
+            "Give(${1:weapon})$0"
+        ],
+        "description": "NPC [Server] \n\n[string] weapon\n  Class name of the weapon to equip to the NPC.",
+        "prefix": "Give"
+    },
+    "HasCondition": {
+        "body": [
+            "HasCondition(${1:condition})$0"
+        ],
+        "description": "NPC [Server] Returns whether or not the NPC has the given condition.\n\n[number] condition\n  The condition index, see COND_ Enums.",
+        "prefix": "HasCondition"
+    },
+    "IdleSound": {
+        "body": [
+            "IdleSound()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "IdleSound"
+    },
+    "IsCurrentSchedule": {
+        "body": [
+            "IsCurrentSchedule(${1:schedule})$0"
+        ],
+        "description": "NPC [Server] Returns whether or not the NPC is performing the given schedule.\n\n[number] schedule\n  The schedule number, see SCHED_ Enums.",
+        "prefix": "IsCurrentSchedule"
+    },
+    "IsMoving": {
+        "body": [
+            "IsMoving()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "IsMoving"
+    },
+    "IsRunningBehavior": {
+        "body": [
+            "IsRunningBehavior()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "IsRunningBehavior"
+    },
+    "IsUnreachable": {
+        "body": [
+            "IsUnreachable(${1:testEntity})$0"
+        ],
+        "description": "NPC [Server] \n\n[Entity] testEntity\n  The entity to test.",
+        "prefix": "IsUnreachable"
+    },
+    "LostEnemySound": {
+        "body": [
+            "LostEnemySound()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "LostEnemySound"
+    },
+    "MaintainActivity": {
+        "body": [
+            "MaintainActivity()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "MaintainActivity"
+    },
+    "MarkEnemyAsEluded": {
+        "body": [
+            "MarkEnemyAsEluded()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "MarkEnemyAsEluded"
+    },
+    "MoveOrder": {
+        "body": [
+            "MoveOrder()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "MoveOrder"
+    },
+    "NavSetGoal": {
+        "body": [
+            "NavSetGoal(${1:position})$0"
+        ],
+        "description": "NPC [Server] \n\n[Vector] position\n  The position to set as the goal",
+        "prefix": "NavSetGoal"
+    },
+    "NavSetGoalTarget": {
+        "body": [
+            "NavSetGoalTarget(${1:target}, ${2:offset})$0"
+        ],
+        "description": "NPC [Server] \n\n[Entity] target\n  The targeted entity to set the goal to.\n\n[Vector] offset\n  The offset to apply to the targeted entity's position.",
+        "prefix": "NavSetGoalTarget"
+    },
+    "NavSetRandomGoal": {
+        "body": [
+            "NavSetRandomGoal(${1:minPathLength}, ${2:dir})$0"
+        ],
+        "description": "NPC [Server] \n\n[number] minPathLength\n  Minimum length of path in units\n\n[Vector] dir\n  Unit vector pointing in the direction of the target random node",
+        "prefix": "NavSetRandomGoal"
+    },
+    "NavSetWanderGoal": {
+        "body": [
+            "NavSetWanderGoal(${1:xoffset}, ${2:yoffset})$0"
+        ],
+        "description": "NPC [Server] Sets a goal in x, y offsets for the npc to wander to\n\n[number] xoffset\n  X offset\n\n[number] yoffset\n  Y offset",
+        "prefix": "NavSetWanderGoal"
+    },
+    "PlaySentence": {
+        "body": [
+            "PlaySentence(${1:sentence}, ${2:delay}, ${3:volume})$0"
+        ],
+        "description": "NPC [Server] Forces the NPC to play a sentence from scripts/sentences.txt\n\n[string] sentence\n  The sentence string to speak.\n\n[number] delay\n  Delay in seconds until the sentence starts playing.\n\n[number] volume\n  The volume of the sentence, from 0 to 1.",
+        "prefix": "PlaySentence"
+    },
+    "RemoveMemory": {
+        "body": [
+            "RemoveMemory()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "RemoveMemory"
+    },
+    "RunEngineTask": {
+        "body": [
+            "RunEngineTask(${1:taskID}, ${2:taskData})$0"
+        ],
+        "description": "NPC [Server] \n\n[number] taskID\n  The task ID, see ai_task.h\n\n[number] taskData\n  The task data.",
+        "prefix": "RunEngineTask"
+    },
+    "SentenceStop": {
+        "body": [
+            "SentenceStop()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "SentenceStop"
+    },
+    "SetArrivalActivity": {
+        "body": [
+            "SetArrivalActivity(${1:act})$0"
+        ],
+        "description": "NPC [Server] \n\n[number] act",
+        "prefix": "SetArrivalActivity"
+    },
+    "SetArrivalDirection": {
+        "body": [
+            "SetArrivalDirection()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "SetArrivalDirection"
+    },
+    "SetArrivalDistance": {
+        "body": [
+            "SetArrivalDistance()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "SetArrivalDistance"
+    },
+    "SetArrivalSequence": {
+        "body": [
+            "SetArrivalSequence()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "SetArrivalSequence"
+    },
+    "SetArrivalSpeed": {
+        "body": [
+            "SetArrivalSpeed()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "SetArrivalSpeed"
+    },
+    "SetCondition": {
+        "body": [
+            "SetCondition(${1:condition})$0"
+        ],
+        "description": "NPC [Server] Sets an NPC condition.\n\n[number] condition\n  The condition index, see COND_ Enums.",
+        "prefix": "SetCondition"
+    },
+    "SetCurrentWeaponProficiency": {
+        "body": [
+            "SetCurrentWeaponProficiency(${1:proficiency})$0"
+        ],
+        "description": "NPC [Server] Sets the weapon proficiency of an NPC (how skilled an NPC is with its current weapon).\n\n[number] proficiency\n  The proficiency for the NPC's current weapon. See WEAPON_PROFICIENCY_ Enums.",
+        "prefix": "SetCurrentWeaponProficiency"
+    },
+    "SetEnemy": {
+        "body": [
+            "SetEnemy(${1:enemy}, ${2:newenemy=true})$0"
+        ],
+        "description": "NPC [Server] Sets the target for an NPC.\n\n[Entity] enemy\n  The enemy that the NPC should target\n\n[boolean] newenemy=true\n  Calls NPC:SetCondition(COND_NEW_ENEMY) if the new enemy is valid and not equal to the last enemy.",
+        "prefix": "SetEnemy"
+    },
+    "SetExpression": {
+        "body": [
+            "SetExpression(${1:expression})$0"
+        ],
+        "description": "NPC [Server] Sets the NPC's .vcd expression. Similar to Entity:PlayScene except the scene is looped until it's interrupted by default NPC behavior or NPC:ClearExpression.\n\n[string] expression\n  The expression filepath.",
+        "prefix": "SetExpression"
+    },
+    "SetHullSizeNormal": {
+        "body": [
+            "SetHullSizeNormal()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "SetHullSizeNormal"
+    },
+    "SetHullType": {
+        "body": [
+            "SetHullType(${1:hullType})$0"
+        ],
+        "description": "NPC [Server] \n\n[number] hullType\n  Hull type. See HULL_ Enums",
+        "prefix": "SetHullType"
+    },
+    "SetLastPosition": {
+        "body": [
+            "SetLastPosition(${1:Position})$0"
+        ],
+        "description": "NPC [Server] Sets the last registered or memorized position for an npc. When using scheduling, the NPC will focus on navigating to the last position via nodes.\n\n[Vector] Position\n  Where the NPC's last position will be set.",
+        "prefix": "SetLastPosition"
+    },
+    "SetMaxRouteRebuildTime": {
+        "body": [
+            "SetMaxRouteRebuildTime()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "SetMaxRouteRebuildTime"
+    },
+    "SetMovementActivity": {
+        "body": [
+            "SetMovementActivity(${1:activity})$0"
+        ],
+        "description": "NPC [Server] Sets the activity the NPC uses when it moves.\n\n[number] activity\n  The movement activity, see ACT_ Enums.",
+        "prefix": "SetMovementActivity"
+    },
+    "SetMovementSequence": {
+        "body": [
+            "SetMovementSequence(${1:sequenceId})$0"
+        ],
+        "description": "NPC [Server] \n\n[number] sequenceId\n  The movement sequence index",
+        "prefix": "SetMovementSequence"
+    },
+    "SetNPCState": {
+        "body": [
+            "SetNPCState(${1:state})$0"
+        ],
+        "description": "NPC [Server] \n\n[number] state\n  New NPC state, see NPC_STATE_ Enums",
+        "prefix": "SetNPCState"
+    },
+    "SetSchedule": {
+        "body": [
+            "SetSchedule(${1:schedule})$0"
+        ],
+        "description": "NPC [Server] Sets the NPC's current schedule.\n\n[number] schedule\n  The NPC schedule, see SCHED_ Enums.",
+        "prefix": "SetSchedule"
+    },
+    "SetTarget": {
+        "body": [
+            "SetTarget(${1:player})$0"
+        ],
+        "description": "NPC [Server] Sets the NPC's target to a player.(Used in some engine schedules)\n\n[Player] player\n  The target of the NPC.",
+        "prefix": "SetTarget"
+    },
+    "StartEngineTask": {
+        "body": [
+            "StartEngineTask(${1:task}, ${2:taskData})$0"
+        ],
+        "description": "NPC [Server] \n\n[number] task\n  The id of the task to start, see ai_task.h\n\n[number] taskData\n  The task data as a float, not all tasks make use of it.",
+        "prefix": "StartEngineTask"
+    },
+    "StopMoving": {
+        "body": [
+            "StopMoving()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "StopMoving"
+    },
+    "TargetOrder": {
+        "body": [
+            "TargetOrder()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "TargetOrder"
+    },
+    "TaskComplete": {
+        "body": [
+            "TaskComplete()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "TaskComplete"
+    },
+    "TaskFail": {
+        "body": [
+            "TaskFail(${1:task})$0"
+        ],
+        "description": "NPC [Server] \n\n[string] task\n  A string most likely defined as a Source Task, for more information on Tasks go to https://developer.valvesoftware.com/wiki/Task",
+        "prefix": "TaskFail"
+    },
+    "UpdateEnemyMemory": {
+        "body": [
+            "UpdateEnemyMemory(${1:enemy}, ${2:pos})$0"
+        ],
+        "description": "NPC [Server] \n\n[Entity] enemy\n  The enemy to update.\n\n[Vector] pos\n  The last known position of the enemy.",
+        "prefix": "UpdateEnemyMemory"
+    },
+    "UseActBusyBehavior": {
+        "body": [
+            "UseActBusyBehavior()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "UseActBusyBehavior"
+    },
+    "UseAssaultBehavior": {
+        "body": [
+            "UseAssaultBehavior()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "UseAssaultBehavior"
+    },
+    "UseFollowBehavior": {
+        "body": [
+            "UseFollowBehavior()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "UseFollowBehavior"
+    },
+    "UseFuncTankBehavior": {
+        "body": [
+            "UseFuncTankBehavior()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "UseFuncTankBehavior"
+    },
+    "UseLeadBehavior": {
+        "body": [
+            "UseLeadBehavior()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "UseLeadBehavior"
+    },
+    "UseNoBehavior": {
+        "body": [
+            "UseNoBehavior()$0"
+        ],
+        "description": "NPC [Server]",
+        "prefix": "UseNoBehavior"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "widgets.PlayerTick": {
+        "body": [
+            "widgets.PlayerTick(${1:ply}, ${2:mv})$0"
+        ],
+        "description": "WIDGETS [Shared] \n\n[Player] ply\n  The player\n\n[CMoveData] mv\n  Player move data",
+        "prefix": "widgets.PlayerTick"
+    },
+    "widgets.RenderMe": {
+        "body": [
+            "widgets.RenderMe(${1:ent})$0"
+        ],
+        "description": "WIDGETS [Client] Renders a widget. Normally you won't need to call this.\n\n[Entity] ent\n  Widget entity to render",
+        "prefix": "widgets.RenderMe"
+    }
+}

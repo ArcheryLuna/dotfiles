@@ -1,0 +1,9 @@
+{
+    "hammer.SendCommand": {
+        "body": [
+            "hammer.SendCommand(${1:cmd})$0"
+        ],
+        "description": "HAMMER [Server] Sends command to Hammer, if Hammer is running with the current map loaded.\n\n[string] cmd\n  Command to send including arguments\nAll commands are in the format \"command var1 var2 etc\"\nAll commands that pick an entity with x y z , must use the exact position including decimals. i.e. -354.4523 123.4 -1224.325452 \n\n List of commands\n\"session_begin mapName mapVersion\" - Starts a hammer edit, locking the editor. mapName is the current map without path or suffix, mapVersion is the current version in the .vmf file\n\"session_end\" - Ends a hammer edit, unlocking the editor.\n\"map_check_version mapName mapVersion\" - This only works after session_begin, so you'd know the right version already and this only returns ok, this function is apparently useless\n\"entity_create entityClass x y z\" - Creates an entity of entityClass at position x y z \n\"entity_delete entityClass x y z\" - Deletes an entity of entityClass at position x y z \n\"entity_set_keyvalue entityClass x y z \"key\" \"value\"\" - Set's the KeyValue pair of an entity of entityClass at x y z. The Key name and Value String must be in quotes.\n\"entity_rotate_incremental entityClass x y z incX incY incZ\" - Rotates an entity of entityClass at x y z by incX incY incZ\n\"node_create nodeClass nodeID x y z\" - Creates an AI node of nodeClass with nodeID at x y z you should keep nodeID unique or you will have issues\n\"node_delete nodeID\" - Deletes node(s) with nodeID, this will delete multiple nodes if they have the same nodeID\n\"nodelink_create startNodeID endNodeID\" - Creates a link between AI nodes startNodeID and endNodeID\n\n\"nodelink_delete startNodeID endNodeID\" - Removes a link between AI nodes startNodeID and endNodeID",
+        "prefix": "hammer.SendCommand"
+    }
+}

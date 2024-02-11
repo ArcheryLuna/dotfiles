@@ -1,0 +1,51 @@
+{
+	"DCollapsibleCategory/GetExpanded": {
+		"body": [
+			"GetExpanded()$0"
+		],
+		"description": "Returns whether the DCollapsibleCategory is expanded or not.",
+		"prefix": "GetExpanded"
+	},
+	"DCollapsibleCategory/OnToggle": {
+		"body": [
+			"OnToggle()$0"
+		],
+		"description": "Called by",
+		"prefix": "OnToggle"
+	},
+	"DCollapsibleCategory/SetAnimTime": {
+		"body": [
+			"SetAnimTime(${1:time})$0"
+		],
+		"description": "Sets the time in seconds it takes to expand the DCollapsibleCategory",
+		"prefix": "SetAnimTime"
+	},
+	"DCollapsibleCategory/SetContents": {
+		"body": [
+			"SetContents(${1:pnl})$0"
+		],
+		"description": "Sets the contents of the DCollapsibleCategory.",
+		"prefix": "SetContents"
+	},
+	"DCollapsibleCategory/SetExpanded": {
+		"body": [
+			"SetExpanded(${1:expanded=true})$0"
+		],
+		"description": "Sets whether the DCollapsibleCategory is expanded or not upon opening the container",
+		"prefix": "SetExpanded"
+	},
+	"DCollapsibleCategory/SetLabel": {
+		"body": [
+			"SetLabel(${1:label})$0"
+		],
+		"description": "Sets the name of the DCollapsibleCategory.",
+		"prefix": "SetLabel"
+	},
+	"DCollapsibleCategory/Toggle": {
+		"body": [
+			"Toggle()$0"
+		],
+		"description": "Toggles the expanded state of the",
+		"prefix": "Toggle"
+	}
+}

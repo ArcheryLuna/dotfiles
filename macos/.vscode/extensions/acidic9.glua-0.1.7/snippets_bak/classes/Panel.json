@@ -1,0 +1,1913 @@
+{
+	"Panel/Add": {
+		"body": [
+			"Add(${1:object})$0"
+		],
+		"description": "Adds the specified object to the panel.",
+		"prefix": "Add"
+	},
+	"Panel/AddText": {
+		"body": [
+			"AddText()$0"
+		],
+		"description": "No description available.",
+		"prefix": "AddText"
+	},
+	"Panel/AlignBottom": {
+		"body": [
+			"AlignBottom(${1:offset=0})$0"
+		],
+		"description": "Aligns the panel on the bottom of its parent with the specified offset.",
+		"prefix": "AlignBottom"
+	},
+	"Panel/AlignLeft": {
+		"body": [
+			"AlignLeft(${1:offset=0})$0"
+		],
+		"description": "Aligns the panel on the left of its parent with the specified offset.",
+		"prefix": "AlignLeft"
+	},
+	"Panel/AlignRight": {
+		"body": [
+			"AlignRight(${1:offset=0})$0"
+		],
+		"description": "Aligns the panel on the right of its parent with the specified offset.",
+		"prefix": "AlignRight"
+	},
+	"Panel/AlignTop": {
+		"body": [
+			"AlignTop(${1:offset=0})$0"
+		],
+		"description": "Aligns the panel on the top of its parent with the specified offset.",
+		"prefix": "AlignTop"
+	},
+	"Panel/AlphaTo": {
+		"body": [
+			"AlphaTo(${1:alpha}, ${2:duration}, ${3:delay=0}, ${4:callback})$0"
+		],
+		"description": "Uses animation to transition the current alpha value of a panel to a new alpha, over a set period of time and after a specified delay.",
+		"prefix": "AlphaTo"
+	},
+	"Panel/AnimTail": {
+		"body": [
+			"AnimTail()$0"
+		],
+		"description": "Returns the",
+		"prefix": "AnimTail"
+	},
+	"Panel/AnimationThinkInternal": {
+		"body": [
+			"AnimationThinkInternal()$0"
+		],
+		"description": "No description available.",
+		"prefix": "AnimationThinkInternal"
+	},
+	"Panel/AppendText": {
+		"body": [
+			"AppendText(${1:txt})$0"
+		],
+		"description": "Appends text to a",
+		"prefix": "AppendText"
+	},
+	"Panel/ApplyGWEN": {
+		"body": [
+			"ApplyGWEN(${1:GWENTable})$0"
+		],
+		"description": "Used by",
+		"prefix": "ApplyGWEN"
+	},
+	"Panel/Center": {
+		"body": [
+			"Center()$0"
+		],
+		"description": "Centers the panel on its parent.",
+		"prefix": "Center"
+	},
+	"Panel/CenterHorizontal": {
+		"body": [
+			"CenterHorizontal(${1:fraction=0.5})$0"
+		],
+		"description": "Centers the panel horizontally with specified fraction.",
+		"prefix": "CenterHorizontal"
+	},
+	"Panel/CenterVertical": {
+		"body": [
+			"CenterVertical(${1:fraction=0.5})$0"
+		],
+		"description": "Centers the panel vertically with specified fraction.",
+		"prefix": "CenterVertical"
+	},
+	"Panel/ChildCount": {
+		"body": [
+			"ChildCount()$0"
+		],
+		"description": "Returns the amount of children of the of panel.",
+		"prefix": "ChildCount"
+	},
+	"Panel/ChildrenSize": {
+		"body": [
+			"ChildrenSize()$0"
+		],
+		"description": "Returns the width and height of the space between the position of the panel (upper-left corner) and the max bound of the children panels (farthest reaching lower-right corner).",
+		"prefix": "ChildrenSize"
+	},
+	"Panel/Clear": {
+		"body": [
+			"Clear()$0"
+		],
+		"description": "Marks all of the panel\u0026#39;s children for deletion.",
+		"prefix": "Clear"
+	},
+	"Panel/ColorTo": {
+		"body": [
+			"ColorTo(${1:color}, ${2:length}, ${3:delay}, ${4:callback})$0"
+		],
+		"description": "Fades panels color to specified one. It won\u0026#39;t work unless panel has SetColor function.",
+		"prefix": "ColorTo"
+	},
+	"Panel/Command": {
+		"body": [
+			"Command(${1:command})$0"
+		],
+		"description": "Sends an action command signal to the panel. The response is handled by",
+		"prefix": "Command"
+	},
+	"Panel/ConVarChanged": {
+		"body": [
+			"ConVarChanged(${1:newValue})$0"
+		],
+		"description": "Updates a panel object\u0026#39;s associated console variable. This must first be set up with",
+		"prefix": "ConVarChanged"
+	},
+	"Panel/ConVarNumberThink": {
+		"body": [
+			"ConVarNumberThink()$0"
+		],
+		"description": "A think hook for",
+		"prefix": "ConVarNumberThink"
+	},
+	"Panel/ConVarStringThink": {
+		"body": [
+			"ConVarStringThink()$0"
+		],
+		"description": "A think hook for",
+		"prefix": "ConVarStringThink"
+	},
+	"Panel/CopyBase": {
+		"body": [
+			"CopyBase(${1:srcPanel})$0"
+		],
+		"description": "Gets the size, position and dock state of the passed panel object, and applies it to this one.",
+		"prefix": "CopyBase"
+	},
+	"Panel/CopyBounds": {
+		"body": [
+			"CopyBounds(${1:base})$0"
+		],
+		"description": "Copies position and size of the panel.",
+		"prefix": "CopyBounds"
+	},
+	"Panel/CopyHeight": {
+		"body": [
+			"CopyHeight(${1:base})$0"
+		],
+		"description": "Copies the height of the panel.",
+		"prefix": "CopyHeight"
+	},
+	"Panel/CopyPos": {
+		"body": [
+			"CopyPos(${1:base})$0"
+		],
+		"description": "Copies the position of the panel.",
+		"prefix": "CopyPos"
+	},
+	"Panel/CopySelected": {
+		"body": [
+			"CopySelected()$0"
+		],
+		"description": "Performs the \u0026#34;CONTROL + C\u0026#34; key combination effect ( Copy selection to clipboard ) on selected text.",
+		"prefix": "CopySelected"
+	},
+	"Panel/CopyWidth": {
+		"body": [
+			"CopyWidth(${1:base})$0"
+		],
+		"description": "Copies the width of the panel.",
+		"prefix": "CopyWidth"
+	},
+	"Panel/CursorPos": {
+		"body": [
+			"CursorPos()$0"
+		],
+		"description": "Returns the cursor position relative to the top left of the panel.",
+		"prefix": "CursorPos"
+	},
+	"Panel/CutSelected": {
+		"body": [
+			"CutSelected()$0"
+		],
+		"description": "Performs the \u0026#34;CONTROL + X\u0026#34; ( delete text and copy it to clipboard buffer ) action on selected text.",
+		"prefix": "CutSelected"
+	},
+	"Panel/DeleteCookie": {
+		"body": [
+			"DeleteCookie(${1:cookieName})$0"
+		],
+		"description": "Deletes a cookie value using the panel\u0026#39;s cookie name (",
+		"prefix": "DeleteCookie"
+	},
+	"Panel/DisableLerp": {
+		"body": [
+			"DisableLerp()$0"
+		],
+		"description": "Resets the panel object\u0026#39;s",
+		"prefix": "DisableLerp"
+	},
+	"Panel/Distance": {
+		"body": [
+			"Distance(${1:tgtPanel})$0"
+		],
+		"description": "Returns the linear distance from the centre of this panel object and another.",
+		"prefix": "Distance"
+	},
+	"Panel/DistanceFrom": {
+		"body": [
+			"DistanceFrom(${1:posX}, ${2:posY})$0"
+		],
+		"description": "Returns the distance between the centre of this panel object and a specified point (local to the parent panel).",
+		"prefix": "DistanceFrom"
+	},
+	"Panel/DoModal": {
+		"body": [
+			"DoModal(${1:doModal})$0"
+		],
+		"description": "Makes the panel \u0026#34;lock\u0026#34; the screen until it is removed.",
+		"prefix": "DoModal"
+	},
+	"Panel/Dock": {
+		"body": [
+			"Dock(${1:dockType})$0"
+		],
+		"description": "Sets the dock type of the panel.",
+		"prefix": "Dock"
+	},
+	"Panel/DockMargin": {
+		"body": [
+			"DockMargin(${1:marginLeft}, ${2:marginTop}, ${3:marginRight}, ${4:marginBottom})$0"
+		],
+		"description": "Sets the dock margin of the panel.",
+		"prefix": "DockMargin"
+	},
+	"Panel/DockPadding": {
+		"body": [
+			"DockPadding(${1:paddingLeft}, ${2:paddingTop}, ${3:paddingRight}, ${4:paddingBottom})$0"
+		],
+		"description": "Sets the dock padding of the panel.",
+		"prefix": "DockPadding"
+	},
+	"Panel/DragClick": {
+		"body": [
+			"DragClick()$0"
+		],
+		"description": "No description available.",
+		"prefix": "DragClick"
+	},
+	"Panel/DragHover": {
+		"body": [
+			"DragHover(${1:HoverTime})$0"
+		],
+		"description": "No description available.",
+		"prefix": "DragHover"
+	},
+	"Panel/DragHoverClick": {
+		"body": [
+			"DragHoverClick(${1:hoverTime})$0"
+		],
+		"description": "Called when an object is dragged and hovered over this panel for 0.1 seconds. This is used by",
+		"prefix": "DragHoverClick"
+	},
+	"Panel/DragHoverEnd": {
+		"body": [
+			"DragHoverEnd()$0"
+		],
+		"description": "No description available.",
+		"prefix": "DragHoverEnd"
+	},
+	"Panel/DragMousePress": {
+		"body": [
+			"DragMousePress(${1:mouseCode})$0"
+		],
+		"description": "Called to inform the",
+		"prefix": "DragMousePress"
+	},
+	"Panel/DragMouseRelease": {
+		"body": [
+			"DragMouseRelease(${1:mouseCode})$0"
+		],
+		"description": "Called to inform the",
+		"prefix": "DragMouseRelease"
+	},
+	"Panel/DrawDragHover": {
+		"body": [
+			"DrawDragHover(${1:x}, ${2:y}, ${3:width}, ${4:height})$0"
+		],
+		"description": "No description available.",
+		"prefix": "DrawDragHover"
+	},
+	"Panel/DrawFilledRect": {
+		"body": [
+			"DrawFilledRect()$0"
+		],
+		"description": "Draws a coloured rectangle to fill the panel object this method is called on. The colour is set using",
+		"prefix": "DrawFilledRect"
+	},
+	"Panel/DrawOutlinedRect": {
+		"body": [
+			"DrawOutlinedRect()$0"
+		],
+		"description": "Draws a hollow rectangle the size of the panel object this method is called on, with a border width of 1 px. The border colour is set using",
+		"prefix": "DrawOutlinedRect"
+	},
+	"Panel/DrawSelections": {
+		"body": [
+			"DrawSelections()$0"
+		],
+		"description": "Used to draw the magenta highlight colour of a panel object when it is selected. This should be called in the object\u0026#39;s",
+		"prefix": "DrawSelections"
+	},
+	"Panel/DrawTextEntryText": {
+		"body": [
+			"DrawTextEntryText(${1:textCol}, ${2:highlightCol}, ${3:cursorCol})$0"
+		],
+		"description": "Used to draw the text in a",
+		"prefix": "DrawTextEntryText"
+	},
+	"Panel/DrawTexturedRect": {
+		"body": [
+			"DrawTexturedRect()$0"
+		],
+		"description": "Draws a textured rectangle to fill the panel object this method is called on. The texture is set using",
+		"prefix": "DrawTexturedRect"
+	},
+	"Panel/Droppable": {
+		"body": [
+			"Droppable(${1:name})$0"
+		],
+		"description": "Makes this panel dropable. This is used with",
+		"prefix": "Droppable"
+	},
+	"Panel/DroppedOn": {
+		"body": [
+			"DroppedOn(${1:pnl})$0"
+		],
+		"description": "For override. Called when this panel is dropped onto other panel. Only works for panels derived from DDragBase.",
+		"prefix": "DroppedOn"
+	},
+	"Panel/EndBoxSelection": {
+		"body": [
+			"EndBoxSelection()$0"
+		],
+		"description": "Completes a box selection. If the end point of the selection box is within the selection canvas, mouse capture is disabled for the panel object, and the selected state of each child object within the selection box is toggled.",
+		"prefix": "EndBoxSelection"
+	},
+	"Panel/Exec": {
+		"body": [
+			"Exec(${1:cmd})$0"
+		],
+		"description": "No description available.",
+		"prefix": "Exec"
+	},
+	"Panel/Find": {
+		"body": [
+			"Find(${1:panelName})$0"
+		],
+		"description": "Finds a panel in its children(and sub children) with the given name.",
+		"prefix": "Find"
+	},
+	"Panel/FocusNext": {
+		"body": [
+			"FocusNext()$0"
+		],
+		"description": "Focuses the next panel in the focus queue.",
+		"prefix": "FocusNext"
+	},
+	"Panel/FocusPrevious": {
+		"body": [
+			"FocusPrevious()$0"
+		],
+		"description": "Focuses the previous panel in the focus queue.",
+		"prefix": "FocusPrevious"
+	},
+	"Panel/GWEN_SetCheckboxText": {
+		"body": [
+			"GWEN_SetCheckboxText(${1:txt})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetCheckboxText"
+	},
+	"Panel/GWEN_SetControlName": {
+		"body": [
+			"GWEN_SetControlName(${1:name})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetControlName"
+	},
+	"Panel/GWEN_SetDock": {
+		"body": [
+			"GWEN_SetDock(${1:dockState})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetDock"
+	},
+	"Panel/GWEN_SetHorizontalAlign": {
+		"body": [
+			"GWEN_SetHorizontalAlign(${1:hAlign})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetHorizontalAlign"
+	},
+	"Panel/GWEN_SetMargin": {
+		"body": [
+			"GWEN_SetMargin(${1:margins})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetMargin"
+	},
+	"Panel/GWEN_SetMax": {
+		"body": [
+			"GWEN_SetMax(${1:maxValue})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetMax"
+	},
+	"Panel/GWEN_SetMin": {
+		"body": [
+			"GWEN_SetMin(${1:minValue})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetMin"
+	},
+	"Panel/GWEN_SetPosition": {
+		"body": [
+			"GWEN_SetPosition(${1:pos})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetPosition"
+	},
+	"Panel/GWEN_SetSize": {
+		"body": [
+			"GWEN_SetSize(${1:size})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetSize"
+	},
+	"Panel/GWEN_SetText": {
+		"body": [
+			"GWEN_SetText(${1:txt})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GWEN_SetText"
+	},
+	"Panel/GetAlpha": {
+		"body": [
+			"GetAlpha()$0"
+		],
+		"description": "Returns the alpha multiplier for this panel.",
+		"prefix": "GetAlpha"
+	},
+	"Panel/GetBounds": {
+		"body": [
+			"GetBounds()$0"
+		],
+		"description": "Returns the position and size of the panel.",
+		"prefix": "GetBounds"
+	},
+	"Panel/GetCaretPos": {
+		"body": [
+			"GetCaretPos()$0"
+		],
+		"description": "Returns the position/offset of the caret (or text cursor) in a text-based panel object.",
+		"prefix": "GetCaretPos"
+	},
+	"Panel/GetChild": {
+		"body": [
+			"GetChild(${1:childIndex})$0"
+		],
+		"description": "Gets a child by its index.",
+		"prefix": "GetChild"
+	},
+	"Panel/GetChildPosition": {
+		"body": [
+			"GetChildPosition()$0"
+		],
+		"description": "Gets a child object\u0026#39;s position relative to this panel object. The number of levels is not relevant; the child may have many parents between itself and the object on which the method is called.",
+		"prefix": "GetChildPosition"
+	},
+	"Panel/GetChildren": {
+		"body": [
+			"GetChildren()$0"
+		],
+		"description": "Returns a table with all the child panels of the panel.",
+		"prefix": "GetChildren"
+	},
+	"Panel/GetChildrenInRect": {
+		"body": [
+			"GetChildrenInRect(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+		],
+		"description": "Returns a table of all visible, selectable children of the panel object that lie at least partially within the specified rectangle.",
+		"prefix": "GetChildrenInRect"
+	},
+	"Panel/GetClassName": {
+		"body": [
+			"GetClassName()$0"
+		],
+		"description": "Returns the class name of the panel.",
+		"prefix": "GetClassName"
+	},
+	"Panel/GetClosestChild": {
+		"body": [
+			"GetClosestChild(${1:x}, ${2:y})$0"
+		],
+		"description": "Returns the child of this panel object that is closest to the specified point. The point is relative to the object on which the method is called. The distance the child is from this point is also returned.",
+		"prefix": "GetClosestChild"
+	},
+	"Panel/GetContentSize": {
+		"body": [
+			"GetContentSize()$0"
+		],
+		"description": "Gets the size of the content/children within a panel object.",
+		"prefix": "GetContentSize"
+	},
+	"Panel/GetCookie": {
+		"body": [
+			"GetCookie(${1:cookieName}, ${2:default})$0"
+		],
+		"description": "Gets the value of a cookie stored by the panel object. This can also be done with",
+		"prefix": "GetCookie"
+	},
+	"Panel/GetCookieName": {
+		"body": [
+			"GetCookieName()$0"
+		],
+		"description": "Gets the name the panel uses to store cookies. This is set with",
+		"prefix": "GetCookieName"
+	},
+	"Panel/GetCookieNumber": {
+		"body": [
+			"GetCookieNumber(${1:cookieName}, ${2:default})$0"
+		],
+		"description": "Gets the value of a cookie stored by the panel object, as a number. This can also be done with",
+		"prefix": "GetCookieNumber"
+	},
+	"Panel/GetDock": {
+		"body": [
+			"GetDock()$0"
+		],
+		"description": "Returns a dock enum for the panel\u0026#39;s current docking type.",
+		"prefix": "GetDock"
+	},
+	"Panel/GetDockMargin": {
+		"body": [
+			"GetDockMargin()$0"
+		],
+		"description": "Returns the docked margins of the panel. (set by",
+		"prefix": "GetDockMargin"
+	},
+	"Panel/GetDockPadding": {
+		"body": [
+			"GetDockPadding()$0"
+		],
+		"description": "Returns the docked padding of the panel. (set by",
+		"prefix": "GetDockPadding"
+	},
+	"Panel/GetFont": {
+		"body": [
+			"GetFont()$0"
+		],
+		"description": "Returns the name of the font that the panel renders its text with.",
+		"prefix": "GetFont"
+	},
+	"Panel/GetHTMLMaterial": {
+		"body": [
+			"GetHTMLMaterial()$0"
+		],
+		"description": "Returns the panel\u0026#39;s HTML material. Only works with",
+		"prefix": "GetHTMLMaterial"
+	},
+	"Panel/GetName": {
+		"body": [
+			"GetName()$0"
+		],
+		"description": "Returns the internal name of the panel.",
+		"prefix": "GetName"
+	},
+	"Panel/GetNumLines": {
+		"body": [
+			"GetNumLines()$0"
+		],
+		"description": "Returns the number of lines in a",
+		"prefix": "GetNumLines"
+	},
+	"Panel/GetParent": {
+		"body": [
+			"GetParent()$0"
+		],
+		"description": "Returns the parent of the panel, returns nil if there is no parent.",
+		"prefix": "GetParent"
+	},
+	"Panel/GetPos": {
+		"body": [
+			"GetPos()$0"
+		],
+		"description": "Returns the position of the panel relative to its",
+		"prefix": "GetPos"
+	},
+	"Panel/GetSelectedChildren": {
+		"body": [
+			"GetSelectedChildren()$0"
+		],
+		"description": "Returns a table of all children of the panel object that are selected. This is recursive, and the returned table will include tables for any child objects that also have children. This means that not all first-level members in the returned table will be of type",
+		"prefix": "GetSelectedChildren"
+	},
+	"Panel/GetSelectionCanvas": {
+		"body": [
+			"GetSelectionCanvas()$0"
+		],
+		"description": "Returns the panel object (",
+		"prefix": "GetSelectionCanvas"
+	},
+	"Panel/GetSize": {
+		"body": [
+			"GetSize()$0"
+		],
+		"description": "Returns the size of the panel.",
+		"prefix": "GetSize"
+	},
+	"Panel/GetSkin": {
+		"body": [
+			"GetSkin()$0"
+		],
+		"description": "Returns the table for the derma skin currently being used by this panel object.",
+		"prefix": "GetSkin"
+	},
+	"Panel/GetTable": {
+		"body": [
+			"GetTable()$0"
+		],
+		"description": "Returns the internal Lua table of the panel.",
+		"prefix": "GetTable"
+	},
+	"Panel/GetTall": {
+		"body": [
+			"GetTall()$0"
+		],
+		"description": "Returns the height of the panel.",
+		"prefix": "GetTall"
+	},
+	"Panel/GetText": {
+		"body": [
+			"GetText()$0"
+		],
+		"description": "Returns the panel\u0026#39;s text (where applicable).",
+		"prefix": "GetText"
+	},
+	"Panel/GetTextInset": {
+		"body": [
+			"GetTextInset()$0"
+		],
+		"description": "Gets the left and top text margins of a text-based panel object, such as a",
+		"prefix": "GetTextInset"
+	},
+	"Panel/GetTextSize": {
+		"body": [
+			"GetTextSize()$0"
+		],
+		"description": "Gets the size of the text within a",
+		"prefix": "GetTextSize"
+	},
+	"Panel/GetValidReceiverSlot": {
+		"body": [
+			"GetValidReceiverSlot()$0"
+		],
+		"description": "Gets valid receiver slot of currently dragged panel.",
+		"prefix": "GetValidReceiverSlot"
+	},
+	"Panel/GetValue": {
+		"body": [
+			"GetValue()$0"
+		],
+		"description": "Returns the value the panel holds.",
+		"prefix": "GetValue"
+	},
+	"Panel/GetWide": {
+		"body": [
+			"GetWide()$0"
+		],
+		"description": "Returns the width of the panel.",
+		"prefix": "GetWide"
+	},
+	"Panel/GetZPos": {
+		"body": [
+			"GetZPos()$0"
+		],
+		"description": "Returns the Z position of the panel.",
+		"prefix": "GetZPos"
+	},
+	"Panel/GoBack": {
+		"body": [
+			"GoBack()$0"
+		],
+		"description": "Goes back one page in the HTML panel\u0026#39;s history if available.",
+		"prefix": "GoBack"
+	},
+	"Panel/GoForward": {
+		"body": [
+			"GoForward()$0"
+		],
+		"description": "Goes forward one page in the HTML panel\u0026#39;s history if available.",
+		"prefix": "GoForward"
+	},
+	"Panel/GoToHistoryOffset": {
+		"body": [
+			"GoToHistoryOffset(${1:offset})$0"
+		],
+		"description": "Goes to the page in the HTML panel\u0026#39;s history at the specified relative offset.",
+		"prefix": "GoToHistoryOffset"
+	},
+	"Panel/GotoTextEnd": {
+		"body": [
+			"GotoTextEnd()$0"
+		],
+		"description": "Causes a",
+		"prefix": "GotoTextEnd"
+	},
+	"Panel/GotoTextStart": {
+		"body": [
+			"GotoTextStart()$0"
+		],
+		"description": "Causes a",
+		"prefix": "GotoTextStart"
+	},
+	"Panel/HasChildren": {
+		"body": [
+			"HasChildren()$0"
+		],
+		"description": "Returns whenever the panel has child panels.",
+		"prefix": "HasChildren"
+	},
+	"Panel/HasFocus": {
+		"body": [
+			"HasFocus()$0"
+		],
+		"description": "Returns if the panel is focused.",
+		"prefix": "HasFocus"
+	},
+	"Panel/HasHierarchicalFocus": {
+		"body": [
+			"HasHierarchicalFocus()$0"
+		],
+		"description": "Returns if the panel or any of its children(sub children and so on) has the focus.",
+		"prefix": "HasHierarchicalFocus"
+	},
+	"Panel/HasParent": {
+		"body": [
+			"HasParent(${1:parentPanel})$0"
+		],
+		"description": "Returns whether the panel is a descendent of the given panel.",
+		"prefix": "HasParent"
+	},
+	"Panel/Hide": {
+		"body": [
+			"Hide()$0"
+		],
+		"description": "Makes a panel invisible.",
+		"prefix": "Hide"
+	},
+	"Panel/InsertClickableTextEnd": {
+		"body": [
+			"InsertClickableTextEnd()$0"
+		],
+		"description": "Marks the end of a clickable text segment in a",
+		"prefix": "InsertClickableTextEnd"
+	},
+	"Panel/InsertClickableTextStart": {
+		"body": [
+			"InsertClickableTextStart(${1:signalValue})$0"
+		],
+		"description": "Starts the insertion of clickable text for a",
+		"prefix": "InsertClickableTextStart"
+	},
+	"Panel/InsertColorChange": {
+		"body": [
+			"InsertColorChange(${1:r}, ${2:g}, ${3:b}, ${4:a})$0"
+		],
+		"description": "Inserts a color change in a",
+		"prefix": "InsertColorChange"
+	},
+	"Panel/InsertFade": {
+		"body": [
+			"InsertFade(${1:sustain}, ${2:length})$0"
+		],
+		"description": "Begins a text fade for a",
+		"prefix": "InsertFade"
+	},
+	"Panel/InvalidateChildren": {
+		"body": [
+			"InvalidateChildren(${1:recursive=false})$0"
+		],
+		"description": "Invalidates the layout of this panel object and all its children. This will cause these objects to re-layout immediately, calling",
+		"prefix": "InvalidateChildren"
+	},
+	"Panel/InvalidateLayout": {
+		"body": [
+			"InvalidateLayout(${1:layoutNow=false})$0"
+		],
+		"description": "Causes the panel to re-layout in the next frame. During the layout process",
+		"prefix": "InvalidateLayout"
+	},
+	"Panel/InvalidateParent": {
+		"body": [
+			"InvalidateParent(${1:layoutNow=false})$0"
+		],
+		"description": "Invalidates the layout of the parent of this panel object. This will cause it to re-layout, calling",
+		"prefix": "InvalidateParent"
+	},
+	"Panel/IsChildHovered": {
+		"body": [
+			"IsChildHovered(${1:immediate=false})$0"
+		],
+		"description": "Determines whether the mouse cursor is hovered over one of this panel object\u0026#39;s children. This is a reverse process using",
+		"prefix": "IsChildHovered"
+	},
+	"Panel/IsDraggable": {
+		"body": [
+			"IsDraggable()$0"
+		],
+		"description": "Returns whether this panel is draggable ( if user is able to drag it ) or not.",
+		"prefix": "IsDraggable"
+	},
+	"Panel/IsDragging": {
+		"body": [
+			"IsDragging()$0"
+		],
+		"description": "Returns whether this panel is currently being dragger or not.",
+		"prefix": "IsDragging"
+	},
+	"Panel/IsEnabled": {
+		"body": [
+			"IsEnabled()$0"
+		],
+		"description": "Returns whether the the panel is enabled or disabled.",
+		"prefix": "IsEnabled"
+	},
+	"Panel/IsHovered": {
+		"body": [
+			"IsHovered()$0"
+		],
+		"description": "Returns whether the mouse cursor is hovering over this panel or not",
+		"prefix": "IsHovered"
+	},
+	"Panel/IsKeyboardInputEnabled": {
+		"body": [
+			"IsKeyboardInputEnabled()$0"
+		],
+		"description": "Returns true if the panel can receive keyboard input.",
+		"prefix": "IsKeyboardInputEnabled"
+	},
+	"Panel/IsLoading": {
+		"body": [
+			"IsLoading()$0"
+		],
+		"description": "Determines whether or not a",
+		"prefix": "IsLoading"
+	},
+	"Panel/IsMarkedForDeletion": {
+		"body": [
+			"IsMarkedForDeletion()$0"
+		],
+		"description": "Returns if the panel is going to be deleted in the next frame.",
+		"prefix": "IsMarkedForDeletion"
+	},
+	"Panel/IsMouseInputEnabled": {
+		"body": [
+			"IsMouseInputEnabled()$0"
+		],
+		"description": "Returns true if the panel can receive mouse input.",
+		"prefix": "IsMouseInputEnabled"
+	},
+	"Panel/IsMultiline": {
+		"body": [
+			"IsMultiline()$0"
+		],
+		"description": "Determines whether or not a text-based panel object, such as a",
+		"prefix": "IsMultiline"
+	},
+	"Panel/IsOurChild": {
+		"body": [
+			"IsOurChild(${1:childPanel})$0"
+		],
+		"description": "Returns whether the panel contains the given panel, recursively.",
+		"prefix": "IsOurChild"
+	},
+	"Panel/IsSelectable": {
+		"body": [
+			"IsSelectable()$0"
+		],
+		"description": "Determines if the panel object is selectable (like icons in the Spawn Menu, holding",
+		"prefix": "IsSelectable"
+	},
+	"Panel/IsSelected": {
+		"body": [
+			"IsSelected()$0"
+		],
+		"description": "Returns if the panel object is selected (like icons in the Spawn Menu, holding",
+		"prefix": "IsSelected"
+	},
+	"Panel/IsSelectionCanvas": {
+		"body": [
+			"IsSelectionCanvas()$0"
+		],
+		"description": "Determines if the panel object is a selection canvas or not. This is set with",
+		"prefix": "IsSelectionCanvas"
+	},
+	"Panel/IsValid": {
+		"body": [
+			"IsValid()$0"
+		],
+		"description": "Returns if the panel is valid and not marked for deletion.",
+		"prefix": "IsValid"
+	},
+	"Panel/IsVisible": {
+		"body": [
+			"IsVisible()$0"
+		],
+		"description": "Returns if the panel is visible.",
+		"prefix": "IsVisible"
+	},
+	"Panel/KillFocus": {
+		"body": [
+			"KillFocus()$0"
+		],
+		"description": "Remove the focus from the panel.",
+		"prefix": "KillFocus"
+	},
+	"Panel/LerpPositions": {
+		"body": [
+			"LerpPositions(${1:speed}, ${2:easeOut})$0"
+		],
+		"description": "Redefines the panel object\u0026#39;s",
+		"prefix": "LerpPositions"
+	},
+	"Panel/LoadControlsFromFile": {
+		"body": [
+			"LoadControlsFromFile(${1:path})$0"
+		],
+		"description": "No description available.",
+		"prefix": "LoadControlsFromFile"
+	},
+	"Panel/LoadControlsFromString": {
+		"body": [
+			"LoadControlsFromString(${1:string})$0"
+		],
+		"description": "No description available.",
+		"prefix": "LoadControlsFromString"
+	},
+	"Panel/LoadGWENFile": {
+		"body": [
+			"LoadGWENFile(${1:filename}, ${2:path=\"GAME\"})$0"
+		],
+		"description": "Loads a .gwen file (created by GWEN Designer) and calls",
+		"prefix": "LoadGWENFile"
+	},
+	"Panel/LoadGWENString": {
+		"body": [
+			"LoadGWENString(${1:str})$0"
+		],
+		"description": "Loads controls for the panel from a JSON string.",
+		"prefix": "LoadGWENString"
+	},
+	"Panel/LoadTGAImage": {
+		"body": [
+			"LoadTGAImage(${1:string}, ${2:string})$0"
+		],
+		"description": "No description available.",
+		"prefix": "LoadTGAImage"
+	},
+	"Panel/LocalCursorPos": {
+		"body": [
+			"LocalCursorPos()$0"
+		],
+		"description": "Returns the cursor position local to the position of the panel (usually the upper-left corner).",
+		"prefix": "LocalCursorPos"
+	},
+	"Panel/LocalToScreen": {
+		"body": [
+			"LocalToScreen(${1:posX}, ${2:posY})$0"
+		],
+		"description": "Gets the absolute screen position of the position specified relative to the panel.",
+		"prefix": "LocalToScreen"
+	},
+	"Panel/MakePopup": {
+		"body": [
+			"MakePopup()$0"
+		],
+		"description": "Focuses the panel and enables it to receive input.",
+		"prefix": "MakePopup"
+	},
+	"Panel/MouseCapture": {
+		"body": [
+			"MouseCapture(${1:doCapture})$0"
+		],
+		"description": "Allows the panel to receive mouse input even if the mouse cursor is outside the bounds of the panel.",
+		"prefix": "MouseCapture"
+	},
+	"Panel/MoveAbove": {
+		"body": [
+			"MoveAbove(${1:panel}, ${2:offset=0})$0"
+		],
+		"description": "Places the panel above the passed panel with the specified offset.",
+		"prefix": "MoveAbove"
+	},
+	"Panel/MoveBelow": {
+		"body": [
+			"MoveBelow(${1:panel}, ${2:offset=0})$0"
+		],
+		"description": "Places the panel below the passed panel with the specified offset.",
+		"prefix": "MoveBelow"
+	},
+	"Panel/MoveBy": {
+		"body": [
+			"MoveBy(${1:moveX}, ${2:moveY}, ${3:time}, ${4:delay=0}, ${5:ease=-1}, ${6:callback})$0"
+		],
+		"description": "Moves the panel by the specified coordinates using animation.",
+		"prefix": "MoveBy"
+	},
+	"Panel/MoveLeftOf": {
+		"body": [
+			"MoveLeftOf(${1:panel}, ${2:offset=0})$0"
+		],
+		"description": "Places the panel left to the passed panel with the specified offset.",
+		"prefix": "MoveLeftOf"
+	},
+	"Panel/MoveRightOf": {
+		"body": [
+			"MoveRightOf(${1:panel}, ${2:offset=0})$0"
+		],
+		"description": "Places the panel right to the passed panel with the specified offset.",
+		"prefix": "MoveRightOf"
+	},
+	"Panel/MoveTo": {
+		"body": [
+			"MoveTo(${1:posX}, ${2:posY}, ${3:time}, ${4:delay=0}, ${5:ease=-1}, ${6:callback})$0"
+		],
+		"description": "Moves the panel to the specified position using animation.",
+		"prefix": "MoveTo"
+	},
+	"Panel/MoveToAfter": {
+		"body": [
+			"MoveToAfter(${1:siblingPanel})$0"
+		],
+		"description": "Moves this panel object in front of the specified sibling (child of the same parent) in the render order, and shuffles up the Z-positions of siblings now behind.",
+		"prefix": "MoveToAfter"
+	},
+	"Panel/MoveToBack": {
+		"body": [
+			"MoveToBack()$0"
+		],
+		"description": "Moves the panel object behind all other panels on screen. If the panel has been made a pop-up with",
+		"prefix": "MoveToBack"
+	},
+	"Panel/MoveToBefore": {
+		"body": [
+			"MoveToBefore(${1:siblingPanel})$0"
+		],
+		"description": "Moves this panel object behind the specified sibling (child of the same parent) in the render order, and shuffles up the Z-positions of siblings now in front.",
+		"prefix": "MoveToBefore"
+	},
+	"Panel/MoveToFront": {
+		"body": [
+			"MoveToFront()$0"
+		],
+		"description": "Moves the panel in front of all other panels on screen. Unless the panel has been made a pop-up using",
+		"prefix": "MoveToFront"
+	},
+	"Panel/NewAnimation": {
+		"body": [
+			"NewAnimation(${1:length}, ${2:delay=0}, ${3:ease=-1}, ${4:callback=nil})$0"
+		],
+		"description": "Creates a new animation for the panel object.",
+		"prefix": "NewAnimation"
+	},
+	"Panel/NewObject": {
+		"body": [
+			"NewObject(${1:string})$0"
+		],
+		"description": "No description available.",
+		"prefix": "NewObject"
+	},
+	"Panel/NewObjectCallback": {
+		"body": [
+			"NewObjectCallback(${1:string}, ${2:string})$0"
+		],
+		"description": "No description available.",
+		"prefix": "NewObjectCallback"
+	},
+	"Panel/NoClipping": {
+		"body": [
+			"NoClipping(${1:clip})$0"
+		],
+		"description": "Sets whenever all child drawings should be clipped within the panels bounds.",
+		"prefix": "NoClipping"
+	},
+	"Panel/NumSelectedChildren": {
+		"body": [
+			"NumSelectedChildren()$0"
+		],
+		"description": "Returns the number of children of the panel object that are selected. This is equivalent to calling",
+		"prefix": "NumSelectedChildren"
+	},
+	"Panel/OpenURL": {
+		"body": [
+			"OpenURL(${1:URL})$0"
+		],
+		"description": "No description available.",
+		"prefix": "OpenURL"
+	},
+	"Panel/PaintAt": {
+		"body": [
+			"PaintAt(${1:posX}, ${2:posY})$0"
+		],
+		"description": "Paints a ghost copy of the panel at the given position.",
+		"prefix": "PaintAt"
+	},
+	"Panel/PaintManual": {
+		"body": [
+			"PaintManual()$0"
+		],
+		"description": "Paints the panel at its current position. To use this you must call",
+		"prefix": "PaintManual"
+	},
+	"Panel/ParentToHUD": {
+		"body": [
+			"ParentToHUD()$0"
+		],
+		"description": "Parents the panel to the HUD. Makes it invisible on the escape-menu and disables controls.",
+		"prefix": "ParentToHUD"
+	},
+	"Panel/Paste": {
+		"body": [
+			"Paste()$0"
+		],
+		"description": "No description available.",
+		"prefix": "Paste"
+	},
+	"Panel/PositionLabel": {
+		"body": [
+			"PositionLabel(${1:lblWidth}, ${2:x}, ${3:y}, ${4:lbl}, ${5:panelObj})$0"
+		],
+		"description": "Sets the width and position of a",
+		"prefix": "PositionLabel"
+	},
+	"Panel/PostMessage": {
+		"body": [
+			"PostMessage(${1:messageName}, ${2:valueType}, ${3:value})$0"
+		],
+		"description": "No description available.",
+		"prefix": "PostMessage"
+	},
+	"Panel/Prepare": {
+		"body": [
+			"Prepare()$0"
+		],
+		"description": "No description available.",
+		"prefix": "Prepare"
+	},
+	"Panel/Queue": {
+		"body": [
+			"Queue()$0"
+		],
+		"description": "Enables the queue for panel animations. If enabled, the next new animation will begin after all current animations have ended. This must be called before",
+		"prefix": "Queue"
+	},
+	"Panel/RebuildSpawnIcon": {
+		"body": [
+			"RebuildSpawnIcon()$0"
+		],
+		"description": "Causes a",
+		"prefix": "RebuildSpawnIcon"
+	},
+	"Panel/RebuildSpawnIconEx": {
+		"body": [
+			"RebuildSpawnIconEx(${1:data})$0"
+		],
+		"description": "Re-renders a spawn icon with customized cam data.",
+		"prefix": "RebuildSpawnIconEx"
+	},
+	"Panel/Receiver": {
+		"body": [
+			"Receiver(${1:name}, ${2:func}, ${3:menu})$0"
+		],
+		"description": "Allows the panel to receive drag and drop events.",
+		"prefix": "Receiver"
+	},
+	"Panel/Refresh": {
+		"body": [
+			"Refresh(${1:ignoreCache=false})$0"
+		],
+		"description": "Refreshes the HTML panel\u0026#39;s current page.",
+		"prefix": "Refresh"
+	},
+	"Panel/Remove": {
+		"body": [
+			"Remove()$0"
+		],
+		"description": "Marks a panel for deletion so it will be deleted on the next frame.",
+		"prefix": "Remove"
+	},
+	"Panel/RequestFocus": {
+		"body": [
+			"RequestFocus()$0"
+		],
+		"description": "Attempts to obtain focus for this panel.",
+		"prefix": "RequestFocus"
+	},
+	"Panel/ResetAllFades": {
+		"body": [
+			"ResetAllFades(${1:hold}, ${2:expiredOnly}, ${3:newSustain})$0"
+		],
+		"description": "Resets all text fades in a",
+		"prefix": "ResetAllFades"
+	},
+	"Panel/RunJavascript": {
+		"body": [
+			"RunJavascript(${1:js})$0"
+		],
+		"description": "Runs/Executes a string as JavaScript code in",
+		"prefix": "RunJavascript"
+	},
+	"Panel/SaveUndoState": {
+		"body": [
+			"SaveUndoState()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SaveUndoState"
+	},
+	"Panel/ScreenToLocal": {
+		"body": [
+			"ScreenToLocal(${1:screenX}, ${2:screenY})$0"
+		],
+		"description": "Translates global screen coordinate to coordinates relative to the panel.",
+		"prefix": "ScreenToLocal"
+	},
+	"Panel/SelectAll": {
+		"body": [
+			"SelectAll()$0"
+		],
+		"description": "Selects all items within a panel or object. For text-based objects, selects all text.",
+		"prefix": "SelectAll"
+	},
+	"Panel/SelectAllOnFocus": {
+		"body": [
+			"SelectAllOnFocus()$0"
+		],
+		"description": "If called on a text entry, clicking the text entry for the first time will automatically select all of the text ready to be copied by the user.",
+		"prefix": "SelectAllOnFocus"
+	},
+	"Panel/SelectAllText": {
+		"body": [
+			"SelectAllText()$0"
+		],
+		"description": "Selects all the text in a panel object. Will not select non-text items; for this, use",
+		"prefix": "SelectAllText"
+	},
+	"Panel/SelectNone": {
+		"body": [
+			"SelectNone()$0"
+		],
+		"description": "Deselects all items in a panel object. For text-based objects, this will deselect all text.",
+		"prefix": "SelectNone"
+	},
+	"Panel/SetAchievement": {
+		"body": [
+			"SetAchievement(${1:id})$0"
+		],
+		"description": "Sets the achievement to be displayed by",
+		"prefix": "SetAchievement"
+	},
+	"Panel/SetActionFunction": {
+		"body": [
+			"SetActionFunction(${1:func})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetActionFunction"
+	},
+	"Panel/SetAllowNonAsciiCharacters": {
+		"body": [
+			"SetAllowNonAsciiCharacters(${1:allowed})$0"
+		],
+		"description": "Configures a text input to allow user to type characters that are not included in the US-ASCII (7-bit ASCII) character set.",
+		"prefix": "SetAllowNonAsciiCharacters"
+	},
+	"Panel/SetAlpha": {
+		"body": [
+			"SetAlpha(${1:alpha})$0"
+		],
+		"description": "Sets the alpha multiplier for the panel",
+		"prefix": "SetAlpha"
+	},
+	"Panel/SetAnimationEnabled": {
+		"body": [
+			"SetAnimationEnabled(${1:enable})$0"
+		],
+		"description": "Enables or disables animations for the panel object by overriding the",
+		"prefix": "SetAnimationEnabled"
+	},
+	"Panel/SetAutoDelete": {
+		"body": [
+			"SetAutoDelete(${1:autoDelete})$0"
+		],
+		"description": "Sets whenever the panel should be removed if the parent was removed.",
+		"prefix": "SetAutoDelete"
+	},
+	"Panel/SetBGColor": {
+		"body": [
+			"SetBGColor(${1:color}, ${2:g}, ${3:b}, ${4:a})$0"
+		],
+		"description": "Sets the background color of a panel such as a",
+		"prefix": "SetBGColor"
+	},
+	"Panel/SetBGColorEx": {
+		"body": [
+			"SetBGColorEx(${1:r}, ${2:g}, ${3:b}, ${4:a})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetBGColorEx"
+	},
+	"Panel/SetCaretPos": {
+		"body": [
+			"SetCaretPos(${1:offset})$0"
+		],
+		"description": "Sets the position of the caret (or text cursor) in a text-based panel object.",
+		"prefix": "SetCaretPos"
+	},
+	"Panel/SetCommand": {
+		"body": [
+			"SetCommand()$0"
+		],
+		"description": "Sets the action signal command that\u0026#39;s fired when a",
+		"prefix": "SetCommand"
+	},
+	"Panel/SetConVar": {
+		"body": [
+			"SetConVar(${1:convar})$0"
+		],
+		"description": "Sets this panel\u0026#39;s convar. When the convar changes this panel will update automatically.",
+		"prefix": "SetConVar"
+	},
+	"Panel/SetContentAlignment": {
+		"body": [
+			"SetContentAlignment(${1:alignment})$0"
+		],
+		"description": "Sets the alignment of the contents.",
+		"prefix": "SetContentAlignment"
+	},
+	"Panel/SetCookie": {
+		"body": [
+			"SetCookie(${1:cookieName}, ${2:value})$0"
+		],
+		"description": "Stores a string in the named cookie using",
+		"prefix": "SetCookie"
+	},
+	"Panel/SetCookieName": {
+		"body": [
+			"SetCookieName(${1:name})$0"
+		],
+		"description": "Sets the panel\u0026#39;s cookie name. Calls",
+		"prefix": "SetCookieName"
+	},
+	"Panel/SetCursor": {
+		"body": [
+			"SetCursor(${1:cursor})$0"
+		],
+		"description": "Sets the appearance of the cursor.",
+		"prefix": "SetCursor"
+	},
+	"Panel/SetDragParent": {
+		"body": [
+			"SetDragParent(${1:parent})$0"
+		],
+		"description": "Sets the drag parent.",
+		"prefix": "SetDragParent"
+	},
+	"Panel/SetDrawLanguageID": {
+		"body": [
+			"SetDrawLanguageID(${1:visible})$0"
+		],
+		"description": "Sets the visibility of the language selection box in a TextEntry when typing in non-English mode.",
+		"prefix": "SetDrawLanguageID"
+	},
+	"Panel/SetDrawLanguageIDAtLeft": {
+		"body": [
+			"SetDrawLanguageIDAtLeft(${1:left})$0"
+		],
+		"description": "Sets where to draw the \u0026#34;current language\u0026#34; thingy.",
+		"prefix": "SetDrawLanguageIDAtLeft"
+	},
+	"Panel/SetDrawOnTop": {
+		"body": [
+			"SetDrawOnTop(${1:drawOnTop=false})$0"
+		],
+		"description": "Draws this panel object in front of all others, including the spawn menu and main menu. This does not give focus to the panel, only rendering priority.",
+		"prefix": "SetDrawOnTop"
+	},
+	"Panel/SetDropTarget": {
+		"body": [
+			"SetDropTarget(${1:x}, ${2:y}, ${3:width}, ${4:height})$0"
+		],
+		"description": "Sets the target area for dropping when an object is being dragged around this panel using the",
+		"prefix": "SetDropTarget"
+	},
+	"Panel/SetEnabled": {
+		"body": [
+			"SetEnabled(${1:enable})$0"
+		],
+		"description": "Sets the enabled state of a disable-able panel object, such as a",
+		"prefix": "SetEnabled"
+	},
+	"Panel/SetExpensiveShadow": {
+		"body": [
+			"SetExpensiveShadow(${1:distance}, ${2:Color})$0"
+		],
+		"description": "Adds a shadow falling to the bottom right corner of the panel\u0026#39;s text. This has no effect on panels that do not derive from Label.",
+		"prefix": "SetExpensiveShadow"
+	},
+	"Panel/SetFGColor": {
+		"body": [
+			"SetFGColor(${1:color}, ${2:g}, ${3:b}, ${4:a})$0"
+		],
+		"description": "Sets the foreground color of a panel.",
+		"prefix": "SetFGColor"
+	},
+	"Panel/SetFGColorEx": {
+		"body": [
+			"SetFGColorEx(${1:r}, ${2:g}, ${3:b}, ${4:a})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetFGColorEx"
+	},
+	"Panel/SetFocusTopLevel": {
+		"body": [
+			"SetFocusTopLevel(${1:boolean})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetFocusTopLevel"
+	},
+	"Panel/SetFontInternal": {
+		"body": [
+			"SetFontInternal(${1:fontName})$0"
+		],
+		"description": "Sets the font used to render this panel\u0026#39;s text.",
+		"prefix": "SetFontInternal"
+	},
+	"Panel/SetHTML": {
+		"body": [
+			"SetHTML(${1:code})$0"
+		],
+		"description": "Allows you to set HTML code within a panel.",
+		"prefix": "SetHTML"
+	},
+	"Panel/SetHeight": {
+		"body": [
+			"SetHeight(${1:height})$0"
+		],
+		"description": "Sets the height of the panel.",
+		"prefix": "SetHeight"
+	},
+	"Panel/SetKeyBoardInputEnabled": {
+		"body": [
+			"SetKeyBoardInputEnabled(${1:keyboardInput})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetKeyBoardInputEnabled"
+	},
+	"Panel/SetKeyboardInputEnabled": {
+		"body": [
+			"SetKeyboardInputEnabled(${1:enable})$0"
+		],
+		"description": "Allows or disallows the panel to receive keyboard focus and input. This is recursively applied to all children.",
+		"prefix": "SetKeyboardInputEnabled"
+	},
+	"Panel/SetMinimumSize": {
+		"body": [
+			"SetMinimumSize(${1:minW=nil}, ${2:minH=nil})$0"
+		],
+		"description": "Sets the minimum dimensions of the panel or object.",
+		"prefix": "SetMinimumSize"
+	},
+	"Panel/SetModel": {
+		"body": [
+			"SetModel(${1:ModelPath}, ${2:skin=0}, ${3:bodygroups=\"\"})$0"
+		],
+		"description": "SpawnIcon",
+		"prefix": "SetModel"
+	},
+	"Panel/SetMouseInputEnabled": {
+		"body": [
+			"SetMouseInputEnabled(${1:mouseInput})$0"
+		],
+		"description": "Enables or disables the mouse input for the panel.",
+		"prefix": "SetMouseInputEnabled"
+	},
+	"Panel/SetMultiline": {
+		"body": [
+			"SetMultiline(${1:multiline})$0"
+		],
+		"description": "Enables or disables the multi-line functionality of a text object, such as a",
+		"prefix": "SetMultiline"
+	},
+	"Panel/SetName": {
+		"body": [
+			"SetName(${1:name})$0"
+		],
+		"description": "Sets the internal name of the panel.",
+		"prefix": "SetName"
+	},
+	"Panel/SetPaintBackgroundEnabled": {
+		"body": [
+			"SetPaintBackgroundEnabled(${1:paintBackground})$0"
+		],
+		"description": "Sets whenever all the default background of the panel should be drawn or not.",
+		"prefix": "SetPaintBackgroundEnabled"
+	},
+	"Panel/SetPaintBorderEnabled": {
+		"body": [
+			"SetPaintBorderEnabled(${1:paintBorder})$0"
+		],
+		"description": "Sets whenever all the default border of the panel should be drawn or not.",
+		"prefix": "SetPaintBorderEnabled"
+	},
+	"Panel/SetPaintFunction": {
+		"body": [
+			"SetPaintFunction()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetPaintFunction"
+	},
+	"Panel/SetPaintedManually": {
+		"body": [
+			"SetPaintedManually(${1:paintedManually})$0"
+		],
+		"description": "Enables or disables painting of the panel manually with",
+		"prefix": "SetPaintedManually"
+	},
+	"Panel/SetParent": {
+		"body": [
+			"SetParent(${1:parent})$0"
+		],
+		"description": "Sets the parent of the panel.",
+		"prefix": "SetParent"
+	},
+	"Panel/SetPlayer": {
+		"body": [
+			"SetPlayer(${1:player}, ${2:size})$0"
+		],
+		"description": "Used by",
+		"prefix": "SetPlayer"
+	},
+	"Panel/SetPopupStayAtBack": {
+		"body": [
+			"SetPopupStayAtBack(${1:stayAtBack})$0"
+		],
+		"description": "If this panel object has been made a popup with",
+		"prefix": "SetPopupStayAtBack"
+	},
+	"Panel/SetPos": {
+		"body": [
+			"SetPos(${1:posX}, ${2:posY})$0"
+		],
+		"description": "Sets the position of the panel.",
+		"prefix": "SetPos"
+	},
+	"Panel/SetRenderInScreenshots": {
+		"body": [
+			"SetRenderInScreenshots(${1:renderInScreenshot})$0"
+		],
+		"description": "Sets whenever the panel should be rendered in the next screenshot.",
+		"prefix": "SetRenderInScreenshots"
+	},
+	"Panel/SetSelectable": {
+		"body": [
+			"SetSelectable(${1:selectable})$0"
+		],
+		"description": "Sets whether the panel object can be selected or not (like icons in the Spawn Menu, holding",
+		"prefix": "SetSelectable"
+	},
+	"Panel/SetSelected": {
+		"body": [
+			"SetSelected(${1:selected=false})$0"
+		],
+		"description": "Sets the selected state of a selectable panel object. This functionality is set with",
+		"prefix": "SetSelected"
+	},
+	"Panel/SetSelectionCanvas": {
+		"body": [
+			"SetSelectionCanvas(${1:selCanvas})$0"
+		],
+		"description": "Enables the panel object for selection (much like the spawn menu).",
+		"prefix": "SetSelectionCanvas"
+	},
+	"Panel/SetSize": {
+		"body": [
+			"SetSize(${1:width}, ${2:height})$0"
+		],
+		"description": "Sets the size of the panel.",
+		"prefix": "SetSize"
+	},
+	"Panel/SetSkin": {
+		"body": [
+			"SetSkin(${1:skinName})$0"
+		],
+		"description": "Sets the derma skin that the panel object will use, and refreshes all panels with",
+		"prefix": "SetSkin"
+	},
+	"Panel/SetSpawnIcon": {
+		"body": [
+			"SetSpawnIcon(${1:icon})$0"
+		],
+		"description": "silkicon",
+		"prefix": "SetSpawnIcon"
+	},
+	"Panel/SetSteamID": {
+		"body": [
+			"SetSteamID(${1:steamid}, ${2:size})$0"
+		],
+		"description": "Used by",
+		"prefix": "SetSteamID"
+	},
+	"Panel/SetTabPosition": {
+		"body": [
+			"SetTabPosition(${1:number})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetTabPosition"
+	},
+	"Panel/SetTall": {
+		"body": [
+			"SetTall(${1:height})$0"
+		],
+		"description": "Sets height of a panel. An alias of",
+		"prefix": "SetTall"
+	},
+	"Panel/SetTerm": {
+		"body": [
+			"SetTerm(${1:delay})$0"
+		],
+		"description": "Removes the panel after given time in seconds.",
+		"prefix": "SetTerm"
+	},
+	"Panel/SetText": {
+		"body": [
+			"SetText(${1:text})$0"
+		],
+		"description": "Sets the text value of a panel object containing text, such as a",
+		"prefix": "SetText"
+	},
+	"Panel/SetTextInset": {
+		"body": [
+			"SetTextInset(${1:insetX}, ${2:insetY})$0"
+		],
+		"description": "Sets the left and top text margins of a text-based panel object, such as a",
+		"prefix": "SetTextInset"
+	},
+	"Panel/SetToFullHeight": {
+		"body": [
+			"SetToFullHeight()$0"
+		],
+		"description": "Sets the height of a",
+		"prefix": "SetToFullHeight"
+	},
+	"Panel/SetToolTip": {
+		"body": [
+			"SetToolTip()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetToolTip"
+	},
+	"Panel/SetToolTipPanel": {
+		"body": [
+			"SetToolTipPanel()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetToolTipPanel"
+	},
+	"Panel/SetTooltip": {
+		"body": [
+			"SetTooltip(${1:str})$0"
+		],
+		"description": "Sets the tooltip to be displayed when a player hovers over the panel object with their cursor.",
+		"prefix": "SetTooltip"
+	},
+	"Panel/SetTooltipPanel": {
+		"body": [
+			"SetTooltipPanel(${1:tooltipPanel=nil})$0"
+		],
+		"description": "Sets the panel object to be displayed as a tooltip when a player hovers over the panel object with their cursor.",
+		"prefix": "SetTooltipPanel"
+	},
+	"Panel/SetURL": {
+		"body": [
+			"SetURL(${1:url})$0"
+		],
+		"description": "DLabelURL",
+		"prefix": "SetURL"
+	},
+	"Panel/SetVerticalScrollbarEnabled": {
+		"body": [
+			"SetVerticalScrollbarEnabled(${1:display=false})$0"
+		],
+		"description": "Sets the visibility of the vertical scrollbar.",
+		"prefix": "SetVerticalScrollbarEnabled"
+	},
+	"Panel/SetVisible": {
+		"body": [
+			"SetVisible(${1:visible})$0"
+		],
+		"description": "Sets the \u0026#34;visibility\u0026#34; of the panel.",
+		"prefix": "SetVisible"
+	},
+	"Panel/SetWide": {
+		"body": [
+			"SetWide(${1:width})$0"
+		],
+		"description": "Sets width of a panel. An alias of",
+		"prefix": "SetWide"
+	},
+	"Panel/SetWidth": {
+		"body": [
+			"SetWidth(${1:width})$0"
+		],
+		"description": "Sets the width of the panel.",
+		"prefix": "SetWidth"
+	},
+	"Panel/SetWorldClicker": {
+		"body": [
+			"SetWorldClicker(${1:enabled})$0"
+		],
+		"description": "This makes it so that when you\u0026#39;re hovering over this panel you can `click` on the world. Your viewmodel will aim etc.",
+		"prefix": "SetWorldClicker"
+	},
+	"Panel/SetWrap": {
+		"body": [
+			"SetWrap(${1:wrap})$0"
+		],
+		"description": "Sets whether text wrapping should be enabled or disabled on",
+		"prefix": "SetWrap"
+	},
+	"Panel/SetZPos": {
+		"body": [
+			"SetZPos(${1:zIndex})$0"
+		],
+		"description": "Sets the panels z position which determines the rendering order.",
+		"prefix": "SetZPos"
+	},
+	"Panel/Show": {
+		"body": [
+			"Show()$0"
+		],
+		"description": "Makes a panel visible.",
+		"prefix": "Show"
+	},
+	"Panel/SizeTo": {
+		"body": [
+			"SizeTo(${1:sizeW=0}, ${2:sizeH=0}, ${3:time}, ${4:delay=0}, ${5:ease=-1}, ${6:callback})$0"
+		],
+		"description": "Uses animation to resize the panel to the specified size.",
+		"prefix": "SizeTo"
+	},
+	"Panel/SizeToChildren": {
+		"body": [
+			"SizeToChildren(${1:sizeW}, ${2:sizeH})$0"
+		],
+		"description": "Resizes the panel to fit the bounds of its children.",
+		"prefix": "SizeToChildren"
+	},
+	"Panel/SizeToContents": {
+		"body": [
+			"SizeToContents()$0"
+		],
+		"description": "Resizes the panel so that its width and height fit all of the content inside.",
+		"prefix": "SizeToContents"
+	},
+	"Panel/SizeToContentsX": {
+		"body": [
+			"SizeToContentsX(${1:addVal=0})$0"
+		],
+		"description": "Resizes the panel object\u0026#39;s width to accommodate all child objects/contents.",
+		"prefix": "SizeToContentsX"
+	},
+	"Panel/SizeToContentsY": {
+		"body": [
+			"SizeToContentsY(${1:addVal=0})$0"
+		],
+		"description": "Resizes the panel object\u0026#39;s height to accommodate all child objects/contents.",
+		"prefix": "SizeToContentsY"
+	},
+	"Panel/SlideDown": {
+		"body": [
+			"SlideDown(${1:Length})$0"
+		],
+		"description": "Slides the panel in from above.",
+		"prefix": "SlideDown"
+	},
+	"Panel/SlideUp": {
+		"body": [
+			"SlideUp(${1:Length})$0"
+		],
+		"description": "Slides the panel out to the top.",
+		"prefix": "SlideUp"
+	},
+	"Panel/StartBoxSelection": {
+		"body": [
+			"StartBoxSelection()$0"
+		],
+		"description": "Begins a box selection, enables mouse capture for the panel object, and sets the start point of the selection box to the mouse cursor\u0026#39;s position, relative to this object. For this to work, either the object or its parent must be enabled as a selection canvas. This is set using",
+		"prefix": "StartBoxSelection"
+	},
+	"Panel/Stop": {
+		"body": [
+			"Stop()$0"
+		],
+		"description": "Stops all panel animations by clearing its animation list. This also clears all delayed animations.",
+		"prefix": "Stop"
+	},
+	"Panel/StopLoading": {
+		"body": [
+			"StopLoading()$0"
+		],
+		"description": "Stops the loading of the HTML panel\u0026#39;s current page.",
+		"prefix": "StopLoading"
+	},
+	"Panel/StretchBottomTo": {
+		"body": [
+			"StretchBottomTo(${1:tgtPanel}, ${2:offset=0})$0"
+		],
+		"description": "Resizes the panel object\u0026#39;s height so that its bottom is aligned with the top of the passed panel. An offset greater than zero will reduce the panel\u0026#39;s height to leave a gap between it and the passed panel.",
+		"prefix": "StretchBottomTo"
+	},
+	"Panel/StretchRightTo": {
+		"body": [
+			"StretchRightTo(${1:tgtPanel}, ${2:offset=0})$0"
+		],
+		"description": "Resizes the panel object\u0026#39;s width so that its right edge is aligned with the left of the passed panel. An offset greater than zero will reduce the panel\u0026#39;s width to leave a gap between it and the passed panel.",
+		"prefix": "StretchRightTo"
+	},
+	"Panel/StretchToParent": {
+		"body": [
+			"StretchToParent(${1:offsetLeft}, ${2:offsetTop}, ${3:offsetRight}, ${4:offsetBottom})$0"
+		],
+		"description": "Sets the dimensions of the panel to fill its parent. It will only stretch in directions that aren\u0026#39;t nil.",
+		"prefix": "StretchToParent"
+	},
+	"Panel/ToggleSelection": {
+		"body": [
+			"ToggleSelection()$0"
+		],
+		"description": "Toggles the selected state of a selectable panel object. This functionality is set with",
+		"prefix": "ToggleSelection"
+	},
+	"Panel/ToggleVisible": {
+		"body": [
+			"ToggleVisible()$0"
+		],
+		"description": "Toggles the visibility of a panel and all its children.",
+		"prefix": "ToggleVisible"
+	},
+	"Panel/Undo": {
+		"body": [
+			"Undo()$0"
+		],
+		"description": "No description available.",
+		"prefix": "Undo"
+	},
+	"Panel/UnselectAll": {
+		"body": [
+			"UnselectAll()$0"
+		],
+		"description": "Recursively deselects this panel object and all of its children. This will cascade to all child objects at every level below the parent.",
+		"prefix": "UnselectAll"
+	},
+	"Panel/UpdateHTMLTexture": {
+		"body": [
+			"UpdateHTMLTexture()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UpdateHTMLTexture"
+	},
+	"Panel/Valid": {
+		"body": [
+			"Valid()$0"
+		],
+		"description": "No description available.",
+		"prefix": "Valid"
+	}
+}

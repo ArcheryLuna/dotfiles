@@ -1,0 +1,9 @@
+{
+	"ControlPanel/AddControl": {
+		"body": [
+			"AddControl(${1:type}, ${2:controlinfo})$0"
+		],
+		"description": "No description available.",
+		"prefix": "AddControl"
+	}
+}

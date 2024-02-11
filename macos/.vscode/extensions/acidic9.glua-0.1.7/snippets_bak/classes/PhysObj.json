@@ -1,0 +1,464 @@
+{
+	"PhysObj/AddAngleVelocity": {
+		"body": [
+			"AddAngleVelocity(${1:angularVelocity})$0"
+		],
+		"description": "Adds the specified velocity to the current.",
+		"prefix": "AddAngleVelocity"
+	},
+	"PhysObj/AddGameFlag": {
+		"body": [
+			"AddGameFlag(${1:flags})$0"
+		],
+		"description": "Adds one or more bit flags.",
+		"prefix": "AddGameFlag"
+	},
+	"PhysObj/AddVelocity": {
+		"body": [
+			"AddVelocity(${1:velocity})$0"
+		],
+		"description": "Adds the specified velocity to the current.",
+		"prefix": "AddVelocity"
+	},
+	"PhysObj/AlignAngles": {
+		"body": [
+			"AlignAngles(${1:from}, ${2:to})$0"
+		],
+		"description": "No description available.",
+		"prefix": "AlignAngles"
+	},
+	"PhysObj/ApplyForceCenter": {
+		"body": [
+			"ApplyForceCenter(${1:force})$0"
+		],
+		"description": "Applies the specified force to the physics object. (in Newtons)",
+		"prefix": "ApplyForceCenter"
+	},
+	"PhysObj/ApplyForceOffset": {
+		"body": [
+			"ApplyForceOffset(${1:force}, ${2:position})$0"
+		],
+		"description": "Applies the specified force on the physics object at the specified position",
+		"prefix": "ApplyForceOffset"
+	},
+	"PhysObj/CalculateForceOffset": {
+		"body": [
+			"CalculateForceOffset(${1:force}, ${2:pos})$0"
+		],
+		"description": "No description available.",
+		"prefix": "CalculateForceOffset"
+	},
+	"PhysObj/CalculateVelocityOffset": {
+		"body": [
+			"CalculateVelocityOffset(${1:force}, ${2:pos})$0"
+		],
+		"description": "No description available.",
+		"prefix": "CalculateVelocityOffset"
+	},
+	"PhysObj/ClearGameFlag": {
+		"body": [
+			"ClearGameFlag(${1:flags})$0"
+		],
+		"description": "Removes one of more specified flags.",
+		"prefix": "ClearGameFlag"
+	},
+	"PhysObj/ComputeShadowControl": {
+		"body": [
+			"ComputeShadowControl(${1:shadowparams})$0"
+		],
+		"description": "Allows you to move a PhysObj to a point and angle in 3D space.",
+		"prefix": "ComputeShadowControl"
+	},
+	"PhysObj/EnableCollisions": {
+		"body": [
+			"EnableCollisions(${1:enable})$0"
+		],
+		"description": "Sets whenever the physics object should not collide with anything.",
+		"prefix": "EnableCollisions"
+	},
+	"PhysObj/EnableDrag": {
+		"body": [
+			"EnableDrag(${1:enable})$0"
+		],
+		"description": "Sets whenever the physics object should be affected by drag.",
+		"prefix": "EnableDrag"
+	},
+	"PhysObj/EnableGravity": {
+		"body": [
+			"EnableGravity(${1:enable})$0"
+		],
+		"description": "Sets whenever the physobject should be affected by gravity",
+		"prefix": "EnableGravity"
+	},
+	"PhysObj/EnableMotion": {
+		"body": [
+			"EnableMotion(${1:enable})$0"
+		],
+		"description": "Sets whenever the physobject should be able to move or not. By calling PhysObj:EnableMotion(false), the physobject will no longer be able to move. However, when the physobject is clicked by physics gun, the object will be able to move again.",
+		"prefix": "EnableMotion"
+	},
+	"PhysObj/GetAABB": {
+		"body": [
+			"GetAABB()$0"
+		],
+		"description": "Returns the mins and max of the physics object.",
+		"prefix": "GetAABB"
+	},
+	"PhysObj/GetAngleVelocity": {
+		"body": [
+			"GetAngleVelocity()$0"
+		],
+		"description": "Gets the angular velocity of the object in degrees per second.",
+		"prefix": "GetAngleVelocity"
+	},
+	"PhysObj/GetAngles": {
+		"body": [
+			"GetAngles()$0"
+		],
+		"description": "Returns the angles of the physics object.",
+		"prefix": "GetAngles"
+	},
+	"PhysObj/GetDamping": {
+		"body": [
+			"GetDamping()$0"
+		],
+		"description": "Returns the linear and angular damping of the physics object.",
+		"prefix": "GetDamping"
+	},
+	"PhysObj/GetEnergy": {
+		"body": [
+			"GetEnergy()$0"
+		],
+		"description": "Returns the kinetic energy of the physobject.",
+		"prefix": "GetEnergy"
+	},
+	"PhysObj/GetEntity": {
+		"body": [
+			"GetEntity()$0"
+		],
+		"description": "Returns the parent entity of the physics object.",
+		"prefix": "GetEntity"
+	},
+	"PhysObj/GetInertia": {
+		"body": [
+			"GetInertia()$0"
+		],
+		"description": "Returns the directional inertia of the physics object.",
+		"prefix": "GetInertia"
+	},
+	"PhysObj/GetInvInertia": {
+		"body": [
+			"GetInvInertia()$0"
+		],
+		"description": "Returns the inverted inertia.",
+		"prefix": "GetInvInertia"
+	},
+	"PhysObj/GetInvMass": {
+		"body": [
+			"GetInvMass()$0"
+		],
+		"description": "Returns 1 divided by the entities mass.",
+		"prefix": "GetInvMass"
+	},
+	"PhysObj/GetMass": {
+		"body": [
+			"GetMass()$0"
+		],
+		"description": "Returns the mass of the physics object.",
+		"prefix": "GetMass"
+	},
+	"PhysObj/GetMassCenter": {
+		"body": [
+			"GetMassCenter()$0"
+		],
+		"description": "Returns the center of mass of the physics object as a local vector.",
+		"prefix": "GetMassCenter"
+	},
+	"PhysObj/GetMaterial": {
+		"body": [
+			"GetMaterial()$0"
+		],
+		"description": "Returns the physical material of the physobject.",
+		"prefix": "GetMaterial"
+	},
+	"PhysObj/GetMesh": {
+		"body": [
+			"GetMesh()$0"
+		],
+		"description": "Returns a table of",
+		"prefix": "GetMesh"
+	},
+	"PhysObj/GetMeshConvexes": {
+		"body": [
+			"GetMeshConvexes()$0"
+		],
+		"description": "Returns a structured table, the physics mesh of the physics object.",
+		"prefix": "GetMeshConvexes"
+	},
+	"PhysObj/GetName": {
+		"body": [
+			"GetName()$0"
+		],
+		"description": "Returns the name of the physics object.",
+		"prefix": "GetName"
+	},
+	"PhysObj/GetPos": {
+		"body": [
+			"GetPos()$0"
+		],
+		"description": "Returns the position of the physobject.",
+		"prefix": "GetPos"
+	},
+	"PhysObj/GetRotDamping": {
+		"body": [
+			"GetRotDamping()$0"
+		],
+		"description": "Returns the rotation damping of the physics object.",
+		"prefix": "GetRotDamping"
+	},
+	"PhysObj/GetSpeedDamping": {
+		"body": [
+			"GetSpeedDamping()$0"
+		],
+		"description": "Returns the speed damping of the physics object.",
+		"prefix": "GetSpeedDamping"
+	},
+	"PhysObj/GetStress": {
+		"body": [
+			"GetStress()$0"
+		],
+		"description": "Returns the stress of the entity.",
+		"prefix": "GetStress"
+	},
+	"PhysObj/GetSurfaceArea": {
+		"body": [
+			"GetSurfaceArea()$0"
+		],
+		"description": "Returns the surface area of the physics object in source-units².",
+		"prefix": "GetSurfaceArea"
+	},
+	"PhysObj/GetVelocity": {
+		"body": [
+			"GetVelocity()$0"
+		],
+		"description": "Returns the absolute directional velocity of the physobject.",
+		"prefix": "GetVelocity"
+	},
+	"PhysObj/GetVolume": {
+		"body": [
+			"GetVolume()$0"
+		],
+		"description": "Returns the volume in source units³.",
+		"prefix": "GetVolume"
+	},
+	"PhysObj/HasGameFlag": {
+		"body": [
+			"HasGameFlag(${1:flags})$0"
+		],
+		"description": "Returns whenever the specified flag(s) is/are set.",
+		"prefix": "HasGameFlag"
+	},
+	"PhysObj/IsAsleep": {
+		"body": [
+			"IsAsleep()$0"
+		],
+		"description": "Returns whenever the physics object is sleeping eg. not active.",
+		"prefix": "IsAsleep"
+	},
+	"PhysObj/IsCollisionEnabled": {
+		"body": [
+			"IsCollisionEnabled()$0"
+		],
+		"description": "Returns whenever the entity is able to collide or not.",
+		"prefix": "IsCollisionEnabled"
+	},
+	"PhysObj/IsDragEnabled": {
+		"body": [
+			"IsDragEnabled()$0"
+		],
+		"description": "Returns whenever the entity is affected by drag.",
+		"prefix": "IsDragEnabled"
+	},
+	"PhysObj/IsGravityEnabled": {
+		"body": [
+			"IsGravityEnabled()$0"
+		],
+		"description": "Returns whenever the entity is affected by gravity.",
+		"prefix": "IsGravityEnabled"
+	},
+	"PhysObj/IsMotionEnabled": {
+		"body": [
+			"IsMotionEnabled()$0"
+		],
+		"description": "Returns if the physics object can move itself (by velocity, acceleration)",
+		"prefix": "IsMotionEnabled"
+	},
+	"PhysObj/IsMoveable": {
+		"body": [
+			"IsMoveable()$0"
+		],
+		"description": "Returns whenever the entity is able to move.",
+		"prefix": "IsMoveable"
+	},
+	"PhysObj/IsPenetrating": {
+		"body": [
+			"IsPenetrating()$0"
+		],
+		"description": "Returns whenever the physics object is penetrating another physics object.",
+		"prefix": "IsPenetrating"
+	},
+	"PhysObj/IsValid": {
+		"body": [
+			"IsValid()$0"
+		],
+		"description": "Returns if the physics object is valid/not NULL.",
+		"prefix": "IsValid"
+	},
+	"PhysObj/LocalToWorld": {
+		"body": [
+			"LocalToWorld(${1:LocalVec})$0"
+		],
+		"description": "Mapping a vector in local frame of the physics object to world frame.",
+		"prefix": "LocalToWorld"
+	},
+	"PhysObj/LocalToWorldVector": {
+		"body": [
+			"LocalToWorldVector(${1:LocalVec})$0"
+		],
+		"description": "Rotate a vector from the local frame of the physics object to world frame.",
+		"prefix": "LocalToWorldVector"
+	},
+	"PhysObj/OutputDebugInfo": {
+		"body": [
+			"OutputDebugInfo()$0"
+		],
+		"description": "Prints debug info about the state of the physics object to the console.",
+		"prefix": "OutputDebugInfo"
+	},
+	"PhysObj/RecheckCollisionFilter": {
+		"body": [
+			"RecheckCollisionFilter()$0"
+		],
+		"description": "No description available.",
+		"prefix": "RecheckCollisionFilter"
+	},
+	"PhysObj/RotateAroundAxis": {
+		"body": [
+			"RotateAroundAxis(${1:dir}, ${2:ang})$0"
+		],
+		"description": "A convinience function for",
+		"prefix": "RotateAroundAxis"
+	},
+	"PhysObj/SetAngleDragCoefficient": {
+		"body": [
+			"SetAngleDragCoefficient(${1:coef})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetAngleDragCoefficient"
+	},
+	"PhysObj/SetAngles": {
+		"body": [
+			"SetAngles(${1:angles})$0"
+		],
+		"description": "Sets the angles of the physobject.",
+		"prefix": "SetAngles"
+	},
+	"PhysObj/SetBuoyancyRatio": {
+		"body": [
+			"SetBuoyancyRatio(${1:buoyancy})$0"
+		],
+		"description": "Sets the buoyancy ratio.",
+		"prefix": "SetBuoyancyRatio"
+	},
+	"PhysObj/SetDamping": {
+		"body": [
+			"SetDamping(${1:linearDamping}, ${2:angularDamping})$0"
+		],
+		"description": "Sets the linear and angular damping of the physics object.",
+		"prefix": "SetDamping"
+	},
+	"PhysObj/SetDragCoefficient": {
+		"body": [
+			"SetDragCoefficient(${1:drag})$0"
+		],
+		"description": "Modifies how much drag affects the object.",
+		"prefix": "SetDragCoefficient"
+	},
+	"PhysObj/SetInertia": {
+		"body": [
+			"SetInertia(${1:directionalInertia})$0"
+		],
+		"description": "Sets the directional inertia.",
+		"prefix": "SetInertia"
+	},
+	"PhysObj/SetMass": {
+		"body": [
+			"SetMass(${1:mass})$0"
+		],
+		"description": "Sets the mass of the physobject.",
+		"prefix": "SetMass"
+	},
+	"PhysObj/SetMaterial": {
+		"body": [
+			"SetMaterial(${1:materialName})$0"
+		],
+		"description": "Sets the material of the physobject.",
+		"prefix": "SetMaterial"
+	},
+	"PhysObj/SetPos": {
+		"body": [
+			"SetPos(${1:position}, ${2:teleport=false})$0"
+		],
+		"description": "Sets the position of the physobject.",
+		"prefix": "SetPos"
+	},
+	"PhysObj/SetVelocity": {
+		"body": [
+			"SetVelocity(${1:velocity})$0"
+		],
+		"description": "Sets the velocity of the physics object for the next iteration.",
+		"prefix": "SetVelocity"
+	},
+	"PhysObj/SetVelocityInstantaneous": {
+		"body": [
+			"SetVelocityInstantaneous(${1:velocity})$0"
+		],
+		"description": "Sets the velocity of the physics object.",
+		"prefix": "SetVelocityInstantaneous"
+	},
+	"PhysObj/Sleep": {
+		"body": [
+			"Sleep()$0"
+		],
+		"description": "Make the physics object sleep.",
+		"prefix": "Sleep"
+	},
+	"PhysObj/UpdateShadow": {
+		"body": [
+			"UpdateShadow(${1:targetPosition}, ${2:targetAngles}, ${3:frameTime})$0"
+		],
+		"description": "Unlike",
+		"prefix": "UpdateShadow"
+	},
+	"PhysObj/Wake": {
+		"body": [
+			"Wake()$0"
+		],
+		"description": "Wakes the physics object. See also",
+		"prefix": "Wake"
+	},
+	"PhysObj/WorldToLocal": {
+		"body": [
+			"WorldToLocal(${1:vec})$0"
+		],
+		"description": "Converts a vector to a relative to the physics object coordinate system.",
+		"prefix": "WorldToLocal"
+	},
+	"PhysObj/WorldToLocalVector": {
+		"body": [
+			"WorldToLocalVector(${1:WorldVec})$0"
+		],
+		"description": "Rotate a vector from the world frame to the local frame of the physics object.",
+		"prefix": "WorldToLocalVector"
+	}
+}

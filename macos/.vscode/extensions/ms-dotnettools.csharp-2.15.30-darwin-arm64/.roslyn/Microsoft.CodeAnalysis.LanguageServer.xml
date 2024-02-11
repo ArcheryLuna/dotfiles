@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.CodeAnalysis.LanguageServer</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.BrokeredServiceBridgeProvider.SetupBrokeredServicesBridgeAsync(System.String,Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.BrokeredServiceContainer,System.Threading.CancellationToken)">
+            <summary>
+            Creates the brokered service bridge to the remote process.
+            We expose the services from our container to the remote and consume services
+            from the remote by proffering them into our container.
+            </summary>
+            <param name="brokeredServicePipeName">the pipe name we use for the connection.</param>
+            <param name="container">our local container.</param>
+            <param name="cancellationToken">a cancellation token.</param>
+            <returns>a task that represents the lifetime of the bridge.  It will complete when the bridge closes.</returns>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.BrokeredServiceContainer.RegisterServices(System.Collections.Generic.IReadOnlyDictionary{Microsoft.ServiceHub.Framework.ServiceMoniker,Microsoft.VisualStudio.Utilities.ServiceBroker.ServiceRegistration})">
+            <inheritdoc cref="M:Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer.RegisterServices(System.Collections.Generic.IReadOnlyDictionary{Microsoft.ServiceHub.Framework.ServiceMoniker,Microsoft.VisualStudio.Utilities.ServiceBroker.ServiceRegistration})"/>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.BrokeredServiceContainer.UnregisterServices(System.Collections.Generic.IEnumerable{Microsoft.ServiceHub.Framework.ServiceMoniker})">
+            <inheritdoc cref="M:Microsoft.VisualStudio.Utilities.ServiceBroker.GlobalBrokeredServiceContainer.UnregisterServices(System.Collections.Generic.IEnumerable{Microsoft.ServiceHub.Framework.ServiceMoniker})"/>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.ServiceBrokerFactory">
+            <summary>
+            Exports an <see cref="T:Microsoft.ServiceHub.Framework.IServiceBroker"/> for convenient and potentially cross-IDE importing by other features.
+            </summary>
+            <remarks>
+            Each import site gets its own <see cref="T:Microsoft.ServiceHub.Framework.IServiceBroker"/> instance to match the behavior of calling <see cref="M:Microsoft.VisualStudio.Shell.ServiceBroker.IBrokeredServiceContainer.GetFullAccessServiceBroker"/>
+            which returns a private instance for everyone.
+            This is observable to callers in a few ways, including that they only get the <see cref="E:Microsoft.ServiceHub.Framework.IServiceBroker.AvailabilityChanged"/> events
+            based on their own service queries.
+            MEF will dispose of each instance as its lifetime comes to an end.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.ServiceBrokerFactory.FullAccessServiceBroker">
+            <summary>
+            Returns a full-access service broker, but will throw if we haven't yet connected to the Dev Kit broker.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.ServiceBrokerFactory.TryGetFullAccessServiceBroker">
+            <summary>
+            Returns a full-access service broker, but will return null if we haven't yet connected to the Dev Kit broker.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.ServiceBrokerFactory.CreateAsync">
+            <summary>
+            Creates a service broker instance without connecting via a pipe to another process.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.Services.BrokeredServiceBridgeManifest.BrokeredServiceBridgeManifest.GetAvailableServicesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Returns a subset of services registered to Microsoft.VisualStudio.Code.Server container that are proferred by the Language Server process.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.Services.BrokeredServiceBridgeManifest.IBrokeredServiceBridgeManifest">
+            <summary>
+            Defines a service to be used by the remote party to determine which services from this container
+            it should add to its container.  This is useful in the case where the remote party connects to other processes
+            that proffer the same services as we do (e.g. intrinsic services).
+            Both are proffered as <see cref="F:Microsoft.VisualStudio.Utilities.ServiceBroker.ServiceSource.OtherProcessOnSameMachine"/> and therefore conflict.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.Services.BrokeredServiceBridgeManifest.IBrokeredServiceBridgeManifest.GetAvailableServicesAsync(System.Threading.CancellationToken)">
+            <summary>
+            Returns services that the container wishes to expose across the bridge.
+            </summary>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.Services.Definitions.IProjectInitializationStatusService">
+            <summary>
+            Copied from https://devdiv.visualstudio.com/DevDiv/_git/CPS?path=/src/Microsoft.VisualStudio.ProjectSystem.Server/BrokerServices/IProjectInitializationStatusService.cs
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.Services.Definitions.ProjectInitializationCompletionState">
+            <summary>
+            Copied from https://devdiv.visualstudio.com/DevDiv/_git/CPS?path=/src/Microsoft.VisualStudio.ProjectSystem.Server/ProjectInitializationCompletionState.cs
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.Services.Descriptors.RemoteProjectInitializationStatusService">
+            <summary>
+            See https://devdiv.visualstudio.com/DevDiv/_git/CPS?path=/src/Microsoft.VisualStudio.ProjectSystem.Server/BrokerServices/ProjectInitializationStatusServiceDescriptor.cs
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.Services.Descriptors.RemoteServicesToRegister">
+            <summary>
+            The set of remote services that we register to our container.
+            </summary>
+            <remarks>
+            Note that while today we only support static registration of services in the remote process it would be possible to implement dynamic registration
+            if we read the remote brokered service manifest.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.CustomExportAssemblyLoader._loadedAssemblies">
+            <summary>
+            Cache assemblies that are already loaded by AssemblyName comparison
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.CustomExportAssemblyLoader._baseDirectory">
+            <summary>
+            Base directory to search for <see cref="M:System.Reflection.Assembly.LoadFrom(System.String)"/> if initial load fails
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.DotnetCliHelper.GetDotnetSdkFolderFromDotnetExecutableAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            The folder the dotnet executable is in could contain multiple SDK paths.
+            In order to figure out which one is the right one, we need to run dotnet --info
+            from the project directory (in order to respect any global.json that might be present)
+            which will output the correct SDK path.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.DotnetCliHelper.GetDotNetPathOrDefault">
+            <summary>
+            Finds the dotnet executable path from the PATH environment variable.
+            Based on https://github.com/dotnet/msbuild/blob/main/src/Utilities/ToolTask.cs#L1259
+            We also do not include DOTNET_ROOT here, see https://github.com/dotnet/runtime/issues/88754
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostServicesProvider">
+            <summary>
+            A simple type to provide a single copy of <see cref="T:Microsoft.CodeAnalysis.Host.HostServices"/> for the MEF composition.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.DelegatingFileChangeWatcher">
+            <summary>
+            A MEF export for <see cref="T:Microsoft.CodeAnalysis.ProjectSystem.IFileChangeWatcher" />. This checks if we're able to create an <see cref="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.LspFileChangeWatcher" /> if the client supports
+            file watching. If we do, we create that and delegate to it. Otherwise we use a <see cref="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.SimpleFileChangeWatcher" />.
+            </summary>
+            <remarks>
+            LSP clients don't always support file watching; this allows us to be flexible and use it when we can, but fall back to something else if we can't.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.LspFileChangeWatcher">
+            <summary>
+            An implementation of <see cref="T:Microsoft.CodeAnalysis.ProjectSystem.IFileChangeWatcher" /> that delegates file watching through the LSP protocol to the client.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.LspFileChangeWatcher.FileChangeContext._directoryWatchRegistration">
+            <summary>
+            The registration for the directory being watched in this context, if some were given.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.LspFileChangeWatcher.FileChangeContext._watchedFilesLock">
+            <summary>
+            A lock to guard updates to <see cref="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.LspFileChangeWatcher.FileChangeContext._watchedFiles" />. Using a reader/writer lock since file change notifications can be pretty chatty
+            and so we want to be able to process changes as fast as possible.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.LspFileChangeWatcher.FileChangeContext._watchedFiles">
+            <summary>
+            The list of file paths we're watching manually that were outside the directories being watched. The count in this case counts
+            the number of 
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.LspFileChangeWatcher.LspFileWatchRegistration">
+            <summary>
+            A small class to represent a registration that is sent to the client that we can cancel later. Since we send
+            registrations asynchronously, this tracks that so we don't send the unregister too early.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.SimpleFileChangeWatcher">
+            <summary>
+            A trivial implementation of <see cref="T:Microsoft.CodeAnalysis.ProjectSystem.IFileChangeWatcher" /> that is built atop the framework <see cref="T:System.IO.FileSystemWatcher" />. This is used if we can't
+            use the LSP one.
+            </summary>
+            <remarks>
+            This implementation is not remotely efficient, but is available as a fallback implementation. If this needs to regularly be used, then this should get some improvements.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.SimpleFileChangeWatcher.FileChangeContext._directoryFileSystemWatchers">
+            <summary>
+            The directory watchers for the <see cref="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.FileWatching.SimpleFileChangeWatcher.FileChangeContext._watchedDirectories"/>.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LanguageServerProjectSystem._gate">
+            <summary>
+            A single gate for code that is adding work to <see cref="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LanguageServerProjectSystem._projectsToLoadAndReload" />. This is just we don't have code simultaneously trying to load and unload solutions at once.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LanguageServerProjectSystem._binaryLogNumericSuffix">
+            <summary>
+            The suffix to use for the binary log name; incremented each time we have a new build. Should be incremented with <see cref="M:System.Threading.Interlocked.Increment(System.Int32@)"/>.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LanguageServerProjectSystem._binaryLogGuidSuffix">
+            <summary>
+            A GUID put into all binary log file names, so that way one session doesn't accidentally overwrite the logs from a prior session.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LanguageServerProjectSystem._loadedProjects">
+            <summary>
+            The list of loaded projects in the workspace, keyed by project file path. The outer dictionary is a concurrent dictionary since we may be loading
+            multiple projects at once; the key is a single List we just have a single thread processing any given project file. This is only to be used
+            in <see cref="M:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LanguageServerProjectSystem.LoadOrReloadProjectsAsync(Microsoft.CodeAnalysis.Collections.ImmutableSegmentedList{Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectToLoad},System.Threading.CancellationToken)" /> and downstream calls; any other updating of this (like unloading projects) should be achieved by adding
+            things to the <see cref="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LanguageServerProjectSystem._projectsToLoadAndReload" />.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LanguageServerWorkspace">
+            <summary>
+            Mark this type as an <see cref="T:Microsoft.CodeAnalysis.LanguageServer.ILspWorkspace"/> so that LSP document changes are pushed into this instance, causing
+            our <see cref="P:Microsoft.CodeAnalysis.Workspace.CurrentSolution"/> to stay in sync with all the document changes.
+            <para/>
+            There is a fundamental race with how solution snapshot data is stored in this type.  Specifically, two entities push
+            changes into this workspace.  First, the <see cref="T:Microsoft.CodeAnalysis.LanguageServer.LspWorkspaceManager"/> pushes changes into this relating to the
+            open/closed state of documents, and the current text contents that it knows about from <see
+            cref="F:Roslyn.LanguageServer.Protocol.Methods.TextDocumentDidChange"/> events.  Second, the project system may push changes about what files
+            actually exist in the workspace or not. As neither of these entities synchronizes on anything, we may hear about
+            things like changes to files that the project system has or has not told us about, or which it has added/removed
+            documents for already.
+            <para/>
+            Because of this, this type takes the stance that the actual presence/absence of files is dictated by the project
+            system.  However, if the files are present, the open/closed state and the contents are dictated by the <see
+            cref="T:Microsoft.CodeAnalysis.LanguageServer.LspWorkspaceManager"/>.  This incongruity is not a problem due to how the <see cref="T:Microsoft.CodeAnalysis.LanguageServer.LspWorkspaceManager"/>
+            ends up working.  For example, say the manager believes a file exists with some content, but the project system has
+            removed that file from this workspace.  In that case, the manager will simply not see this type as containing the
+            document, and it will then add the changed doc to the misc workspace.  Similarly, if the project system and
+            workspace manager ever disagree on document contents, that is never itself an issue as the workspace manager always
+            prefers the in-memory source text it is holding onto if the checksums of files change.
+            <para/>
+            Put another way, the lsp workspace manager will use the data in the workspace if it sees it is in alignment with
+            what it believes is the state of the world with respect to <see cref="F:Roslyn.LanguageServer.Protocol.Methods.TextDocumentDidOpen"/>/<see
+            cref="F:Roslyn.LanguageServer.Protocol.Methods.TextDocumentDidChange"/>/<see cref="F:Roslyn.LanguageServer.Protocol.Methods.TextDocumentDidClose"/>.  However, if it is not,
+            it will use the local information it has outside of the workspace to ensure it is always matched with the lsp
+            client.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LanguageServerWorkspace.ProjectSystemProjectFactory">
+            <summary>
+            Will be set by LanguageServerProjectSystem immediately after creating this instance.  Can't be passed into the
+            constructor as the factory needs a reference to this type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LoadedProject">
+            <summary>
+            Represents a single project loaded for a single target.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.LoadedProject._mostRecentFileInfo">
+            <summary>
+            The most recent version of the project design time build information; held onto so the next reload we can diff against this.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.ProjectLoadTelemetryEvent">
+            <summary>
+            Data type for the project load telemetry event.
+            Intentionally matches https://github.com/OmniSharp/omnisharp-roslyn/blob/master/src/OmniSharp.Abstractions/Models/Events/ProjectConfigurationMessage.cs
+            except for SdkVersion, which is unused by the client in the O# version.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.ProjectLoadTelemetryEvent.#ctor(System.String,System.String,System.Int32,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.Int32},System.Boolean)">
+            <summary>
+            Data type for the project load telemetry event.
+            Intentionally matches https://github.com/OmniSharp/omnisharp-roslyn/blob/master/src/OmniSharp.Abstractions/Models/Events/ProjectConfigurationMessage.cs
+            except for SdkVersion, which is unused by the client in the O# version.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.ProjectLoadTelemetryReporter.ReportProjectLoadTelemetryAsync(System.Collections.Generic.Dictionary{Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo,System.ValueTuple{System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.CommandLineReference},Microsoft.CodeAnalysis.OutputKind,System.Boolean}},Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectToLoad,System.Threading.CancellationToken)">
+            <summary>
+            This is designed to report project telemetry in an extremely similar way to O#
+            so that we are able to compare data accurately.
+            See https://github.com/OmniSharp/omnisharp-roslyn/blob/b2e64c6006beed49460f063117793f42ab2a8a5c/src/OmniSharp.MSBuild/ProjectLoadListener.cs#L36
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.ProjectLoadTelemetryReporter.GetProjectIdAsync(Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectToLoad)">
+            <summary>
+            This reads the solution file project id or hashes the contents+path
+            Matches O# implementation - https://github.com/OmniSharp/omnisharp-roslyn/blob/master/src/OmniSharp.MSBuild/ProjectLoadListener.cs#L88
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.VsReferenceHashingAlgorithm">
+            <summary>
+            Defines a reference hashing algorithm for reference names in telemetry
+            This is the same algorithm used for O# and VS, so must not change.
+            See https://github.com/OmniSharp/omnisharp-roslyn/blob/master/src/OmniSharp.MSBuild/VsReferenceHashingAlgorithm.cs
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.VsReferenceHashingAlgorithm.Mask">
+            <summary>
+            The format in which the input stream should be read.abstract Ulong bitmask
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.VsReferenceHashingAlgorithm.EncodeBytes(System.String)">
+            <summary>
+            Helper method to encode an input string in Unicode format before feeding through masking into hash function
+            </summary>
+            <param name="cleartext">The string to be encoded</param>
+            <returns>An array of byte in unicode format (wchars)</returns>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.VsReferenceHashingAlgorithm.ComputeHash(System.Byte[],System.UInt64)">
+            <summary>
+            Calculates the hashed value
+            </summary>
+            <param name="inputstream">Array of byte that represents the value that needs hashing</param>
+            <param name="crc">The format in which the input stream should be read: 0xffffffffffffffffUL</param>
+            <returns>A numerical value that is the hash</returns>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.VsReferenceHashingAlgorithm.HashInput(System.String)">
+            <summary>
+            Calls the hashing function on the input
+            </summary>
+            <param name="cleartext">The value that should be hashed</param>
+            <returns>A string representation of the hash value</returns>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectTelemetry.VsTfmAndFileExtHashingAlgorithm">
+            <summary>
+            Defines a tfm and file ext hashing algorithm for telemetry
+            This is the same algorithm used for O# and VS, so must not change.
+            See https://github.com/OmniSharp/omnisharp-roslyn/blob/b2e64c6006beed49460f063117793f42ab2a8a5c/src/OmniSharp.MSBuild/VsTfmAndFileExtHashingAlgorithm.cs
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectToLoad">
+            <summary>
+            The project path (and the guid if it game from a solution) of the project to load.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.ProjectToLoad.#ctor(System.String,System.String)">
+            <summary>
+            The project path (and the guid if it game from a solution) of the project to load.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.HostWorkspace.WorkspaceProjectFactoryService">
+            <summary>
+            An implementation of the brokered service <see cref="T:Microsoft.CodeAnalysis.Remote.ProjectSystem.IWorkspaceProjectFactoryService"/> that just maps calls to the underlying project system.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.Handler.DebugConfiguration.ProjectTargetFrameworkManager">
+            <summary>
+            Keeps track of which project uses what TFM.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.Handler.RestoreHandler">
+            <summary>
+            Given an input project (or none), runs restore on the project and streams the output
+            back to the client to display.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.Handler.RestoreHandler.#ctor(Microsoft.CodeAnalysis.LanguageServer.DotnetCliHelper)">
+            <summary>
+            Given an input project (or none), runs restore on the project and streams the output
+            back to the client to display.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.RestorableProjectsHandler">
+            <summary>
+            Handler that allows the client to retrieve a set of restorable projects.
+            Used to populate a list of projects that can be restored.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.RestorableProjectsHandler.#ctor(Microsoft.CodeAnalysis.LanguageServer.Handler.DebugConfiguration.ProjectTargetFrameworkManager)">
+            <summary>
+            Handler that allows the client to retrieve a set of restorable projects.
+            Used to populate a list of projects that can be restored.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServer.LanguageServerHost.Instance">
+            <summary>
+            A static reference to the server instance.
+            Used by components to send notifications and requests back to the client.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.LanguageServer.WorkspaceRegistrationService">
+            <summary>
+            Implements the workspace registration service so that any new workspaces we
+            create are automatically registered by <see cref="T:Microsoft.CodeAnalysis.LanguageServer.LspWorkspaceRegistrationEventListener"/>
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.Logging.LspLogMessageLogger">
+            <summary>
+            Implements an ILogger that seamlessly switches from a fallback logger
+            to LSP log messages as soon as the server initializes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.Logging.LspServiceLogger">
+            <summary>
+            Implements <see cref="T:Microsoft.CommonLanguageServerProtocol.Framework.AbstractLspLogger"/> by sending LSP log messages back to the client.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.Logging.LspServiceLogger.LogInformation(System.String,System.Object[])">
+            <summary>
+            TODO - Switch this to call LogInformation once appropriate callers have been changed to LogDebug.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.ShowToastNotification">
+            <summary>
+            Implements a custom version of the standard 'window/showMessageRequest' to display a toast on the client.
+            The standard version requires us to wait for a response and then do something on the server with it.
+            That can be useful in certain cases, but a lot of the time we just want to show a toast with buttons that map to client side commands.
+            This request allows us to do just that.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.StarredSuggestions.StarredCompletionAssemblyHelper.s_gate">
+            <summary>
+            A gate to guard the actual creation of <see cref="F:Microsoft.CodeAnalysis.LanguageServer.StarredSuggestions.StarredCompletionAssemblyHelper.s_completionProvider"/>. This just prevents us from trying to create the provider more than once; once the field is set it
+            won't change again.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.StarredSuggestions.StarredCompletionAssemblyHelper.InitializeInstance(System.String,Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.CodeAnalysis.LanguageServer.BrokeredServices.ServiceBrokerFactory)">
+            <summary>
+            Initializes CompletionsAssemblyHelper singleton
+            </summary>
+            <param name="completionsAssemblyLocation">Location of dll for starred completion</param>
+            <param name="loggerFactory">Factory for creating new logger</param>
+            <param name="serviceBrokerFactory">Service broker with access to necessary remote services</param>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.Testing.RunTestsHandler.GetShortTimespan(System.TimeSpan)">
+            <summary>
+            Format a timespan as a string similar to '5m 2s', omitting any value that is not present.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.Testing.RunTestsHandler.BuildAsync(Microsoft.CodeAnalysis.Document,Microsoft.CodeAnalysis.LanguageServer.Handler.BufferedProgress{Microsoft.CodeAnalysis.LanguageServer.Handler.Testing.RunTestsPartialResult},System.Threading.CancellationToken)">
+             <summary>
+             Shells out to the .NET CLI to build the project to ensure that its relatively up to date as of this request.
+             We can never be entirely sure that this build happens on exactly the same snapshot that this request was made on
+             as something could have changed on the client side immediately after this request was triggered.
+            
+             However if we don't do a build it is likely the user code is very different from what they last built
+             which results in a confusing experience.
+             </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.Testing.TestDiscoverer.DiscoverTestsAsync(Roslyn.LanguageServer.Protocol.Range,Microsoft.CodeAnalysis.Document,System.String,System.String,Microsoft.CodeAnalysis.LanguageServer.Handler.BufferedProgress{Microsoft.CodeAnalysis.LanguageServer.Handler.Testing.RunTestsPartialResult},Microsoft.TestPlatform.VsTestConsole.TranslationLayer.VsTestConsoleWrapper,System.Threading.CancellationToken)">
+             <summary>
+             Finds tests in the specified document in the specified range.
+            
+             Note that since tests run against the last built dll,
+             </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.LanguageServer.Testing.TestDiscoverer.DiscoveryHandler">
+            <summary>
+            Implementation of <see cref="T:Microsoft.VisualStudio.TestPlatform.ObjectModel.Client.ITestDiscoveryEventsHandler"/>
+            Calls to implementation methods will be synchronous.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.Testing.TestDiscoverer.DiscoveryHandler.#ctor(Microsoft.CodeAnalysis.LanguageServer.Handler.BufferedProgress{Microsoft.CodeAnalysis.LanguageServer.Handler.Testing.RunTestsPartialResult})">
+            <summary>
+            Implementation of <see cref="T:Microsoft.VisualStudio.TestPlatform.ObjectModel.Client.ITestDiscoveryEventsHandler"/>
+            Calls to implementation methods will be synchronous.
+            </summary>
+        </member>
+        <member name="F:Microsoft.CodeAnalysis.LanguageServer.Testing.TestRunner.DefaultRunSettings">
+            <summary>
+            A default value for run settings.  While the vstest console included with newer SDKs does
+            support passing in a null run settings value, the vstest console in older SDKs (.net 6 for example)
+            will throw if we pass a null value.  So for our default we hardcode an empty XML configuration.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.LanguageServer.Testing.TestRunner.TestRunHandler.CreateTestCaseReportMessage(Microsoft.VisualStudio.TestPlatform.ObjectModel.Client.TestRunChangedEventArgs)">
+            <summary>
+            Create a nicely formatted report of the test outcome including any error message or stack trace.
+            Ensures that we're not creating duplicate blank lines and have proper indentation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Aborted">
+            <summary>Aborted!</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Attaching_debugger_to_process_0">
+            <summary>Attaching debugger to process {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Building_project">
+            <summary>Building project...</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Canceled">
+            <summary>Canceled!</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Client_failed_to_attach_the_debugger">
+            <summary>Client failed to attach the debugger</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Completed_reload_of_all_projects_in_0">
+            <summary>Completed (re)load of all projects in {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Debugger_attached">
+            <summary>Debugger attached</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Debugging_tests">
+            <summary>Debugging tests...</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Discovering_tests">
+            <summary>Discovering tests...</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Exception_thrown_while_loading_0">
+            <summary>Exception thrown while loading {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Failed">
+            <summary>Failed!</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Failed_0_Passed_1_Skipped_2_Total_3_Duration_4">
+            <summary>Failed:    {0}, Passed:    {1}, Skipped:    {2}, Total:    {3}, Duration: {4}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Failed_to_read_runsettings_file_at_0_1">
+            <summary>Failed to read .runsettings file at {0}:{1}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Failed_to_run_restore_on_0">
+            <summary>Failed to run restore on {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Found_0_tests_in_1">
+            <summary>Found {0} tests in {1}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Loading_0">
+            <summary>Loading {0}...</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Message">
+            <summary>Message</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Nothing_found_to_restore">
+            <summary>Nothing found to restore</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.No_test_methods_found_in_requested_range">
+            <summary>No test methods found in requested range</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Passed">
+            <summary>Passed!</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Projects_failed_to_load_because_Mono_could_not_be_found">
+            <summary>Projects failed to load because the Mono could not be found. Ensure that Mono and MSBuild are installed, and check the logs for details.</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Projects_failed_to_load_because_MSBuild_could_not_be_found">
+            <summary>Projects failed to load because the .NET Framework build tools could not be found. Try installing Visual Studio or the Visual Studio Build Tools package, or check the logs for details.</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Restore">
+            <summary>Restore</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Restore_complete">
+            <summary>Restore complete</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Restore_started">
+            <summary>Restore started</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Restoring_0">
+            <summary>Restoring {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Running_dotnet_restore_on_0">
+            <summary>Running dotnet restore on {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Project_0_loaded_by_CSharp_Dev_Kit">
+            <summary>Project {0} loaded by C# Dev Kit</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Running_tests">
+            <summary>Running tests...</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Runsettings_file_does_not_exist_at_0">
+            <summary>.runsettings file does not exist at {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Show_csharp_logs">
+            <summary>Show C# logs</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Stack_Trace">
+            <summary>Stack Trace</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Starting_test_discovery">
+            <summary>Starting test discovery</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Starting_test_run">
+            <summary>Starting test run</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Successfully_completed_load_of_0">
+            <summary>Successfully completed load of {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Summary">
+            <summary>Summary</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Test_discovery_aborted">
+            <summary>Test discovery aborted</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Test_run_error">
+            <summary>Test run error: {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.There_were_problems_loading_project_0_See_log_for_details">
+            <summary>There were problems loading project {0}. See log for details.</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Using_runsettings_file_at_0">
+            <summary>Using .runsettings file at {0}</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.LanguageServer.LanguageServerResources.Project_0_has_unresolved_dependencies">
+            <summary>Project {0} has unresolved dependencies</summary>
+        </member>
+    </members>
+</doc>

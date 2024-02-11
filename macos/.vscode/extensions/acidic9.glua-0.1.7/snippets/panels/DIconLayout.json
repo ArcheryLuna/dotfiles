@@ -1,0 +1,128 @@
+{
+    "Copy": {
+        "body": [
+            "Copy()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "Copy"
+    },
+    "CopyContents": {
+        "body": [
+            "CopyContents(${1:from})$0"
+        ],
+        "description": "DICONLAYOUT [Client] \n\n[Panel] from\n  DIconLayout to copy from.",
+        "prefix": "CopyContents"
+    },
+    "GetBorder": {
+        "body": [
+            "GetBorder()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "GetBorder"
+    },
+    "GetLayoutDir": {
+        "body": [
+            "GetLayoutDir()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "GetLayoutDir"
+    },
+    "GetSpaceX": {
+        "body": [
+            "GetSpaceX()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "GetSpaceX"
+    },
+    "GetSpaceY": {
+        "body": [
+            "GetSpaceY()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "GetSpaceY"
+    },
+    "GetStretchHeight": {
+        "body": [
+            "GetStretchHeight()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "GetStretchHeight"
+    },
+    "GetStretchWidth": {
+        "body": [
+            "GetStretchWidth()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "GetStretchWidth"
+    },
+    "Layout": {
+        "body": [
+            "Layout()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "Layout"
+    },
+    "LayoutIcons_LEFT": {
+        "body": [
+            "LayoutIcons_LEFT()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "LayoutIcons_LEFT"
+    },
+    "LayoutIcons_TOP": {
+        "body": [
+            "LayoutIcons_TOP()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "LayoutIcons_TOP"
+    },
+    "OnModified": {
+        "body": [
+            "OnModified()$0"
+        ],
+        "description": "DICONLAYOUT [Client]",
+        "prefix": "OnModified"
+    },
+    "SetBorder": {
+        "body": [
+            "SetBorder(${1:width})$0"
+        ],
+        "description": "DICONLAYOUT [Client] \n\n[number] width\n  The border (padding) inside the DIconLayout.",
+        "prefix": "SetBorder"
+    },
+    "SetLayoutDir": {
+        "body": [
+            "SetLayoutDir(${1:direction})$0"
+        ],
+        "description": "DICONLAYOUT [Client] \n\n[number] direction\n  DOCK_ Enums",
+        "prefix": "SetLayoutDir"
+    },
+    "SetSpaceX": {
+        "body": [
+            "SetSpaceX(${1:xSpacing})$0"
+        ],
+        "description": "DICONLAYOUT [Client] \n\n[number] xSpacing\n  The width of the gap between child objects.",
+        "prefix": "SetSpaceX"
+    },
+    "SetSpaceY": {
+        "body": [
+            "SetSpaceY(${1:ySpacing})$0"
+        ],
+        "description": "DICONLAYOUT [Client] \n\n[number] ySpacing\n  The vertical gap between rows in the DIconLayout.",
+        "prefix": "SetSpaceY"
+    },
+    "SetStretchHeight": {
+        "body": [
+            "SetStretchHeight(${1:do_stretch})$0"
+        ],
+        "description": "DICONLAYOUT [Client] \n\n[boolean] do_stretch",
+        "prefix": "SetStretchHeight"
+    },
+    "SetStretchWidth": {
+        "body": [
+            "SetStretchWidth(${1:stretchW})$0"
+        ],
+        "description": "DICONLAYOUT [Client] \n\n[boolean] stretchW",
+        "prefix": "SetStretchWidth"
+    }
+}

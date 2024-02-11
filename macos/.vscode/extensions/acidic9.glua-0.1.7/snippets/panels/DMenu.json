@@ -1,0 +1,37 @@
+{
+    "AddOption": {
+        "body": [
+            "AddOption(${1:name}, ${2:func=nil})$0"
+        ],
+        "description": "DMENU [Client] Add an option to the DMenu\n\n[string] name\n  Name of the option.\n\n[function] func=nil\n  Function to execute when this option is clicked.",
+        "prefix": "AddOption"
+    },
+    "AddSpacer": {
+        "body": [
+            "AddSpacer()$0"
+        ],
+        "description": "DMENU [Client]",
+        "prefix": "AddSpacer"
+    },
+    "AddSubMenu": {
+        "body": [
+            "AddSubMenu(${1:Name}, ${2:func=nil})$0"
+        ],
+        "description": "DMENU [Client] Add a sub menu to the DMenu\n\n[string] Name\n  Name of the sub menu.\n\n[function] func=nil\n  Function to execute when this sub menu is clicked.",
+        "prefix": "AddSubMenu"
+    },
+    "GetChild": {
+        "body": [
+            "GetChild(${1:childIndex})$0"
+        ],
+        "description": "DMENU [Client] \n\n[number] childIndex\n  The index of the child to get.",
+        "prefix": "GetChild"
+    },
+    "Open": {
+        "body": [
+            "Open(${1:x=gui.MouseX()}, ${2:y=gui.MouseY()}, ${3:skipanimation}, ${4:ownerpanel})$0"
+        ],
+        "description": "DMENU [Client] Opens the DMenu at the current mouse position\n\n[number] x=gui.MouseX()\n  Position (X coordinate) to open the menu at.\n\n[number] y=gui.MouseY()\n  Position (Y coordinate) to open the menu at.\n\n[any] skipanimation\n  This argument does nothing.\n\n[Panel] ownerpanel",
+        "prefix": "Open"
+    }
+}

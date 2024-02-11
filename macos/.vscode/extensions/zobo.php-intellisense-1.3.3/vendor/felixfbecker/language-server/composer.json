@@ -1,0 +1,84 @@
+{
+    "name": "felixfbecker/language-server",
+    "description": "PHP Implementation of the Visual Studio Code Language Server Protocol",
+    "license": "ISC",
+    "keywords": [
+        "php",
+        "language",
+        "server",
+        "microsoft",
+        "visual",
+        "studio",
+        "code",
+        "intellisense",
+        "autocompletion",
+        "refactor"
+    ],
+    "authors": [
+        {
+            "name": "Felix Becker",
+            "email": "felix.b@outlook.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/zobo/php-language-server-protocol"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/microsoft/tolerant-php-parser.git"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "composer/xdebug-handler": "^1.0",
+        "felixfbecker/advanced-json-rpc": "^3.0.0",
+        "felixfbecker/language-server-protocol": "dev-main",
+        "jetbrains/phpstorm-stubs": "dev-master",
+        "microsoft/tolerant-php-parser": "dev-main as 0.1.2",
+        "netresearch/jsonmapper": "^1.0",
+        "phpdocumentor/reflection-docblock": "^5.2.2",
+        "psr/log": "^1.0",
+        "sabre/event": "^5.0",
+        "sabre/uri": "^2.0",
+        "webmozart/glob": "^4.6",
+        "webmozart/path-util": "^2.3"
+    },
+    "require-dev": {
+        "phan/phan": "^5.2",
+        "phpstan/phpstan": "^1.9",
+        "phpunit/phpunit": "^9.0",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "LanguageServer\\": "src/"
+        },
+        "files" : [
+            "src/utils.php",
+            "src/FqnUtilities.php",
+            "src/ParserHelpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LanguageServer\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/php-language-server.php"
+    ],
+    "scripts": {
+        "parse-stubs": "LanguageServer\\ComposerScripts::parseStubs",
+        "post-install-cmd": "@parse-stubs",
+        "post-update-cmd": "@parse-stubs",
+        "test": "vendor/bin/phpunit",
+        "lint": "vendor/bin/phpcs"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

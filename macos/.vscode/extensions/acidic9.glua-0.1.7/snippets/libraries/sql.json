@@ -1,0 +1,58 @@
+{
+    "sql.Begin": {
+        "body": [
+            "sql.Begin()$0"
+        ],
+        "description": "SQL [Shared/Menu]",
+        "prefix": "sql.Begin"
+    },
+    "sql.Commit": {
+        "body": [
+            "sql.Commit()$0"
+        ],
+        "description": "SQL [Shared/Menu]",
+        "prefix": "sql.Commit"
+    },
+    "sql.LastError": {
+        "body": [
+            "sql.LastError()$0"
+        ],
+        "description": "SQL [Shared/Menu]",
+        "prefix": "sql.LastError"
+    },
+    "sql.Query": {
+        "body": [
+            "sql.Query(${1:query})$0"
+        ],
+        "description": "SQL [Shared/Menu] Performs a query on the local SQLite database, returns a table as result set, nil if result is empty and false on error.\n\n[string] query\n  The query to execute.",
+        "prefix": "sql.Query"
+    },
+    "sql.QueryRow": {
+        "body": [
+            "sql.QueryRow(${1:query}, ${2:row=1})$0"
+        ],
+        "description": "SQL [Shared/Menu] Performs the query like sql.Query, but returns the first row found.\n\n[string] query\n  The input query\n\n[number] row=1\n  The row number. Say we receive back 5 rows, putting 3 as this argument will give us row #3.",
+        "prefix": "sql.QueryRow"
+    },
+    "sql.QueryValue": {
+        "body": [
+            "sql.QueryValue(${1:query})$0"
+        ],
+        "description": "SQL [Shared/Menu] \n\n[string] query\n  The input query.",
+        "prefix": "sql.QueryValue"
+    },
+    "sql.SQLStr": {
+        "body": [
+            "sql.SQLStr(${1:string}, ${2:bNoQuotes=false})$0"
+        ],
+        "description": "SQL [Shared/Menu] Escapes dangerous characters and symbols from user input used in an SQLite SQL Query.\n\n[string] string\n  The string to be escaped.\n\n[boolean] bNoQuotes=false\n  Set this as true, and the function will not wrap the input string in apostrophes.",
+        "prefix": "sql.SQLStr"
+    },
+    "sql.TableExists": {
+        "body": [
+            "sql.TableExists(${1:tableName})$0"
+        ],
+        "description": "SQL [Shared/Menu] \n\n[string] tableName\n  The name of the table to check.",
+        "prefix": "sql.TableExists"
+    }
+}

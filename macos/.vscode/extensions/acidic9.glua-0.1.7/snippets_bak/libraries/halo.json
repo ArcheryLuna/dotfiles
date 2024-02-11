@@ -1,0 +1,23 @@
+{
+	"halo/Add": {
+		"body": [
+			"halo.Add(${1:entities}, ${2:color}, ${3:blurX=2}, ${4:blurY=2}, ${5:passes=1}, ${6:additive=true}, ${7:ignoreZ=false})$0"
+		],
+		"description": "Applies a \u0026#34;halo\u0026#34; glow effect to one or multiple entities.",
+		"prefix": "halo.Add"
+	},
+	"halo/Render": {
+		"body": [
+			"halo.Render(${1:entry})$0"
+		],
+		"description": "Renders a halo according to the specified table, only used internally, called from a PostDrawEffects hook added by the halo library",
+		"prefix": "halo.Render"
+	},
+	"halo/RenderedEntity": {
+		"body": [
+			"halo.RenderedEntity()$0"
+		],
+		"description": "Returns the entity the",
+		"prefix": "halo.RenderedEntity"
+	}
+}

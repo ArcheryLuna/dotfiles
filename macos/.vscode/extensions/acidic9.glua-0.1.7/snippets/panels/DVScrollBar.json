@@ -1,0 +1,79 @@
+{
+    "AddScroll": {
+        "body": [
+            "AddScroll(${1:add})$0"
+        ],
+        "description": "DVSCROLLBAR [Client] \n\n[number] add\n  How much to scroll downwards. Can be negative for upwards scroll",
+        "prefix": "AddScroll"
+    },
+    "AnimateTo": {
+        "body": [
+            "AnimateTo(${1:scroll}, ${2:length}, ${3:delay=0}, ${4:ease=-1})$0"
+        ],
+        "description": "DVSCROLLBAR [Client] Smoothly scrolls to given level.\n\n[number] scroll\n  The scroll level to animate to. In pixels from the top ( from 0 )\n\n[number] length\n  Length of the animation in seconds\n\n[number] delay=0\n  Delay of the animation in seconds\n\n[number] ease=-1\n  See Panel:NewAnimation for explanation.",
+        "prefix": "AnimateTo"
+    },
+    "BarScale": {
+        "body": [
+            "BarScale()$0"
+        ],
+        "description": "DVSCROLLBAR [Client]",
+        "prefix": "BarScale"
+    },
+    "GetHideButtons": {
+        "body": [
+            "GetHideButtons()$0"
+        ],
+        "description": "DVSCROLLBAR [Client]",
+        "prefix": "GetHideButtons"
+    },
+    "GetOffset": {
+        "body": [
+            "GetOffset()$0"
+        ],
+        "description": "DVSCROLLBAR [Client]",
+        "prefix": "GetOffset"
+    },
+    "GetScroll": {
+        "body": [
+            "GetScroll()$0"
+        ],
+        "description": "DVSCROLLBAR [Client]",
+        "prefix": "GetScroll"
+    },
+    "Grip": {
+        "body": [
+            "Grip()$0"
+        ],
+        "description": "DVSCROLLBAR [Client]",
+        "prefix": "Grip"
+    },
+    "SetHideButtons": {
+        "body": [
+            "SetHideButtons(${1:hide})$0"
+        ],
+        "description": "DVSCROLLBAR [Client] \n\n[boolean] hide\n  True to hide",
+        "prefix": "SetHideButtons"
+    },
+    "SetScroll": {
+        "body": [
+            "SetScroll(${1:scroll})$0"
+        ],
+        "description": "DVSCROLLBAR [Client] \n\n[number] scroll",
+        "prefix": "SetScroll"
+    },
+    "SetUp": {
+        "body": [
+            "SetUp(${1:barSize}, ${2:cavasSize})$0"
+        ],
+        "description": "DVSCROLLBAR [Client] \n\n[number] barSize\n  The size of the panel that holds the canvas, basically size of \"1 page\".\n\n[number] cavasSize\n  The total size of the canvas, this typically is the bigger number.",
+        "prefix": "SetUp"
+    },
+    "Value": {
+        "body": [
+            "Value()$0"
+        ],
+        "description": "DVSCROLLBAR [Client]",
+        "prefix": "Value"
+    }
+}

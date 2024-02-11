@@ -1,0 +1,9 @@
+{
+	"CSEnt/Remove": {
+		"body": [
+			"Remove()$0"
+		],
+		"description": "Removes the clientside entity",
+		"prefix": "Remove"
+	}
+}

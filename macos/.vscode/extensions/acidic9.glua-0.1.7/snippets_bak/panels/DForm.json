@@ -1,0 +1,93 @@
+{
+	"DForm/AddItem": {
+		"body": [
+			"AddItem(${1:left}, ${2:right})$0"
+		],
+		"description": "Adds one or two items to the DForm. If this method is called with only one argument, it is added to the bottom of the form. If two arguments are passed, they are placed side-by-side at the bottom of the form.",
+		"prefix": "AddItem"
+	},
+	"DForm/Button": {
+		"body": [
+			"Button(${1:text}, ${2:concmd}, ${3:args})$0"
+		],
+		"description": "Adds a",
+		"prefix": "Button"
+	},
+	"DForm/CheckBox": {
+		"body": [
+			"CheckBox(${1:label}, ${2:convar})$0"
+		],
+		"description": "Adds a",
+		"prefix": "CheckBox"
+	},
+	"DForm/Clear": {
+		"body": [
+			"Clear()$0"
+		],
+		"description": "Clears all items from the",
+		"prefix": "Clear"
+	},
+	"DForm/ComboBox": {
+		"body": [
+			"ComboBox(${1:title}, ${2:convar})$0"
+		],
+		"description": "Adds a",
+		"prefix": "ComboBox"
+	},
+	"DForm/ControlHelp": {
+		"body": [
+			"ControlHelp(${1:help})$0"
+		],
+		"description": "Adds a",
+		"prefix": "ControlHelp"
+	},
+	"DForm/Help": {
+		"body": [
+			"Help(${1:help})$0"
+		],
+		"description": "Adds a",
+		"prefix": "Help"
+	},
+	"DForm/ListBox": {
+		"body": [
+			"ListBox(${1:label})$0"
+		],
+		"description": "Adds a",
+		"prefix": "ListBox"
+	},
+	"DForm/NumSlider": {
+		"body": [
+			"NumSlider(${1:label}, ${2:convar}, ${3:min}, ${4:max}, ${5:decimals=nil})$0"
+		],
+		"description": "Adds a",
+		"prefix": "NumSlider"
+	},
+	"DForm/NumberWang": {
+		"body": [
+			"NumberWang(${1:label}, ${2:convar}, ${3:min}, ${4:max}, ${5:decimals=nil})$0"
+		],
+		"description": "Adds a",
+		"prefix": "NumberWang"
+	},
+	"DForm/PanelSelect": {
+		"body": [
+			"PanelSelect()$0"
+		],
+		"description": "Creates a",
+		"prefix": "PanelSelect"
+	},
+	"DForm/SetName": {
+		"body": [
+			"SetName(${1:name})$0"
+		],
+		"description": "Sets the title (header) name of the DForm. This is",
+		"prefix": "SetName"
+	},
+	"DForm/TextEntry": {
+		"body": [
+			"TextEntry(${1:label}, ${2:convar})$0"
+		],
+		"description": "Adds a",
+		"prefix": "TextEntry"
+	}
+}

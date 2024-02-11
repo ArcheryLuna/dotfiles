@@ -1,0 +1,205 @@
+{
+	"constraint/AddConstraintTable": {
+		"body": [
+			"constraint.AddConstraintTable(${1:ent1}, ${2:constrt}, ${3:ent2=nil}, ${4:ent3=nil}, ${5:ent4=nil})$0"
+		],
+		"description": "Stores information about constraints in an entity\u0026#39;s table.",
+		"prefix": "constraint.AddConstraintTable"
+	},
+	"constraint/AddConstraintTableNoDelete": {
+		"body": [
+			"constraint.AddConstraintTableNoDelete(${1:ent1}, ${2:constrt}, ${3:ent2=nil}, ${4:ent3=nil}, ${5:ent4=nil})$0"
+		],
+		"description": "Stores info about the constraints on the entity\u0026#39;s table. The only difference between this and",
+		"prefix": "constraint.AddConstraintTableNoDelete"
+	},
+	"constraint/AdvBallsocket": {
+		"body": [
+			"constraint.AdvBallsocket(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:forcelimit}, ${8:torquelimit}, ${9:xmin}, ${10:ymin}, ${11:zmin}, ${12:xmax}, ${13:ymax}, ${14:zmax}, ${15:xfric}, ${16:yfric}, ${17:zfric}, ${18:onlyrotation}, ${19:nocollide})$0"
+		],
+		"description": "Creates an advanced ballsocket (ragdoll) constraint.",
+		"prefix": "constraint.AdvBallsocket"
+	},
+	"constraint/Axis": {
+		"body": [
+			"constraint.Axis(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:forcelimit}, ${8:torquelimit}, ${9:friction}, ${10:nocollide}, ${11:LocalAxis}, ${12:DontAddTable})$0"
+		],
+		"description": "Creates an axis constraint.",
+		"prefix": "constraint.Axis"
+	},
+	"constraint/Ballsocket": {
+		"body": [
+			"constraint.Ballsocket(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LocalPos}, ${6:forcelimit}, ${7:torquelimit}, ${8:nocollide})$0"
+		],
+		"description": "Creates a ballsocket joint.",
+		"prefix": "constraint.Ballsocket"
+	},
+	"constraint/CanConstrain": {
+		"body": [
+			"constraint.CanConstrain(${1:ent}, ${2:bone})$0"
+		],
+		"description": "Basic checks to make sure that the specified entity and bone are valid. Returns false if we should not be constraining the entity.",
+		"prefix": "constraint.CanConstrain"
+	},
+	"constraint/CreateKeyframeRope": {
+		"body": [
+			"constraint.CreateKeyframeRope(${1:pos}, ${2:width}, ${3:material}, ${4:Constraint}, ${5:Ent1}, ${6:LPos1}, ${7:Bone1}, ${8:Ent2}, ${9:LPos2}, ${10:Bone2}, ${11:kv})$0"
+		],
+		"description": "Creates a rope without any constraint",
+		"prefix": "constraint.CreateKeyframeRope"
+	},
+	"constraint/CreateStaticAnchorPoint": {
+		"body": [
+			"constraint.CreateStaticAnchorPoint(${1:pos})$0"
+		],
+		"description": "Creates an invisible, non-moveable anchor point in the world to which things can be attached.",
+		"prefix": "constraint.CreateStaticAnchorPoint"
+	},
+	"constraint/Elastic": {
+		"body": [
+			"constraint.Elastic(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:constant}, ${8:damping}, ${9:rdamping}, ${10:material}, ${11:width}, ${12:stretchonly})$0"
+		],
+		"description": "Creates an elastic constraint.",
+		"prefix": "constraint.Elastic"
+	},
+	"constraint/Find": {
+		"body": [
+			"constraint.Find(${1:ent1}, ${2:ent2}, ${3:type}, ${4:bone1}, ${5:bone2})$0"
+		],
+		"description": "Returns the constraint of a specified type between two entities, if it exists",
+		"prefix": "constraint.Find"
+	},
+	"constraint/FindConstraint": {
+		"body": [
+			"constraint.FindConstraint(${1:ent}, ${2:type})$0"
+		],
+		"description": "Returns the first constraint of a specific type directly connected to the entity found",
+		"prefix": "constraint.FindConstraint"
+	},
+	"constraint/FindConstraintEntity": {
+		"body": [
+			"constraint.FindConstraintEntity(${1:ent}, ${2:type})$0"
+		],
+		"description": "Returns the other entity involved in the first constraint of a specific type directly connected to the entity",
+		"prefix": "constraint.FindConstraintEntity"
+	},
+	"constraint/FindConstraints": {
+		"body": [
+			"constraint.FindConstraints(${1:ent}, ${2:type})$0"
+		],
+		"description": "Returns a table of all constraints of a specific type directly connected to the entity",
+		"prefix": "constraint.FindConstraints"
+	},
+	"constraint/ForgetConstraints": {
+		"body": [
+			"constraint.ForgetConstraints(${1:ent})$0"
+		],
+		"description": "Make this entity forget any constraints it knows about. Note that this will not actually remove the constraints.",
+		"prefix": "constraint.ForgetConstraints"
+	},
+	"constraint/GetAllConstrainedEntities": {
+		"body": [
+			"constraint.GetAllConstrainedEntities(${1:ent}, ${2:ResultTable=nil})$0"
+		],
+		"description": "Returns a table of all entities recursively constrained to an entitiy.",
+		"prefix": "constraint.GetAllConstrainedEntities"
+	},
+	"constraint/GetTable": {
+		"body": [
+			"constraint.GetTable(${1:ent})$0"
+		],
+		"description": "Returns a table of all constraints directly connected to the entity",
+		"prefix": "constraint.GetTable"
+	},
+	"constraint/HasConstraints": {
+		"body": [
+			"constraint.HasConstraints(${1:ent})$0"
+		],
+		"description": "Returns true if the entity has constraints attached to it",
+		"prefix": "constraint.HasConstraints"
+	},
+	"constraint/Hydraulic": {
+		"body": [
+			"constraint.Hydraulic(${1:pl}, ${2:Ent1}, ${3:Ent2}, ${4:Bone1}, ${5:Bone2}, ${6:LPos1}, ${7:LPos2}, ${8:Length1}, ${9:Length2}, ${10:width}, ${11:key}, ${12:fixed}, ${13:speed}, ${14:material})$0"
+		],
+		"description": "Creates a Hydraulic constraint.",
+		"prefix": "constraint.Hydraulic"
+	},
+	"constraint/Keepupright": {
+		"body": [
+			"constraint.Keepupright(${1:ent}, ${2:ang}, ${3:bone}, ${4:angularLimit})$0"
+		],
+		"description": "Creates a keep upright constraint.",
+		"prefix": "constraint.Keepupright"
+	},
+	"constraint/Motor": {
+		"body": [
+			"constraint.Motor(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:friction}, ${8:torque}, ${9:forcetime}, ${10:nocollide}, ${11:toggle}, ${12:pl}, ${13:forcelimit}, ${14:numpadkey_fwd}, ${15:numpadkey_bwd}, ${16:direction}, ${17:LocalAxis})$0"
+		],
+		"description": "Creates a motor constraint.",
+		"prefix": "constraint.Motor"
+	},
+	"constraint/Muscle": {
+		"body": [
+			"constraint.Muscle(${1:pl}, ${2:Ent1}, ${3:Ent2}, ${4:Bone1}, ${5:Bone2}, ${6:LPos1}, ${7:LPos2}, ${8:Length1}, ${9:Length2}, ${10:width}, ${11:key}, ${12:fixed}, ${13:period}, ${14:amplitude}, ${15:starton}, ${16:material})$0"
+		],
+		"description": "Creates a muscle constraint.",
+		"prefix": "constraint.Muscle"
+	},
+	"constraint/NoCollide": {
+		"body": [
+			"constraint.NoCollide(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2})$0"
+		],
+		"description": "Creates an no-collide \u0026#34;constraint\u0026#34;. Disables collision between two entities.",
+		"prefix": "constraint.NoCollide"
+	},
+	"constraint/Pulley": {
+		"body": [
+			"constraint.Pulley(${1:Ent1}, ${2:Ent4}, ${3:Bone1}, ${4:Bone4}, ${5:LPos1}, ${6:LPos4}, ${7:WPos2}, ${8:WPos3}, ${9:forcelimit}, ${10:rigid}, ${11:width}, ${12:material})$0"
+		],
+		"description": "Creates a pulley constraint.",
+		"prefix": "constraint.Pulley"
+	},
+	"constraint/RemoveAll": {
+		"body": [
+			"constraint.RemoveAll(${1:ent})$0"
+		],
+		"description": "Attempts to remove all constraints associated with an entity",
+		"prefix": "constraint.RemoveAll"
+	},
+	"constraint/RemoveConstraints": {
+		"body": [
+			"constraint.RemoveConstraints(${1:ent}, ${2:type})$0"
+		],
+		"description": "Attempts to remove all constraints of a specified type associated with an entity",
+		"prefix": "constraint.RemoveConstraints"
+	},
+	"constraint/Rope": {
+		"body": [
+			"constraint.Rope(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:length}, ${8:addlength}, ${9:forcelimit}, ${10:width}, ${11:material}, ${12:rigid})$0"
+		],
+		"description": "Creates a rope constraint - with rope!",
+		"prefix": "constraint.Rope"
+	},
+	"constraint/Slider": {
+		"body": [
+			"constraint.Slider(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:width}, ${8:material})$0"
+		],
+		"description": "Creates a slider constraint.",
+		"prefix": "constraint.Slider"
+	},
+	"constraint/Weld": {
+		"body": [
+			"constraint.Weld(${1:ent1}, ${2:ent2}, ${3:bone1}, ${4:bone2}, ${5:forcelimit}, ${6:nocollide}, ${7:deleteent1onbreak})$0"
+		],
+		"description": "Creates a weld constraint",
+		"prefix": "constraint.Weld"
+	},
+	"constraint/Winch": {
+		"body": [
+			"constraint.Winch(${1:pl}, ${2:Ent1}, ${3:Ent2}, ${4:Bone1}, ${5:Bone2}, ${6:LPos1}, ${7:LPos2}, ${8:width}, ${9:key}, ${10:key}, ${11:fwd_speed}, ${12:bwd_speed}, ${13:material}, ${14:toggle})$0"
+		],
+		"description": "Creates a Winch constraint.",
+		"prefix": "constraint.Winch"
+	}
+}

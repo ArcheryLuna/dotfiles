@@ -1,0 +1,65 @@
+{
+    "Deploy": {
+        "body": [
+            "Deploy()$0"
+        ],
+        "description": "TOOL [Shared]",
+        "prefix": "Deploy"
+    },
+    "DrawHUD": {
+        "body": [
+            "DrawHUD()$0"
+        ],
+        "description": "TOOL [Client]",
+        "prefix": "DrawHUD"
+    },
+    "DrawToolScreen": {
+        "body": [
+            "DrawToolScreen(${1:width}, ${2:height})$0"
+        ],
+        "description": "TOOL [Client] Called after the default tool screen has been drawn.\n\n[number] width\n  The width of the tool's screen in pixels.\n\n[number] height\n  The height of the tool's screen in pixels.",
+        "prefix": "DrawToolScreen"
+    },
+    "FreezeMovement": {
+        "body": [
+            "FreezeMovement()$0"
+        ],
+        "description": "TOOL [Client]",
+        "prefix": "FreezeMovement"
+    },
+    "Holster": {
+        "body": [
+            "Holster()$0"
+        ],
+        "description": "TOOL [Shared]",
+        "prefix": "Holster"
+    },
+    "LeftClick": {
+        "body": [
+            "LeftClick(${1:tr})$0"
+        ],
+        "description": "TOOL [Shared] \n\n[table] tr\n  A trace from users eyes to wherever he aims at. See TraceResult structure",
+        "prefix": "LeftClick"
+    },
+    "Reload": {
+        "body": [
+            "Reload(${1:tr})$0"
+        ],
+        "description": "TOOL [Shared] \n\n[table] tr\n  A trace from users eyes to wherever he aims at. See TraceResult structure",
+        "prefix": "Reload"
+    },
+    "RightClick": {
+        "body": [
+            "RightClick(${1:tr})$0"
+        ],
+        "description": "TOOL [Shared] \n\n[table] tr\n  A trace from users eyes to wherever he aims at. See TraceResult structure",
+        "prefix": "RightClick"
+    },
+    "Think": {
+        "body": [
+            "Think()$0"
+        ],
+        "description": "TOOL [Shared]",
+        "prefix": "Think"
+    }
+}

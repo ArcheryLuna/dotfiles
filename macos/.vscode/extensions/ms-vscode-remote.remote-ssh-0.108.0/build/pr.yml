@@ -1,0 +1,32 @@
+name: $(Date:yyyyMMdd)$(Rev:.r)
+
+pr:
+    paths:
+        include:
+            - open-ssh-remote
+
+steps:
+    - task: NodeTool@0
+      inputs:
+          versionSpec: '18.x'
+
+    - task: npmAuthenticate@0
+      inputs:
+          workingFile: $(Build.SourcesDirectory)/open-ssh-remote/.npmrc
+          customEndpoint: 'devdiv vscode-internal feed'
+
+    - script: yarn install --frozen-lockfile
+      displayName: Install dependencies
+      workingDirectory: open-ssh-remote
+
+    - script: yarn lint
+      displayName: yarn lint
+      workingDirectory: open-ssh-remote
+
+    - script: yarn compile
+      displayName: yarn compile
+      workingDirectory: open-ssh-remote
+
+    - script: xvfb-run -a yarn test
+      displayName: yarn test
+      workingDirectory: open-ssh-remote

@@ -1,0 +1,93 @@
+{
+    "umsg.Angle": {
+        "body": [
+            "umsg.Angle(${1:angle})$0"
+        ],
+        "description": "UMSG [Server] \n\n[Angle] angle\n  The angle to be sent.",
+        "prefix": "umsg.Angle"
+    },
+    "umsg.Bool": {
+        "body": [
+            "umsg.Bool(${1:bool})$0"
+        ],
+        "description": "UMSG [Server] \n\n[boolean] bool\n  The bool to be sent.",
+        "prefix": "umsg.Bool"
+    },
+    "umsg.Char": {
+        "body": [
+            "umsg.Char(${1:char})$0"
+        ],
+        "description": "UMSG [Server] \n\n[number] char\n  The char to be sent.",
+        "prefix": "umsg.Char"
+    },
+    "umsg.End": {
+        "body": [
+            "umsg.End()$0"
+        ],
+        "description": "UMSG [Server]",
+        "prefix": "umsg.End"
+    },
+    "umsg.Entity": {
+        "body": [
+            "umsg.Entity(${1:entity})$0"
+        ],
+        "description": "UMSG [Server] \n\n[Entity] entity\n  The entity to be sent.",
+        "prefix": "umsg.Entity"
+    },
+    "umsg.Float": {
+        "body": [
+            "umsg.Float(${1:float})$0"
+        ],
+        "description": "UMSG [Server] \n\n[number] float\n  The float to be sent.",
+        "prefix": "umsg.Float"
+    },
+    "umsg.Long": {
+        "body": [
+            "umsg.Long(${1:int})$0"
+        ],
+        "description": "UMSG [Server] \n\n[number] int\n  The int to be sent.",
+        "prefix": "umsg.Long"
+    },
+    "umsg.PoolString": {
+        "body": [
+            "umsg.PoolString(${1:string})$0"
+        ],
+        "description": "UMSG [Server] \n\n[string] string\n  The string to be pooled.",
+        "prefix": "umsg.PoolString"
+    },
+    "umsg.Short": {
+        "body": [
+            "umsg.Short(${1:short})$0"
+        ],
+        "description": "UMSG [Server] \n\n[number] short\n  The short to be sent.",
+        "prefix": "umsg.Short"
+    },
+    "umsg.Start": {
+        "body": [
+            "umsg.Start(${1:name}, ${2:filter})$0"
+        ],
+        "description": "UMSG [Server] \n\n[string] name\n  The name of the message to be sent.\n\n[Player] filter\n  If passed a player object, it will only be sent to the player, if passed a CRecipientFilter of players, it will be sent to all specified players, if passed nil (or another invalid value), the message will be sent to all players.",
+        "prefix": "umsg.Start"
+    },
+    "umsg.String": {
+        "body": [
+            "umsg.String(${1:string})$0"
+        ],
+        "description": "UMSG [Server] Writes a null terminated string to the usermessage.\n\n[string] string\n  The string to be sent.",
+        "prefix": "umsg.String"
+    },
+    "umsg.Vector": {
+        "body": [
+            "umsg.Vector(${1:vector})$0"
+        ],
+        "description": "UMSG [Server] \n\n[Vector] vector\n  The vector to be sent.",
+        "prefix": "umsg.Vector"
+    },
+    "umsg.VectorNormal": {
+        "body": [
+            "umsg.VectorNormal(${1:normal})$0"
+        ],
+        "description": "UMSG [Server] \n\n[Vector] normal\n  The vector normal to be sent.",
+        "prefix": "umsg.VectorNormal"
+    }
+}

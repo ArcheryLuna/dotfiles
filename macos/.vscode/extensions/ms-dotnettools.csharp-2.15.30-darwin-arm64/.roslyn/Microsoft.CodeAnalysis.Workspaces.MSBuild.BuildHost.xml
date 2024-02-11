@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.BuildHost.LoadProjectFileAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Returns the target ID of the <see cref="T:Microsoft.CodeAnalysis.MSBuild.ProjectFile"/> object created for this.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.MonoMSBuildDiscovery.RealPath(System.String)">
+            <summary>
+            Returns the canonicalized absolute path from a given path, expanding symbolic links and resolving
+            references to /./, /../ and extra '/' path characters.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.MonoMSBuildDiscovery.GetMonoRuntimeExecutablePath">
+            <summary>
+            Returns the fully qualified path to the mono executable.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.MonoMSBuildDiscovery.GetMonoLibDirPath">
+            <summary>
+            Returns the path to the mono lib directory, usually /usr/bin/mono.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.MonoMSBuildDiscovery.GetMonoMSBuildDirectory">
+            <summary>
+            Returns the path to MSBuild, the actual directory containing MSBuild.dll and friends. Usually should end in Current/bin.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.MSBuild.Conversions">
+            <summary>
+            Handles conversions from MSBuild values.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.MSBuild.DocumentFileInfo">
+            <summary>
+            Represents a source file that is part of a project file.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.MSBuild.DocumentFileInfo.#ctor(System.String,System.String,System.Boolean,System.Boolean,Microsoft.CodeAnalysis.SourceCodeKind,System.Collections.Immutable.ImmutableArray{System.String})">
+            <summary>
+            Represents a source file that is part of a project file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.DocumentFileInfo.FilePath">
+            <summary>
+            The absolute path to the document file on disk.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.DocumentFileInfo.LogicalPath">
+            <summary>
+            A fictional path to the document, relative to the project.
+            The document may not actually exist at this location, and is used
+            to represent linked documents. This includes the file name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.DocumentFileInfo.IsLinked">
+            <summary>
+            True if the document has a logical path that differs from its 
+            absolute file path.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.DocumentFileInfo.IsGenerated">
+            <summary>
+            True if the file was generated during build.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.DocumentFileInfo.SourceCodeKind">
+            <summary>
+            The <see cref="P:Microsoft.CodeAnalysis.MSBuild.DocumentFileInfo.SourceCodeKind"/> of this document.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.DocumentFileInfo.Folders">
+            <summary>
+            Containing folders of the document relative to the containing project root path.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.MSBuild.Extensions.CreateProjectFileReference(Microsoft.Build.Execution.ProjectItemInstance)">
+            <summary>
+            Create a <see cref="T:Microsoft.CodeAnalysis.MSBuild.ProjectFileReference"/> from a ProjectReference node in the MSBuild file.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.MSBuild.ProjectFile.GetProjectFileInfosAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets project file information asynchronously. Note that this can produce multiple
+            instances of <see cref="T:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo"/> if the project is multi-targeted: one for
+            each target framework.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.MSBuild.ProjectFile.GetAbsolutePathRelativeToProject(System.String)">
+            <summary>
+            Resolves the given path that is possibly relative to the project directory.
+            </summary>
+            <remarks>
+            The resulting path is absolute but might not be normalized.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo">
+            <summary>
+            Provides information about a project that has been loaded from disk and
+            built with MSBuild. If the project is multi-targeting, this represents
+            the information from a single target framework.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.Language">
+            <summary>
+            The language of this project.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.FilePath">
+            <summary>
+            The path to the project file for this project.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.OutputFilePath">
+            <summary>
+            The path to the output file this project generates.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.OutputRefFilePath">
+            <summary>
+            The path to the reference assembly output file this project generates.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.IntermediateOutputFilePath">
+            <summary>
+            The path to the intermediate output file this project generates.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.DefaultNamespace">
+            <summary>
+            The default namespace of the project ("" if not defined, which means global namespace),
+            or null if it is unknown or not applicable. 
+            </summary>
+            <remarks>
+            Right now VB doesn't have the concept of "default namespace". But we conjure one in workspace 
+            by assigning the value of the project's root namespace to it. So various feature can choose to 
+            use it for their own purpose.
+            In the future, we might consider officially exposing "default namespace" for VB project 
+            (e.g. through a "defaultnamespace" msbuild property)
+            </remarks>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.TargetFramework">
+            <summary>
+            The target framework of this project.
+            This takes the form of the 'short name' form used by NuGet (e.g. net46, netcoreapp2.0, etc.)
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.TargetFrameworkIdentifier">
+            <summary>
+            The target framework identifier of this project.
+            Used to determine if a project is targeting .net core.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.CommandLineArgs">
+            <summary>
+            The command line args used to compile the project.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.Documents">
+            <summary>
+            The source documents.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.AdditionalDocuments">
+            <summary>
+            The additional documents.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.AnalyzerConfigDocuments">
+            <summary>
+            The analyzer config documents.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.ProjectReferences">
+            <summary>
+            References to other projects.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.ProjectCapabilities">
+            <summary>
+            The msbuild project capabilities.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.ContentFilePaths">
+            <summary>
+            The paths to content files included in the project.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.IsSdkStyle">
+            <summary>
+            Whether or not we believe this project is an SDK style project.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.ProjectAssetsFilePath">
+            <summary>
+            The path to the project.assets.json path in obj/.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileInfo.PackageReferences">
+            <summary>
+            Any package references defined on the project.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.MSBuild.ProjectFileReference">
+            <summary>
+            Represents a reference to another project file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileReference.Path">
+            <summary>
+            The path on disk to the other project file. 
+            This path may be relative to the referencing project's file or an absolute path.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.ProjectFileReference.Aliases">
+            <summary>
+            The aliases assigned to this reference, if any.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.Rpc.Request.Id">
+            <summary>
+            The request ID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.Rpc.Request.TargetObject">
+            <summary>
+            The index of the targeted object.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.MSBuild.Rpc.Request.Method">
+            <summary>
+            The name of the method to call.
+            </summary>
+        </member>
+        <member name="T:Microsoft.CodeAnalysis.MSBuild.Rpc.RpcServer">
+            <summary>
+            Implements the server side of the RPC channel used to communicate with the build host.
+            </summary>
+            <remarks>
+            The RPC system implemented here is pretty close to something like JSON-RPC; however since we need the Build Host to be usable in Source Build
+            scenarios, we are limited to using only what is either in .NET or can be easily made buildable in Source Build. Thus existing solutions like StreamJsonRpc 
+            are out. If at some point there is a standard RPC mechanism exposed in .NET or Source Build, we should delete this and use that instead.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.MSBuild.Rpc.RpcServer.RunAsync">
+            <summary>
+            Runs the server, waiting for responses. The task is completed when the receiving stream closes (and thus no more requests can come in), or
+            <see cref="M:Microsoft.CodeAnalysis.MSBuild.Rpc.RpcServer.Shutdown"/> is called.
+            </summary>
+        </member>
+        <member name="M:Microsoft.CodeAnalysis.MSBuild.Rpc.TextReaderExtensions.TryReadLineOrReturnNullIfCancelledAsync(System.IO.TextReader,System.Threading.CancellationToken)">
+            <summary>
+            Returns the next line from the string, or null if the stream is closed or the cancellation token was triggered.
+            </summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.WorkspaceMSBuildBuildHostResources.Parameter_cannot_be_null_empty_or_contain_whitespace">
+            <summary>Parameter cannot be null, empty, or contain whitespace.</summary>
+        </member>
+        <member name="P:Microsoft.CodeAnalysis.WorkspaceMSBuildBuildHostResources.Project_does_not_contain_0_target">
+            <summary>Project does not contain '{0}' target.</summary>
+        </member>
+    </members>
+</doc>

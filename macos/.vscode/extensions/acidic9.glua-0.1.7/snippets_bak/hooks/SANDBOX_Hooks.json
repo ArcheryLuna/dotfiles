@@ -1,0 +1,212 @@
+{
+	"SANDBOX/AddGamemodeToolMenuCategories": {
+		"body": [
+			"AddGamemodeToolMenuCategories()$0"
+		],
+		"description": "No description available.",
+		"prefix": "AddGamemodeToolMenuCategories"
+	},
+	"SANDBOX/AddGamemodeToolMenuTabs": {
+		"body": [
+			"AddGamemodeToolMenuTabs()$0"
+		],
+		"description": "No description available.",
+		"prefix": "AddGamemodeToolMenuTabs"
+	},
+	"SANDBOX/AddToolMenuCategories": {
+		"body": [
+			"AddToolMenuCategories()$0"
+		],
+		"description": "This hook is used to add new categories to spawnmenu tool tabs.",
+		"prefix": "AddToolMenuCategories"
+	},
+	"SANDBOX/AddToolMenuTabs": {
+		"body": [
+			"AddToolMenuTabs()$0"
+		],
+		"description": "This hook is used to add new tool tabs to spawnmenu.",
+		"prefix": "AddToolMenuTabs"
+	},
+	"SANDBOX/CanDrive": {
+		"body": [
+			"CanDrive(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called when a player attempts to drive a prop via Prop Drive",
+		"prefix": "CanDrive"
+	},
+	"SANDBOX/CanProperty": {
+		"body": [
+			"CanProperty(${1:ply}, ${2:property}, ${3:ent})$0"
+		],
+		"description": "Controls if a property can be used or not.",
+		"prefix": "CanProperty"
+	},
+	"SANDBOX/CanTool": {
+		"body": [
+			"CanTool(${1:ply}, ${2:tr}, ${3:tool})$0"
+		],
+		"description": "Called when a player attempts to fire their tool gun. Return true to specifically allow the attempt, false to block it.",
+		"prefix": "CanTool"
+	},
+	"SANDBOX/ContentSidebarSelection": {
+		"body": [
+			"ContentSidebarSelection(${1:parent}, ${2:node})$0"
+		],
+		"description": "Called when player selects an item on the spawnmenu sidebar at the left.",
+		"prefix": "ContentSidebarSelection"
+	},
+	"SANDBOX/ContextMenuCreated": {
+		"body": [
+			"ContextMenuCreated(${1:g_ContextMenu})$0"
+		],
+		"description": "Called when the context menu is created.",
+		"prefix": "ContextMenuCreated"
+	},
+	"SANDBOX/PersistenceLoad": {
+		"body": [
+			"PersistenceLoad()$0"
+		],
+		"description": "Called when persistent props are loaded.",
+		"prefix": "PersistenceLoad"
+	},
+	"SANDBOX/PersistenceSave": {
+		"body": [
+			"PersistenceSave()$0"
+		],
+		"description": "Called when persistent props are saved.",
+		"prefix": "PersistenceSave"
+	},
+	"SANDBOX/PlayerGiveSWEP": {
+		"body": [
+			"PlayerGiveSWEP(${1:ply}, ${2:weapon}, ${3:swep})$0"
+		],
+		"description": "Called when a player attempts to give themselves a weapon from the Q menu. ( Left mouse clicks on an icon )",
+		"prefix": "PlayerGiveSWEP"
+	},
+	"SANDBOX/PlayerSpawnEffect": {
+		"body": [
+			"PlayerSpawnEffect(${1:ply}, ${2:model})$0"
+		],
+		"description": "Called to ask if player allowed to spawn a particular effect or not.",
+		"prefix": "PlayerSpawnEffect"
+	},
+	"SANDBOX/PlayerSpawnNPC": {
+		"body": [
+			"PlayerSpawnNPC(${1:ply}, ${2:npc_type}, ${3:weapon})$0"
+		],
+		"description": "Called to ask if player allowed to spawn a particular NPC or not.",
+		"prefix": "PlayerSpawnNPC"
+	},
+	"SANDBOX/PlayerSpawnObject": {
+		"body": [
+			"PlayerSpawnObject(${1:ply}, ${2:model}, ${3:skin})$0"
+		],
+		"description": "Called to ask whether player is allowed to spawn any objects.",
+		"prefix": "PlayerSpawnObject"
+	},
+	"SANDBOX/PlayerSpawnProp": {
+		"body": [
+			"PlayerSpawnProp(${1:ply}, ${2:model})$0"
+		],
+		"description": "Called when a player attempts to spawn a prop from the Q menu.",
+		"prefix": "PlayerSpawnProp"
+	},
+	"SANDBOX/PlayerSpawnRagdoll": {
+		"body": [
+			"PlayerSpawnRagdoll(${1:ply}, ${2:model})$0"
+		],
+		"description": "Called when a player attempts to spawn a ragdoll from the Q menu.",
+		"prefix": "PlayerSpawnRagdoll"
+	},
+	"SANDBOX/PlayerSpawnSENT": {
+		"body": [
+			"PlayerSpawnSENT(${1:ply}, ${2:class})$0"
+		],
+		"description": "Called when a player attempts to spawn an Entity from the Q menu.",
+		"prefix": "PlayerSpawnSENT"
+	},
+	"SANDBOX/PlayerSpawnSWEP": {
+		"body": [
+			"PlayerSpawnSWEP(${1:ply}, ${2:weapon}, ${3:swep})$0"
+		],
+		"description": "Called when a player attempts to spawn a weapon from the Q menu. ( Mouse wheel clicks on an icon )",
+		"prefix": "PlayerSpawnSWEP"
+	},
+	"SANDBOX/PlayerSpawnVehicle": {
+		"body": [
+			"PlayerSpawnVehicle(${1:ply}, ${2:model}, ${3:name}, ${4:table})$0"
+		],
+		"description": "Called to ask if player allowed to spawn a particular vehicle or not.",
+		"prefix": "PlayerSpawnVehicle"
+	},
+	"SANDBOX/PlayerSpawnedEffect": {
+		"body": [
+			"PlayerSpawnedEffect(${1:ply}, ${2:model}, ${3:ent})$0"
+		],
+		"description": "Called after the player spawned an effect.",
+		"prefix": "PlayerSpawnedEffect"
+	},
+	"SANDBOX/PlayerSpawnedNPC": {
+		"body": [
+			"PlayerSpawnedNPC(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called after the player spawned an NPC.",
+		"prefix": "PlayerSpawnedNPC"
+	},
+	"SANDBOX/PlayerSpawnedProp": {
+		"body": [
+			"PlayerSpawnedProp(${1:ply}, ${2:model}, ${3:entity})$0"
+		],
+		"description": "Called when a player has successfully spawned a prop from the Q menu.",
+		"prefix": "PlayerSpawnedProp"
+	},
+	"SANDBOX/PlayerSpawnedRagdoll": {
+		"body": [
+			"PlayerSpawnedRagdoll(${1:ply}, ${2:model}, ${3:ent})$0"
+		],
+		"description": "Called after the player spawned a ragdoll.",
+		"prefix": "PlayerSpawnedRagdoll"
+	},
+	"SANDBOX/PlayerSpawnedSENT": {
+		"body": [
+			"PlayerSpawnedSENT(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called after the player has spawned a scripted entity.",
+		"prefix": "PlayerSpawnedSENT"
+	},
+	"SANDBOX/PlayerSpawnedSWEP": {
+		"body": [
+			"PlayerSpawnedSWEP(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called after the player has spawned a scripted weapon.",
+		"prefix": "PlayerSpawnedSWEP"
+	},
+	"SANDBOX/PlayerSpawnedVehicle": {
+		"body": [
+			"PlayerSpawnedVehicle(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called after the player spawned a vehicle.",
+		"prefix": "PlayerSpawnedVehicle"
+	},
+	"SANDBOX/PopulatePropMenu": {
+		"body": [
+			"PopulatePropMenu()$0"
+		],
+		"description": "This hook makes the engine load the spawnlist text files. It calls",
+		"prefix": "PopulatePropMenu"
+	},
+	"SANDBOX/SpawnMenuEnabled": {
+		"body": [
+			"SpawnMenuEnabled()$0"
+		],
+		"description": "If false is returned then the spawn menu is never created. This saves load times if your mod doesn\u0026#39;t actually use the spawn menu for any reason.",
+		"prefix": "SpawnMenuEnabled"
+	},
+	"SANDBOX/SpawnMenuOpen": {
+		"body": [
+			"SpawnMenuOpen()$0"
+		],
+		"description": "Called when spawnmenu is trying to be opened.",
+		"prefix": "SpawnMenuOpen"
+	}
+}

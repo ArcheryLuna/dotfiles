@@ -1,0 +1,685 @@
+18:55:14.541994: Log
+---
+
+18:55:14.548991: UnityDebug
+18:55:14.554992: Running session
+18:55:14.571993: Constructing UnityDebugSession
+18:55:14.593992: Done constructing UnityDebugSession
+18:55:14.778990: Command: initialize: {
+  "clientID": "vscode",
+  "clientName": "Visual Studio Code",
+  "adapterID": "unity",
+  "pathFormat": "path",
+  "linesStartAt1": true,
+  "columnsStartAt1": true,
+  "supportsVariableType": true,
+  "supportsVariablePaging": true,
+  "supportsRunInTerminalRequest": true,
+  "locale": "en-us",
+  "supportsProgressReporting": true,
+  "supportsInvalidatedEvent": true
+}
+18:55:14.842991: Command: launch: {
+  "name": "Unity Editor",
+  "type": "unity",
+  "path": "/c:/projects/codeeditors/VisualStudioPackage/Library/EditorInstance.json",
+  "request": "launch",
+  "__exceptionOptions": [
+    {
+      "path": [
+        {
+          "names": [
+            "System.Exception"
+          ]
+        }
+      ],
+      "breakMode": "always"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.SystemException"
+          ]
+        }
+      ],
+      "breakMode": "always"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.ArithmeticException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.ArrayTypeMismatchException"
+          ]
+        }
+      ],
+      "breakMode": "always"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.DivideByZeroException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.IndexOutOfRangeException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.InvalidCastException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.NullReferenceException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.OutOfMemoryException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.OverflowException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.StackOverflowException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.TypeInitializationException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    }
+  ],
+  "__sessionId": "63d6eb84-299e-485d-a835-5844d6261ed9"
+}
+18:55:14.847990: UnityDebug: Attach: VSCodeDebug.Response ; {
+  "name": "Unity Editor",
+  "type": "unity",
+  "path": "/c:/projects/codeeditors/VisualStudioPackage/Library/EditorInstance.json",
+  "request": "launch",
+  "__exceptionOptions": [
+    {
+      "path": [
+        {
+          "names": [
+            "System.Exception"
+          ]
+        }
+      ],
+      "breakMode": "always"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.SystemException"
+          ]
+        }
+      ],
+      "breakMode": "always"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.ArithmeticException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.ArrayTypeMismatchException"
+          ]
+        }
+      ],
+      "breakMode": "always"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.DivideByZeroException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.IndexOutOfRangeException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.InvalidCastException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.NullReferenceException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.OutOfMemoryException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.OverflowException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.StackOverflowException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    },
+    {
+      "path": [
+        {
+          "names": [
+            "System.TypeInitializationException"
+          ]
+        }
+      ],
+      "breakMode": "never"
+    }
+  ],
+  "__sessionId": "63d6eb84-299e-485d-a835-5844d6261ed9"
+}
+18:55:14.858019: UnityDebug: SetExceptionBreakpoints: [
+  {
+    "path": [
+      {
+        "names": [
+          "System.Exception"
+        ]
+      }
+    ],
+    "breakMode": "always"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.SystemException"
+        ]
+      }
+    ],
+    "breakMode": "always"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.ArithmeticException"
+        ]
+      }
+    ],
+    "breakMode": "never"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.ArrayTypeMismatchException"
+        ]
+      }
+    ],
+    "breakMode": "always"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.DivideByZeroException"
+        ]
+      }
+    ],
+    "breakMode": "never"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.IndexOutOfRangeException"
+        ]
+      }
+    ],
+    "breakMode": "never"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.InvalidCastException"
+        ]
+      }
+    ],
+    "breakMode": "never"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.NullReferenceException"
+        ]
+      }
+    ],
+    "breakMode": "never"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.OutOfMemoryException"
+        ]
+      }
+    ],
+    "breakMode": "never"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.OverflowException"
+        ]
+      }
+    ],
+    "breakMode": "never"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.StackOverflowException"
+        ]
+      }
+    ],
+    "breakMode": "never"
+  },
+  {
+    "path": [
+      {
+        "names": [
+          "System.TypeInitializationException"
+        ]
+      }
+    ],
+    "breakMode": "never"
+  }
+]
+18:55:14.883988: UnityDebug: Searching for Unity process 'Unity Editor'
+18:55:14.885989: Trying to find all Editor
+18:55:14.996993: Setting up multicast option: 225.0.0.222: 54997
+18:55:14.998000: Setting up multicast option: 225.0.0.222: 34997
+18:55:14.998989: Setting up multicast option: 225.0.0.222: 57997
+18:55:14.999989: Setting up multicast option: 225.0.0.222: 58997
+18:55:15.000989: Setting up multicast option: 225.0.0.222: 54997
+18:55:15.000989: Setting up multicast option: 225.0.0.222: 34997
+18:55:15.001989: Setting up multicast option: 225.0.0.222: 57997
+18:55:15.002991: Setting up multicast option: 225.0.0.222: 58997
+18:55:15.003989: Setting up multicast option: 225.0.0.222: 54997
+18:55:15.004986: Setting up multicast option: 225.0.0.222: 34997
+18:55:15.005988: Setting up multicast option: 225.0.0.222: 57997
+18:55:15.005988: Setting up multicast option: 225.0.0.222: 58997
+18:55:15.006989: Setting up multicast option: 225.0.0.222: 54997
+18:55:15.007996: Setting up multicast option: 225.0.0.222: 34997
+18:55:15.008990: Setting up multicast option: 225.0.0.222: 57997
+18:55:15.009990: Setting up multicast option: 225.0.0.222: 58997
+18:55:15.010989: Setting up multicast option: 225.0.0.222: 54997
+18:55:15.010989: Setting up multicast option: 225.0.0.222: 34997
+18:55:15.011989: Setting up multicast option: 225.0.0.222: 57997
+18:55:15.012989: Setting up multicast option: 225.0.0.222: 58997
+18:55:15.013989: Setting up multicast option: 225.0.0.222: 54997
+18:55:15.014989: Setting up multicast option: 225.0.0.222: 34997
+18:55:15.015989: Setting up multicast option: 225.0.0.222: 57997
+18:55:15.015989: Setting up multicast option: 225.0.0.222: 58997
+18:55:15.026989: Unity Editor process: Unity on id: 14948
+18:55:15.027988: Found Unity process: Unity Editor (Unity) (14948)
+18:55:15.029989: UnityDebug: Connect to: 127.0.0.1:56948
+18:55:15.031989: UnityDebug: Attached to Unity process 'Unity Editor (Unity)' (14948)
+18:55:15.040991: Command: setBreakpoints: {
+  "source": {
+    "name": "ProjectGeneration.cs",
+    "path": "c:\\projects\\codeeditors\\VisualStudioPackage\\Packages\\com.unity.ide.visualstudio\\Editor\\ProjectGeneration\\ProjectGeneration.cs"
+  },
+  "lines": [
+    114
+  ],
+  "breakpoints": [
+    {
+      "line": 114
+    }
+  ],
+  "sourceModified": false
+}
+18:55:15.076987: Command: setExceptionBreakpoints: {
+  "filters": []
+}
+18:55:15.078988: UnityDebug: StepIn: VSCodeDebug.Response ; {
+  "filters": []
+}
+18:55:15.079989: UnityDebug: SetExceptionBreakpoints: 
+18:55:15.085987: Command: threads: null
+18:55:15.410009: Command: threads: null
+18:55:22.831232: Command: threads: null
+18:55:22.839199: Command: stackTrace: {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:22.842226: UnityDebug: StackTrace: VSCodeDebug.Response ; {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:23.328222: Command: scopes: {
+  "frameId": 1000
+}
+18:55:23.351223: Command: variables: {
+  "variablesReference": 1000
+}
+18:55:24.685146: Command: evaluate: {
+  "expression": "from",
+  "frameId": 1000,
+  "context": "hover"
+}
+18:55:25.867250: Command: continue: {
+  "threadId": 1
+}
+18:55:25.869251: UnityDebug: Continue: VSCodeDebug.Response ; {
+  "threadId": 1
+}
+18:55:25.887288: Command: threads: null
+18:55:25.892240: Command: stackTrace: {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:25.893255: UnityDebug: StackTrace: VSCodeDebug.Response ; {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:26.377664: Command: scopes: {
+  "frameId": 1000
+}
+18:55:26.439652: Command: variables: {
+  "variablesReference": 1000
+}
+18:55:26.690237: Command: continue: {
+  "threadId": 1
+}
+18:55:26.691265: UnityDebug: Continue: VSCodeDebug.Response ; {
+  "threadId": 1
+}
+18:55:26.703335: Command: threads: null
+18:55:26.708237: Command: stackTrace: {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:26.709239: UnityDebug: StackTrace: VSCodeDebug.Response ; {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:27.159653: Command: scopes: {
+  "frameId": 1000
+}
+18:55:27.182829: Command: variables: {
+  "variablesReference": 1000
+}
+18:55:27.562284: Command: continue: {
+  "threadId": 1
+}
+18:55:27.563310: UnityDebug: Continue: VSCodeDebug.Response ; {
+  "threadId": 1
+}
+18:55:34.294266: Command: setBreakpoints: {
+  "source": {
+    "name": "ProjectGeneration.cs",
+    "path": "c:\\projects\\codeeditors\\VisualStudioPackage\\Packages\\com.unity.ide.visualstudio\\Editor\\ProjectGeneration\\ProjectGeneration.cs"
+  },
+  "lines": [
+    105,
+    114
+  ],
+  "breakpoints": [
+    {
+      "line": 105
+    },
+    {
+      "line": 114
+    }
+  ],
+  "sourceModified": false
+}
+18:55:39.736335: Command: threads: null
+18:55:39.746293: Command: stackTrace: {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:39.747291: UnityDebug: StackTrace: VSCodeDebug.Response ; {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:40.182311: Command: scopes: {
+  "frameId": 1000
+}
+18:55:40.186291: Command: variables: {
+  "variablesReference": 1000
+}
+18:55:41.763613: Command: continue: {
+  "threadId": 1
+}
+18:55:41.764586: UnityDebug: Continue: VSCodeDebug.Response ; {
+  "threadId": 1
+}
+18:55:41.778652: Command: threads: null
+18:55:41.783586: Command: stackTrace: {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:41.783586: UnityDebug: StackTrace: VSCodeDebug.Response ; {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:42.203051: Command: continue: {
+  "threadId": 1
+}
+18:55:42.204047: UnityDebug: Continue: VSCodeDebug.Response ; {
+  "threadId": 1
+}
+18:55:42.219048: Command: threads: null
+18:55:42.224236: Command: stackTrace: {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:42.225237: UnityDebug: StackTrace: VSCodeDebug.Response ; {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:42.680358: Command: scopes: {
+  "frameId": 1000
+}
+18:55:42.684356: Command: continue: {
+  "threadId": 1
+}
+18:55:42.685430: UnityDebug: Continue: VSCodeDebug.Response ; {
+  "threadId": 1
+}
+18:55:42.687358: Command: variables: {
+  "variablesReference": 1000
+}
+18:55:43.327841: Command: threads: null
+18:55:43.331815: Command: stackTrace: {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:43.331815: UnityDebug: StackTrace: VSCodeDebug.Response ; {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:43.796638: Command: scopes: {
+  "frameId": 1000
+}
+18:55:43.805639: Command: variables: {
+  "variablesReference": 1000
+}
+18:55:44.955605: Command: continue: {
+  "threadId": 1
+}
+18:55:44.956603: UnityDebug: Continue: VSCodeDebug.Response ; {
+  "threadId": 1
+}
+18:55:44.965750: Command: threads: null
+18:55:44.970724: Command: stackTrace: {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:44.970724: UnityDebug: StackTrace: VSCodeDebug.Response ; {
+  "threadId": 1,
+  "startFrame": 0,
+  "levels": 20
+}
+18:55:45.387688: Command: scopes: {
+  "frameId": 1000
+}
+18:55:45.392689: Command: variables: {
+  "variablesReference": 1000
+}
+18:55:46.345594: Command: setBreakpoints: {
+  "source": {
+    "name": "ProjectGeneration.cs",
+    "path": "c:\\projects\\codeeditors\\VisualStudioPackage\\Packages\\com.unity.ide.visualstudio\\Editor\\ProjectGeneration\\ProjectGeneration.cs",
+    "sourceReference": 0,
+    "presentationHint": "normal"
+  },
+  "lines": [
+    114
+  ],
+  "breakpoints": [
+    {
+      "line": 114
+    }
+  ],
+  "sourceModified": false
+}
+18:55:46.934348: Command: setBreakpoints: {
+  "source": {
+    "name": "ProjectGeneration.cs",
+    "path": "c:\\projects\\codeeditors\\VisualStudioPackage\\Packages\\com.unity.ide.visualstudio\\Editor\\ProjectGeneration\\ProjectGeneration.cs",
+    "sourceReference": 0,
+    "presentationHint": "normal"
+  },
+  "lines": [],
+  "breakpoints": [],
+  "sourceModified": false
+}
+18:55:47.270742: Command: continue: {
+  "threadId": 1
+}
+18:55:47.271738: UnityDebug: Continue: VSCodeDebug.Response ; {
+  "threadId": 1
+}

@@ -1,0 +1,464 @@
+{
+    "AddAngleVelocity": {
+        "body": [
+            "AddAngleVelocity(${1:angularVelocity})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] angularVelocity\n  Additional velocity.",
+        "prefix": "AddAngleVelocity"
+    },
+    "AddGameFlag": {
+        "body": [
+            "AddGameFlag(${1:flags})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[number] flags\n  Bitflag, see FVPHYSICS_ Enums.",
+        "prefix": "AddGameFlag"
+    },
+    "AddVelocity": {
+        "body": [
+            "AddVelocity(${1:velocity})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] velocity\n  Additional velocity.",
+        "prefix": "AddVelocity"
+    },
+    "AlignAngles": {
+        "body": [
+            "AlignAngles(${1:from}, ${2:to})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Angle] from\n  \n\n[Angle] to",
+        "prefix": "AlignAngles"
+    },
+    "ApplyForceCenter": {
+        "body": [
+            "ApplyForceCenter(${1:force})$0"
+        ],
+        "description": "PHYSOBJ [Shared] Applies the specified force to the physics object. (in Newtons)\n\n[Vector] force\n  The force to be applied.",
+        "prefix": "ApplyForceCenter"
+    },
+    "ApplyForceOffset": {
+        "body": [
+            "ApplyForceOffset(${1:force}, ${2:position})$0"
+        ],
+        "description": "PHYSOBJ [Shared] Applies the specified force on the physics object at the specified position\n\n[Vector] force\n  The force to be applied.\n\n[Vector] position\n  The position in world coordinates where the force is applied to the physics object.",
+        "prefix": "ApplyForceOffset"
+    },
+    "CalculateForceOffset": {
+        "body": [
+            "CalculateForceOffset(${1:force}, ${2:pos})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] force\n  The initial force?\n\n[Vector] pos\n  The world position",
+        "prefix": "CalculateForceOffset"
+    },
+    "CalculateVelocityOffset": {
+        "body": [
+            "CalculateVelocityOffset(${1:force}, ${2:pos})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] force\n  The initial force?\n\n[Vector] pos\n  The world position",
+        "prefix": "CalculateVelocityOffset"
+    },
+    "ClearGameFlag": {
+        "body": [
+            "ClearGameFlag(${1:flags})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[number] flags\n  Bitflag, see FVPHYSICS_ Enums.",
+        "prefix": "ClearGameFlag"
+    },
+    "ComputeShadowControl": {
+        "body": [
+            "ComputeShadowControl(${1:shadowparams})$0"
+        ],
+        "description": "PHYSOBJ [Shared] Allows you to move a PhysObj to a point and angle in 3D space.\n\n[table] shadowparams\n  The parameters for the shadow. See example code to see how its used.",
+        "prefix": "ComputeShadowControl"
+    },
+    "EnableCollisions": {
+        "body": [
+            "EnableCollisions(${1:enable})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[boolean] enable\n  True to enable, false to disable.",
+        "prefix": "EnableCollisions"
+    },
+    "EnableDrag": {
+        "body": [
+            "EnableDrag(${1:enable})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[boolean] enable\n  True to enable, false to disable.",
+        "prefix": "EnableDrag"
+    },
+    "EnableGravity": {
+        "body": [
+            "EnableGravity(${1:enable})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[boolean] enable\n  True to enable, false to disable.",
+        "prefix": "EnableGravity"
+    },
+    "EnableMotion": {
+        "body": [
+            "EnableMotion(${1:enable})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[boolean] enable\n  True to enable, false to disable.",
+        "prefix": "EnableMotion"
+    },
+    "GetAABB": {
+        "body": [
+            "GetAABB()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetAABB"
+    },
+    "GetAngleVelocity": {
+        "body": [
+            "GetAngleVelocity()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetAngleVelocity"
+    },
+    "GetAngles": {
+        "body": [
+            "GetAngles()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetAngles"
+    },
+    "GetDamping": {
+        "body": [
+            "GetDamping()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetDamping"
+    },
+    "GetEnergy": {
+        "body": [
+            "GetEnergy()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetEnergy"
+    },
+    "GetEntity": {
+        "body": [
+            "GetEntity()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetEntity"
+    },
+    "GetInertia": {
+        "body": [
+            "GetInertia()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetInertia"
+    },
+    "GetInvInertia": {
+        "body": [
+            "GetInvInertia()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetInvInertia"
+    },
+    "GetInvMass": {
+        "body": [
+            "GetInvMass()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetInvMass"
+    },
+    "GetMass": {
+        "body": [
+            "GetMass()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetMass"
+    },
+    "GetMassCenter": {
+        "body": [
+            "GetMassCenter()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetMassCenter"
+    },
+    "GetMaterial": {
+        "body": [
+            "GetMaterial()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetMaterial"
+    },
+    "GetMesh": {
+        "body": [
+            "GetMesh()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetMesh"
+    },
+    "GetMeshConvexes": {
+        "body": [
+            "GetMeshConvexes()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetMeshConvexes"
+    },
+    "GetName": {
+        "body": [
+            "GetName()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetName"
+    },
+    "GetPos": {
+        "body": [
+            "GetPos()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetPos"
+    },
+    "GetRotDamping": {
+        "body": [
+            "GetRotDamping()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetRotDamping"
+    },
+    "GetSpeedDamping": {
+        "body": [
+            "GetSpeedDamping()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetSpeedDamping"
+    },
+    "GetStress": {
+        "body": [
+            "GetStress()$0"
+        ],
+        "description": "PHYSOBJ [Server]",
+        "prefix": "GetStress"
+    },
+    "GetSurfaceArea": {
+        "body": [
+            "GetSurfaceArea()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetSurfaceArea"
+    },
+    "GetVelocity": {
+        "body": [
+            "GetVelocity()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetVelocity"
+    },
+    "GetVolume": {
+        "body": [
+            "GetVolume()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "GetVolume"
+    },
+    "HasGameFlag": {
+        "body": [
+            "HasGameFlag(${1:flags})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[number] flags\n  Bitflag, see FVPHYSICS_ Enums.",
+        "prefix": "HasGameFlag"
+    },
+    "IsAsleep": {
+        "body": [
+            "IsAsleep()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "IsAsleep"
+    },
+    "IsCollisionEnabled": {
+        "body": [
+            "IsCollisionEnabled()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "IsCollisionEnabled"
+    },
+    "IsDragEnabled": {
+        "body": [
+            "IsDragEnabled()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "IsDragEnabled"
+    },
+    "IsGravityEnabled": {
+        "body": [
+            "IsGravityEnabled()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "IsGravityEnabled"
+    },
+    "IsMotionEnabled": {
+        "body": [
+            "IsMotionEnabled()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "IsMotionEnabled"
+    },
+    "IsMoveable": {
+        "body": [
+            "IsMoveable()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "IsMoveable"
+    },
+    "IsPenetrating": {
+        "body": [
+            "IsPenetrating()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "IsPenetrating"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "IsValid"
+    },
+    "LocalToWorld": {
+        "body": [
+            "LocalToWorld(${1:LocalVec})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] LocalVec\n  A vector in the physics object's local frame",
+        "prefix": "LocalToWorld"
+    },
+    "LocalToWorldVector": {
+        "body": [
+            "LocalToWorldVector(${1:LocalVec})$0"
+        ],
+        "description": "PHYSOBJ [Shared] Rotate a vector from the local frame of the physics object to world frame.\n\n[Vector] LocalVec\n  A vector in the physics object's local frame",
+        "prefix": "LocalToWorldVector"
+    },
+    "OutputDebugInfo": {
+        "body": [
+            "OutputDebugInfo()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "OutputDebugInfo"
+    },
+    "RecheckCollisionFilter": {
+        "body": [
+            "RecheckCollisionFilter()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "RecheckCollisionFilter"
+    },
+    "RotateAroundAxis": {
+        "body": [
+            "RotateAroundAxis(${1:dir}, ${2:ang})$0"
+        ],
+        "description": "PHYSOBJ [Shared] A convinience function for Angle:RotateAroundAxis.\n\n[Vector] dir\n  Direction, around which we will rotate\n\n[number] ang\n  Amount of rotation, in degrees",
+        "prefix": "RotateAroundAxis"
+    },
+    "SetAngleDragCoefficient": {
+        "body": [
+            "SetAngleDragCoefficient(${1:coef})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[number] coef\n  The bigger this value is, the slower the angles will change.",
+        "prefix": "SetAngleDragCoefficient"
+    },
+    "SetAngles": {
+        "body": [
+            "SetAngles(${1:angles})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Angle] angles\n  The new angles of the physobject.",
+        "prefix": "SetAngles"
+    },
+    "SetBuoyancyRatio": {
+        "body": [
+            "SetBuoyancyRatio(${1:buoyancy})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[number] buoyancy\n  Buoyancy ratio, where 0 is not buoyant at all (like a rock), and 1 is very buoyant (like wood)",
+        "prefix": "SetBuoyancyRatio"
+    },
+    "SetDamping": {
+        "body": [
+            "SetDamping(${1:linearDamping}, ${2:angularDamping})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[number] linearDamping\n  Linear damping.\n\n[number] angularDamping\n  Angular damping.",
+        "prefix": "SetDamping"
+    },
+    "SetDragCoefficient": {
+        "body": [
+            "SetDragCoefficient(${1:drag})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[number] drag\n  The drag coefficient\n\nIt can be positive or negative.",
+        "prefix": "SetDragCoefficient"
+    },
+    "SetInertia": {
+        "body": [
+            "SetInertia(${1:directionalInertia})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] directionalInertia\n  The directional inertia of the object.\n\nA value of Vector(0,0,0) makes the physobject go invalid.",
+        "prefix": "SetInertia"
+    },
+    "SetMass": {
+        "body": [
+            "SetMass(${1:mass})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[number] mass\n  The the mass of the physobject.",
+        "prefix": "SetMass"
+    },
+    "SetMaterial": {
+        "body": [
+            "SetMaterial(${1:materialName})$0"
+        ],
+        "description": "PHYSOBJ [Shared] Sets the material of the physobject.\n\n[string] materialName\n  The name of the phys material to use. From this list: Valve Developer",
+        "prefix": "SetMaterial"
+    },
+    "SetPos": {
+        "body": [
+            "SetPos(${1:position}, ${2:teleport=false})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] position\n  The new position of the physobject.\n\n[boolean] teleport=false",
+        "prefix": "SetPos"
+    },
+    "SetVelocity": {
+        "body": [
+            "SetVelocity(${1:velocity})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] velocity\n  The new velocity of the phyiscs object.",
+        "prefix": "SetVelocity"
+    },
+    "SetVelocityInstantaneous": {
+        "body": [
+            "SetVelocityInstantaneous(${1:velocity})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] velocity\n  The new velocity of the physics object.",
+        "prefix": "SetVelocityInstantaneous"
+    },
+    "Sleep": {
+        "body": [
+            "Sleep()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "Sleep"
+    },
+    "UpdateShadow": {
+        "body": [
+            "UpdateShadow(${1:targetPosition}, ${2:targetAngles}, ${3:frameTime})$0"
+        ],
+        "description": "PHYSOBJ [Shared] Unlike PhysObj:SetPos and PhysObj:SetAngles, this allows the movement of a physobj while leaving physics interactions intact.\nThis is used internally by the motion controller of the Gravity Gun , the +use pickup and the Physics Gun, and entities such as the crane.\n\n[Vector] targetPosition\n  The position we should move to.\n\n[Angle] targetAngles\n  The angle we should rotate towards.\n\n[number] frameTime\n  The frame time to use for this movement, can be generally filled with FrameTime or ENTITY:PhysicsSimulate with the deltaTime.\n\nCan be set to 0 when you need to update the physics object just once.",
+        "prefix": "UpdateShadow"
+    },
+    "Wake": {
+        "body": [
+            "Wake()$0"
+        ],
+        "description": "PHYSOBJ [Shared]",
+        "prefix": "Wake"
+    },
+    "WorldToLocal": {
+        "body": [
+            "WorldToLocal(${1:vec})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] vec\n  The vector in world space coordinates.",
+        "prefix": "WorldToLocal"
+    },
+    "WorldToLocalVector": {
+        "body": [
+            "WorldToLocalVector(${1:WorldVec})$0"
+        ],
+        "description": "PHYSOBJ [Shared] \n\n[Vector] WorldVec\n  A vector in the world frame",
+        "prefix": "WorldToLocalVector"
+    }
+}

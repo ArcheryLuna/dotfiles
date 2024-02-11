@@ -1,0 +1,149 @@
+{
+	"jit/arch": {
+		"body": [
+			"()$0"
+		],
+		"description": "No description available.",
+		"prefix": ""
+	},
+	"jit/attach": {
+		"body": [
+			"jit.attach(${1:callback}, ${2:event})$0"
+		],
+		"description": "You can attach callbacks to a number of compiler events with jit.attach. The callback can be called:",
+		"prefix": "jit.attach"
+	},
+	"jit/flush": {
+		"body": [
+			"jit.flush()$0"
+		],
+		"description": "Flushes the whole cache of compiled code.",
+		"prefix": "jit.flush"
+	},
+	"jit/off": {
+		"body": [
+			"jit.off()$0"
+		],
+		"description": "Disables LuaJIT Lua compilation.",
+		"prefix": "jit.off"
+	},
+	"jit/on": {
+		"body": [
+			"jit.on()$0"
+		],
+		"description": "Enables LuaJIT Lua compilation.",
+		"prefix": "jit.on"
+	},
+	"jit/opt.start": {
+		"body": [
+			"jit.opt.start(${1:args})$0"
+		],
+		"description": "JIT compiler optimization control. The opt sub-module provides the backend for the -O command line LuaJIT option. You can also use it programmatically, e.g.:",
+		"prefix": "jit.opt.start"
+	},
+	"jit/os": {
+		"body": [
+			"()$0"
+		],
+		"description": "No description available.",
+		"prefix": ""
+	},
+	"jit/status": {
+		"body": [
+			"jit.status()$0"
+		],
+		"description": "Returns the status of the JIT compiler and the current optimizations enabled.",
+		"prefix": "jit.status"
+	},
+	"jit/util.funcbc": {
+		"body": [
+			"jit.util.funcbc(${1:func}, ${2:pos})$0"
+		],
+		"description": "No description available.",
+		"prefix": "jit.util.funcbc"
+	},
+	"jit/util.funcinfo": {
+		"body": [
+			"jit.util.funcinfo(${1:func}, ${2:pos=0})$0"
+		],
+		"description": "Retrieves LuaJIT information about a given function, similarly to",
+		"prefix": "jit.util.funcinfo"
+	},
+	"jit/util.funck": {
+		"body": [
+			"jit.util.funck(${1:func}, ${2:index})$0"
+		],
+		"description": "Gets a constant at a certain index in a function.",
+		"prefix": "jit.util.funck"
+	},
+	"jit/util.funcuvname": {
+		"body": [
+			"jit.util.funcuvname(${1:func}, ${2:index})$0"
+		],
+		"description": "Does the exact same thing as debug.getupvalue except it only returns the name, not the name and the object. The upvalue index also starts at 0 rather than 1, so doing jit.util.funcuvname(func, 0) will get you the same name as debug.getupvalue(func, 1)",
+		"prefix": "jit.util.funcuvname"
+	},
+	"jit/util.ircalladdr": {
+		"body": [
+			"jit.util.ircalladdr(${1:index})$0"
+		],
+		"description": "No description available.",
+		"prefix": "jit.util.ircalladdr"
+	},
+	"jit/util.traceexitstub": {
+		"body": [
+			"jit.util.traceexitstub(${1:exitno})$0"
+		],
+		"description": "No description available.",
+		"prefix": "jit.util.traceexitstub"
+	},
+	"jit/util.traceinfo": {
+		"body": [
+			"jit.util.traceinfo(${1:trace})$0"
+		],
+		"description": "No description available.",
+		"prefix": "jit.util.traceinfo"
+	},
+	"jit/util.traceir": {
+		"body": [
+			"jit.util.traceir(${1:tr}, ${2:index})$0"
+		],
+		"description": "No description available.",
+		"prefix": "jit.util.traceir"
+	},
+	"jit/util.tracek": {
+		"body": [
+			"jit.util.tracek(${1:tr}, ${2:index})$0"
+		],
+		"description": "No description available.",
+		"prefix": "jit.util.tracek"
+	},
+	"jit/util.tracemc": {
+		"body": [
+			"jit.util.tracemc(${1:tr})$0"
+		],
+		"description": "No description available.",
+		"prefix": "jit.util.tracemc"
+	},
+	"jit/util.tracesnap": {
+		"body": [
+			"jit.util.tracesnap(${1:tr}, ${2:sn})$0"
+		],
+		"description": "No description available.",
+		"prefix": "jit.util.tracesnap"
+	},
+	"jit/version": {
+		"body": [
+			"()$0"
+		],
+		"description": "No description available.",
+		"prefix": ""
+	},
+	"jit/version_num": {
+		"body": [
+			"()$0"
+		],
+		"description": "No description available.",
+		"prefix": ""
+	}
+}

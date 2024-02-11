@@ -1,0 +1,37 @@
+{
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "DCOLORBUTTON [Client]",
+        "prefix": "GetColor"
+    },
+    "GetID": {
+        "body": [
+            "GetID()$0"
+        ],
+        "description": "DCOLORBUTTON [Client]",
+        "prefix": "GetID"
+    },
+    "IsDown": {
+        "body": [
+            "IsDown()$0"
+        ],
+        "description": "DCOLORBUTTON [Client]",
+        "prefix": "IsDown"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color})$0"
+        ],
+        "description": "DCOLORBUTTON [Client] \n\n[table] color\n  A Color structure to set the color as",
+        "prefix": "SetColor"
+    },
+    "SetID": {
+        "body": [
+            "SetID(${1:id})$0"
+        ],
+        "description": "DCOLORBUTTON [Client] \n\n[number] id\n  A unique ID to give this button",
+        "prefix": "SetID"
+    }
+}

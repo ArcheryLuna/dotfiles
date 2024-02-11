@@ -1,0 +1,16 @@
+{
+	"http/Fetch": {
+		"body": [
+			"http.Fetch(${1:url}, ${2:onSuccess=nil}, ${3:onFailure=nil})$0"
+		],
+		"description": "Launches a GET request.",
+		"prefix": "http.Fetch"
+	},
+	"http/Post": {
+		"body": [
+			"http.Post(${1:url}, ${2:parameters}, ${3:onSuccess=nil}, ${4:onFailure=nil})$0"
+		],
+		"description": "Sends an asynchronous POST request to a HTTP server.",
+		"prefix": "http.Post"
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"language/Add": {
+		"body": [
+			"language.Add(${1:placeholder}, ${2:fulltext})$0"
+		],
+		"description": "Adds a language item. Language placeholders preceded with \u0026#34;#\u0026#34; are replaced with full text in Garry\u0026#39;s Mod once registered with this function.",
+		"prefix": "language.Add"
+	},
+	"language/GetPhrase": {
+		"body": [
+			"language.GetPhrase(${1:phrase})$0"
+		],
+		"description": "Retrieves the translated version of inputted string. Useful for concentrating multiple translated strings.",
+		"prefix": "language.GetPhrase"
+	}
+}

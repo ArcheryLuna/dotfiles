@@ -1,0 +1,121 @@
+{
+    "jit.attach": {
+        "body": [
+            "jit.attach(${1:callback}, ${2:event})$0"
+        ],
+        "description": "JIT [Shared/Menu] \n\n[function] callback\n  The callback function.\nThe arguments passed to the callback depend on the event being reported:\n\n\"bc\":\n\nfunction func - The function that's just been recorded\n\n\"trace\":\n\nstring what - description of the trace event: \"flush\", \"start\", \"stop\", \"abort\". Available for all events.\nnumber tr - The trace number. Not available for flush.\nfunction func - The function being traced. Available for start and abort.\nnumber pc - The program counter - the bytecode number of the function being recorded (if this a Lua function). Available for start and abort.\nnumber otr - start: the parent trace number if this is a side trace, abort: abort code\nstring oex - start: the exit number for the parent trace, abort: abort reason (string)\n\n\"record\":\n\nnumber tr - The trace number. Not available for flush.\nfunction func - The function being traced. Available for start and abort.\nnumber pc - The program counter - the bytecode number of the function being recorded (if this a Lua function). Available for start and abort.\nnumber depth - The depth of the inlining of the current bytecode.\n\n\"texit\":\n\nnumber tr - The trace number. Not available for flush.\nnumber ex - The exit number\nnumber ngpr - The number of general-purpose and floating point registers that are active at the exit.\n\nnumber nfpr - The number of general-purpose and floating point registers that are active at the exit.\n\n[string] event\n  The event to hook into.",
+        "prefix": "jit.attach"
+    },
+    "jit.flush": {
+        "body": [
+            "jit.flush()$0"
+        ],
+        "description": "JIT [Shared/Menu]",
+        "prefix": "jit.flush"
+    },
+    "jit.off": {
+        "body": [
+            "jit.off()$0"
+        ],
+        "description": "JIT [Shared/Menu]",
+        "prefix": "jit.off"
+    },
+    "jit.on": {
+        "body": [
+            "jit.on()$0"
+        ],
+        "description": "JIT [Shared/Menu]",
+        "prefix": "jit.on"
+    },
+    "jit.opt.start": {
+        "body": [
+            "jit.opt.start(${1:args})$0"
+        ],
+        "description": "JIT [Shared/Menu] \n\n[vararg] args",
+        "prefix": "jit.opt.start"
+    },
+    "jit.status": {
+        "body": [
+            "jit.status()$0"
+        ],
+        "description": "JIT [Shared/Menu]",
+        "prefix": "jit.status"
+    },
+    "jit.util.funcbc": {
+        "body": [
+            "jit.util.funcbc(${1:func}, ${2:pos})$0"
+        ],
+        "description": "JIT [Shared/Menu] \n\n[function] func\n  Function to retrieve bytecode from.\n\n[number] pos\n  Position of the bytecode to retrieve.",
+        "prefix": "jit.util.funcbc"
+    },
+    "jit.util.funcinfo": {
+        "body": [
+            "jit.util.funcinfo(${1:func}, ${2:pos=0})$0"
+        ],
+        "description": "JIT [Shared/Menu] Retrieves LuaJIT information about a given function, similarly to debug.getinfo. Possible table fields:\n\n[function] func\n  Function to retrieve info about.\n\n[number] pos=0",
+        "prefix": "jit.util.funcinfo"
+    },
+    "jit.util.funck": {
+        "body": [
+            "jit.util.funck(${1:func}, ${2:index})$0"
+        ],
+        "description": "JIT [Shared/Menu] Gets a constant at a certain index in a function.\n\n[function] func\n  Function to get constant from\n\n[number] index\n  Constant index (counting down from the top of the function at -1)",
+        "prefix": "jit.util.funck"
+    },
+    "jit.util.funcuvname": {
+        "body": [
+            "jit.util.funcuvname(${1:func}, ${2:index})$0"
+        ],
+        "description": "JIT [Shared/Menu] Does the exact same thing as debug.getupvalue except it only returns the name, not the name and the object. The upvalue indexes also start at 0 rather than 1, so doing jit.util.funcuvname(func, 0) will get you the same name as debug.getupvalue(func, 1)\n\n[function] func\n  Function to get the upvalue indexed from\n\n[number] index\n  The upvalue index, starting from 0",
+        "prefix": "jit.util.funcuvname"
+    },
+    "jit.util.ircalladdr": {
+        "body": [
+            "jit.util.ircalladdr(${1:index})$0"
+        ],
+        "description": "JIT [Shared/Menu] Gets the address of a function from a list of 20 functions, for the list see Ircalladdr Functions\n\n[number] index\n  The index of the function address to get from the ircalladdr func array (starting from 0)",
+        "prefix": "jit.util.ircalladdr"
+    },
+    "jit.util.traceexitstub": {
+        "body": [
+            "jit.util.traceexitstub(${1:exitno})$0"
+        ],
+        "description": "JIT [Shared/Menu] \n\n[number] exitno\n  exit number to retrieve exit stub address from (gotten via jit.attach with the texit event)",
+        "prefix": "jit.util.traceexitstub"
+    },
+    "jit.util.traceinfo": {
+        "body": [
+            "jit.util.traceinfo(${1:trace})$0"
+        ],
+        "description": "JIT [Shared/Menu] \n\n[number] trace\n  trace index to retrieve info for (gotten via jit.attach)",
+        "prefix": "jit.util.traceinfo"
+    },
+    "jit.util.traceir": {
+        "body": [
+            "jit.util.traceir(${1:tr}, ${2:index})$0"
+        ],
+        "description": "JIT [Shared/Menu] \n\n[number] tr\n  \n\n[number] index",
+        "prefix": "jit.util.traceir"
+    },
+    "jit.util.tracek": {
+        "body": [
+            "jit.util.tracek(${1:tr}, ${2:index})$0"
+        ],
+        "description": "JIT [Shared/Menu] \n\n[number] tr\n  \n\n[number] index",
+        "prefix": "jit.util.tracek"
+    },
+    "jit.util.tracemc": {
+        "body": [
+            "jit.util.tracemc(${1:tr})$0"
+        ],
+        "description": "JIT [Shared/Menu] \n\n[number] tr",
+        "prefix": "jit.util.tracemc"
+    },
+    "jit.util.tracesnap": {
+        "body": [
+            "jit.util.tracesnap(${1:tr}, ${2:sn})$0"
+        ],
+        "description": "JIT [Shared/Menu] \n\n[number] tr\n  trace index to retrieve snapshot for (gotten via jit.attach)\n\n[number] sn\n  snapshot index for trace (starting from 0 to nexit - 1, nexit gotten via jit.util.traceinfo)",
+        "prefix": "jit.util.tracesnap"
+    }
+}

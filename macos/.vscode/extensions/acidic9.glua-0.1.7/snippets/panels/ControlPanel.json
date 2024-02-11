@@ -1,0 +1,9 @@
+{
+    "AddControl": {
+        "body": [
+            "AddControl(${1:type}, ${2:controlinfo})$0"
+        ],
+        "description": "CONTROLPANEL [Client] \n\n[string] type\n  The control type to add. The complete list is:\n\n header\n textbox\n label\n checkbox/toggle\n slider\n propselect\n matselect\n ropematerial\n button\n numpad\n color\n combobox\n listbox\n materialgallery\n\n[table] controlinfo\n  Each control takes their own table structure. You may search \"AddControl\" on GitHub for examples.\nHere is a full list of each type and the table members it requires:\nheader:\n    description\ntextbox:\n    label (def: \"Untitled\")\n    command\nlabel:\n    text\ncheckbox, toggle (same thing):\n    label (def: \"Untitled\")\n    command\n    help (boolean, if true assumes label is a language string (\"#tool.toolname.stuff\") and adds \".help\" at the end)\nslider:\n    type (optional string, if equals \"float\" then 2 digits after the decimal will be used, otherwise 0)\n    label (def: \"Untitled\")\n    command\n    min (def: 0)\n    max (def: 100)\n    help (boolean, see above)\npropselect:\n    (data goes directly to PropSelect's :ControlValues(data))\nmatselect:\n    (data goes directly to MatSelect's :ControlValues(data))\nropematerial:\n    convar (notice: NOT called command this time!)\nbutton:\n    label / text (if label is missing will use text. Def: \"No Label\")\n    command\nnumpad:\n    command\n    command2\n    label\n    label2\ncolor:\n    label\n    red (convar)\n    green (convar)\n    blue (convar)\n    alpha (convar)\ncombobox:\n    menubutton (if doesn't equal \"1\", becomes a listbox)\n    folder\n    options (optional, ha)\n    cvars (optional)\nlistbox:\n    height (if set, becomes ListView, otherwise is ListBox)\n    label (def: \"unknown\")\n    options (optional)\nmaterialgallery:\n    width (def: 32)\n    height (def: 32)\n    rows (def: 4)\n    convar\n    options",
+        "prefix": "AddControl"
+    }
+}

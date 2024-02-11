@@ -1,0 +1,51 @@
+{
+    "presets.Add": {
+        "body": [
+            "presets.Add(${1:groupname}, ${2:name}, ${3:values})$0"
+        ],
+        "description": "PRESETS [Client] Adds preset to a preset group.\n\n[string] groupname\n  The preset group name, usually it's tool class name.\n\n[string] name\n  Preset name, must be unique.\n\n[table] values\n  A table of preset console commands.",
+        "prefix": "presets.Add"
+    },
+    "presets.BadNameAlert": {
+        "body": [
+            "presets.BadNameAlert()$0"
+        ],
+        "description": "PRESETS [Client]",
+        "prefix": "presets.BadNameAlert"
+    },
+    "presets.Exists": {
+        "body": [
+            "presets.Exists(${1:type}, ${2:name})$0"
+        ],
+        "description": "PRESETS [Client] Returns whether a preset with given name exists or not\n\n[string] type\n  The preset group name, usually it's tool class name.\n\n[string] name\n  Name of the preset to test",
+        "prefix": "presets.Exists"
+    },
+    "presets.GetTable": {
+        "body": [
+            "presets.GetTable(${1:groupname})$0"
+        ],
+        "description": "PRESETS [Client] \n\n[string] groupname\n  Preset group name.",
+        "prefix": "presets.GetTable"
+    },
+    "presets.OverwritePresetPrompt": {
+        "body": [
+            "presets.OverwritePresetPrompt(${1:callback})$0"
+        ],
+        "description": "PRESETS [Client] \n\n[function] callback",
+        "prefix": "presets.OverwritePresetPrompt"
+    },
+    "presets.Remove": {
+        "body": [
+            "presets.Remove(${1:groupname}, ${2:name})$0"
+        ],
+        "description": "PRESETS [Client] \n\n[string] groupname\n  Preset group to remove from\n\n[string] name\n  Name of preset to remove",
+        "prefix": "presets.Remove"
+    },
+    "presets.Rename": {
+        "body": [
+            "presets.Rename(${1:groupname}, ${2:oldname}, ${3:newname})$0"
+        ],
+        "description": "PRESETS [Client] Renames preset.\n\n[string] groupname\n  Preset group name\n\n[string] oldname\n  Old preset name\n\n[string] newname\n  New preset name",
+        "prefix": "presets.Rename"
+    }
+}

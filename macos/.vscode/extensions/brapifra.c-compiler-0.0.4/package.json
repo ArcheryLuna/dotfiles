@@ -1,0 +1,88 @@
+{
+	"name": "c-compiler",
+	"displayName": "C Compiler",
+	"icon": "images/icon.svg",
+	"description": "Compile and execute C files from VSCode",
+	"version": "0.0.4",
+	"publisher": "brapifra",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/brapifra/vscode-ccompiler.git"
+	},
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.compileFile",
+				"title": "Compile C File"
+			},
+			{
+				"command": "extension.executeFile",
+				"title": "Compile and Execute C File"
+			},
+			{
+				"command": "extension.compileProject",
+				"title": "Compile C Project"
+			},
+			{
+				"command": "extension.executeProject",
+				"title": "Compile and Execute C Project"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "resourceLangId == c",
+					"command": "extension.compileFile",
+					"group": "C-compiler@1"
+				},
+				{
+					"when": "resourceLangId == c",
+					"command": "extension.executeFile",
+					"group": "C-compiler@1"
+				},
+				{
+					"when": "resourceLangId == c",
+					"command": "extension.compileProject",
+					"group": "C-compiler@1"
+				},
+				{
+					"when": "resourceLangId == c",
+					"command": "extension.executeProject",
+					"group": "C-compiler@1"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0",
+		"mocha": "^2.3.3",
+		"eslint": "^3.6.0",
+		"@types/node": "^6.0.40",
+		"@types/mocha": "^2.2.32"
+	},
+	"__metadata": {
+		"id": "0cd51f41-a951-4c0f-8efa-e4a8eb31815c",
+		"publisherId": "e6e9800f-ddad-408c-803c-302d6381770b",
+		"publisherDisplayName": "brapifra",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033065
+	}
+}

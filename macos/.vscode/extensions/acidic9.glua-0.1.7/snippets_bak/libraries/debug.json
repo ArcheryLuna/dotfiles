@@ -1,0 +1,121 @@
+{
+	"debug/Trace": {
+		"body": [
+			"debug.Trace()$0"
+		],
+		"description": "Prints out the lua function call stack to the console.",
+		"prefix": "debug.Trace"
+	},
+	"debug/debug": {
+		"body": [
+			"debug.debug()$0"
+		],
+		"description": "Enters an interactive mode with the user, running each string that the user enters. Using simple commands and other debug facilities, the user can inspect global and local variables, change their values, evaluate expressions, and so on. A line containing only the word cont finishes this function, so that the caller continues its execution.",
+		"prefix": "debug.debug"
+	},
+	"debug/getfenv": {
+		"body": [
+			"debug.getfenv(${1:object})$0"
+		],
+		"description": "Returns the environment of the passed object. This can be set with",
+		"prefix": "debug.getfenv"
+	},
+	"debug/gethook": {
+		"body": [
+			"debug.gethook(${1:thread=nil})$0"
+		],
+		"description": "Returns the current hook settings of the passed thread. The thread argument can be omitted. This is unrelated to",
+		"prefix": "debug.gethook"
+	},
+	"debug/getinfo": {
+		"body": [
+			"debug.getinfo(${1:funcOrStackLevel}, ${2:fields=\"flnSu\"})$0"
+		],
+		"description": "Returns debug information about a function.",
+		"prefix": "debug.getinfo"
+	},
+	"debug/getlocal": {
+		"body": [
+			"debug.getlocal(${1:thread}, ${2:level}, ${3:index})$0"
+		],
+		"description": "Gets the name and value of a local variable indexed from the level",
+		"prefix": "debug.getlocal"
+	},
+	"debug/getmetatable": {
+		"body": [
+			"debug.getmetatable(${1:object})$0"
+		],
+		"description": "Returns the metatable of an object. This function ignores the metatable\u0026#39;s __metatable field.",
+		"prefix": "debug.getmetatable"
+	},
+	"debug/getregistry": {
+		"body": [
+			"debug.getregistry()$0"
+		],
+		"description": "Returns the internal Lua registry table.",
+		"prefix": "debug.getregistry"
+	},
+	"debug/getupvalue": {
+		"body": [
+			"debug.getupvalue(${1:func}, ${2:index})$0"
+		],
+		"description": "Used for getting variable values in an index from the passed function",
+		"prefix": "debug.getupvalue"
+	},
+	"debug/setfenv": {
+		"body": [
+			"debug.setfenv(${1:object}, ${2:env})$0"
+		],
+		"description": "Sets the environment of the passed object.",
+		"prefix": "debug.setfenv"
+	},
+	"debug/sethook": {
+		"body": [
+			"debug.sethook(${1:thread}, ${2:hook}, ${3:mask}, ${4:count})$0"
+		],
+		"description": "Sets the given function as a Lua hook. This is completely different to gamemode hooks. The thread argument can be completely omitted and calling this function with no arguments will remove the current hook. This is used by default for infinite loop detection. More information on hooks can be found at",
+		"prefix": "debug.sethook"
+	},
+	"debug/setlocal": {
+		"body": [
+			"debug.setlocal(${1:Thread}, ${2:level}, ${3:index}, ${4:value=nil})$0"
+		],
+		"description": "Sets a local variable\u0026#39;s value.",
+		"prefix": "debug.setlocal"
+	},
+	"debug/setmetatable": {
+		"body": [
+			"debug.setmetatable(${1:object}, ${2:metatable})$0"
+		],
+		"description": "Sets the table\u0026#39;s metatable.",
+		"prefix": "debug.setmetatable"
+	},
+	"debug/setupvalue": {
+		"body": [
+			"debug.setupvalue(${1:func}, ${2:index}, ${3:val=nil})$0"
+		],
+		"description": "Sets the variable indexed from func",
+		"prefix": "debug.setupvalue"
+	},
+	"debug/traceback": {
+		"body": [
+			"debug.traceback(${1:thread}, ${2:message=nil}, ${3:level=1})$0"
+		],
+		"description": "Returns a full execution stack trace.",
+		"prefix": "debug.traceback"
+	},
+	"debug/upvalueid": {
+		"body": [
+			"debug.upvalueid(${1:func}, ${2:index})$0"
+		],
+		"description": "Returns an unique identifier for the upvalue indexed from func",
+		"prefix": "debug.upvalueid"
+	},
+	"debug/upvaluejoin": {
+		"body": [
+			"debug.upvaluejoin(${1:f1}, ${2:n1}, ${3:f2}, ${4:n2})$0"
+		],
+		"description": "Make the n1-th upvalue of the Lua closure f1 refer to the n2-th upvalue of the Lua closure f2.",
+		"prefix": "debug.upvaluejoin"
+	}
+}

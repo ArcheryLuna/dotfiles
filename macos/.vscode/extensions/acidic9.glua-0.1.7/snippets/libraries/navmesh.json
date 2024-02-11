@@ -1,0 +1,156 @@
+{
+    "navmesh.AddWalkableSeed": {
+        "body": [
+            "navmesh.AddWalkableSeed(${1:pos}, ${2:dir})$0"
+        ],
+        "description": "NAVMESH [Server] \n\n[Vector] pos\n  The terrain position.\n\n[Vector] dir\n  The normal of this terrain position.",
+        "prefix": "navmesh.AddWalkableSeed"
+    },
+    "navmesh.BeginGeneration": {
+        "body": [
+            "navmesh.BeginGeneration()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.BeginGeneration"
+    },
+    "navmesh.ClearWalkableSeeds": {
+        "body": [
+            "navmesh.ClearWalkableSeeds()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.ClearWalkableSeeds"
+    },
+    "navmesh.Find": {
+        "body": [
+            "navmesh.Find(${1:pos}, ${2:radius}, ${3:stepdown}, ${4:stepup})$0"
+        ],
+        "description": "NAVMESH [Server] Returns a bunch of areas within distance, used to find hiding spots by NextBots for example.\n\n[Vector] pos\n  The position to search around\n\n[number] radius\n  Radius to search within\n\n[number] stepdown\n  Maximum stepdown( fall distance ) allowed\n\n[number] stepup\n  Maximum stepup( jump height ) allowed",
+        "prefix": "navmesh.Find"
+    },
+    "navmesh.GetAllNavAreas": {
+        "body": [
+            "navmesh.GetAllNavAreas()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.GetAllNavAreas"
+    },
+    "navmesh.GetEditCursorPosition": {
+        "body": [
+            "navmesh.GetEditCursorPosition()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.GetEditCursorPosition"
+    },
+    "navmesh.GetMarkedArea": {
+        "body": [
+            "navmesh.GetMarkedArea()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.GetMarkedArea"
+    },
+    "navmesh.GetMarkedLadder": {
+        "body": [
+            "navmesh.GetMarkedLadder()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.GetMarkedLadder"
+    },
+    "navmesh.GetNavArea": {
+        "body": [
+            "navmesh.GetNavArea(${1:pos}, ${2:beneathLimit})$0"
+        ],
+        "description": "NAVMESH [Server] Returns the Nav Area contained in this position that also satisfies the elevation limit.\n\n[Vector] pos\n  The position to search for.\n\n[number] beneathLimit\n  The elevation limit at which the Nav Area will be searched.",
+        "prefix": "navmesh.GetNavArea"
+    },
+    "navmesh.GetNavAreaByID": {
+        "body": [
+            "navmesh.GetNavAreaByID(${1:id})$0"
+        ],
+        "description": "NAVMESH [Server] \n\n[number] id\n  ID of the CNavArea to get. Starts with 1.",
+        "prefix": "navmesh.GetNavAreaByID"
+    },
+    "navmesh.GetNavAreaCount": {
+        "body": [
+            "navmesh.GetNavAreaCount()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.GetNavAreaCount"
+    },
+    "navmesh.GetNavLadderByID": {
+        "body": [
+            "navmesh.GetNavLadderByID(${1:id})$0"
+        ],
+        "description": "NAVMESH [Server] \n\n[number] id\n  ID of the CNavLadder to get. Starts with 1.",
+        "prefix": "navmesh.GetNavLadderByID"
+    },
+    "navmesh.GetNearestNavArea": {
+        "body": [
+            "navmesh.GetNearestNavArea(${1:pos}, ${2:anyZ=false}, ${3:maxDist=10000}, ${4:checkLOS=false}, ${5:checkGround=true}, ${6:team=TEAM_ANY=-2})$0"
+        ],
+        "description": "NAVMESH [Server] Returns the closest CNavArea to given position at the same height, or beneath it.\n\n[Vector] pos\n  The position to look from\n\n[boolean] anyZ=false\n  This argument is ignored and has no effect\n\n[number] maxDist=10000\n  This is the maximum distance from the given position that the function will look for a CNavArea\n\n[boolean] checkLOS=false\n  If this is set to true then the function will internally do a util.TraceLine from the starting position to each potential CNavArea with a MASK_NPCSOLID_BRUSHONLY MASK_ Enums. If the trace fails then the CNavArea is ignored.\n\nIf this is set to false then the function will find the closest CNavArea through anything, including the world.\n\n[boolean] checkGround=true\n  If checkGround is true then this function will internally call navmesh.GetNavArea to check if there is a CNavArea directly below the position, and return it if so, before checking anywhere else.\n\n[number] team=TEAM_ANY=-2\n  This will internally call CNavArea:IsBlocked to check if the target CNavArea is not to be navigated by the given team. Currently this appears to do nothing.",
+        "prefix": "navmesh.GetNearestNavArea"
+    },
+    "navmesh.GetPlayerSpawnName": {
+        "body": [
+            "navmesh.GetPlayerSpawnName()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.GetPlayerSpawnName"
+    },
+    "navmesh.IsGenerating": {
+        "body": [
+            "navmesh.IsGenerating()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.IsGenerating"
+    },
+    "navmesh.IsLoaded": {
+        "body": [
+            "navmesh.IsLoaded()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.IsLoaded"
+    },
+    "navmesh.Load": {
+        "body": [
+            "navmesh.Load()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.Load"
+    },
+    "navmesh.Reset": {
+        "body": [
+            "navmesh.Reset()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.Reset"
+    },
+    "navmesh.Save": {
+        "body": [
+            "navmesh.Save()$0"
+        ],
+        "description": "NAVMESH [Server]",
+        "prefix": "navmesh.Save"
+    },
+    "navmesh.SetMarkedArea": {
+        "body": [
+            "navmesh.SetMarkedArea(${1:area})$0"
+        ],
+        "description": "NAVMESH [Server] \n\n[CNavArea] area\n  The CNavArea to set as the marked area.",
+        "prefix": "navmesh.SetMarkedArea"
+    },
+    "navmesh.SetMarkedLadder": {
+        "body": [
+            "navmesh.SetMarkedLadder(${1:area})$0"
+        ],
+        "description": "NAVMESH [Server] \n\n[CNavLadder] area\n  The CNavLadder to set as the marked ladder.",
+        "prefix": "navmesh.SetMarkedLadder"
+    },
+    "navmesh.SetPlayerSpawnName": {
+        "body": [
+            "navmesh.SetPlayerSpawnName(${1:spawnPointClass})$0"
+        ],
+        "description": "NAVMESH [Server] \n\n[string] spawnPointClass\n  The classname of what the player uses to spawn, automatically adds it to the walkable positions during map generation.",
+        "prefix": "navmesh.SetPlayerSpawnName"
+    }
+}

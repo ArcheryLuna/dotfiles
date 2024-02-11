@@ -1,0 +1,86 @@
+{
+	"PLAYER/FinishMove": {
+		"body": [
+			"FinishMove(${1:mv})$0"
+		],
+		"description": "Called from",
+		"prefix": "FinishMove"
+	},
+	"PLAYER/GetHandsModel": {
+		"body": [
+			"GetHandsModel()$0"
+		],
+		"description": "Called on player spawn to determine which hand model to use",
+		"prefix": "GetHandsModel"
+	},
+	"PLAYER/Init": {
+		"body": [
+			"Init()$0"
+		],
+		"description": "Called when the class object is created",
+		"prefix": "Init"
+	},
+	"PLAYER/Loadout": {
+		"body": [
+			"Loadout()$0"
+		],
+		"description": "Called on spawn to give the player their default loadout",
+		"prefix": "Loadout"
+	},
+	"PLAYER/Move": {
+		"body": [
+			"Move(${1:mv})$0"
+		],
+		"description": "Called from",
+		"prefix": "Move"
+	},
+	"PLAYER/PostDrawViewModel": {
+		"body": [
+			"PostDrawViewModel(${1:viewmodel}, ${2:weapon})$0"
+		],
+		"description": "Called after the viewmodel has been drawn",
+		"prefix": "PostDrawViewModel"
+	},
+	"PLAYER/PreDrawViewModel": {
+		"body": [
+			"PreDrawViewModel(${1:viewmodel}, ${2:weapon})$0"
+		],
+		"description": "Called before the viewmodel is drawn",
+		"prefix": "PreDrawViewModel"
+	},
+	"PLAYER/SetModel": {
+		"body": [
+			"SetModel()$0"
+		],
+		"description": "Called when we need to set player model from the class.",
+		"prefix": "SetModel"
+	},
+	"PLAYER/SetupDataTables": {
+		"body": [
+			"SetupDataTables()$0"
+		],
+		"description": "Set up the network table accessors",
+		"prefix": "SetupDataTables"
+	},
+	"PLAYER/Spawn": {
+		"body": [
+			"Spawn()$0"
+		],
+		"description": "Called when the player spawns",
+		"prefix": "Spawn"
+	},
+	"PLAYER/StartMove": {
+		"body": [
+			"StartMove(${1:cmd}, ${2:mv})$0"
+		],
+		"description": "Called from",
+		"prefix": "StartMove"
+	},
+	"PLAYER/ViewModelChanged": {
+		"body": [
+			"ViewModelChanged(${1:viewmodel}, ${2:old}, ${3:new})$0"
+		],
+		"description": "Called when the player changes their weapon to another one causing their viewmodel model to change",
+		"prefix": "ViewModelChanged"
+	}
+}

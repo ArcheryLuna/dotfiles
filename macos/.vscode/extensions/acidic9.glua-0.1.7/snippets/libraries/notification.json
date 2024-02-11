@@ -1,0 +1,23 @@
+{
+    "notification.AddLegacy": {
+        "body": [
+            "notification.AddLegacy(${1:Text}, ${2:Type}, ${3:Length})$0"
+        ],
+        "description": "NOTIFICATION [Client/Menu] Adds a standard notification to your screen.\n\n[string] Text\n  The string to display\n\n[number] Type\n  Determines the method for displaying the notification. See the NOTIFY_ Enums\n\n[number] Length\n  The number of seconds to display the notification for",
+        "prefix": "notification.AddLegacy"
+    },
+    "notification.AddProgress": {
+        "body": [
+            "notification.AddProgress(${1:id}, ${2:strText})$0"
+        ],
+        "description": "NOTIFICATION [Client/Menu] Adds a notification with an animated progress bar.\n\n[any] id\n  Can be any type. It's used as an index.\n\n[string] strText\n  The text to show",
+        "prefix": "notification.AddProgress"
+    },
+    "notification.Kill": {
+        "body": [
+            "notification.Kill(${1:uid})$0"
+        ],
+        "description": "NOTIFICATION [Client/Menu] \n\n[any] uid\n  The unique ID of the notification",
+        "prefix": "notification.Kill"
+    }
+}

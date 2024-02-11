@@ -1,0 +1,58 @@
+{
+	"frame_blend/AddFrame": {
+		"body": [
+			"frame_blend.AddFrame()$0"
+		],
+		"description": "No description available.",
+		"prefix": "frame_blend.AddFrame"
+	},
+	"frame_blend/BlendFrame": {
+		"body": [
+			"frame_blend.BlendFrame()$0"
+		],
+		"description": "No description available.",
+		"prefix": "frame_blend.BlendFrame"
+	},
+	"frame_blend/CompleteFrame": {
+		"body": [
+			"frame_blend.CompleteFrame()$0"
+		],
+		"description": "No description available.",
+		"prefix": "frame_blend.CompleteFrame"
+	},
+	"frame_blend/DrawPreview": {
+		"body": [
+			"frame_blend.DrawPreview()$0"
+		],
+		"description": "No description available.",
+		"prefix": "frame_blend.DrawPreview"
+	},
+	"frame_blend/IsActive": {
+		"body": [
+			"frame_blend.IsActive()$0"
+		],
+		"description": "Returns whether frame blend post processing effect is enabled or not.",
+		"prefix": "frame_blend.IsActive"
+	},
+	"frame_blend/IsLastFrame": {
+		"body": [
+			"frame_blend.IsLastFrame()$0"
+		],
+		"description": "No description available.",
+		"prefix": "frame_blend.IsLastFrame"
+	},
+	"frame_blend/RenderableFrames": {
+		"body": [
+			"frame_blend.RenderableFrames()$0"
+		],
+		"description": "No description available.",
+		"prefix": "frame_blend.RenderableFrames"
+	},
+	"frame_blend/ShouldSkipFrame": {
+		"body": [
+			"frame_blend.ShouldSkipFrame()$0"
+		],
+		"description": "Returns whether we should skip frame or not",
+		"prefix": "frame_blend.ShouldSkipFrame"
+	}
+}

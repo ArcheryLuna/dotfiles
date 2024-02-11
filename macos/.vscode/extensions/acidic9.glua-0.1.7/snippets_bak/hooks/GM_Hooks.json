@@ -1,0 +1,1619 @@
+{
+	"GM/AcceptInput": {
+		"body": [
+			"AcceptInput(${1:ent}, ${2:input}, ${3:activator}, ${4:caller}, ${5:value})$0"
+		],
+		"description": "Called when a map I/O event occurs.",
+		"prefix": "AcceptInput"
+	},
+	"GM/AddDeathNotice": {
+		"body": [
+			"AddDeathNotice(${1:attacker}, ${2:attackerTeam}, ${3:inflictor}, ${4:victim}, ${5:victimTeam})$0"
+		],
+		"description": "Adds a death notice entry.",
+		"prefix": "AddDeathNotice"
+	},
+	"GM/AdjustMouseSensitivity": {
+		"body": [
+			"AdjustMouseSensitivity(${1:defaultSensitivity})$0"
+		],
+		"description": "Allows you to adjust the mouse sensitivity.",
+		"prefix": "AdjustMouseSensitivity"
+	},
+	"GM/AllowPlayerPickup": {
+		"body": [
+			"AllowPlayerPickup(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called when a player tries to pick up something using the \u0026#34;use\u0026#34; key, return to override.",
+		"prefix": "AllowPlayerPickup"
+	},
+	"GM/CalcMainActivity": {
+		"body": [
+			"CalcMainActivity(${1:ply}, ${2:vel})$0"
+		],
+		"description": "This hook is used to calculate animations for a player.",
+		"prefix": "CalcMainActivity"
+	},
+	"GM/CalcVehicleView": {
+		"body": [
+			"CalcVehicleView(${1:veh}, ${2:ply}, ${3:view})$0"
+		],
+		"description": "Called from",
+		"prefix": "CalcVehicleView"
+	},
+	"GM/CalcView": {
+		"body": [
+			"CalcView(${1:ply}, ${2:origin}, ${3:angles}, ${4:fov}, ${5:znear}, ${6:zfar})$0"
+		],
+		"description": "Allows override of the default view.",
+		"prefix": "CalcView"
+	},
+	"GM/CalcViewModelView": {
+		"body": [
+			"CalcViewModelView(${1:wep}, ${2:vm}, ${3:oldPos}, ${4:oldAng}, ${5:pos}, ${6:ang})$0"
+		],
+		"description": "Allows overriding the position and angle of the viewmodel.",
+		"prefix": "CalcViewModelView"
+	},
+	"GM/CanEditVariable": {
+		"body": [
+			"CanEditVariable(${1:ent}, ${2:ply}, ${3:key}, ${4:val}, ${5:editor})$0"
+		],
+		"description": "Called when a variable is edited on an Entity (called by Edit Properties... menu), to determine if the edit should be permitted.",
+		"prefix": "CanEditVariable"
+	},
+	"GM/CanExitVehicle": {
+		"body": [
+			"CanExitVehicle(${1:veh}, ${2:ply})$0"
+		],
+		"description": "Determines if the player can exit the vehicle.",
+		"prefix": "CanExitVehicle"
+	},
+	"GM/CanPlayerEnterVehicle": {
+		"body": [
+			"CanPlayerEnterVehicle(${1:player}, ${2:vehicle}, ${3:sRole})$0"
+		],
+		"description": "Determines whether or not the player can enter the vehicle.",
+		"prefix": "CanPlayerEnterVehicle"
+	},
+	"GM/CanPlayerSuicide": {
+		"body": [
+			"CanPlayerSuicide(${1:player})$0"
+		],
+		"description": "Determines if the player can kill themselves using the concommands \u0026#34;kill\u0026#34; or \u0026#34;explode\u0026#34;.",
+		"prefix": "CanPlayerSuicide"
+	},
+	"GM/CanPlayerUnfreeze": {
+		"body": [
+			"CanPlayerUnfreeze(${1:player}, ${2:entity}, ${3:phys})$0"
+		],
+		"description": "Determines if the player can unfreeze the entity.",
+		"prefix": "CanPlayerUnfreeze"
+	},
+	"GM/CaptureVideo": {
+		"body": [
+			"CaptureVideo()$0"
+		],
+		"description": "Called each frame to record demos to video using",
+		"prefix": "CaptureVideo"
+	},
+	"GM/ChatText": {
+		"body": [
+			"ChatText(${1:index}, ${2:name}, ${3:text}, ${4:type})$0"
+		],
+		"description": "Called when a message is printed to the chat box. Note, that this isn\u0026#39;t working with player messages even though there are arguments for it.",
+		"prefix": "ChatText"
+	},
+	"GM/ChatTextChanged": {
+		"body": [
+			"ChatTextChanged(${1:text})$0"
+		],
+		"description": "Called whenever the content of the user\u0026#39;s chat input box is changed.",
+		"prefix": "ChatTextChanged"
+	},
+	"GM/CheckPassword": {
+		"body": [
+			"CheckPassword(${1:steamID64}, ${2:ipAddress}, ${3:svPassword}, ${4:clPassword}, ${5:name})$0"
+		],
+		"description": "Called when a non local player connects to allow the Lua system to check the password.",
+		"prefix": "CheckPassword"
+	},
+	"GM/CloseDermaMenus": {
+		"body": [
+			"CloseDermaMenus()$0"
+		],
+		"description": "Called when derma menus are closed with",
+		"prefix": "CloseDermaMenus"
+	},
+	"GM/ContextMenuOpen": {
+		"body": [
+			"ContextMenuOpen()$0"
+		],
+		"description": "Called when the context menu is trying to be opened. Return false to disallow it.",
+		"prefix": "ContextMenuOpen"
+	},
+	"GM/CreateClientsideRagdoll": {
+		"body": [
+			"CreateClientsideRagdoll(${1:entity}, ${2:ragdoll})$0"
+		],
+		"description": "Called whenever an entity becomes a clientside ragdoll.",
+		"prefix": "CreateClientsideRagdoll"
+	},
+	"GM/CreateEntityRagdoll": {
+		"body": [
+			"CreateEntityRagdoll(${1:owner}, ${2:ragdoll})$0"
+		],
+		"description": "Called when a ragdoll of an entity has been created.",
+		"prefix": "CreateEntityRagdoll"
+	},
+	"GM/CreateMove": {
+		"body": [
+			"CreateMove(${1:cmd})$0"
+		],
+		"description": "Allows you to change the players movements before they\u0026#39;re sent to the server.",
+		"prefix": "CreateMove"
+	},
+	"GM/CreateTeams": {
+		"body": [
+			"CreateTeams()$0"
+		],
+		"description": "Teams are created within this hook using",
+		"prefix": "CreateTeams"
+	},
+	"GM/DoAnimationEvent": {
+		"body": [
+			"DoAnimationEvent(${1:ply}, ${2:event}, ${3:data=0})$0"
+		],
+		"description": "Called upon an animation event, this is the ideal place to call player animation functions such as",
+		"prefix": "DoAnimationEvent"
+	},
+	"GM/DoPlayerDeath": {
+		"body": [
+			"DoPlayerDeath(${1:ply}, ${2:attacker}, ${3:dmg})$0"
+		],
+		"description": "Handles the player\u0026#39;s death.",
+		"prefix": "DoPlayerDeath"
+	},
+	"GM/DrawDeathNotice": {
+		"body": [
+			"DrawDeathNotice(${1:x}, ${2:y})$0"
+		],
+		"description": "This hook is called every frame to draw all of the current death notices.",
+		"prefix": "DrawDeathNotice"
+	},
+	"GM/DrawMonitors": {
+		"body": [
+			"DrawMonitors()$0"
+		],
+		"description": "Called every frame before drawing the in-game monitors ( Breencast, in-game TVs, etc ), but doesn\u0026#39;t seem to be doing anything, trying to render 2D or 3D elements fail.",
+		"prefix": "DrawMonitors"
+	},
+	"GM/DrawOverlay": {
+		"body": [
+			"DrawOverlay()$0"
+		],
+		"description": "Called after all other 2D draw hooks are called. Draws over all VGUI Panels and HUDs.",
+		"prefix": "DrawOverlay"
+	},
+	"GM/DrawPhysgunBeam": {
+		"body": [
+			"DrawPhysgunBeam(${1:ply}, ${2:physgun}, ${3:enabled}, ${4:target}, ${5:bone}, ${6:hitPos})$0"
+		],
+		"description": "Allows you to override physgun beam drawing.",
+		"prefix": "DrawPhysgunBeam"
+	},
+	"GM/EndEntityDriving": {
+		"body": [
+			"EndEntityDriving(${1:ent}, ${2:ply})$0"
+		],
+		"description": "Called right before an entity stops driving. Overriding this hook will cause it to not call",
+		"prefix": "EndEntityDriving"
+	},
+	"GM/EntityEmitSound": {
+		"body": [
+			"EntityEmitSound(${1:data})$0"
+		],
+		"description": "Called whenever a sound has been played.",
+		"prefix": "EntityEmitSound"
+	},
+	"GM/EntityFireBullets": {
+		"body": [
+			"EntityFireBullets(${1:ent}, ${2:data})$0"
+		],
+		"description": "Called every time a bullet is fired from an entity.",
+		"prefix": "EntityFireBullets"
+	},
+	"GM/EntityKeyValue": {
+		"body": [
+			"EntityKeyValue(${1:ent}, ${2:key}, ${3:value})$0"
+		],
+		"description": "Called when a keyvalue is set on an entity. Return a string to override the value.",
+		"prefix": "EntityKeyValue"
+	},
+	"GM/EntityNetworkedVarChanged": {
+		"body": [
+			"EntityNetworkedVarChanged(${1:ent}, ${2:name}, ${3:oldval}, ${4:newval})$0"
+		],
+		"description": "Called when an NWVar is changed.",
+		"prefix": "EntityNetworkedVarChanged"
+	},
+	"GM/EntityRemoved": {
+		"body": [
+			"EntityRemoved(${1:ent})$0"
+		],
+		"description": "Called right before the removal of an entity.",
+		"prefix": "EntityRemoved"
+	},
+	"GM/EntityTakeDamage": {
+		"body": [
+			"EntityTakeDamage(${1:target}, ${2:dmg})$0"
+		],
+		"description": "Called when an entity takes damage. You can modify all parts of the damage info in this hook.",
+		"prefix": "EntityTakeDamage"
+	},
+	"GM/FindUseEntity": {
+		"body": [
+			"FindUseEntity(${1:ply}, ${2:defaultEnt})$0"
+		],
+		"description": "This hook polls the entity the player use action should be applied to.",
+		"prefix": "FindUseEntity"
+	},
+	"GM/FinishChat": {
+		"body": [
+			"FinishChat()$0"
+		],
+		"description": "Runs when user cancels/finishes typing.",
+		"prefix": "FinishChat"
+	},
+	"GM/FinishMove": {
+		"body": [
+			"FinishMove(${1:ply}, ${2:mv})$0"
+		],
+		"description": "Called after",
+		"prefix": "FinishMove"
+	},
+	"GM/ForceDermaSkin": {
+		"body": [
+			"ForceDermaSkin()$0"
+		],
+		"description": "Returns the Derma skin to be used for panels by default. If nothing is returned the default skin will be used.",
+		"prefix": "ForceDermaSkin"
+	},
+	"GM/GUIMouseDoublePressed": {
+		"body": [
+			"GUIMouseDoublePressed(${1:mouseCode}, ${2:aimVector})$0"
+		],
+		"description": "Called when the mouse has been double clicked on any panel derived from CGModBase, such as the panel used by",
+		"prefix": "GUIMouseDoublePressed"
+	},
+	"GM/GUIMousePressed": {
+		"body": [
+			"GUIMousePressed(${1:mouseCode}, ${2:aimVector})$0"
+		],
+		"description": "Called whenever a players presses a mouse key on the context menu in Sandbox or on any panel derived from CGModBase, such as the panel used by",
+		"prefix": "GUIMousePressed"
+	},
+	"GM/GUIMouseReleased": {
+		"body": [
+			"GUIMouseReleased(${1:mouseCode}, ${2:aimVector})$0"
+		],
+		"description": "Called whenever a players releases a mouse key on the context menu in Sandbox or on any panel derived from CGModBase, such as the panel used by",
+		"prefix": "GUIMouseReleased"
+	},
+	"GM/GameContentChanged": {
+		"body": [
+			"GameContentChanged()$0"
+		],
+		"description": "Called to refresh menu content once it has initialized or something has been mounted.",
+		"prefix": "GameContentChanged"
+	},
+	"GM/GetFallDamage": {
+		"body": [
+			"GetFallDamage(${1:ply}, ${2:speed})$0"
+		],
+		"description": "Called when a player takes damage from falling, allows to override the damage.",
+		"prefix": "GetFallDamage"
+	},
+	"GM/GetGameDescription": {
+		"body": [
+			"GetGameDescription()$0"
+		],
+		"description": "Returns the text to be shown in the server browser as the game.",
+		"prefix": "GetGameDescription"
+	},
+	"GM/GetMotionBlurValues": {
+		"body": [
+			"GetMotionBlurValues(${1:horizontal}, ${2:vertical}, ${3:forward}, ${4:rotational})$0"
+		],
+		"description": "Allows you to modify the Source Engine\u0026#39;s motion blur shaders.",
+		"prefix": "GetMotionBlurValues"
+	},
+	"GM/GetPreferredCarryAngles": {
+		"body": [
+			"GetPreferredCarryAngles(${1:ent})$0"
+		],
+		"description": "Called to determine preferred carry angles for the entity. It works for both, +use pickup and gravity gun pickup.",
+		"prefix": "GetPreferredCarryAngles"
+	},
+	"GM/GetTeamColor": {
+		"body": [
+			"GetTeamColor(${1:ent})$0"
+		],
+		"description": "Returns the color for the given entity\u0026#39;s team. This is used in chat and deathnotice text.",
+		"prefix": "GetTeamColor"
+	},
+	"GM/GetTeamNumColor": {
+		"body": [
+			"GetTeamNumColor(${1:team})$0"
+		],
+		"description": "Returns the team color for the given team index.",
+		"prefix": "GetTeamNumColor"
+	},
+	"GM/GetVehicles": {
+		"body": [
+			"GetVehicles()$0"
+		],
+		"description": "Returns a table of vehicles.",
+		"prefix": "GetVehicles"
+	},
+	"GM/GrabEarAnimation": {
+		"body": [
+			"GrabEarAnimation(${1:ply})$0"
+		],
+		"description": "Override this hook to disable/change ear-grabbing in your gamemode.",
+		"prefix": "GrabEarAnimation"
+	},
+	"GM/GravGunOnDropped": {
+		"body": [
+			"GravGunOnDropped(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called when an entity is released by a gravity gun.",
+		"prefix": "GravGunOnDropped"
+	},
+	"GM/GravGunOnPickedUp": {
+		"body": [
+			"GravGunOnPickedUp(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called when an entity is picked up by a gravity gun.",
+		"prefix": "GravGunOnPickedUp"
+	},
+	"GM/GravGunPickupAllowed": {
+		"body": [
+			"GravGunPickupAllowed(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Returns whether or not a player is allowed to pick up an entity with the gravity gun. Return true to allow.",
+		"prefix": "GravGunPickupAllowed"
+	},
+	"GM/GravGunPunt": {
+		"body": [
+			"GravGunPunt(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called when an entity is about to be punted with the gravity gun (primary fire). Return true to allow and false to disallow.",
+		"prefix": "GravGunPunt"
+	},
+	"GM/HUDAmmoPickedUp": {
+		"body": [
+			"HUDAmmoPickedUp(${1:itemName}, ${2:amount})$0"
+		],
+		"description": "Called when the client has picked up ammo. Override to disable default HUD notification.",
+		"prefix": "HUDAmmoPickedUp"
+	},
+	"GM/HUDDrawPickupHistory": {
+		"body": [
+			"HUDDrawPickupHistory()$0"
+		],
+		"description": "Renders the HUD pick-up history. Override to hide default or draw your own HUD.",
+		"prefix": "HUDDrawPickupHistory"
+	},
+	"GM/HUDDrawScoreBoard": {
+		"body": [
+			"HUDDrawScoreBoard()$0"
+		],
+		"description": "Called every frame to render the scoreboard.",
+		"prefix": "HUDDrawScoreBoard"
+	},
+	"GM/HUDDrawTargetID": {
+		"body": [
+			"HUDDrawTargetID()$0"
+		],
+		"description": "Called from",
+		"prefix": "HUDDrawTargetID"
+	},
+	"GM/HUDItemPickedUp": {
+		"body": [
+			"HUDItemPickedUp(${1:itemName})$0"
+		],
+		"description": "Called when an item has been picked up. Override to disable the default HUD notification.",
+		"prefix": "HUDItemPickedUp"
+	},
+	"GM/HUDPaint": {
+		"body": [
+			"HUDPaint()$0"
+		],
+		"description": "Called whenever the HUD should be drawn. Called right before",
+		"prefix": "HUDPaint"
+	},
+	"GM/HUDPaintBackground": {
+		"body": [
+			"HUDPaintBackground()$0"
+		],
+		"description": "Called after",
+		"prefix": "HUDPaintBackground"
+	},
+	"GM/HUDShouldDraw": {
+		"body": [
+			"HUDShouldDraw(${1:name})$0"
+		],
+		"description": "Called when the Gamemode is about to draw a given element on the client\u0026#39;s HUD (heads-up display).",
+		"prefix": "HUDShouldDraw"
+	},
+	"GM/HUDWeaponPickedUp": {
+		"body": [
+			"HUDWeaponPickedUp(${1:weapon})$0"
+		],
+		"description": "Called when a weapon has been picked up. Override to disable the default HUD notification.",
+		"prefix": "HUDWeaponPickedUp"
+	},
+	"GM/HandlePlayerDriving": {
+		"body": [
+			"HandlePlayerDriving(${1:ply})$0"
+		],
+		"description": "Allows to override player driving animations.",
+		"prefix": "HandlePlayerDriving"
+	},
+	"GM/HandlePlayerDucking": {
+		"body": [
+			"HandlePlayerDucking(${1:ply}, ${2:velocity})$0"
+		],
+		"description": "Allows to override player crouch animations.",
+		"prefix": "HandlePlayerDucking"
+	},
+	"GM/HandlePlayerJumping": {
+		"body": [
+			"HandlePlayerJumping(${1:ply}, ${2:velocity})$0"
+		],
+		"description": "Allows to override player jumping animations.",
+		"prefix": "HandlePlayerJumping"
+	},
+	"GM/HandlePlayerLanding": {
+		"body": [
+			"HandlePlayerLanding(${1:ply}, ${2:velocity}, ${3:onGround})$0"
+		],
+		"description": "Allows to override player landing animations.",
+		"prefix": "HandlePlayerLanding"
+	},
+	"GM/HandlePlayerNoClipping": {
+		"body": [
+			"HandlePlayerNoClipping(${1:ply}, ${2:velocity})$0"
+		],
+		"description": "Allows to override player noclip animations.",
+		"prefix": "HandlePlayerNoClipping"
+	},
+	"GM/HandlePlayerSwimming": {
+		"body": [
+			"HandlePlayerSwimming(${1:ply}, ${2:velocity})$0"
+		],
+		"description": "Allows to override player swimming animations.",
+		"prefix": "HandlePlayerSwimming"
+	},
+	"GM/HandlePlayerVaulting": {
+		"body": [
+			"HandlePlayerVaulting(${1:ply}, ${2:velocity})$0"
+		],
+		"description": "Allows to override player flying ( in mid-air, not noclipping ) animations.",
+		"prefix": "HandlePlayerVaulting"
+	},
+	"GM/HideTeam": {
+		"body": [
+			"HideTeam()$0"
+		],
+		"description": "Hides the team selection panel.",
+		"prefix": "HideTeam"
+	},
+	"GM/InitPostEntity": {
+		"body": [
+			"InitPostEntity()$0"
+		],
+		"description": "Called after all the entities are initialized.",
+		"prefix": "InitPostEntity"
+	},
+	"GM/Initialize": {
+		"body": [
+			"Initialize()$0"
+		],
+		"description": "Called after the gamemode loads and starts.",
+		"prefix": "Initialize"
+	},
+	"GM/InputMouseApply": {
+		"body": [
+			"InputMouseApply(${1:cmd}, ${2:x}, ${3:y}, ${4:ang})$0"
+		],
+		"description": "Allows you to modify the supplied User Command with mouse input. This could be used to make moving the mouse do funky things to view angles.",
+		"prefix": "InputMouseApply"
+	},
+	"GM/IsSpawnpointSuitable": {
+		"body": [
+			"IsSpawnpointSuitable(${1:ply}, ${2:spawnpoint}, ${3:makeSuitable})$0"
+		],
+		"description": "Check if a player can spawn at a certain spawnpoint.",
+		"prefix": "IsSpawnpointSuitable"
+	},
+	"GM/KeyPress": {
+		"body": [
+			"KeyPress(${1:ply}, ${2:key})$0"
+		],
+		"description": "Called whenever a player pressed a key included within the IN keys.",
+		"prefix": "KeyPress"
+	},
+	"GM/KeyRelease": {
+		"body": [
+			"KeyRelease(${1:ply}, ${2:key})$0"
+		],
+		"description": "Runs when a IN key was released by a player.",
+		"prefix": "KeyRelease"
+	},
+	"GM/MenuStart": {
+		"body": [
+			"MenuStart()$0"
+		],
+		"description": "Called when",
+		"prefix": "MenuStart"
+	},
+	"GM/MouthMoveAnimation": {
+		"body": [
+			"MouthMoveAnimation(${1:ply})$0"
+		],
+		"description": "Override this gamemode function to disable mouth movement when talking on voice chat.",
+		"prefix": "MouthMoveAnimation"
+	},
+	"GM/Move": {
+		"body": [
+			"Move(${1:ply}, ${2:mv})$0"
+		],
+		"description": "The Move hook is called for you to manipulate the player\u0026#39;s MoveData.",
+		"prefix": "Move"
+	},
+	"GM/NeedsDepthPass": {
+		"body": [
+			"NeedsDepthPass()$0"
+		],
+		"description": "Returning true in this hook will cause it to render depth buffers defined with",
+		"prefix": "NeedsDepthPass"
+	},
+	"GM/NetworkEntityCreated": {
+		"body": [
+			"NetworkEntityCreated(${1:ent})$0"
+		],
+		"description": "Called when an entity has been created over the network.",
+		"prefix": "NetworkEntityCreated"
+	},
+	"GM/NetworkIDValidated": {
+		"body": [
+			"NetworkIDValidated(${1:name}, ${2:steamID})$0"
+		],
+		"description": "Called when a player has been validated by Steam.",
+		"prefix": "NetworkIDValidated"
+	},
+	"GM/NotifyShouldTransmit": {
+		"body": [
+			"NotifyShouldTransmit(${1:ent}, ${2:shouldtransmit})$0"
+		],
+		"description": "Called whenever this entity changes its transmission state for this",
+		"prefix": "NotifyShouldTransmit"
+	},
+	"GM/OnAchievementAchieved": {
+		"body": [
+			"OnAchievementAchieved(${1:ply}, ${2:achievement})$0"
+		],
+		"description": "Called when a player has achieved an achievement. You can get the name and other information from an achievement ID with the",
+		"prefix": "OnAchievementAchieved"
+	},
+	"GM/OnChatTab": {
+		"body": [
+			"OnChatTab(${1:text})$0"
+		],
+		"description": "Called when the local player presses TAB while having their chatbox opened.",
+		"prefix": "OnChatTab"
+	},
+	"GM/OnContextMenuClose": {
+		"body": [
+			"OnContextMenuClose()$0"
+		],
+		"description": "Called when the context menu was closed.",
+		"prefix": "OnContextMenuClose"
+	},
+	"GM/OnContextMenuOpen": {
+		"body": [
+			"OnContextMenuOpen()$0"
+		],
+		"description": "Called when the context menu was opened.",
+		"prefix": "OnContextMenuOpen"
+	},
+	"GM/OnDamagedByExplosion": {
+		"body": [
+			"OnDamagedByExplosion(${1:ply}, ${2:dmginfo})$0"
+		],
+		"description": "Called when a player has been hurt by an explosion. Override to disable default sound effect.",
+		"prefix": "OnDamagedByExplosion"
+	},
+	"GM/OnEntityCreated": {
+		"body": [
+			"OnEntityCreated(${1:entity})$0"
+		],
+		"description": "Called right after the Entity has been made visible to Lua.",
+		"prefix": "OnEntityCreated"
+	},
+	"GM/OnGamemodeLoaded": {
+		"body": [
+			"OnGamemodeLoaded()$0"
+		],
+		"description": "Called when the gamemode is loaded.",
+		"prefix": "OnGamemodeLoaded"
+	},
+	"GM/OnLuaError": {
+		"body": [
+			"OnLuaError(${1:error}, ${2:realm}, ${3:name}, ${4:id})$0"
+		],
+		"description": "Called when a Lua error occurs, only works in the Menu realm.",
+		"prefix": "OnLuaError"
+	},
+	"GM/OnNPCKilled": {
+		"body": [
+			"OnNPCKilled(${1:npc}, ${2:attacker}, ${3:inflictor})$0"
+		],
+		"description": "Called whenever an NPC is killed.",
+		"prefix": "OnNPCKilled"
+	},
+	"GM/OnPhysgunFreeze": {
+		"body": [
+			"OnPhysgunFreeze(${1:weapon}, ${2:physobj}, ${3:ent}, ${4:ply})$0"
+		],
+		"description": "Called when a player freezes an entity with the Physgun.",
+		"prefix": "OnPhysgunFreeze"
+	},
+	"GM/OnPhysgunReload": {
+		"body": [
+			"OnPhysgunReload(${1:physgun}, ${2:ply})$0"
+		],
+		"description": "Called when a player reloads with the physgun. Override this to disable default unfreezing behavior.",
+		"prefix": "OnPhysgunReload"
+	},
+	"GM/OnPlayerChangedTeam": {
+		"body": [
+			"OnPlayerChangedTeam(${1:ply}, ${2:oldTeam}, ${3:newTeam})$0"
+		],
+		"description": "Called when a player has changed team using",
+		"prefix": "OnPlayerChangedTeam"
+	},
+	"GM/OnPlayerChat": {
+		"body": [
+			"OnPlayerChat(${1:ply}, ${2:text}, ${3:teamChat}, ${4:isDead})$0"
+		],
+		"description": "Called whenever a player sends a chat message. For the serverside equivalent, see",
+		"prefix": "OnPlayerChat"
+	},
+	"GM/OnPlayerHitGround": {
+		"body": [
+			"OnPlayerHitGround(${1:player}, ${2:inWater}, ${3:onFloater}, ${4:speed})$0"
+		],
+		"description": "Called when a player makes contact with the ground.",
+		"prefix": "OnPlayerHitGround"
+	},
+	"GM/OnReloaded": {
+		"body": [
+			"OnReloaded()$0"
+		],
+		"description": "Called when gamemode has been reloaded by auto refresh.",
+		"prefix": "OnReloaded"
+	},
+	"GM/OnSpawnMenuClose": {
+		"body": [
+			"OnSpawnMenuClose()$0"
+		],
+		"description": "Called when a player releases the \u0026#34;+menu\u0026#34; bind on their keyboard, which is bound to Q by default.",
+		"prefix": "OnSpawnMenuClose"
+	},
+	"GM/OnSpawnMenuOpen": {
+		"body": [
+			"OnSpawnMenuOpen()$0"
+		],
+		"description": "Called when a player presses the \u0026#34;+menu\u0026#34; bind on their keyboard, which is bound to Q by default.",
+		"prefix": "OnSpawnMenuOpen"
+	},
+	"GM/OnTextEntryGetFocus": {
+		"body": [
+			"OnTextEntryGetFocus(${1:panel})$0"
+		],
+		"description": "Called when a",
+		"prefix": "OnTextEntryGetFocus"
+	},
+	"GM/OnTextEntryLoseFocus": {
+		"body": [
+			"OnTextEntryLoseFocus(${1:panel})$0"
+		],
+		"description": "Called when DTextEntry loses focus.",
+		"prefix": "OnTextEntryLoseFocus"
+	},
+	"GM/OnUndo": {
+		"body": [
+			"OnUndo(${1:name}, ${2:customText})$0"
+		],
+		"description": "Called when the player undoes something.",
+		"prefix": "OnUndo"
+	},
+	"GM/OnViewModelChanged": {
+		"body": [
+			"OnViewModelChanged(${1:viewmodel}, ${2:oldModel}, ${3:newModel})$0"
+		],
+		"description": "Called when the player changes their weapon to another one - and their viewmodel model changes.",
+		"prefix": "OnViewModelChanged"
+	},
+	"GM/PhysgunDrop": {
+		"body": [
+			"PhysgunDrop(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called when a player drops an entity with the Physgun.",
+		"prefix": "PhysgunDrop"
+	},
+	"GM/PhysgunPickup": {
+		"body": [
+			"PhysgunPickup(${1:player}, ${2:entity})$0"
+		],
+		"description": "Called whenever a player picks up an entity with the Physgun.",
+		"prefix": "PhysgunPickup"
+	},
+	"GM/PlayerAuthed": {
+		"body": [
+			"PlayerAuthed(${1:ply}, ${2:steamid}, ${3:uniqueid})$0"
+		],
+		"description": "Called once when the player is authenticated.",
+		"prefix": "PlayerAuthed"
+	},
+	"GM/PlayerBindPress": {
+		"body": [
+			"PlayerBindPress(${1:ply}, ${2:bind}, ${3:pressed})$0"
+		],
+		"description": "Runs when a bind has been pressed. Allows to block commands.",
+		"prefix": "PlayerBindPress"
+	},
+	"GM/PlayerButtonDown": {
+		"body": [
+			"PlayerButtonDown(${1:ply}, ${2:button})$0"
+		],
+		"description": "Called when a player presses a button.",
+		"prefix": "PlayerButtonDown"
+	},
+	"GM/PlayerButtonUp": {
+		"body": [
+			"PlayerButtonUp(${1:ply}, ${2:button})$0"
+		],
+		"description": "Called when a player releases a button.",
+		"prefix": "PlayerButtonUp"
+	},
+	"GM/PlayerCanHearPlayersVoice": {
+		"body": [
+			"PlayerCanHearPlayersVoice(${1:listener}, ${2:talker})$0"
+		],
+		"description": "Decides whether a player can hear another player using voice chat.",
+		"prefix": "PlayerCanHearPlayersVoice"
+	},
+	"GM/PlayerCanJoinTeam": {
+		"body": [
+			"PlayerCanJoinTeam(${1:ply}, ${2:team})$0"
+		],
+		"description": "Returns whether or not a player is allowed to join a team",
+		"prefix": "PlayerCanJoinTeam"
+	},
+	"GM/PlayerCanPickupItem": {
+		"body": [
+			"PlayerCanPickupItem(${1:ply}, ${2:item})$0"
+		],
+		"description": "Returns whether or not a player is allowed to pick an item up.",
+		"prefix": "PlayerCanPickupItem"
+	},
+	"GM/PlayerCanPickupWeapon": {
+		"body": [
+			"PlayerCanPickupWeapon(${1:ply}, ${2:wep})$0"
+		],
+		"description": "Returns whether or not a player is allowed to pick up a weapon.",
+		"prefix": "PlayerCanPickupWeapon"
+	},
+	"GM/PlayerCanSeePlayersChat": {
+		"body": [
+			"PlayerCanSeePlayersChat(${1:text}, ${2:teamOnly}, ${3:listener}, ${4:speaker})$0"
+		],
+		"description": "Returns whether or not the player can see the other player\u0026#39;s chat.",
+		"prefix": "PlayerCanSeePlayersChat"
+	},
+	"GM/PlayerConnect": {
+		"body": [
+			"PlayerConnect(${1:name}, ${2:ip})$0"
+		],
+		"description": "Executes when a player connects to the server.",
+		"prefix": "PlayerConnect"
+	},
+	"GM/PlayerDeath": {
+		"body": [
+			"PlayerDeath(${1:victim}, ${2:inflictor}, ${3:attacker})$0"
+		],
+		"description": "Called when a player is killed by",
+		"prefix": "PlayerDeath"
+	},
+	"GM/PlayerDeathSound": {
+		"body": [
+			"PlayerDeathSound()$0"
+		],
+		"description": "Returns whether or not the default death sound should be muted.",
+		"prefix": "PlayerDeathSound"
+	},
+	"GM/PlayerDeathThink": {
+		"body": [
+			"PlayerDeathThink(${1:ply})$0"
+		],
+		"description": "Called every think while the player is dead. The return value will determine if the player respawns.",
+		"prefix": "PlayerDeathThink"
+	},
+	"GM/PlayerDisconnected": {
+		"body": [
+			"PlayerDisconnected(${1:ply})$0"
+		],
+		"description": "Called when a player leaves the server.",
+		"prefix": "PlayerDisconnected"
+	},
+	"GM/PlayerDriveAnimate": {
+		"body": [
+			"PlayerDriveAnimate(${1:ply})$0"
+		],
+		"description": "Called to update the player\u0026#39;s animation during a drive.",
+		"prefix": "PlayerDriveAnimate"
+	},
+	"GM/PlayerEndVoice": {
+		"body": [
+			"PlayerEndVoice(${1:ply})$0"
+		],
+		"description": "Called when player stops using voice chat.",
+		"prefix": "PlayerEndVoice"
+	},
+	"GM/PlayerEnteredVehicle": {
+		"body": [
+			"PlayerEnteredVehicle(${1:ply}, ${2:veh}, ${3:role})$0"
+		],
+		"description": "Called when a player enters a vehicle. Note: although this hook is defined in the base gamemode as shared, it doesn\u0026#39;t appear to be called clientside.",
+		"prefix": "PlayerEnteredVehicle"
+	},
+	"GM/PlayerFootstep": {
+		"body": [
+			"PlayerFootstep(${1:ply}, ${2:pos}, ${3:foot}, ${4:sound}, ${5:volume}, ${6:filter})$0"
+		],
+		"description": "Called whenever a player steps. Return true to mute the normal sound.",
+		"prefix": "PlayerFootstep"
+	},
+	"GM/PlayerFrozeObject": {
+		"body": [
+			"PlayerFrozeObject(${1:ply}, ${2:ent}, ${3:physobj})$0"
+		],
+		"description": "Called when a player freezes an object.",
+		"prefix": "PlayerFrozeObject"
+	},
+	"GM/PlayerHurt": {
+		"body": [
+			"PlayerHurt(${1:victim}, ${2:attacker}, ${3:healthRemaining}, ${4:damageTaken})$0"
+		],
+		"description": "Called when a player gets hurt.",
+		"prefix": "PlayerHurt"
+	},
+	"GM/PlayerInitialSpawn": {
+		"body": [
+			"PlayerInitialSpawn(${1:player})$0"
+		],
+		"description": "Called when the player spawns for the first time.",
+		"prefix": "PlayerInitialSpawn"
+	},
+	"GM/PlayerJoinTeam": {
+		"body": [
+			"PlayerJoinTeam(${1:ply}, ${2:team})$0"
+		],
+		"description": "Makes the player join a specified team. This is a convenience function that calls",
+		"prefix": "PlayerJoinTeam"
+	},
+	"GM/PlayerLeaveVehicle": {
+		"body": [
+			"PlayerLeaveVehicle(${1:ply}, ${2:veh})$0"
+		],
+		"description": "Called when a player leaves a vehicle.",
+		"prefix": "PlayerLeaveVehicle"
+	},
+	"GM/PlayerLoadout": {
+		"body": [
+			"PlayerLoadout(${1:ply})$0"
+		],
+		"description": "Called to give players the default set of weapons.",
+		"prefix": "PlayerLoadout"
+	},
+	"GM/PlayerNoClip": {
+		"body": [
+			"PlayerNoClip(${1:ply}, ${2:desiredState})$0"
+		],
+		"description": "Called when a player tries to switch noclip mode.",
+		"prefix": "PlayerNoClip"
+	},
+	"GM/PlayerPostThink": {
+		"body": [
+			"PlayerPostThink(${1:ply})$0"
+		],
+		"description": "Called after the player\u0026#39;s think.",
+		"prefix": "PlayerPostThink"
+	},
+	"GM/PlayerRequestTeam": {
+		"body": [
+			"PlayerRequestTeam(${1:ply}, ${2:team})$0"
+		],
+		"description": "Request a player to join the team. This function will check if the team is available to join or not.",
+		"prefix": "PlayerRequestTeam"
+	},
+	"GM/PlayerSay": {
+		"body": [
+			"PlayerSay(${1:sender}, ${2:text}, ${3:teamChat})$0"
+		],
+		"description": "Called when a player dispatched a chat message. For the clientside equivalent, see",
+		"prefix": "PlayerSay"
+	},
+	"GM/PlayerSelectSpawn": {
+		"body": [
+			"PlayerSelectSpawn(${1:ply})$0"
+		],
+		"description": "Called to determine a spawn point for a player to spawn at.",
+		"prefix": "PlayerSelectSpawn"
+	},
+	"GM/PlayerSelectTeamSpawn": {
+		"body": [
+			"PlayerSelectTeamSpawn(${1:team}, ${2:ply})$0"
+		],
+		"description": "Find a team spawn point entity for this player.",
+		"prefix": "PlayerSelectTeamSpawn"
+	},
+	"GM/PlayerSetHandsModel": {
+		"body": [
+			"PlayerSetHandsModel(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Called whenever view model hands needs setting a model. By default this calls",
+		"prefix": "PlayerSetHandsModel"
+	},
+	"GM/PlayerSetModel": {
+		"body": [
+			"PlayerSetModel(${1:ply})$0"
+		],
+		"description": "Called whenever a player spawns and must choose a model. A good place to assign a model to a player.",
+		"prefix": "PlayerSetModel"
+	},
+	"GM/PlayerShouldTakeDamage": {
+		"body": [
+			"PlayerShouldTakeDamage(${1:ply}, ${2:attacker})$0"
+		],
+		"description": "Returns true if the player should take damage from the given attacker.",
+		"prefix": "PlayerShouldTakeDamage"
+	},
+	"GM/PlayerShouldTaunt": {
+		"body": [
+			"PlayerShouldTaunt(${1:ply}, ${2:act})$0"
+		],
+		"description": "Allows to suppress player taunts.",
+		"prefix": "PlayerShouldTaunt"
+	},
+	"GM/PlayerSilentDeath": {
+		"body": [
+			"PlayerSilentDeath(${1:ply})$0"
+		],
+		"description": "Called when the player is killed by",
+		"prefix": "PlayerSilentDeath"
+	},
+	"GM/PlayerSpawn": {
+		"body": [
+			"PlayerSpawn(${1:player})$0"
+		],
+		"description": "Called whenever a player spawns, including respawns.",
+		"prefix": "PlayerSpawn"
+	},
+	"GM/PlayerSpawnAsSpectator": {
+		"body": [
+			"PlayerSpawnAsSpectator(${1:ply})$0"
+		],
+		"description": "Called to spawn the player as a spectator.",
+		"prefix": "PlayerSpawnAsSpectator"
+	},
+	"GM/PlayerSpray": {
+		"body": [
+			"PlayerSpray(${1:sprayer})$0"
+		],
+		"description": "Determines if the player can spray using the \u0026#34;impulse 201\u0026#34; console command.",
+		"prefix": "PlayerSpray"
+	},
+	"GM/PlayerStartTaunt": {
+		"body": [
+			"PlayerStartTaunt(${1:ply}, ${2:act}, ${3:length})$0"
+		],
+		"description": "Called when player starts taunting.",
+		"prefix": "PlayerStartTaunt"
+	},
+	"GM/PlayerStartVoice": {
+		"body": [
+			"PlayerStartVoice(${1:ply})$0"
+		],
+		"description": "Called when a player starts using voice chat.",
+		"prefix": "PlayerStartVoice"
+	},
+	"GM/PlayerStepSoundTime": {
+		"body": [
+			"PlayerStepSoundTime(${1:ply}, ${2:type}, ${3:walking})$0"
+		],
+		"description": "Allows you to override the time between footsteps.",
+		"prefix": "PlayerStepSoundTime"
+	},
+	"GM/PlayerSwitchFlashlight": {
+		"body": [
+			"PlayerSwitchFlashlight(${1:ply}, ${2:enabled})$0"
+		],
+		"description": "Called whenever a player attempts to either turn on or off their flashlight, returning false will deny the change.",
+		"prefix": "PlayerSwitchFlashlight"
+	},
+	"GM/PlayerSwitchWeapon": {
+		"body": [
+			"PlayerSwitchWeapon(${1:player}, ${2:oldWeapon}, ${3:newWeapon})$0"
+		],
+		"description": "Called when a player switches their weapon.",
+		"prefix": "PlayerSwitchWeapon"
+	},
+	"GM/PlayerTick": {
+		"body": [
+			"PlayerTick(${1:player}, ${2:mv})$0"
+		],
+		"description": "The Move hook is called for you to manipulate the player\u0026#39;s",
+		"prefix": "PlayerTick"
+	},
+	"GM/PlayerTraceAttack": {
+		"body": [
+			"PlayerTraceAttack(${1:ply}, ${2:dmginfo}, ${3:dir}, ${4:trace})$0"
+		],
+		"description": "Called when a player has been hit by a trace and damaged (such as from a bullet). Returning true overrides the damage handling and prevents",
+		"prefix": "PlayerTraceAttack"
+	},
+	"GM/PlayerUnfrozeObject": {
+		"body": [
+			"PlayerUnfrozeObject(${1:ply}, ${2:ent}, ${3:physobj})$0"
+		],
+		"description": "Called when a player unfreezes an object.",
+		"prefix": "PlayerUnfrozeObject"
+	},
+	"GM/PlayerUse": {
+		"body": [
+			"PlayerUse(${1:ply}, ${2:ent})$0"
+		],
+		"description": "Triggered when the player presses use on an object. Continuously runs until USE is released but will not activate other Entities until the USE key is released; dependent on activation type of the Entity.",
+		"prefix": "PlayerUse"
+	},
+	"GM/PopulateMenuBar": {
+		"body": [
+			"PopulateMenuBar(${1:menubar})$0"
+		],
+		"description": "Called when it\u0026#39;s time to populate the context menu menu bar at the top.",
+		"prefix": "PopulateMenuBar"
+	},
+	"GM/PopulateSTOOLMenu": {
+		"body": [
+			"PopulateSTOOLMenu()$0"
+		],
+		"description": "Called to populate the Scripted Tool menu.",
+		"prefix": "PopulateSTOOLMenu"
+	},
+	"GM/PopulateToolMenu": {
+		"body": [
+			"PopulateToolMenu()$0"
+		],
+		"description": "Add the STOOLS to the tool menu. You want to call",
+		"prefix": "PopulateToolMenu"
+	},
+	"GM/PostCleanupMap": {
+		"body": [
+			"PostCleanupMap()$0"
+		],
+		"description": "Called right after the map has cleaned up (usually because",
+		"prefix": "PostCleanupMap"
+	},
+	"GM/PostDraw2DSkyBox": {
+		"body": [
+			"PostDraw2DSkyBox()$0"
+		],
+		"description": "Called right after the 2D skybox has been drawn - allowing you to draw over it.",
+		"prefix": "PostDraw2DSkyBox"
+	},
+	"GM/PostDrawEffects": {
+		"body": [
+			"PostDrawEffects()$0"
+		],
+		"description": "Called after rendering effects. This is where halos are drawn. Called just before",
+		"prefix": "PostDrawEffects"
+	},
+	"GM/PostDrawHUD": {
+		"body": [
+			"PostDrawHUD()$0"
+		],
+		"description": "Called after",
+		"prefix": "PostDrawHUD"
+	},
+	"GM/PostDrawOpaqueRenderables": {
+		"body": [
+			"PostDrawOpaqueRenderables(${1:bDrawingDepth}, ${2:bDrawingSkybox})$0"
+		],
+		"description": "Called after drawing opaque entities.",
+		"prefix": "PostDrawOpaqueRenderables"
+	},
+	"GM/PostDrawPlayerHands": {
+		"body": [
+			"PostDrawPlayerHands(${1:hands}, ${2:vm}, ${3:ply}, ${4:weapon})$0"
+		],
+		"description": "Called after the player hands are drawn.",
+		"prefix": "PostDrawPlayerHands"
+	},
+	"GM/PostDrawSkyBox": {
+		"body": [
+			"PostDrawSkyBox()$0"
+		],
+		"description": "Called after drawing the skybox.",
+		"prefix": "PostDrawSkyBox"
+	},
+	"GM/PostDrawTranslucentRenderables": {
+		"body": [
+			"PostDrawTranslucentRenderables(${1:bDrawingDepth}, ${2:bDrawingSkybox})$0"
+		],
+		"description": "Called after all translucent entities are drawn.",
+		"prefix": "PostDrawTranslucentRenderables"
+	},
+	"GM/PostDrawViewModel": {
+		"body": [
+			"PostDrawViewModel(${1:viewmodel}, ${2:player}, ${3:weapon})$0"
+		],
+		"description": "Called after view model is drawn.",
+		"prefix": "PostDrawViewModel"
+	},
+	"GM/PostGamemodeLoaded": {
+		"body": [
+			"PostGamemodeLoaded()$0"
+		],
+		"description": "Called after the gamemode has loaded.",
+		"prefix": "PostGamemodeLoaded"
+	},
+	"GM/PostPlayerDeath": {
+		"body": [
+			"PostPlayerDeath(${1:ply})$0"
+		],
+		"description": "Called right after",
+		"prefix": "PostPlayerDeath"
+	},
+	"GM/PostPlayerDraw": {
+		"body": [
+			"PostPlayerDraw(${1:ply})$0"
+		],
+		"description": "Called after the player was drawn.",
+		"prefix": "PostPlayerDraw"
+	},
+	"GM/PostProcessPermitted": {
+		"body": [
+			"PostProcessPermitted(${1:ppeffect})$0"
+		],
+		"description": "Allows you to suppress post processing effect drawing.",
+		"prefix": "PostProcessPermitted"
+	},
+	"GM/PostReloadToolsMenu": {
+		"body": [
+			"PostReloadToolsMenu()$0"
+		],
+		"description": "Called right after the Lua Loaded tool menus are reloaded. This is a good place to set up any ControlPanels.",
+		"prefix": "PostReloadToolsMenu"
+	},
+	"GM/PostRender": {
+		"body": [
+			"PostRender()$0"
+		],
+		"description": "Called after the frame has been rendered.",
+		"prefix": "PostRender"
+	},
+	"GM/PostRenderVGUI": {
+		"body": [
+			"PostRenderVGUI()$0"
+		],
+		"description": "Called after the VGUI has been drawn.",
+		"prefix": "PostRenderVGUI"
+	},
+	"GM/PreCleanupMap": {
+		"body": [
+			"PreCleanupMap()$0"
+		],
+		"description": "Called right before the map cleans up (usually because",
+		"prefix": "PreCleanupMap"
+	},
+	"GM/PreDrawEffects": {
+		"body": [
+			"PreDrawEffects()$0"
+		],
+		"description": "Called just after",
+		"prefix": "PreDrawEffects"
+	},
+	"GM/PreDrawHUD": {
+		"body": [
+			"PreDrawHUD()$0"
+		],
+		"description": "Called before any of 2D drawing functions. Drawing anything in it seems to work incorrectly.",
+		"prefix": "PreDrawHUD"
+	},
+	"GM/PreDrawHalos": {
+		"body": [
+			"PreDrawHalos()$0"
+		],
+		"description": "Called before rendering the halos. This is the place to call",
+		"prefix": "PreDrawHalos"
+	},
+	"GM/PreDrawOpaqueRenderables": {
+		"body": [
+			"PreDrawOpaqueRenderables(${1:isDrawingDepth}, ${2:isDrawSkybox})$0"
+		],
+		"description": "Called before all opaque entities are drawn.",
+		"prefix": "PreDrawOpaqueRenderables"
+	},
+	"GM/PreDrawPlayerHands": {
+		"body": [
+			"PreDrawPlayerHands(${1:hands}, ${2:vm}, ${3:ply}, ${4:weapon})$0"
+		],
+		"description": "Called before the player hands are drawn.",
+		"prefix": "PreDrawPlayerHands"
+	},
+	"GM/PreDrawSkyBox": {
+		"body": [
+			"PreDrawSkyBox()$0"
+		],
+		"description": "Called before the sky box is drawn.",
+		"prefix": "PreDrawSkyBox"
+	},
+	"GM/PreDrawTranslucentRenderables": {
+		"body": [
+			"PreDrawTranslucentRenderables(${1:isDrawingDepth}, ${2:isDrawSkybox})$0"
+		],
+		"description": "Called before all the translucent entities are drawn.",
+		"prefix": "PreDrawTranslucentRenderables"
+	},
+	"GM/PreDrawViewModel": {
+		"body": [
+			"PreDrawViewModel(${1:vm}, ${2:ply}, ${3:weapon})$0"
+		],
+		"description": "Called before the view model has been drawn. This hook by default also calls this on weapons, so you can use",
+		"prefix": "PreDrawViewModel"
+	},
+	"GM/PreGamemodeLoaded": {
+		"body": [
+			"PreGamemodeLoaded()$0"
+		],
+		"description": "Called before the gamemode is loaded.",
+		"prefix": "PreGamemodeLoaded"
+	},
+	"GM/PrePlayerDraw": {
+		"body": [
+			"PrePlayerDraw(${1:player})$0"
+		],
+		"description": "Called before the player is drawn.",
+		"prefix": "PrePlayerDraw"
+	},
+	"GM/PreReloadToolsMenu": {
+		"body": [
+			"PreReloadToolsMenu()$0"
+		],
+		"description": "Called right before the Lua Loaded tool menus are reloaded.",
+		"prefix": "PreReloadToolsMenu"
+	},
+	"GM/PreRender": {
+		"body": [
+			"PreRender()$0"
+		],
+		"description": "Called before the renderer is about to start rendering the next frame.",
+		"prefix": "PreRender"
+	},
+	"GM/PreventScreenClicks": {
+		"body": [
+			"PreventScreenClicks()$0"
+		],
+		"description": "This will prevent IN_ATTACK from sending to server when player tries to shoot from C menu.",
+		"prefix": "PreventScreenClicks"
+	},
+	"GM/PropBreak": {
+		"body": [
+			"PropBreak(${1:attacker}, ${2:prop})$0"
+		],
+		"description": "Called when a prop has been destroyed.",
+		"prefix": "PropBreak"
+	},
+	"GM/RenderScene": {
+		"body": [
+			"RenderScene(${1:origin}, ${2:angles}, ${3:fov})$0"
+		],
+		"description": "Render the scene. Used by the \u0026#34;Stereoscopy\u0026#34; Post-processing effect.",
+		"prefix": "RenderScene"
+	},
+	"GM/RenderScreenspaceEffects": {
+		"body": [
+			"RenderScreenspaceEffects()$0"
+		],
+		"description": "Used to render post processing effects.",
+		"prefix": "RenderScreenspaceEffects"
+	},
+	"GM/Restored": {
+		"body": [
+			"Restored()$0"
+		],
+		"description": "Called when the game is loaded from a saved game.",
+		"prefix": "Restored"
+	},
+	"GM/Saved": {
+		"body": [
+			"Saved()$0"
+		],
+		"description": "Called when the game is saved using source engine built-in save system.",
+		"prefix": "Saved"
+	},
+	"GM/ScaleNPCDamage": {
+		"body": [
+			"ScaleNPCDamage(${1:npc}, ${2:hitgroup}, ${3:dmginfo})$0"
+		],
+		"description": "Called when an NPC takes damage.",
+		"prefix": "ScaleNPCDamage"
+	},
+	"GM/ScalePlayerDamage": {
+		"body": [
+			"ScalePlayerDamage(${1:ply}, ${2:hitgroup}, ${3:dmginfo})$0"
+		],
+		"description": "This hook allows you to change how much damage a player receives when one takes damage to a specific body part.",
+		"prefix": "ScalePlayerDamage"
+	},
+	"GM/ScoreboardHide": {
+		"body": [
+			"ScoreboardHide()$0"
+		],
+		"description": "Called when player released the scoreboard button. ( TAB by default )",
+		"prefix": "ScoreboardHide"
+	},
+	"GM/ScoreboardShow": {
+		"body": [
+			"ScoreboardShow()$0"
+		],
+		"description": "Called when player presses the scoreboard button. ( TAB by default )",
+		"prefix": "ScoreboardShow"
+	},
+	"GM/SetPlayerSpeed": {
+		"body": [
+			"SetPlayerSpeed(${1:ply}, ${2:walkSpeed}, ${3:runSpeed})$0"
+		],
+		"description": "Sets player run and sprint speeds.",
+		"prefix": "SetPlayerSpeed"
+	},
+	"GM/SetupMove": {
+		"body": [
+			"SetupMove(${1:ply}, ${2:mv}, ${3:cmd})$0"
+		],
+		"description": "SetupMove is called before the engine process movements. This allows us to override the players movement.",
+		"prefix": "SetupMove"
+	},
+	"GM/SetupPlayerVisibility": {
+		"body": [
+			"SetupPlayerVisibility(${1:ply}, ${2:viewEntity})$0"
+		],
+		"description": "Allows you to add extra positions to the player\u0026#39;s PVS. This is the place to call",
+		"prefix": "SetupPlayerVisibility"
+	},
+	"GM/SetupSkyboxFog": {
+		"body": [
+			"SetupSkyboxFog(${1:scale})$0"
+		],
+		"description": "Allows you to use render.Fog* functions to manipulate skybox fog.",
+		"prefix": "SetupSkyboxFog"
+	},
+	"GM/SetupWorldFog": {
+		"body": [
+			"SetupWorldFog()$0"
+		],
+		"description": "Allows you to use render.Fog* functions to manipulate world fog.",
+		"prefix": "SetupWorldFog"
+	},
+	"GM/ShouldCollide": {
+		"body": [
+			"ShouldCollide(${1:ent1}, ${2:ent2})$0"
+		],
+		"description": "Called to decide whether a pair of entities should collide with each other. This is only called if",
+		"prefix": "ShouldCollide"
+	},
+	"GM/ShouldDrawLocalPlayer": {
+		"body": [
+			"ShouldDrawLocalPlayer(${1:ply})$0"
+		],
+		"description": "Called to determine if the",
+		"prefix": "ShouldDrawLocalPlayer"
+	},
+	"GM/ShowHelp": {
+		"body": [
+			"ShowHelp(${1:ply})$0"
+		],
+		"description": "Called when a player executes gm_showhelp console command. ( Default bind is F1 )",
+		"prefix": "ShowHelp"
+	},
+	"GM/ShowSpare1": {
+		"body": [
+			"ShowSpare1(${1:ply})$0"
+		],
+		"description": "Called when a player executes gm_showspare1 console command. ( Default bind is F3 )",
+		"prefix": "ShowSpare1"
+	},
+	"GM/ShowSpare2": {
+		"body": [
+			"ShowSpare2(${1:ply})$0"
+		],
+		"description": "Called when a player executes gm_showspare2 console command. ( Default bind is F4 )",
+		"prefix": "ShowSpare2"
+	},
+	"GM/ShowTeam": {
+		"body": [
+			"ShowTeam(${1:ply})$0"
+		],
+		"description": "Called when a player executes gm_showteam console command. ( Default bind is F2 )",
+		"prefix": "ShowTeam"
+	},
+	"GM/ShutDown": {
+		"body": [
+			"ShutDown()$0"
+		],
+		"description": "Called whenever the lua environment is about to be shut down.",
+		"prefix": "ShutDown"
+	},
+	"GM/SpawniconGenerated": {
+		"body": [
+			"SpawniconGenerated(${1:lastmodel}, ${2:imagename}, ${3:modelsleft})$0"
+		],
+		"description": "Called when spawn icon is generated.",
+		"prefix": "SpawniconGenerated"
+	},
+	"GM/StartChat": {
+		"body": [
+			"StartChat(${1:isTeamChat})$0"
+		],
+		"description": "Runs when the user tries to open the chat box.",
+		"prefix": "StartChat"
+	},
+	"GM/StartCommand": {
+		"body": [
+			"StartCommand(${1:ply}, ${2:ucmd})$0"
+		],
+		"description": "Allows you to change the players inputs before they are processed by the server.",
+		"prefix": "StartCommand"
+	},
+	"GM/StartEntityDriving": {
+		"body": [
+			"StartEntityDriving(${1:ent}, ${2:ply})$0"
+		],
+		"description": "Called right before an entity starts driving. Overriding this hook will cause it to not call",
+		"prefix": "StartEntityDriving"
+	},
+	"GM/StartGame": {
+		"body": [
+			"StartGame()$0"
+		],
+		"description": "Called when you start a new game via the menu.",
+		"prefix": "StartGame"
+	},
+	"GM/Think": {
+		"body": [
+			"Think()$0"
+		],
+		"description": "Called every frame on client and every tick on server.",
+		"prefix": "Think"
+	},
+	"GM/Tick": {
+		"body": [
+			"Tick()$0"
+		],
+		"description": "Called every server tick. Serverside, this is similar to",
+		"prefix": "Tick"
+	},
+	"GM/TranslateActivity": {
+		"body": [
+			"TranslateActivity(${1:ply}, ${2:act})$0"
+		],
+		"description": "Allows you to translate player activities.",
+		"prefix": "TranslateActivity"
+	},
+	"GM/UpdateAnimation": {
+		"body": [
+			"UpdateAnimation(${1:ply}, ${2:velocity}, ${3:maxSeqGroundSpeed})$0"
+		],
+		"description": "Animation updates (pose params etc) should be done here.",
+		"prefix": "UpdateAnimation"
+	},
+	"GM/VGUIMousePressAllowed": {
+		"body": [
+			"VGUIMousePressAllowed(${1:button})$0"
+		],
+		"description": "No description available.",
+		"prefix": "VGUIMousePressAllowed"
+	},
+	"GM/VGUIMousePressed": {
+		"body": [
+			"VGUIMousePressed(${1:pnl}, ${2:mouseCode})$0"
+		],
+		"description": "No description available.",
+		"prefix": "VGUIMousePressed"
+	},
+	"GM/VariableEdited": {
+		"body": [
+			"VariableEdited(${1:ent}, ${2:ply}, ${3:key}, ${4:val}, ${5:editor})$0"
+		],
+		"description": "Called when a variable is edited on an Entity (called by Edit Properties... menu)",
+		"prefix": "VariableEdited"
+	},
+	"GM/VehicleMove": {
+		"body": [
+			"VehicleMove(${1:ply}, ${2:veh}, ${3:mv})$0"
+		],
+		"description": "Called when you are driving a vehicle. This hook works just like",
+		"prefix": "VehicleMove"
+	},
+	"GM/WeaponEquip": {
+		"body": [
+			"WeaponEquip(${1:weapon})$0"
+		],
+		"description": "Called as a weapon entity is picked up by a player.",
+		"prefix": "WeaponEquip"
+	},
+	"GM/WorkshopDownloadFile": {
+		"body": [
+			"WorkshopDownloadFile(${1:id}, ${2:imageID}, ${3:title}, ${4:size})$0"
+		],
+		"description": "Called when an addon from the Steam workshop begins downloading. Used by default to place details on the workshop downloading panel.",
+		"prefix": "WorkshopDownloadFile"
+	},
+	"GM/WorkshopDownloadProgress": {
+		"body": [
+			"WorkshopDownloadProgress(${1:id}, ${2:imageID}, ${3:title}, ${4:downloaded}, ${5:expected})$0"
+		],
+		"description": "Called while an addon from the Steam workshop is downloading. Used by default to update details on the fancy workshop download panel.",
+		"prefix": "WorkshopDownloadProgress"
+	},
+	"GM/WorkshopDownloadTotals": {
+		"body": [
+			"WorkshopDownloadTotals(${1:remain}, ${2:total})$0"
+		],
+		"description": "Called after",
+		"prefix": "WorkshopDownloadTotals"
+	},
+	"GM/WorkshopDownloadedFile": {
+		"body": [
+			"WorkshopDownloadedFile(${1:id}, ${2:title}, ${3:authorid})$0"
+		],
+		"description": "Called when an addon from the Steam workshop finishes downloading. Used by default to update details on the workshop downloading panel.",
+		"prefix": "WorkshopDownloadedFile"
+	},
+	"GM/WorkshopEnd": {
+		"body": [
+			"WorkshopEnd()$0"
+		],
+		"description": "Called when downloading content from Steam workshop ends. Used by default to hide fancy workshop downloading panel.",
+		"prefix": "WorkshopEnd"
+	},
+	"GM/WorkshopStart": {
+		"body": [
+			"WorkshopStart()$0"
+		],
+		"description": "Called when downloading content from Steam workshop begins. Used by default to show fancy workshop downloading panel.",
+		"prefix": "WorkshopStart"
+	},
+	"GM/WorkshopSubscriptionsProgress": {
+		"body": [
+			"WorkshopSubscriptionsProgress(${1:number}, ${2:number})$0"
+		],
+		"description": "No description available.",
+		"prefix": "WorkshopSubscriptionsProgress"
+	}
+}

@@ -1,0 +1,184 @@
+{
+	"DFileBrowser/Clear": {
+		"body": [
+			"Clear()$0"
+		],
+		"description": "Clears the file tree and list, and resets all values.",
+		"prefix": "Clear"
+	},
+	"DFileBrowser/GetBaseFolder": {
+		"body": [
+			"GetBaseFolder()$0"
+		],
+		"description": "Returns the root directory/folder of the file tree.",
+		"prefix": "GetBaseFolder"
+	},
+	"DFileBrowser/GetCurrentFolder": {
+		"body": [
+			"GetCurrentFolder()$0"
+		],
+		"description": "Returns the current directory/folder being displayed.",
+		"prefix": "GetCurrentFolder"
+	},
+	"DFileBrowser/GetFileTypes": {
+		"body": [
+			"GetFileTypes()$0"
+		],
+		"description": "Returns the current file type filter on the file list.",
+		"prefix": "GetFileTypes"
+	},
+	"DFileBrowser/GetFolderNode": {
+		"body": [
+			"GetFolderNode()$0"
+		],
+		"description": "Returns the",
+		"prefix": "GetFolderNode"
+	},
+	"DFileBrowser/GetModels": {
+		"body": [
+			"GetModels()$0"
+		],
+		"description": "Returns whether or not the model viewer mode is enabled. In this mode, files are displayed as",
+		"prefix": "GetModels"
+	},
+	"DFileBrowser/GetName": {
+		"body": [
+			"GetName()$0"
+		],
+		"description": "Returns the name being used for the file tree.",
+		"prefix": "GetName"
+	},
+	"DFileBrowser/GetOpen": {
+		"body": [
+			"GetOpen()$0"
+		],
+		"description": "Returns whether or not the file tree is open.",
+		"prefix": "GetOpen"
+	},
+	"DFileBrowser/GetPath": {
+		"body": [
+			"GetPath()$0"
+		],
+		"description": "Returns the access path of the file tree. This is",
+		"prefix": "GetPath"
+	},
+	"DFileBrowser/GetSearch": {
+		"body": [
+			"GetSearch()$0"
+		],
+		"description": "Returns the current search filter on the file tree.",
+		"prefix": "GetSearch"
+	},
+	"DFileBrowser/OnDoubleClick": {
+		"body": [
+			"OnDoubleClick(${1:filePath}, ${2:selectedPanel})$0"
+		],
+		"description": "Called when a file is double-clicked.",
+		"prefix": "OnDoubleClick"
+	},
+	"DFileBrowser/OnRightClick": {
+		"body": [
+			"OnRightClick(${1:filePath}, ${2:selectedPanel})$0"
+		],
+		"description": "Called when a file is right-clicked.",
+		"prefix": "OnRightClick"
+	},
+	"DFileBrowser/OnSelect": {
+		"body": [
+			"OnSelect(${1:filePath}, ${2:selectedPanel})$0"
+		],
+		"description": "Called when a file is selected.",
+		"prefix": "OnSelect"
+	},
+	"DFileBrowser/SetBaseFolder": {
+		"body": [
+			"SetBaseFolder(${1:baseDir})$0"
+		],
+		"description": "Sets the root directory/folder of the file tree.",
+		"prefix": "SetBaseFolder"
+	},
+	"DFileBrowser/SetCurrentFolder": {
+		"body": [
+			"SetCurrentFolder(${1:currentDir})$0"
+		],
+		"description": "Sets the directory/folder from which to display the file list.",
+		"prefix": "SetCurrentFolder"
+	},
+	"DFileBrowser/SetFileTypes": {
+		"body": [
+			"SetFileTypes(${1:fileTypes=\"*.*\"})$0"
+		],
+		"description": "Sets the file type filter for the file list.",
+		"prefix": "SetFileTypes"
+	},
+	"DFileBrowser/SetModels": {
+		"body": [
+			"SetModels(${1:showModels=false})$0"
+		],
+		"description": "Enables or disables the model viewer mode. In this mode, files are displayed as",
+		"prefix": "SetModels"
+	},
+	"DFileBrowser/SetName": {
+		"body": [
+			"SetName(${1:treeName=baseFolder})$0"
+		],
+		"description": "Sets the name to use for the file tree.",
+		"prefix": "SetName"
+	},
+	"DFileBrowser/SetOpen": {
+		"body": [
+			"SetOpen(${1:open=false}, ${2:useAnim=false})$0"
+		],
+		"description": "Opens or closes the file tree.",
+		"prefix": "SetOpen"
+	},
+	"DFileBrowser/SetPath": {
+		"body": [
+			"SetPath(${1:path})$0"
+		],
+		"description": "Sets the access path for the file tree. This is set to",
+		"prefix": "SetPath"
+	},
+	"DFileBrowser/SetSearch": {
+		"body": [
+			"SetSearch(${1:filter=\"*\"})$0"
+		],
+		"description": "Sets the search filter for the file tree.",
+		"prefix": "SetSearch"
+	},
+	"DFileBrowser/Setup": {
+		"body": [
+			"Setup()$0"
+		],
+		"description": "No description available.",
+		"prefix": "Setup"
+	},
+	"DFileBrowser/SetupFiles": {
+		"body": [
+			"SetupFiles()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetupFiles"
+	},
+	"DFileBrowser/SetupTree": {
+		"body": [
+			"SetupTree()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetupTree"
+	},
+	"DFileBrowser/ShowFolder": {
+		"body": [
+			"ShowFolder(${1:currentDir})$0"
+		],
+		"description": "No description available.",
+		"prefix": "ShowFolder"
+	},
+	"DFileBrowser/SortFiles": {
+		"body": [
+			"SortFiles(${1:descending=false})$0"
+		],
+		"description": "Sorts the file list.",
+		"prefix": "SortFiles"
+	}
+}

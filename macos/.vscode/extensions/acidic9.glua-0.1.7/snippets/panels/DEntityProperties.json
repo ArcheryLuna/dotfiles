@@ -1,0 +1,37 @@
+{
+    "EditVariable": {
+        "body": [
+            "EditVariable(${1:varname}, ${2:editdata})$0"
+        ],
+        "description": "DENTITYPROPERTIES [Client] \n\n[string] varname\n  \n\n[table] editdata",
+        "prefix": "EditVariable"
+    },
+    "EntityLost": {
+        "body": [
+            "EntityLost()$0"
+        ],
+        "description": "DENTITYPROPERTIES [Client]",
+        "prefix": "EntityLost"
+    },
+    "OnEntityLost": {
+        "body": [
+            "OnEntityLost()$0"
+        ],
+        "description": "DENTITYPROPERTIES [Client]",
+        "prefix": "OnEntityLost"
+    },
+    "RebuildControls": {
+        "body": [
+            "RebuildControls()$0"
+        ],
+        "description": "DENTITYPROPERTIES [Client]",
+        "prefix": "RebuildControls"
+    },
+    "SetEntity": {
+        "body": [
+            "SetEntity(${1:ent})$0"
+        ],
+        "description": "DENTITYPROPERTIES [Client] \n\n[Entity] ent\n  The entity to edit",
+        "prefix": "SetEntity"
+    }
+}

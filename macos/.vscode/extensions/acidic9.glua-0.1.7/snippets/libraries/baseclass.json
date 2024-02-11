@@ -1,0 +1,16 @@
+{
+    "baseclass.Get": {
+        "body": [
+            "baseclass.Get(${1:name})$0"
+        ],
+        "description": "BASECLASS [Shared/Menu] Gets the base class of an an object. This is used not just by entities, but also by widgets, panels, drive modes, weapons and gamemodes (with \"gamemode_\" prefix). The keyword DEFINE_BASECLASS translates into a call to this function. In the engine, it is replaced with:\n\n[string] name\n  The child class.",
+        "prefix": "baseclass.Get"
+    },
+    "baseclass.Set": {
+        "body": [
+            "baseclass.Set(${1:name}, ${2:tab})$0"
+        ],
+        "description": "BASECLASS [Shared/Menu] \n\n[string] name\n  The name of this base class. Must be completely unique.\n\n[table] tab\n  The base class.",
+        "prefix": "baseclass.Set"
+    }
+}

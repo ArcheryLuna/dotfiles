@@ -1,0 +1,47 @@
+{
+	"publisher": "StephenKing",
+	"repository": "https://github.com/StephenKingJJY/Hair",
+	"name": "logo",
+	"displayName": "Logo Language Support",
+	"description": "a simple syntax implementation of logo (pclogo/ucblogo/fmslogo)",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.39.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "logo",
+				"aliases": [
+					"Logo",
+					"Logo"
+				],
+				"extensions": [
+					".lgo",
+					".lg"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "logo",
+				"scopeName": "source.logo",
+				"path": "./syntaxes/logo.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "935cbb93-e21d-4031-9ac6-c76c037a5f19",
+		"publisherId": "8aeb7b81-ea1f-4080-bf3c-2acd0f827083",
+		"publisherDisplayName": "StephenKing",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033120
+	}
+}

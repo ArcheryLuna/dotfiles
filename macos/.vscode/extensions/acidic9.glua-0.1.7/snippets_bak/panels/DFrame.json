@@ -1,0 +1,170 @@
+{
+	"DFrame/Center": {
+		"body": [
+			"Center()$0"
+		],
+		"description": "Centers the frame relative to the whole screen and invalidates its layout. This overrides",
+		"prefix": "Center"
+	},
+	"DFrame/Close": {
+		"body": [
+			"Close()$0"
+		],
+		"description": "Hides or removes the DFrame, and calls",
+		"prefix": "Close"
+	},
+	"DFrame/GetBackgroundBlur": {
+		"body": [
+			"GetBackgroundBlur()$0"
+		],
+		"description": "Gets whether the background behind the frame is being blurred.",
+		"prefix": "GetBackgroundBlur"
+	},
+	"DFrame/GetDeleteOnClose": {
+		"body": [
+			"GetDeleteOnClose()$0"
+		],
+		"description": "Determines whether or not the DFrame will be removed when it is closed. This is set with",
+		"prefix": "GetDeleteOnClose"
+	},
+	"DFrame/GetDraggable": {
+		"body": [
+			"GetDraggable()$0"
+		],
+		"description": "Gets whether or not the frame is draggable by the user.",
+		"prefix": "GetDraggable"
+	},
+	"DFrame/GetIsMenu": {
+		"body": [
+			"GetIsMenu()$0"
+		],
+		"description": "Gets whether or not the frame is part of a derma menu. This is set with",
+		"prefix": "GetIsMenu"
+	},
+	"DFrame/GetMinHeight": {
+		"body": [
+			"GetMinHeight()$0"
+		],
+		"description": "Gets the minimum height the DFrame can be resized to by the user.",
+		"prefix": "GetMinHeight"
+	},
+	"DFrame/GetMinWidth": {
+		"body": [
+			"GetMinWidth()$0"
+		],
+		"description": "Gets the minimum width the DFrame can be resized to by the user.",
+		"prefix": "GetMinWidth"
+	},
+	"DFrame/GetPaintShadow": {
+		"body": [
+			"GetPaintShadow()$0"
+		],
+		"description": "Gets whether or not the shadow effect bordering the DFrame is being drawn.",
+		"prefix": "GetPaintShadow"
+	},
+	"DFrame/GetScreenLock": {
+		"body": [
+			"GetScreenLock()$0"
+		],
+		"description": "Gets whether or not the DFrame is restricted to the boundaries of the screen resolution.",
+		"prefix": "GetScreenLock"
+	},
+	"DFrame/GetSizable": {
+		"body": [
+			"GetSizable()$0"
+		],
+		"description": "Gets whether or not the DFrame can be resized by the user.",
+		"prefix": "GetSizable"
+	},
+	"DFrame/IsActive": {
+		"body": [
+			"IsActive()$0"
+		],
+		"description": "Determines if the frame or one of its children has the screen focus.",
+		"prefix": "IsActive"
+	},
+	"DFrame/OnClose": {
+		"body": [
+			"OnClose()$0"
+		],
+		"description": "Called when the DFrame is closed with",
+		"prefix": "OnClose"
+	},
+	"DFrame/SetBackgroundBlur": {
+		"body": [
+			"SetBackgroundBlur(${1:blur})$0"
+		],
+		"description": "Blurs background behind the frame.",
+		"prefix": "SetBackgroundBlur"
+	},
+	"DFrame/SetDeleteOnClose": {
+		"body": [
+			"SetDeleteOnClose(${1:shouldDelete})$0"
+		],
+		"description": "Determines whether or not the DFrame is removed when it is closed with",
+		"prefix": "SetDeleteOnClose"
+	},
+	"DFrame/SetDraggable": {
+		"body": [
+			"SetDraggable(${1:draggable})$0"
+		],
+		"description": "Sets whether the frame should be draggable by the user. The DFrame can only be dragged from its title bar.",
+		"prefix": "SetDraggable"
+	},
+	"DFrame/SetIsMenu": {
+		"body": [
+			"SetIsMenu(${1:isMenu})$0"
+		],
+		"description": "Sets whether the frame is part of a derma menu or not.",
+		"prefix": "SetIsMenu"
+	},
+	"DFrame/SetMinHeight": {
+		"body": [
+			"SetMinHeight(${1:minH})$0"
+		],
+		"description": "Sets the minimum height the DFrame can be resized to by the user.",
+		"prefix": "SetMinHeight"
+	},
+	"DFrame/SetMinWidth": {
+		"body": [
+			"SetMinWidth(${1:minW})$0"
+		],
+		"description": "Sets the minimum width the DFrame can be resized to by the user.",
+		"prefix": "SetMinWidth"
+	},
+	"DFrame/SetPaintShadow": {
+		"body": [
+			"SetPaintShadow(${1:shouldPaint})$0"
+		],
+		"description": "Sets whether or not the shadow effect bordering the DFrame should be drawn.",
+		"prefix": "SetPaintShadow"
+	},
+	"DFrame/SetScreenLock": {
+		"body": [
+			"SetScreenLock(${1:lock})$0"
+		],
+		"description": "Sets whether the DFrame is restricted to the boundaries of the screen resolution.",
+		"prefix": "SetScreenLock"
+	},
+	"DFrame/SetSizable": {
+		"body": [
+			"SetSizable(${1:sizeable})$0"
+		],
+		"description": "Sets whether or not the DFrame can be resized by the user.",
+		"prefix": "SetSizable"
+	},
+	"DFrame/SetTitle": {
+		"body": [
+			"SetTitle(${1:title})$0"
+		],
+		"description": "Sets the title of the frame.",
+		"prefix": "SetTitle"
+	},
+	"DFrame/ShowCloseButton": {
+		"body": [
+			"ShowCloseButton(${1:show})$0"
+		],
+		"description": "Determines whether the DFrame\u0026#39;s control box (close, minimise and maximise buttons) is displayed.",
+		"prefix": "ShowCloseButton"
+	}
+}

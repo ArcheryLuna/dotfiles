@@ -1,0 +1,191 @@
+{
+    "ConVarThink": {
+        "body": [
+            "ConVarThink()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "ConVarThink"
+    },
+    "DoConVarThink": {
+        "body": [
+            "DoConVarThink(${1:cvar})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[string] cvar",
+        "prefix": "DoConVarThink"
+    },
+    "GetAlphaBar": {
+        "body": [
+            "GetAlphaBar()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "GetAlphaBar"
+    },
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "GetColor"
+    },
+    "GetConVarA": {
+        "body": [
+            "GetConVarA()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "GetConVarA"
+    },
+    "GetConVarB": {
+        "body": [
+            "GetConVarB()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "GetConVarB"
+    },
+    "GetConVarG": {
+        "body": [
+            "GetConVarG()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "GetConVarG"
+    },
+    "GetConVarR": {
+        "body": [
+            "GetConVarR()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "GetConVarR"
+    },
+    "GetPalette": {
+        "body": [
+            "GetPalette()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "GetPalette"
+    },
+    "GetVector": {
+        "body": [
+            "GetVector()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "GetVector"
+    },
+    "GetWangs": {
+        "body": [
+            "GetWangs()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "GetWangs"
+    },
+    "SetAlphaBar": {
+        "body": [
+            "SetAlphaBar(${1:show})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[boolean] show\n  Show / Hide the alpha bar",
+        "prefix": "SetAlphaBar"
+    },
+    "SetBaseColor": {
+        "body": [
+            "SetBaseColor(${1:clr})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[table] clr\n  Color structure",
+        "prefix": "SetBaseColor"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[table] color\n  The color to set. See Color",
+        "prefix": "SetColor"
+    },
+    "SetConVarA": {
+        "body": [
+            "SetConVarA(${1:convar})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[string] convar\n  The ConVar name for the alpha channel of the color",
+        "prefix": "SetConVarA"
+    },
+    "SetConVarB": {
+        "body": [
+            "SetConVarB(${1:convar})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[string] convar\n  The ConVar name for the blue channel of the color",
+        "prefix": "SetConVarB"
+    },
+    "SetConVarG": {
+        "body": [
+            "SetConVarG(${1:convar})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[string] convar\n  The ConVar name for the green channel of the color",
+        "prefix": "SetConVarG"
+    },
+    "SetConVarR": {
+        "body": [
+            "SetConVarR(${1:convar})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[string] convar\n  The ConVar name for the red channel of the color",
+        "prefix": "SetConVarR"
+    },
+    "SetLabel": {
+        "body": [
+            "SetLabel(${1:text=nil})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[string] text=nil\n  Set to non empty string to show the label and its text.\n\nGive it an empty string or nothing and the label will be hidden.",
+        "prefix": "SetLabel"
+    },
+    "SetPalette": {
+        "body": [
+            "SetPalette(${1:enabled})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[boolean] enabled\n  Show or hide the palette panel?",
+        "prefix": "SetPalette"
+    },
+    "SetVector": {
+        "body": [
+            "SetVector(${1:vec})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[Vector] vec\n  The color to set. It is expected that the vector will have values be from 0 to 1. (i.e. be normalized)",
+        "prefix": "SetVector"
+    },
+    "SetWangs": {
+        "body": [
+            "SetWangs(${1:show})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[boolean] show\n  Show / Hide the colors indicators",
+        "prefix": "SetWangs"
+    },
+    "TranslateValues": {
+        "body": [
+            "TranslateValues()$0"
+        ],
+        "description": "DCOLORMIXER [Client]",
+        "prefix": "TranslateValues"
+    },
+    "UpdateColor": {
+        "body": [
+            "UpdateColor(${1:clr})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[table] clr",
+        "prefix": "UpdateColor"
+    },
+    "UpdateConVar": {
+        "body": [
+            "UpdateConVar(${1:cvar}, ${2:part}, ${3:clr})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[string] cvar\n  The ConVar name\n\n[string] part\n  The color part to set the cvar to. \"r\", \"g\", \"b\" or \"a\".\n\n[table] clr\n  The Color structure",
+        "prefix": "UpdateConVar"
+    },
+    "UpdateConVars": {
+        "body": [
+            "UpdateConVars(${1:clr})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[table] clr\n  The Color structure",
+        "prefix": "UpdateConVars"
+    },
+    "ValueChanged": {
+        "body": [
+            "ValueChanged(${1:col})$0"
+        ],
+        "description": "DCOLORMIXER [Client] \n\n[table] col\n  The new color. See Color structure",
+        "prefix": "ValueChanged"
+    }
+}

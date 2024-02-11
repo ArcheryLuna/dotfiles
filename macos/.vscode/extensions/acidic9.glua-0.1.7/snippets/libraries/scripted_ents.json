@@ -1,0 +1,72 @@
+{
+    "scripted_ents.Alias": {
+        "body": [
+            "scripted_ents.Alias(${1:alias}, ${2:classname})$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared] \n\n[string] alias\n  A new string which can be used to refer to another classname\n\n[string] classname\n  The classname the alias should refer to",
+        "prefix": "scripted_ents.Alias"
+    },
+    "scripted_ents.Get": {
+        "body": [
+            "scripted_ents.Get(${1:classname})$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared] Returns a copy of the ENT table for a class, including functions defined by the base class\n\n[string] classname\n  The classname of the ENT table to return, can be an alias",
+        "prefix": "scripted_ents.Get"
+    },
+    "scripted_ents.GetList": {
+        "body": [
+            "scripted_ents.GetList()$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared]",
+        "prefix": "scripted_ents.GetList"
+    },
+    "scripted_ents.GetMember": {
+        "body": [
+            "scripted_ents.GetMember(${1:class}, ${2:name})$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared] Retrieves a member of entity's table.\n\n[string] class\n  Entity's class name\n\n[string] name\n  Name of member to retrieve",
+        "prefix": "scripted_ents.GetMember"
+    },
+    "scripted_ents.GetSpawnable": {
+        "body": [
+            "scripted_ents.GetSpawnable()$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared]",
+        "prefix": "scripted_ents.GetSpawnable"
+    },
+    "scripted_ents.GetStored": {
+        "body": [
+            "scripted_ents.GetStored(${1:classname})$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared] Returns the actual ENT table for a class. Modifying functions/variables in this table will change newly spawned entities\n\n[string] classname\n  The classname of the ENT table to return",
+        "prefix": "scripted_ents.GetStored"
+    },
+    "scripted_ents.GetType": {
+        "body": [
+            "scripted_ents.GetType(${1:classname})$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared] \n\n[string] classname\n  The classname to check",
+        "prefix": "scripted_ents.GetType"
+    },
+    "scripted_ents.IsBasedOn": {
+        "body": [
+            "scripted_ents.IsBasedOn(${1:name}, ${2:base})$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared] Checks if name is based on base\n\n[string] name\n  Entity's class name to be checked\n\n[string] base\n  Base class name to be checked",
+        "prefix": "scripted_ents.IsBasedOn"
+    },
+    "scripted_ents.OnLoaded": {
+        "body": [
+            "scripted_ents.OnLoaded()$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared]",
+        "prefix": "scripted_ents.OnLoaded"
+    },
+    "scripted_ents.Register": {
+        "body": [
+            "scripted_ents.Register(${1:ENT}, ${2:classname})$0"
+        ],
+        "description": "SCRIPTED_ENTS [Shared] Registers an ENT table with a classname. Reregistering an existing classname will automatically update the functions of all existing entities of that class.\n\n[table] ENT\n  The ENT table to register\n\n[string] classname\n  The classname to register",
+        "prefix": "scripted_ents.Register"
+    }
+}

@@ -1,0 +1,198 @@
+{
+	"IGModAudioChannel/EnableLooping": {
+		"body": [
+			"EnableLooping(${1:enable})$0"
+		],
+		"description": "Enables or disables looping of audio channel, requires noblock flag.",
+		"prefix": "EnableLooping"
+	},
+	"IGModAudioChannel/FFT": {
+		"body": [
+			"FFT(${1:tbl}, ${2:size})$0"
+		],
+		"description": "Computes the",
+		"prefix": "FFT"
+	},
+	"IGModAudioChannel/Get3DCone": {
+		"body": [
+			"Get3DCone()$0"
+		],
+		"description": "Returns 3D cone of the sound channel. See",
+		"prefix": "Get3DCone"
+	},
+	"IGModAudioChannel/Get3DFadeDistance": {
+		"body": [
+			"Get3DFadeDistance()$0"
+		],
+		"description": "Returns 3D fade distances of a sound channel.",
+		"prefix": "Get3DFadeDistance"
+	},
+	"IGModAudioChannel/GetBitsPerSample": {
+		"body": [
+			"GetBitsPerSample()$0"
+		],
+		"description": "Retrieves the number of bits per sample of the sound channel.",
+		"prefix": "GetBitsPerSample"
+	},
+	"IGModAudioChannel/GetFileName": {
+		"body": [
+			"GetFileName()$0"
+		],
+		"description": "Returns the filename for the sound channel.",
+		"prefix": "GetFileName"
+	},
+	"IGModAudioChannel/GetLength": {
+		"body": [
+			"GetLength()$0"
+		],
+		"description": "Returns the length of sound played by the sound channel.",
+		"prefix": "GetLength"
+	},
+	"IGModAudioChannel/GetLevel": {
+		"body": [
+			"GetLevel()$0"
+		],
+		"description": "Returns the right and left levels of sound played by the sound channel.",
+		"prefix": "GetLevel"
+	},
+	"IGModAudioChannel/GetPlaybackRate": {
+		"body": [
+			"GetPlaybackRate()$0"
+		],
+		"description": "Returns the playback rate of the sound channel.",
+		"prefix": "GetPlaybackRate"
+	},
+	"IGModAudioChannel/GetPos": {
+		"body": [
+			"GetPos()$0"
+		],
+		"description": "Returns position of the sound channel",
+		"prefix": "GetPos"
+	},
+	"IGModAudioChannel/GetSamplingRate": {
+		"body": [
+			"GetSamplingRate()$0"
+		],
+		"description": "Returns the sample rate for currently playing sound.",
+		"prefix": "GetSamplingRate"
+	},
+	"IGModAudioChannel/GetState": {
+		"body": [
+			"GetState()$0"
+		],
+		"description": "Returns the state of a sound channel",
+		"prefix": "GetState"
+	},
+	"IGModAudioChannel/GetTime": {
+		"body": [
+			"GetTime()$0"
+		],
+		"description": "Returns the current time of the sound channel",
+		"prefix": "GetTime"
+	},
+	"IGModAudioChannel/GetVolume": {
+		"body": [
+			"GetVolume()$0"
+		],
+		"description": "Returns volume of a sound channel",
+		"prefix": "GetVolume"
+	},
+	"IGModAudioChannel/Is3D": {
+		"body": [
+			"Is3D()$0"
+		],
+		"description": "Returns if the sound channel is in 3D mode or not.",
+		"prefix": "Is3D"
+	},
+	"IGModAudioChannel/IsBlockStreamed": {
+		"body": [
+			"IsBlockStreamed()$0"
+		],
+		"description": "Returns whether the audio stream is block streamed or not.",
+		"prefix": "IsBlockStreamed"
+	},
+	"IGModAudioChannel/IsLooping": {
+		"body": [
+			"IsLooping()$0"
+		],
+		"description": "Returns if the sound channel is looping or not.",
+		"prefix": "IsLooping"
+	},
+	"IGModAudioChannel/IsOnline": {
+		"body": [
+			"IsOnline()$0"
+		],
+		"description": "Returns if the sound channel is streamed from the Internet or not.",
+		"prefix": "IsOnline"
+	},
+	"IGModAudioChannel/IsValid": {
+		"body": [
+			"IsValid()$0"
+		],
+		"description": "Returns if the sound channel is valid or not.",
+		"prefix": "IsValid"
+	},
+	"IGModAudioChannel/Pause": {
+		"body": [
+			"Pause()$0"
+		],
+		"description": "Pauses the stream. It can be started again using",
+		"prefix": "Pause"
+	},
+	"IGModAudioChannel/Play": {
+		"body": [
+			"Play()$0"
+		],
+		"description": "Starts playing the stream.",
+		"prefix": "Play"
+	},
+	"IGModAudioChannel/Set3DCone": {
+		"body": [
+			"Set3DCone(${1:innerAngle}, ${2:outerAngle}, ${3:outerVolume})$0"
+		],
+		"description": "Sets 3D cone of the sound channel.",
+		"prefix": "Set3DCone"
+	},
+	"IGModAudioChannel/Set3DFadeDistance": {
+		"body": [
+			"Set3DFadeDistance(${1:min}, ${2:max})$0"
+		],
+		"description": "Sets 3D fade distances of a sound channel.",
+		"prefix": "Set3DFadeDistance"
+	},
+	"IGModAudioChannel/SetPlaybackRate": {
+		"body": [
+			"SetPlaybackRate(${1:rate})$0"
+		],
+		"description": "Sets the playback rate of the sound channel. May not work with high values for radio streams.",
+		"prefix": "SetPlaybackRate"
+	},
+	"IGModAudioChannel/SetPos": {
+		"body": [
+			"SetPos(${1:pos}, ${2:)})$0"
+		],
+		"description": "Sets position of sound channel in case the sound channel has a 3d option set.",
+		"prefix": "SetPos"
+	},
+	"IGModAudioChannel/SetTime": {
+		"body": [
+			"SetTime(${1:secs})$0"
+		],
+		"description": "Sets the sound channel to specified time ( Rewind to that position of the song ). Does not work on online radio streams.",
+		"prefix": "SetTime"
+	},
+	"IGModAudioChannel/SetVolume": {
+		"body": [
+			"SetVolume(${1:volume})$0"
+		],
+		"description": "Sets the volume of a sound channel",
+		"prefix": "SetVolume"
+	},
+	"IGModAudioChannel/Stop": {
+		"body": [
+			"Stop()$0"
+		],
+		"description": "No description available.",
+		"prefix": "Stop"
+	}
+}

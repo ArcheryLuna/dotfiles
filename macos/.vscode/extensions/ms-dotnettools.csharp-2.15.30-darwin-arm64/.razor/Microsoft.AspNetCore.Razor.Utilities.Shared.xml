@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNetCore.Razor.Utilities.Shared</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.AspNetCore.Razor.Assumed.Unreachable(System.String,System.Int32)">
+            <summary>
+             Can be called at points that are assumed to be unreachable at runtime.
+            </summary>
+            <exception cref="T:System.InvalidOperationException"/>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.Assumed.Unreachable``1(System.String,System.Int32)">
+            <summary>
+             Can be called at points that are assumed to be unreachable at runtime.
+            </summary>
+            <exception cref="T:System.InvalidOperationException"/>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.ListExtensions.SetCapacityIfLarger``1(System.Collections.Generic.List{``0},System.Int32)">
+            <summary>
+             Set the <paramref name="list"/>'s capacity if it is less than <paramref name="newCapacity"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.ListExtensions.ToArrayOrEmpty``1(System.Collections.Generic.List{``0})">
+            <summary>
+             Copies the elements of the <see cref="T:System.Collections.Generic.List`1"/> to a new array, or returns an
+             empty array if the <see cref="T:System.Collections.Generic.List`1"/> is null.
+            </summary>
+            <remarks>
+             On .NET Framework, <see cref="M:System.Collections.Generic.List`1.ToArray"/> will create a new empty array for any
+             empty <see cref="T:System.Collections.Generic.List`1"/>. This method avoids that extra allocation.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.ArrayBuilderPool`1">
+            <summary>
+            A pool of <see cref="T:System.Collections.Immutable.ImmutableArray`1.Builder"/> instances.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.DictionaryBuilderPool`2">
+            <summary>
+            A pool of <see cref="T:System.Collections.Immutable.ImmutableDictionary`2.Builder"/> instances.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.DictionaryPool`2">
+            <summary>
+            A pool of <see cref="T:System.Collections.Generic.Dictionary`2"/> instances.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.HashSetPool`1">
+            <summary>
+            A pool of <see cref="T:System.Collections.Generic.HashSet`1"/> instances that compares items using default equality.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.ListPool`1">
+            <summary>
+            A pool of <see cref="T:System.Collections.Generic.List`1"/> instances.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilderExtensions.AsRef``1(Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder{``0}@)">
+             <summary>
+             Gets a mutable reference to a <see cref="T:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1"/> stored in a <c>using</c> variable.
+             </summary>
+             <remarks>
+             <para>This supporting method allows <see cref="T:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1"/>, a non-copyable <see langword="struct"/>
+             implementing <see cref="T:System.IDisposable"/>, to be used with <c>using</c> statements while still allowing them to
+             be passed by reference in calls. The following two calls are equivalent:</para>
+            
+             <code>
+             using var array = PooledArrayBuilder&lt;T&gt;.Empty;
+            
+             // Using the 'Unsafe.AsRef' method
+             Method(ref Unsafe.AsRef(in builder));
+            
+             // Using this helper method
+             Method(ref builder.AsRef());
+             </code>
+            
+             <para>⚠ Do not move or rename this method without updating the corresponding
+             Razor.Diagnostics.Analyzers\PooledArrayBuilderAsRefAnalyzer.cs.</para>
+             </remarks>
+             <typeparam name="T">The type of element stored in the pooled array builder.</typeparam>
+             <param name="builder">A read-only reference to a pooled array builder which is part of a <c>using</c> statement.</param>
+             <returns>A mutable reference to the pooled array builder.</returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1">
+             <summary>
+              Wraps a pooled <see cref="T:System.Collections.Immutable.ImmutableArray`1.Builder"/> but doesn't allocate it until
+              it's needed. Note: Dispose this to ensure that the pooled array builder is returned
+              to the pool.
+            
+              There is significant effort to avoid retrieving the <see cref="T:System.Collections.Immutable.ImmutableArray`1.Builder"/>.
+              For very small arrays of length 4 or less, the elements will be stored on the stack. If the array
+              grows larger than 4 elements, a builder will be employed. Afterward, the build will
+              continue to be used, even if the arrays shrinks and has fewer than 4 elements.
+             </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1.InlineCapacity">
+            <summary>
+             The number of items that can be stored inline.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1._builder">
+            <summary>
+             A builder to be used as storage after the first time that the number
+             of items exceeds <see cref="F:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1.InlineCapacity"/>. Once the builder is used,
+             it is still used even if the number of items shrinks below <see cref="F:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1.InlineCapacity"/>.
+             Essentially, if this field is non-null, it will be used as storage.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1._capacity">
+            <summary>
+             An optional initial capacity for the builder.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1._inlineCount">
+            <summary>
+             The number of inline elements. Note that this value is only used when <see cref="F:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1._builder"/> is <see langword="null"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1.DrainToImmutable">
+            <summary>
+             Returns the current contents as an <see cref="T:System.Collections.Immutable.ImmutableArray`1"/> and sets
+             the collection to a zero length array.
+            </summary>
+            <remarks>
+             If <see cref="P:System.Collections.Immutable.ImmutableArray`1.Builder.Capacity"/> equals <see cref="P:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1.Count"/>, the
+             internal array will be extracted as an <see cref="T:System.Collections.Immutable.ImmutableArray`1"/> without copying
+             the contents. Otherwise, the contents will be copied into a new array. The collection
+             will then be set to a zero-length array.
+            </remarks>
+            <returns>An immutable array.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.PooledObjects.PooledArrayBuilder`1.ThrowIndexOutOfRangeException">
+            <summary>
+             This is present to help the JIT inline methods that need to throw
+             a <see cref="T:System.IndexOutOfRangeException"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.PooledDictionaryBuilder`2">
+            <summary>
+             Wraps a pooled <see cref="T:System.Collections.Immutable.ImmutableDictionary`2.Builder"/> but doesn't allocate it until
+             it's needed. Note: Dispose this to ensure that the pooled array builder is returned
+             to the pool.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.PooledObjects.PooledDictionaryBuilder`2.#ctor(Microsoft.Extensions.ObjectPool.ObjectPool{System.Collections.Immutable.ImmutableDictionary{`0,`1}.Builder})">
+            <summary>
+             Wraps a pooled <see cref="T:System.Collections.Immutable.ImmutableDictionary`2.Builder"/> but doesn't allocate it until
+             it's needed. Note: Dispose this to ensure that the pooled array builder is returned
+             to the pool.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.PooledHashSet`1">
+            <summary>
+             Wraps a pooled <see cref="T:System.Collections.Generic.HashSet`1"/> but doesn't allocate it until
+             it's needed. Note: Dispose this to ensure that the pooled set is returned
+             to the pool.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.PooledList`1">
+            <summary>
+             Wraps a pooled <see cref="T:System.Collections.Generic.List`1"/> but doesn't allocate it until
+             it's needed. Note: Dispose this to ensure that the pooled list is returned
+             to the pool.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.ReferenceEqualityHashSetPool`1">
+            <summary>
+            A pool of <see cref="T:System.Collections.Generic.HashSet`1"/> instances that compares items using reference equality.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.StackPool`1">
+            <summary>
+            A pool of <see cref="T:System.Collections.Generic.Stack`1"/> instances.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.StopwatchPool">
+            <summary>
+            A pool of <see cref="T:System.Diagnostics.Stopwatch"/> instances.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.StringBuilderPool">
+            <summary>
+            A pool of <see cref="T:System.Text.StringBuilder"/> instances.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.StringDictionaryPool`1">
+            <summary>
+            Pooled <see cref="T:System.Collections.Generic.Dictionary`2"/> instances when the key is of type <see cref="T:System.String"/>.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.PooledObjects.StringHashSetPool">
+            <summary>
+            A pool of <see cref="T:System.Collections.Generic.HashSet`1"/> instances that compares strings.
+            </summary>
+            
+            <remarks>
+            Instances originating from this pool are intended to be short-lived and are suitable
+            for temporary work. Do not return them as the results of methods or store them in fields.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.Cannot_advance_past_end_of_the_buffer_which_has_a_size_of_0">
+            <summary>Cannot advance past the end of the buffer, which has a size of {0}.</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.FormatCannot_advance_past_end_of_the_buffer_which_has_a_size_of_0(System.Object)">
+            <summary>Cannot advance past the end of the buffer, which has a size of {0}.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.Cannot_allocate_a_buffer_of_size_0">
+            <summary>Cannot allocate a buffer of size {0}.</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.FormatCannot_allocate_a_buffer_of_size_0(System.Object)">
+            <summary>Cannot allocate a buffer of size {0}.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.Destination_is_too_short">
+            <summary>Destination is too short.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.Non_negative_number_required">
+            <summary>Non-negative number required.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.This_program_location_is_thought_to_be_unreachable_File_0_Line_1">
+            <summary>This program location is thought to be unreachable. File='{0}', Line={1}</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.FormatThis_program_location_is_thought_to_be_unreachable_File_0_Line_1(System.Object,System.Object)">
+            <summary>This program location is thought to be unreachable. File='{0}', Line={1}</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.Unsupported_type_0">
+            <summary>Unsupported type: '{0}'.</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.Utilities.Shared.Resources.SR.FormatUnsupported_type_0(System.Object)">
+            <summary>Unsupported type: '{0}'.</summary>
+        </member>
+        <member name="M:System.Collections.Generic.KeyValuePairExtensions.Deconstruct``2(System.Collections.Generic.KeyValuePair{``0,``1},``0@,``1@)">
+            <summary>
+            Deconstructs a <see cref="T:System.Collections.Generic.KeyValuePair`2"/> into out variables. Provides support
+            for assignment like
+            <code>
+            var (k,v) = kvp;
+            </code>
+            </summary>
+        </member>
+        <member name="T:System.Collections.Immutable.ImmutableArrayExtensions">
+            <summary>
+            <see cref="T:System.Collections.Immutable.ImmutableArray`1"/> extension methods
+            </summary>
+        </member>
+        <member name="M:System.Collections.Immutable.ImmutableArrayExtensions.NullToEmpty``1(System.Collections.Immutable.ImmutableArray{``0})">
+            <summary>
+            Returns an empty array if the input array is null (default)
+            </summary>
+        </member>
+        <member name="M:System.Collections.Immutable.ImmutableArrayExtensions.DrainToImmutable``1(System.Collections.Immutable.ImmutableArray{``0}.Builder)">
+            <summary>
+             Returns the current contents as an <see cref="T:System.Collections.Immutable.ImmutableArray`1"/> and sets
+             the collection to a zero length array.
+            </summary>
+            <remarks>
+             If <see cref="P:System.Collections.Immutable.ImmutableArray`1.Builder.Capacity"/> equals
+             <see cref="P:System.Collections.Immutable.ImmutableArray`1.Builder.Count"/>, the internal array will be extracted
+             as an <see cref="T:System.Collections.Immutable.ImmutableArray`1"/> without copying the contents. Otherwise, the
+             contents will be copied into a new array. The collection will then be set to a
+             zero-length array.
+            </remarks>
+            <returns>An immutable array.</returns>
+        </member>
+        <member name="M:System.Collections.Immutable.ImmutableArrayExtensions.BinarySearchBy``2(System.Collections.Immutable.ImmutableArray{``0},``1,System.Func{``0,``1,System.Int32})">
+            <summary>
+            Executes a binary search over an array, but allows the caller to decide what constitutes a match
+            </summary>
+            <typeparam name="T">Type of the elements in the array</typeparam>
+            <typeparam name="TArg">Type of the argument to pass to the comparer</typeparam>
+            <param name="array">The array to search</param>
+            <param name="arg">An argument to pass to the comparison function</param>
+            <param name="comparer">A comparison function that evaluates an item in the array. Return 0 if the item is a match,
+            or -1 if the item indicates a successful match will be found in the left branch, or 1 if the item indicates a successful
+            match will be found in the right branch.</param>
+            <returns>The index of the element found</returns>
+        </member>
+    </members>
+</doc>

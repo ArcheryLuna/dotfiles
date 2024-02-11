@@ -1,0 +1,93 @@
+{
+    "ClearObjects": {
+        "body": [
+            "ClearObjects()$0"
+        ],
+        "description": "TOOL [Shared]",
+        "prefix": "ClearObjects"
+    },
+    "GetBone": {
+        "body": [
+            "GetBone(${1:id})$0"
+        ],
+        "description": "TOOL [Shared] \n\n[number] id\n  The id of the object which was set in Tool:SetObject.",
+        "prefix": "GetBone"
+    },
+    "GetClientInfo": {
+        "body": [
+            "GetClientInfo(${1:name})$0"
+        ],
+        "description": "TOOL [Shared] \n\n[string] name\n  Name of the convar to retrieve. The function will automatically add the \"mytoolfilename_\" part to it.",
+        "prefix": "GetClientInfo"
+    },
+    "GetClientNumber": {
+        "body": [
+            "GetClientNumber(${1:name}, ${2:default=0})$0"
+        ],
+        "description": "TOOL [Shared] Attempts to grab a clientside tool ConVar.\n\n[string] name\n  Name of the convar to retrieve. The function will automatically add the \"mytoolfilename_\" part to it.\n\n[number] default=0\n  The default value to return in case the lookup fails.",
+        "prefix": "GetClientNumber"
+    },
+    "GetEnt": {
+        "body": [
+            "GetEnt(${1:id})$0"
+        ],
+        "description": "TOOL [Shared] \n\n[number] id\n  The id of the object which was set in Tool:SetObject.",
+        "prefix": "GetEnt"
+    },
+    "GetOperation": {
+        "body": [
+            "GetOperation()$0"
+        ],
+        "description": "TOOL [Shared]",
+        "prefix": "GetOperation"
+    },
+    "GetOwner": {
+        "body": [
+            "GetOwner()$0"
+        ],
+        "description": "TOOL [Shared]",
+        "prefix": "GetOwner"
+    },
+    "GetServerInfo": {
+        "body": [
+            "GetServerInfo(${1:name})$0"
+        ],
+        "description": "TOOL [Shared] \n\n[string] name\n  Name of the convar to retrieve. The function will automatically add the \"mytoolfilename_\" part to it.",
+        "prefix": "GetServerInfo"
+    },
+    "GetStage": {
+        "body": [
+            "GetStage()$0"
+        ],
+        "description": "TOOL [Shared]",
+        "prefix": "GetStage"
+    },
+    "NumObjects": {
+        "body": [
+            "NumObjects()$0"
+        ],
+        "description": "TOOL [Shared]",
+        "prefix": "NumObjects"
+    },
+    "SetObject": {
+        "body": [
+            "SetObject(${1:id}, ${2:ent}, ${3:pos}, ${4:phys}, ${5:bone}, ${6:norm})$0"
+        ],
+        "description": "TOOL [Shared] Stores an Entity for later use in the tool.\n\n[number] id\n  The id of the object to store.\n\n[Entity] ent\n  The entity to store.\n\n[Vector] pos\n  The position to store.\n\n[PhysObj] phys\n  The physics object to store.\n\n[number] bone\n  The hit bone to store.\n\n[Vector] norm\n  The hit normal to store.",
+        "prefix": "SetObject"
+    },
+    "SetOperation": {
+        "body": [
+            "SetOperation(${1:operation})$0"
+        ],
+        "description": "TOOL [Shared] \n\n[number] operation\n  The new operation ID to set.",
+        "prefix": "SetOperation"
+    },
+    "SetStage": {
+        "body": [
+            "SetStage(${1:stage})$0"
+        ],
+        "description": "TOOL [Shared] \n\n[number] stage\n  The new stage to set.",
+        "prefix": "SetStage"
+    }
+}

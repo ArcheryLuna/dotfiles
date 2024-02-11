@@ -1,0 +1,16 @@
+{
+    "SetAlpha": {
+        "body": [
+            "SetAlpha(${1:alpha})$0"
+        ],
+        "description": "MATERIAL [Client] Sets the alpha value of the Material panel.\n\n[number] alpha\n  The alpha value, from 0 to 255.",
+        "prefix": "SetAlpha"
+    },
+    "SetMaterial": {
+        "body": [
+            "SetMaterial(${1:matname})$0"
+        ],
+        "description": "MATERIAL [Client] Sets the material used by the panel.\n\n[string] matname\n  The file path of the material to set (relative to \"garrysmod/materials/\").",
+        "prefix": "SetMaterial"
+    }
+}

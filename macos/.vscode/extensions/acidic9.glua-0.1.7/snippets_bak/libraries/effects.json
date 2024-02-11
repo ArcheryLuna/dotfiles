@@ -1,0 +1,16 @@
+{
+	"effects/Create": {
+		"body": [
+			"effects.Create(${1:name})$0"
+		],
+		"description": "No description available.",
+		"prefix": "effects.Create"
+	},
+	"effects/Register": {
+		"body": [
+			"effects.Register(${1:effect_table}, ${2:name})$0"
+		],
+		"description": "No description available.",
+		"prefix": "effects.Register"
+	}
+}

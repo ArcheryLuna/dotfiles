@@ -1,0 +1,51 @@
+{
+	"coroutine/create": {
+		"body": [
+			"coroutine.create(${1:func})$0"
+		],
+		"description": "Creates a coroutine of the given function.",
+		"prefix": "coroutine.create"
+	},
+	"coroutine/resume": {
+		"body": [
+			"coroutine.resume(${1:coroutine}, ${2:args})$0"
+		],
+		"description": "Resumes the given coroutine and passes the given vararg to either the function arguments or the",
+		"prefix": "coroutine.resume"
+	},
+	"coroutine/running": {
+		"body": [
+			"coroutine.running()$0"
+		],
+		"description": "Returns the active coroutine or nil if we are not within a coroutine.",
+		"prefix": "coroutine.running"
+	},
+	"coroutine/status": {
+		"body": [
+			"coroutine.status(${1:coroutine})$0"
+		],
+		"description": "Returns the status of the coroutine passed to it, the possible statuses are \u0026#34;suspended\u0026#34;, \u0026#34;running\u0026#34;, and \u0026#34;dead\u0026#34;.",
+		"prefix": "coroutine.status"
+	},
+	"coroutine/wait": {
+		"body": [
+			"coroutine.wait(${1:seconds})$0"
+		],
+		"description": "Yield\u0026#39;s the coroutine for so many seconds before returning.",
+		"prefix": "coroutine.wait"
+	},
+	"coroutine/wrap": {
+		"body": [
+			"coroutine.wrap(${1:coroutine})$0"
+		],
+		"description": "Returns a function which calling is equivalent with calling",
+		"prefix": "coroutine.wrap"
+	},
+	"coroutine/yield": {
+		"body": [
+			"coroutine.yield(${1:returnValue})$0"
+		],
+		"description": "Pauses the active coroutine and passes all additional variables to the call of",
+		"prefix": "coroutine.yield"
+	}
+}

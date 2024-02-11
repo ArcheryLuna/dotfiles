@@ -1,0 +1,16 @@
+{
+    "SetValue": {
+        "body": [
+            "SetValue(${1:color})$0"
+        ],
+        "description": "DPROPERTY_VECTORCOLOR [Client] Sets the color value of the property.\n\n[Vector] color\n  Sets the color to use in a DProperty_VectorColor.",
+        "prefix": "SetValue"
+    },
+    "Setup": {
+        "body": [
+            "Setup(${1:=\"VectorColor\"}, ${2:settings})$0"
+        ],
+        "description": "DPROPERTY_VECTORCOLOR [Client] \n\n[string] =\"VectorColor\"\n  \n\n[table] settings\n  A table of settings. None of the values are used for this property. See Editable Entities.",
+        "prefix": "Setup"
+    }
+}

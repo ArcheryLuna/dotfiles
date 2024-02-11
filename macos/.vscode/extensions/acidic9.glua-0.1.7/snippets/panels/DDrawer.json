@@ -1,0 +1,51 @@
+{
+    "Close": {
+        "body": [
+            "Close()$0"
+        ],
+        "description": "DDRAWER [Client]",
+        "prefix": "Close"
+    },
+    "GetOpenSize": {
+        "body": [
+            "GetOpenSize()$0"
+        ],
+        "description": "DDRAWER [Client]",
+        "prefix": "GetOpenSize"
+    },
+    "GetOpenTime": {
+        "body": [
+            "GetOpenTime()$0"
+        ],
+        "description": "DDRAWER [Client]",
+        "prefix": "GetOpenTime"
+    },
+    "Open": {
+        "body": [
+            "Open()$0"
+        ],
+        "description": "DDRAWER [Client]",
+        "prefix": "Open"
+    },
+    "SetOpenSize": {
+        "body": [
+            "SetOpenSize(${1:Value})$0"
+        ],
+        "description": "DDRAWER [Client] \n\n[number] Value\n  Height of DDrawer. Default is 100.",
+        "prefix": "SetOpenSize"
+    },
+    "SetOpenTime": {
+        "body": [
+            "SetOpenTime(${1:value})$0"
+        ],
+        "description": "DDRAWER [Client] \n\n[number] value\n  Length in seconds. Default is 0.3",
+        "prefix": "SetOpenTime"
+    },
+    "Toggle": {
+        "body": [
+            "Toggle()$0"
+        ],
+        "description": "DDRAWER [Client]",
+        "prefix": "Toggle"
+    }
+}

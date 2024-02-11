@@ -1,0 +1,198 @@
+{
+    "GetAngles": {
+        "body": [
+            "GetAngles()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetAngles"
+    },
+    "GetBrightness": {
+        "body": [
+            "GetBrightness()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetBrightness"
+    },
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetColor"
+    },
+    "GetEnableShadows": {
+        "body": [
+            "GetEnableShadows()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetEnableShadows"
+    },
+    "GetFarZ": {
+        "body": [
+            "GetFarZ()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetFarZ"
+    },
+    "GetHorizontalFOV": {
+        "body": [
+            "GetHorizontalFOV()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetHorizontalFOV"
+    },
+    "GetNearZ": {
+        "body": [
+            "GetNearZ()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetNearZ"
+    },
+    "GetOrthographic": {
+        "body": [
+            "GetOrthographic()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] Returns the current orthographic settings of the Projected Texture. To set these values, use ProjectedTexture:SetOrthographic.",
+        "prefix": "GetOrthographic"
+    },
+    "GetPos": {
+        "body": [
+            "GetPos()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetPos"
+    },
+    "GetTexture": {
+        "body": [
+            "GetTexture()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetTexture"
+    },
+    "GetTextureFrame": {
+        "body": [
+            "GetTextureFrame()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetTextureFrame"
+    },
+    "GetVerticalFOV": {
+        "body": [
+            "GetVerticalFOV()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "GetVerticalFOV"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "IsValid"
+    },
+    "Remove": {
+        "body": [
+            "Remove()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "Remove"
+    },
+    "SetAngles": {
+        "body": [
+            "SetAngles(${1:angle})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[Angle] angle",
+        "prefix": "SetAngles"
+    },
+    "SetBrightness": {
+        "body": [
+            "SetBrightness(${1:brightness})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[number] brightness\n  The brightness to give the projected texture.",
+        "prefix": "SetBrightness"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[table] color\n  Must be a Color structure.\n\nUnlike other projected textures, this color can only go up to 255.",
+        "prefix": "SetColor"
+    },
+    "SetEnableShadows": {
+        "body": [
+            "SetEnableShadows(${1:})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[boolean]",
+        "prefix": "SetEnableShadows"
+    },
+    "SetFOV": {
+        "body": [
+            "SetFOV(${1:fov})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[number] fov\n  Must be higher than 0 and lower than 180",
+        "prefix": "SetFOV"
+    },
+    "SetFarZ": {
+        "body": [
+            "SetFarZ(${1:farZ})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[number] farZ",
+        "prefix": "SetFarZ"
+    },
+    "SetHorizontalFOV": {
+        "body": [
+            "SetHorizontalFOV(${1:hFOV})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[number] hFOV\n  The new horizontal Field Of View for the projected texture. Must be in range between 0 and 180.",
+        "prefix": "SetHorizontalFOV"
+    },
+    "SetNearZ": {
+        "body": [
+            "SetNearZ(${1:nearZ})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[number] nearZ",
+        "prefix": "SetNearZ"
+    },
+    "SetOrthographic": {
+        "body": [
+            "SetOrthographic(${1:orthographic}, ${2:left}, ${3:top}, ${4:right}, ${5:bottom})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] Changes the current projected texture between orthographic and perspective projection. You must call ProjectedTexture:Update after using this function for it to take effect.\n\n[boolean] orthographic\n  When false, all other arguments are ignored and the texture is reset to perspective projection.\n\n[number] left\n  The amount of units left from the projected texture's origin to project.\n\n[number] top\n  The amount of units upwards from the projected texture's origin to project.\n\n[number] right\n  The amount of units right from the projected texture's origin to project.\n\n[number] bottom\n  The amount of units downwards from the projected texture's origin to project.",
+        "prefix": "SetOrthographic"
+    },
+    "SetPos": {
+        "body": [
+            "SetPos(${1:position})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[Vector] position",
+        "prefix": "SetPos"
+    },
+    "SetTexture": {
+        "body": [
+            "SetTexture(${1:texture})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[string] texture\n  The name of the texture. Can also be an ITexture.",
+        "prefix": "SetTexture"
+    },
+    "SetTextureFrame": {
+        "body": [
+            "SetTextureFrame(${1:frame})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[number] frame\n  The frame index to use.",
+        "prefix": "SetTextureFrame"
+    },
+    "SetVerticalFOV": {
+        "body": [
+            "SetVerticalFOV(${1:vFOV})$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client] \n\n[number] vFOV\n  The new vertical Field Of View for the projected texture. Must be in range between 0 and 180.",
+        "prefix": "SetVerticalFOV"
+    },
+    "Update": {
+        "body": [
+            "Update()$0"
+        ],
+        "description": "PROJECTEDTEXTURE [Client]",
+        "prefix": "Update"
+    }
+}

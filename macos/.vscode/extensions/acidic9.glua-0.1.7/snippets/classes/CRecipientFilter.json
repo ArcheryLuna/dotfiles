@@ -1,0 +1,93 @@
+{
+    "AddAllPlayers": {
+        "body": [
+            "AddAllPlayers()$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server]",
+        "prefix": "AddAllPlayers"
+    },
+    "AddPAS": {
+        "body": [
+            "AddPAS(${1:pos})$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] \n\n[Vector] pos\n  PAS position that players may be able to see.",
+        "prefix": "AddPAS"
+    },
+    "AddPVS": {
+        "body": [
+            "AddPVS(${1:Position})$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] Adds all players that are in the same PVS as this position.\n\n[Vector] Position\n  PVS position.",
+        "prefix": "AddPVS"
+    },
+    "AddPlayer": {
+        "body": [
+            "AddPlayer(${1:Player})$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] Adds a player to the recipient filter\n\n[Player] Player\n  Player to add to the recipient filter.",
+        "prefix": "AddPlayer"
+    },
+    "AddRecipientsByTeam": {
+        "body": [
+            "AddRecipientsByTeam(${1:teamid})$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] \n\n[number] teamid\n  Team index to add players from.",
+        "prefix": "AddRecipientsByTeam"
+    },
+    "GetCount": {
+        "body": [
+            "GetCount()$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] Returns the number of valid players in the recipient filter.",
+        "prefix": "GetCount"
+    },
+    "GetPlayers": {
+        "body": [
+            "GetPlayers()$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] Returns a table of all valid players currently in the recipient filter.",
+        "prefix": "GetPlayers"
+    },
+    "RemoveAllPlayers": {
+        "body": [
+            "RemoveAllPlayers()$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server]",
+        "prefix": "RemoveAllPlayers"
+    },
+    "RemovePAS": {
+        "body": [
+            "RemovePAS(${1:position})$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] \n\n[Vector] position\n  The position to test",
+        "prefix": "RemovePAS"
+    },
+    "RemovePVS": {
+        "body": [
+            "RemovePVS(${1:pos})$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] Removes all players that can see this PVS from the recipient filter.\n\n[Vector] pos\n  Position that players may be able to see.",
+        "prefix": "RemovePVS"
+    },
+    "RemovePlayer": {
+        "body": [
+            "RemovePlayer(${1:Player})$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] Removes the player from the recipient filter.\n\n[Player] Player\n  The player that should be in the recipient filter if you call this function.",
+        "prefix": "RemovePlayer"
+    },
+    "RemoveRecipientsByTeam": {
+        "body": [
+            "RemoveRecipientsByTeam(${1:teamid})$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] \n\n[number] teamid\n  Team index to remove players from.",
+        "prefix": "RemoveRecipientsByTeam"
+    },
+    "RemoveRecipientsNotOnTeam": {
+        "body": [
+            "RemoveRecipientsNotOnTeam(${1:teamid})$0"
+        ],
+        "description": "CRECIPIENTFILTER [Server] \n\n[number] teamid\n  Team index.",
+        "prefix": "RemoveRecipientsNotOnTeam"
+    }
+}

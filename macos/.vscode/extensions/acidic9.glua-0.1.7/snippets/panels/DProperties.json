@@ -1,0 +1,23 @@
+{
+    "CreateRow": {
+        "body": [
+            "CreateRow(${1:category}, ${2:name})$0"
+        ],
+        "description": "DPROPERTIES [Client] Creates a row in the properties panel.\n\n[string] category\n  The category to list this row under\n\n[string] name\n  The label of this row",
+        "prefix": "CreateRow"
+    },
+    "GetCanvas": {
+        "body": [
+            "GetCanvas()$0"
+        ],
+        "description": "DPROPERTIES [Client]",
+        "prefix": "GetCanvas"
+    },
+    "GetCategory": {
+        "body": [
+            "GetCategory(${1:name}, ${2:create})$0"
+        ],
+        "description": "DPROPERTIES [Client] \n\n[string] name\n  Name of the category\n\n[boolean] create\n  Create a new category if it doesn't exist.",
+        "prefix": "GetCategory"
+    }
+}

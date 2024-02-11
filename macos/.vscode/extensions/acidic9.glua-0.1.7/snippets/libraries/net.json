@@ -1,0 +1,303 @@
+{
+    "net.Broadcast": {
+        "body": [
+            "net.Broadcast()$0"
+        ],
+        "description": "NET [Server]",
+        "prefix": "net.Broadcast"
+    },
+    "net.BytesWritten": {
+        "body": [
+            "net.BytesWritten()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.BytesWritten"
+    },
+    "net.Incoming": {
+        "body": [
+            "net.Incoming(${1:length}, ${2:client})$0"
+        ],
+        "description": "NET [Shared] \n\n[number] length\n  The message length, in bits.\n\n[Player] client\n  The player that sent the message. This will be nil in the client state.",
+        "prefix": "net.Incoming"
+    },
+    "net.ReadAngle": {
+        "body": [
+            "net.ReadAngle()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadAngle"
+    },
+    "net.ReadBit": {
+        "body": [
+            "net.ReadBit()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadBit"
+    },
+    "net.ReadBool": {
+        "body": [
+            "net.ReadBool()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadBool"
+    },
+    "net.ReadColor": {
+        "body": [
+            "net.ReadColor()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadColor"
+    },
+    "net.ReadData": {
+        "body": [
+            "net.ReadData(${1:length})$0"
+        ],
+        "description": "NET [Shared] \n\n[number] length\n  The length of the data to be read, in bytes.",
+        "prefix": "net.ReadData"
+    },
+    "net.ReadDouble": {
+        "body": [
+            "net.ReadDouble()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadDouble"
+    },
+    "net.ReadEntity": {
+        "body": [
+            "net.ReadEntity()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadEntity"
+    },
+    "net.ReadFloat": {
+        "body": [
+            "net.ReadFloat()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadFloat"
+    },
+    "net.ReadHeader": {
+        "body": [
+            "net.ReadHeader()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadHeader"
+    },
+    "net.ReadInt": {
+        "body": [
+            "net.ReadInt(${1:bitCount})$0"
+        ],
+        "description": "NET [Shared] \n\n[number] bitCount\n  The amount of bits to be read.\n\nThis must be set to what you set to net.WriteInt. Read more information at net.WriteInt.",
+        "prefix": "net.ReadInt"
+    },
+    "net.ReadMatrix": {
+        "body": [
+            "net.ReadMatrix()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadMatrix"
+    },
+    "net.ReadNormal": {
+        "body": [
+            "net.ReadNormal()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadNormal"
+    },
+    "net.ReadString": {
+        "body": [
+            "net.ReadString()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadString"
+    },
+    "net.ReadTable": {
+        "body": [
+            "net.ReadTable()$0"
+        ],
+        "description": "NET [Shared] Reads a table from the received net message.",
+        "prefix": "net.ReadTable"
+    },
+    "net.ReadType": {
+        "body": [
+            "net.ReadType(${1:typeID=net.ReadUInt(8)})$0"
+        ],
+        "description": "NET [Shared] \n\n[number] typeID=net.ReadUInt(8)\n  The type of value to be read, using TYPE_ Enums.",
+        "prefix": "net.ReadType"
+    },
+    "net.ReadUInt": {
+        "body": [
+            "net.ReadUInt(${1:numberOfBits})$0"
+        ],
+        "description": "NET [Shared] \n\n[number] numberOfBits\n  The size of the integer to be read, in bits.",
+        "prefix": "net.ReadUInt"
+    },
+    "net.ReadVector": {
+        "body": [
+            "net.ReadVector()$0"
+        ],
+        "description": "NET [Shared]",
+        "prefix": "net.ReadVector"
+    },
+    "net.Receive": {
+        "body": [
+            "net.Receive(${1:messageName}, ${2:callback})$0"
+        ],
+        "description": "NET [Shared] Adds a net message handler. Only one receiver can be used to receive the net message.\n\n[string] messageName\n  The message name to hook to.\n\n[function] callback\n  The function to be called if the specified message was received. Arguments are:\nnumber len - Length of the message, in bits\n\nPlayer ply - The player that sent the message, works only serverside",
+        "prefix": "net.Receive"
+    },
+    "net.Send": {
+        "body": [
+            "net.Send(${1:ply})$0"
+        ],
+        "description": "NET [Server] \n\n[Player] ply\n  The player(s) to send the message to. Can be a table of players or a CRecipientFilter.",
+        "prefix": "net.Send"
+    },
+    "net.SendOmit": {
+        "body": [
+            "net.SendOmit(${1:ply})$0"
+        ],
+        "description": "NET [Server] \n\n[Player] ply\n  The player(s) to NOT send the message to. Can be a table of players",
+        "prefix": "net.SendOmit"
+    },
+    "net.SendPAS": {
+        "body": [
+            "net.SendPAS(${1:position})$0"
+        ],
+        "description": "NET [Server] \n\n[Vector] position\n  PAS position.",
+        "prefix": "net.SendPAS"
+    },
+    "net.SendPVS": {
+        "body": [
+            "net.SendPVS(${1:position})$0"
+        ],
+        "description": "NET [Server] \n\n[Vector] position\n  Position that must be in players' visibility set.",
+        "prefix": "net.SendPVS"
+    },
+    "net.SendToServer": {
+        "body": [
+            "net.SendToServer()$0"
+        ],
+        "description": "NET [Client]",
+        "prefix": "net.SendToServer"
+    },
+    "net.Start": {
+        "body": [
+            "net.Start(${1:messageName}, ${2:unreliable=false})$0"
+        ],
+        "description": "NET [Shared] Begins a new net message.\n\n[string] messageName\n  The name of the message to send\n\n[boolean] unreliable=false\n  If set to true, the message is not guaranteed to reach its destination",
+        "prefix": "net.Start"
+    },
+    "net.WriteAngle": {
+        "body": [
+            "net.WriteAngle(${1:angle})$0"
+        ],
+        "description": "NET [Shared] \n\n[Angle] angle\n  The angle to be sent.",
+        "prefix": "net.WriteAngle"
+    },
+    "net.WriteBit": {
+        "body": [
+            "net.WriteBit(${1:boolean})$0"
+        ],
+        "description": "NET [Shared] \n\n[boolean] boolean\n  Bit status (false = 0, true = 1)",
+        "prefix": "net.WriteBit"
+    },
+    "net.WriteBool": {
+        "body": [
+            "net.WriteBool(${1:boolean})$0"
+        ],
+        "description": "NET [Shared] \n\n[boolean] boolean\n  Boolean value to write",
+        "prefix": "net.WriteBool"
+    },
+    "net.WriteColor": {
+        "body": [
+            "net.WriteColor(${1:Color})$0"
+        ],
+        "description": "NET [Shared] \n\n[table] Color\n  The Color structure you want to append to the net message.",
+        "prefix": "net.WriteColor"
+    },
+    "net.WriteData": {
+        "body": [
+            "net.WriteData(${1:binaryData}, ${2:length})$0"
+        ],
+        "description": "NET [Shared] \n\n[string] binaryData\n  The binary data to be sent.\n\n[number] length\n  The length of the binary data to be sent, in bytes.",
+        "prefix": "net.WriteData"
+    },
+    "net.WriteDouble": {
+        "body": [
+            "net.WriteDouble(${1:double})$0"
+        ],
+        "description": "NET [Shared] \n\n[number] double\n  The double to be sent",
+        "prefix": "net.WriteDouble"
+    },
+    "net.WriteEntity": {
+        "body": [
+            "net.WriteEntity(${1:entity})$0"
+        ],
+        "description": "NET [Shared] \n\n[Entity] entity\n  The entity to be sent.",
+        "prefix": "net.WriteEntity"
+    },
+    "net.WriteFloat": {
+        "body": [
+            "net.WriteFloat(${1:float})$0"
+        ],
+        "description": "NET [Shared] \n\n[number] float\n  The float to be sent.",
+        "prefix": "net.WriteFloat"
+    },
+    "net.WriteInt": {
+        "body": [
+            "net.WriteInt(${1:integer}, ${2:bitCount})$0"
+        ],
+        "description": "NET [Shared] Appends an integer - a whole number - to the current net message. Can be read back with net.ReadInt on the receiving end. Use net.WriteUInt to send an unsigned number (that you know will never be negative). Use net.WriteFloat for a non-whole number (e.g. 2.25).\n\n[number] integer\n  The integer to be sent.\n\n[number] bitCount\n  The amount of bits the number consists of. This must be 32 or less.\nIf you are unsure what to set, just set it to 32.",
+        "prefix": "net.WriteInt"
+    },
+    "net.WriteMatrix": {
+        "body": [
+            "net.WriteMatrix(${1:matrix})$0"
+        ],
+        "description": "NET [Shared] \n\n[VMatrix] matrix\n  The matrix to be sent.",
+        "prefix": "net.WriteMatrix"
+    },
+    "net.WriteNormal": {
+        "body": [
+            "net.WriteNormal(${1:normal})$0"
+        ],
+        "description": "NET [Shared] Writes a normalized/direction vector ( Vector with length of 1 ) to the net message. This function uses less bandwidth compared to net.WriteVector and will not send vectors with length of \u003e 1 properly.\n\n[Vector] normal\n  The normalized/direction vector to be send.",
+        "prefix": "net.WriteNormal"
+    },
+    "net.WriteString": {
+        "body": [
+            "net.WriteString(${1:string})$0"
+        ],
+        "description": "NET [Shared] \n\n[string] string\n  The string to be sent.",
+        "prefix": "net.WriteString"
+    },
+    "net.WriteTable": {
+        "body": [
+            "net.WriteTable(${1:table})$0"
+        ],
+        "description": "NET [Shared] \n\n[table] table\n  The table to be sent.",
+        "prefix": "net.WriteTable"
+    },
+    "net.WriteType": {
+        "body": [
+            "net.WriteType(${1:Data})$0"
+        ],
+        "description": "NET [Shared] \n\n[any] Data\n  The data to be sent. A UInt(8) indicating the type will automatically be written to the packet before the value, in order to facilitate reading with net.ReadType.",
+        "prefix": "net.WriteType"
+    },
+    "net.WriteUInt": {
+        "body": [
+            "net.WriteUInt(${1:unsignedInteger}, ${2:numberOfBits})$0"
+        ],
+        "description": "NET [Shared] \n\n[number] unsignedInteger\n  The unsigned integer to be sent.\n\n[number] numberOfBits\n  The size of the integer to be sent, in bits. Acceptable values range from any number 1 to 32 inclusive. For reference, 1 = bit, 4 = nibble, 8 = byte, 16 = short, 32 = long.",
+        "prefix": "net.WriteUInt"
+    },
+    "net.WriteVector": {
+        "body": [
+            "net.WriteVector(${1:vector})$0"
+        ],
+        "description": "NET [Shared] Appends a vector to the current net message.\nVectors sent by this function are compressed, which may result in precision loss. XYZ components greater than 16384 or less than -16384 are irrecoverably altered (most significant bits are trimmed) and precision after the decimal point is low.\n\n[Vector] vector\n  The vector to be sent.",
+        "prefix": "net.WriteVector"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "ai.GetScheduleID": {
+        "body": [
+            "ai.GetScheduleID(${1:sched})$0"
+        ],
+        "description": "AI [Server] \n\n[string] sched\n  Schedule, see SCHED_ Enums",
+        "prefix": "ai.GetScheduleID"
+    },
+    "ai.GetTaskID": {
+        "body": [
+            "ai.GetTaskID(${1:taskName})$0"
+        ],
+        "description": "AI [Server] \n\n[string] taskName\n  The task name to get the ID of",
+        "prefix": "ai.GetTaskID"
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "FinishMove": {
+        "body": [
+            "FinishMove(${1:mv})$0"
+        ],
+        "description": "PLAYER [Client] \n\n[CMoveData] mv",
+        "prefix": "FinishMove"
+    },
+    "GetHandsModel": {
+        "body": [
+            "GetHandsModel()$0"
+        ],
+        "description": "PLAYER [Client] Called on player spawn to determine which hand model to use",
+        "prefix": "GetHandsModel"
+    },
+    "Init": {
+        "body": [
+            "Init()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "Init"
+    },
+    "Loadout": {
+        "body": [
+            "Loadout()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "Loadout"
+    },
+    "Move": {
+        "body": [
+            "Move(${1:mv})$0"
+        ],
+        "description": "PLAYER [Client] \n\n[CMoveData] mv",
+        "prefix": "Move"
+    },
+    "PostDrawViewModel": {
+        "body": [
+            "PostDrawViewModel(${1:viewmodel}, ${2:weapon})$0"
+        ],
+        "description": "PLAYER [Client] \n\n[Entity] viewmodel\n  The viewmodel\n\n[Entity] weapon\n  The weapon",
+        "prefix": "PostDrawViewModel"
+    },
+    "PreDrawViewModel": {
+        "body": [
+            "PreDrawViewModel(${1:viewmodel}, ${2:weapon})$0"
+        ],
+        "description": "PLAYER [Client] \n\n[Entity] viewmodel\n  The viewmodel\n\n[Entity] weapon\n  The weapon",
+        "prefix": "PreDrawViewModel"
+    },
+    "SetModel": {
+        "body": [
+            "SetModel()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "SetModel"
+    },
+    "SetupDataTables": {
+        "body": [
+            "SetupDataTables()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "SetupDataTables"
+    },
+    "Spawn": {
+        "body": [
+            "Spawn()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "Spawn"
+    },
+    "StartMove": {
+        "body": [
+            "StartMove(${1:cmd}, ${2:mv})$0"
+        ],
+        "description": "PLAYER [Client] Called from GM:CreateMove.\n\n[CUserCmd] cmd\n  \n\n[CMoveData] mv",
+        "prefix": "StartMove"
+    },
+    "ViewModelChanged": {
+        "body": [
+            "ViewModelChanged(${1:viewmodel}, ${2:old}, ${3:new})$0"
+        ],
+        "description": "PLAYER [Client] Called when the player changes their weapon to another one causing their viewmodel model to change\n\n[Entity] viewmodel\n  The viewmodel that is changing\n\n[string] old\n  The old model\n\n[string] new\n  The new model",
+        "prefix": "ViewModelChanged"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "Add": {
+        "body": [
+            "Add(${1:categoryName})$0"
+        ],
+        "description": "DCATEGORYLIST [Client] \n\n[string] categoryName\n  The name of the category to add.",
+        "prefix": "Add"
+    },
+    "AddItem": {
+        "body": [
+            "AddItem(${1:element})$0"
+        ],
+        "description": "DCATEGORYLIST [Client] \n\n[Panel] element\n  VGUI element to add to the list.",
+        "prefix": "AddItem"
+    },
+    "UnselectAll": {
+        "body": [
+            "UnselectAll()$0"
+        ],
+        "description": "DCATEGORYLIST [Client]",
+        "prefix": "UnselectAll"
+    }
+}

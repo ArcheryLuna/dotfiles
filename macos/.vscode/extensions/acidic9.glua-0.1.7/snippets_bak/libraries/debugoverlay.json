@@ -1,0 +1,86 @@
+{
+	"debugoverlay/Axis": {
+		"body": [
+			"debugoverlay.Axis(${1:origin}, ${2:ang}, ${3:size}, ${4:lifetime=1}, ${5:ignoreZ=false})$0"
+		],
+		"description": "Displays an axis indicator at the specified position.",
+		"prefix": "debugoverlay.Axis"
+	},
+	"debugoverlay/Box": {
+		"body": [
+			"debugoverlay.Box(${1:origin}, ${2:mins}, ${3:maxs}, ${4:lifetime=1}, ${5:)})$0"
+		],
+		"description": "Displays a solid coloured cube at the specified position.",
+		"prefix": "debugoverlay.Box"
+	},
+	"debugoverlay/BoxAngles": {
+		"body": [
+			"debugoverlay.BoxAngles(${1:pos}, ${2:mins}, ${3:maxs}, ${4:ang}, ${5:lifetime=1}, ${6:)})$0"
+		],
+		"description": "Displays a solid colored rotated cube at the specified position.",
+		"prefix": "debugoverlay.BoxAngles"
+	},
+	"debugoverlay/Cross": {
+		"body": [
+			"debugoverlay.Cross(${1:position}, ${2:size}, ${3:lifetime=1}, ${4:)}, ${5:ignoreZ=false})$0"
+		],
+		"description": "Creates a coloured cross at the specified position for the specified time.",
+		"prefix": "debugoverlay.Cross"
+	},
+	"debugoverlay/EntityTextAtPosition": {
+		"body": [
+			"debugoverlay.EntityTextAtPosition(${1:pos}, ${2:line}, ${3:text}, ${4:lifetime=1}, ${5:)})$0"
+		],
+		"description": "Displays 2D text at the specified coordinates.",
+		"prefix": "debugoverlay.EntityTextAtPosition"
+	},
+	"debugoverlay/Grid": {
+		"body": [
+			"debugoverlay.Grid(${1:position})$0"
+		],
+		"description": "Draws a 3D grid of limited size in given position.",
+		"prefix": "debugoverlay.Grid"
+	},
+	"debugoverlay/Line": {
+		"body": [
+			"debugoverlay.Line(${1:pos1}, ${2:pos2}, ${3:lifetime=1}, ${4:)}, ${5:ignoreZ=false})$0"
+		],
+		"description": "Displays a coloured line at the specified position.",
+		"prefix": "debugoverlay.Line"
+	},
+	"debugoverlay/ScreenText": {
+		"body": [
+			"debugoverlay.ScreenText(${1:x}, ${2:y}, ${3:text}, ${4:lifetime=1}, ${5:)})$0"
+		],
+		"description": "Displays text triangle at the specified coordinates.",
+		"prefix": "debugoverlay.ScreenText"
+	},
+	"debugoverlay/Sphere": {
+		"body": [
+			"debugoverlay.Sphere(${1:origin}, ${2:size}, ${3:lifetime=1}, ${4:)}, ${5:ignoreZ=false})$0"
+		],
+		"description": "Displays a coloured sphere at the specified position.",
+		"prefix": "debugoverlay.Sphere"
+	},
+	"debugoverlay/SweptBox": {
+		"body": [
+			"debugoverlay.SweptBox(${1:vStart}, ${2:vEnd}, ${3:vMins}, ${4:vMaxs}, ${5:ang}, ${6:lifetime=1}, ${7:)})$0"
+		],
+		"description": "Displays \u0026#34;swept\u0026#34; box, two boxes connected with lines by their verices.",
+		"prefix": "debugoverlay.SweptBox"
+	},
+	"debugoverlay/Text": {
+		"body": [
+			"debugoverlay.Text(${1:origin}, ${2:text}, ${3:lifetime=1}, ${4:viewCheck=false})$0"
+		],
+		"description": "Displays text at the specified position.",
+		"prefix": "debugoverlay.Text"
+	},
+	"debugoverlay/Triangle": {
+		"body": [
+			"debugoverlay.Triangle(${1:pos1}, ${2:pos2}, ${3:pos3}, ${4:lifetime=1}, ${5:)}, ${6:ignoreZ=false})$0"
+		],
+		"description": "Displays a colored triangle at the specified coordinates.",
+		"prefix": "debugoverlay.Triangle"
+	}
+}

@@ -1,0 +1,86 @@
+{
+    "GetChecked": {
+        "body": [
+            "GetChecked()$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client]",
+        "prefix": "GetChecked"
+    },
+    "GetIndent": {
+        "body": [
+            "GetIndent()$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client]",
+        "prefix": "GetIndent"
+    },
+    "OnChange": {
+        "body": [
+            "OnChange(${1:bVal})$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client] Called when the \"checked\" state is changed.\n\n[boolean] bVal\n  Whether the checkbox is checked or unchecked.",
+        "prefix": "OnChange"
+    },
+    "SetBright": {
+        "body": [
+            "SetBright(${1:bright})$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client] \n\n[boolean] bright\n  true makes the text bright.",
+        "prefix": "SetBright"
+    },
+    "SetChecked": {
+        "body": [
+            "SetChecked(${1:checked})$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client] \n\n[boolean] checked\n  Whether the box should be checked or not.",
+        "prefix": "SetChecked"
+    },
+    "SetConVar": {
+        "body": [
+            "SetConVar(${1:convar})$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client] \n\n[string] convar\n  The name of the convar to set",
+        "prefix": "SetConVar"
+    },
+    "SetDark": {
+        "body": [
+            "SetDark(${1:darkify})$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client] \n\n[boolean] darkify\n  True to be dark, false to be default",
+        "prefix": "SetDark"
+    },
+    "SetFont": {
+        "body": [
+            "SetFont(${1:font})$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client] \n\n[string] font",
+        "prefix": "SetFont"
+    },
+    "SetIndent": {
+        "body": [
+            "SetIndent(${1:ident})$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client] \n\n[number] ident\n  How much in pixels to move the content to the right",
+        "prefix": "SetIndent"
+    },
+    "SetTextColor": {
+        "body": [
+            "SetTextColor(${1:color})$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client] Sets the text color for the DCheckBoxLabel.\n\n[table] color\n  The text color. Uses the Color structure.",
+        "prefix": "SetTextColor"
+    },
+    "SetValue": {
+        "body": [
+            "SetValue(${1:checked})$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client] \n\n[boolean] checked\n  Whether the box should be checked or not.",
+        "prefix": "SetValue"
+    },
+    "Toggle": {
+        "body": [
+            "Toggle()$0"
+        ],
+        "description": "DCHECKBOXLABEL [Client]",
+        "prefix": "Toggle"
+    }
+}

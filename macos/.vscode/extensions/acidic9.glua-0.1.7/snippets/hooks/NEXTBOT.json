@@ -1,0 +1,107 @@
+{
+    "BehaveStart": {
+        "body": [
+            "BehaveStart()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "BehaveStart"
+    },
+    "BehaveUpdate": {
+        "body": [
+            "BehaveUpdate(${1:interval})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[number] interval\n  How long since the last update",
+        "prefix": "BehaveUpdate"
+    },
+    "BodyUpdate": {
+        "body": [
+            "BodyUpdate()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "BodyUpdate"
+    },
+    "OnContact": {
+        "body": [
+            "OnContact(${1:ent})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[Entity] ent\n  The entity the nextbot came in contact with.",
+        "prefix": "OnContact"
+    },
+    "OnIgnite": {
+        "body": [
+            "OnIgnite()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "OnIgnite"
+    },
+    "OnInjured": {
+        "body": [
+            "OnInjured(${1:info})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[CTakeDamageInfo] info\n  The damage info",
+        "prefix": "OnInjured"
+    },
+    "OnKilled": {
+        "body": [
+            "OnKilled(${1:info})$0"
+        ],
+        "description": "NEXTBOT [Server] Called when the bot gets killed.\n\n[CTakeDamageInfo] info\n  The damage info",
+        "prefix": "OnKilled"
+    },
+    "OnLandOnGround": {
+        "body": [
+            "OnLandOnGround(${1:ent})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[Entity] ent\n  The entity the nextbot has landed on.",
+        "prefix": "OnLandOnGround"
+    },
+    "OnLeaveGround": {
+        "body": [
+            "OnLeaveGround(${1:ent})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[Entity] ent\n  The entity the bot \"jumped\" from.",
+        "prefix": "OnLeaveGround"
+    },
+    "OnNavAreaChanged": {
+        "body": [
+            "OnNavAreaChanged(${1:old}, ${2:new})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[CNavArea] old\n  The navigation area the bot just left\n\n[CNavArea] new\n  The navigation area the bot just entered",
+        "prefix": "OnNavAreaChanged"
+    },
+    "OnOtherKilled": {
+        "body": [
+            "OnOtherKilled(${1:victim}, ${2:info})$0"
+        ],
+        "description": "NEXTBOT [Server] \n\n[Entity] victim\n  The victim that was killed\n\n[CTakeDamageInfo] info\n  The damage info",
+        "prefix": "OnOtherKilled"
+    },
+    "OnStuck": {
+        "body": [
+            "OnStuck()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "OnStuck"
+    },
+    "OnUnStuck": {
+        "body": [
+            "OnUnStuck()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "OnUnStuck"
+    },
+    "Think": {
+        "body": [
+            "Think()$0"
+        ],
+        "description": "NEXTBOT [Server]",
+        "prefix": "Think"
+    },
+    "Use": {
+        "body": [
+            "Use(${1:activator}, ${2:caller}, ${3:type}, ${4:value})$0"
+        ],
+        "description": "NEXTBOT [Server] Called when a player 'uses' the entity.\n\n[Entity] activator\n  The initial cause for the use.\n\n[Entity] caller\n  The entity that directly triggered the use.\n\n[number] type\n  The type of use, see USE_ Enums\n\n[number] value\n  Any passed value",
+        "prefix": "Use"
+    }
+}

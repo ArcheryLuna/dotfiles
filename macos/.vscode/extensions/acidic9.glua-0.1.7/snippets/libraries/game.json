@@ -1,0 +1,219 @@
+{
+    "game.AddAmmoType": {
+        "body": [
+            "game.AddAmmoType(${1:ammoData})$0"
+        ],
+        "description": "GAME [Shared] Adds a new ammo type to the game.\n\n[table] ammoData\n  The attributes of the ammo. See the AmmoData structure.",
+        "prefix": "game.AddAmmoType"
+    },
+    "game.AddDecal": {
+        "body": [
+            "game.AddDecal(${1:decalName}, ${2:materialName})$0"
+        ],
+        "description": "GAME [Shared] \n\n[string] decalName\n  The name of the decal.\n\n[string] materialName\n  The material to be used for the decal. May also be a list of material names, in which case a random material from that list will be chosen every time the decal is placed.",
+        "prefix": "game.AddDecal"
+    },
+    "game.AddParticles": {
+        "body": [
+            "game.AddParticles(${1:particleFileName})$0"
+        ],
+        "description": "GAME [Shared] Loads a particle file.\n\n[string] particleFileName\n  The path of the file to add. Must be (file).pcf.",
+        "prefix": "game.AddParticles"
+    },
+    "game.BuildAmmoTypes": {
+        "body": [
+            "game.BuildAmmoTypes()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.BuildAmmoTypes"
+    },
+    "game.CleanUpMap": {
+        "body": [
+            "game.CleanUpMap(${1:dontSendToClients=false}, ${2:ExtraFilters={}})$0"
+        ],
+        "description": "GAME [Shared] \n\n[boolean] dontSendToClients=false\n  If set to true, don't run this functions on all clients.\n\n[table] ExtraFilters={}\n  Entity classes not to reset during cleanup.",
+        "prefix": "game.CleanUpMap"
+    },
+    "game.ConsoleCommand": {
+        "body": [
+            "game.ConsoleCommand(${1:stringCommand})$0"
+        ],
+        "description": "GAME [Server] Runs a console command.\nMake sure to add a newline (\"\\n\") at the end of the command.\n\n[string] stringCommand\n  String containing the command and arguments to be ran.",
+        "prefix": "game.ConsoleCommand"
+    },
+    "game.GetAmmoID": {
+        "body": [
+            "game.GetAmmoID(${1:name})$0"
+        ],
+        "description": "GAME [Shared] \n\n[string] name\n  Name of the ammo type to look up ID of",
+        "prefix": "game.GetAmmoID"
+    },
+    "game.GetAmmoMax": {
+        "body": [
+            "game.GetAmmoMax(${1:id})$0"
+        ],
+        "description": "GAME [Shared] \n\n[number] id\n  Ammo type ID",
+        "prefix": "game.GetAmmoMax"
+    },
+    "game.GetAmmoName": {
+        "body": [
+            "game.GetAmmoName(${1:id})$0"
+        ],
+        "description": "GAME [Shared] \n\n[number] id\n  Ammo ID to retrieve the name of. Starts from 1.",
+        "prefix": "game.GetAmmoName"
+    },
+    "game.GetGlobalCounter": {
+        "body": [
+            "game.GetGlobalCounter(${1:name})$0"
+        ],
+        "description": "GAME [Server] \n\n[string] name\n  The name of the Global State to set.\nIf the Global State by that name does not exist, it will be created.\n\nSee Global States for a list of default global states.",
+        "prefix": "game.GetGlobalCounter"
+    },
+    "game.GetGlobalState": {
+        "body": [
+            "game.GetGlobalState(${1:name})$0"
+        ],
+        "description": "GAME [Server] \n\n[string] name\n  The name of the Global State to retrieve the state of.\nIf the Global State by that name does not exist, GLOBAL_DEAD will be returned.\n\nSee Global States for a list of default global states.",
+        "prefix": "game.GetGlobalState"
+    },
+    "game.GetIPAddress": {
+        "body": [
+            "game.GetIPAddress()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.GetIPAddress"
+    },
+    "game.GetMap": {
+        "body": [
+            "game.GetMap()$0"
+        ],
+        "description": "GAME [Shared/Menu] Returns the name of the current map, without a file extension.\nOn the menu state, returns \"menu\".",
+        "prefix": "game.GetMap"
+    },
+    "game.GetMapNext": {
+        "body": [
+            "game.GetMapNext()$0"
+        ],
+        "description": "GAME [Server]",
+        "prefix": "game.GetMapNext"
+    },
+    "game.GetMapVersion": {
+        "body": [
+            "game.GetMapVersion()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.GetMapVersion"
+    },
+    "game.GetSkillLevel": {
+        "body": [
+            "game.GetSkillLevel()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.GetSkillLevel"
+    },
+    "game.GetTimeScale": {
+        "body": [
+            "game.GetTimeScale()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.GetTimeScale"
+    },
+    "game.GetWorld": {
+        "body": [
+            "game.GetWorld()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.GetWorld"
+    },
+    "game.IsDedicated": {
+        "body": [
+            "game.IsDedicated()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.IsDedicated"
+    },
+    "game.KickID": {
+        "body": [
+            "game.KickID(${1:id}, ${2:reason=\"Noreasongiven\"})$0"
+        ],
+        "description": "GAME [Server] \n\n[string] id\n  UserID or SteamID of the player to kick.\n\n[string] reason=\"Noreasongiven\"\n  Reason to display to the player. This can span across multiple lines.",
+        "prefix": "game.KickID"
+    },
+    "game.LoadNextMap": {
+        "body": [
+            "game.LoadNextMap()$0"
+        ],
+        "description": "GAME [Server]",
+        "prefix": "game.LoadNextMap"
+    },
+    "game.MapLoadType": {
+        "body": [
+            "game.MapLoadType()$0"
+        ],
+        "description": "GAME [Server]",
+        "prefix": "game.MapLoadType"
+    },
+    "game.MaxPlayers": {
+        "body": [
+            "game.MaxPlayers()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.MaxPlayers"
+    },
+    "game.MountGMA": {
+        "body": [
+            "game.MountGMA(${1:path})$0"
+        ],
+        "description": "GAME [Shared] Mounts a GMA addon from the disk. Any error models currently loaded that the mounted addon provides will be reloaded. Can be used with steamworks.Download\n\n[string] path\n  Location of the GMA file to mount, relative to the garrysmod directory",
+        "prefix": "game.MountGMA"
+    },
+    "game.RemoveRagdolls": {
+        "body": [
+            "game.RemoveRagdolls()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.RemoveRagdolls"
+    },
+    "game.SetGlobalCounter": {
+        "body": [
+            "game.SetGlobalCounter(${1:name}, ${2:count})$0"
+        ],
+        "description": "GAME [Server] \n\n[string] name\n  The name of the Global State to set.\nIf the Global State by that name does not exist, it will be created.\n\nSee Global States for a list of default global states.\n\n[number] count\n  The value to set for that Global State.",
+        "prefix": "game.SetGlobalCounter"
+    },
+    "game.SetGlobalState": {
+        "body": [
+            "game.SetGlobalState(${1:name}, ${2:state})$0"
+        ],
+        "description": "GAME [Server] \n\n[string] name\n  The name of the Global State to set.\nIf the Global State by that name does not exist, it will be created.\n\nSee Global States for a list of default global states.\n\n[number] state\n  The state of the Global State. See GLOBAL_ Enums",
+        "prefix": "game.SetGlobalState"
+    },
+    "game.SetSkillLevel": {
+        "body": [
+            "game.SetSkillLevel(${1:level})$0"
+        ],
+        "description": "GAME [Server] \n\n[number] level\n  The difficulty level, Easy( 1 ), Normal( 2 ), Hard( 3 ).",
+        "prefix": "game.SetSkillLevel"
+    },
+    "game.SetTimeScale": {
+        "body": [
+            "game.SetTimeScale(${1:timeScale})$0"
+        ],
+        "description": "GAME [Server] \n\n[number] timeScale\n  The new timescale, minimum value is 0.001 and maximum is 5.",
+        "prefix": "game.SetTimeScale"
+    },
+    "game.SinglePlayer": {
+        "body": [
+            "game.SinglePlayer()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.SinglePlayer"
+    },
+    "game.StartSpot": {
+        "body": [
+            "game.StartSpot()$0"
+        ],
+        "description": "GAME [Shared]",
+        "prefix": "game.StartSpot"
+    }
+}

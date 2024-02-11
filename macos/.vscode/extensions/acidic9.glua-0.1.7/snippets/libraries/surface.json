@@ -1,0 +1,177 @@
+{
+    "surface.CreateFont": {
+        "body": [
+            "surface.CreateFont(${1:fontName}, ${2:fontData})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Creates a new font. To prevent the font from displaying incorrectly when using the \"outline\" setting, set \"antialias\" to false. This will ensure the text properly fills out the entire outline. Be sure to check the List of Default Fonts!\n\n[string] fontName\n  The new font name.\n\n[table] fontData\n  The font properties. See the FontData structure.",
+        "prefix": "surface.CreateFont"
+    },
+    "surface.DisableClipping": {
+        "body": [
+            "surface.DisableClipping(${1:disable})$0"
+        ],
+        "description": "SURFACE [Client/Menu] \n\n[boolean] disable\n  True to disable, false to enable the clipping",
+        "prefix": "surface.DisableClipping"
+    },
+    "surface.DrawCircle": {
+        "body": [
+            "surface.DrawCircle(${1:originX}, ${2:originY}, ${3:radius}, ${4:r}, ${5:g}, ${6:b}, ${7:a=255})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Draws a hollow circle, made of dots. For a filled circle, see examples for surface.DrawPoly.\n\n[number] originX\n  The center x coordinate.\n\n[number] originY\n  The center y coordinate.\n\n[number] radius\n  The radius of the circle.\n\n[number] r\n  The red value of the color to draw the circle with, or a Color structure.\n\n[number] g\n  The green value of the color to draw the circle with. Unused if a Color structure was given.\n\n[number] b\n  The blue value of the color to draw the circle with. Unused if a Color structure was given.\n\n[number] a=255\n  The alpha value of the color to draw the circle with. Unused if a Color structure was given.",
+        "prefix": "surface.DrawCircle"
+    },
+    "surface.DrawLine": {
+        "body": [
+            "surface.DrawLine(${1:startX}, ${2:startY}, ${3:endX}, ${4:endY})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Draws a line from one point to another.\n\n[number] startX\n  The start x coordinate.\n\n[number] startY\n  The start y coordinate.\n\n[number] endX\n  The end x coordinate.\n\n[number] endY\n  The end y coordinate.",
+        "prefix": "surface.DrawLine"
+    },
+    "surface.DrawOutlinedRect": {
+        "body": [
+            "surface.DrawOutlinedRect(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Draws a hollow box with a border width of 1 px.\n\n[number] x\n  The start x coordinate.\n\n[number] y\n  The start y coordinate.\n\n[number] w\n  The width.\n\n[number] h\n  The height.",
+        "prefix": "surface.DrawOutlinedRect"
+    },
+    "surface.DrawPoly": {
+        "body": [
+            "surface.DrawPoly(${1:vertices})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Draws a textured polygon (secretly a triangle fan) with a maximum of 256 vertices.\nOnly works properly with convex polygons. You may try to render concave polygons, but there is no guarantee that things wont get messed up. Unlike most surface library functions, non-integer coordinates are not rounded.\n\n[table] vertices\n  A table containing vertices. See the PolygonVertex structure.\n\nThe vertices must be in clockwise order.",
+        "prefix": "surface.DrawPoly"
+    },
+    "surface.DrawRect": {
+        "body": [
+            "surface.DrawRect(${1:x}, ${2:y}, ${3:width}, ${4:height})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Draws a solid rectangle on the screen.\n\n[number] x\n  The X co-ordinate.\n\n[number] y\n  The Y co-ordinate.\n\n[number] width\n  The width of the rectangle.\n\n[number] height\n  The height of the rectangle.",
+        "prefix": "surface.DrawRect"
+    },
+    "surface.DrawText": {
+        "body": [
+            "surface.DrawText(${1:text})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Draw the specified text on the screen, using the previously set position, font and color.\n\n[string] text\n  The text to be rendered.",
+        "prefix": "surface.DrawText"
+    },
+    "surface.DrawTexturedRect": {
+        "body": [
+            "surface.DrawTexturedRect(${1:x}, ${2:y}, ${3:width}, ${4:height})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Draw a textured rectangle with the given position and dimensions on the screen, using the current active texture set with surface.SetMaterial. It is also affected by surface.SetDrawColor. See also render.SetMaterial and render.DrawScreenQuadEx.\nSee also surface.DrawTexturedRectUV.\n\n[number] x\n  The X co-ordinate.\n\n[number] y\n  The Y co-ordinate.\n\n[number] width\n  The width of the rectangle.\n\n[number] height\n  The height of the rectangle.",
+        "prefix": "surface.DrawTexturedRect"
+    },
+    "surface.DrawTexturedRectRotated": {
+        "body": [
+            "surface.DrawTexturedRectRotated(${1:x}, ${2:y}, ${3:width}, ${4:height}, ${5:rotation})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Draw a textured rotated rectangle with the given position and dimensions and angle on the screen, using the current active texture.\n\n[number] x\n  The X co-ordinate, representing the center of the rectangle.\n\n[number] y\n  The Y co-ordinate, representing the center of the rectangle.\n\n[number] width\n  The width of the rectangle.\n\n[number] height\n  The height of the rectangle.\n\n[number] rotation\n  The rotation of the rectangle, in degrees.",
+        "prefix": "surface.DrawTexturedRectRotated"
+    },
+    "surface.DrawTexturedRectUV": {
+        "body": [
+            "surface.DrawTexturedRectUV(${1:x}, ${2:y}, ${3:width}, ${4:height}, ${5:startU}, ${6:startV}, ${7:endU}, ${8:endV})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Draws a textured rectangle with a repeated or partial texture. u and v refer to texture coordinates.\n\n[number] x\n  The X coordinate.\n\n[number] y\n  The Y coordinate.\n\n[number] width\n  The width of the rectangle.\n\n[number] height\n  The height of the rectangle.\n\n[number] startU\n  The U texture mapping of the rectangle origin.\n\n[number] startV\n  The V texture mapping of the rectangle origin.\n\n[number] endU\n  The U texture mapping of the rectangle end.\n\n[number] endV\n  The V texture mapping of the rectangle end.",
+        "prefix": "surface.DrawTexturedRectUV"
+    },
+    "surface.GetHUDTexture": {
+        "body": [
+            "surface.GetHUDTexture(${1:name})$0"
+        ],
+        "description": "SURFACE [Client] \n\n[string] name\n  The name of the texture.",
+        "prefix": "surface.GetHUDTexture"
+    },
+    "surface.GetTextSize": {
+        "body": [
+            "surface.GetTextSize(${1:text})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Returns the width and height (in pixels) of the given text, but only if the font has been set with surface.SetFont.\n\n[string] text\n  The string to check the size of.",
+        "prefix": "surface.GetTextSize"
+    },
+    "surface.GetTextureID": {
+        "body": [
+            "surface.GetTextureID(${1:name/path})$0"
+        ],
+        "description": "SURFACE [Client/Menu] \n\n[string] name/path\n  Name or path of the texture.",
+        "prefix": "surface.GetTextureID"
+    },
+    "surface.GetTextureSize": {
+        "body": [
+            "surface.GetTextureSize(${1:textureID})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Returns the size of the texture with the associated texture ID.\n\n[number] textureID\n  The texture ID, returned by surface.GetTextureID.",
+        "prefix": "surface.GetTextureSize"
+    },
+    "surface.PlaySound": {
+        "body": [
+            "surface.PlaySound(${1:soundfile})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Play a sound file directly on the client (such as UI sounds, etc).\n\n[string] soundfile\n  The path to the sound file, which can be relative to the sound/ folder.",
+        "prefix": "surface.PlaySound"
+    },
+    "surface.ScreenHeight": {
+        "body": [
+            "surface.ScreenHeight()$0"
+        ],
+        "description": "SURFACE [Client/Menu]",
+        "prefix": "surface.ScreenHeight"
+    },
+    "surface.ScreenWidth": {
+        "body": [
+            "surface.ScreenWidth()$0"
+        ],
+        "description": "SURFACE [Client/Menu]",
+        "prefix": "surface.ScreenWidth"
+    },
+    "surface.SetAlphaMultiplier": {
+        "body": [
+            "surface.SetAlphaMultiplier(${1:multiplier})$0"
+        ],
+        "description": "SURFACE [Client/Menu] \n\n[number] multiplier\n  The multiplier ranging from 0 to 1.",
+        "prefix": "surface.SetAlphaMultiplier"
+    },
+    "surface.SetDrawColor": {
+        "body": [
+            "surface.SetDrawColor(${1:r}, ${2:g}, ${3:b}, ${4:a=255})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Set the color of any future shapes to be drawn, can be set by either using r, g, b, a as separate values or by a Color structure. Using a color structure is not recommended to be created procedurally.\n\n[number] r\n  The red value of color, or a Color structure.\n\n[number] g\n  The green value of color. Unused if a Color structure was given.\n\n[number] b\n  The blue value of color. Unused if a Color structure was given.\n\n[number] a=255\n  The alpha value of color. Unused if a Color structure was given.",
+        "prefix": "surface.SetDrawColor"
+    },
+    "surface.SetFont": {
+        "body": [
+            "surface.SetFont(${1:fontName})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Set the current font to be used for text operations later. The fonts must first be created with surface.CreateFont or be one of the Default Fonts.\n\n[string] fontName\n  The name of the font to use.",
+        "prefix": "surface.SetFont"
+    },
+    "surface.SetMaterial": {
+        "body": [
+            "surface.SetMaterial(${1:material})$0"
+        ],
+        "description": "SURFACE [Client/Menu] \n\n[IMaterial] material\n  The material to be used.",
+        "prefix": "surface.SetMaterial"
+    },
+    "surface.SetTextColor": {
+        "body": [
+            "surface.SetTextColor(${1:r}, ${2:g}, ${3:b}, ${4:a=255})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Set the color of any future text to be drawn, can be set by either using r, g, b, a as separate values or by a Color structure. Using a color structure is not recommended to be created procedurally.\n\n[number] r\n  The red value of color, or a Color structure.\n\n[number] g\n  The green value of color\n\n[number] b\n  The blue value of color\n\n[number] a=255\n  The alpha value of color",
+        "prefix": "surface.SetTextColor"
+    },
+    "surface.SetTextPos": {
+        "body": [
+            "surface.SetTextPos(${1:x}, ${2:y})$0"
+        ],
+        "description": "SURFACE [Client/Menu] Set the position to draw any future text.\n\n[number] x\n  The X co-ordinate.\n\n[number] y\n  The Y co-ordinate.",
+        "prefix": "surface.SetTextPos"
+    },
+    "surface.SetTexture": {
+        "body": [
+            "surface.SetTexture(${1:textureID})$0"
+        ],
+        "description": "SURFACE [Client/Menu] \n\n[number] textureID\n  The ID of the texture to draw with returned by surface.GetTextureID.",
+        "prefix": "surface.SetTexture"
+    }
+}

@@ -1,0 +1,324 @@
+{
+    "math.AngleDifference": {
+        "body": [
+            "math.AngleDifference(${1:a}, ${2:b})$0"
+        ],
+        "description": "MATH [Shared/Menu] Calculates the difference between two angles.\n\n[number] a\n  The first angle.\n\n[number] b\n  The second angle.",
+        "prefix": "math.AngleDifference"
+    },
+    "math.Approach": {
+        "body": [
+            "math.Approach(${1:current}, ${2:target}, ${3:change})$0"
+        ],
+        "description": "MATH [Shared/Menu] Gradually approaches the target value by the specified amount.\n\n[number] current\n  The value we're currently at.\n\n[number] target\n  The target value. This function will never overshoot this value.\n\n[number] change\n  The amount that the current value is allowed to change by to approach the target. (It makes no difference whether this is positive or negative.)",
+        "prefix": "math.Approach"
+    },
+    "math.ApproachAngle": {
+        "body": [
+            "math.ApproachAngle(${1:currentAngle}, ${2:targetAngle}, ${3:rate})$0"
+        ],
+        "description": "MATH [Shared/Menu] Increments an angle towards another by specified rate.\n\n[number] currentAngle\n  The current angle to increase\n\n[number] targetAngle\n  The angle to increase towards\n\n[number] rate\n  The amount to approach the target angle by",
+        "prefix": "math.ApproachAngle"
+    },
+    "math.BSplinePoint": {
+        "body": [
+            "math.BSplinePoint(${1:tDiff}, ${2:tPoints}, ${3:tMax})$0"
+        ],
+        "description": "MATH [Shared/Menu] Basic code for Bézier-Spline algorithm.\n\n[number] tDiff\n  \n\n[table] tPoints\n  A table of Vectors\n\n[number] tMax",
+        "prefix": "math.BSplinePoint"
+    },
+    "math.BinToInt": {
+        "body": [
+            "math.BinToInt(${1:string})$0"
+        ],
+        "description": "MATH [Shared/Menu] Converts a binary string into a number.\n\n[string] string\n  Binary string to convert",
+        "prefix": "math.BinToInt"
+    },
+    "math.Clamp": {
+        "body": [
+            "math.Clamp(${1:input}, ${2:min}, ${3:max})$0"
+        ],
+        "description": "MATH [Shared/Menu] Clamps a number between a minimum and maximum value\n\n[number] input\n  The number to clamp.\n\n[number] min\n  The minimum value, this function will never return a number less than this.\n\n[number] max\n  The maximum value, this function will never return a number greater than this.",
+        "prefix": "math.Clamp"
+    },
+    "math.Dist": {
+        "body": [
+            "math.Dist(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] x1\n  X position of first point\n\n[number] y1\n  Y position of first point\n\n[number] x2\n  X position of second point\n\n[number] y2\n  Y position of second point",
+        "prefix": "math.Dist"
+    },
+    "math.Distance": {
+        "body": [
+            "math.Distance(${1:x1}, ${2:y1}, ${3:x2}, ${4:y2})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns the difference between two points in 2D space.\n\n[number] x1\n  X position of first point\n\n[number] y1\n  Y position of first point\n\n[number] x2\n  X position of second point\n\n[number] y2\n  Y position of second point",
+        "prefix": "math.Distance"
+    },
+    "math.EaseInOut": {
+        "body": [
+            "math.EaseInOut(${1:progress}, ${2:easeIn}, ${3:easeOut})$0"
+        ],
+        "description": "MATH [Shared/Menu] Calculates the progress of a value fraction, taking in to account given easing fractions\n\n[number] progress\n  Fraction of the progress to ease\n\n[number] easeIn\n  Fraction of how much easing to begin with\n\n[number] easeOut\n  Fraction of how much easing to end with",
+        "prefix": "math.EaseInOut"
+    },
+    "math.IntToBin": {
+        "body": [
+            "math.IntToBin(${1:int})$0"
+        ],
+        "description": "MATH [Shared/Menu] Converts an integer to a binary (base-2) string.\n\n[number] int\n  Number to be converted.",
+        "prefix": "math.IntToBin"
+    },
+    "math.NormalizeAngle": {
+        "body": [
+            "math.NormalizeAngle(${1:angle})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] angle\n  The angle to normalize, in degrees.",
+        "prefix": "math.NormalizeAngle"
+    },
+    "math.Rand": {
+        "body": [
+            "math.Rand(${1:min}, ${2:max})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns a random float between min and max.\n\n[number] min\n  The minimum value.\n\n[number] max\n  The maximum value.",
+        "prefix": "math.Rand"
+    },
+    "math.Remap": {
+        "body": [
+            "math.Remap(${1:value}, ${2:inMin}, ${3:inMax}, ${4:outMin}, ${5:outMax})$0"
+        ],
+        "description": "MATH [Shared/Menu] Remaps the value from one range to another\n\n[number] value\n  The value\n\n[number] inMin\n  The minimum of the initial range\n\n[number] inMax\n  The maximum of the initial range\n\n[number] outMin\n  The minimum of new range\n\n[number] outMax\n  The maximum of new range",
+        "prefix": "math.Remap"
+    },
+    "math.Round": {
+        "body": [
+            "math.Round(${1:value}, ${2:decimals=0})$0"
+        ],
+        "description": "MATH [Shared/Menu] Rounds the given value to the nearest whole number or to the given decimal places.\n\n[number] value\n  The value to round.\n\n[number] decimals=0\n  The decimal places to round to.",
+        "prefix": "math.Round"
+    },
+    "math.TimeFraction": {
+        "body": [
+            "math.TimeFraction(${1:start}, ${2:end}, ${3:current})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns the fraction of where the current time is relative to the start and end times\n\n[number] start\n  Start time in seconds\n\n[number] end\n  End time in seconds\n\n[number] current\n  Current time in seconds",
+        "prefix": "math.TimeFraction"
+    },
+    "math.Truncate": {
+        "body": [
+            "math.Truncate(${1:num}, ${2:digits=0})$0"
+        ],
+        "description": "MATH [Shared/Menu] Rounds towards zero.\n\n[number] num\n  The number to truncate\n\n[number] digits=0\n  The amount of digits to keep after the point.",
+        "prefix": "math.Truncate"
+    },
+    "math.abs": {
+        "body": [
+            "math.abs(${1:x})$0"
+        ],
+        "description": "MATH [Shared/Menu] Calculates the absolute value of a number (effectively removes any negative sign).\n\n[number] x\n  The number to get the absolute value of.",
+        "prefix": "math.abs"
+    },
+    "math.acos": {
+        "body": [
+            "math.acos(${1:normal})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] normal\n  Value in range of -1 - 1.",
+        "prefix": "math.acos"
+    },
+    "math.asin": {
+        "body": [
+            "math.asin(${1:normal})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] normal\n  Value in range of -1 - 1.",
+        "prefix": "math.asin"
+    },
+    "math.atan": {
+        "body": [
+            "math.atan(${1:normal})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] normal\n  Value in range of -1 - 1.",
+        "prefix": "math.atan"
+    },
+    "math.atan2": {
+        "body": [
+            "math.atan2(${1:y}, ${2:x})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns math.atan(y / x) in radians. The result is between -math.pi and math.pi.\n\n[number] y\n  Y coordinate.\n\n[number] x\n  X coordinate.",
+        "prefix": "math.atan2"
+    },
+    "math.calcBSplineN": {
+        "body": [
+            "math.calcBSplineN(${1:i}, ${2:k}, ${3:t}, ${4:tinc})$0"
+        ],
+        "description": "MATH [Shared/Menu] Basic code for Bezier-Spline algorithm.\n\n[number] i\n  \n\n[number] k\n  \n\n[number] t\n  \n\n[number] tinc",
+        "prefix": "math.calcBSplineN"
+    },
+    "math.ceil": {
+        "body": [
+            "math.ceil(${1:number})$0"
+        ],
+        "description": "MATH [Shared/Menu] Ceils or rounds a number up.\n\n[number] number\n  The number to be rounded up.",
+        "prefix": "math.ceil"
+    },
+    "math.cos": {
+        "body": [
+            "math.cos(${1:number})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns cosine of given angle.\n\n[number] number\n  Angle in radians",
+        "prefix": "math.cos"
+    },
+    "math.cosh": {
+        "body": [
+            "math.cosh(${1:number})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] number\n  Value in radians.",
+        "prefix": "math.cosh"
+    },
+    "math.deg": {
+        "body": [
+            "math.deg(${1:radians})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] radians\n  Value to be converted to degrees.",
+        "prefix": "math.deg"
+    },
+    "math.exp": {
+        "body": [
+            "math.exp(${1:exponent})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] exponent\n  The exponent for the function.",
+        "prefix": "math.exp"
+    },
+    "math.floor": {
+        "body": [
+            "math.floor(${1:number})$0"
+        ],
+        "description": "MATH [Shared/Menu] Floors or rounds a number down.\n\n[number] number\n  The number to be rounded down.",
+        "prefix": "math.floor"
+    },
+    "math.fmod": {
+        "body": [
+            "math.fmod(${1:base}, ${2:modulator})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns the modulus of the specified values. NB: While this is similar to the % operator, it will return a negative value if the first argument is negative, whereas the % operator will return a positive value even if the first operand is negative.\n\n[number] base\n  The base value.\n\n[number] modulator\n  The modulator.",
+        "prefix": "math.fmod"
+    },
+    "math.frexp": {
+        "body": [
+            "math.frexp(${1:inputValue})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] inputValue\n  The value to get the normalized fraction and the exponent from.",
+        "prefix": "math.frexp"
+    },
+    "math.ldexp": {
+        "body": [
+            "math.ldexp(${1:normalizedFraction}, ${2:exponent})$0"
+        ],
+        "description": "MATH [Shared/Menu] Takes a normalised number and returns the floating point representation.\n\n[number] normalizedFraction\n  The value to get the normalized fraction and the exponent from.\n\n[number] exponent\n  The value to get the normalized fraction and the exponent from.",
+        "prefix": "math.ldexp"
+    },
+    "math.log": {
+        "body": [
+            "math.log(${1:x}, ${2:base=math.exp(1)})$0"
+        ],
+        "description": "MATH [Shared/Menu] With one argument, return the natural logarithm of x (to base e). With two arguments, return the logarithm of x to the given base, calculated as log(x)/log(base).\n\n[number] x\n  The value to get the base from exponent from.\n\n[number] base=math.exp(1)",
+        "prefix": "math.log"
+    },
+    "math.log10": {
+        "body": [
+            "math.log10(${1:x})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] x\n  The value to get the base from exponent from.",
+        "prefix": "math.log10"
+    },
+    "math.max": {
+        "body": [
+            "math.max(${1:numbers})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns the largest value of all arguments.\n\n[vararg] numbers\n  Numbers to get the largest from",
+        "prefix": "math.max"
+    },
+    "math.min": {
+        "body": [
+            "math.min(${1:numbers})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns the smallest value of all arguments.\n\n[vararg] numbers\n  Numbers to get the smallest from.",
+        "prefix": "math.min"
+    },
+    "math.mod": {
+        "body": [
+            "math.mod(${1:base}, ${2:modulator})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] base\n  The base value\n\n[number] modulator\n  Modulator",
+        "prefix": "math.mod"
+    },
+    "math.modf": {
+        "body": [
+            "math.modf(${1:base})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns the integral and fractional component of the modulo operation.\n\n[number] base\n  The base value.",
+        "prefix": "math.modf"
+    },
+    "math.pow": {
+        "body": [
+            "math.pow(${1:x}, ${2:y})$0"
+        ],
+        "description": "MATH [Shared/Menu] Returns x raised to the power y.\nIn particular, math.pow(1.0, x) and math.pow(x, 0.0) always return 1.0, even when x is a zero or a NaN. If both x and y are finite, x is negative, and y is not an integer then math.pow(x, y) is undefined.\n\n[number] x\n  Base.\n\n[number] y\n  Exponent.",
+        "prefix": "math.pow"
+    },
+    "math.rad": {
+        "body": [
+            "math.rad(${1:degrees})$0"
+        ],
+        "description": "MATH [Shared/Menu] Converts an angle in degrees to it's equivalent in radians.\n\n[number] degrees\n  The angle measured in degrees.",
+        "prefix": "math.rad"
+    },
+    "math.random": {
+        "body": [
+            "math.random(${1:m}, ${2:n})$0"
+        ],
+        "description": "MATH [Shared/Menu] When called without arguments, returns a uniform pseudo-random real number in the range 0 to 1 which includes 0 but excludes 1. When called with an integer number m, returns a uniform pseudo-random integer in the range 1 to m inclusive. When called with two integer numbers m and n, returns a uniform pseudo-random integer in the range m to n inclusive.\n\n[number] m\n  If m is the only parameter: upper limit.\nIf n is also provided: lower limit.\n\nIf provided, this must be an integer.\n\n[number] n\n  Upper limit.\n\nIf provided, this must be an integer.",
+        "prefix": "math.random"
+    },
+    "math.randomseed": {
+        "body": [
+            "math.randomseed(${1:seed})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] seed\n  The new seed",
+        "prefix": "math.randomseed"
+    },
+    "math.sin": {
+        "body": [
+            "math.sin(${1:number})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] number\n  Angle in radians",
+        "prefix": "math.sin"
+    },
+    "math.sinh": {
+        "body": [
+            "math.sinh(${1:number})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] number\n  Value in radians.",
+        "prefix": "math.sinh"
+    },
+    "math.sqrt": {
+        "body": [
+            "math.sqrt(${1:value})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] value\n  Value to get the square root of.",
+        "prefix": "math.sqrt"
+    },
+    "math.tan": {
+        "body": [
+            "math.tan(${1:value})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] value\n  Angle in radians",
+        "prefix": "math.tan"
+    },
+    "math.tanh": {
+        "body": [
+            "math.tanh(${1:number})$0"
+        ],
+        "description": "MATH [Shared/Menu] \n\n[number] number\n  Value in radians.",
+        "prefix": "math.tanh"
+    }
+}

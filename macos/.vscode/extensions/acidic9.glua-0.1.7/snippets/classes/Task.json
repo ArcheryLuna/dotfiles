@@ -1,0 +1,65 @@
+{
+    "Init": {
+        "body": [
+            "Init()$0"
+        ],
+        "description": "TASK [Server]",
+        "prefix": "Init"
+    },
+    "InitEngine": {
+        "body": [
+            "InitEngine(${1:taskname}, ${2:taskdata})$0"
+        ],
+        "description": "TASK [Server] \n\n[string] taskname\n  The name of the task.\n\n[number] taskdata",
+        "prefix": "InitEngine"
+    },
+    "InitFunctionName": {
+        "body": [
+            "InitFunctionName(${1:startname}, ${2:runname}, ${3:taskdata})$0"
+        ],
+        "description": "TASK [Server] Initialises the AI task as NPC method-based.\n\n[string] startname\n  The name of the NPC method to call on task start.\n\n[string] runname\n  The name of the NPC method to call on task run.\n\n[number] taskdata",
+        "prefix": "InitFunctionName"
+    },
+    "IsEngineType": {
+        "body": [
+            "IsEngineType()$0"
+        ],
+        "description": "TASK [Server]",
+        "prefix": "IsEngineType"
+    },
+    "IsFNameType": {
+        "body": [
+            "IsFNameType()$0"
+        ],
+        "description": "TASK [Server]",
+        "prefix": "IsFNameType"
+    },
+    "Run": {
+        "body": [
+            "Run(${1:target})$0"
+        ],
+        "description": "TASK [Server] \n\n[NPC] target\n  The NPC to run the task on.",
+        "prefix": "Run"
+    },
+    "Run_FName": {
+        "body": [
+            "Run_FName(${1:target})$0"
+        ],
+        "description": "TASK [Server] \n\n[NPC] target\n  The NPC to run the task on.",
+        "prefix": "Run_FName"
+    },
+    "Start": {
+        "body": [
+            "Start(${1:target})$0"
+        ],
+        "description": "TASK [Server] \n\n[NPC] target\n  The NPC to start the task on.",
+        "prefix": "Start"
+    },
+    "Start_FName": {
+        "body": [
+            "Start_FName(${1:target})$0"
+        ],
+        "description": "TASK [Server] \n\n[NPC] target\n  The NPC to start the task on.",
+        "prefix": "Start_FName"
+    }
+}

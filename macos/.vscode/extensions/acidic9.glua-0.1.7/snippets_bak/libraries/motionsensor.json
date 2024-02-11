@@ -1,0 +1,79 @@
+{
+	"motionsensor/BuildSkeleton": {
+		"body": [
+			"motionsensor.BuildSkeleton(${1:translator}, ${2:player}, ${3:rotation})$0"
+		],
+		"description": "No description available.",
+		"prefix": "motionsensor.BuildSkeleton"
+	},
+	"motionsensor/ChooseBuilderFromEntity": {
+		"body": [
+			"motionsensor.ChooseBuilderFromEntity(${1:ent})$0"
+		],
+		"description": "No description available.",
+		"prefix": "motionsensor.ChooseBuilderFromEntity"
+	},
+	"motionsensor/GetColourMaterial": {
+		"body": [
+			"motionsensor.GetColourMaterial()$0"
+		],
+		"description": "Returns the depth map material.",
+		"prefix": "motionsensor.GetColourMaterial"
+	},
+	"motionsensor/GetSkeleton": {
+		"body": [
+			"motionsensor.GetSkeleton()$0"
+		],
+		"description": "No description available.",
+		"prefix": "motionsensor.GetSkeleton"
+	},
+	"motionsensor/IsActive": {
+		"body": [
+			"motionsensor.IsActive()$0"
+		],
+		"description": "Return whether a kinect is connected - and active (ie - Start has been called).",
+		"prefix": "motionsensor.IsActive"
+	},
+	"motionsensor/IsAvailable": {
+		"body": [
+			"motionsensor.IsAvailable()$0"
+		],
+		"description": "Returns true if we have detected that there\u0026#39;s a kinect connected to the PC",
+		"prefix": "motionsensor.IsAvailable"
+	},
+	"motionsensor/ProcessAngle": {
+		"body": [
+			"motionsensor.ProcessAngle(${1:translator}, ${2:sensor}, ${3:pos}, ${4:ang}, ${5:special_vectors}, ${6:boneid}, ${7:v})$0"
+		],
+		"description": "No description available.",
+		"prefix": "motionsensor.ProcessAngle"
+	},
+	"motionsensor/ProcessAnglesTable": {
+		"body": [
+			"motionsensor.ProcessAnglesTable(${1:translator}, ${2:sensor}, ${3:pos}, ${4:rotation})$0"
+		],
+		"description": "No description available.",
+		"prefix": "motionsensor.ProcessAnglesTable"
+	},
+	"motionsensor/ProcessPositionTable": {
+		"body": [
+			"motionsensor.ProcessPositionTable(${1:translator}, ${2:sensor})$0"
+		],
+		"description": "No description available.",
+		"prefix": "motionsensor.ProcessPositionTable"
+	},
+	"motionsensor/Start": {
+		"body": [
+			"motionsensor.Start()$0"
+		],
+		"description": "This starts access to the kinect sensor. Note that this usually freezes the game for a couple of seconds.",
+		"prefix": "motionsensor.Start"
+	},
+	"motionsensor/Stop": {
+		"body": [
+			"motionsensor.Stop()$0"
+		],
+		"description": "Stops the motion capture.",
+		"prefix": "motionsensor.Stop"
+	}
+}

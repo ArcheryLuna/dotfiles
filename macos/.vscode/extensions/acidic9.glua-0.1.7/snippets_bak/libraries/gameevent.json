@@ -1,0 +1,9 @@
+{
+	"gameevent/Listen": {
+		"body": [
+			"gameevent.Listen(${1:eventName})$0"
+		],
+		"description": "Add a game event listener.",
+		"prefix": "gameevent.Listen"
+	}
+}

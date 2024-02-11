@@ -1,0 +1,37 @@
+{
+	"list/Add": {
+		"body": [
+			"list.Add(${1:identifier}, ${2:item})$0"
+		],
+		"description": "Adds an item to a named list",
+		"prefix": "list.Add"
+	},
+	"list/Contains": {
+		"body": [
+			"list.Contains(${1:list}, ${2:value})$0"
+		],
+		"description": "Returns true if the list contains the value. (as a value - not a key)",
+		"prefix": "list.Contains"
+	},
+	"list/Get": {
+		"body": [
+			"list.Get(${1:identifier})$0"
+		],
+		"description": "Returns a copy of the list stored at identifier",
+		"prefix": "list.Get"
+	},
+	"list/GetForEdit": {
+		"body": [
+			"list.GetForEdit(${1:identifier})$0"
+		],
+		"description": "Returns the actual table of the list stored at identifier. Modifying this will affect the stored list",
+		"prefix": "list.GetForEdit"
+	},
+	"list/Set": {
+		"body": [
+			"list.Set(${1:identifier}, ${2:key}, ${3:item})$0"
+		],
+		"description": "Sets a specific position in the named list to a value.",
+		"prefix": "list.Set"
+	}
+}

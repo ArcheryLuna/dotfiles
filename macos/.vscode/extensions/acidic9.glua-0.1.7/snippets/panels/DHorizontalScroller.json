@@ -1,0 +1,58 @@
+{
+    "AddPanel": {
+        "body": [
+            "AddPanel(${1:pnl})$0"
+        ],
+        "description": "DHORIZONTALSCROLLER [Client] \n\n[Panel] pnl\n  The panel to add. It will be automatically parented.",
+        "prefix": "AddPanel"
+    },
+    "GetOverlap": {
+        "body": [
+            "GetOverlap()$0"
+        ],
+        "description": "DHORIZONTALSCROLLER [Client]",
+        "prefix": "GetOverlap"
+    },
+    "GetShowDropTargets": {
+        "body": [
+            "GetShowDropTargets()$0"
+        ],
+        "description": "DHORIZONTALSCROLLER [Client]",
+        "prefix": "GetShowDropTargets"
+    },
+    "MakeDroppable": {
+        "body": [
+            "MakeDroppable(${1:name})$0"
+        ],
+        "description": "DHORIZONTALSCROLLER [Client] \n\n[string] name",
+        "prefix": "MakeDroppable"
+    },
+    "OnDragModified": {
+        "body": [
+            "OnDragModified()$0"
+        ],
+        "description": "DHORIZONTALSCROLLER [Client]",
+        "prefix": "OnDragModified"
+    },
+    "SetOverlap": {
+        "body": [
+            "SetOverlap(${1:overlap})$0"
+        ],
+        "description": "DHORIZONTALSCROLLER [Client] \n\n[number] overlap\n  Overlap in pixels. Positive numbers will make elements overlap each other, negative will add spacing.",
+        "prefix": "SetOverlap"
+    },
+    "SetShowDropTargets": {
+        "body": [
+            "SetShowDropTargets(${1:})$0"
+        ],
+        "description": "DHORIZONTALSCROLLER [Client] \n\n[boolean]",
+        "prefix": "SetShowDropTargets"
+    },
+    "SetUseLiveDrag": {
+        "body": [
+            "SetUseLiveDrag(${1:})$0"
+        ],
+        "description": "DHORIZONTALSCROLLER [Client] \n\n[boolean]",
+        "prefix": "SetUseLiveDrag"
+    }
+}

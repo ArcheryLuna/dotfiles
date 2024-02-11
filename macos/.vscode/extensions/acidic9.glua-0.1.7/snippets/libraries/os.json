@@ -1,0 +1,30 @@
+{
+    "os.clock": {
+        "body": [
+            "os.clock()$0"
+        ],
+        "description": "OS [Shared/Menu] Returns the approximate cpu time the application ran.",
+        "prefix": "os.clock"
+    },
+    "os.date": {
+        "body": [
+            "os.date(${1:format}, ${2:time})$0"
+        ],
+        "description": "OS [Shared/Menu] Returns the date/time as a formatted string or in a table.\n\n[string] format\n  The format string.\nIf this is equal to '*t' then this function will return a table, otherwise it will return a string.\nIf this starts with an '!', the returned data will use the UTC timezone rather than the local timezone.\nSee http://www.mkssoftware.com/docs/man3/strftime.3.asp for available format flags.\n\nNot all flags are available on all operating systems and the result of using an invalid flag is undefined. This currently crashes the game on Windows. Most or all flags are available on OS X and Linux but considerably fewer are available on Windows. See http://msdn.microsoft.com/en-us/library/fe06s4ak.aspx for a list of available flags on Windows.\n\n[number] time\n  Time to use for the format.",
+        "prefix": "os.date"
+    },
+    "os.difftime": {
+        "body": [
+            "os.difftime(${1:timeA}, ${2:timeB})$0"
+        ],
+        "description": "OS [Shared/Menu] Subtracts the second of the first value and rounds the result.\n\n[number] timeA\n  The first value.\n\n[number] timeB\n  The value to subtract.",
+        "prefix": "os.difftime"
+    },
+    "os.time": {
+        "body": [
+            "os.time(${1:dateData=nil})$0"
+        ],
+        "description": "OS [Shared/Menu] Returns the system time in seconds past the unix epoch. If a table is supplied, the function attempts to build a system time with the specified table members.\n\n[table] dateData=nil\n  Table to generate the time from. This table's data is interpreted as being in the local timezone. See DateData structure",
+        "prefix": "os.time"
+    }
+}

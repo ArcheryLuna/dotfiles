@@ -1,0 +1,212 @@
+{
+    "AddDamage": {
+        "body": [
+            "AddDamage(${1:damageIncrease})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[number] damageIncrease\n  The damage to add.",
+        "prefix": "AddDamage"
+    },
+    "GetAmmoType": {
+        "body": [
+            "GetAmmoType()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetAmmoType"
+    },
+    "GetAttacker": {
+        "body": [
+            "GetAttacker()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetAttacker"
+    },
+    "GetBaseDamage": {
+        "body": [
+            "GetBaseDamage()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetBaseDamage"
+    },
+    "GetDamage": {
+        "body": [
+            "GetDamage()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetDamage"
+    },
+    "GetDamageBonus": {
+        "body": [
+            "GetDamageBonus()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetDamageBonus"
+    },
+    "GetDamageCustom": {
+        "body": [
+            "GetDamageCustom()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetDamageCustom"
+    },
+    "GetDamageForce": {
+        "body": [
+            "GetDamageForce()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetDamageForce"
+    },
+    "GetDamagePosition": {
+        "body": [
+            "GetDamagePosition()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetDamagePosition"
+    },
+    "GetDamageType": {
+        "body": [
+            "GetDamageType()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetDamageType"
+    },
+    "GetInflictor": {
+        "body": [
+            "GetInflictor()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetInflictor"
+    },
+    "GetMaxDamage": {
+        "body": [
+            "GetMaxDamage()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetMaxDamage"
+    },
+    "GetReportedPosition": {
+        "body": [
+            "GetReportedPosition()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "GetReportedPosition"
+    },
+    "IsBulletDamage": {
+        "body": [
+            "IsBulletDamage()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "IsBulletDamage"
+    },
+    "IsDamageType": {
+        "body": [
+            "IsDamageType(${1:dmgType})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[number] dmgType\n  Damage type to test. See DMG_ Enums.",
+        "prefix": "IsDamageType"
+    },
+    "IsExplosionDamage": {
+        "body": [
+            "IsExplosionDamage()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "IsExplosionDamage"
+    },
+    "IsFallDamage": {
+        "body": [
+            "IsFallDamage()$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared]",
+        "prefix": "IsFallDamage"
+    },
+    "ScaleDamage": {
+        "body": [
+            "ScaleDamage(${1:scale})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[number] scale\n  Value to scale the damage with.",
+        "prefix": "ScaleDamage"
+    },
+    "SetAmmoType": {
+        "body": [
+            "SetAmmoType(${1:ammoType})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] Changes the ammo type used by the weapon that inflicted the damage.\n\n[number] ammoType\n  Ammo type ID",
+        "prefix": "SetAmmoType"
+    },
+    "SetAttacker": {
+        "body": [
+            "SetAttacker(${1:ent})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[Entity] ent\n  The entity to be set as the attacker.",
+        "prefix": "SetAttacker"
+    },
+    "SetDamage": {
+        "body": [
+            "SetDamage(${1:damage})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[number] damage\n  The value to set the absolute damage to.",
+        "prefix": "SetDamage"
+    },
+    "SetDamageBonus": {
+        "body": [
+            "SetDamageBonus(${1:damage})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[number] damage\n  The extra damage to be added.",
+        "prefix": "SetDamageBonus"
+    },
+    "SetDamageCustom": {
+        "body": [
+            "SetDamageCustom(${1:DamageType})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[number] DamageType\n  Any integer - can be based on your own custom enums.",
+        "prefix": "SetDamageCustom"
+    },
+    "SetDamageForce": {
+        "body": [
+            "SetDamageForce(${1:force})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[Vector] force\n  The vector to set the force to.",
+        "prefix": "SetDamageForce"
+    },
+    "SetDamagePosition": {
+        "body": [
+            "SetDamagePosition(${1:pos})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[Vector] pos\n  The position where the damage will be applied.",
+        "prefix": "SetDamagePosition"
+    },
+    "SetDamageType": {
+        "body": [
+            "SetDamageType(${1:type})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[number] type\n  The damage type, see DMG_ Enums.",
+        "prefix": "SetDamageType"
+    },
+    "SetInflictor": {
+        "body": [
+            "SetInflictor(${1:inflictor})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[Entity] inflictor\n  The new inflictor.",
+        "prefix": "SetInflictor"
+    },
+    "SetMaxDamage": {
+        "body": [
+            "SetMaxDamage(${1:maxDamage})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[number] maxDamage\n  Maximum damage value.",
+        "prefix": "SetMaxDamage"
+    },
+    "SetReportedPosition": {
+        "body": [
+            "SetReportedPosition(${1:pos})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[Vector] pos\n  The location of where the damage is originating",
+        "prefix": "SetReportedPosition"
+    },
+    "SubtractDamage": {
+        "body": [
+            "SubtractDamage(${1:damage})$0"
+        ],
+        "description": "CTAKEDAMAGEINFO [Shared] \n\n[number] damage\n  Value to subtract.",
+        "prefix": "SubtractDamage"
+    }
+}

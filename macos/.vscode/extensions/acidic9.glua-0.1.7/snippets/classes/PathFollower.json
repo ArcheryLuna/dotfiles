@@ -1,0 +1,191 @@
+{
+    "Chase": {
+        "body": [
+            "Chase(${1:bot}, ${2:ent})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] \n\n[NextBot] bot\n  The bot to update along the path\n\n[Entity] ent\n  The entity we want to chase",
+        "prefix": "Chase"
+    },
+    "Compute": {
+        "body": [
+            "Compute(${1:from}, ${2:to}, ${3:generator=nil})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] Compute shortest path from bot to 'goal' via A* algorithm.\n\n[NextBot] from\n  The nextbot we're generating for\n\n[Vector] to\n  To point\n\n[function] generator=nil\n  A funtion that allows you to alter the path generation. See example below for the default function.",
+        "prefix": "Compute"
+    },
+    "Draw": {
+        "body": [
+            "Draw()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "Draw"
+    },
+    "FirstSegment": {
+        "body": [
+            "FirstSegment()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "FirstSegment"
+    },
+    "GetAge": {
+        "body": [
+            "GetAge()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "GetAge"
+    },
+    "GetAllSegments": {
+        "body": [
+            "GetAllSegments()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "GetAllSegments"
+    },
+    "GetClosestPosition": {
+        "body": [
+            "GetClosestPosition(${1:position})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] \n\n[Vector] position\n  The point we're querying for",
+        "prefix": "GetClosestPosition"
+    },
+    "GetCurrentGoal": {
+        "body": [
+            "GetCurrentGoal()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "GetCurrentGoal"
+    },
+    "GetCursorData": {
+        "body": [
+            "GetCursorData()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "GetCursorData"
+    },
+    "GetCursorPosition": {
+        "body": [
+            "GetCursorPosition()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "GetCursorPosition"
+    },
+    "GetEnd": {
+        "body": [
+            "GetEnd()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "GetEnd"
+    },
+    "GetHindrance": {
+        "body": [
+            "GetHindrance()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "GetHindrance"
+    },
+    "GetLength": {
+        "body": [
+            "GetLength()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "GetLength"
+    },
+    "GetPositionOnPath": {
+        "body": [
+            "GetPositionOnPath(${1:distance})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] Returns the vector position of distance along path\n\n[number] distance\n  The distance along the path to query",
+        "prefix": "GetPositionOnPath"
+    },
+    "GetStart": {
+        "body": [
+            "GetStart()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "GetStart"
+    },
+    "Invalidate": {
+        "body": [
+            "Invalidate()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "Invalidate"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "IsValid"
+    },
+    "LastSegment": {
+        "body": [
+            "LastSegment()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "LastSegment"
+    },
+    "MoveCursor": {
+        "body": [
+            "MoveCursor(${1:distance})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] \n\n[number] distance\n  The distance to move the cursor (in relative world units)",
+        "prefix": "MoveCursor"
+    },
+    "MoveCursorTo": {
+        "body": [
+            "MoveCursorTo(${1:distance})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] \n\n[number] distance\n  The distance to move the cursor (in world units)",
+        "prefix": "MoveCursorTo"
+    },
+    "MoveCursorToClosestPosition": {
+        "body": [
+            "MoveCursorToClosestPosition(${1:pos}, ${2:type=0}, ${3:alongLimit=0})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] Moves the cursor of the path to the closest position compared to given vector.\n\n[Vector] pos\n  \n\n[number] type=0\n  Seek type\n0 = SEEK_ENTIRE_PATH - Search the entire path length\n1 = SEEK_AHEAD - Search from current cursor position forward toward end of path\n2 = SEEK_BEHIND - Search from current cursor position backward toward path start\n\n[number] alongLimit=0",
+        "prefix": "MoveCursorToClosestPosition"
+    },
+    "MoveCursorToEnd": {
+        "body": [
+            "MoveCursorToEnd()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "MoveCursorToEnd"
+    },
+    "MoveCursorToStart": {
+        "body": [
+            "MoveCursorToStart()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "MoveCursorToStart"
+    },
+    "ResetAge": {
+        "body": [
+            "ResetAge()$0"
+        ],
+        "description": "PATHFOLLOWER [Server]",
+        "prefix": "ResetAge"
+    },
+    "SetGoalTolerance": {
+        "body": [
+            "SetGoalTolerance(${1:distance})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] \n\n[number] distance\n  The distance we're setting it to",
+        "prefix": "SetGoalTolerance"
+    },
+    "SetMinLookAheadDistance": {
+        "body": [
+            "SetMinLookAheadDistance(${1:mindist})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] \n\n[number] mindist\n  The minimum look ahead distance",
+        "prefix": "SetMinLookAheadDistance"
+    },
+    "Update": {
+        "body": [
+            "Update(${1:bot})$0"
+        ],
+        "description": "PATHFOLLOWER [Server] \n\n[NextBot] bot\n  The bot to update along the path",
+        "prefix": "Update"
+    }
+}

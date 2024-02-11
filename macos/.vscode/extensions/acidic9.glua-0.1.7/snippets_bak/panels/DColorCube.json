@@ -1,0 +1,44 @@
+{
+	"DColorCube/GetRGB": {
+		"body": [
+			"GetRGB()$0"
+		],
+		"description": "Returns the color cube\u0026#39;s current set color.",
+		"prefix": "GetRGB"
+	},
+	"DColorCube/OnUserChanged": {
+		"body": [
+			"OnUserChanged(${1:color})$0"
+		],
+		"description": "Function which is called when the color cube slider is moved (through user input). Meant to be overridden.",
+		"prefix": "OnUserChanged"
+	},
+	"DColorCube/SetBaseRGB": {
+		"body": [
+			"SetBaseRGB(${1:color})$0"
+		],
+		"description": "Sets the base color and the color used to draw the color cube panel itself.",
+		"prefix": "SetBaseRGB"
+	},
+	"DColorCube/SetColor": {
+		"body": [
+			"SetColor(${1:color})$0"
+		],
+		"description": "Sets the base color of the color cube and updates the slider position.",
+		"prefix": "SetColor"
+	},
+	"DColorCube/TranslateValues": {
+		"body": [
+			"TranslateValues(${1:x}, ${2:y})$0"
+		],
+		"description": "Updates the color cube RGB based on the given x and y position and returns its arguments. Similar to",
+		"prefix": "TranslateValues"
+	},
+	"DColorCube/UpdateColor": {
+		"body": [
+			"UpdateColor(${1:x}, ${2:y})$0"
+		],
+		"description": "Updates the color cube RGB based on the given x and y position. Similar to",
+		"prefix": "UpdateColor"
+	}
+}

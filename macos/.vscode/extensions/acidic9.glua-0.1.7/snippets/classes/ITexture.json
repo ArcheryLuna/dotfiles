@@ -1,0 +1,58 @@
+{
+    "Download": {
+        "body": [
+            "Download()$0"
+        ],
+        "description": "ITEXTURE [Shared]",
+        "prefix": "Download"
+    },
+    "GetColor": {
+        "body": [
+            "GetColor(${1:x}, ${2:y})$0"
+        ],
+        "description": "ITEXTURE [Shared] Returns the color of the specified pixel, only works for textures created from PNG files.\n\n[number] x\n  The X coordinate.\n\n[number] y\n  The Y coordinate.",
+        "prefix": "GetColor"
+    },
+    "GetMappingHeight": {
+        "body": [
+            "GetMappingHeight()$0"
+        ],
+        "description": "ITEXTURE [Shared]",
+        "prefix": "GetMappingHeight"
+    },
+    "GetMappingWidth": {
+        "body": [
+            "GetMappingWidth()$0"
+        ],
+        "description": "ITEXTURE [Shared]",
+        "prefix": "GetMappingWidth"
+    },
+    "GetName": {
+        "body": [
+            "GetName()$0"
+        ],
+        "description": "ITEXTURE [Shared]",
+        "prefix": "GetName"
+    },
+    "Height": {
+        "body": [
+            "Height()$0"
+        ],
+        "description": "ITEXTURE [Shared]",
+        "prefix": "Height"
+    },
+    "IsError": {
+        "body": [
+            "IsError()$0"
+        ],
+        "description": "ITEXTURE [Shared]",
+        "prefix": "IsError"
+    },
+    "Width": {
+        "body": [
+            "Width()$0"
+        ],
+        "description": "ITEXTURE [Shared]",
+        "prefix": "Width"
+    }
+}

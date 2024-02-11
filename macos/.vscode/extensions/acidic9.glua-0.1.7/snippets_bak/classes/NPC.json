@@ -1,0 +1,590 @@
+{
+	"NPC/AddEntityRelationship": {
+		"body": [
+			"AddEntityRelationship(${1:target}, ${2:disposition}, ${3:priority})$0"
+		],
+		"description": "Makes the NPC like, hate, feel neutral towards, or fear the entity in question. If you want to setup relationship towards a certain entity",
+		"prefix": "AddEntityRelationship"
+	},
+	"NPC/AddRelationship": {
+		"body": [
+			"AddRelationship(${1:relationstring})$0"
+		],
+		"description": "Changes how an NPC feels towards another NPC. If you want to setup relationship towards a certain",
+		"prefix": "AddRelationship"
+	},
+	"NPC/AlertSound": {
+		"body": [
+			"AlertSound()$0"
+		],
+		"description": "Force an NPC to play his Alert sound.",
+		"prefix": "AlertSound"
+	},
+	"NPC/CapabilitiesAdd": {
+		"body": [
+			"CapabilitiesAdd(${1:capabilities})$0"
+		],
+		"description": "Adds a capability to the NPC.",
+		"prefix": "CapabilitiesAdd"
+	},
+	"NPC/CapabilitiesClear": {
+		"body": [
+			"CapabilitiesClear()$0"
+		],
+		"description": "Removes all of Capabilities the NPC has.",
+		"prefix": "CapabilitiesClear"
+	},
+	"NPC/CapabilitiesGet": {
+		"body": [
+			"CapabilitiesGet()$0"
+		],
+		"description": "Returns the NPC\u0026#39;s capabilities along the ones defined on its weapon.",
+		"prefix": "CapabilitiesGet"
+	},
+	"NPC/CapabilitiesRemove": {
+		"body": [
+			"CapabilitiesRemove(${1:capabilities})$0"
+		],
+		"description": "Remove a certain capability.",
+		"prefix": "CapabilitiesRemove"
+	},
+	"NPC/Classify": {
+		"body": [
+			"Classify()$0"
+		],
+		"description": "Returns the NPC class. Do not confuse with",
+		"prefix": "Classify"
+	},
+	"NPC/ClearCondition": {
+		"body": [
+			"ClearCondition(${1:condition})$0"
+		],
+		"description": "Clears out the specified",
+		"prefix": "ClearCondition"
+	},
+	"NPC/ClearEnemyMemory": {
+		"body": [
+			"ClearEnemyMemory()$0"
+		],
+		"description": "Clears the Enemy from the NPC\u0026#39;s memory, effectively forgetting it until met again with either the NPC vision or with",
+		"prefix": "ClearEnemyMemory"
+	},
+	"NPC/ClearExpression": {
+		"body": [
+			"ClearExpression()$0"
+		],
+		"description": "Clears the NPC\u0026#39;s current expression which can be set with",
+		"prefix": "ClearExpression"
+	},
+	"NPC/ClearGoal": {
+		"body": [
+			"ClearGoal()$0"
+		],
+		"description": "No description available.",
+		"prefix": "ClearGoal"
+	},
+	"NPC/ClearSchedule": {
+		"body": [
+			"ClearSchedule()$0"
+		],
+		"description": "Stops the current schedule that the NPC is doing.",
+		"prefix": "ClearSchedule"
+	},
+	"NPC/ConditionName": {
+		"body": [
+			"ConditionName(${1:cond})$0"
+		],
+		"description": "Translates condition ID to a string.",
+		"prefix": "ConditionName"
+	},
+	"NPC/Disposition": {
+		"body": [
+			"Disposition(${1:ent})$0"
+		],
+		"description": "Returns the way the NPC \u0026#34;feels\u0026#34; about the entity.",
+		"prefix": "Disposition"
+	},
+	"NPC/ExitScriptedSequence": {
+		"body": [
+			"ExitScriptedSequence()$0"
+		],
+		"description": "Makes an NPC exit a scripted sequence, if one is playing.",
+		"prefix": "ExitScriptedSequence"
+	},
+	"NPC/FearSound": {
+		"body": [
+			"FearSound()$0"
+		],
+		"description": "Force an NPC to play his Fear sound.",
+		"prefix": "FearSound"
+	},
+	"NPC/FoundEnemySound": {
+		"body": [
+			"FoundEnemySound()$0"
+		],
+		"description": "Force an NPC to play its FoundEnemy sound.",
+		"prefix": "FoundEnemySound"
+	},
+	"NPC/GetActiveWeapon": {
+		"body": [
+			"GetActiveWeapon()$0"
+		],
+		"description": "Returns the weapon the NPC is currently carrying, or",
+		"prefix": "GetActiveWeapon"
+	},
+	"NPC/GetActivity": {
+		"body": [
+			"GetActivity()$0"
+		],
+		"description": "Returns the NPC\u0026#39;s current activity.",
+		"prefix": "GetActivity"
+	},
+	"NPC/GetAimVector": {
+		"body": [
+			"GetAimVector()$0"
+		],
+		"description": "Returns the aim vector of the NPC. NPC alternative of",
+		"prefix": "GetAimVector"
+	},
+	"NPC/GetArrivalActivity": {
+		"body": [
+			"GetArrivalActivity()$0"
+		],
+		"description": "Returns the activity to be played when the NPC arrives at its goal",
+		"prefix": "GetArrivalActivity"
+	},
+	"NPC/GetArrivalSequence": {
+		"body": [
+			"GetArrivalSequence()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetArrivalSequence"
+	},
+	"NPC/GetBlockingEntity": {
+		"body": [
+			"GetBlockingEntity()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetBlockingEntity"
+	},
+	"NPC/GetCurrentWeaponProficiency": {
+		"body": [
+			"GetCurrentWeaponProficiency()$0"
+		],
+		"description": "Returns how proficient (skilled) an NPC is with its current weapon.",
+		"prefix": "GetCurrentWeaponProficiency"
+	},
+	"NPC/GetEnemy": {
+		"body": [
+			"GetEnemy()$0"
+		],
+		"description": "Returns the entity that this NPC is trying to fight",
+		"prefix": "GetEnemy"
+	},
+	"NPC/GetExpression": {
+		"body": [
+			"GetExpression()$0"
+		],
+		"description": "Returns the expression file the NPC is currently playing.",
+		"prefix": "GetExpression"
+	},
+	"NPC/GetHullType": {
+		"body": [
+			"GetHullType()$0"
+		],
+		"description": "Returns NPCs hull type set by",
+		"prefix": "GetHullType"
+	},
+	"NPC/GetMovementActivity": {
+		"body": [
+			"GetMovementActivity()$0"
+		],
+		"description": "Returns the NPC\u0026#39;s current movement activity.",
+		"prefix": "GetMovementActivity"
+	},
+	"NPC/GetMovementSequence": {
+		"body": [
+			"GetMovementSequence()$0"
+		],
+		"description": "Returns the index of the sequence the NPC uses to move.",
+		"prefix": "GetMovementSequence"
+	},
+	"NPC/GetNPCState": {
+		"body": [
+			"GetNPCState()$0"
+		],
+		"description": "Returns the NPC\u0026#39;s state.",
+		"prefix": "GetNPCState"
+	},
+	"NPC/GetPathDistanceToGoal": {
+		"body": [
+			"GetPathDistanceToGoal()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetPathDistanceToGoal"
+	},
+	"NPC/GetPathTimeToGoal": {
+		"body": [
+			"GetPathTimeToGoal()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetPathTimeToGoal"
+	},
+	"NPC/GetShootPos": {
+		"body": [
+			"GetShootPos()$0"
+		],
+		"description": "Returns the shooting position of the NPC.",
+		"prefix": "GetShootPos"
+	},
+	"NPC/GetTarget": {
+		"body": [
+			"GetTarget()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetTarget"
+	},
+	"NPC/Give": {
+		"body": [
+			"Give(${1:weapon})$0"
+		],
+		"description": "Used to give a weapon to an already spawned NPC.",
+		"prefix": "Give"
+	},
+	"NPC/HasCondition": {
+		"body": [
+			"HasCondition(${1:condition})$0"
+		],
+		"description": "Returns whether or not the NPC has the given condition.",
+		"prefix": "HasCondition"
+	},
+	"NPC/IdleSound": {
+		"body": [
+			"IdleSound()$0"
+		],
+		"description": "Force an NPC to play his Idle sound.",
+		"prefix": "IdleSound"
+	},
+	"NPC/IsCurrentSchedule": {
+		"body": [
+			"IsCurrentSchedule(${1:schedule})$0"
+		],
+		"description": "Returns whether or not the NPC is performing the given schedule.",
+		"prefix": "IsCurrentSchedule"
+	},
+	"NPC/IsMoving": {
+		"body": [
+			"IsMoving()$0"
+		],
+		"description": "Returns whether the NPC is moving or not.",
+		"prefix": "IsMoving"
+	},
+	"NPC/IsRunningBehavior": {
+		"body": [
+			"IsRunningBehavior()$0"
+		],
+		"description": "No description available.",
+		"prefix": "IsRunningBehavior"
+	},
+	"NPC/IsUnreachable": {
+		"body": [
+			"IsUnreachable(${1:testEntity})$0"
+		],
+		"description": "Returns whether the entity given can be reached by this NPC.",
+		"prefix": "IsUnreachable"
+	},
+	"NPC/LostEnemySound": {
+		"body": [
+			"LostEnemySound()$0"
+		],
+		"description": "Force an NPC to play his LostEnemy sound.",
+		"prefix": "LostEnemySound"
+	},
+	"NPC/MaintainActivity": {
+		"body": [
+			"MaintainActivity()$0"
+		],
+		"description": "No description available.",
+		"prefix": "MaintainActivity"
+	},
+	"NPC/MarkEnemyAsEluded": {
+		"body": [
+			"MarkEnemyAsEluded()$0"
+		],
+		"description": "Causes the NPC to temporarily forget the current enemy and switch on to a better one.",
+		"prefix": "MarkEnemyAsEluded"
+	},
+	"NPC/MoveOrder": {
+		"body": [
+			"MoveOrder()$0"
+		],
+		"description": "No description available.",
+		"prefix": "MoveOrder"
+	},
+	"NPC/NavSetGoal": {
+		"body": [
+			"NavSetGoal(${1:position})$0"
+		],
+		"description": "No description available.",
+		"prefix": "NavSetGoal"
+	},
+	"NPC/NavSetGoalTarget": {
+		"body": [
+			"NavSetGoalTarget(${1:target}, ${2:offset})$0"
+		],
+		"description": "Set the goal target for an NPC.",
+		"prefix": "NavSetGoalTarget"
+	},
+	"NPC/NavSetRandomGoal": {
+		"body": [
+			"NavSetRandomGoal()$0"
+		],
+		"description": "No description available.",
+		"prefix": "NavSetRandomGoal"
+	},
+	"NPC/NavSetWanderGoal": {
+		"body": [
+			"NavSetWanderGoal(${1:xoffset}, ${2:yoffset})$0"
+		],
+		"description": "Sets a goal in x, y offsets for the npc to wander to",
+		"prefix": "NavSetWanderGoal"
+	},
+	"NPC/PlaySentence": {
+		"body": [
+			"PlaySentence(${1:sentence}, ${2:delay}, ${3:volume})$0"
+		],
+		"description": "Forces the NPC to play a sentence from scripts/sentences.txt",
+		"prefix": "PlaySentence"
+	},
+	"NPC/RemoveMemory": {
+		"body": [
+			"RemoveMemory()$0"
+		],
+		"description": "No description available.",
+		"prefix": "RemoveMemory"
+	},
+	"NPC/RunEngineTask": {
+		"body": [
+			"RunEngineTask(${1:taskID}, ${2:taskData})$0"
+		],
+		"description": "No description available.",
+		"prefix": "RunEngineTask"
+	},
+	"NPC/SentenceStop": {
+		"body": [
+			"SentenceStop()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SentenceStop"
+	},
+	"NPC/SetArrivalActivity": {
+		"body": [
+			"SetArrivalActivity(${1:act})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetArrivalActivity"
+	},
+	"NPC/SetArrivalDirection": {
+		"body": [
+			"SetArrivalDirection()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetArrivalDirection"
+	},
+	"NPC/SetArrivalDistance": {
+		"body": [
+			"SetArrivalDistance()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetArrivalDistance"
+	},
+	"NPC/SetArrivalSequence": {
+		"body": [
+			"SetArrivalSequence()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetArrivalSequence"
+	},
+	"NPC/SetArrivalSpeed": {
+		"body": [
+			"SetArrivalSpeed()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetArrivalSpeed"
+	},
+	"NPC/SetCondition": {
+		"body": [
+			"SetCondition(${1:condition})$0"
+		],
+		"description": "Sets an NPC condition.",
+		"prefix": "SetCondition"
+	},
+	"NPC/SetCurrentWeaponProficiency": {
+		"body": [
+			"SetCurrentWeaponProficiency(${1:proficiency})$0"
+		],
+		"description": "Sets the weapon proficiency of an NPC (how skilled an NPC is with its current weapon).",
+		"prefix": "SetCurrentWeaponProficiency"
+	},
+	"NPC/SetEnemy": {
+		"body": [
+			"SetEnemy(${1:enemy})$0"
+		],
+		"description": "Sets the target for an NPC.",
+		"prefix": "SetEnemy"
+	},
+	"NPC/SetExpression": {
+		"body": [
+			"SetExpression(${1:expression})$0"
+		],
+		"description": "Sets the NPC\u0026#39;s .vcd expression. Similar to",
+		"prefix": "SetExpression"
+	},
+	"NPC/SetHullSizeNormal": {
+		"body": [
+			"SetHullSizeNormal()$0"
+		],
+		"description": "Updates the NPC\u0026#39;s hull and physics hull in order to match its model scale.",
+		"prefix": "SetHullSizeNormal"
+	},
+	"NPC/SetHullType": {
+		"body": [
+			"SetHullType(${1:hullType})$0"
+		],
+		"description": "Sets the hull type for the NPC.",
+		"prefix": "SetHullType"
+	},
+	"NPC/SetLastPosition": {
+		"body": [
+			"SetLastPosition(${1:Position})$0"
+		],
+		"description": "Sets the last registered or memorized position for an npc. When using scheduling, the NPC will focus on navigating to the last position via nodes.",
+		"prefix": "SetLastPosition"
+	},
+	"NPC/SetMaxRouteRebuildTime": {
+		"body": [
+			"SetMaxRouteRebuildTime()$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetMaxRouteRebuildTime"
+	},
+	"NPC/SetMovementActivity": {
+		"body": [
+			"SetMovementActivity(${1:activity})$0"
+		],
+		"description": "Sets the activity the NPC uses when it moves.",
+		"prefix": "SetMovementActivity"
+	},
+	"NPC/SetMovementSequence": {
+		"body": [
+			"SetMovementSequence(${1:sequenceId})$0"
+		],
+		"description": "Sets the sequence the NPC navigation path uses for speed calculation. Doesn\u0026#39;t seem to have any visible effect on NPC movement.",
+		"prefix": "SetMovementSequence"
+	},
+	"NPC/SetNPCState": {
+		"body": [
+			"SetNPCState(${1:state})$0"
+		],
+		"description": "Sets the state the NPC is in to help it decide on a ideal schedule.",
+		"prefix": "SetNPCState"
+	},
+	"NPC/SetSchedule": {
+		"body": [
+			"SetSchedule(${1:schedule})$0"
+		],
+		"description": "Sets the NPC\u0026#39;s current schedule.",
+		"prefix": "SetSchedule"
+	},
+	"NPC/SetTarget": {
+		"body": [
+			"SetTarget(${1:player})$0"
+		],
+		"description": "Sets the NPC\u0026#39;s target to a player.(Used in some engine schedules)",
+		"prefix": "SetTarget"
+	},
+	"NPC/StartEngineTask": {
+		"body": [
+			"StartEngineTask(${1:task}, ${2:taskData})$0"
+		],
+		"description": "Forces the NPC to start an engine task, this has different results for every NPC.",
+		"prefix": "StartEngineTask"
+	},
+	"NPC/StopMoving": {
+		"body": [
+			"StopMoving()$0"
+		],
+		"description": "Resets the NPC\u0026#39;s movement animation and velocity. Does not actually stop the NPC from moving.",
+		"prefix": "StopMoving"
+	},
+	"NPC/TargetOrder": {
+		"body": [
+			"TargetOrder()$0"
+		],
+		"description": "No description available.",
+		"prefix": "TargetOrder"
+	},
+	"NPC/TaskComplete": {
+		"body": [
+			"TaskComplete()$0"
+		],
+		"description": "No description available.",
+		"prefix": "TaskComplete"
+	},
+	"NPC/TaskFail": {
+		"body": [
+			"TaskFail(${1:task})$0"
+		],
+		"description": "No description available.",
+		"prefix": "TaskFail"
+	},
+	"NPC/UpdateEnemyMemory": {
+		"body": [
+			"UpdateEnemyMemory(${1:enemy}, ${2:pos})$0"
+		],
+		"description": "Force the NPC to update information on the supplied enemy, as if it had line of sight to it.",
+		"prefix": "UpdateEnemyMemory"
+	},
+	"NPC/UseActBusyBehavior": {
+		"body": [
+			"UseActBusyBehavior()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UseActBusyBehavior"
+	},
+	"NPC/UseAssaultBehavior": {
+		"body": [
+			"UseAssaultBehavior()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UseAssaultBehavior"
+	},
+	"NPC/UseFollowBehavior": {
+		"body": [
+			"UseFollowBehavior()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UseFollowBehavior"
+	},
+	"NPC/UseFuncTankBehavior": {
+		"body": [
+			"UseFuncTankBehavior()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UseFuncTankBehavior"
+	},
+	"NPC/UseLeadBehavior": {
+		"body": [
+			"UseLeadBehavior()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UseLeadBehavior"
+	},
+	"NPC/UseNoBehavior": {
+		"body": [
+			"UseNoBehavior()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UseNoBehavior"
+	}
+}

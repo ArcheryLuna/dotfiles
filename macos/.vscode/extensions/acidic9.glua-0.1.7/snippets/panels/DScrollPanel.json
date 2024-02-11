@@ -1,0 +1,65 @@
+{
+    "AddItem": {
+        "body": [
+            "AddItem(${1:pnl})$0"
+        ],
+        "description": "DSCROLLPANEL [Client] \n\n[Panel] pnl\n  The panel to add.",
+        "prefix": "AddItem"
+    },
+    "GetCanvas": {
+        "body": [
+            "GetCanvas()$0"
+        ],
+        "description": "DSCROLLPANEL [Client]",
+        "prefix": "GetCanvas"
+    },
+    "GetPadding": {
+        "body": [
+            "GetPadding()$0"
+        ],
+        "description": "DSCROLLPANEL [Client]",
+        "prefix": "GetPadding"
+    },
+    "GetVBar": {
+        "body": [
+            "GetVBar()$0"
+        ],
+        "description": "DSCROLLPANEL [Client] Returns the vertical scroll bar of the panel.",
+        "prefix": "GetVBar"
+    },
+    "InnerWidth": {
+        "body": [
+            "InnerWidth()$0"
+        ],
+        "description": "DSCROLLPANEL [Client]",
+        "prefix": "InnerWidth"
+    },
+    "Rebuild": {
+        "body": [
+            "Rebuild()$0"
+        ],
+        "description": "DSCROLLPANEL [Client]",
+        "prefix": "Rebuild"
+    },
+    "ScrollToChild": {
+        "body": [
+            "ScrollToChild(${1:panel})$0"
+        ],
+        "description": "DSCROLLPANEL [Client] \n\n[Panel] panel\n  The panel to scroll to, must be a child of the DScrollPanel.",
+        "prefix": "ScrollToChild"
+    },
+    "SetCanvas": {
+        "body": [
+            "SetCanvas(${1:canvas})$0"
+        ],
+        "description": "DSCROLLPANEL [Client] \n\n[Panel] canvas\n  The new canvas",
+        "prefix": "SetCanvas"
+    },
+    "SetPadding": {
+        "body": [
+            "SetPadding(${1:padding})$0"
+        ],
+        "description": "DSCROLLPANEL [Client] \n\n[number] padding\n  The padding of the DScrollPanel.",
+        "prefix": "SetPadding"
+    }
+}

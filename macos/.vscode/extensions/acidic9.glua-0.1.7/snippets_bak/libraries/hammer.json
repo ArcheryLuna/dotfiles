@@ -1,0 +1,9 @@
+{
+	"hammer/SendCommand": {
+		"body": [
+			"hammer.SendCommand(${1:cmd})$0"
+		],
+		"description": "Sends command to Hammer, if Hammer is running with the current map loaded.",
+		"prefix": "hammer.SendCommand"
+	}
+}

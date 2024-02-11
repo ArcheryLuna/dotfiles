@@ -1,0 +1,58 @@
+{
+	"DColorMixer/GetAlphaBar": {
+		"body": [
+			"GetAlphaBar()$0"
+		],
+		"description": "Return true if alpha bar is shown, false if not.",
+		"prefix": "GetAlphaBar"
+	},
+	"DColorMixer/GetColor": {
+		"body": [
+			"GetColor()$0"
+		],
+		"description": "Returns the current selected color.",
+		"prefix": "GetColor"
+	},
+	"DColorMixer/GetPalette": {
+		"body": [
+			"GetPalette()$0"
+		],
+		"description": "Return true if palette is shown, false if not.",
+		"prefix": "GetPalette"
+	},
+	"DColorMixer/GetWangs": {
+		"body": [
+			"GetWangs()$0"
+		],
+		"description": "Return true if the wangs are shown, false if not.",
+		"prefix": "GetWangs"
+	},
+	"DColorMixer/SetAlphaBar": {
+		"body": [
+			"SetAlphaBar(${1:show})$0"
+		],
+		"description": "Show/Hide the alpha bar in DColorMixer",
+		"prefix": "SetAlphaBar"
+	},
+	"DColorMixer/SetColor": {
+		"body": [
+			"SetColor(${1:color})$0"
+		],
+		"description": "Sets the color of DColorMixer",
+		"prefix": "SetColor"
+	},
+	"DColorMixer/SetPalette": {
+		"body": [
+			"SetPalette(${1:enabled})$0"
+		],
+		"description": "Show or hide the palette panel",
+		"prefix": "SetPalette"
+	},
+	"DColorMixer/SetWangs": {
+		"body": [
+			"SetWangs(${1:show})$0"
+		],
+		"description": "Show / Hide the colors indicators in DColorMixer",
+		"prefix": "SetWangs"
+	}
+}

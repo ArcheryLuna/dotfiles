@@ -1,0 +1,86 @@
+{
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "CONTENTICON [Client]",
+        "prefix": "GetColor"
+    },
+    "GetContentType": {
+        "body": [
+            "GetContentType()$0"
+        ],
+        "description": "CONTENTICON [Client]",
+        "prefix": "GetContentType"
+    },
+    "GetNPCWeapon": {
+        "body": [
+            "GetNPCWeapon()$0"
+        ],
+        "description": "CONTENTICON [Client]",
+        "prefix": "GetNPCWeapon"
+    },
+    "GetSpawnName": {
+        "body": [
+            "GetSpawnName()$0"
+        ],
+        "description": "CONTENTICON [Client]",
+        "prefix": "GetSpawnName"
+    },
+    "OpenMenu": {
+        "body": [
+            "OpenMenu()$0"
+        ],
+        "description": "CONTENTICON [Client]",
+        "prefix": "OpenMenu"
+    },
+    "SetAdminOnly": {
+        "body": [
+            "SetAdminOnly(${1:adminOnly})$0"
+        ],
+        "description": "CONTENTICON [Client] \n\n[boolean] adminOnly\n  Whether this content should be admin only or not",
+        "prefix": "SetAdminOnly"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:clr})$0"
+        ],
+        "description": "CONTENTICON [Client] \n\n[table] clr\n  The color to set. See Color structure",
+        "prefix": "SetColor"
+    },
+    "SetContentType": {
+        "body": [
+            "SetContentType(${1:type})$0"
+        ],
+        "description": "CONTENTICON [Client] \n\n[string] type\n  The content type, for example \"entity\" or \"weapon\"",
+        "prefix": "SetContentType"
+    },
+    "SetMaterial": {
+        "body": [
+            "SetMaterial(${1:path})$0"
+        ],
+        "description": "CONTENTICON [Client] \n\n[string] path\n  Path to the icon to use.",
+        "prefix": "SetMaterial"
+    },
+    "SetNPCWeapon": {
+        "body": [
+            "SetNPCWeapon(${1:weapons})$0"
+        ],
+        "description": "CONTENTICON [Client] \n\n[table] weapons\n  A table of weapon classes to be chosen from when user tries to spawn the NPC.",
+        "prefix": "SetNPCWeapon"
+    },
+    "SetName": {
+        "body": [
+            "SetName(${1:name})$0"
+        ],
+        "description": "CONTENTICON [Client] \n\n[string] name\n  \"Nice\" name to display.",
+        "prefix": "SetName"
+    },
+    "SetSpawnName": {
+        "body": [
+            "SetSpawnName(${1:name})$0"
+        ],
+        "description": "CONTENTICON [Client] \n\n[string] name\n  Internal \"name\" to be used when user left clicks the icon.",
+        "prefix": "SetSpawnName"
+    }
+}

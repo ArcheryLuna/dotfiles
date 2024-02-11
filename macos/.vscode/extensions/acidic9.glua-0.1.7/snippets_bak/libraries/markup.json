@@ -1,0 +1,9 @@
+{
+	"markup/Parse": {
+		"body": [
+			"markup.Parse(${1:markup}, ${2:maxwidth})$0"
+		],
+		"description": "Parses markup into a",
+		"prefix": "markup.Parse"
+	}
+}

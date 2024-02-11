@@ -1,0 +1,9 @@
+{
+    "OnLabelTextChanged": {
+        "body": [
+            "OnLabelTextChanged(${1:txt})$0"
+        ],
+        "description": "DLABELEDITABLE [Client] \n\n[string] txt\n  The original user input text",
+        "prefix": "OnLabelTextChanged"
+    }
+}

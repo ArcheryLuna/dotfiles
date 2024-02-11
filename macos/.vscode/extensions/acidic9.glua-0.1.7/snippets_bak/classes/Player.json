@@ -1,0 +1,1689 @@
+{
+	"Player/AccountID": {
+		"body": [
+			"AccountID()$0"
+		],
+		"description": "Returns the player\u0026#39;s AccountID aka 32bit SteamID.",
+		"prefix": "AccountID"
+	},
+	"Player/AddCleanup": {
+		"body": [
+			"AddCleanup(${1:type}, ${2:ent})$0"
+		],
+		"description": "Adds an entity to the players clean up list.",
+		"prefix": "AddCleanup"
+	},
+	"Player/AddCount": {
+		"body": [
+			"AddCount(${1:str}, ${2:ent})$0"
+		],
+		"description": "Adds an entity to the total count of entities of same class.",
+		"prefix": "AddCount"
+	},
+	"Player/AddDeaths": {
+		"body": [
+			"AddDeaths(${1:count})$0"
+		],
+		"description": "Add a certain amount to the player\u0026#39;s death count",
+		"prefix": "AddDeaths"
+	},
+	"Player/AddFrags": {
+		"body": [
+			"AddFrags(${1:count})$0"
+		],
+		"description": "Add a certain amount to the player\u0026#39;s frag count (or kills count)",
+		"prefix": "AddFrags"
+	},
+	"Player/AddFrozenPhysicsObject": {
+		"body": [
+			"AddFrozenPhysicsObject(${1:ent}, ${2:physobj})$0"
+		],
+		"description": "Adds a entity to the players list of frozen objects.",
+		"prefix": "AddFrozenPhysicsObject"
+	},
+	"Player/AddPlayerOption": {
+		"body": [
+			"AddPlayerOption(${1:name}, ${2:timeout}, ${3:callback}, ${4:callback})$0"
+		],
+		"description": "Sets up the voting system for the player. This is a really barebone system. By calling this a vote gets started, when the player presses 0-9 the callback function gets called along with the key the player pressed. Use the draw callback to draw the vote panel.",
+		"prefix": "AddPlayerOption"
+	},
+	"Player/AddVCDSequenceToGestureSlot": {
+		"body": [
+			"AddVCDSequenceToGestureSlot(${1:slot}, ${2:sequenceId}, ${3:cycle}, ${4:loop})$0"
+		],
+		"description": "Plays a sequence directly from a sequence number, similar to",
+		"prefix": "AddVCDSequenceToGestureSlot"
+	},
+	"Player/Alive": {
+		"body": [
+			"Alive()$0"
+		],
+		"description": "Checks if the player is alive.",
+		"prefix": "Alive"
+	},
+	"Player/AllowFlashlight": {
+		"body": [
+			"AllowFlashlight(${1:canFlashlight})$0"
+		],
+		"description": "Sets if the player can toggle his flashlight. Function exists on both the server and client but has no effect when ran on the client.",
+		"prefix": "AllowFlashlight"
+	},
+	"Player/AllowImmediateDecalPainting": {
+		"body": [
+			"AllowImmediateDecalPainting(${1:allow})$0"
+		],
+		"description": "Lets the player spray his decal without delay",
+		"prefix": "AllowImmediateDecalPainting"
+	},
+	"Player/AnimResetGestureSlot": {
+		"body": [
+			"AnimResetGestureSlot(${1:slot})$0"
+		],
+		"description": "Resets player gesture in selected slot.",
+		"prefix": "AnimResetGestureSlot"
+	},
+	"Player/AnimRestartGesture": {
+		"body": [
+			"AnimRestartGesture(${1:slot}, ${2:activity}, ${3:bAutoKill})$0"
+		],
+		"description": "Restart a gesture on a player, within a gesture slot.",
+		"prefix": "AnimRestartGesture"
+	},
+	"Player/AnimRestartMainSequence": {
+		"body": [
+			"AnimRestartMainSequence()$0"
+		],
+		"description": "Restarts the main animation on the player, has the same effect as calling",
+		"prefix": "AnimRestartMainSequence"
+	},
+	"Player/AnimSetGestureSequence": {
+		"body": [
+			"AnimSetGestureSequence(${1:slot}, ${2:sequenceID})$0"
+		],
+		"description": "Sets the sequence of the animation playing in the given gesture slot.",
+		"prefix": "AnimSetGestureSequence"
+	},
+	"Player/AnimSetGestureWeight": {
+		"body": [
+			"AnimSetGestureWeight(${1:slot}, ${2:weight})$0"
+		],
+		"description": "Sets the weight of the animation playing in the given gesture slot.",
+		"prefix": "AnimSetGestureWeight"
+	},
+	"Player/Armor": {
+		"body": [
+			"Armor()$0"
+		],
+		"description": "Returns the player\u0026#39;s armor.",
+		"prefix": "Armor"
+	},
+	"Player/Ban": {
+		"body": [
+			"Ban(${1:minutes}, ${2:kick=false})$0"
+		],
+		"description": "Bans the player from the server for a certain amount of minutes.",
+		"prefix": "Ban"
+	},
+	"Player/CanUseFlashlight": {
+		"body": [
+			"CanUseFlashlight()$0"
+		],
+		"description": "Returns true if the player\u0026#39;s flashlight hasn\u0026#39;t been disabled by",
+		"prefix": "CanUseFlashlight"
+	},
+	"Player/ChatPrint": {
+		"body": [
+			"ChatPrint(${1:message})$0"
+		],
+		"description": "Prints a string to the chatbox of the client.",
+		"prefix": "ChatPrint"
+	},
+	"Player/CheckLimit": {
+		"body": [
+			"CheckLimit(${1:str})$0"
+		],
+		"description": "Checks if the limit is hit or not. If it is, it will throw a notification saying so.",
+		"prefix": "CheckLimit"
+	},
+	"Player/ConCommand": {
+		"body": [
+			"ConCommand(${1:command})$0"
+		],
+		"description": "Runs the concommand on the player. This does not work on bots.",
+		"prefix": "ConCommand"
+	},
+	"Player/CreateRagdoll": {
+		"body": [
+			"CreateRagdoll()$0"
+		],
+		"description": "Creates the player\u0026#39;s ragdoll entity.",
+		"prefix": "CreateRagdoll"
+	},
+	"Player/CrosshairDisable": {
+		"body": [
+			"CrosshairDisable()$0"
+		],
+		"description": "Disables a players crosshair.",
+		"prefix": "CrosshairDisable"
+	},
+	"Player/CrosshairEnable": {
+		"body": [
+			"CrosshairEnable()$0"
+		],
+		"description": "Enables crosshair of player.",
+		"prefix": "CrosshairEnable"
+	},
+	"Player/Crouching": {
+		"body": [
+			"Crouching()$0"
+		],
+		"description": "Returns whether the player is crouching or not",
+		"prefix": "Crouching"
+	},
+	"Player/Deaths": {
+		"body": [
+			"Deaths()$0"
+		],
+		"description": "Returns the player\u0026#39;s death count",
+		"prefix": "Deaths"
+	},
+	"Player/DebugInfo": {
+		"body": [
+			"DebugInfo()$0"
+		],
+		"description": "Prints the players\u0026#39; name and position to the console.",
+		"prefix": "DebugInfo"
+	},
+	"Player/DetonateTripmines": {
+		"body": [
+			"DetonateTripmines()$0"
+		],
+		"description": "Detonates all tripmines belonging to the player.",
+		"prefix": "DetonateTripmines"
+	},
+	"Player/DoAnimationEvent": {
+		"body": [
+			"DoAnimationEvent(${1:data})$0"
+		],
+		"description": "Sends a third person animation event to the player.",
+		"prefix": "DoAnimationEvent"
+	},
+	"Player/DoAttackEvent": {
+		"body": [
+			"DoAttackEvent()$0"
+		],
+		"description": "Starts the player\u0026#39;s attack animation. The attack animation is determined by the weapon\u0026#39;s HoldType.",
+		"prefix": "DoAttackEvent"
+	},
+	"Player/DoCustomAnimEvent": {
+		"body": [
+			"DoCustomAnimEvent(${1:event}, ${2:data})$0"
+		],
+		"description": "Sends a specified third person animation event to the player.",
+		"prefix": "DoCustomAnimEvent"
+	},
+	"Player/DoReloadEvent": {
+		"body": [
+			"DoReloadEvent()$0"
+		],
+		"description": "Sends a third person reload animation event to the player.",
+		"prefix": "DoReloadEvent"
+	},
+	"Player/DoSecondaryAttack": {
+		"body": [
+			"DoSecondaryAttack()$0"
+		],
+		"description": "Sends a third person secondary fire animation event to the player.",
+		"prefix": "DoSecondaryAttack"
+	},
+	"Player/DrawViewModel": {
+		"body": [
+			"DrawViewModel(${1:draw}, ${2:vm=0})$0"
+		],
+		"description": "Show/Hide the player\u0026#39;s weapon\u0026#39;s viewmodel.",
+		"prefix": "DrawViewModel"
+	},
+	"Player/DrawWorldModel": {
+		"body": [
+			"DrawWorldModel(${1:draw})$0"
+		],
+		"description": "Show/Hide the player\u0026#39;s weapon\u0026#39;s worldmodel.",
+		"prefix": "DrawWorldModel"
+	},
+	"Player/DropNamedWeapon": {
+		"body": [
+			"DropNamedWeapon(${1:class})$0"
+		],
+		"description": "Drops the players\u0026#39; weapon of a specific class.",
+		"prefix": "DropNamedWeapon"
+	},
+	"Player/DropObject": {
+		"body": [
+			"DropObject()$0"
+		],
+		"description": "Drops any object the player is currently holding with either gravitygun or +Use (E key)",
+		"prefix": "DropObject"
+	},
+	"Player/DropWeapon": {
+		"body": [
+			"DropWeapon(${1:weapon})$0"
+		],
+		"description": "Forces the player to drop the specified weapon",
+		"prefix": "DropWeapon"
+	},
+	"Player/EnterVehicle": {
+		"body": [
+			"EnterVehicle(${1:vehicle})$0"
+		],
+		"description": "Enters the player into specified vehicle",
+		"prefix": "EnterVehicle"
+	},
+	"Player/EquipSuit": {
+		"body": [
+			"EquipSuit()$0"
+		],
+		"description": "Equips the player with the HEV suit.",
+		"prefix": "EquipSuit"
+	},
+	"Player/ExitVehicle": {
+		"body": [
+			"ExitVehicle()$0"
+		],
+		"description": "Makes the player exit the vehicle if they\u0026#39;re in one.",
+		"prefix": "ExitVehicle"
+	},
+	"Player/Flashlight": {
+		"body": [
+			"Flashlight(${1:isOn})$0"
+		],
+		"description": "Enables/Disables the player\u0026#39;s flashlight",
+		"prefix": "Flashlight"
+	},
+	"Player/FlashlightIsOn": {
+		"body": [
+			"FlashlightIsOn()$0"
+		],
+		"description": "Returns true if the player\u0026#39;s flashlight is on.",
+		"prefix": "FlashlightIsOn"
+	},
+	"Player/Frags": {
+		"body": [
+			"Frags()$0"
+		],
+		"description": "Returns the amount of kills a player has.",
+		"prefix": "Frags"
+	},
+	"Player/Freeze": {
+		"body": [
+			"Freeze(${1:frozen=false})$0"
+		],
+		"description": "Freeze/Unfreezes the player. Frozen players cannot move, attack or turn around. Keybindings are still called. Similar to",
+		"prefix": "Freeze"
+	},
+	"Player/GetActiveWeapon": {
+		"body": [
+			"GetActiveWeapon()$0"
+		],
+		"description": "Returns the player\u0026#39;s active weapon.",
+		"prefix": "GetActiveWeapon"
+	},
+	"Player/GetAimVector": {
+		"body": [
+			"GetAimVector()$0"
+		],
+		"description": "Returns the direction that the player is aiming.",
+		"prefix": "GetAimVector"
+	},
+	"Player/GetAllowFullRotation": {
+		"body": [
+			"GetAllowFullRotation()$0"
+		],
+		"description": "Returns true if the players\u0026#39; model is allowed to rotate around the pitch and roll axis.",
+		"prefix": "GetAllowFullRotation"
+	},
+	"Player/GetAllowWeaponsInVehicle": {
+		"body": [
+			"GetAllowWeaponsInVehicle()$0"
+		],
+		"description": "Returns whether the player is allowed to use his weapons in a vehicle or not.",
+		"prefix": "GetAllowWeaponsInVehicle"
+	},
+	"Player/GetAmmoCount": {
+		"body": [
+			"GetAmmoCount(${1:ammotype})$0"
+		],
+		"description": "Gets the amount of ammo the player has.",
+		"prefix": "GetAmmoCount"
+	},
+	"Player/GetAvoidPlayers": {
+		"body": [
+			"GetAvoidPlayers()$0"
+		],
+		"description": "Gets if the player will be pushed out of nocollided players.",
+		"prefix": "GetAvoidPlayers"
+	},
+	"Player/GetCanWalk": {
+		"body": [
+			"GetCanWalk()$0"
+		],
+		"description": "Returns true if the player is able to walk using the (default) alt key.",
+		"prefix": "GetCanWalk"
+	},
+	"Player/GetCanZoom": {
+		"body": [
+			"GetCanZoom()$0"
+		],
+		"description": "Determines whenever the player is allowed to use the zoom functionality.",
+		"prefix": "GetCanZoom"
+	},
+	"Player/GetClassID": {
+		"body": [
+			"GetClassID()$0"
+		],
+		"description": "Returns the player\u0026#39;s class id.",
+		"prefix": "GetClassID"
+	},
+	"Player/GetCount": {
+		"body": [
+			"GetCount(${1:type}, ${2:minus=0})$0"
+		],
+		"description": "Gets total count of entities of same class.",
+		"prefix": "GetCount"
+	},
+	"Player/GetCrouchedWalkSpeed": {
+		"body": [
+			"GetCrouchedWalkSpeed()$0"
+		],
+		"description": "Gets the crouched walk speed.",
+		"prefix": "GetCrouchedWalkSpeed"
+	},
+	"Player/GetCurrentCommand": {
+		"body": [
+			"GetCurrentCommand()$0"
+		],
+		"description": "Returns the last command which was sent by the specified player. Can only be used in a",
+		"prefix": "GetCurrentCommand"
+	},
+	"Player/GetCurrentViewOffset": {
+		"body": [
+			"GetCurrentViewOffset()$0"
+		],
+		"description": "Gets the",
+		"prefix": "GetCurrentViewOffset"
+	},
+	"Player/GetDrivingEntity": {
+		"body": [
+			"GetDrivingEntity()$0"
+		],
+		"description": "Gets the entity the player is currently driving.",
+		"prefix": "GetDrivingEntity"
+	},
+	"Player/GetDrivingMode": {
+		"body": [
+			"GetDrivingMode()$0"
+		],
+		"description": "Returns driving mode of the player. See",
+		"prefix": "GetDrivingMode"
+	},
+	"Player/GetDuckSpeed": {
+		"body": [
+			"GetDuckSpeed()$0"
+		],
+		"description": "Returns a player\u0026#39;s duck speed (in seconds)",
+		"prefix": "GetDuckSpeed"
+	},
+	"Player/GetEyeTrace": {
+		"body": [
+			"GetEyeTrace()$0"
+		],
+		"description": "Returns a table with information of what the player is looking at.",
+		"prefix": "GetEyeTrace"
+	},
+	"Player/GetEyeTraceNoCursor": {
+		"body": [
+			"GetEyeTraceNoCursor()$0"
+		],
+		"description": "Returns the trace according to the players view direction, ignoring their mouse ( Holding C and moving the mouse in Sandbox ).",
+		"prefix": "GetEyeTraceNoCursor"
+	},
+	"Player/GetFOV": {
+		"body": [
+			"GetFOV()$0"
+		],
+		"description": "Returns the FOV of the player.",
+		"prefix": "GetFOV"
+	},
+	"Player/GetFriendStatus": {
+		"body": [
+			"GetFriendStatus()$0"
+		],
+		"description": "Returns the steam \u0026#34;relationship\u0026#34; towards the player.",
+		"prefix": "GetFriendStatus"
+	},
+	"Player/GetHands": {
+		"body": [
+			"GetHands()$0"
+		],
+		"description": "Gets the hands entity of a player",
+		"prefix": "GetHands"
+	},
+	"Player/GetHoveredWidget": {
+		"body": [
+			"GetHoveredWidget()$0"
+		],
+		"description": "Returns the widget the player is hovering with his mouse.",
+		"prefix": "GetHoveredWidget"
+	},
+	"Player/GetHull": {
+		"body": [
+			"GetHull()$0"
+		],
+		"description": "Gets the bottom base and the top base size of the player\u0026#39;s hull.",
+		"prefix": "GetHull"
+	},
+	"Player/GetHullDuck": {
+		"body": [
+			"GetHullDuck()$0"
+		],
+		"description": "Gets the bottom base and the top base size of the player\u0026#39;s crouch hull.",
+		"prefix": "GetHullDuck"
+	},
+	"Player/GetInfo": {
+		"body": [
+			"GetInfo(${1:cVarName})$0"
+		],
+		"description": "Retrieves the value of a client-side ConVar",
+		"prefix": "GetInfo"
+	},
+	"Player/GetInfoNum": {
+		"body": [
+			"GetInfoNum(${1:cVarName}, ${2:default})$0"
+		],
+		"description": "Retrieves the numeric value of a client-side convar, returns nil if value is not convertible to a number.",
+		"prefix": "GetInfoNum"
+	},
+	"Player/GetJumpPower": {
+		"body": [
+			"GetJumpPower()$0"
+		],
+		"description": "Returns the jump power of the player",
+		"prefix": "GetJumpPower"
+	},
+	"Player/GetLaggedMovementValue": {
+		"body": [
+			"GetLaggedMovementValue()$0"
+		],
+		"description": "Returns the timescale multiplier of the player movement.",
+		"prefix": "GetLaggedMovementValue"
+	},
+	"Player/GetMaxSpeed": {
+		"body": [
+			"GetMaxSpeed()$0"
+		],
+		"description": "Returns the player\u0026#39;s maximum movement speed.",
+		"prefix": "GetMaxSpeed"
+	},
+	"Player/GetName": {
+		"body": [
+			"GetName()$0"
+		],
+		"description": "Returns the player\u0026#39;s name, this is an alias of",
+		"prefix": "GetName"
+	},
+	"Player/GetNoCollideWithTeammates": {
+		"body": [
+			"GetNoCollideWithTeammates()$0"
+		],
+		"description": "Returns whenever the player is set not to collide with their teammates.",
+		"prefix": "GetNoCollideWithTeammates"
+	},
+	"Player/GetObserverMode": {
+		"body": [
+			"GetObserverMode()$0"
+		],
+		"description": "Returns the the observer mode of the player",
+		"prefix": "GetObserverMode"
+	},
+	"Player/GetObserverTarget": {
+		"body": [
+			"GetObserverTarget()$0"
+		],
+		"description": "Returns the entity the player is currently observing.",
+		"prefix": "GetObserverTarget"
+	},
+	"Player/GetPData": {
+		"body": [
+			"GetPData(${1:key}, ${2:default})$0"
+		],
+		"description": "Returns a player\u0026#39;s PData from the server\u0026#39;s or client\u0026#39;s SQL database. ( sv.db and cl.db respectively ) It is not networked!",
+		"prefix": "GetPData"
+	},
+	"Player/GetPlayerColor": {
+		"body": [
+			"GetPlayerColor()$0"
+		],
+		"description": "Returns a player model\u0026#39;s color. The part of the model that is colored is determined by the model itself, and is different for each model. The format is Vector(r,g,b), and each color should be between 0 and 1.",
+		"prefix": "GetPlayerColor"
+	},
+	"Player/GetPlayerInfo": {
+		"body": [
+			"GetPlayerInfo()$0"
+		],
+		"description": "Returns a table containing player information.",
+		"prefix": "GetPlayerInfo"
+	},
+	"Player/GetPreferredCarryAngles": {
+		"body": [
+			"GetPreferredCarryAngles(${1:Entity})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetPreferredCarryAngles"
+	},
+	"Player/GetPressedWidget": {
+		"body": [
+			"GetPressedWidget()$0"
+		],
+		"description": "Returns the widget entity the player is using.",
+		"prefix": "GetPressedWidget"
+	},
+	"Player/GetPunchAngle": {
+		"body": [
+			"GetPunchAngle()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetPunchAngle"
+	},
+	"Player/GetRagdollEntity": {
+		"body": [
+			"GetRagdollEntity()$0"
+		],
+		"description": "Returns players death ragdoll",
+		"prefix": "GetRagdollEntity"
+	},
+	"Player/GetRenderAngles": {
+		"body": [
+			"GetRenderAngles()$0"
+		],
+		"description": "Returns the render angles for the player.",
+		"prefix": "GetRenderAngles"
+	},
+	"Player/GetRunSpeed": {
+		"body": [
+			"GetRunSpeed()$0"
+		],
+		"description": "Returns the amount of speed the player runs at.",
+		"prefix": "GetRunSpeed"
+	},
+	"Player/GetShootPos": {
+		"body": [
+			"GetShootPos()$0"
+		],
+		"description": "Returns the position of a Player\u0026#39;s view",
+		"prefix": "GetShootPos"
+	},
+	"Player/GetStepSize": {
+		"body": [
+			"GetStepSize()$0"
+		],
+		"description": "Returns the maximum height player can step onto.",
+		"prefix": "GetStepSize"
+	},
+	"Player/GetTimeoutSeconds": {
+		"body": [
+			"GetTimeoutSeconds()$0"
+		],
+		"description": "Returns the number of seconds that the player has been timing out for. You can check if a player is timing out with",
+		"prefix": "GetTimeoutSeconds"
+	},
+	"Player/GetTool": {
+		"body": [
+			"GetTool(${1:mode=nil})$0"
+		],
+		"description": "Returns TOOL table of players current tool, or of the one specified.",
+		"prefix": "GetTool"
+	},
+	"Player/GetUnDuckSpeed": {
+		"body": [
+			"GetUnDuckSpeed()$0"
+		],
+		"description": "Returns a player\u0026#39;s unduck speed (in seconds)",
+		"prefix": "GetUnDuckSpeed"
+	},
+	"Player/GetUserGroup": {
+		"body": [
+			"GetUserGroup()$0"
+		],
+		"description": "Returns the player\u0026#39;s user group.",
+		"prefix": "GetUserGroup"
+	},
+	"Player/GetVehicle": {
+		"body": [
+			"GetVehicle()$0"
+		],
+		"description": "Gets the vehicle the player is driving, returns NULL ENTITY if the player is not driving.",
+		"prefix": "GetVehicle"
+	},
+	"Player/GetViewEntity": {
+		"body": [
+			"GetViewEntity()$0"
+		],
+		"description": "Returns the entity the player is using to see from (such as the player itself, the camera, or another entity).",
+		"prefix": "GetViewEntity"
+	},
+	"Player/GetViewModel": {
+		"body": [
+			"GetViewModel(${1:index=0})$0"
+		],
+		"description": "Returns the player\u0026#39;s view model entity by the index. Each player has 3 view models by default, but only the first one is used.",
+		"prefix": "GetViewModel"
+	},
+	"Player/GetViewOffset": {
+		"body": [
+			"GetViewOffset()$0"
+		],
+		"description": "Returns the view offset of the player which equals the difference between the players actual position and their view.",
+		"prefix": "GetViewOffset"
+	},
+	"Player/GetViewOffsetDucked": {
+		"body": [
+			"GetViewOffsetDucked()$0"
+		],
+		"description": "Returns the view offset of the player which equals the difference between the players actual position and their view when ducked.",
+		"prefix": "GetViewOffsetDucked"
+	},
+	"Player/GetViewPunchAngles": {
+		"body": [
+			"GetViewPunchAngles()$0"
+		],
+		"description": "Returns players screen punch effect angle.",
+		"prefix": "GetViewPunchAngles"
+	},
+	"Player/GetWalkSpeed": {
+		"body": [
+			"GetWalkSpeed()$0"
+		],
+		"description": "Returns a player\u0026#39;s walk speed",
+		"prefix": "GetWalkSpeed"
+	},
+	"Player/GetWeapon": {
+		"body": [
+			"GetWeapon(${1:className})$0"
+		],
+		"description": "Returns the weapon for the specified class",
+		"prefix": "GetWeapon"
+	},
+	"Player/GetWeaponColor": {
+		"body": [
+			"GetWeaponColor()$0"
+		],
+		"description": "Returns a player\u0026#39;s weapon color. The part of the model that is colored is determined by the model itself, and is different for each model. The format is Vector(r,g,b), and each color should be between 0 and 1.",
+		"prefix": "GetWeaponColor"
+	},
+	"Player/GetWeapons": {
+		"body": [
+			"GetWeapons()$0"
+		],
+		"description": "Returns a table of the player\u0026#39;s weapons.",
+		"prefix": "GetWeapons"
+	},
+	"Player/Give": {
+		"body": [
+			"Give(${1:weaponClassName}, ${2:bNoAmmo=false})$0"
+		],
+		"description": "Give the player a weapon",
+		"prefix": "Give"
+	},
+	"Player/GiveAmmo": {
+		"body": [
+			"GiveAmmo(${1:amount}, ${2:type}, ${3:hidePopup})$0"
+		],
+		"description": "Gives ammo to a player",
+		"prefix": "GiveAmmo"
+	},
+	"Player/GodDisable": {
+		"body": [
+			"GodDisable()$0"
+		],
+		"description": "Disables god mode on the player.",
+		"prefix": "GodDisable"
+	},
+	"Player/GodEnable": {
+		"body": [
+			"GodEnable()$0"
+		],
+		"description": "Enables god mode on the player.",
+		"prefix": "GodEnable"
+	},
+	"Player/HasGodMode": {
+		"body": [
+			"HasGodMode()$0"
+		],
+		"description": "Returns whether the player has god mode or not, contolled by",
+		"prefix": "HasGodMode"
+	},
+	"Player/HasWeapon": {
+		"body": [
+			"HasWeapon(${1:className})$0"
+		],
+		"description": "Returns if the player has the specified weapon",
+		"prefix": "HasWeapon"
+	},
+	"Player/IPAddress": {
+		"body": [
+			"IPAddress()$0"
+		],
+		"description": "Returns the player\u0026#39;s IP address and connection port in ip:port form",
+		"prefix": "IPAddress"
+	},
+	"Player/InVehicle": {
+		"body": [
+			"InVehicle()$0"
+		],
+		"description": "Returns if the player is in a vehicle",
+		"prefix": "InVehicle"
+	},
+	"Player/IsAdmin": {
+		"body": [
+			"IsAdmin()$0"
+		],
+		"description": "Returns whether the player is an admin or not",
+		"prefix": "IsAdmin"
+	},
+	"Player/IsBot": {
+		"body": [
+			"IsBot()$0"
+		],
+		"description": "Returns if the player is an bot or not",
+		"prefix": "IsBot"
+	},
+	"Player/IsConnected": {
+		"body": [
+			"IsConnected()$0"
+		],
+		"description": "Returns true from the point when the player is sending client info but not fully in the game until they disconnect.",
+		"prefix": "IsConnected"
+	},
+	"Player/IsDrivingEntity": {
+		"body": [
+			"IsDrivingEntity()$0"
+		],
+		"description": "Used to find out if a player is currently \u0026#39;driving\u0026#39; an entity (by which we mean \u0026#39;right click \u0026gt; drive\u0026#39; ).",
+		"prefix": "IsDrivingEntity"
+	},
+	"Player/IsFrozen": {
+		"body": [
+			"IsFrozen()$0"
+		],
+		"description": "Returns whether the players movement is currently frozen, contolled by",
+		"prefix": "IsFrozen"
+	},
+	"Player/IsFullyAuthenticated": {
+		"body": [
+			"IsFullyAuthenticated()$0"
+		],
+		"description": "Returns whether the player identity was confirmed by the steam network.",
+		"prefix": "IsFullyAuthenticated"
+	},
+	"Player/IsListenServerHost": {
+		"body": [
+			"IsListenServerHost()$0"
+		],
+		"description": "Returns if a player is the host of the current session.",
+		"prefix": "IsListenServerHost"
+	},
+	"Player/IsMuted": {
+		"body": [
+			"IsMuted()$0"
+		],
+		"description": "Returns whether or not the player is muted locally.",
+		"prefix": "IsMuted"
+	},
+	"Player/IsPlayingTaunt": {
+		"body": [
+			"IsPlayingTaunt()$0"
+		],
+		"description": "Returns true if the player is playing a taunt.",
+		"prefix": "IsPlayingTaunt"
+	},
+	"Player/IsSpeaking": {
+		"body": [
+			"IsSpeaking()$0"
+		],
+		"description": "Returns whenever the player is heard by the local player.",
+		"prefix": "IsSpeaking"
+	},
+	"Player/IsSuitEquipped": {
+		"body": [
+			"IsSuitEquipped()$0"
+		],
+		"description": "Returns whenever the player is equipped with the suit item.",
+		"prefix": "IsSuitEquipped"
+	},
+	"Player/IsSuperAdmin": {
+		"body": [
+			"IsSuperAdmin()$0"
+		],
+		"description": "Returns whether the player is a superadmin.",
+		"prefix": "IsSuperAdmin"
+	},
+	"Player/IsTimingOut": {
+		"body": [
+			"IsTimingOut()$0"
+		],
+		"description": "Returns true if the player is timing out (i.e. is losing connection), false otherwise.",
+		"prefix": "IsTimingOut"
+	},
+	"Player/IsTyping": {
+		"body": [
+			"IsTyping()$0"
+		],
+		"description": "Returns whether the player is typing in their chat.",
+		"prefix": "IsTyping"
+	},
+	"Player/IsUserGroup": {
+		"body": [
+			"IsUserGroup(${1:groupname})$0"
+		],
+		"description": "Returns true/false if the player is in specified group or not.",
+		"prefix": "IsUserGroup"
+	},
+	"Player/IsVoiceAudible": {
+		"body": [
+			"IsVoiceAudible()$0"
+		],
+		"description": "Returns if the player can be heard by the local player.",
+		"prefix": "IsVoiceAudible"
+	},
+	"Player/IsWorldClicking": {
+		"body": [
+			"IsWorldClicking()$0"
+		],
+		"description": "Returns if the player is in the context menu.",
+		"prefix": "IsWorldClicking"
+	},
+	"Player/KeyDown": {
+		"body": [
+			"KeyDown(${1:key})$0"
+		],
+		"description": "Gets whether a key is down",
+		"prefix": "KeyDown"
+	},
+	"Player/KeyDownLast": {
+		"body": [
+			"KeyDownLast(${1:key})$0"
+		],
+		"description": "Gets whether a key was down one tick ago.",
+		"prefix": "KeyDownLast"
+	},
+	"Player/KeyPressed": {
+		"body": [
+			"KeyPressed(${1:key})$0"
+		],
+		"description": "Gets whether a key was just pressed this tick",
+		"prefix": "KeyPressed"
+	},
+	"Player/KeyReleased": {
+		"body": [
+			"KeyReleased(${1:key})$0"
+		],
+		"description": "Gets whether a key was just released this tick",
+		"prefix": "KeyReleased"
+	},
+	"Player/Kick": {
+		"body": [
+			"Kick(${1:given\"})$0"
+		],
+		"description": "Kicks the player from the server.",
+		"prefix": "Kick"
+	},
+	"Player/Kill": {
+		"body": [
+			"Kill()$0"
+		],
+		"description": "Kills a player and calls",
+		"prefix": "Kill"
+	},
+	"Player/KillSilent": {
+		"body": [
+			"KillSilent()$0"
+		],
+		"description": "Kills a player without notifying the rest of the server.",
+		"prefix": "KillSilent"
+	},
+	"Player/LagCompensation": {
+		"body": [
+			"LagCompensation(${1:lagCompensation})$0"
+		],
+		"description": "This allows the server to mitigate the lag of the player by moving back all the entities that can be lag compensated to the time the player attacked with his weapon.",
+		"prefix": "LagCompensation"
+	},
+	"Player/LastHitGroup": {
+		"body": [
+			"LastHitGroup()$0"
+		],
+		"description": "Returns the hitgroup where the player was last hit.",
+		"prefix": "LastHitGroup"
+	},
+	"Player/LimitHit": {
+		"body": [
+			"LimitHit(${1:type})$0"
+		],
+		"description": "Shows \u0026#34;limit hit\u0026#34; notification in sandbox.",
+		"prefix": "LimitHit"
+	},
+	"Player/Lock": {
+		"body": [
+			"Lock()$0"
+		],
+		"description": "Stops a player from using any inputs, such as moving and shooting. Similar to",
+		"prefix": "Lock"
+	},
+	"Player/MotionSensorPos": {
+		"body": [
+			"MotionSensorPos(${1:bone})$0"
+		],
+		"description": "Returns the position of a Kinect bone.",
+		"prefix": "MotionSensorPos"
+	},
+	"Player/Name": {
+		"body": [
+			"Name()$0"
+		],
+		"description": "Returns the players name. Identical to",
+		"prefix": "Name"
+	},
+	"Player/Nick": {
+		"body": [
+			"Nick()$0"
+		],
+		"description": "Returns the player\u0026#39;s nickname",
+		"prefix": "Nick"
+	},
+	"Player/PacketLoss": {
+		"body": [
+			"PacketLoss()$0"
+		],
+		"description": "Returns the packet loss of the client. It is not networked so it only returns 0 when run clientside.",
+		"prefix": "PacketLoss"
+	},
+	"Player/PhysgunUnfreeze": {
+		"body": [
+			"PhysgunUnfreeze()$0"
+		],
+		"description": "Unfreezes the props player is looking at. This is essentially the same as pressing reload with the physics gun, including double press for unfreeze all.",
+		"prefix": "PhysgunUnfreeze"
+	},
+	"Player/PickupObject": {
+		"body": [
+			"PickupObject(${1:entity})$0"
+		],
+		"description": "This makes the player hold ( same as pressing",
+		"prefix": "PickupObject"
+	},
+	"Player/Ping": {
+		"body": [
+			"Ping()$0"
+		],
+		"description": "Returns the player\u0026#39;s ping to server.",
+		"prefix": "Ping"
+	},
+	"Player/PlayStepSound": {
+		"body": [
+			"PlayStepSound(${1:volume})$0"
+		],
+		"description": "Plays the correct step sound according to what the player is staying on.",
+		"prefix": "PlayStepSound"
+	},
+	"Player/PrintMessage": {
+		"body": [
+			"PrintMessage(${1:type}, ${2:message})$0"
+		],
+		"description": "Displays a message either in their chat, console, or center of the screen. See also",
+		"prefix": "PrintMessage"
+	},
+	"Player/RemoveAllAmmo": {
+		"body": [
+			"RemoveAllAmmo()$0"
+		],
+		"description": "Removes all ammo from a certain player",
+		"prefix": "RemoveAllAmmo"
+	},
+	"Player/RemoveAllItems": {
+		"body": [
+			"RemoveAllItems()$0"
+		],
+		"description": "Removes all weapons and ammonition from the player.",
+		"prefix": "RemoveAllItems"
+	},
+	"Player/RemoveAmmo": {
+		"body": [
+			"RemoveAmmo(${1:ammoCount}, ${2:ammoName})$0"
+		],
+		"description": "Removes the amount of the specified ammo from the player.",
+		"prefix": "RemoveAmmo"
+	},
+	"Player/RemovePData": {
+		"body": [
+			"RemovePData(${1:key})$0"
+		],
+		"description": "Deletes a key from a player\u0026#39;s data",
+		"prefix": "RemovePData"
+	},
+	"Player/RemoveSuit": {
+		"body": [
+			"RemoveSuit()$0"
+		],
+		"description": "Strips the player\u0026#39;s suit item.",
+		"prefix": "RemoveSuit"
+	},
+	"Player/ResetHull": {
+		"body": [
+			"ResetHull()$0"
+		],
+		"description": "Resets both normal and duck hulls to their default values.",
+		"prefix": "ResetHull"
+	},
+	"Player/Say": {
+		"body": [
+			"Say(${1:text}, ${2:teamOnly=false})$0"
+		],
+		"description": "Forces the player to say whatever the first argument is. Works on bots too.",
+		"prefix": "Say"
+	},
+	"Player/ScreenFade": {
+		"body": [
+			"ScreenFade(${1:Flags}, ${2:Color=color_white}, ${3:FadeTime}, ${4:FadeHold})$0"
+		],
+		"description": "Fades the screen",
+		"prefix": "ScreenFade"
+	},
+	"Player/SelectWeapon": {
+		"body": [
+			"SelectWeapon(${1:className})$0"
+		],
+		"description": "Sets the active weapon of the player by its class name.",
+		"prefix": "SelectWeapon"
+	},
+	"Player/SendHint": {
+		"body": [
+			"SendHint(${1:name}, ${2:delay})$0"
+		],
+		"description": "Sends a hint to a player.",
+		"prefix": "SendHint"
+	},
+	"Player/SendLua": {
+		"body": [
+			"SendLua(${1:script})$0"
+		],
+		"description": "Executes a simple Lua string on the player.",
+		"prefix": "SendLua"
+	},
+	"Player/SetActiveWeapon": {
+		"body": [
+			"SetActiveWeapon(${1:weapon})$0"
+		],
+		"description": "Sets the player\u0026#39;s active weapon.",
+		"prefix": "SetActiveWeapon"
+	},
+	"Player/SetAllowFullRotation": {
+		"body": [
+			"SetAllowFullRotation(${1:Allowed})$0"
+		],
+		"description": "Set if the players\u0026#39; model is allowed to rotate around the pitch and roll axis.",
+		"prefix": "SetAllowFullRotation"
+	},
+	"Player/SetAllowWeaponsInVehicle": {
+		"body": [
+			"SetAllowWeaponsInVehicle(${1:allow})$0"
+		],
+		"description": "Allows player to use his weapons in a vehicle. You need to call this before entering a vehicle.",
+		"prefix": "SetAllowWeaponsInVehicle"
+	},
+	"Player/SetAmmo": {
+		"body": [
+			"SetAmmo(${1:ammoCount}, ${2:ammoType})$0"
+		],
+		"description": "Sets the amount of of the specified ammo for the player.",
+		"prefix": "SetAmmo"
+	},
+	"Player/SetArmor": {
+		"body": [
+			"SetArmor(${1:Amount})$0"
+		],
+		"description": "Sets the player armor to the argument.",
+		"prefix": "SetArmor"
+	},
+	"Player/SetAvoidPlayers": {
+		"body": [
+			"SetAvoidPlayers(${1:avoidPlayers})$0"
+		],
+		"description": "Pushes the player away from another player whenever it\u0026#39;s inside the other players bounding box.",
+		"prefix": "SetAvoidPlayers"
+	},
+	"Player/SetCanWalk": {
+		"body": [
+			"SetCanWalk(${1:abletowalk})$0"
+		],
+		"description": "Set if the player should be allowed to walk using the (default) alt key.",
+		"prefix": "SetCanWalk"
+	},
+	"Player/SetCanZoom": {
+		"body": [
+			"SetCanZoom(${1:canZoom})$0"
+		],
+		"description": "Sets whether the player can use the HL2 suit zoom (\u0026#34;+zoom\u0026#34; bind) or not.",
+		"prefix": "SetCanZoom"
+	},
+	"Player/SetClassID": {
+		"body": [
+			"SetClassID(${1:classID})$0"
+		],
+		"description": "Sets the player\u0026#39;s class id.",
+		"prefix": "SetClassID"
+	},
+	"Player/SetCrouchedWalkSpeed": {
+		"body": [
+			"SetCrouchedWalkSpeed(${1:speed})$0"
+		],
+		"description": "Sets the crouched walk speed multiplier.",
+		"prefix": "SetCrouchedWalkSpeed"
+	},
+	"Player/SetCurrentViewOffset": {
+		"body": [
+			"SetCurrentViewOffset(${1:viewOffset})$0"
+		],
+		"description": "Sets the",
+		"prefix": "SetCurrentViewOffset"
+	},
+	"Player/SetDSP": {
+		"body": [
+			"SetDSP(${1:soundFilter}, ${2:fastReset})$0"
+		],
+		"description": "Applies the specified sound filter to the player.",
+		"prefix": "SetDSP"
+	},
+	"Player/SetDeaths": {
+		"body": [
+			"SetDeaths(${1:deathcount})$0"
+		],
+		"description": "Sets a player\u0026#39;s death count",
+		"prefix": "SetDeaths"
+	},
+	"Player/SetDrivingEntity": {
+		"body": [
+			"SetDrivingEntity(${1:drivingEntity=NULL}, ${2:drivingMode})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDrivingEntity"
+	},
+	"Player/SetDuckSpeed": {
+		"body": [
+			"SetDuckSpeed(${1:duckSpeed})$0"
+		],
+		"description": "Sets how quickly a player ducks.",
+		"prefix": "SetDuckSpeed"
+	},
+	"Player/SetEyeAngles": {
+		"body": [
+			"SetEyeAngles(${1:ang})$0"
+		],
+		"description": "Sets the angle of the player\u0026#39;s view (may rotate body too if angular difference is large)",
+		"prefix": "SetEyeAngles"
+	},
+	"Player/SetFOV": {
+		"body": [
+			"SetFOV(${1:fov}, ${2:time})$0"
+		],
+		"description": "Set a player\u0026#39;s FOV (Field Of View) over a certain amount of time.",
+		"prefix": "SetFOV"
+	},
+	"Player/SetFrags": {
+		"body": [
+			"SetFrags(${1:fragcount})$0"
+		],
+		"description": "Sets a player\u0026#39;s frags (kills)",
+		"prefix": "SetFrags"
+	},
+	"Player/SetHands": {
+		"body": [
+			"SetHands(${1:hands})$0"
+		],
+		"description": "Sets the hands entity of a player.",
+		"prefix": "SetHands"
+	},
+	"Player/SetHoveredWidget": {
+		"body": [
+			"SetHoveredWidget(${1:widget=NULL})$0"
+		],
+		"description": "Sets the widget that is currently hovered by the player\u0026#39;s mouse.",
+		"prefix": "SetHoveredWidget"
+	},
+	"Player/SetHull": {
+		"body": [
+			"SetHull(${1:hullMins}, ${2:hullMaxs})$0"
+		],
+		"description": "Sets the mins and maxs of the AABB of the players collision.",
+		"prefix": "SetHull"
+	},
+	"Player/SetHullDuck": {
+		"body": [
+			"SetHullDuck(${1:hullMins}, ${2:hullMaxs})$0"
+		],
+		"description": "Sets the mins and maxs of the AABB of the players collision when ducked.",
+		"prefix": "SetHullDuck"
+	},
+	"Player/SetJumpPower": {
+		"body": [
+			"SetJumpPower(${1:jumpPower})$0"
+		],
+		"description": "Sets the jump power, eg. the velocity the player will applied to when he jumps.",
+		"prefix": "SetJumpPower"
+	},
+	"Player/SetLaggedMovementValue": {
+		"body": [
+			"SetLaggedMovementValue(${1:timescale})$0"
+		],
+		"description": "Slows down the player movement simulation by the timescale, this is used internally in the HL2 weapon stripping sequence.",
+		"prefix": "SetLaggedMovementValue"
+	},
+	"Player/SetMaxSpeed": {
+		"body": [
+			"SetMaxSpeed(${1:walkSpeed})$0"
+		],
+		"description": "Sets the maximum speed which the player can move at.",
+		"prefix": "SetMaxSpeed"
+	},
+	"Player/SetMuted": {
+		"body": [
+			"SetMuted(${1:mute})$0"
+		],
+		"description": "Sets if the player should be muted locally.",
+		"prefix": "SetMuted"
+	},
+	"Player/SetNoCollideWithTeammates": {
+		"body": [
+			"SetNoCollideWithTeammates(${1:shouldNotCollide})$0"
+		],
+		"description": "Sets whenever the player should not collide with their teammates.",
+		"prefix": "SetNoCollideWithTeammates"
+	},
+	"Player/SetNoTarget": {
+		"body": [
+			"SetNoTarget(${1:visibility})$0"
+		],
+		"description": "Sets the players visibility towards NPCs.",
+		"prefix": "SetNoTarget"
+	},
+	"Player/SetObserverMode": {
+		"body": [
+			"SetObserverMode(${1:observeMode})$0"
+		],
+		"description": "Sets the players observer mode.",
+		"prefix": "SetObserverMode"
+	},
+	"Player/SetPData": {
+		"body": [
+			"SetPData(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets a player\u0026#39;s PData from the server\u0026#39;s or client\u0026#39;s SQL database ( sv.db and cl.db respectively ), It is not networked!",
+		"prefix": "SetPData"
+	},
+	"Player/SetPlayerColor": {
+		"body": [
+			"SetPlayerColor(${1:Color})$0"
+		],
+		"description": "Sets the player model\u0026#39;s color. The part of the model that is colored is determined by the model itself, and is different for each model.",
+		"prefix": "SetPlayerColor"
+	},
+	"Player/SetPressedWidget": {
+		"body": [
+			"SetPressedWidget(${1:pressedWidget=NULL})$0"
+		],
+		"description": "Sets the widget that is currently in use by the player\u0026#39;s mouse.",
+		"prefix": "SetPressedWidget"
+	},
+	"Player/SetRenderAngles": {
+		"body": [
+			"SetRenderAngles(${1:ang})$0"
+		],
+		"description": "Sets the render angles of a player.",
+		"prefix": "SetRenderAngles"
+	},
+	"Player/SetRunSpeed": {
+		"body": [
+			"SetRunSpeed(${1:runSpeed})$0"
+		],
+		"description": "Sets the run speed eg. the speed when sprinting.",
+		"prefix": "SetRunSpeed"
+	},
+	"Player/SetStepSize": {
+		"body": [
+			"SetStepSize(${1:stepHeight})$0"
+		],
+		"description": "Sets the maximum height a player can step onto without jumping.",
+		"prefix": "SetStepSize"
+	},
+	"Player/SetSuppressPickupNotices": {
+		"body": [
+			"SetSuppressPickupNotices(${1:doSuppress})$0"
+		],
+		"description": "Sets whenever to suppress the pickup notification for the player.",
+		"prefix": "SetSuppressPickupNotices"
+	},
+	"Player/SetTeam": {
+		"body": [
+			"SetTeam(${1:Team})$0"
+		],
+		"description": "Sets the player to the chosen team.",
+		"prefix": "SetTeam"
+	},
+	"Player/SetUnDuckSpeed": {
+		"body": [
+			"SetUnDuckSpeed(${1:UnDuckSpeed})$0"
+		],
+		"description": "Sets how quickly a player un-ducks",
+		"prefix": "SetUnDuckSpeed"
+	},
+	"Player/SetUserGroup": {
+		"body": [
+			"SetUserGroup(${1:groupName})$0"
+		],
+		"description": "Sets the usergroup of the player.",
+		"prefix": "SetUserGroup"
+	},
+	"Player/SetViewEntity": {
+		"body": [
+			"SetViewEntity(${1:viewEntity})$0"
+		],
+		"description": "Attaches the players view to the position and angles of the specified entity.",
+		"prefix": "SetViewEntity"
+	},
+	"Player/SetViewOffset": {
+		"body": [
+			"SetViewOffset(${1:viewOffset})$0"
+		],
+		"description": "Sets the",
+		"prefix": "SetViewOffset"
+	},
+	"Player/SetViewOffsetDucked": {
+		"body": [
+			"SetViewOffsetDucked(${1:viewOffset})$0"
+		],
+		"description": "Sets the",
+		"prefix": "SetViewOffsetDucked"
+	},
+	"Player/SetViewPunchAngles": {
+		"body": [
+			"SetViewPunchAngles(${1:punchAngle})$0"
+		],
+		"description": "Sets client\u0026#39;s view punch. See",
+		"prefix": "SetViewPunchAngles"
+	},
+	"Player/SetWalkSpeed": {
+		"body": [
+			"SetWalkSpeed(${1:walkSpeed})$0"
+		],
+		"description": "Sets the walk speed eg. the speed when normally walking.",
+		"prefix": "SetWalkSpeed"
+	},
+	"Player/SetWeaponColor": {
+		"body": [
+			"SetWeaponColor(${1:Color})$0"
+		],
+		"description": "Sets the player weapon\u0026#39;s color. The part of the model that is colored is determined by the model itself, and is different for each model.",
+		"prefix": "SetWeaponColor"
+	},
+	"Player/SetupHands": {
+		"body": [
+			"SetupHands(${1:ent})$0"
+		],
+		"description": "Sets up the players view model hands. Calls",
+		"prefix": "SetupHands"
+	},
+	"Player/ShouldDrawLocalPlayer": {
+		"body": [
+			"ShouldDrawLocalPlayer()$0"
+		],
+		"description": "Polls the engine to request if the player should be drawn at the time the function is called.",
+		"prefix": "ShouldDrawLocalPlayer"
+	},
+	"Player/ShouldDropWeapon": {
+		"body": [
+			"ShouldDropWeapon(${1:drop})$0"
+		],
+		"description": "Sets whether the player\u0026#39;s current weapon should drop on death.",
+		"prefix": "ShouldDropWeapon"
+	},
+	"Player/ShowProfile": {
+		"body": [
+			"ShowProfile()$0"
+		],
+		"description": "Opens the player steam profile page in the steam overlay browser.",
+		"prefix": "ShowProfile"
+	},
+	"Player/SimulateGravGunDrop": {
+		"body": [
+			"SimulateGravGunDrop(${1:ent})$0"
+		],
+		"description": "Signals the entity that it was dropped by the gravity gun.",
+		"prefix": "SimulateGravGunDrop"
+	},
+	"Player/SimulateGravGunPickup": {
+		"body": [
+			"SimulateGravGunPickup(${1:ent})$0"
+		],
+		"description": "Signals the entity that it was picked up by the gravity gun. This call is only required if you want to simulate the situation of picking up objects.",
+		"prefix": "SimulateGravGunPickup"
+	},
+	"Player/Spectate": {
+		"body": [
+			"Spectate(${1:spectateMode})$0"
+		],
+		"description": "Sets the spectate mode of the player.",
+		"prefix": "Spectate"
+	},
+	"Player/SpectateEntity": {
+		"body": [
+			"SpectateEntity(${1:entity})$0"
+		],
+		"description": "Makes the player spectate the entity",
+		"prefix": "SpectateEntity"
+	},
+	"Player/SprayDecal": {
+		"body": [
+			"SprayDecal(${1:sprayOrigin}, ${2:sprayEndPos})$0"
+		],
+		"description": "Makes a player spray their decal.",
+		"prefix": "SprayDecal"
+	},
+	"Player/SprintDisable": {
+		"body": [
+			"SprintDisable()$0"
+		],
+		"description": "Disables the sprint on the player. Not working! Use",
+		"prefix": "SprintDisable"
+	},
+	"Player/SprintEnable": {
+		"body": [
+			"SprintEnable()$0"
+		],
+		"description": "Enables the sprint on the player. Not working! Use",
+		"prefix": "SprintEnable"
+	},
+	"Player/StartSprinting": {
+		"body": [
+			"StartSprinting()$0"
+		],
+		"description": "No description available.",
+		"prefix": "StartSprinting"
+	},
+	"Player/StartWalking": {
+		"body": [
+			"StartWalking()$0"
+		],
+		"description": "No description available.",
+		"prefix": "StartWalking"
+	},
+	"Player/SteamID": {
+		"body": [
+			"SteamID()$0"
+		],
+		"description": "Returns the player\u0026#39;s SteamID. In singleplayer, this will be STEAM_ID_PENDING serverside.",
+		"prefix": "SteamID"
+	},
+	"Player/SteamID64": {
+		"body": [
+			"SteamID64()$0"
+		],
+		"description": "Returns the player\u0026#39;s 64bit SteamID aka CommunityID.",
+		"prefix": "SteamID64"
+	},
+	"Player/StopSprinting": {
+		"body": [
+			"StopSprinting()$0"
+		],
+		"description": "No description available.",
+		"prefix": "StopSprinting"
+	},
+	"Player/StopWalking": {
+		"body": [
+			"StopWalking()$0"
+		],
+		"description": "No description available.",
+		"prefix": "StopWalking"
+	},
+	"Player/StopZooming": {
+		"body": [
+			"StopZooming()$0"
+		],
+		"description": "Turns off the zoom mode of the player.",
+		"prefix": "StopZooming"
+	},
+	"Player/StripAmmo": {
+		"body": [
+			"StripAmmo()$0"
+		],
+		"description": "Removes all ammo from the player.",
+		"prefix": "StripAmmo"
+	},
+	"Player/StripWeapon": {
+		"body": [
+			"StripWeapon(${1:weapon})$0"
+		],
+		"description": "Removes the specified weapon class from a certain player",
+		"prefix": "StripWeapon"
+	},
+	"Player/StripWeapons": {
+		"body": [
+			"StripWeapons()$0"
+		],
+		"description": "Removes all weapons from a certain player",
+		"prefix": "StripWeapons"
+	},
+	"Player/SuppressHint": {
+		"body": [
+			"SuppressHint(${1:name})$0"
+		],
+		"description": "Prevents a hint from showing up.",
+		"prefix": "SuppressHint"
+	},
+	"Player/SwitchToDefaultWeapon": {
+		"body": [
+			"SwitchToDefaultWeapon()$0"
+		],
+		"description": "Attempts to switch the player weapon to the one specified in the \u0026#34;cl_defaultweapon\u0026#34; convar, if the player does not own the specified weapon nothing will happen.",
+		"prefix": "SwitchToDefaultWeapon"
+	},
+	"Player/Team": {
+		"body": [
+			"Team()$0"
+		],
+		"description": "Returns the player\u0026#39;s team ID.",
+		"prefix": "Team"
+	},
+	"Player/TimeConnected": {
+		"body": [
+			"TimeConnected()$0"
+		],
+		"description": "Returns the time in second since the player connected.",
+		"prefix": "TimeConnected"
+	},
+	"Player/TraceHullAttack": {
+		"body": [
+			"TraceHullAttack(${1:startPos}, ${2:endPos}, ${3:mins}, ${4:maxs}, ${5:damage}, ${6:damageFlags}, ${7:damageForce}, ${8:damageAllNPCs})$0"
+		],
+		"description": "Performs a trace hull and applies damage to the entities hit, returns the first entity hit.",
+		"prefix": "TraceHullAttack"
+	},
+	"Player/TranslateWeaponActivity": {
+		"body": [
+			"TranslateWeaponActivity(${1:act})$0"
+		],
+		"description": "Translates",
+		"prefix": "TranslateWeaponActivity"
+	},
+	"Player/UnLock": {
+		"body": [
+			"UnLock()$0"
+		],
+		"description": "Unlocks the player movement if locked previously.",
+		"prefix": "UnLock"
+	},
+	"Player/UnSpectate": {
+		"body": [
+			"UnSpectate()$0"
+		],
+		"description": "Stops the player from spectating another entity.",
+		"prefix": "UnSpectate"
+	},
+	"Player/UnfreezePhysicsObjects": {
+		"body": [
+			"UnfreezePhysicsObjects()$0"
+		],
+		"description": "Unfreezes all objects the player has frozen with their Physics Gun. Same as double pressing R while holding Physics Gun.",
+		"prefix": "UnfreezePhysicsObjects"
+	},
+	"Player/UniqueID": {
+		"body": [
+			"UniqueID()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UniqueID"
+	},
+	"Player/UniqueIDTable": {
+		"body": [
+			"UniqueIDTable(${1:key})$0"
+		],
+		"description": "Returns a table that will stay allocated for the specific player between connects until the server shuts down. Note, that this table is not synchronized between client and server.",
+		"prefix": "UniqueIDTable"
+	},
+	"Player/UserID": {
+		"body": [
+			"UserID()$0"
+		],
+		"description": "Returns the player\u0026#39;s ID.",
+		"prefix": "UserID"
+	},
+	"Player/ViewPunch": {
+		"body": [
+			"ViewPunch(${1:PunchAngle})$0"
+		],
+		"description": "Simulates a push on the client\u0026#39;s screen.",
+		"prefix": "ViewPunch"
+	},
+	"Player/ViewPunchReset": {
+		"body": [
+			"ViewPunchReset(${1:tolerance=0})$0"
+		],
+		"description": "Resets the player\u0026#39;s view punch (",
+		"prefix": "ViewPunchReset"
+	},
+	"Player/VoiceVolume": {
+		"body": [
+			"VoiceVolume()$0"
+		],
+		"description": "Returns the players voice volume as a normal number. Doesn\u0026#39;t work on local player unless the voice_loopback convar is set to 1.",
+		"prefix": "VoiceVolume"
+	}
+}

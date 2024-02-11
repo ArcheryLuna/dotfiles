@@ -1,0 +1,30 @@
+{
+    "Pop": {
+        "body": [
+            "Pop(${1:amount=1})$0"
+        ],
+        "description": "STACK [Shared] \n\n[number] amount=1\n  Amount of items you want to pop.",
+        "prefix": "Pop"
+    },
+    "Push": {
+        "body": [
+            "Push(${1:object})$0"
+        ],
+        "description": "STACK [Shared] \n\n[any] object\n  The item you want to push",
+        "prefix": "Push"
+    },
+    "Size": {
+        "body": [
+            "Size()$0"
+        ],
+        "description": "STACK [Shared]",
+        "prefix": "Size"
+    },
+    "Top": {
+        "body": [
+            "Top()$0"
+        ],
+        "description": "STACK [Shared]",
+        "prefix": "Top"
+    }
+}

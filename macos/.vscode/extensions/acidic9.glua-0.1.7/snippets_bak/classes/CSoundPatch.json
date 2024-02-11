@@ -1,0 +1,93 @@
+{
+	"CSoundPatch/ChangePitch": {
+		"body": [
+			"ChangePitch(${1:pitch}, ${2:deltaTime=0})$0"
+		],
+		"description": "Adjust the pitch, alias the speed at which the sound is being played.",
+		"prefix": "ChangePitch"
+	},
+	"CSoundPatch/ChangeVolume": {
+		"body": [
+			"ChangeVolume(${1:volume}, ${2:deltaTime=0})$0"
+		],
+		"description": "Adjusts the volume of the sound played.",
+		"prefix": "ChangeVolume"
+	},
+	"CSoundPatch/FadeOut": {
+		"body": [
+			"FadeOut(${1:seconds})$0"
+		],
+		"description": "Fades out the volume of the sound from the current volume to 0 in the given amount of seconds.",
+		"prefix": "FadeOut"
+	},
+	"CSoundPatch/GetDSP": {
+		"body": [
+			"GetDSP()$0"
+		],
+		"description": "Returns the DSP ( Digital Signal Processor ) effect for the sound.",
+		"prefix": "GetDSP"
+	},
+	"CSoundPatch/GetPitch": {
+		"body": [
+			"GetPitch()$0"
+		],
+		"description": "Returns the current pitch.",
+		"prefix": "GetPitch"
+	},
+	"CSoundPatch/GetSoundLevel": {
+		"body": [
+			"GetSoundLevel()$0"
+		],
+		"description": "Returns the current sound level.",
+		"prefix": "GetSoundLevel"
+	},
+	"CSoundPatch/GetVolume": {
+		"body": [
+			"GetVolume()$0"
+		],
+		"description": "Returns the current volume.",
+		"prefix": "GetVolume"
+	},
+	"CSoundPatch/IsPlaying": {
+		"body": [
+			"IsPlaying()$0"
+		],
+		"description": "Returns whenever the sound is being played.",
+		"prefix": "IsPlaying"
+	},
+	"CSoundPatch/Play": {
+		"body": [
+			"Play()$0"
+		],
+		"description": "Starts to play the sound.",
+		"prefix": "Play"
+	},
+	"CSoundPatch/PlayEx": {
+		"body": [
+			"PlayEx(${1:volume}, ${2:pitch})$0"
+		],
+		"description": "Same as",
+		"prefix": "PlayEx"
+	},
+	"CSoundPatch/SetDSP": {
+		"body": [
+			"SetDSP(${1:dsp})$0"
+		],
+		"description": "Sets the DSP ( Digital Signal Processor ) effect for the sound. Similar to",
+		"prefix": "SetDSP"
+	},
+	"CSoundPatch/SetSoundLevel": {
+		"body": [
+			"SetSoundLevel(${1:level})$0"
+		],
+		"description": "Sets the sound level in decibel.",
+		"prefix": "SetSoundLevel"
+	},
+	"CSoundPatch/Stop": {
+		"body": [
+			"Stop()$0"
+		],
+		"description": "Stops the sound from being played.",
+		"prefix": "Stop"
+	}
+}

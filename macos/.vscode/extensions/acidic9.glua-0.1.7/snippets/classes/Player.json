@@ -1,0 +1,1689 @@
+{
+    "AccountID": {
+        "body": [
+            "AccountID()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "AccountID"
+    },
+    "AddCleanup": {
+        "body": [
+            "AddCleanup(${1:type}, ${2:ent})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[string] type\n  Cleanup type\n\n[Entity] ent\n  Entity to add",
+        "prefix": "AddCleanup"
+    },
+    "AddCount": {
+        "body": [
+            "AddCount(${1:str}, ${2:ent})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[string] str\n  Entity type\n\n[Entity] ent\n  Entity",
+        "prefix": "AddCount"
+    },
+    "AddDeaths": {
+        "body": [
+            "AddDeaths(${1:count})$0"
+        ],
+        "description": "PLAYER [Server] Add a certain amount to the player's death count\n\n[number] count\n  number of deaths to add",
+        "prefix": "AddDeaths"
+    },
+    "AddFrags": {
+        "body": [
+            "AddFrags(${1:count})$0"
+        ],
+        "description": "PLAYER [Server] Add a certain amount to the player's frag count (or kills count)\n\n[number] count\n  number of frags to add",
+        "prefix": "AddFrags"
+    },
+    "AddFrozenPhysicsObject": {
+        "body": [
+            "AddFrozenPhysicsObject(${1:ent}, ${2:physobj})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[Entity] ent\n  Entity\n\n[PhysObj] physobj\n  Physics object belonging to ent",
+        "prefix": "AddFrozenPhysicsObject"
+    },
+    "AddPlayerOption": {
+        "body": [
+            "AddPlayerOption(${1:name}, ${2:timeout}, ${3:votecallback}, ${4:drawcallback})$0"
+        ],
+        "description": "PLAYER [Client] Sets up the voting system for the player.\nThis is a really barebone system. By calling this a vote gets started, when the player presses 0-9 the callback function gets called along with the key the player pressed. Use the draw callback to draw the vote panel.\n\n[string] name\n  Name of the vote\n\n[number] timeout\n  Time until the vote expires\n\n[function] votecallback\n  The function to be run when the player presses 0-9 while a vote is active.\n\n[function] drawcallback\n  Used to draw the vote panel.",
+        "prefix": "AddPlayerOption"
+    },
+    "AddVCDSequenceToGestureSlot": {
+        "body": [
+            "AddVCDSequenceToGestureSlot(${1:slot}, ${2:sequenceId}, ${3:cycle}, ${4:autokill=false})$0"
+        ],
+        "description": "PLAYER [Shared] Plays a sequence directly from a sequence number, similar to Player:AnimRestartGesture. This function has the advantage to play sequences that haven't been bound to an existing ACT_ Enums\n\n[number] slot\n  Gesture slot using GESTURE_SLOT_ Enums\n\n[number] sequenceId\n  The sequence ID to play, can be retrieved with Entity:LookupSequence.\n\n[number] cycle\n  The cycle to start the animation at, ranges from 0 to 1.\n\n[boolean] autokill=false\n  If the animation should not loop. true = stops the animation, false = the animation keeps playing.",
+        "prefix": "AddVCDSequenceToGestureSlot"
+    },
+    "Alive": {
+        "body": [
+            "Alive()$0"
+        ],
+        "description": "PLAYER [Shared] Checks if the player is alive.",
+        "prefix": "Alive"
+    },
+    "AllowFlashlight": {
+        "body": [
+            "AllowFlashlight(${1:canFlashlight})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[boolean] canFlashlight\n  True allows flashlight toggling",
+        "prefix": "AllowFlashlight"
+    },
+    "AllowImmediateDecalPainting": {
+        "body": [
+            "AllowImmediateDecalPainting(${1:allow})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[boolean] allow\n  Allow or disallow",
+        "prefix": "AllowImmediateDecalPainting"
+    },
+    "AnimResetGestureSlot": {
+        "body": [
+            "AnimResetGestureSlot(${1:slot})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] slot\n  Slot to reset. See the GESTURE_SLOT_ Enums.",
+        "prefix": "AnimResetGestureSlot"
+    },
+    "AnimRestartGesture": {
+        "body": [
+            "AnimRestartGesture(${1:slot}, ${2:activity}, ${3:autokill=false})$0"
+        ],
+        "description": "PLAYER [Shared] Restart a gesture on a player, within a gesture slot.\n\n[number] slot\n  Gesture slot using GESTURE_SLOT_ Enums\n\n[number] activity\n  The activity ( see ACT_ Enums ) or sequence that should be played\n\n[boolean] autokill=false\n  Whether the animation should be automatically stopped. true = stops the animation, false = the animation keeps playing/looping",
+        "prefix": "AnimRestartGesture"
+    },
+    "AnimRestartMainSequence": {
+        "body": [
+            "AnimRestartMainSequence()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "AnimRestartMainSequence"
+    },
+    "AnimSetGestureSequence": {
+        "body": [
+            "AnimSetGestureSequence(${1:slot}, ${2:sequenceID})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] slot\n  The gesture slot. See GESTURE_SLOT_ Enums\n\n[number] sequenceID\n  Sequence ID to set.",
+        "prefix": "AnimSetGestureSequence"
+    },
+    "AnimSetGestureWeight": {
+        "body": [
+            "AnimSetGestureWeight(${1:slot}, ${2:weight})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] slot\n  The gesture slot. See GESTURE_SLOT_ Enums\n\n[number] weight\n  The weight this slot should be set to. Value must be ranging from 0 to 1.",
+        "prefix": "AnimSetGestureWeight"
+    },
+    "Armor": {
+        "body": [
+            "Armor()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the player's armor.",
+        "prefix": "Armor"
+    },
+    "Ban": {
+        "body": [
+            "Ban(${1:minutes}, ${2:kick=false})$0"
+        ],
+        "description": "PLAYER [Server] Bans the player from the server for a certain amount of minutes.\n\n[number] minutes\n  Duration of the ban in minutes (0 is permanent)\n\n[boolean] kick=false\n  Whether to kick the player after banning then or not",
+        "prefix": "Ban"
+    },
+    "CanUseFlashlight": {
+        "body": [
+            "CanUseFlashlight()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "CanUseFlashlight"
+    },
+    "ChatPrint": {
+        "body": [
+            "ChatPrint(${1:message})$0"
+        ],
+        "description": "PLAYER [Shared] Prints a string to the chatbox of the client.\n\n[string] message\n  String to be printed",
+        "prefix": "ChatPrint"
+    },
+    "CheckLimit": {
+        "body": [
+            "CheckLimit(${1:limitType})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[string] limitType\n  Limit type. In unmodified Sandbox possible values are:\n\n \"props\"\n \"ragdolls\"\n \"vehicles\"\n \"effects\"\n \"balloons\"\n \"cameras\"\n \"npcs\"\n \"sents\"\n \"dynamite\"\n \"lamps\"\n \"lights\"\n \"wheels\"\n \"thrusters\"\n \"hoverballs\"\n \"buttons\"\n \"emitters\"",
+        "prefix": "CheckLimit"
+    },
+    "ConCommand": {
+        "body": [
+            "ConCommand(${1:command})$0"
+        ],
+        "description": "PLAYER [Shared] Runs the concommand on the player. This does not work on bots. If you wish to directly modify the movement input of bots, use GM:StartCommand instead.\n\n[string] command\n  command to run",
+        "prefix": "ConCommand"
+    },
+    "CreateRagdoll": {
+        "body": [
+            "CreateRagdoll()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "CreateRagdoll"
+    },
+    "CrosshairDisable": {
+        "body": [
+            "CrosshairDisable()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "CrosshairDisable"
+    },
+    "CrosshairEnable": {
+        "body": [
+            "CrosshairEnable()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "CrosshairEnable"
+    },
+    "Crouching": {
+        "body": [
+            "Crouching()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "Crouching"
+    },
+    "Deaths": {
+        "body": [
+            "Deaths()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the player's death count",
+        "prefix": "Deaths"
+    },
+    "DebugInfo": {
+        "body": [
+            "DebugInfo()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "DebugInfo"
+    },
+    "DetonateTripmines": {
+        "body": [
+            "DetonateTripmines()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "DetonateTripmines"
+    },
+    "DoAnimationEvent": {
+        "body": [
+            "DoAnimationEvent(${1:data})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] data\n  The data to send.",
+        "prefix": "DoAnimationEvent"
+    },
+    "DoAttackEvent": {
+        "body": [
+            "DoAttackEvent()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "DoAttackEvent"
+    },
+    "DoCustomAnimEvent": {
+        "body": [
+            "DoCustomAnimEvent(${1:event}, ${2:data})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] event\n  The event to send. See PLAYERANIMEVENT_ Enums.\n\n[number] data\n  The data to send alongside the event.",
+        "prefix": "DoCustomAnimEvent"
+    },
+    "DoReloadEvent": {
+        "body": [
+            "DoReloadEvent()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "DoReloadEvent"
+    },
+    "DoSecondaryAttack": {
+        "body": [
+            "DoSecondaryAttack()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "DoSecondaryAttack"
+    },
+    "DrawViewModel": {
+        "body": [
+            "DrawViewModel(${1:draw}, ${2:vm=0})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[boolean] draw\n  Should draw\n\n[number] vm=0\n  Which view model to show/hide, 0-2.",
+        "prefix": "DrawViewModel"
+    },
+    "DrawWorldModel": {
+        "body": [
+            "DrawWorldModel(${1:draw})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[boolean] draw\n  Should draw",
+        "prefix": "DrawWorldModel"
+    },
+    "DropNamedWeapon": {
+        "body": [
+            "DropNamedWeapon(${1:class})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[string] class\n  The class to drop.",
+        "prefix": "DropNamedWeapon"
+    },
+    "DropObject": {
+        "body": [
+            "DropObject()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "DropObject"
+    },
+    "DropWeapon": {
+        "body": [
+            "DropWeapon(${1:weapon})$0"
+        ],
+        "description": "PLAYER [Server] Forces the player to drop the specified weapon\n\n[Weapon] weapon\n  Weapon to be dropped",
+        "prefix": "DropWeapon"
+    },
+    "EnterVehicle": {
+        "body": [
+            "EnterVehicle(${1:vehicle})$0"
+        ],
+        "description": "PLAYER [Server] Enters the player into specified vehicle\n\n[Vehicle] vehicle\n  Vehicle the player will enter",
+        "prefix": "EnterVehicle"
+    },
+    "EquipSuit": {
+        "body": [
+            "EquipSuit()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "EquipSuit"
+    },
+    "ExitVehicle": {
+        "body": [
+            "ExitVehicle()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "ExitVehicle"
+    },
+    "Flashlight": {
+        "body": [
+            "Flashlight(${1:isOn})$0"
+        ],
+        "description": "PLAYER [Server] Enables/Disables the player's flashlight\n\n[boolean] isOn\n  Turns the flashlight on/off",
+        "prefix": "Flashlight"
+    },
+    "FlashlightIsOn": {
+        "body": [
+            "FlashlightIsOn()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "FlashlightIsOn"
+    },
+    "Frags": {
+        "body": [
+            "Frags()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the amount of kills a player has.",
+        "prefix": "Frags"
+    },
+    "Freeze": {
+        "body": [
+            "Freeze(${1:frozen=false})$0"
+        ],
+        "description": "PLAYER [Server] Freeze/Unfreezes the player. Frozen players cannot move, attack or turn around. Keybindings are still called. Similar to Player:Lock. Adds or removes the FL_FROZEN flag from the player.\n\n[boolean] frozen=false\n  Whether the player should be frozen.",
+        "prefix": "Freeze"
+    },
+    "GetActiveWeapon": {
+        "body": [
+            "GetActiveWeapon()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the player's active weapon.",
+        "prefix": "GetActiveWeapon"
+    },
+    "GetAimVector": {
+        "body": [
+            "GetAimVector()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the direction that the player is aiming.",
+        "prefix": "GetAimVector"
+    },
+    "GetAllowFullRotation": {
+        "body": [
+            "GetAllowFullRotation()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetAllowFullRotation"
+    },
+    "GetAllowWeaponsInVehicle": {
+        "body": [
+            "GetAllowWeaponsInVehicle()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetAllowWeaponsInVehicle"
+    },
+    "GetAmmoCount": {
+        "body": [
+            "GetAmmoCount(${1:ammotype})$0"
+        ],
+        "description": "PLAYER [Shared] Gets the amount of ammo the player has.\n\n[any] ammotype\n  The ammunition type. Can be either number ammo ID or string ammo name.",
+        "prefix": "GetAmmoCount"
+    },
+    "GetAvoidPlayers": {
+        "body": [
+            "GetAvoidPlayers()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetAvoidPlayers"
+    },
+    "GetCanWalk": {
+        "body": [
+            "GetCanWalk()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetCanWalk"
+    },
+    "GetCanZoom": {
+        "body": [
+            "GetCanZoom()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetCanZoom"
+    },
+    "GetClassID": {
+        "body": [
+            "GetClassID()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetClassID"
+    },
+    "GetCount": {
+        "body": [
+            "GetCount(${1:type}, ${2:minus=0})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[string] type\n  Entity type to get count of.\n\n[number] minus=0\n  If specified, it will reduce the counter by this value. Works only serverside.",
+        "prefix": "GetCount"
+    },
+    "GetCrouchedWalkSpeed": {
+        "body": [
+            "GetCrouchedWalkSpeed()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetCrouchedWalkSpeed"
+    },
+    "GetCurrentCommand": {
+        "body": [
+            "GetCurrentCommand()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetCurrentCommand"
+    },
+    "GetCurrentViewOffset": {
+        "body": [
+            "GetCurrentViewOffset()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetCurrentViewOffset"
+    },
+    "GetDrivingEntity": {
+        "body": [
+            "GetDrivingEntity()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetDrivingEntity"
+    },
+    "GetDrivingMode": {
+        "body": [
+            "GetDrivingMode()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetDrivingMode"
+    },
+    "GetDuckSpeed": {
+        "body": [
+            "GetDuckSpeed()$0"
+        ],
+        "description": "PLAYER [Shared] Returns a player's duck speed (in seconds)",
+        "prefix": "GetDuckSpeed"
+    },
+    "GetEyeTrace": {
+        "body": [
+            "GetEyeTrace()$0"
+        ],
+        "description": "PLAYER [Shared] Returns a table with information of what the player is looking at. The results of this function are cached every frame. See also Player:GetEyeTraceNoCursor",
+        "prefix": "GetEyeTrace"
+    },
+    "GetEyeTraceNoCursor": {
+        "body": [
+            "GetEyeTraceNoCursor()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetEyeTraceNoCursor"
+    },
+    "GetFOV": {
+        "body": [
+            "GetFOV()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetFOV"
+    },
+    "GetFriendStatus": {
+        "body": [
+            "GetFriendStatus()$0"
+        ],
+        "description": "PLAYER [Client] Returns the steam \"relationship\" towards the player.",
+        "prefix": "GetFriendStatus"
+    },
+    "GetHands": {
+        "body": [
+            "GetHands()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetHands"
+    },
+    "GetHoveredWidget": {
+        "body": [
+            "GetHoveredWidget()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetHoveredWidget"
+    },
+    "GetHull": {
+        "body": [
+            "GetHull()$0"
+        ],
+        "description": "PLAYER [Shared] Gets the bottom base and the top base size of the player's hull.",
+        "prefix": "GetHull"
+    },
+    "GetHullDuck": {
+        "body": [
+            "GetHullDuck()$0"
+        ],
+        "description": "PLAYER [Shared] Gets the bottom base and the top base size of the player's crouch hull.",
+        "prefix": "GetHullDuck"
+    },
+    "GetInfo": {
+        "body": [
+            "GetInfo(${1:cVarName})$0"
+        ],
+        "description": "PLAYER [Server] Retrieves the value of a client-side ConVar. The ConVar must have a FCVAR_USERINFO flag for this to work.\n\n[string] cVarName\n  The name of the client-side ConVar",
+        "prefix": "GetInfo"
+    },
+    "GetInfoNum": {
+        "body": [
+            "GetInfoNum(${1:cVarName}, ${2:default})$0"
+        ],
+        "description": "PLAYER [Server] Retrieves the numeric value of a client-side convar, returns nil if value is not convertible to a number. The ConVar must have a FCVAR_USERINFO flag for this to work.\n\n[string] cVarName\n  The name of the ConVar to query the value of\n\n[number] default\n  Default value if we failed to retrieve the number.",
+        "prefix": "GetInfoNum"
+    },
+    "GetJumpPower": {
+        "body": [
+            "GetJumpPower()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the jump power of the player",
+        "prefix": "GetJumpPower"
+    },
+    "GetLaggedMovementValue": {
+        "body": [
+            "GetLaggedMovementValue()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetLaggedMovementValue"
+    },
+    "GetMaxSpeed": {
+        "body": [
+            "GetMaxSpeed()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetMaxSpeed"
+    },
+    "GetName": {
+        "body": [
+            "GetName()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the player's name, this is an alias of Player:Nick.",
+        "prefix": "GetName"
+    },
+    "GetNoCollideWithTeammates": {
+        "body": [
+            "GetNoCollideWithTeammates()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetNoCollideWithTeammates"
+    },
+    "GetObserverMode": {
+        "body": [
+            "GetObserverMode()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetObserverMode"
+    },
+    "GetObserverTarget": {
+        "body": [
+            "GetObserverTarget()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetObserverTarget"
+    },
+    "GetPData": {
+        "body": [
+            "GetPData(${1:key}, ${2:default})$0"
+        ],
+        "description": "PLAYER [Shared] Returns a player's PData from the server's or client's SQL database. ( sv.db and cl.db respectively ) It is not networked!\n\n[any] key\n  Name of the PData key\n\n[any] default\n  Default value if PData key doesn't exist.",
+        "prefix": "GetPData"
+    },
+    "GetPlayerColor": {
+        "body": [
+            "GetPlayerColor()$0"
+        ],
+        "description": "PLAYER [Shared] Returns a player model's color. The part of the model that is colored is determined by the model itself, and is different for each model. The format is Vector(r,g,b), and each color should be between 0 and 1.",
+        "prefix": "GetPlayerColor"
+    },
+    "GetPlayerInfo": {
+        "body": [
+            "GetPlayerInfo()$0"
+        ],
+        "description": "PLAYER [Client] Returns a table containing player information.",
+        "prefix": "GetPlayerInfo"
+    },
+    "GetPreferredCarryAngles": {
+        "body": [
+            "GetPreferredCarryAngles(${1:})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[Entity]",
+        "prefix": "GetPreferredCarryAngles"
+    },
+    "GetPressedWidget": {
+        "body": [
+            "GetPressedWidget()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetPressedWidget"
+    },
+    "GetPunchAngle": {
+        "body": [
+            "GetPunchAngle()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetPunchAngle"
+    },
+    "GetRagdollEntity": {
+        "body": [
+            "GetRagdollEntity()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetRagdollEntity"
+    },
+    "GetRenderAngles": {
+        "body": [
+            "GetRenderAngles()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetRenderAngles"
+    },
+    "GetRunSpeed": {
+        "body": [
+            "GetRunSpeed()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the amount of speed the player runs at.",
+        "prefix": "GetRunSpeed"
+    },
+    "GetShootPos": {
+        "body": [
+            "GetShootPos()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the position of a Player's view",
+        "prefix": "GetShootPos"
+    },
+    "GetStepSize": {
+        "body": [
+            "GetStepSize()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetStepSize"
+    },
+    "GetTimeoutSeconds": {
+        "body": [
+            "GetTimeoutSeconds()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "GetTimeoutSeconds"
+    },
+    "GetTool": {
+        "body": [
+            "GetTool(${1:mode=nil})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[string] mode=nil\n  Classname of the tool to retrieve. ( Filename of the tool in gmod_tool/stools/ )",
+        "prefix": "GetTool"
+    },
+    "GetUnDuckSpeed": {
+        "body": [
+            "GetUnDuckSpeed()$0"
+        ],
+        "description": "PLAYER [Shared] Returns a player's unduck speed (in seconds)",
+        "prefix": "GetUnDuckSpeed"
+    },
+    "GetUserGroup": {
+        "body": [
+            "GetUserGroup()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetUserGroup"
+    },
+    "GetVehicle": {
+        "body": [
+            "GetVehicle()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetVehicle"
+    },
+    "GetViewEntity": {
+        "body": [
+            "GetViewEntity()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the entity the player is using to see from (such as the player itself, the camera, or another entity).",
+        "prefix": "GetViewEntity"
+    },
+    "GetViewModel": {
+        "body": [
+            "GetViewModel(${1:index=0})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] index=0\n  optional index of the view model to return, can range from 0 to 2",
+        "prefix": "GetViewModel"
+    },
+    "GetViewOffset": {
+        "body": [
+            "GetViewOffset()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetViewOffset"
+    },
+    "GetViewOffsetDucked": {
+        "body": [
+            "GetViewOffsetDucked()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetViewOffsetDucked"
+    },
+    "GetViewPunchAngles": {
+        "body": [
+            "GetViewPunchAngles()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "GetViewPunchAngles"
+    },
+    "GetWalkSpeed": {
+        "body": [
+            "GetWalkSpeed()$0"
+        ],
+        "description": "PLAYER [Shared] Returns a player's walk speed",
+        "prefix": "GetWalkSpeed"
+    },
+    "GetWeapon": {
+        "body": [
+            "GetWeapon(${1:className})$0"
+        ],
+        "description": "PLAYER [Shared] Returns the weapon for the specified class\n\n[string] className\n  Class name of weapon",
+        "prefix": "GetWeapon"
+    },
+    "GetWeaponColor": {
+        "body": [
+            "GetWeaponColor()$0"
+        ],
+        "description": "PLAYER [Shared] Returns a player's weapon color. The part of the model that is colored is determined by the model itself, and is different for each model. The format is Vector(r,g,b), and each color should be between 0 and 1.",
+        "prefix": "GetWeaponColor"
+    },
+    "GetWeapons": {
+        "body": [
+            "GetWeapons()$0"
+        ],
+        "description": "PLAYER [Shared] Returns a table of the player's weapons.",
+        "prefix": "GetWeapons"
+    },
+    "Give": {
+        "body": [
+            "Give(${1:weaponClassName}, ${2:bNoAmmo=false})$0"
+        ],
+        "description": "PLAYER [Server] Gives the player a weapon.\n\n[string] weaponClassName\n  Class name of weapon to give the player\n\n[boolean] bNoAmmo=false\n  Set to true to not give any ammo on weapon spawn. (Reserve ammo set by DefaultClip)",
+        "prefix": "Give"
+    },
+    "GiveAmmo": {
+        "body": [
+            "GiveAmmo(${1:amount}, ${2:type}, ${3:hidePopup=false})$0"
+        ],
+        "description": "PLAYER [Server] Gives ammo to a player\n\n[number] amount\n  Amount of ammo\n\n[string] type\n  Type of ammo.\nThis can also be a number for ammo ID, useful for custom ammo types.\n\nYou can find a list of default ammo types here.\n\n[boolean] hidePopup=false\n  Hide display popup when giving the ammo",
+        "prefix": "GiveAmmo"
+    },
+    "GodDisable": {
+        "body": [
+            "GodDisable()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "GodDisable"
+    },
+    "GodEnable": {
+        "body": [
+            "GodEnable()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "GodEnable"
+    },
+    "HasGodMode": {
+        "body": [
+            "HasGodMode()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "HasGodMode"
+    },
+    "HasWeapon": {
+        "body": [
+            "HasWeapon(${1:className})$0"
+        ],
+        "description": "PLAYER [Shared] Returns if the player has the specified weapon\n\n[string] className\n  Class name of the weapon",
+        "prefix": "HasWeapon"
+    },
+    "IPAddress": {
+        "body": [
+            "IPAddress()$0"
+        ],
+        "description": "PLAYER [Server] Returns the player's IP address and connection port in ip:port form",
+        "prefix": "IPAddress"
+    },
+    "InVehicle": {
+        "body": [
+            "InVehicle()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "InVehicle"
+    },
+    "IsAdmin": {
+        "body": [
+            "IsAdmin()$0"
+        ],
+        "description": "PLAYER [Shared] Returns whether the player is an admin or not",
+        "prefix": "IsAdmin"
+    },
+    "IsBot": {
+        "body": [
+            "IsBot()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "IsBot"
+    },
+    "IsConnected": {
+        "body": [
+            "IsConnected()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "IsConnected"
+    },
+    "IsDrivingEntity": {
+        "body": [
+            "IsDrivingEntity()$0"
+        ],
+        "description": "PLAYER [Shared] Used to find out if a player is currently 'driving' an entity (by which we mean 'right click \u003e drive' ).",
+        "prefix": "IsDrivingEntity"
+    },
+    "IsFrozen": {
+        "body": [
+            "IsFrozen()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "IsFrozen"
+    },
+    "IsFullyAuthenticated": {
+        "body": [
+            "IsFullyAuthenticated()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "IsFullyAuthenticated"
+    },
+    "IsListenServerHost": {
+        "body": [
+            "IsListenServerHost()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "IsListenServerHost"
+    },
+    "IsMuted": {
+        "body": [
+            "IsMuted()$0"
+        ],
+        "description": "PLAYER [Client]",
+        "prefix": "IsMuted"
+    },
+    "IsPlayingTaunt": {
+        "body": [
+            "IsPlayingTaunt()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "IsPlayingTaunt"
+    },
+    "IsSpeaking": {
+        "body": [
+            "IsSpeaking()$0"
+        ],
+        "description": "PLAYER [Client]",
+        "prefix": "IsSpeaking"
+    },
+    "IsSuitEquipped": {
+        "body": [
+            "IsSuitEquipped()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "IsSuitEquipped"
+    },
+    "IsSuperAdmin": {
+        "body": [
+            "IsSuperAdmin()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "IsSuperAdmin"
+    },
+    "IsTimingOut": {
+        "body": [
+            "IsTimingOut()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "IsTimingOut"
+    },
+    "IsTyping": {
+        "body": [
+            "IsTyping()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "IsTyping"
+    },
+    "IsUserGroup": {
+        "body": [
+            "IsUserGroup(${1:groupname})$0"
+        ],
+        "description": "PLAYER [Shared] Returns true/false if the player is in specified group or not.\n\n[string] groupname\n  Group to check the player for.",
+        "prefix": "IsUserGroup"
+    },
+    "IsVoiceAudible": {
+        "body": [
+            "IsVoiceAudible()$0"
+        ],
+        "description": "PLAYER [Client]",
+        "prefix": "IsVoiceAudible"
+    },
+    "IsWorldClicking": {
+        "body": [
+            "IsWorldClicking()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "IsWorldClicking"
+    },
+    "KeyDown": {
+        "body": [
+            "KeyDown(${1:key})$0"
+        ],
+        "description": "PLAYER [Shared] Gets whether a key is down. This is not networked to other players, meaning only the local client can see the keys they are pressing.\n\n[number] key\n  The key, see IN_ Enums",
+        "prefix": "KeyDown"
+    },
+    "KeyDownLast": {
+        "body": [
+            "KeyDownLast(${1:key})$0"
+        ],
+        "description": "PLAYER [Shared] Gets whether a key was down one tick ago.\n\n[number] key\n  The key, see IN_ Enums",
+        "prefix": "KeyDownLast"
+    },
+    "KeyPressed": {
+        "body": [
+            "KeyPressed(${1:key})$0"
+        ],
+        "description": "PLAYER [Shared] Gets whether a key was just pressed this tick\n\n[number] key\n  Corresponds to an IN_ Enums",
+        "prefix": "KeyPressed"
+    },
+    "KeyReleased": {
+        "body": [
+            "KeyReleased(${1:key})$0"
+        ],
+        "description": "PLAYER [Shared] Gets whether a key was just released this tick\n\n[number] key\n  The key, see IN_ Enums",
+        "prefix": "KeyReleased"
+    },
+    "Kick": {
+        "body": [
+            "Kick(${1:reason=\"Noreasongiven\"})$0"
+        ],
+        "description": "PLAYER [Server] Kicks the player from the server.\n\n[string] reason=\"Noreasongiven\"\n  Reason to show for disconnection. Only the first ~243 bytes are shown in the disconnect message box.",
+        "prefix": "Kick"
+    },
+    "Kill": {
+        "body": [
+            "Kill()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "Kill"
+    },
+    "KillSilent": {
+        "body": [
+            "KillSilent()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "KillSilent"
+    },
+    "LagCompensation": {
+        "body": [
+            "LagCompensation(${1:lagCompensation})$0"
+        ],
+        "description": "PLAYER [Shared] This allows the server to mitigate the lag of the player by moving back all the entities that can be lag compensated to the time the player attacked with his weapon. This technique is most commonly used on things that hit other entities instantaneously, such as traces.\n\n[boolean] lagCompensation\n  The state of the lag compensation , true to enable and false to disable.",
+        "prefix": "LagCompensation"
+    },
+    "LastHitGroup": {
+        "body": [
+            "LastHitGroup()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "LastHitGroup"
+    },
+    "LimitHit": {
+        "body": [
+            "LimitHit(${1:type})$0"
+        ],
+        "description": "PLAYER [Shared] Shows \"limit hit\" notification in sandbox.\n\n[string] type\n  Type of hit limit",
+        "prefix": "LimitHit"
+    },
+    "Lock": {
+        "body": [
+            "Lock()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "Lock"
+    },
+    "MotionSensorPos": {
+        "body": [
+            "MotionSensorPos(${1:bone})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] bone\n  Bone to get the position of. Must be from 0 to 19.",
+        "prefix": "MotionSensorPos"
+    },
+    "Name": {
+        "body": [
+            "Name()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the players name. Identical to Player:Nick and Player:GetName",
+        "prefix": "Name"
+    },
+    "Nick": {
+        "body": [
+            "Nick()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the player's nickname",
+        "prefix": "Nick"
+    },
+    "PacketLoss": {
+        "body": [
+            "PacketLoss()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "PacketLoss"
+    },
+    "PhysgunUnfreeze": {
+        "body": [
+            "PhysgunUnfreeze()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "PhysgunUnfreeze"
+    },
+    "PickupObject": {
+        "body": [
+            "PickupObject(${1:entity})$0"
+        ],
+        "description": "PLAYER [Server] This makes the player hold ( same as pressing E on a small prop ) the provided entity.\n\n[Entity] entity\n  Entity to pick up.",
+        "prefix": "PickupObject"
+    },
+    "Ping": {
+        "body": [
+            "Ping()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "Ping"
+    },
+    "PlayStepSound": {
+        "body": [
+            "PlayStepSound(${1:volume})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[number] volume\n  Volume for the sound, in range from 0 to 1",
+        "prefix": "PlayStepSound"
+    },
+    "PrintMessage": {
+        "body": [
+            "PrintMessage(${1:type}, ${2:message})$0"
+        ],
+        "description": "PLAYER [Shared] Displays a message either in their chat, console, or center of the screen. See also PrintMessage.\n\n[number] type\n  Which type of message should be sent to the player (HUD_ Enums)\n\n[string] message\n  Message to be sent to the player",
+        "prefix": "PrintMessage"
+    },
+    "RemoveAllAmmo": {
+        "body": [
+            "RemoveAllAmmo()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "RemoveAllAmmo"
+    },
+    "RemoveAllItems": {
+        "body": [
+            "RemoveAllItems()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "RemoveAllItems"
+    },
+    "RemoveAmmo": {
+        "body": [
+            "RemoveAmmo(${1:ammoCount}, ${2:ammoName})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] ammoCount\n  The amount of ammunition to remove.\n\n[string] ammoName\n  The name of the ammunition to remove from. This can also be a number ammoID.",
+        "prefix": "RemoveAmmo"
+    },
+    "RemovePData": {
+        "body": [
+            "RemovePData(${1:key})$0"
+        ],
+        "description": "PLAYER [Shared] Deletes a key from a player's data\n\n[any] key\n  Key to remove",
+        "prefix": "RemovePData"
+    },
+    "RemoveSuit": {
+        "body": [
+            "RemoveSuit()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "RemoveSuit"
+    },
+    "ResetHull": {
+        "body": [
+            "ResetHull()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "ResetHull"
+    },
+    "Say": {
+        "body": [
+            "Say(${1:text}, ${2:teamOnly=false})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[string] text\n  The text to force the player to say.\n\n[boolean] teamOnly=false\n  Whether to send this message to our own team only.",
+        "prefix": "Say"
+    },
+    "ScreenFade": {
+        "body": [
+            "ScreenFade(${1:flags}, ${2:clr=color_white}, ${3:fadeTime}, ${4:fadeHold})$0"
+        ],
+        "description": "PLAYER [Shared] Fades the screen\n\n[number] flags\n  Fade flags defined with SCREENFADE_ Enums.\n\n[number] clr=color_white\n  The color of the screenfade\n\n[number] fadeTime\n  Fade(in/out) effect transition time ( From no fade to full fade and vice versa )\n\n[number] fadeHold\n  Fade effect hold time",
+        "prefix": "ScreenFade"
+    },
+    "SelectWeapon": {
+        "body": [
+            "SelectWeapon(${1:className})$0"
+        ],
+        "description": "PLAYER [Server] Sets the active weapon of the player by its class name.\n\n[string] className\n  The class name of the weapon to switch to.The player must already have this weapon. You can use Player:Give if not.",
+        "prefix": "SelectWeapon"
+    },
+    "SendHint": {
+        "body": [
+            "SendHint(${1:name}, ${2:delay})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[string] name\n  Name/class/index of the hint. The text of the hint will contain this value. ( \"#Hint_\" .. name ) An example is PhysgunFreeze.\n\n[number] delay\n  Delay in seconds before showing the hint",
+        "prefix": "SendHint"
+    },
+    "SendLua": {
+        "body": [
+            "SendLua(${1:script})$0"
+        ],
+        "description": "PLAYER [Server] Executes a simple Lua string on the player. Note: The string is limited to 254 bytes. Consider using the net library for more advanced server-client interaction.\n\n[string] script\n  The script to execute.",
+        "prefix": "SendLua"
+    },
+    "SetActiveWeapon": {
+        "body": [
+            "SetActiveWeapon(${1:weapon})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[Weapon] weapon\n  The weapon to equip",
+        "prefix": "SetActiveWeapon"
+    },
+    "SetAllowFullRotation": {
+        "body": [
+            "SetAllowFullRotation(${1:Allowed})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[boolean] Allowed\n  Allowed to rotate",
+        "prefix": "SetAllowFullRotation"
+    },
+    "SetAllowWeaponsInVehicle": {
+        "body": [
+            "SetAllowWeaponsInVehicle(${1:allow})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[boolean] allow\n  Show we allow player to use his weapons in a vehicle or not.",
+        "prefix": "SetAllowWeaponsInVehicle"
+    },
+    "SetAmmo": {
+        "body": [
+            "SetAmmo(${1:ammoCount}, ${2:ammoType})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] ammoCount\n  The amount of ammunition to set.\n\n[any] ammoType\n  The ammunition type. Can be either number ammo ID or string ammo name.",
+        "prefix": "SetAmmo"
+    },
+    "SetArmor": {
+        "body": [
+            "SetArmor(${1:Amount})$0"
+        ],
+        "description": "PLAYER [Server] Sets the player armor to the argument.\n\n[number] Amount\n  The amount that the player armor is going to be set to.",
+        "prefix": "SetArmor"
+    },
+    "SetAvoidPlayers": {
+        "body": [
+            "SetAvoidPlayers(${1:avoidPlayers})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[boolean] avoidPlayers\n  Avoid or not avoid.",
+        "prefix": "SetAvoidPlayers"
+    },
+    "SetCanWalk": {
+        "body": [
+            "SetCanWalk(${1:abletowalk})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[boolean] abletowalk\n  True allows the player to walk.",
+        "prefix": "SetCanWalk"
+    },
+    "SetCanZoom": {
+        "body": [
+            "SetCanZoom(${1:canZoom})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[boolean] canZoom\n  Whether to make the player able or unable to zoom.",
+        "prefix": "SetCanZoom"
+    },
+    "SetClassID": {
+        "body": [
+            "SetClassID(${1:classID})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] classID\n  The class id the player is being set with.",
+        "prefix": "SetClassID"
+    },
+    "SetCrouchedWalkSpeed": {
+        "body": [
+            "SetCrouchedWalkSpeed(${1:speed})$0"
+        ],
+        "description": "PLAYER [Shared] Sets the crouched walk speed multiplier. Doesn't work for values above 1.\n\n[number] speed\n  The walk speed multiplier that crouch speed should be.",
+        "prefix": "SetCrouchedWalkSpeed"
+    },
+    "SetCurrentViewOffset": {
+        "body": [
+            "SetCurrentViewOffset(${1:viewOffset})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Vector] viewOffset\n  The new view offset.",
+        "prefix": "SetCurrentViewOffset"
+    },
+    "SetDSP": {
+        "body": [
+            "SetDSP(${1:soundFilter}, ${2:fastReset})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] soundFilter\n  The index of the sound filter to apply.\n\nPick from the list of DSP's.\n\n[boolean] fastReset\n  If set to true the sound filter will be removed faster.",
+        "prefix": "SetDSP"
+    },
+    "SetDeaths": {
+        "body": [
+            "SetDeaths(${1:deathcount})$0"
+        ],
+        "description": "PLAYER [Server] Sets a player's death count\n\n[number] deathcount\n  Number of deaths (positive or negative)",
+        "prefix": "SetDeaths"
+    },
+    "SetDrivingEntity": {
+        "body": [
+            "SetDrivingEntity(${1:drivingEntity=NULL}, ${2:drivingMode})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Entity] drivingEntity=NULL\n  The entity the player should drive.\n\n[number] drivingMode\n  The driving mode index.",
+        "prefix": "SetDrivingEntity"
+    },
+    "SetDuckSpeed": {
+        "body": [
+            "SetDuckSpeed(${1:duckSpeed})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] duckSpeed\n  How quickly the player will duck.",
+        "prefix": "SetDuckSpeed"
+    },
+    "SetEyeAngles": {
+        "body": [
+            "SetEyeAngles(${1:ang})$0"
+        ],
+        "description": "PLAYER [Shared] Sets the angle of the player's view (may rotate body too if angular difference is large)\n\n[Angle] ang\n  Angle to set the view to",
+        "prefix": "SetEyeAngles"
+    },
+    "SetFOV": {
+        "body": [
+            "SetFOV(${1:fov}, ${2:time})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] fov\n  the angle of perception (FOV). Set to 0 to return to default user FOV. ( Which is ranging from 75 to 90, depending on user settings )\n\n[number] time\n  the time it takes to transition to the FOV expressed in a floating point.",
+        "prefix": "SetFOV"
+    },
+    "SetFrags": {
+        "body": [
+            "SetFrags(${1:fragcount})$0"
+        ],
+        "description": "PLAYER [Server] Sets a player's frags (kills)\n\n[number] fragcount\n  Number of frags (positive or negative)",
+        "prefix": "SetFrags"
+    },
+    "SetHands": {
+        "body": [
+            "SetHands(${1:hands})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Entity] hands\n  The hands entity to set",
+        "prefix": "SetHands"
+    },
+    "SetHoveredWidget": {
+        "body": [
+            "SetHoveredWidget(${1:widget=NULL})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Entity] widget=NULL\n  The widget entity that the player is hovering.",
+        "prefix": "SetHoveredWidget"
+    },
+    "SetHull": {
+        "body": [
+            "SetHull(${1:hullMins}, ${2:hullMaxs})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Vector] hullMins\n  The min coordinates of the hull.\n\n[Vector] hullMaxs\n  The max coordinates of the hull.",
+        "prefix": "SetHull"
+    },
+    "SetHullDuck": {
+        "body": [
+            "SetHullDuck(${1:hullMins}, ${2:hullMaxs})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Vector] hullMins\n  The min coordinates of the hull.\n\n[Vector] hullMaxs\n  The max coordinates of the hull.",
+        "prefix": "SetHullDuck"
+    },
+    "SetJumpPower": {
+        "body": [
+            "SetJumpPower(${1:jumpPower})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] jumpPower\n  The new jump velocity.",
+        "prefix": "SetJumpPower"
+    },
+    "SetLaggedMovementValue": {
+        "body": [
+            "SetLaggedMovementValue(${1:timescale})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[number] timescale\n  The timescale multiplier.",
+        "prefix": "SetLaggedMovementValue"
+    },
+    "SetMaxSpeed": {
+        "body": [
+            "SetMaxSpeed(${1:walkSpeed})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] walkSpeed\n  The maximum speed.",
+        "prefix": "SetMaxSpeed"
+    },
+    "SetMuted": {
+        "body": [
+            "SetMuted(${1:mute})$0"
+        ],
+        "description": "PLAYER [Client] \n\n[boolean] mute\n  Mute or unmute.",
+        "prefix": "SetMuted"
+    },
+    "SetNoCollideWithTeammates": {
+        "body": [
+            "SetNoCollideWithTeammates(${1:shouldNotCollide})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[boolean] shouldNotCollide\n  True to disable, false to enable collision.",
+        "prefix": "SetNoCollideWithTeammates"
+    },
+    "SetNoTarget": {
+        "body": [
+            "SetNoTarget(${1:visibility})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[boolean] visibility\n  The visibility.",
+        "prefix": "SetNoTarget"
+    },
+    "SetObserverMode": {
+        "body": [
+            "SetObserverMode(${1:observeMode})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] observeMode\n  Observe mode using OBS_MODE_ Enums.",
+        "prefix": "SetObserverMode"
+    },
+    "SetPData": {
+        "body": [
+            "SetPData(${1:key}, ${2:value})$0"
+        ],
+        "description": "PLAYER [Shared] Sets a player's PData from the server's or client's SQL database ( sv.db and cl.db respectively ), It is not networked!\n\n[any] key\n  Name of the PData key\n\n[any] value\n  Value to write to the key (must be an SQL valid data type, such as a string or integer)",
+        "prefix": "SetPData"
+    },
+    "SetPlayerColor": {
+        "body": [
+            "SetPlayerColor(${1:Color})$0"
+        ],
+        "description": "PLAYER [Shared] Sets the player model's color. The part of the model that is colored is determined by the model itself, and is different for each model.\n\n[Vector] Color\n  This is the color to be set. The format is Vector(r,g,b), and each color should be between 0 and 1.",
+        "prefix": "SetPlayerColor"
+    },
+    "SetPressedWidget": {
+        "body": [
+            "SetPressedWidget(${1:pressedWidget=NULL})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Entity] pressedWidget=NULL\n  The widget the player is currently using.",
+        "prefix": "SetPressedWidget"
+    },
+    "SetRenderAngles": {
+        "body": [
+            "SetRenderAngles(${1:ang})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Angle] ang\n  The new render angles to set",
+        "prefix": "SetRenderAngles"
+    },
+    "SetRunSpeed": {
+        "body": [
+            "SetRunSpeed(${1:runSpeed})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] runSpeed\n  The new run speed.",
+        "prefix": "SetRunSpeed"
+    },
+    "SetStepSize": {
+        "body": [
+            "SetStepSize(${1:stepHeight})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] stepHeight\n  The new maximum height the player can step onto without jumping",
+        "prefix": "SetStepSize"
+    },
+    "SetSuppressPickupNotices": {
+        "body": [
+            "SetSuppressPickupNotices(${1:doSuppress})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[boolean] doSuppress\n  Whenever to suppress the notice or not.",
+        "prefix": "SetSuppressPickupNotices"
+    },
+    "SetTeam": {
+        "body": [
+            "SetTeam(${1:Team})$0"
+        ],
+        "description": "PLAYER [Server] Sets the player to the chosen team.\n\n[number] Team\n  The team that the player is being set to.",
+        "prefix": "SetTeam"
+    },
+    "SetUnDuckSpeed": {
+        "body": [
+            "SetUnDuckSpeed(${1:UnDuckSpeed})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] UnDuckSpeed\n  How quickly the player will un-duck",
+        "prefix": "SetUnDuckSpeed"
+    },
+    "SetUserGroup": {
+        "body": [
+            "SetUserGroup(${1:groupName})$0"
+        ],
+        "description": "PLAYER [Server] Sets the usergroup of the player.\n\n[string] groupName\n  The user group of the player.",
+        "prefix": "SetUserGroup"
+    },
+    "SetViewEntity": {
+        "body": [
+            "SetViewEntity(${1:viewEntity})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[Entity] viewEntity\n  The entity to attach the player view to.",
+        "prefix": "SetViewEntity"
+    },
+    "SetViewOffset": {
+        "body": [
+            "SetViewOffset(${1:viewOffset})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Vector] viewOffset\n  The new desired view offset when standing.",
+        "prefix": "SetViewOffset"
+    },
+    "SetViewOffsetDucked": {
+        "body": [
+            "SetViewOffsetDucked(${1:viewOffset})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Vector] viewOffset\n  The new desired view offset when crouching.",
+        "prefix": "SetViewOffsetDucked"
+    },
+    "SetViewPunchAngles": {
+        "body": [
+            "SetViewPunchAngles(${1:punchAngle})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[Angle] punchAngle\n  The angle to set.",
+        "prefix": "SetViewPunchAngles"
+    },
+    "SetWalkSpeed": {
+        "body": [
+            "SetWalkSpeed(${1:walkSpeed})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] walkSpeed\n  The new walk speed.",
+        "prefix": "SetWalkSpeed"
+    },
+    "SetWeaponColor": {
+        "body": [
+            "SetWeaponColor(${1:Color})$0"
+        ],
+        "description": "PLAYER [Shared] Sets the player weapon's color. The part of the model that is colored is determined by the model itself, and is different for each model.\n\n[Vector] Color\n  This is the color to be set. The format is Vector(r,g,b), and each color should be between 0 and 1.",
+        "prefix": "SetWeaponColor"
+    },
+    "SetupHands": {
+        "body": [
+            "SetupHands(${1:ent})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[Entity] ent\n  If the player is spectating an entity, this should be the entity the player is spectating, so we can use its hands model instead.",
+        "prefix": "SetupHands"
+    },
+    "ShouldDrawLocalPlayer": {
+        "body": [
+            "ShouldDrawLocalPlayer()$0"
+        ],
+        "description": "PLAYER [Client]",
+        "prefix": "ShouldDrawLocalPlayer"
+    },
+    "ShouldDropWeapon": {
+        "body": [
+            "ShouldDropWeapon(${1:drop})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[boolean] drop\n  Whether to drop the player's current weapon or not",
+        "prefix": "ShouldDropWeapon"
+    },
+    "ShowProfile": {
+        "body": [
+            "ShowProfile()$0"
+        ],
+        "description": "PLAYER [Client]",
+        "prefix": "ShowProfile"
+    },
+    "SimulateGravGunDrop": {
+        "body": [
+            "SimulateGravGunDrop(${1:ent})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[Entity] ent\n  Entity that was dropped.",
+        "prefix": "SimulateGravGunDrop"
+    },
+    "SimulateGravGunPickup": {
+        "body": [
+            "SimulateGravGunPickup(${1:ent})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[Entity] ent\n  The entity picked up",
+        "prefix": "SimulateGravGunPickup"
+    },
+    "Spectate": {
+        "body": [
+            "Spectate(${1:spectateMode})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[number] spectateMode\n  Spectate mode, see OBS_MODE_ Enums.",
+        "prefix": "Spectate"
+    },
+    "SpectateEntity": {
+        "body": [
+            "SpectateEntity(${1:entity})$0"
+        ],
+        "description": "PLAYER [Server] Makes the player spectate the entity To get the applied spectated entity, use Player:GetObserverTarget().\n\n[Entity] entity\n  Entity to spectate.",
+        "prefix": "SpectateEntity"
+    },
+    "SprayDecal": {
+        "body": [
+            "SprayDecal(${1:sprayOrigin}, ${2:sprayEndPos})$0"
+        ],
+        "description": "PLAYER [Server] Makes a player spray their decal.\n\n[Vector] sprayOrigin\n  The location to spray from\n\n[Vector] sprayEndPos\n  The location to spray to",
+        "prefix": "SprayDecal"
+    },
+    "SprintDisable": {
+        "body": [
+            "SprintDisable()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "SprintDisable"
+    },
+    "SprintEnable": {
+        "body": [
+            "SprintEnable()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "SprintEnable"
+    },
+    "StartSprinting": {
+        "body": [
+            "StartSprinting()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "StartSprinting"
+    },
+    "StartWalking": {
+        "body": [
+            "StartWalking()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "StartWalking"
+    },
+    "SteamID": {
+        "body": [
+            "SteamID()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the player's SteamID. In singleplayer, this will be STEAM_ID_PENDING serverside. For Bots this will return \"BOT\" on the server and on the client it returns \"NULL\".",
+        "prefix": "SteamID"
+    },
+    "SteamID64": {
+        "body": [
+            "SteamID64()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the player's 64bit SteamID aka CommunityID. In singleplayer, this will return no value serverside. For bots, this will return 90071996842377216 (equivalent to STEAM_0:0:0) for the first bot to join.\nFor each additional bot, the number increases by 1. So the next bot will be 90071996842377217 (STEAM_0:1:0) then 90071996842377218 (STEAM_0:0:1) and so on. On the client it returns no value for bots.",
+        "prefix": "SteamID64"
+    },
+    "StopSprinting": {
+        "body": [
+            "StopSprinting()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "StopSprinting"
+    },
+    "StopWalking": {
+        "body": [
+            "StopWalking()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "StopWalking"
+    },
+    "StopZooming": {
+        "body": [
+            "StopZooming()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "StopZooming"
+    },
+    "StripAmmo": {
+        "body": [
+            "StripAmmo()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "StripAmmo"
+    },
+    "StripWeapon": {
+        "body": [
+            "StripWeapon(${1:weapon})$0"
+        ],
+        "description": "PLAYER [Server] Removes the specified weapon class from a certain player\n\n[string] weapon\n  The weapon class to remove",
+        "prefix": "StripWeapon"
+    },
+    "StripWeapons": {
+        "body": [
+            "StripWeapons()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "StripWeapons"
+    },
+    "SuppressHint": {
+        "body": [
+            "SuppressHint(${1:name})$0"
+        ],
+        "description": "PLAYER [Server] \n\n[string] name\n  Hint name/class/index to prevent from showing up",
+        "prefix": "SuppressHint"
+    },
+    "SwitchToDefaultWeapon": {
+        "body": [
+            "SwitchToDefaultWeapon()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "SwitchToDefaultWeapon"
+    },
+    "Team": {
+        "body": [
+            "Team()$0"
+        ],
+        "description": "PLAYER [Shared] Returns the player's team ID. Returns 0 clientside when the game is not fully loaded.",
+        "prefix": "Team"
+    },
+    "TimeConnected": {
+        "body": [
+            "TimeConnected()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "TimeConnected"
+    },
+    "TraceHullAttack": {
+        "body": [
+            "TraceHullAttack(${1:startPos}, ${2:endPos}, ${3:mins}, ${4:maxs}, ${5:damage}, ${6:damageFlags}, ${7:damageForce}, ${8:damageAllNPCs})$0"
+        ],
+        "description": "PLAYER [Server] Performs a trace hull and applies damage to the entities hit, returns the first entity hit.\n\n[Vector] startPos\n  The start position of the hull trace.\n\n[Vector] endPos\n  The end position of the hull trace.\n\n[Vector] mins\n  The minimum coordinates of the hull.\n\n[Vector] maxs\n  The maximum coordinates of the hull.\n\n[number] damage\n  The damage to be applied.\n\n[Vector] damageFlags\n  Bitflag specifying the damage type, see DMG_ Enums.\n\n[number] damageForce\n  The force to be applied to the hit object.\n\n[boolean] damageAllNPCs\n  Whether to apply damage to all hit NPCs or not.",
+        "prefix": "TraceHullAttack"
+    },
+    "TranslateWeaponActivity": {
+        "body": [
+            "TranslateWeaponActivity(${1:act})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] act\n  The initial ACT_ Enums",
+        "prefix": "TranslateWeaponActivity"
+    },
+    "UnLock": {
+        "body": [
+            "UnLock()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "UnLock"
+    },
+    "UnSpectate": {
+        "body": [
+            "UnSpectate()$0"
+        ],
+        "description": "PLAYER [Server]",
+        "prefix": "UnSpectate"
+    },
+    "UnfreezePhysicsObjects": {
+        "body": [
+            "UnfreezePhysicsObjects()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "UnfreezePhysicsObjects"
+    },
+    "UniqueID": {
+        "body": [
+            "UniqueID()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "UniqueID"
+    },
+    "UniqueIDTable": {
+        "body": [
+            "UniqueIDTable(${1:key})$0"
+        ],
+        "description": "PLAYER [Shared] Returns a table that will stay allocated for the specific player between connects until the server shuts down. Note, that this table is not synchronized between client and server.\n\n[any] key\n  Unique table key.",
+        "prefix": "UniqueIDTable"
+    },
+    "UserID": {
+        "body": [
+            "UserID()$0"
+        ],
+        "description": "PLAYER [Shared]",
+        "prefix": "UserID"
+    },
+    "ViewPunch": {
+        "body": [
+            "ViewPunch(${1:PunchAngle})$0"
+        ],
+        "description": "PLAYER [Shared] Simulates a push on the client's screen.\n\n[Angle] PunchAngle\n  The angle in which to push the player's screen.",
+        "prefix": "ViewPunch"
+    },
+    "ViewPunchReset": {
+        "body": [
+            "ViewPunchReset(${1:tolerance=0})$0"
+        ],
+        "description": "PLAYER [Shared] \n\n[number] tolerance=0\n  Reset all ViewPunch below this threshold.",
+        "prefix": "ViewPunchReset"
+    },
+    "VoiceVolume": {
+        "body": [
+            "VoiceVolume()$0"
+        ],
+        "description": "PLAYER [Client]",
+        "prefix": "VoiceVolume"
+    }
+}

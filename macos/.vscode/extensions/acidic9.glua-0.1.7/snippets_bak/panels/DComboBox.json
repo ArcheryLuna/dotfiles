@@ -1,0 +1,93 @@
+{
+	"DComboBox/AddChoice": {
+		"body": [
+			"AddChoice(${1:value}, ${2:data=nil}, ${3:select=false})$0"
+		],
+		"description": "Adds a choice to the combo box",
+		"prefix": "AddChoice"
+	},
+	"DComboBox/ChooseOption": {
+		"body": [
+			"ChooseOption(${1:value}, ${2:index})$0"
+		],
+		"description": "Selects a combo box option by its index and changes the text displayed at the top of the combo box.",
+		"prefix": "ChooseOption"
+	},
+	"DComboBox/ChooseOptionID": {
+		"body": [
+			"ChooseOptionID(${1:index})$0"
+		],
+		"description": "Selects an option within a combo box based on its table index.",
+		"prefix": "ChooseOptionID"
+	},
+	"DComboBox/Clear": {
+		"body": [
+			"Clear()$0"
+		],
+		"description": "Clears the combo box\u0026#39;s text value, choices, and data values.",
+		"prefix": "Clear"
+	},
+	"DComboBox/CloseMenu": {
+		"body": [
+			"CloseMenu()$0"
+		],
+		"description": "Closes the combo box menu. Called when the combo box is clicked while open.",
+		"prefix": "CloseMenu"
+	},
+	"DComboBox/GetOptionData": {
+		"body": [
+			"GetOptionData(${1:index})$0"
+		],
+		"description": "Returns an option\u0026#39;s data based on the given index.",
+		"prefix": "GetOptionData"
+	},
+	"DComboBox/GetOptionText": {
+		"body": [
+			"GetOptionText(${1:index})$0"
+		],
+		"description": "Returns an option\u0026#39;s text based on the given index.",
+		"prefix": "GetOptionText"
+	},
+	"DComboBox/GetSelected": {
+		"body": [
+			"GetSelected()$0"
+		],
+		"description": "Returns the currently selected option\u0026#39;s text and data",
+		"prefix": "GetSelected"
+	},
+	"DComboBox/GetSelectedID": {
+		"body": [
+			"GetSelectedID()$0"
+		],
+		"description": "Returns the index (ID) of the currently selected option.",
+		"prefix": "GetSelectedID"
+	},
+	"DComboBox/IsMenuOpen": {
+		"body": [
+			"IsMenuOpen()$0"
+		],
+		"description": "Returns whether or not the combo box\u0026#39;s menu is opened.",
+		"prefix": "IsMenuOpen"
+	},
+	"DComboBox/OnSelect": {
+		"body": [
+			"OnSelect(${1:index}, ${2:value}, ${3:data})$0"
+		],
+		"description": "Internal function which is called when an option in the combo box is selected. This function does nothing by default and is meant to be overridden in order to make the combo box functional.",
+		"prefix": "OnSelect"
+	},
+	"DComboBox/OpenMenu": {
+		"body": [
+			"OpenMenu()$0"
+		],
+		"description": "Opens the combo box drop down menu. Called when the combo box is clicked.",
+		"prefix": "OpenMenu"
+	},
+	"DComboBox/SetValue": {
+		"body": [
+			"SetValue(${1:value})$0"
+		],
+		"description": "Sets the text shown in the combo box when the menu is not collapsed.",
+		"prefix": "SetValue"
+	}
+}

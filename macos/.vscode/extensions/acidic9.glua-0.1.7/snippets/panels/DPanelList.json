@@ -1,0 +1,9 @@
+{
+    "InsertAtTop": {
+        "body": [
+            "InsertAtTop(${1:insert}, ${2:strLineState})$0"
+        ],
+        "description": "DPANELLIST [Client] \n\n[Panel] insert\n  The panel to insert\n\n[string] strLineState\n  If set to \"ownline\", no other panels will be placed to the left or right of the panel we are inserting",
+        "prefix": "InsertAtTop"
+    }
+}

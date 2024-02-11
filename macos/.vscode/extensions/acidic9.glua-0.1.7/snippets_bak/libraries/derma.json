@@ -1,0 +1,93 @@
+{
+	"derma/Color": {
+		"body": [
+			"derma.Color(${1:name}, ${2:pnl}, ${3:default})$0"
+		],
+		"description": "Gets the color from a Derma skin of a panel and returns default color if not found",
+		"prefix": "derma.Color"
+	},
+	"derma/Controls": {
+		"body": [
+			"()$0"
+		],
+		"description": "No description available.",
+		"prefix": ""
+	},
+	"derma/DefineControl": {
+		"body": [
+			"derma.DefineControl(${1:name}, ${2:description}, ${3:tab}, ${4:base})$0"
+		],
+		"description": "Defines a new Derma control with an optional base",
+		"prefix": "derma.DefineControl"
+	},
+	"derma/DefineSkin": {
+		"body": [
+			"derma.DefineSkin(${1:name}, ${2:descriptions}, ${3:skin})$0"
+		],
+		"description": "Defines a new skin so that it is usable by Derma. The default skin can be found in \u0026#34;garrysmod/lua/skins/default.lua\u0026#34;",
+		"prefix": "derma.DefineSkin"
+	},
+	"derma/GetControlList": {
+		"body": [
+			"derma.GetControlList()$0"
+		],
+		"description": "Returns the",
+		"prefix": "derma.GetControlList"
+	},
+	"derma/GetDefaultSkin": {
+		"body": [
+			"derma.GetDefaultSkin()$0"
+		],
+		"description": "Returns the default skin table, which can be changed with the hook",
+		"prefix": "derma.GetDefaultSkin"
+	},
+	"derma/GetNamedSkin": {
+		"body": [
+			"derma.GetNamedSkin(${1:name})$0"
+		],
+		"description": "Returns the skin table of the skin with the supplied name",
+		"prefix": "derma.GetNamedSkin"
+	},
+	"derma/GetSkinTable": {
+		"body": [
+			"derma.GetSkinTable()$0"
+		],
+		"description": "Returns a copy of the table containing every Derma skin",
+		"prefix": "derma.GetSkinTable"
+	},
+	"derma/RefreshSkins": {
+		"body": [
+			"derma.RefreshSkins()$0"
+		],
+		"description": "Clears all cached panels so that they reassess which skin they should be using.",
+		"prefix": "derma.RefreshSkins"
+	},
+	"derma/SkinChangeIndex": {
+		"body": [
+			"derma.SkinChangeIndex()$0"
+		],
+		"description": "Returns how many times",
+		"prefix": "derma.SkinChangeIndex"
+	},
+	"derma/SkinHook": {
+		"body": [
+			"derma.SkinHook(${1:type}, ${2:name}, ${3:panel}, ${4:w}, ${5:h})$0"
+		],
+		"description": "Calls the specified hook for the given panel",
+		"prefix": "derma.SkinHook"
+	},
+	"derma/SkinList": {
+		"body": [
+			"()$0"
+		],
+		"description": "No description available.",
+		"prefix": ""
+	},
+	"derma/SkinTexture": {
+		"body": [
+			"derma.SkinTexture(${1:name}, ${2:pnl}, ${3:fallback=nil})$0"
+		],
+		"description": "Returns a function to draw a specified texture of panels skin.",
+		"prefix": "derma.SkinTexture"
+	}
+}

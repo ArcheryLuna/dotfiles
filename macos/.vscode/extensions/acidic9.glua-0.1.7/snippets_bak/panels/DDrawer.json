@@ -1,0 +1,37 @@
+{
+	"DDrawer/GetOpenSize": {
+		"body": [
+			"GetOpenSize()$0"
+		],
+		"description": "Return the Open Size of DDrawer.",
+		"prefix": "GetOpenSize"
+	},
+	"DDrawer/GetOpenTime": {
+		"body": [
+			"GetOpenTime()$0"
+		],
+		"description": "Return the Open Time of DDrawer.",
+		"prefix": "GetOpenTime"
+	},
+	"DDrawer/SetOpenSize": {
+		"body": [
+			"SetOpenSize(${1:Value})$0"
+		],
+		"description": "Set the height of DDrawer",
+		"prefix": "SetOpenSize"
+	},
+	"DDrawer/SetOpenTime": {
+		"body": [
+			"SetOpenTime(${1:value})$0"
+		],
+		"description": "Set the time (in seconds) for DDrawer to open.",
+		"prefix": "SetOpenTime"
+	},
+	"DDrawer/Toggle": {
+		"body": [
+			"Toggle()$0"
+		],
+		"description": "Toggle the DDrawer.",
+		"prefix": "Toggle"
+	}
+}

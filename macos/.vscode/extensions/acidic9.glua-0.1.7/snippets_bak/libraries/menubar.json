@@ -1,0 +1,23 @@
+{
+	"menubar/Init": {
+		"body": [
+			"menubar.Init()$0"
+		],
+		"description": "Creates the menu bar ( The bar at the top of the screen when holding C or Q in sandbox ) and docks it to the top of the screen. It will not appear.",
+		"prefix": "menubar.Init"
+	},
+	"menubar/IsParent": {
+		"body": [
+			"menubar.IsParent(${1:pnl})$0"
+		],
+		"description": "Checks if the supplied panel is parent to the menubar",
+		"prefix": "menubar.IsParent"
+	},
+	"menubar/ParentTo": {
+		"body": [
+			"menubar.ParentTo(${1:pnl})$0"
+		],
+		"description": "Parents the menubar to the panel and displays the menubar.",
+		"prefix": "menubar.ParentTo"
+	}
+}

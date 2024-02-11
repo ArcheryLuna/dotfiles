@@ -1,0 +1,296 @@
+{
+    "GetAirResistance": {
+        "body": [
+            "GetAirResistance()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetAirResistance"
+    },
+    "GetAngleVelocity": {
+        "body": [
+            "GetAngleVelocity()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetAngleVelocity"
+    },
+    "GetAngles": {
+        "body": [
+            "GetAngles()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetAngles"
+    },
+    "GetBounce": {
+        "body": [
+            "GetBounce()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetBounce"
+    },
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "CLUAPARTICLE [Client] Returns the color of the particle.",
+        "prefix": "GetColor"
+    },
+    "GetDieTime": {
+        "body": [
+            "GetDieTime()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetDieTime"
+    },
+    "GetEndAlpha": {
+        "body": [
+            "GetEndAlpha()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetEndAlpha"
+    },
+    "GetEndLength": {
+        "body": [
+            "GetEndLength()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetEndLength"
+    },
+    "GetEndSize": {
+        "body": [
+            "GetEndSize()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetEndSize"
+    },
+    "GetGravity": {
+        "body": [
+            "GetGravity()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetGravity"
+    },
+    "GetLifeTime": {
+        "body": [
+            "GetLifeTime()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetLifeTime"
+    },
+    "GetPos": {
+        "body": [
+            "GetPos()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetPos"
+    },
+    "GetRoll": {
+        "body": [
+            "GetRoll()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetRoll"
+    },
+    "GetRollDelta": {
+        "body": [
+            "GetRollDelta()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetRollDelta"
+    },
+    "GetStartAlpha": {
+        "body": [
+            "GetStartAlpha()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetStartAlpha"
+    },
+    "GetStartLength": {
+        "body": [
+            "GetStartLength()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetStartLength"
+    },
+    "GetStartSize": {
+        "body": [
+            "GetStartSize()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetStartSize"
+    },
+    "GetVelocity": {
+        "body": [
+            "GetVelocity()$0"
+        ],
+        "description": "CLUAPARTICLE [Client]",
+        "prefix": "GetVelocity"
+    },
+    "SetAirResistance": {
+        "body": [
+            "SetAirResistance(${1:airResistance})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] airResistance\n  New air resistance.",
+        "prefix": "SetAirResistance"
+    },
+    "SetAngleVelocity": {
+        "body": [
+            "SetAngleVelocity(${1:angVel})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[Angle] angVel\n  New angular velocity.",
+        "prefix": "SetAngleVelocity"
+    },
+    "SetAngles": {
+        "body": [
+            "SetAngles(${1:ang})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[Angle] ang\n  New angle.",
+        "prefix": "SetAngles"
+    },
+    "SetBounce": {
+        "body": [
+            "SetBounce(${1:bounce})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] bounce\n  New 'bounciness' of the particle\n2 means it will gain 100% of its previous velocity,\n1 means it will not lose velocity,\n0.5 means it will lose half of its velocity with each bounce.",
+        "prefix": "SetBounce"
+    },
+    "SetCollide": {
+        "body": [
+            "SetCollide(${1:shouldCollide})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[boolean] shouldCollide\n  Whether the particle should collide with the world or not",
+        "prefix": "SetCollide"
+    },
+    "SetCollideCallback": {
+        "body": [
+            "SetCollideCallback(${1:collideFunc})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] Sets the function that gets called whenever the particle collides with the world.\n\n[function] collideFunc\n  Collide callback, the arguments are:\n\nCLuaParticle particle - The particle itselfVector hitPos - Position of the collisionVector hitNormal - Direction of the collision, perpendicular to the hit surface",
+        "prefix": "SetCollideCallback"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:r}, ${2:g}, ${3:b})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] Sets the color of the particle.\n\n[number] r\n  The red component.\n\n[number] g\n  The green component.\n\n[number] b\n  The blue component.",
+        "prefix": "SetColor"
+    },
+    "SetDieTime": {
+        "body": [
+            "SetDieTime(${1:dieTime})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] dieTime\n  The new die time.",
+        "prefix": "SetDieTime"
+    },
+    "SetEndAlpha": {
+        "body": [
+            "SetEndAlpha(${1:endAlpha})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] endAlpha\n  The new alpha value of the particle that it will reach when it dies.",
+        "prefix": "SetEndAlpha"
+    },
+    "SetEndLength": {
+        "body": [
+            "SetEndLength(${1:endLength})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] endLength\n  The new length of the particle that it will reach when it dies.",
+        "prefix": "SetEndLength"
+    },
+    "SetEndSize": {
+        "body": [
+            "SetEndSize(${1:endSize})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] endSize\n  The new size of the particle that it will reach when it dies.",
+        "prefix": "SetEndSize"
+    },
+    "SetGravity": {
+        "body": [
+            "SetGravity(${1:gravity})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[Vector] gravity\n  The directional gravity.",
+        "prefix": "SetGravity"
+    },
+    "SetLifeTime": {
+        "body": [
+            "SetLifeTime(${1:lifeTime})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] lifeTime\n  The new life time of the particle.",
+        "prefix": "SetLifeTime"
+    },
+    "SetLighting": {
+        "body": [
+            "SetLighting(${1:useLighting})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[boolean] useLighting\n  Whether the particle should be lighted.",
+        "prefix": "SetLighting"
+    },
+    "SetNextThink": {
+        "body": [
+            "SetNextThink(${1:nextThink})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] nextThink\n  Next think time.",
+        "prefix": "SetNextThink"
+    },
+    "SetPos": {
+        "body": [
+            "SetPos(${1:pos})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[Vector] pos\n  The new particle position.",
+        "prefix": "SetPos"
+    },
+    "SetRoll": {
+        "body": [
+            "SetRoll(${1:roll})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] roll\n  The new rotation of the particle in radians.",
+        "prefix": "SetRoll"
+    },
+    "SetRollDelta": {
+        "body": [
+            "SetRollDelta(${1:rollDelta})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] rollDelta\n  The new rotation speed of the particle in radians.",
+        "prefix": "SetRollDelta"
+    },
+    "SetStartAlpha": {
+        "body": [
+            "SetStartAlpha(${1:startAlpha})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] startAlpha\n  Initial alpha.",
+        "prefix": "SetStartAlpha"
+    },
+    "SetStartLength": {
+        "body": [
+            "SetStartLength(${1:startLength})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] startLength\n  Initial length.",
+        "prefix": "SetStartLength"
+    },
+    "SetStartSize": {
+        "body": [
+            "SetStartSize(${1:startSize})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[number] startSize\n  Initial size.",
+        "prefix": "SetStartSize"
+    },
+    "SetThinkFunction": {
+        "body": [
+            "SetThinkFunction(${1:thinkFunc})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] Sets the think function of the particle.\n\n[function] thinkFunc\n  Think function. It has only one argument:\n\nCLuaParticle particle - The particle the think hook is set on",
+        "prefix": "SetThinkFunction"
+    },
+    "SetVelocity": {
+        "body": [
+            "SetVelocity(${1:vel})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[Vector] vel\n  The new velocity of the particle.",
+        "prefix": "SetVelocity"
+    },
+    "SetVelocityScale": {
+        "body": [
+            "SetVelocityScale(${1:doScale=false})$0"
+        ],
+        "description": "CLUAPARTICLE [Client] \n\n[boolean] doScale=false\n  Use velocity scaling.",
+        "prefix": "SetVelocityScale"
+    }
+}

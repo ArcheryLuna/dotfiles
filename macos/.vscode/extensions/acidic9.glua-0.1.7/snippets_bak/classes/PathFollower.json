@@ -1,0 +1,191 @@
+{
+	"PathFollower/Chase": {
+		"body": [
+			"Chase(${1:bot}, ${2:ent})$0"
+		],
+		"description": "If you created your path with type \u0026#34;Chase\u0026#34; this functions should be used in place of",
+		"prefix": "Chase"
+	},
+	"PathFollower/Compute": {
+		"body": [
+			"Compute(${1:from}, ${2:to}, ${3:generator=nil})$0"
+		],
+		"description": "Compute shortest path from bot to \u0026#39;goal\u0026#39; via A* algorithm.",
+		"prefix": "Compute"
+	},
+	"PathFollower/Draw": {
+		"body": [
+			"Draw()$0"
+		],
+		"description": "Draws the path. This is meant for debugging - and uses debug overlay.",
+		"prefix": "Draw"
+	},
+	"PathFollower/FirstSegment": {
+		"body": [
+			"FirstSegment()$0"
+		],
+		"description": "Returns the first segment of the path.",
+		"prefix": "FirstSegment"
+	},
+	"PathFollower/GetAge": {
+		"body": [
+			"GetAge()$0"
+		],
+		"description": "Returns the age since the path was built",
+		"prefix": "GetAge"
+	},
+	"PathFollower/GetAllSegments": {
+		"body": [
+			"GetAllSegments()$0"
+		],
+		"description": "Returns all of the segments of the given path.",
+		"prefix": "GetAllSegments"
+	},
+	"PathFollower/GetClosestPosition": {
+		"body": [
+			"GetClosestPosition(${1:position})$0"
+		],
+		"description": "The closest position along the path to a position",
+		"prefix": "GetClosestPosition"
+	},
+	"PathFollower/GetCurrentGoal": {
+		"body": [
+			"GetCurrentGoal()$0"
+		],
+		"description": "Returns the current goal data. Can return nil if the current goal is invalid, for example immediately after",
+		"prefix": "GetCurrentGoal"
+	},
+	"PathFollower/GetCursorData": {
+		"body": [
+			"GetCursorData()$0"
+		],
+		"description": "Returns the cursor data",
+		"prefix": "GetCursorData"
+	},
+	"PathFollower/GetCursorPosition": {
+		"body": [
+			"GetCursorPosition()$0"
+		],
+		"description": "Returns the current progress along the path",
+		"prefix": "GetCursorPosition"
+	},
+	"PathFollower/GetEnd": {
+		"body": [
+			"GetEnd()$0"
+		],
+		"description": "Returns the path end position",
+		"prefix": "GetEnd"
+	},
+	"PathFollower/GetHindrance": {
+		"body": [
+			"GetHindrance()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetHindrance"
+	},
+	"PathFollower/GetLength": {
+		"body": [
+			"GetLength()$0"
+		],
+		"description": "Returns the total length of the path",
+		"prefix": "GetLength"
+	},
+	"PathFollower/GetPositionOnPath": {
+		"body": [
+			"GetPositionOnPath(${1:distance})$0"
+		],
+		"description": "Returns the vector position of distance along path",
+		"prefix": "GetPositionOnPath"
+	},
+	"PathFollower/GetStart": {
+		"body": [
+			"GetStart()$0"
+		],
+		"description": "Returns the path start position",
+		"prefix": "GetStart"
+	},
+	"PathFollower/Invalidate": {
+		"body": [
+			"Invalidate()$0"
+		],
+		"description": "Invalidates the current path",
+		"prefix": "Invalidate"
+	},
+	"PathFollower/IsValid": {
+		"body": [
+			"IsValid()$0"
+		],
+		"description": "Returns true if the path is valid",
+		"prefix": "IsValid"
+	},
+	"PathFollower/LastSegment": {
+		"body": [
+			"LastSegment()$0"
+		],
+		"description": "Returns the last segment of the path.",
+		"prefix": "LastSegment"
+	},
+	"PathFollower/MoveCursor": {
+		"body": [
+			"MoveCursor(${1:distance})$0"
+		],
+		"description": "Moves the cursor by give distance.",
+		"prefix": "MoveCursor"
+	},
+	"PathFollower/MoveCursorTo": {
+		"body": [
+			"MoveCursorTo(${1:distance})$0"
+		],
+		"description": "Sets the cursor position to given distance.",
+		"prefix": "MoveCursorTo"
+	},
+	"PathFollower/MoveCursorToClosestPosition": {
+		"body": [
+			"MoveCursorToClosestPosition(${1:pos}, ${2:type=0}, ${3:alongLimit=0})$0"
+		],
+		"description": "Moves the cursor of the path to the closest position compared to given vector.",
+		"prefix": "MoveCursorToClosestPosition"
+	},
+	"PathFollower/MoveCursorToEnd": {
+		"body": [
+			"MoveCursorToEnd()$0"
+		],
+		"description": "Moves the cursor to the end of the path",
+		"prefix": "MoveCursorToEnd"
+	},
+	"PathFollower/MoveCursorToStart": {
+		"body": [
+			"MoveCursorToStart()$0"
+		],
+		"description": "Moves the cursor to the end of the path",
+		"prefix": "MoveCursorToStart"
+	},
+	"PathFollower/ResetAge": {
+		"body": [
+			"ResetAge()$0"
+		],
+		"description": "Resets the age which is retrieved by",
+		"prefix": "ResetAge"
+	},
+	"PathFollower/SetGoalTolerance": {
+		"body": [
+			"SetGoalTolerance(${1:distance})$0"
+		],
+		"description": "How close we can get to the goal to call it done",
+		"prefix": "SetGoalTolerance"
+	},
+	"PathFollower/SetMinLookAheadDistance": {
+		"body": [
+			"SetMinLookAheadDistance(${1:mindist})$0"
+		],
+		"description": "Sets minimum range movement goal must be along path",
+		"prefix": "SetMinLookAheadDistance"
+	},
+	"PathFollower/Update": {
+		"body": [
+			"Update(${1:bot})$0"
+		],
+		"description": "Move the bot along the path.",
+		"prefix": "Update"
+	}
+}

@@ -1,0 +1,65 @@
+{
+    "Forward": {
+        "body": [
+            "Forward()$0"
+        ],
+        "description": "ANGLE [Shared]",
+        "prefix": "Forward"
+    },
+    "IsZero": {
+        "body": [
+            "IsZero()$0"
+        ],
+        "description": "ANGLE [Shared]",
+        "prefix": "IsZero"
+    },
+    "Normalize": {
+        "body": [
+            "Normalize()$0"
+        ],
+        "description": "ANGLE [Shared]",
+        "prefix": "Normalize"
+    },
+    "Right": {
+        "body": [
+            "Right()$0"
+        ],
+        "description": "ANGLE [Shared]",
+        "prefix": "Right"
+    },
+    "RotateAroundAxis": {
+        "body": [
+            "RotateAroundAxis(${1:axis}, ${2:rotation})$0"
+        ],
+        "description": "ANGLE [Shared] \n\n[Vector] axis\n  The axis to rotate around.\n\n[number] rotation\n  The degrees to rotate around the specified axis.",
+        "prefix": "RotateAroundAxis"
+    },
+    "Set": {
+        "body": [
+            "Set(${1:originalAngle})$0"
+        ],
+        "description": "ANGLE [Shared] \n\n[Angle] originalAngle\n  The angle to copy the values from.",
+        "prefix": "Set"
+    },
+    "SnapTo": {
+        "body": [
+            "SnapTo(${1:axis}, ${2:target})$0"
+        ],
+        "description": "ANGLE [Shared] Snaps the angle to nearest interval of degrees.\n\n[string] axis\n  The component/axis to snap. Can be either \"p\"/\"pitch\", \"y\"/\"yaw\" or \"r\"/\"roll\".\n\n[number] target\n  The target angle snap interval",
+        "prefix": "SnapTo"
+    },
+    "Up": {
+        "body": [
+            "Up()$0"
+        ],
+        "description": "ANGLE [Shared]",
+        "prefix": "Up"
+    },
+    "Zero": {
+        "body": [
+            "Zero()$0"
+        ],
+        "description": "ANGLE [Shared]",
+        "prefix": "Zero"
+    }
+}

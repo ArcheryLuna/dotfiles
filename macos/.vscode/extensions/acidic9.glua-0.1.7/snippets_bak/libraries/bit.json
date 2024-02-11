@@ -1,0 +1,86 @@
+{
+	"bit/arshift": {
+		"body": [
+			"bit.arshift(${1:value}, ${2:shiftCount})$0"
+		],
+		"description": "Returns the arithmetically shifted value.",
+		"prefix": "bit.arshift"
+	},
+	"bit/band": {
+		"body": [
+			"bit.band(${1:value}, ${2:otherValues=nil})$0"
+		],
+		"description": "Returns the bitwise and of all values specified.",
+		"prefix": "bit.band"
+	},
+	"bit/bnot": {
+		"body": [
+			"bit.bnot(${1:value})$0"
+		],
+		"description": "Returns the bitwise not of the value.",
+		"prefix": "bit.bnot"
+	},
+	"bit/bor": {
+		"body": [
+			"bit.bor(${1:value1}, ${2:...})$0"
+		],
+		"description": "Returns the bitwise OR of all values specified.",
+		"prefix": "bit.bor"
+	},
+	"bit/bswap": {
+		"body": [
+			"bit.bswap(${1:value})$0"
+		],
+		"description": "Swaps the byte order.",
+		"prefix": "bit.bswap"
+	},
+	"bit/bxor": {
+		"body": [
+			"bit.bxor(${1:value}, ${2:otherValues=nil})$0"
+		],
+		"description": "Returns the bitwise xor of all values specified.",
+		"prefix": "bit.bxor"
+	},
+	"bit/lshift": {
+		"body": [
+			"bit.lshift(${1:value}, ${2:shiftCount})$0"
+		],
+		"description": "Returns the left shifted value.",
+		"prefix": "bit.lshift"
+	},
+	"bit/rol": {
+		"body": [
+			"bit.rol(${1:value}, ${2:shiftCount})$0"
+		],
+		"description": "Returns the left rotated value.",
+		"prefix": "bit.rol"
+	},
+	"bit/ror": {
+		"body": [
+			"bit.ror(${1:value}, ${2:shiftCount})$0"
+		],
+		"description": "Returns the right rotated value.",
+		"prefix": "bit.ror"
+	},
+	"bit/rshift": {
+		"body": [
+			"bit.rshift(${1:value}, ${2:shiftCount})$0"
+		],
+		"description": "Returns the right shifted value.",
+		"prefix": "bit.rshift"
+	},
+	"bit/tobit": {
+		"body": [
+			"bit.tobit(${1:value})$0"
+		],
+		"description": "Normalizes the specified value and clamps it in the range of a signed 32bit integer.",
+		"prefix": "bit.tobit"
+	},
+	"bit/tohex": {
+		"body": [
+			"bit.tohex(${1:value}, ${2:digits=8})$0"
+		],
+		"description": "Returns the hexadecimal representation of the number with the specified digits.",
+		"prefix": "bit.tohex"
+	}
+}

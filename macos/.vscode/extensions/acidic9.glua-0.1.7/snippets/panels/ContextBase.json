@@ -1,0 +1,30 @@
+{
+    "ConVar": {
+        "body": [
+            "ConVar()$0"
+        ],
+        "description": "CONTEXTBASE [Client]",
+        "prefix": "ConVar"
+    },
+    "ControlValues": {
+        "body": [
+            "ControlValues(${1:contextData})$0"
+        ],
+        "description": "CONTEXTBASE [Client] \n\n[table] contextData\n  A two-membered table:\n\n string convar - The console variable to use. Calls ContextBase:SetConVar.\n string label - The text to display inside the control's label.",
+        "prefix": "ControlValues"
+    },
+    "SetConVar": {
+        "body": [
+            "SetConVar(${1:cvar})$0"
+        ],
+        "description": "CONTEXTBASE [Client] \n\n[string] cvar\n  The ConVar for the panel to change.",
+        "prefix": "SetConVar"
+    },
+    "TestForChanges": {
+        "body": [
+            "TestForChanges()$0"
+        ],
+        "description": "CONTEXTBASE [Client]",
+        "prefix": "TestForChanges"
+    }
+}

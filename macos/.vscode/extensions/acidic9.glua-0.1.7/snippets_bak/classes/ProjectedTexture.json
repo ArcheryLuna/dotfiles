@@ -1,0 +1,198 @@
+{
+	"ProjectedTexture/GetAngles": {
+		"body": [
+			"GetAngles()$0"
+		],
+		"description": "Returns the angle of the ProjectedTexture, which were previously set by",
+		"prefix": "GetAngles"
+	},
+	"ProjectedTexture/GetBrightness": {
+		"body": [
+			"GetBrightness()$0"
+		],
+		"description": "Returns the brightness of the ProjectedTexture, which was previously set by",
+		"prefix": "GetBrightness"
+	},
+	"ProjectedTexture/GetColor": {
+		"body": [
+			"GetColor()$0"
+		],
+		"description": "Returns the color of the ProjectedTexture, which was previously set by",
+		"prefix": "GetColor"
+	},
+	"ProjectedTexture/GetEnableShadows": {
+		"body": [
+			"GetEnableShadows()$0"
+		],
+		"description": "Returns whether shadows are enabled for this ProjectedTexture, which was previously set by",
+		"prefix": "GetEnableShadows"
+	},
+	"ProjectedTexture/GetFarZ": {
+		"body": [
+			"GetFarZ()$0"
+		],
+		"description": "Returns the projection distance of the ProjectedTexture, which was previously set by",
+		"prefix": "GetFarZ"
+	},
+	"ProjectedTexture/GetHorizontalFOV": {
+		"body": [
+			"GetHorizontalFOV()$0"
+		],
+		"description": "Returns the horizontal FOV of the ProjectedTexture, which was previously set by",
+		"prefix": "GetHorizontalFOV"
+	},
+	"ProjectedTexture/GetNearZ": {
+		"body": [
+			"GetNearZ()$0"
+		],
+		"description": "Returns the NearZ value of the ProjectedTexture, which was previously set by",
+		"prefix": "GetNearZ"
+	},
+	"ProjectedTexture/GetOrthographic": {
+		"body": [
+			"GetOrthographic()$0"
+		],
+		"description": "Returns the current orthographic settings of the Projected Texture. To set these values, use",
+		"prefix": "GetOrthographic"
+	},
+	"ProjectedTexture/GetPos": {
+		"body": [
+			"GetPos()$0"
+		],
+		"description": "Returns the position of the ProjectedTexture, which was previously set by",
+		"prefix": "GetPos"
+	},
+	"ProjectedTexture/GetTexture": {
+		"body": [
+			"GetTexture()$0"
+		],
+		"description": "Returns the texture of the ProjectedTexture, which was previously set by",
+		"prefix": "GetTexture"
+	},
+	"ProjectedTexture/GetTextureFrame": {
+		"body": [
+			"GetTextureFrame()$0"
+		],
+		"description": "Returns the texture frame of the ProjectedTexture, which was previously set by",
+		"prefix": "GetTextureFrame"
+	},
+	"ProjectedTexture/GetVerticalFOV": {
+		"body": [
+			"GetVerticalFOV()$0"
+		],
+		"description": "Returns the vertical FOV of the ProjectedTexture, which was previously set by",
+		"prefix": "GetVerticalFOV"
+	},
+	"ProjectedTexture/IsValid": {
+		"body": [
+			"IsValid()$0"
+		],
+		"description": "Returns true if the projected texture is valid (i.e. has not been removed), false otherwise.",
+		"prefix": "IsValid"
+	},
+	"ProjectedTexture/Remove": {
+		"body": [
+			"Remove()$0"
+		],
+		"description": "Removes the projected texture. After calling this,",
+		"prefix": "Remove"
+	},
+	"ProjectedTexture/SetAngles": {
+		"body": [
+			"SetAngles(${1:angle})$0"
+		],
+		"description": "Sets the angles (direction) of the projected texture.",
+		"prefix": "SetAngles"
+	},
+	"ProjectedTexture/SetBrightness": {
+		"body": [
+			"SetBrightness(${1:brightness})$0"
+		],
+		"description": "Sets the brightness of the projected texture.",
+		"prefix": "SetBrightness"
+	},
+	"ProjectedTexture/SetColor": {
+		"body": [
+			"SetColor(${1:color})$0"
+		],
+		"description": "Sets the color of the projected texture.",
+		"prefix": "SetColor"
+	},
+	"ProjectedTexture/SetEnableShadows": {
+		"body": [
+			"SetEnableShadows(${1:boolean})$0"
+		],
+		"description": "Enable or disable shadows cast from the projected texture.",
+		"prefix": "SetEnableShadows"
+	},
+	"ProjectedTexture/SetFOV": {
+		"body": [
+			"SetFOV(${1:fov})$0"
+		],
+		"description": "Sets the angle of projection.",
+		"prefix": "SetFOV"
+	},
+	"ProjectedTexture/SetFarZ": {
+		"body": [
+			"SetFarZ(${1:farZ})$0"
+		],
+		"description": "Sets the distance at which the projected texture ends.",
+		"prefix": "SetFarZ"
+	},
+	"ProjectedTexture/SetHorizontalFOV": {
+		"body": [
+			"SetHorizontalFOV(${1:hFOV})$0"
+		],
+		"description": "Sets the horizontal angle of projection without affecting the vertical angle.",
+		"prefix": "SetHorizontalFOV"
+	},
+	"ProjectedTexture/SetNearZ": {
+		"body": [
+			"SetNearZ(${1:nearZ})$0"
+		],
+		"description": "Sets the distance at which the projected texture begins its projection.",
+		"prefix": "SetNearZ"
+	},
+	"ProjectedTexture/SetOrthographic": {
+		"body": [
+			"SetOrthographic(${1:orthographic}, ${2:left}, ${3:top}, ${4:right}, ${5:bottom})$0"
+		],
+		"description": "Changes the current projected texture between orthographic and perspective projection.",
+		"prefix": "SetOrthographic"
+	},
+	"ProjectedTexture/SetPos": {
+		"body": [
+			"SetPos(${1:position})$0"
+		],
+		"description": "Move the Projected Texture to the specified position.",
+		"prefix": "SetPos"
+	},
+	"ProjectedTexture/SetTexture": {
+		"body": [
+			"SetTexture(${1:texture})$0"
+		],
+		"description": "Sets the texture to be projected.",
+		"prefix": "SetTexture"
+	},
+	"ProjectedTexture/SetTextureFrame": {
+		"body": [
+			"SetTextureFrame(${1:frame})$0"
+		],
+		"description": "For animated textures, this will choose which frame in the animation will be projected.",
+		"prefix": "SetTextureFrame"
+	},
+	"ProjectedTexture/SetVerticalFOV": {
+		"body": [
+			"SetVerticalFOV(${1:vFOV})$0"
+		],
+		"description": "Sets the vertical angle of projection without affecting the horizontal angle.",
+		"prefix": "SetVerticalFOV"
+	},
+	"ProjectedTexture/Update": {
+		"body": [
+			"Update()$0"
+		],
+		"description": "Updates the Projected Light and applies all previously set parameters.",
+		"prefix": "Update"
+	}
+}

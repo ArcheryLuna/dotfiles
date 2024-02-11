@@ -1,0 +1,107 @@
+{
+	"NEXTBOT/BehaveStart": {
+		"body": [
+			"BehaveStart()$0"
+		],
+		"description": "Called to initialize the behaviour.",
+		"prefix": "BehaveStart"
+	},
+	"NEXTBOT/BehaveUpdate": {
+		"body": [
+			"BehaveUpdate(${1:interval})$0"
+		],
+		"description": "Called to update the bot\u0026#39;s behaviour.",
+		"prefix": "BehaveUpdate"
+	},
+	"NEXTBOT/BodyUpdate": {
+		"body": [
+			"BodyUpdate()$0"
+		],
+		"description": "Called to update the bot\u0026#39;s animation.",
+		"prefix": "BodyUpdate"
+	},
+	"NEXTBOT/OnContact": {
+		"body": [
+			"OnContact(${1:ent})$0"
+		],
+		"description": "Called when the nextbot touches another entity.",
+		"prefix": "OnContact"
+	},
+	"NEXTBOT/OnIgnite": {
+		"body": [
+			"OnIgnite()$0"
+		],
+		"description": "Called when the bot is ignited.",
+		"prefix": "OnIgnite"
+	},
+	"NEXTBOT/OnInjured": {
+		"body": [
+			"OnInjured(${1:info})$0"
+		],
+		"description": "Called when the bot gets hurt.",
+		"prefix": "OnInjured"
+	},
+	"NEXTBOT/OnKilled": {
+		"body": [
+			"OnKilled(${1:info})$0"
+		],
+		"description": "Called when the bot gets killed.",
+		"prefix": "OnKilled"
+	},
+	"NEXTBOT/OnLandOnGround": {
+		"body": [
+			"OnLandOnGround(${1:ent})$0"
+		],
+		"description": "Called when the bot\u0026#39;s feet return to the ground.",
+		"prefix": "OnLandOnGround"
+	},
+	"NEXTBOT/OnLeaveGround": {
+		"body": [
+			"OnLeaveGround(${1:ent})$0"
+		],
+		"description": "Called when the bot\u0026#39;s feet leave the ground - for whatever reason.",
+		"prefix": "OnLeaveGround"
+	},
+	"NEXTBOT/OnNavAreaChanged": {
+		"body": [
+			"OnNavAreaChanged(${1:old}, ${2:new})$0"
+		],
+		"description": "Called when the nextbot enters a new navigation area.",
+		"prefix": "OnNavAreaChanged"
+	},
+	"NEXTBOT/OnOtherKilled": {
+		"body": [
+			"OnOtherKilled(${1:victim}, ${2:info})$0"
+		],
+		"description": "Called when someone else or something else has been killed.",
+		"prefix": "OnOtherKilled"
+	},
+	"NEXTBOT/OnStuck": {
+		"body": [
+			"OnStuck()$0"
+		],
+		"description": "Called when the bot thinks it is stuck.",
+		"prefix": "OnStuck"
+	},
+	"NEXTBOT/OnUnStuck": {
+		"body": [
+			"OnUnStuck()$0"
+		],
+		"description": "Called when the bot thinks it is un-stuck.",
+		"prefix": "OnUnStuck"
+	},
+	"NEXTBOT/Think": {
+		"body": [
+			"Think()$0"
+		],
+		"description": "Called every tick.",
+		"prefix": "Think"
+	},
+	"NEXTBOT/Use": {
+		"body": [
+			"Use(${1:activator}, ${2:caller}, ${3:type}, ${4:value})$0"
+		],
+		"description": "Called when a player \u0026#39;uses\u0026#39; the entity.",
+		"prefix": "Use"
+	}
+}

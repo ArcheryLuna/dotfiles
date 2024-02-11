@@ -1,0 +1,93 @@
+{
+    "AddMenu": {
+        "body": [
+            "AddMenu(${1:label})$0"
+        ],
+        "description": "DMENUBAR [Client] \n\n[string] label\n  The name (label) of the derma menu to create.",
+        "prefix": "AddMenu"
+    },
+    "AddOrGetMenu": {
+        "body": [
+            "AddOrGetMenu(${1:label})$0"
+        ],
+        "description": "DMENUBAR [Client] \n\n[string] label\n  The name (label) of the derma menu to get or create.",
+        "prefix": "AddOrGetMenu"
+    },
+    "GetBackgroundColor": {
+        "body": [
+            "GetBackgroundColor()$0"
+        ],
+        "description": "DMENUBAR [Client]",
+        "prefix": "GetBackgroundColor"
+    },
+    "GetDisabled": {
+        "body": [
+            "GetDisabled()$0"
+        ],
+        "description": "DMENUBAR [Client]",
+        "prefix": "GetDisabled"
+    },
+    "GetDrawBackground": {
+        "body": [
+            "GetDrawBackground()$0"
+        ],
+        "description": "DMENUBAR [Client]",
+        "prefix": "GetDrawBackground"
+    },
+    "GetIsMenu": {
+        "body": [
+            "GetIsMenu()$0"
+        ],
+        "description": "DMENUBAR [Client]",
+        "prefix": "GetIsMenu"
+    },
+    "GetOpenMenu": {
+        "body": [
+            "GetOpenMenu()$0"
+        ],
+        "description": "DMENUBAR [Client]",
+        "prefix": "GetOpenMenu"
+    },
+    "GetPaintBackground": {
+        "body": [
+            "GetPaintBackground()$0"
+        ],
+        "description": "DMENUBAR [Client]",
+        "prefix": "GetPaintBackground"
+    },
+    "SetBackgroundColor": {
+        "body": [
+            "SetBackgroundColor(${1:color})$0"
+        ],
+        "description": "DMENUBAR [Client] \n\n[table] color\n  See Color structure",
+        "prefix": "SetBackgroundColor"
+    },
+    "SetDisabled": {
+        "body": [
+            "SetDisabled(${1:disable})$0"
+        ],
+        "description": "DMENUBAR [Client] \n\n[boolean] disable\n  Should be disabled or not",
+        "prefix": "SetDisabled"
+    },
+    "SetDrawBackground": {
+        "body": [
+            "SetDrawBackground(${1:shouldPaint})$0"
+        ],
+        "description": "DMENUBAR [Client] \n\n[boolean] shouldPaint\n  Should the background be painted",
+        "prefix": "SetDrawBackground"
+    },
+    "SetIsMenu": {
+        "body": [
+            "SetIsMenu(${1:isMenu})$0"
+        ],
+        "description": "DMENUBAR [Client] \n\n[boolean] isMenu\n  Is this a menu",
+        "prefix": "SetIsMenu"
+    },
+    "SetPaintBackground": {
+        "body": [
+            "SetPaintBackground(${1:shouldPaint})$0"
+        ],
+        "description": "DMENUBAR [Client] \n\n[boolean] shouldPaint\n  Should the background be painted",
+        "prefix": "SetPaintBackground"
+    }
+}

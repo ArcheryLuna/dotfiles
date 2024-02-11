@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNetCore.Razor.LanguageServer.Protocol</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.Protocol.IDelegatedParams">
+            <summary>
+            Interface for delegated params that enables sharing of code in RazorCustomMessageTarget
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.Protocol.TextDocumentIdentifierAndVersion">
+            <summary>
+            A seralizable pairing of <see cref="P:Microsoft.AspNetCore.Razor.LanguageServer.Protocol.TextDocumentIdentifierAndVersion.TextDocumentIdentifier"/> and a version. This
+            should be used over <see cref="T:Microsoft.VisualStudio.LanguageServer.Protocol.VersionedTextDocumentIdentifier"/> because when serializing
+            and deserializing that class, if the <see cref="P:Microsoft.AspNetCore.Razor.LanguageServer.Protocol.TextDocumentIdentifierAndVersion.TextDocumentIdentifier"/> is a <see cref="T:Microsoft.VisualStudio.LanguageServer.Protocol.VSTextDocumentIdentifier"/>
+            it will lose the project context information.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Protocol.TextDocumentIdentifierAndVersion.#ctor(Microsoft.VisualStudio.LanguageServer.Protocol.TextDocumentIdentifier,System.Int32)">
+            <summary>
+            A seralizable pairing of <see cref="P:Microsoft.AspNetCore.Razor.LanguageServer.Protocol.TextDocumentIdentifierAndVersion.TextDocumentIdentifier"/> and a version. This
+            should be used over <see cref="T:Microsoft.VisualStudio.LanguageServer.Protocol.VersionedTextDocumentIdentifier"/> because when serializing
+            and deserializing that class, if the <see cref="P:Microsoft.AspNetCore.Razor.LanguageServer.Protocol.TextDocumentIdentifierAndVersion.TextDocumentIdentifier"/> is a <see cref="T:Microsoft.VisualStudio.LanguageServer.Protocol.VSTextDocumentIdentifier"/>
+            it will lose the project context information.
+            </summary>
+        </member>
+    </members>
+</doc>

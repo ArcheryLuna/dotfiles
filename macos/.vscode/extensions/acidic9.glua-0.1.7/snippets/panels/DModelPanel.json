@@ -1,0 +1,191 @@
+{
+    "DrawModel": {
+        "body": [
+            "DrawModel()$0"
+        ],
+        "description": "DMODELPANEL [Client]",
+        "prefix": "DrawModel"
+    },
+    "GetAmbientLight": {
+        "body": [
+            "GetAmbientLight()$0"
+        ],
+        "description": "DMODELPANEL [Client] Returns the ambient lighting used on the rendered entity.",
+        "prefix": "GetAmbientLight"
+    },
+    "GetAnimSpeed": {
+        "body": [
+            "GetAnimSpeed()$0"
+        ],
+        "description": "DMODELPANEL [Client] Returns the animation speed of the panel entity, see DModelPanel:SetAnimSpeed.",
+        "prefix": "GetAnimSpeed"
+    },
+    "GetAnimated": {
+        "body": [
+            "GetAnimated()$0"
+        ],
+        "description": "DMODELPANEL [Client] Returns whether or not the panel entity should be animated when the default DModelPanel:LayoutEntity function is called.",
+        "prefix": "GetAnimated"
+    },
+    "GetCamPos": {
+        "body": [
+            "GetCamPos()$0"
+        ],
+        "description": "DMODELPANEL [Client] Returns the position of the model viewing camera.",
+        "prefix": "GetCamPos"
+    },
+    "GetColor": {
+        "body": [
+            "GetColor()$0"
+        ],
+        "description": "DMODELPANEL [Client] Returns the color of the rendered entity.",
+        "prefix": "GetColor"
+    },
+    "GetEntity": {
+        "body": [
+            "GetEntity()$0"
+        ],
+        "description": "DMODELPANEL [Client] Returns the entity being rendered by the model panel.",
+        "prefix": "GetEntity"
+    },
+    "GetFOV": {
+        "body": [
+            "GetFOV()$0"
+        ],
+        "description": "DMODELPANEL [Client] Returns the FOV (field of view) the camera is using.",
+        "prefix": "GetFOV"
+    },
+    "GetLookAng": {
+        "body": [
+            "GetLookAng()$0"
+        ],
+        "description": "DMODELPANEL [Client] Returns the angles of the model viewing camera. Is nil until changed with DModelPanel:SetLookAng.",
+        "prefix": "GetLookAng"
+    },
+    "GetLookAt": {
+        "body": [
+            "GetLookAt()$0"
+        ],
+        "description": "DMODELPANEL [Client] Returns the position the viewing camera is pointing toward.",
+        "prefix": "GetLookAt"
+    },
+    "GetModel": {
+        "body": [
+            "GetModel()$0"
+        ],
+        "description": "DMODELPANEL [Client]",
+        "prefix": "GetModel"
+    },
+    "LayoutEntity": {
+        "body": [
+            "LayoutEntity(${1:entity})$0"
+        ],
+        "description": "DMODELPANEL [Client] \n\n[Entity] entity\n  The entity that is being rendered.",
+        "prefix": "LayoutEntity"
+    },
+    "PostDrawModel": {
+        "body": [
+            "PostDrawModel(${1:ent})$0"
+        ],
+        "description": "DMODELPANEL [Client] \n\n[Entity] ent\n  The clientside entity of the DModelPanel that has been drawn.",
+        "prefix": "PostDrawModel"
+    },
+    "PreDrawModel": {
+        "body": [
+            "PreDrawModel(${1:ent})$0"
+        ],
+        "description": "DMODELPANEL [Client] \n\n[Entity] ent\n  The clientside entity of the DModelPanel that has been drawn.",
+        "prefix": "PreDrawModel"
+    },
+    "RunAnimation": {
+        "body": [
+            "RunAnimation()$0"
+        ],
+        "description": "DMODELPANEL [Client]",
+        "prefix": "RunAnimation"
+    },
+    "SetAmbientLight": {
+        "body": [
+            "SetAmbientLight(${1:color})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets the ambient lighting used on the rendered entity.\n\n[table] color\n  The color of the ambient lighting.",
+        "prefix": "SetAmbientLight"
+    },
+    "SetAnimSpeed": {
+        "body": [
+            "SetAnimSpeed(${1:animSpeed})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets the speed used by DModelPanel:RunAnimation to advance frame on an entity sequence.\n\n[number] animSpeed\n  The animation speed.",
+        "prefix": "SetAnimSpeed"
+    },
+    "SetAnimated": {
+        "body": [
+            "SetAnimated(${1:animated})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets whether or not to animate the entity when the default DModelPanel:LayoutEntity is called.\n\n[boolean] animated\n  True to animate, false otherwise.",
+        "prefix": "SetAnimated"
+    },
+    "SetCamPos": {
+        "body": [
+            "SetCamPos(${1:pos})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets the position of the camera.\n\n[Vector] pos\n  The position to set the camera at.",
+        "prefix": "SetCamPos"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets the color of the rendered entity.\n\n[table] color\n  The render color of the entity.",
+        "prefix": "SetColor"
+    },
+    "SetDirectionalLight": {
+        "body": [
+            "SetDirectionalLight(${1:direction}, ${2:color})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets the directional lighting used on the rendered entity.\n\n[number] direction\n  The light direction, see BOX_ Enums.\n\n[table] color\n  The color of the directional lighting.",
+        "prefix": "SetDirectionalLight"
+    },
+    "SetEntity": {
+        "body": [
+            "SetEntity(${1:ent})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets the entity to be rendered by the model panel.\n\n[Entity] ent\n  The new panel entity.",
+        "prefix": "SetEntity"
+    },
+    "SetFOV": {
+        "body": [
+            "SetFOV(${1:fov})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets the panel camera's FOV (field of view).\n\n[number] fov\n  The field of view value.",
+        "prefix": "SetFOV"
+    },
+    "SetLookAng": {
+        "body": [
+            "SetLookAng(${1:ang})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets the angles of the camera.\n\n[Angle] ang\n  The angles to set the camera to.",
+        "prefix": "SetLookAng"
+    },
+    "SetLookAt": {
+        "body": [
+            "SetLookAt(${1:pos})$0"
+        ],
+        "description": "DMODELPANEL [Client] Makes the panel's camera face the given position.\n\n[Vector] pos\n  The position to orient the camera toward.",
+        "prefix": "SetLookAt"
+    },
+    "SetModel": {
+        "body": [
+            "SetModel(${1:model})$0"
+        ],
+        "description": "DMODELPANEL [Client] Sets the model of the rendered entity.\n\n[string] model\n  The model to apply to the entity",
+        "prefix": "SetModel"
+    },
+    "StartScene": {
+        "body": [
+            "StartScene(${1:path})$0"
+        ],
+        "description": "DMODELPANEL [Client] \n\n[string] path\n  The path to the scene file. (.vcd)",
+        "prefix": "StartScene"
+    }
+}

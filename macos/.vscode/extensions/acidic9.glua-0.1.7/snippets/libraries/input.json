@@ -1,0 +1,135 @@
+{
+    "input.CheckKeyTrapping": {
+        "body": [
+            "input.CheckKeyTrapping()$0"
+        ],
+        "description": "INPUT [Client/Menu]",
+        "prefix": "input.CheckKeyTrapping"
+    },
+    "input.GetCursorPos": {
+        "body": [
+            "input.GetCursorPos()$0"
+        ],
+        "description": "INPUT [Client/Menu]",
+        "prefix": "input.GetCursorPos"
+    },
+    "input.GetKeyName": {
+        "body": [
+            "input.GetKeyName(${1:button})$0"
+        ],
+        "description": "INPUT [Client/Menu] \n\n[number] button\n  The button, see BUTTON_CODE_ Enums.",
+        "prefix": "input.GetKeyName"
+    },
+    "input.IsButtonDown": {
+        "body": [
+            "input.IsButtonDown(${1:button})$0"
+        ],
+        "description": "INPUT [Client/Menu] \n\n[number] button\n  The button, valid values are in the range of BUTTON_CODE_ Enums.",
+        "prefix": "input.IsButtonDown"
+    },
+    "input.IsControlDown": {
+        "body": [
+            "input.IsControlDown()$0"
+        ],
+        "description": "INPUT [Client/Menu]",
+        "prefix": "input.IsControlDown"
+    },
+    "input.IsKeyDown": {
+        "body": [
+            "input.IsKeyDown(${1:key})$0"
+        ],
+        "description": "INPUT [Client/Menu] Gets whether a key is down\n\n[number] key\n  The key, see KEY_ Enums.",
+        "prefix": "input.IsKeyDown"
+    },
+    "input.IsKeyTrapping": {
+        "body": [
+            "input.IsKeyTrapping()$0"
+        ],
+        "description": "INPUT [Client/Menu]",
+        "prefix": "input.IsKeyTrapping"
+    },
+    "input.IsMouseDown": {
+        "body": [
+            "input.IsMouseDown(${1:mouseKey})$0"
+        ],
+        "description": "INPUT [Client/Menu] \n\n[number] mouseKey\n  The key, see MOUSE_ Enums",
+        "prefix": "input.IsMouseDown"
+    },
+    "input.IsShiftDown": {
+        "body": [
+            "input.IsShiftDown()$0"
+        ],
+        "description": "INPUT [Client/Menu]",
+        "prefix": "input.IsShiftDown"
+    },
+    "input.LookupBinding": {
+        "body": [
+            "input.LookupBinding(${1:binding}, ${2:exact=false})$0"
+        ],
+        "description": "INPUT [Client/Menu] Gets the match uppercase key for the specified binding.\n\n[string] binding\n  The binding name\n\n[boolean] exact=false\n  True if the binding should match exactly",
+        "prefix": "input.LookupBinding"
+    },
+    "input.LookupKeyBinding": {
+        "body": [
+            "input.LookupKeyBinding(${1:key})$0"
+        ],
+        "description": "INPUT [Client/Menu] \n\n[number] key\n  Key from KEY_ Enums",
+        "prefix": "input.LookupKeyBinding"
+    },
+    "input.SelectWeapon": {
+        "body": [
+            "input.SelectWeapon(${1:weapon})$0"
+        ],
+        "description": "INPUT [Client] \n\n[Weapon] weapon\n  The weapon entity to switch to.",
+        "prefix": "input.SelectWeapon"
+    },
+    "input.SetCursorPos": {
+        "body": [
+            "input.SetCursorPos(${1:mouseX}, ${2:mouseY})$0"
+        ],
+        "description": "INPUT [Client/Menu] Sets the cursor's position on the screen, relative to the topleft corner of the window\n\n[number] mouseX\n  X coordinate for mouse position\n\n[number] mouseY\n  Y coordinate for mouse position",
+        "prefix": "input.SetCursorPos"
+    },
+    "input.StartKeyTrapping": {
+        "body": [
+            "input.StartKeyTrapping()$0"
+        ],
+        "description": "INPUT [Client/Menu]",
+        "prefix": "input.StartKeyTrapping"
+    },
+    "input.WasKeyPressed": {
+        "body": [
+            "input.WasKeyPressed(${1:key})$0"
+        ],
+        "description": "INPUT [Client/Menu] \n\n[number] key\n  The key, see KEY_ Enums.",
+        "prefix": "input.WasKeyPressed"
+    },
+    "input.WasKeyReleased": {
+        "body": [
+            "input.WasKeyReleased(${1:key})$0"
+        ],
+        "description": "INPUT [Client/Menu] \n\n[number] key\n  The key, see KEY_ Enums.",
+        "prefix": "input.WasKeyReleased"
+    },
+    "input.WasKeyTyped": {
+        "body": [
+            "input.WasKeyTyped(${1:key})$0"
+        ],
+        "description": "INPUT [Client/Menu] \n\n[number] key\n  The key to test, see KEY_ Enums",
+        "prefix": "input.WasKeyTyped"
+    },
+    "input.WasMouseDoublePressed": {
+        "body": [
+            "input.WasMouseDoublePressed(${1:button})$0"
+        ],
+        "description": "INPUT [Client/Menu] \n\n[number] button\n  The mouse button to test, see MOUSE_ Enums",
+        "prefix": "input.WasMouseDoublePressed"
+    },
+    "input.WasMousePressed": {
+        "body": [
+            "input.WasMousePressed(${1:key})$0"
+        ],
+        "description": "INPUT [Client/Menu] \n\n[number] key\n  The key, see MOUSE_ Enums",
+        "prefix": "input.WasMousePressed"
+    }
+}

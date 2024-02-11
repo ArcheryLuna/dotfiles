@@ -1,0 +1,3222 @@
+{
+	"Entity/Activate": {
+		"body": [
+			"Activate()$0"
+		],
+		"description": "Activates the entity. This needs to be used on some entities (like constraints) after being spawned.",
+		"prefix": "Activate"
+	},
+	"Entity/AddCallback": {
+		"body": [
+			"AddCallback(${1:hook}, ${2:func})$0"
+		],
+		"description": "Add a callback function to a specific event. This is used instead of hooks to avoid calling empty functions unnecessarily.",
+		"prefix": "AddCallback"
+	},
+	"Entity/AddEFlags": {
+		"body": [
+			"AddEFlags(${1:flag})$0"
+		],
+		"description": "Adds engine flags.",
+		"prefix": "AddEFlags"
+	},
+	"Entity/AddEffects": {
+		"body": [
+			"AddEffects(${1:effect})$0"
+		],
+		"description": "Applies an engine effect to an entity.",
+		"prefix": "AddEffects"
+	},
+	"Entity/AddFlags": {
+		"body": [
+			"AddFlags(${1:flag})$0"
+		],
+		"description": "Adds flags to the entity.",
+		"prefix": "AddFlags"
+	},
+	"Entity/AddGesture": {
+		"body": [
+			"AddGesture(${1:activity}, ${2:autokill=true})$0"
+		],
+		"description": "Adds a gesture animation to the entity and plays it.",
+		"prefix": "AddGesture"
+	},
+	"Entity/AddGestureSequence": {
+		"body": [
+			"AddGestureSequence(${1:sequence}, ${2:autokill=true})$0"
+		],
+		"description": "Adds a gesture animation to the entity and plays it.",
+		"prefix": "AddGestureSequence"
+	},
+	"Entity/AddLayeredSequence": {
+		"body": [
+			"AddLayeredSequence(${1:sequence}, ${2:priority})$0"
+		],
+		"description": "Adds a gesture animation to the entity and plays it.",
+		"prefix": "AddLayeredSequence"
+	},
+	"Entity/AddSolidFlags": {
+		"body": [
+			"AddSolidFlags(${1:flags})$0"
+		],
+		"description": "Adds solid flag(s) to the entity.",
+		"prefix": "AddSolidFlags"
+	},
+	"Entity/AddToMotionController": {
+		"body": [
+			"AddToMotionController(${1:physObj})$0"
+		],
+		"description": "Adds a",
+		"prefix": "AddToMotionController"
+	},
+	"Entity/AlignAngles": {
+		"body": [
+			"AlignAngles(${1:from}, ${2:to})$0"
+		],
+		"description": "Returns an angle based on the ones inputted that you can use to align an object.",
+		"prefix": "AlignAngles"
+	},
+	"Entity/BecomeRagdollOnClient": {
+		"body": [
+			"BecomeRagdollOnClient()$0"
+		],
+		"description": "Spawns a clientside ragdoll for the entity, positioning it in place of the original entity, and makes the entity invisible. It doesn\u0026#39;t preserve flex values (face posing) as CSRagdolls don\u0026#39;t support flex.",
+		"prefix": "BecomeRagdollOnClient"
+	},
+	"Entity/Blocked": {
+		"body": [
+			"Blocked(${1:entity})$0"
+		],
+		"description": "No description available.",
+		"prefix": "Blocked"
+	},
+	"Entity/BodyTarget": {
+		"body": [
+			"BodyTarget(${1:origin}, ${2:noisy=false})$0"
+		],
+		"description": "Returns a centered vector of this entity, NPCs use this internally to aim at their targets.",
+		"prefix": "BodyTarget"
+	},
+	"Entity/BoneHasFlag": {
+		"body": [
+			"BoneHasFlag(${1:boneID}, ${2:flag})$0"
+		],
+		"description": "Returns whether the entity\u0026#39;s bone has the flag or not.",
+		"prefix": "BoneHasFlag"
+	},
+	"Entity/BoneLength": {
+		"body": [
+			"BoneLength(${1:boneID})$0"
+		],
+		"description": "This function takes the boneID and returns the length of it in an unrounded decimal",
+		"prefix": "BoneLength"
+	},
+	"Entity/BoundingRadius": {
+		"body": [
+			"BoundingRadius()$0"
+		],
+		"description": "Returns the distance between the center of the bounding box and the furthest bounding box corner.",
+		"prefix": "BoundingRadius"
+	},
+	"Entity/CallOnRemove": {
+		"body": [
+			"CallOnRemove(${1:identifier}, ${2:removeFunc}, ${3:argn...})$0"
+		],
+		"description": "Causes a specified function to be run if the entity is removed by any means.",
+		"prefix": "CallOnRemove"
+	},
+	"Entity/ClearPoseParameters": {
+		"body": [
+			"ClearPoseParameters()$0"
+		],
+		"description": "Resets all pose parameters such as aim_yaw, aim_pitch and rotation.",
+		"prefix": "ClearPoseParameters"
+	},
+	"Entity/CollisionRulesChanged": {
+		"body": [
+			"CollisionRulesChanged()$0"
+		],
+		"description": "Declares that the collision rules of the entity have changed, and subsequent calls for",
+		"prefix": "CollisionRulesChanged"
+	},
+	"Entity/CreateParticleEffect": {
+		"body": [
+			"CreateParticleEffect(${1:particle}, ${2:attachment}, ${3:options=nil})$0"
+		],
+		"description": "Creates a clientside particle system attached to the entity.",
+		"prefix": "CreateParticleEffect"
+	},
+	"Entity/CreateShadow": {
+		"body": [
+			"CreateShadow()$0"
+		],
+		"description": "Draws the shadow of an entity.",
+		"prefix": "CreateShadow"
+	},
+	"Entity/CreatedByMap": {
+		"body": [
+			"CreatedByMap()$0"
+		],
+		"description": "Returns whether the entity was created by map or not.",
+		"prefix": "CreatedByMap"
+	},
+	"Entity/DTVar": {
+		"body": [
+			"DTVar(${1:Type}, ${2:ID}, ${3:Name})$0"
+		],
+		"description": "No description available.",
+		"prefix": "DTVar"
+	},
+	"Entity/DeleteOnRemove": {
+		"body": [
+			"DeleteOnRemove(${1:entityToRemove})$0"
+		],
+		"description": "Whenever the entity is removed, entityToRemove will be removed also.",
+		"prefix": "DeleteOnRemove"
+	},
+	"Entity/DestroyShadow": {
+		"body": [
+			"DestroyShadow()$0"
+		],
+		"description": "Removes the shadow for the entity.",
+		"prefix": "DestroyShadow"
+	},
+	"Entity/DisableMatrix": {
+		"body": [
+			"DisableMatrix(${1:matrixType})$0"
+		],
+		"description": "Disables an active matrix.",
+		"prefix": "DisableMatrix"
+	},
+	"Entity/DispatchTraceAttack": {
+		"body": [
+			"DispatchTraceAttack(${1:damageInfo}, ${2:traceRes}, ${3:dir=traceRes.HitNormal})$0"
+		],
+		"description": "Performs a trace attack.",
+		"prefix": "DispatchTraceAttack"
+	},
+	"Entity/DontDeleteOnRemove": {
+		"body": [
+			"DontDeleteOnRemove(${1:entityToUnremove})$0"
+		],
+		"description": "This removes the argument entity from an ent\u0026#39;s list of entities to \u0026#39;delete on remove\u0026#39;",
+		"prefix": "DontDeleteOnRemove"
+	},
+	"Entity/DrawModel": {
+		"body": [
+			"DrawModel()$0"
+		],
+		"description": "Draws the entity or model.",
+		"prefix": "DrawModel"
+	},
+	"Entity/DrawShadow": {
+		"body": [
+			"DrawShadow(${1:shouldDraw})$0"
+		],
+		"description": "Sets whether an entity\u0026#39;s shadow should be drawn.",
+		"prefix": "DrawShadow"
+	},
+	"Entity/DropToFloor": {
+		"body": [
+			"DropToFloor()$0"
+		],
+		"description": "Move an entity down until it collides with something.",
+		"prefix": "DropToFloor"
+	},
+	"Entity/EmitSound": {
+		"body": [
+			"EmitSound(${1:soundName}, ${2:soundLevel=75}, ${3:pitchPercent=100}, ${4:volume=1}, ${5:channel=CHAN_AUTO})$0"
+		],
+		"description": "Plays a sound on an entity. If run clientside, the sound will only be heard locally.",
+		"prefix": "EmitSound"
+	},
+	"Entity/EnableConstraints": {
+		"body": [
+			"EnableConstraints(${1:toggleConstraints})$0"
+		],
+		"description": "Toggles the constraints of this ragdoll entity on and off.",
+		"prefix": "EnableConstraints"
+	},
+	"Entity/EnableCustomCollisions": {
+		"body": [
+			"EnableCustomCollisions(${1:useCustom})$0"
+		],
+		"description": "Flags an entity as using custom lua defined collisions. Fixes entities having spongy player collisions or not hitting traces, such as after",
+		"prefix": "EnableCustomCollisions"
+	},
+	"Entity/EnableMatrix": {
+		"body": [
+			"EnableMatrix(${1:matrixType}, ${2:matrix})$0"
+		],
+		"description": "Can be used to apply a custom",
+		"prefix": "EnableMatrix"
+	},
+	"Entity/EntIndex": {
+		"body": [
+			"EntIndex()$0"
+		],
+		"description": "Gets the unique entity index of an entity.",
+		"prefix": "EntIndex"
+	},
+	"Entity/Extinguish": {
+		"body": [
+			"Extinguish()$0"
+		],
+		"description": "Extinguishes the entity if it is on fire.",
+		"prefix": "Extinguish"
+	},
+	"Entity/EyeAngles": {
+		"body": [
+			"EyeAngles()$0"
+		],
+		"description": "Returns the direction a player/npc/ragdoll is looking as a world-oriented angle.",
+		"prefix": "EyeAngles"
+	},
+	"Entity/EyePos": {
+		"body": [
+			"EyePos()$0"
+		],
+		"description": "Returns the position of an Player/NPC\u0026#39;s view, or two vectors for ragdolls (one for each eye)",
+		"prefix": "EyePos"
+	},
+	"Entity/FindBodygroupByName": {
+		"body": [
+			"FindBodygroupByName(${1:name})$0"
+		],
+		"description": "Searches for bodygroup with given name.",
+		"prefix": "FindBodygroupByName"
+	},
+	"Entity/FindTransitionSequence": {
+		"body": [
+			"FindTransitionSequence(${1:currentSequence}, ${2:goalSequence})$0"
+		],
+		"description": "Returns a transition from the given start and end sequence.",
+		"prefix": "FindTransitionSequence"
+	},
+	"Entity/Fire": {
+		"body": [
+			"Fire(${1:input}, ${2:param=\"\"}, ${3:delay=0})$0"
+		],
+		"description": "Fires an entity\u0026#39;s input. You can find inputs for most entities on the",
+		"prefix": "Fire"
+	},
+	"Entity/FireBullets": {
+		"body": [
+			"FireBullets(${1:bulletInfo}, ${2:suppressHostEvents=false})$0"
+		],
+		"description": "Fires a bullet.",
+		"prefix": "FireBullets"
+	},
+	"Entity/FollowBone": {
+		"body": [
+			"FollowBone(${1:parent=NULL}, ${2:boneid})$0"
+		],
+		"description": "Makes an entity follow another entity\u0026#39;s bone.",
+		"prefix": "FollowBone"
+	},
+	"Entity/ForcePlayerDrop": {
+		"body": [
+			"ForcePlayerDrop()$0"
+		],
+		"description": "Forces the Entity to be dropped, when it is being held by a player\u0026#39;s gravitygun or physgun.",
+		"prefix": "ForcePlayerDrop"
+	},
+	"Entity/FrameAdvance": {
+		"body": [
+			"FrameAdvance(${1:delta})$0"
+		],
+		"description": "Advances the cycle of an animated entity by the given delta. Since cycle is a value between 0 and 1, delta should be as well.",
+		"prefix": "FrameAdvance"
+	},
+	"Entity/GetAbsVelocity": {
+		"body": [
+			"GetAbsVelocity()$0"
+		],
+		"description": "Returns the velocity of the entity, in coordinates relative to the world.",
+		"prefix": "GetAbsVelocity"
+	},
+	"Entity/GetAngles": {
+		"body": [
+			"GetAngles()$0"
+		],
+		"description": "Gets the angles of given entity.",
+		"prefix": "GetAngles"
+	},
+	"Entity/GetAnimInfo": {
+		"body": [
+			"GetAnimInfo(${1:animIndex})$0"
+		],
+		"description": "Returns a table containing the number of frames, flags, name, and FPS of an entity\u0026#39;s animation ID.",
+		"prefix": "GetAnimInfo"
+	},
+	"Entity/GetAnimTime": {
+		"body": [
+			"GetAnimTime()$0"
+		],
+		"description": "Returns the last time the entity had an animation update. Returns 0 if the entity doesn\u0026#39;t animate.",
+		"prefix": "GetAnimTime"
+	},
+	"Entity/GetAttachment": {
+		"body": [
+			"GetAttachment(${1:attachmentId})$0"
+		],
+		"description": "Gets the orientation and position of the attachment by its ID.",
+		"prefix": "GetAttachment"
+	},
+	"Entity/GetAttachments": {
+		"body": [
+			"GetAttachments()$0"
+		],
+		"description": "Returns a table containing all attachments of the given entitys model.",
+		"prefix": "GetAttachments"
+	},
+	"Entity/GetBaseVelocity": {
+		"body": [
+			"GetBaseVelocity()$0"
+		],
+		"description": "Returns the base velocity of the entity. \u0026#34;Velocity of the thing we\u0026#39;re standing on\u0026#34;.",
+		"prefix": "GetBaseVelocity"
+	},
+	"Entity/GetBloodColor": {
+		"body": [
+			"GetBloodColor()$0"
+		],
+		"description": "Returns the blood color of this entity. This can be set with",
+		"prefix": "GetBloodColor"
+	},
+	"Entity/GetBodyGroups": {
+		"body": [
+			"GetBodyGroups()$0"
+		],
+		"description": "Returns a list of all attachments of the entity.",
+		"prefix": "GetBodyGroups"
+	},
+	"Entity/GetBodygroup": {
+		"body": [
+			"GetBodygroup(${1:id})$0"
+		],
+		"description": "Gets the exact value for specific bodygroup of given entity.",
+		"prefix": "GetBodygroup"
+	},
+	"Entity/GetBodygroupCount": {
+		"body": [
+			"GetBodygroupCount(${1:bodygroup})$0"
+		],
+		"description": "Returns the count of possible values for this bodygroup.",
+		"prefix": "GetBodygroupCount"
+	},
+	"Entity/GetBodygroupName": {
+		"body": [
+			"GetBodygroupName(${1:id})$0"
+		],
+		"description": "Gets the name of specific bodygroup for given entity.",
+		"prefix": "GetBodygroupName"
+	},
+	"Entity/GetBoneController": {
+		"body": [
+			"GetBoneController(${1:boneID})$0"
+		],
+		"description": "Returns the value of the bone controller with the specified ID.",
+		"prefix": "GetBoneController"
+	},
+	"Entity/GetBoneCount": {
+		"body": [
+			"GetBoneCount()$0"
+		],
+		"description": "Returns the amount of bones in the entity.",
+		"prefix": "GetBoneCount"
+	},
+	"Entity/GetBoneMatrix": {
+		"body": [
+			"GetBoneMatrix(${1:boneID})$0"
+		],
+		"description": "Returns the matrix ( position / rotation transform ) of a given bone entity.",
+		"prefix": "GetBoneMatrix"
+	},
+	"Entity/GetBoneName": {
+		"body": [
+			"GetBoneName(${1:index})$0"
+		],
+		"description": "Returns name of given bone id.",
+		"prefix": "GetBoneName"
+	},
+	"Entity/GetBoneParent": {
+		"body": [
+			"GetBoneParent(${1:bone})$0"
+		],
+		"description": "Returns parent bone of given bone.",
+		"prefix": "GetBoneParent"
+	},
+	"Entity/GetBonePosition": {
+		"body": [
+			"GetBonePosition(${1:boneIndex})$0"
+		],
+		"description": "Returns the position and angle of the given attachment, relative to the world.",
+		"prefix": "GetBonePosition"
+	},
+	"Entity/GetBrushPlane": {
+		"body": [
+			"GetBrushPlane(${1:number})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetBrushPlane"
+	},
+	"Entity/GetBrushPlaneCount": {
+		"body": [
+			"GetBrushPlaneCount()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetBrushPlaneCount"
+	},
+	"Entity/GetChildBones": {
+		"body": [
+			"GetChildBones(${1:boneid})$0"
+		],
+		"description": "Returns ids of child bones of given bone.",
+		"prefix": "GetChildBones"
+	},
+	"Entity/GetChildren": {
+		"body": [
+			"GetChildren()$0"
+		],
+		"description": "Gets the children of the entity - that is, every entity whose parent is this entity.",
+		"prefix": "GetChildren"
+	},
+	"Entity/GetClass": {
+		"body": [
+			"GetClass()$0"
+		],
+		"description": "Returns the classname of a entity. This is often the name of the Lua file or folder containing the files for the entity",
+		"prefix": "GetClass"
+	},
+	"Entity/GetCollisionBounds": {
+		"body": [
+			"GetCollisionBounds()$0"
+		],
+		"description": "Returns an entity\u0026#39;s collision bounding box. In most cases, this will return the same bounding box as",
+		"prefix": "GetCollisionBounds"
+	},
+	"Entity/GetCollisionGroup": {
+		"body": [
+			"GetCollisionGroup()$0"
+		],
+		"description": "Returns the entity\u0026#39;s collision group",
+		"prefix": "GetCollisionGroup"
+	},
+	"Entity/GetColor": {
+		"body": [
+			"GetColor()$0"
+		],
+		"description": "Returns the color the entity is set to.",
+		"prefix": "GetColor"
+	},
+	"Entity/GetConstrainedEntities": {
+		"body": [
+			"GetConstrainedEntities()$0"
+		],
+		"description": "Returns the two entities involved in a constraint ent",
+		"prefix": "GetConstrainedEntities"
+	},
+	"Entity/GetConstrainedPhysObjects": {
+		"body": [
+			"GetConstrainedPhysObjects()$0"
+		],
+		"description": "Returns the two entities physobjects involved in a constraint ent",
+		"prefix": "GetConstrainedPhysObjects"
+	},
+	"Entity/GetCreationID": {
+		"body": [
+			"GetCreationID()$0"
+		],
+		"description": "Returns entity\u0026#39;s creation ID. Unlike",
+		"prefix": "GetCreationID"
+	},
+	"Entity/GetCreationTime": {
+		"body": [
+			"GetCreationTime()$0"
+		],
+		"description": "Returns the time the entity was created on, relative to",
+		"prefix": "GetCreationTime"
+	},
+	"Entity/GetCreator": {
+		"body": [
+			"GetCreator()$0"
+		],
+		"description": "Gets the creator of the SENT.",
+		"prefix": "GetCreator"
+	},
+	"Entity/GetCustomCollisionCheck": {
+		"body": [
+			"GetCustomCollisionCheck()$0"
+		],
+		"description": "Returns whether this entity uses custom collision check set by",
+		"prefix": "GetCustomCollisionCheck"
+	},
+	"Entity/GetCycle": {
+		"body": [
+			"GetCycle()$0"
+		],
+		"description": "Returns the frame of the currently played sequence.",
+		"prefix": "GetCycle"
+	},
+	"Entity/GetDTAngle": {
+		"body": [
+			"GetDTAngle(${1:key})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetDTAngle"
+	},
+	"Entity/GetDTBool": {
+		"body": [
+			"GetDTBool(${1:key})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetDTBool"
+	},
+	"Entity/GetDTEntity": {
+		"body": [
+			"GetDTEntity(${1:key})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetDTEntity"
+	},
+	"Entity/GetDTFloat": {
+		"body": [
+			"GetDTFloat(${1:key})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetDTFloat"
+	},
+	"Entity/GetDTInt": {
+		"body": [
+			"GetDTInt(${1:key})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetDTInt"
+	},
+	"Entity/GetDTString": {
+		"body": [
+			"GetDTString(${1:key})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetDTString"
+	},
+	"Entity/GetDTVector": {
+		"body": [
+			"GetDTVector(${1:key})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetDTVector"
+	},
+	"Entity/GetEFlags": {
+		"body": [
+			"GetEFlags()$0"
+		],
+		"description": "Returns a bit flag of all engine flags of the entity.",
+		"prefix": "GetEFlags"
+	},
+	"Entity/GetEffects": {
+		"body": [
+			"GetEffects()$0"
+		],
+		"description": "Returns a bit flag of all engine effect flags of the entity.",
+		"prefix": "GetEffects"
+	},
+	"Entity/GetElasticity": {
+		"body": [
+			"GetElasticity()$0"
+		],
+		"description": "Returns the elasticity of this entity, used by some flying entities such as the Helicopter NPC to determine how much it should bounce around when colliding.",
+		"prefix": "GetElasticity"
+	},
+	"Entity/GetFlags": {
+		"body": [
+			"GetFlags()$0"
+		],
+		"description": "Returns all flags of given entity.",
+		"prefix": "GetFlags"
+	},
+	"Entity/GetFlexBounds": {
+		"body": [
+			"GetFlexBounds(${1:flex})$0"
+		],
+		"description": "Returns acceptable value range for the flex.",
+		"prefix": "GetFlexBounds"
+	},
+	"Entity/GetFlexIDByName": {
+		"body": [
+			"GetFlexIDByName(${1:name})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetFlexIDByName"
+	},
+	"Entity/GetFlexName": {
+		"body": [
+			"GetFlexName(${1:id})$0"
+		],
+		"description": "Returns flex name.",
+		"prefix": "GetFlexName"
+	},
+	"Entity/GetFlexNum": {
+		"body": [
+			"GetFlexNum()$0"
+		],
+		"description": "Returns the number of flexes this entity has.",
+		"prefix": "GetFlexNum"
+	},
+	"Entity/GetFlexScale": {
+		"body": [
+			"GetFlexScale()$0"
+		],
+		"description": "Returns the flex scale of the entity.",
+		"prefix": "GetFlexScale"
+	},
+	"Entity/GetFlexWeight": {
+		"body": [
+			"GetFlexWeight(${1:flex})$0"
+		],
+		"description": "Returns current weight ( value ) of the flex.",
+		"prefix": "GetFlexWeight"
+	},
+	"Entity/GetForward": {
+		"body": [
+			"GetForward()$0"
+		],
+		"description": "Returns the forward vector of the entity, as a normalized direction vector",
+		"prefix": "GetForward"
+	},
+	"Entity/GetFriction": {
+		"body": [
+			"GetFriction()$0"
+		],
+		"description": "Returns how much friction an entity has. Entities default to 1 (100%) and can be higher or even negative.",
+		"prefix": "GetFriction"
+	},
+	"Entity/GetGravity": {
+		"body": [
+			"GetGravity()$0"
+		],
+		"description": "Gets the gravity multiplier of the entity.",
+		"prefix": "GetGravity"
+	},
+	"Entity/GetGroundEntity": {
+		"body": [
+			"GetGroundEntity()$0"
+		],
+		"description": "Returns the object the entity is standing on.",
+		"prefix": "GetGroundEntity"
+	},
+	"Entity/GetGroundSpeedVelocity": {
+		"body": [
+			"GetGroundSpeedVelocity()$0"
+		],
+		"description": "Returns the entity\u0026#39;s ground speed velocity, which is based on the entity\u0026#39;s walk/run speed and/or the ground speed of their sequence (",
+		"prefix": "GetGroundSpeedVelocity"
+	},
+	"Entity/GetHitBoxBone": {
+		"body": [
+			"GetHitBoxBone(${1:hitbox}, ${2:group})$0"
+		],
+		"description": "Gets the bone of a hit box",
+		"prefix": "GetHitBoxBone"
+	},
+	"Entity/GetHitBoxBounds": {
+		"body": [
+			"GetHitBoxBounds(${1:hitbox}, ${2:group})$0"
+		],
+		"description": "Gets the bounding box of a hit box",
+		"prefix": "GetHitBoxBounds"
+	},
+	"Entity/GetHitBoxCount": {
+		"body": [
+			"GetHitBoxCount(${1:group})$0"
+		],
+		"description": "Gets how many hit boxes are in a given hit box group",
+		"prefix": "GetHitBoxCount"
+	},
+	"Entity/GetHitBoxGroupCount": {
+		"body": [
+			"GetHitBoxGroupCount()$0"
+		],
+		"description": "Returns the number of hit box groups that an entity has.",
+		"prefix": "GetHitBoxGroupCount"
+	},
+	"Entity/GetHitboxBone": {
+		"body": [
+			"GetHitboxBone()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetHitboxBone"
+	},
+	"Entity/GetHitboxSet": {
+		"body": [
+			"GetHitboxSet()$0"
+		],
+		"description": "Returns entitys current hit box set",
+		"prefix": "GetHitboxSet"
+	},
+	"Entity/GetHitboxSetCount": {
+		"body": [
+			"GetHitboxSetCount()$0"
+		],
+		"description": "Returns the amount of hitbox sets in the entity.",
+		"prefix": "GetHitboxSetCount"
+	},
+	"Entity/GetInternalVariable": {
+		"body": [
+			"GetInternalVariable(${1:VariableName})$0"
+		],
+		"description": "An interface for accessing internal key values on entities.",
+		"prefix": "GetInternalVariable"
+	},
+	"Entity/GetKeyValues": {
+		"body": [
+			"GetKeyValues()$0"
+		],
+		"description": "Returns a table containing all key values the entity has.",
+		"prefix": "GetKeyValues"
+	},
+	"Entity/GetLayerCycle": {
+		"body": [
+			"GetLayerCycle(${1:layerID})$0"
+		],
+		"description": "Returns the animation cycle/frame for given layer.",
+		"prefix": "GetLayerCycle"
+	},
+	"Entity/GetLayerDuration": {
+		"body": [
+			"GetLayerDuration(${1:layerID})$0"
+		],
+		"description": "Returns the duration of given layer.",
+		"prefix": "GetLayerDuration"
+	},
+	"Entity/GetLayerWeight": {
+		"body": [
+			"GetLayerWeight(${1:layerID})$0"
+		],
+		"description": "Returns the current weight of the layer. See",
+		"prefix": "GetLayerWeight"
+	},
+	"Entity/GetLocalAngles": {
+		"body": [
+			"GetLocalAngles()$0"
+		],
+		"description": "Returns the rotation of the entity relative to its parent entity.",
+		"prefix": "GetLocalAngles"
+	},
+	"Entity/GetLocalAngularVelocity": {
+		"body": [
+			"GetLocalAngularVelocity()$0"
+		],
+		"description": "Returns the non-VPhysics angular velocity of the entity relative to its parent entity.",
+		"prefix": "GetLocalAngularVelocity"
+	},
+	"Entity/GetLocalPos": {
+		"body": [
+			"GetLocalPos()$0"
+		],
+		"description": "Returns entity\u0026#39;s position relative to it\u0026#39;s parent.",
+		"prefix": "GetLocalPos"
+	},
+	"Entity/GetManipulateBoneAngles": {
+		"body": [
+			"GetManipulateBoneAngles(${1:boneID})$0"
+		],
+		"description": "Gets the entity\u0026#39;s angle manipulation of the given bone. This is relative to the default angle, so the angle is zero when unmodified.",
+		"prefix": "GetManipulateBoneAngles"
+	},
+	"Entity/GetManipulateBoneJiggle": {
+		"body": [
+			"GetManipulateBoneJiggle(${1:boneID})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetManipulateBoneJiggle"
+	},
+	"Entity/GetManipulateBonePosition": {
+		"body": [
+			"GetManipulateBonePosition(${1:boneId})$0"
+		],
+		"description": "Gets the entity\u0026#39;s position manipulation of the given bone. This is relative to the default position, so it is zero when unmodified.",
+		"prefix": "GetManipulateBonePosition"
+	},
+	"Entity/GetManipulateBoneScale": {
+		"body": [
+			"GetManipulateBoneScale(${1:boneID})$0"
+		],
+		"description": "Gets the entity\u0026#39;s scale manipulation of the given bone. Normal scale is Vector( 1, 1, 1 )",
+		"prefix": "GetManipulateBoneScale"
+	},
+	"Entity/GetMaterial": {
+		"body": [
+			"GetMaterial()$0"
+		],
+		"description": "Returns the material override for this entity.",
+		"prefix": "GetMaterial"
+	},
+	"Entity/GetMaterialType": {
+		"body": [
+			"GetMaterialType()$0"
+		],
+		"description": "Returns the surface index (from",
+		"prefix": "GetMaterialType"
+	},
+	"Entity/GetMaterials": {
+		"body": [
+			"GetMaterials()$0"
+		],
+		"description": "Returns all materials of the entity\u0026#39;s model.",
+		"prefix": "GetMaterials"
+	},
+	"Entity/GetMaxHealth": {
+		"body": [
+			"GetMaxHealth()$0"
+		],
+		"description": "Returns the max health that the entity was given. It can be set via",
+		"prefix": "GetMaxHealth"
+	},
+	"Entity/GetModel": {
+		"body": [
+			"GetModel()$0"
+		],
+		"description": "Gets the model of given entity.",
+		"prefix": "GetModel"
+	},
+	"Entity/GetModelBounds": {
+		"body": [
+			"GetModelBounds()$0"
+		],
+		"description": "Returns the entity\u0026#39;s bounding box. Seems to be the same as calling",
+		"prefix": "GetModelBounds"
+	},
+	"Entity/GetModelPhysBoneCount": {
+		"body": [
+			"GetModelPhysBoneCount()$0"
+		],
+		"description": "Gets the physics bone count of the entity\u0026#39;s model.",
+		"prefix": "GetModelPhysBoneCount"
+	},
+	"Entity/GetModelRadius": {
+		"body": [
+			"GetModelRadius()$0"
+		],
+		"description": "Gets the models radius.",
+		"prefix": "GetModelRadius"
+	},
+	"Entity/GetModelRenderBounds": {
+		"body": [
+			"GetModelRenderBounds()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetModelRenderBounds"
+	},
+	"Entity/GetModelScale": {
+		"body": [
+			"GetModelScale()$0"
+		],
+		"description": "Gets the selected entity\u0026#39;s model scale.",
+		"prefix": "GetModelScale"
+	},
+	"Entity/GetMomentaryRotButtonPos": {
+		"body": [
+			"GetMomentaryRotButtonPos(${1:turnAngle})$0"
+		],
+		"description": "Returns the amount a momentary_rot_button entity is turned based on the given",
+		"prefix": "GetMomentaryRotButtonPos"
+	},
+	"Entity/GetMoveCollide": {
+		"body": [
+			"GetMoveCollide()$0"
+		],
+		"description": "Returns the move collide type of the entity. The move collide is the way a physics object reacts to hitting an object - will it bounce, slide?",
+		"prefix": "GetMoveCollide"
+	},
+	"Entity/GetMoveParent": {
+		"body": [
+			"GetMoveParent()$0"
+		],
+		"description": "Identical to",
+		"prefix": "GetMoveParent"
+	},
+	"Entity/GetMoveType": {
+		"body": [
+			"GetMoveType()$0"
+		],
+		"description": "Returns the entity\u0026#39;s movetype",
+		"prefix": "GetMoveType"
+	},
+	"Entity/GetNWAngle": {
+		"body": [
+			"GetNWAngle(${1:key}, ${2:)})$0"
+		],
+		"description": "Retrieves a networked angle value at specified index on the entity that is set by",
+		"prefix": "GetNWAngle"
+	},
+	"Entity/GetNWBool": {
+		"body": [
+			"GetNWBool(${1:key}, ${2:fallback=false})$0"
+		],
+		"description": "Retrieves a networked boolean value at specified index on the entity that is set by",
+		"prefix": "GetNWBool"
+	},
+	"Entity/GetNWEntity": {
+		"body": [
+			"GetNWEntity(${1:key}, ${2:fallback=NULL})$0"
+		],
+		"description": "Retrieves a networked entity value at specified index on the entity that is set by",
+		"prefix": "GetNWEntity"
+	},
+	"Entity/GetNWFloat": {
+		"body": [
+			"GetNWFloat(${1:key}, ${2:fallback=0})$0"
+		],
+		"description": "Retrieves a networked float value at specified index on the entity that is set by",
+		"prefix": "GetNWFloat"
+	},
+	"Entity/GetNWInt": {
+		"body": [
+			"GetNWInt(${1:key}, ${2:fallback=0})$0"
+		],
+		"description": "Retrieves a networked integer (whole number) value that was previously set by",
+		"prefix": "GetNWInt"
+	},
+	"Entity/GetNWString": {
+		"body": [
+			"GetNWString(${1:key}, ${2:fallback=\"\"})$0"
+		],
+		"description": "Retrieves a networked string value at specified index on the entity that is set by",
+		"prefix": "GetNWString"
+	},
+	"Entity/GetNWVarProxy": {
+		"body": [
+			"GetNWVarProxy(${1:name})$0"
+		],
+		"description": "Returns callback function for given NWVar of this entity.",
+		"prefix": "GetNWVarProxy"
+	},
+	"Entity/GetNWVarTable": {
+		"body": [
+			"GetNWVarTable()$0"
+		],
+		"description": "Returns all the networked variables in an entity.",
+		"prefix": "GetNWVarTable"
+	},
+	"Entity/GetNWVector": {
+		"body": [
+			"GetNWVector(${1:key}, ${2:)})$0"
+		],
+		"description": "Retrieves a networked vector value at specified index on the entity that is set by",
+		"prefix": "GetNWVector"
+	},
+	"Entity/GetName": {
+		"body": [
+			"GetName()$0"
+		],
+		"description": "Returns the mapping name of this entity.",
+		"prefix": "GetName"
+	},
+	"Entity/GetNetworkAngles": {
+		"body": [
+			"GetNetworkAngles()$0"
+		],
+		"description": "Gets networked angles for entity.",
+		"prefix": "GetNetworkAngles"
+	},
+	"Entity/GetNetworkOrigin": {
+		"body": [
+			"GetNetworkOrigin()$0"
+		],
+		"description": "Gets networked origin for entity.",
+		"prefix": "GetNetworkOrigin"
+	},
+	"Entity/GetNetworkedAngle": {
+		"body": [
+			"GetNetworkedAngle(${1:key}, ${2:)})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNetworkedAngle"
+	},
+	"Entity/GetNetworkedBool": {
+		"body": [
+			"GetNetworkedBool(${1:key}, ${2:fallback=false})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNetworkedBool"
+	},
+	"Entity/GetNetworkedEntity": {
+		"body": [
+			"GetNetworkedEntity(${1:key}, ${2:fallback=NULL})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNetworkedEntity"
+	},
+	"Entity/GetNetworkedFloat": {
+		"body": [
+			"GetNetworkedFloat(${1:key}, ${2:fallback=0})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNetworkedFloat"
+	},
+	"Entity/GetNetworkedInt": {
+		"body": [
+			"GetNetworkedInt(${1:key}, ${2:fallback=0})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNetworkedInt"
+	},
+	"Entity/GetNetworkedString": {
+		"body": [
+			"GetNetworkedString(${1:key}, ${2:fallback=\"\"})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNetworkedString"
+	},
+	"Entity/GetNetworkedVarProxy": {
+		"body": [
+			"GetNetworkedVarProxy(${1:name})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNetworkedVarProxy"
+	},
+	"Entity/GetNetworkedVarTable": {
+		"body": [
+			"GetNetworkedVarTable()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNetworkedVarTable"
+	},
+	"Entity/GetNetworkedVector": {
+		"body": [
+			"GetNetworkedVector(${1:key}, ${2:)})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetNetworkedVector"
+	},
+	"Entity/GetNoDraw": {
+		"body": [
+			"GetNoDraw()$0"
+		],
+		"description": "Returns if the entity\u0026#39;s rendering and transmitting has been disabled.",
+		"prefix": "GetNoDraw"
+	},
+	"Entity/GetNumBodyGroups": {
+		"body": [
+			"GetNumBodyGroups()$0"
+		],
+		"description": "Returns the body group count of the entity.",
+		"prefix": "GetNumBodyGroups"
+	},
+	"Entity/GetNumPoseParameters": {
+		"body": [
+			"GetNumPoseParameters()$0"
+		],
+		"description": "Returns the number of pose parameters this entity has.",
+		"prefix": "GetNumPoseParameters"
+	},
+	"Entity/GetOwner": {
+		"body": [
+			"GetOwner()$0"
+		],
+		"description": "Returns the owner entity of this entity. See",
+		"prefix": "GetOwner"
+	},
+	"Entity/GetParent": {
+		"body": [
+			"GetParent()$0"
+		],
+		"description": "Returns the parent entity of this entity.",
+		"prefix": "GetParent"
+	},
+	"Entity/GetParentAttachment": {
+		"body": [
+			"GetParentAttachment()$0"
+		],
+		"description": "Returns the attachment index of the entity\u0026#39;s parent. Returns 0 if the entity is not parented to a specific attachment or if it isn\u0026#39;t parented at all.",
+		"prefix": "GetParentAttachment"
+	},
+	"Entity/GetParentPhysNum": {
+		"body": [
+			"GetParentPhysNum()$0"
+		],
+		"description": "If the entity is parented to an entity that has a model with multiple physics objects (like a ragdoll), this is used to retrieve what physics object number the entity is parented to on it\u0026#39;s parent.",
+		"prefix": "GetParentPhysNum"
+	},
+	"Entity/GetPersistent": {
+		"body": [
+			"GetPersistent()$0"
+		],
+		"description": "Returns true if the entity is persistent.",
+		"prefix": "GetPersistent"
+	},
+	"Entity/GetPhysicsAttacker": {
+		"body": [
+			"GetPhysicsAttacker(${1:timeLimit})$0"
+		],
+		"description": "Returns player who is claiming kills of physics damage the entity deals.",
+		"prefix": "GetPhysicsAttacker"
+	},
+	"Entity/GetPhysicsObject": {
+		"body": [
+			"GetPhysicsObject()$0"
+		],
+		"description": "Returns the entity\u0026#39;s physics object, if the entity has physics.",
+		"prefix": "GetPhysicsObject"
+	},
+	"Entity/GetPhysicsObjectCount": {
+		"body": [
+			"GetPhysicsObjectCount()$0"
+		],
+		"description": "Returns the number of physics objects an entity has (usually 1 for non-ragdolls)",
+		"prefix": "GetPhysicsObjectCount"
+	},
+	"Entity/GetPhysicsObjectNum": {
+		"body": [
+			"GetPhysicsObjectNum(${1:physNum})$0"
+		],
+		"description": "Returns a specific physics object from an entity with multiple (ragdolls)",
+		"prefix": "GetPhysicsObjectNum"
+	},
+	"Entity/GetPlaybackRate": {
+		"body": [
+			"GetPlaybackRate()$0"
+		],
+		"description": "Returns the playback rate of the main sequence on this entity, with 1.0 being the default speed.",
+		"prefix": "GetPlaybackRate"
+	},
+	"Entity/GetPos": {
+		"body": [
+			"GetPos()$0"
+		],
+		"description": "Gets the position of entity in world.",
+		"prefix": "GetPos"
+	},
+	"Entity/GetPoseParameter": {
+		"body": [
+			"GetPoseParameter(${1:name})$0"
+		],
+		"description": "Returns the pose parameter value",
+		"prefix": "GetPoseParameter"
+	},
+	"Entity/GetPoseParameterName": {
+		"body": [
+			"GetPoseParameterName(${1:id})$0"
+		],
+		"description": "Returns name of given pose parameter",
+		"prefix": "GetPoseParameterName"
+	},
+	"Entity/GetPoseParameterRange": {
+		"body": [
+			"GetPoseParameterRange(${1:id})$0"
+		],
+		"description": "Returns pose parameter range",
+		"prefix": "GetPoseParameterRange"
+	},
+	"Entity/GetPredictable": {
+		"body": [
+			"GetPredictable()$0"
+		],
+		"description": "Returns whether this entity is predictable or not.",
+		"prefix": "GetPredictable"
+	},
+	"Entity/GetRagdollOwner": {
+		"body": [
+			"GetRagdollOwner()$0"
+		],
+		"description": "Returns the entity which the ragdoll came from. The opposite of",
+		"prefix": "GetRagdollOwner"
+	},
+	"Entity/GetRenderAngles": {
+		"body": [
+			"GetRenderAngles()$0"
+		],
+		"description": "Returns the entity\u0026#39;s render angles, set by",
+		"prefix": "GetRenderAngles"
+	},
+	"Entity/GetRenderBounds": {
+		"body": [
+			"GetRenderBounds()$0"
+		],
+		"description": "Returns render bounds of the entity. Can be overridden by",
+		"prefix": "GetRenderBounds"
+	},
+	"Entity/GetRenderFX": {
+		"body": [
+			"GetRenderFX()$0"
+		],
+		"description": "Returns current render FX of the entity.",
+		"prefix": "GetRenderFX"
+	},
+	"Entity/GetRenderGroup": {
+		"body": [
+			"GetRenderGroup()$0"
+		],
+		"description": "Returns the render group of the entity.",
+		"prefix": "GetRenderGroup"
+	},
+	"Entity/GetRenderMode": {
+		"body": [
+			"GetRenderMode()$0"
+		],
+		"description": "Returns the render mode of the entity.",
+		"prefix": "GetRenderMode"
+	},
+	"Entity/GetRenderOrigin": {
+		"body": [
+			"GetRenderOrigin()$0"
+		],
+		"description": "Returns the entity\u0026#39;s render origin, set by",
+		"prefix": "GetRenderOrigin"
+	},
+	"Entity/GetRight": {
+		"body": [
+			"GetRight()$0"
+		],
+		"description": "Returns the rightward vector of the entity, as a normalized direction vector",
+		"prefix": "GetRight"
+	},
+	"Entity/GetRotatedAABB": {
+		"body": [
+			"GetRotatedAABB(${1:min}, ${2:max})$0"
+		],
+		"description": "Returns the min and max of the entity\u0026#39;s axis-aligned bounding box.",
+		"prefix": "GetRotatedAABB"
+	},
+	"Entity/GetSaveTable": {
+		"body": [
+			"GetSaveTable()$0"
+		],
+		"description": "Returns a table of save values for an entity.",
+		"prefix": "GetSaveTable"
+	},
+	"Entity/GetSequence": {
+		"body": [
+			"GetSequence()$0"
+		],
+		"description": "Return the index of the model sequence that is currently active for the entity.",
+		"prefix": "GetSequence"
+	},
+	"Entity/GetSequenceActivity": {
+		"body": [
+			"GetSequenceActivity(${1:seq})$0"
+		],
+		"description": "Return activity id out of sequence id. Opposite of",
+		"prefix": "GetSequenceActivity"
+	},
+	"Entity/GetSequenceActivityName": {
+		"body": [
+			"GetSequenceActivityName(${1:sequenceId})$0"
+		],
+		"description": "Returns the activity name for the given sequence id.",
+		"prefix": "GetSequenceActivityName"
+	},
+	"Entity/GetSequenceCount": {
+		"body": [
+			"GetSequenceCount()$0"
+		],
+		"description": "Returns the amount of sequences ( animations ) the entity\u0026#39;s model has.",
+		"prefix": "GetSequenceCount"
+	},
+	"Entity/GetSequenceGroundSpeed": {
+		"body": [
+			"GetSequenceGroundSpeed(${1:sequenceId})$0"
+		],
+		"description": "Returns the ground speed of the entity\u0026#39;s sequence.",
+		"prefix": "GetSequenceGroundSpeed"
+	},
+	"Entity/GetSequenceInfo": {
+		"body": [
+			"GetSequenceInfo(${1:sequenceId})$0"
+		],
+		"description": "Returns a table of information about an entity\u0026#39;s sequence.",
+		"prefix": "GetSequenceInfo"
+	},
+	"Entity/GetSequenceList": {
+		"body": [
+			"GetSequenceList()$0"
+		],
+		"description": "Returns a list of all sequences ( animations ) the model has.",
+		"prefix": "GetSequenceList"
+	},
+	"Entity/GetSequenceMoveDist": {
+		"body": [
+			"GetSequenceMoveDist(${1:sequenceId})$0"
+		],
+		"description": "Returns an entity\u0026#39;s sequence move distance (the change in position over the course of the entire sequence).",
+		"prefix": "GetSequenceMoveDist"
+	},
+	"Entity/GetSequenceMoveYaw": {
+		"body": [
+			"GetSequenceMoveYaw(${1:number})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetSequenceMoveYaw"
+	},
+	"Entity/GetSequenceName": {
+		"body": [
+			"GetSequenceName(${1:index})$0"
+		],
+		"description": "Return the name of the sequence for the index provided. Refer to",
+		"prefix": "GetSequenceName"
+	},
+	"Entity/GetShouldPlayPickupSound": {
+		"body": [
+			"GetShouldPlayPickupSound()$0"
+		],
+		"description": "Returns true or false depending on whether or not the entity plays a physics contact sound when being picked up by a player.",
+		"prefix": "GetShouldPlayPickupSound"
+	},
+	"Entity/GetShouldServerRagdoll": {
+		"body": [
+			"GetShouldServerRagdoll()$0"
+		],
+		"description": "Returns if entity should create a server ragdoll on death or a client one.",
+		"prefix": "GetShouldServerRagdoll"
+	},
+	"Entity/GetSkin": {
+		"body": [
+			"GetSkin()$0"
+		],
+		"description": "Returns the skin index of the current skin.",
+		"prefix": "GetSkin"
+	},
+	"Entity/GetSolid": {
+		"body": [
+			"GetSolid()$0"
+		],
+		"description": "Returns solid type of an entity.",
+		"prefix": "GetSolid"
+	},
+	"Entity/GetSolidFlags": {
+		"body": [
+			"GetSolidFlags()$0"
+		],
+		"description": "Returns solid flag(s) of an entity.",
+		"prefix": "GetSolidFlags"
+	},
+	"Entity/GetSpawnEffect": {
+		"body": [
+			"GetSpawnEffect()$0"
+		],
+		"description": "Returns if we should show a spawn effect on this entity.",
+		"prefix": "GetSpawnEffect"
+	},
+	"Entity/GetSpawnFlags": {
+		"body": [
+			"GetSpawnFlags()$0"
+		],
+		"description": "Returns the bitwise spawn flags used by the entity.",
+		"prefix": "GetSpawnFlags"
+	},
+	"Entity/GetSubMaterial": {
+		"body": [
+			"GetSubMaterial(${1:index})$0"
+		],
+		"description": "Returns the material override for the given index.",
+		"prefix": "GetSubMaterial"
+	},
+	"Entity/GetSubModels": {
+		"body": [
+			"GetSubModels()$0"
+		],
+		"description": "Returns a list of models included into the entity\u0026#39;s model in the .qc file.",
+		"prefix": "GetSubModels"
+	},
+	"Entity/GetTable": {
+		"body": [
+			"GetTable()$0"
+		],
+		"description": "Returns the table that contains all values saved within the entity.",
+		"prefix": "GetTable"
+	},
+	"Entity/GetTouchTrace": {
+		"body": [
+			"GetTouchTrace()$0"
+		],
+		"description": "Returns the last trace used in the collision callbacks such as",
+		"prefix": "GetTouchTrace"
+	},
+	"Entity/GetTransmitWithParent": {
+		"body": [
+			"GetTransmitWithParent()$0"
+		],
+		"description": "Returns true if the TransmitWithParent flag is set or not.",
+		"prefix": "GetTransmitWithParent"
+	},
+	"Entity/GetUnFreezable": {
+		"body": [
+			"GetUnFreezable()$0"
+		],
+		"description": "Returns if the entity is unfreezable, meaning it can\u0026#39;t be frozen with the physgun. By default props are freezable, so this function will typically return nil.",
+		"prefix": "GetUnFreezable"
+	},
+	"Entity/GetUp": {
+		"body": [
+			"GetUp()$0"
+		],
+		"description": "Returns the upward vector of the entity, as a normalized direction vector",
+		"prefix": "GetUp"
+	},
+	"Entity/GetVar": {
+		"body": [
+			"GetVar(${1:name}, ${2:default})$0"
+		],
+		"description": "Retrieves a value from entitys",
+		"prefix": "GetVar"
+	},
+	"Entity/GetVelocity": {
+		"body": [
+			"GetVelocity()$0"
+		],
+		"description": "Returns the directional velocity of the entity.",
+		"prefix": "GetVelocity"
+	},
+	"Entity/GetWorkshopID": {
+		"body": [
+			"GetWorkshopID()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetWorkshopID"
+	},
+	"Entity/GibBreakClient": {
+		"body": [
+			"GibBreakClient(${1:force})$0"
+		],
+		"description": "Causes the entity to break into its current models gibs, if it has any.",
+		"prefix": "GibBreakClient"
+	},
+	"Entity/GibBreakServer": {
+		"body": [
+			"GibBreakServer(${1:force})$0"
+		],
+		"description": "Causes the entity to break into its current models gibs, if it has any.",
+		"prefix": "GibBreakServer"
+	},
+	"Entity/HasBoneManipulations": {
+		"body": [
+			"HasBoneManipulations()$0"
+		],
+		"description": "Returns whether or not the entity has a bone which is manipulated using either",
+		"prefix": "HasBoneManipulations"
+	},
+	"Entity/HasFlexManipulatior": {
+		"body": [
+			"HasFlexManipulatior()$0"
+		],
+		"description": "Returns whether or not the the entity has had flex manipulations performed with",
+		"prefix": "HasFlexManipulatior"
+	},
+	"Entity/HasSpawnFlags": {
+		"body": [
+			"HasSpawnFlags(${1:spawnFlags})$0"
+		],
+		"description": "Returns whether this entity has the specified spawnflags bits set.",
+		"prefix": "HasSpawnFlags"
+	},
+	"Entity/HeadTarget": {
+		"body": [
+			"HeadTarget(${1:origin})$0"
+		],
+		"description": "Returns the position of the head of this entity, NPCs use this internally to aim at their targets.",
+		"prefix": "HeadTarget"
+	},
+	"Entity/Health": {
+		"body": [
+			"Health()$0"
+		],
+		"description": "Returns the health of the entity.",
+		"prefix": "Health"
+	},
+	"Entity/Ignite": {
+		"body": [
+			"Ignite(${1:length}, ${2:radius})$0"
+		],
+		"description": "Sets the entity on fire.",
+		"prefix": "Ignite"
+	},
+	"Entity/InitializeAsClientEntity": {
+		"body": [
+			"InitializeAsClientEntity()$0"
+		],
+		"description": "Initializes this entity as being clientside only.",
+		"prefix": "InitializeAsClientEntity"
+	},
+	"Entity/Input": {
+		"body": [
+			"Input(${1:input}, ${2:activator}, ${3:inflictor}, ${4:param=nil})$0"
+		],
+		"description": "Fires input to the entity with the ability to make another entity responsible. Similar to",
+		"prefix": "Input"
+	},
+	"Entity/InstallDataTable": {
+		"body": [
+			"InstallDataTable()$0"
+		],
+		"description": "No description available.",
+		"prefix": "InstallDataTable"
+	},
+	"Entity/InvalidateBoneCache": {
+		"body": [
+			"InvalidateBoneCache()$0"
+		],
+		"description": "Resets the entity\u0026#39;s bone cache values in order to prepare for a model change.",
+		"prefix": "InvalidateBoneCache"
+	},
+	"Entity/IsConstrained": {
+		"body": [
+			"IsConstrained()$0"
+		],
+		"description": "Returns true if the entity has constraints attached to it",
+		"prefix": "IsConstrained"
+	},
+	"Entity/IsConstraint": {
+		"body": [
+			"IsConstraint()$0"
+		],
+		"description": "Returns if entity is constraint or not",
+		"prefix": "IsConstraint"
+	},
+	"Entity/IsDormant": {
+		"body": [
+			"IsDormant()$0"
+		],
+		"description": "Returns whether the entity is dormant or not. Client/server entities become dormant when they leave the PVS on the server. Client side entities can decide for themselves whether to become dormant. This mainly applies to PVS.",
+		"prefix": "IsDormant"
+	},
+	"Entity/IsEFlagSet": {
+		"body": [
+			"IsEFlagSet(${1:flag})$0"
+		],
+		"description": "Checks if given flag is set or not.",
+		"prefix": "IsEFlagSet"
+	},
+	"Entity/IsEffectActive": {
+		"body": [
+			"IsEffectActive(${1:effect})$0"
+		],
+		"description": "Returns whether an entity has engine effect applied or not.",
+		"prefix": "IsEffectActive"
+	},
+	"Entity/IsFlagSet": {
+		"body": [
+			"IsFlagSet(${1:flag})$0"
+		],
+		"description": "Checks if given flag(s) is set or not.",
+		"prefix": "IsFlagSet"
+	},
+	"Entity/IsInWorld": {
+		"body": [
+			"IsInWorld()$0"
+		],
+		"description": "Returns whether the entity is inside a wall or outside of the map.",
+		"prefix": "IsInWorld"
+	},
+	"Entity/IsLagCompensated": {
+		"body": [
+			"IsLagCompensated()$0"
+		],
+		"description": "Returns whether the entity is lag compensated or not.",
+		"prefix": "IsLagCompensated"
+	},
+	"Entity/IsLineOfSightClear": {
+		"body": [
+			"IsLineOfSightClear(${1:target})$0"
+		],
+		"description": "Returns true if the target is in line of sight.",
+		"prefix": "IsLineOfSightClear"
+	},
+	"Entity/IsNPC": {
+		"body": [
+			"IsNPC()$0"
+		],
+		"description": "Checks if the entity is an NPC or not.",
+		"prefix": "IsNPC"
+	},
+	"Entity/IsOnFire": {
+		"body": [
+			"IsOnFire()$0"
+		],
+		"description": "Returns whether the entity is on fire.",
+		"prefix": "IsOnFire"
+	},
+	"Entity/IsOnGround": {
+		"body": [
+			"IsOnGround()$0"
+		],
+		"description": "Returns whether the entity is on ground or not.",
+		"prefix": "IsOnGround"
+	},
+	"Entity/IsPlayer": {
+		"body": [
+			"IsPlayer()$0"
+		],
+		"description": "Checks if the entity is a player or not.",
+		"prefix": "IsPlayer"
+	},
+	"Entity/IsPlayerHolding": {
+		"body": [
+			"IsPlayerHolding()$0"
+		],
+		"description": "Returns true if the entity is being held by a player. Either by Physics gun, Gravity gun or Use-key.",
+		"prefix": "IsPlayerHolding"
+	},
+	"Entity/IsPlayingGesture": {
+		"body": [
+			"IsPlayingGesture(${1:activity})$0"
+		],
+		"description": "Returns whether there\u0026#39;s a gesture is given activity being played.",
+		"prefix": "IsPlayingGesture"
+	},
+	"Entity/IsRagdoll": {
+		"body": [
+			"IsRagdoll()$0"
+		],
+		"description": "Checks if the entity is a ragdoll.",
+		"prefix": "IsRagdoll"
+	},
+	"Entity/IsSolid": {
+		"body": [
+			"IsSolid()$0"
+		],
+		"description": "Returns if the entity is solid or not. Very useful for determining if the entity is a trigger or not.",
+		"prefix": "IsSolid"
+	},
+	"Entity/IsValid": {
+		"body": [
+			"IsValid()$0"
+		],
+		"description": "Returns whether the entity is a valid entity or not.",
+		"prefix": "IsValid"
+	},
+	"Entity/IsValidLayer": {
+		"body": [
+			"IsValidLayer(${1:layerID})$0"
+		],
+		"description": "Returns whether the given layer ID is valid and exists on this entity.",
+		"prefix": "IsValidLayer"
+	},
+	"Entity/IsVehicle": {
+		"body": [
+			"IsVehicle()$0"
+		],
+		"description": "Checks if the entity is a vehicle or not.",
+		"prefix": "IsVehicle"
+	},
+	"Entity/IsWeapon": {
+		"body": [
+			"IsWeapon()$0"
+		],
+		"description": "Checks if the entity is a weapon or not.",
+		"prefix": "IsWeapon"
+	},
+	"Entity/IsWidget": {
+		"body": [
+			"IsWidget()$0"
+		],
+		"description": "Returns whether the entity is a widget or not.",
+		"prefix": "IsWidget"
+	},
+	"Entity/IsWorld": {
+		"body": [
+			"IsWorld()$0"
+		],
+		"description": "Returns if the entity is the map\u0026#39;s Entity[0] worldspawn",
+		"prefix": "IsWorld"
+	},
+	"Entity/LocalToWorld": {
+		"body": [
+			"LocalToWorld(${1:lpos})$0"
+		],
+		"description": "Converts a vector local to an entity into a worldspace vector",
+		"prefix": "LocalToWorld"
+	},
+	"Entity/LocalToWorldAngles": {
+		"body": [
+			"LocalToWorldAngles(${1:ang})$0"
+		],
+		"description": "Converts a local angle (local to the entity) to a world angle.",
+		"prefix": "LocalToWorldAngles"
+	},
+	"Entity/LookupAttachment": {
+		"body": [
+			"LookupAttachment(${1:attachmentName})$0"
+		],
+		"description": "Gets the attachment index of the given attachment name, returns nothing if the attachment does not exist.",
+		"prefix": "LookupAttachment"
+	},
+	"Entity/LookupBone": {
+		"body": [
+			"LookupBone(${1:boneName})$0"
+		],
+		"description": "Gets the bone index of the given bone name, returns nothing if the bone does not exist.",
+		"prefix": "LookupBone"
+	},
+	"Entity/LookupSequence": {
+		"body": [
+			"LookupSequence(${1:name})$0"
+		],
+		"description": "Returns sequence ID from its name.",
+		"prefix": "LookupSequence"
+	},
+	"Entity/MakePhysicsObjectAShadow": {
+		"body": [
+			"MakePhysicsObjectAShadow(${1:allowPhysicsMovement}, ${2:allowPhysicsRotation})$0"
+		],
+		"description": "Turns the",
+		"prefix": "MakePhysicsObjectAShadow"
+	},
+	"Entity/ManipulateBoneAngles": {
+		"body": [
+			"ManipulateBoneAngles(${1:boneID}, ${2:ang})$0"
+		],
+		"description": "Sets custom bone angles.",
+		"prefix": "ManipulateBoneAngles"
+	},
+	"Entity/ManipulateBoneJiggle": {
+		"body": [
+			"ManipulateBoneJiggle(${1:boneID}, ${2:amount})$0"
+		],
+		"description": "Manipulates the bone\u0026#39;s jiggle value(s).",
+		"prefix": "ManipulateBoneJiggle"
+	},
+	"Entity/ManipulateBonePosition": {
+		"body": [
+			"ManipulateBonePosition(${1:boneID}, ${2:pos})$0"
+		],
+		"description": "Sets custom bone offsets.",
+		"prefix": "ManipulateBonePosition"
+	},
+	"Entity/ManipulateBoneScale": {
+		"body": [
+			"ManipulateBoneScale(${1:boneID}, ${2:scale})$0"
+		],
+		"description": "Sets custom bone scale.",
+		"prefix": "ManipulateBoneScale"
+	},
+	"Entity/MapCreationID": {
+		"body": [
+			"MapCreationID()$0"
+		],
+		"description": "Returns entity\u0026#39;s map creation ID. Unlike",
+		"prefix": "MapCreationID"
+	},
+	"Entity/MarkShadowAsDirty": {
+		"body": [
+			"MarkShadowAsDirty()$0"
+		],
+		"description": "Refreshes the shadow of the entity.",
+		"prefix": "MarkShadowAsDirty"
+	},
+	"Entity/MuzzleFlash": {
+		"body": [
+			"MuzzleFlash()$0"
+		],
+		"description": "Fires the muzzle flash effect of the weapon the entity is carrying. This only creates a light effect and is often called alongside",
+		"prefix": "MuzzleFlash"
+	},
+	"Entity/NearestPoint": {
+		"body": [
+			"NearestPoint(${1:position})$0"
+		],
+		"description": "Performs a Ray OBBox intersection from the given position to the origin of the OBBox with the entity and returns the hit position on the OBBox",
+		"prefix": "NearestPoint"
+	},
+	"Entity/NetworkVar": {
+		"body": [
+			"NetworkVar(${1:type}, ${2:slot}, ${3:name}, ${4:extended=nil})$0"
+		],
+		"description": "Creates a network variable on the entity and adds Set/Get functions for it. This function should only be called in",
+		"prefix": "NetworkVar"
+	},
+	"Entity/NetworkVarNotify": {
+		"body": [
+			"NetworkVarNotify(${1:name}, ${2:callback})$0"
+		],
+		"description": "Creates a callback that will execute when the given network variable changes - that is, when the Set\u0026lt;name\u0026gt; function is run.",
+		"prefix": "NetworkVarNotify"
+	},
+	"Entity/NextThink": {
+		"body": [
+			"NextThink(${1:timestamp})$0"
+		],
+		"description": "In the case of a scripted entity, this will cause the next",
+		"prefix": "NextThink"
+	},
+	"Entity/OBBCenter": {
+		"body": [
+			"OBBCenter()$0"
+		],
+		"description": "Returns the center of an entity\u0026#39;s bounding box as a local vector.",
+		"prefix": "OBBCenter"
+	},
+	"Entity/OBBMaxs": {
+		"body": [
+			"OBBMaxs()$0"
+		],
+		"description": "Returns the highest corner of an entity\u0026#39;s bounding box as a local vector.",
+		"prefix": "OBBMaxs"
+	},
+	"Entity/OBBMins": {
+		"body": [
+			"OBBMins()$0"
+		],
+		"description": "Returns the lowest corner of an entity\u0026#39;s bounding box as a local vector.",
+		"prefix": "OBBMins"
+	},
+	"Entity/ObjectCaps": {
+		"body": [
+			"ObjectCaps()$0"
+		],
+		"description": "Returns the entity\u0026#39;s capabilities as a bitfield.",
+		"prefix": "ObjectCaps"
+	},
+	"Entity/OnGround": {
+		"body": [
+			"OnGround()$0"
+		],
+		"description": "Returns true if the entity is on the ground, and false if it isn\u0026#39;t.",
+		"prefix": "OnGround"
+	},
+	"Entity/PassesDamageFilter": {
+		"body": [
+			"PassesDamageFilter(${1:dmg})$0"
+		],
+		"description": "Tests whether the damage passes the entity filter.",
+		"prefix": "PassesDamageFilter"
+	},
+	"Entity/PassesFilter": {
+		"body": [
+			"PassesFilter(${1:caller}, ${2:ent})$0"
+		],
+		"description": "Tests whether the entity passes the entity filter.",
+		"prefix": "PassesFilter"
+	},
+	"Entity/PhysWake": {
+		"body": [
+			"PhysWake()$0"
+		],
+		"description": "Wakes up the entity\u0026#39;s physics object",
+		"prefix": "PhysWake"
+	},
+	"Entity/PhysicsDestroy": {
+		"body": [
+			"PhysicsDestroy()$0"
+		],
+		"description": "Destroys the current physics object of an entity.",
+		"prefix": "PhysicsDestroy"
+	},
+	"Entity/PhysicsFromMesh": {
+		"body": [
+			"PhysicsFromMesh(${1:vertices})$0"
+		],
+		"description": "Initializes the physics mesh of the entity from a triangle soup defined by a table of vertices. The resulting mesh is hollow, may contain holes, and always has a volume of 0.",
+		"prefix": "PhysicsFromMesh"
+	},
+	"Entity/PhysicsInit": {
+		"body": [
+			"PhysicsInit(${1:solidType})$0"
+		],
+		"description": "Initializes the physics object of the entity using its current model. Deletes the previous physics object if there was any.",
+		"prefix": "PhysicsInit"
+	},
+	"Entity/PhysicsInitBox": {
+		"body": [
+			"PhysicsInitBox(${1:mins}, ${2:maxs})$0"
+		],
+		"description": "Makes the physics object of the entity a AABB.",
+		"prefix": "PhysicsInitBox"
+	},
+	"Entity/PhysicsInitConvex": {
+		"body": [
+			"PhysicsInitConvex(${1:points})$0"
+		],
+		"description": "Initializes the physics mesh of the entity with a convex mesh defined by a table of points. The resulting mesh is the",
+		"prefix": "PhysicsInitConvex"
+	},
+	"Entity/PhysicsInitMultiConvex": {
+		"body": [
+			"PhysicsInitMultiConvex(${1:vertices})$0"
+		],
+		"description": "An advanced version of",
+		"prefix": "PhysicsInitMultiConvex"
+	},
+	"Entity/PhysicsInitShadow": {
+		"body": [
+			"PhysicsInitShadow(${1:allowPhysicsMovement}, ${2:allowPhysicsRotation})$0"
+		],
+		"description": "Removes the old",
+		"prefix": "PhysicsInitShadow"
+	},
+	"Entity/PhysicsInitSphere": {
+		"body": [
+			"PhysicsInitSphere(${1:radius}, ${2:physmat})$0"
+		],
+		"description": "Makes the physics object of the entity a sphere.",
+		"prefix": "PhysicsInitSphere"
+	},
+	"Entity/PlayScene": {
+		"body": [
+			"PlayScene(${1:scene}, ${2:delay=0})$0"
+		],
+		"description": "Makes the entity play a .vcd scene.",
+		"prefix": "PlayScene"
+	},
+	"Entity/PointAtEntity": {
+		"body": [
+			"PointAtEntity(${1:target})$0"
+		],
+		"description": "Changes an entities angles so that it faces the target entity.",
+		"prefix": "PointAtEntity"
+	},
+	"Entity/PrecacheGibs": {
+		"body": [
+			"PrecacheGibs()$0"
+		],
+		"description": "Precaches gibs for the entity. This is required for",
+		"prefix": "PrecacheGibs"
+	},
+	"Entity/RagdollSolve": {
+		"body": [
+			"RagdollSolve()$0"
+		],
+		"description": "Normalizes the ragdoll. This is used alongside Kinect in",
+		"prefix": "RagdollSolve"
+	},
+	"Entity/RagdollStopControlling": {
+		"body": [
+			"RagdollStopControlling()$0"
+		],
+		"description": "Sets the function to build the ragdoll. This is used alongside Kinect in",
+		"prefix": "RagdollStopControlling"
+	},
+	"Entity/RagdollUpdatePhysics": {
+		"body": [
+			"RagdollUpdatePhysics(${1:unknown})$0"
+		],
+		"description": "Makes the physics objects follow the set bone positions. This is used alongside Kinect in",
+		"prefix": "RagdollUpdatePhysics"
+	},
+	"Entity/Remove": {
+		"body": [
+			"Remove()$0"
+		],
+		"description": "Removes the entity it is used on.",
+		"prefix": "Remove"
+	},
+	"Entity/RemoveAllDecals": {
+		"body": [
+			"RemoveAllDecals()$0"
+		],
+		"description": "Removes all decals from the entities surface.",
+		"prefix": "RemoveAllDecals"
+	},
+	"Entity/RemoveAllGestures": {
+		"body": [
+			"RemoveAllGestures()$0"
+		],
+		"description": "Removes and stops all gestures.",
+		"prefix": "RemoveAllGestures"
+	},
+	"Entity/RemoveCallOnRemove": {
+		"body": [
+			"RemoveCallOnRemove(${1:identifier})$0"
+		],
+		"description": "Removes the CallOnRemove\u0026#39;d function referred to by identifier",
+		"prefix": "RemoveCallOnRemove"
+	},
+	"Entity/RemoveEFlags": {
+		"body": [
+			"RemoveEFlags(${1:flag})$0"
+		],
+		"description": "Removes specified engine flag",
+		"prefix": "RemoveEFlags"
+	},
+	"Entity/RemoveEffects": {
+		"body": [
+			"RemoveEffects(${1:effect})$0"
+		],
+		"description": "Removes an engine effect applied to an entity.",
+		"prefix": "RemoveEffects"
+	},
+	"Entity/RemoveFlags": {
+		"body": [
+			"RemoveFlags(${1:flag})$0"
+		],
+		"description": "Removes specified flag(s) from the entity",
+		"prefix": "RemoveFlags"
+	},
+	"Entity/RemoveFromMotionController": {
+		"body": [
+			"RemoveFromMotionController(${1:physObj})$0"
+		],
+		"description": "Removes a",
+		"prefix": "RemoveFromMotionController"
+	},
+	"Entity/RemoveGesture": {
+		"body": [
+			"RemoveGesture(${1:activity})$0"
+		],
+		"description": "Removes and stop the gesture with given activity.",
+		"prefix": "RemoveGesture"
+	},
+	"Entity/RemoveSolidFlags": {
+		"body": [
+			"RemoveSolidFlags(${1:flags})$0"
+		],
+		"description": "Removes solid flag(s) from the entity.",
+		"prefix": "RemoveSolidFlags"
+	},
+	"Entity/ResetSequence": {
+		"body": [
+			"ResetSequence(${1:seq})$0"
+		],
+		"description": "Plays an animations on the entity. This may not always work on engine entities.",
+		"prefix": "ResetSequence"
+	},
+	"Entity/ResetSequenceInfo": {
+		"body": [
+			"ResetSequenceInfo()$0"
+		],
+		"description": "Reset entity sequence info such as playback rate, ground speed, last event check, etc.",
+		"prefix": "ResetSequenceInfo"
+	},
+	"Entity/Respawn": {
+		"body": [
+			"Respawn()$0"
+		],
+		"description": "Makes the entity/weapon respawn.",
+		"prefix": "Respawn"
+	},
+	"Entity/RestartGesture": {
+		"body": [
+			"RestartGesture(${1:activity}, ${2:addIfMissing=true}, ${3:autokill=true})$0"
+		],
+		"description": "Restarts the entity\u0026#39;s animation gesture. If the given gesture is already playing, it will reset it and play it from the beginning.",
+		"prefix": "RestartGesture"
+	},
+	"Entity/SelectWeightedSequence": {
+		"body": [
+			"SelectWeightedSequence(${1:act})$0"
+		],
+		"description": "Returns sequence ID corresponding to given activity id. Opposite of",
+		"prefix": "SelectWeightedSequence"
+	},
+	"Entity/SelectWeightedSequenceSeeded": {
+		"body": [
+			"SelectWeightedSequenceSeeded(${1:act}, ${2:seed})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SelectWeightedSequenceSeeded"
+	},
+	"Entity/SendViewModelMatchingSequence": {
+		"body": [
+			"SendViewModelMatchingSequence(${1:seq})$0"
+		],
+		"description": "Sends sequence animation to the view model. It is recommended to use this for view model animations, instead of",
+		"prefix": "SendViewModelMatchingSequence"
+	},
+	"Entity/SequenceDuration": {
+		"body": [
+			"SequenceDuration(${1:seqid=nil})$0"
+		],
+		"description": "Returns length of currently played sequence.",
+		"prefix": "SequenceDuration"
+	},
+	"Entity/SetAbsVelocity": {
+		"body": [
+			"SetAbsVelocity(${1:vel})$0"
+		],
+		"description": "Sets the entity\u0026#39;s velocity.",
+		"prefix": "SetAbsVelocity"
+	},
+	"Entity/SetAngles": {
+		"body": [
+			"SetAngles(${1:angles})$0"
+		],
+		"description": "Sets the angles of the entity.",
+		"prefix": "SetAngles"
+	},
+	"Entity/SetAnimTime": {
+		"body": [
+			"SetAnimTime(${1:time})$0"
+		],
+		"description": "Sets the time (relative to",
+		"prefix": "SetAnimTime"
+	},
+	"Entity/SetAnimation": {
+		"body": [
+			"SetAnimation(${1:playerAnim})$0"
+		],
+		"description": "Sets a player\u0026#39;s third-person animation. Mainly used by",
+		"prefix": "SetAnimation"
+	},
+	"Entity/SetAttachment": {
+		"body": [
+			"SetAttachment(${1:ent}, ${2:attachment})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetAttachment"
+	},
+	"Entity/SetAutomaticFrameAdvance": {
+		"body": [
+			"SetAutomaticFrameAdvance(${1:bUsingAnim})$0"
+		],
+		"description": "Toggles automatic frame advancing for animated sequences on an entity.",
+		"prefix": "SetAutomaticFrameAdvance"
+	},
+	"Entity/SetBloodColor": {
+		"body": [
+			"SetBloodColor(${1:bloodColor})$0"
+		],
+		"description": "Sets the blood color this entity uses.",
+		"prefix": "SetBloodColor"
+	},
+	"Entity/SetBodyGroups": {
+		"body": [
+			"SetBodyGroups(${1:bodygroups})$0"
+		],
+		"description": "Sets the bodygroups from a string. A convenience function for",
+		"prefix": "SetBodyGroups"
+	},
+	"Entity/SetBodygroup": {
+		"body": [
+			"SetBodygroup(${1:bodygroup}, ${2:value})$0"
+		],
+		"description": "Sets an entities\u0026#39; bodygroup.",
+		"prefix": "SetBodygroup"
+	},
+	"Entity/SetBoneController": {
+		"body": [
+			"SetBoneController(${1:boneControllerID}, ${2:value})$0"
+		],
+		"description": "Sets the specified value on the bone controller with the given ID of this entity, it\u0026#39;s used in HL1 to change the head rotation of NPCs, turret aiming and so on.",
+		"prefix": "SetBoneController"
+	},
+	"Entity/SetBoneMatrix": {
+		"body": [
+			"SetBoneMatrix(${1:boneid}, ${2:matrix})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetBoneMatrix"
+	},
+	"Entity/SetBonePosition": {
+		"body": [
+			"SetBonePosition(${1:bone}, ${2:pos}, ${3:ang})$0"
+		],
+		"description": "Sets the bone position and angles.",
+		"prefix": "SetBonePosition"
+	},
+	"Entity/SetCollisionBounds": {
+		"body": [
+			"SetCollisionBounds(${1:mins}, ${2:maxs})$0"
+		],
+		"description": "Sets the collision bounds for the entity, which are used for triggers (",
+		"prefix": "SetCollisionBounds"
+	},
+	"Entity/SetCollisionBoundsWS": {
+		"body": [
+			"SetCollisionBoundsWS(${1:vec1}, ${2:vec2})$0"
+		],
+		"description": "Sets the collision bounds for the entity, which are used for triggers (",
+		"prefix": "SetCollisionBoundsWS"
+	},
+	"Entity/SetCollisionGroup": {
+		"body": [
+			"SetCollisionGroup(${1:group})$0"
+		],
+		"description": "Sets the entity\u0026#39;s collision group.",
+		"prefix": "SetCollisionGroup"
+	},
+	"Entity/SetColor": {
+		"body": [
+			"SetColor(${1:color})$0"
+		],
+		"description": "Sets the color of an entity.",
+		"prefix": "SetColor"
+	},
+	"Entity/SetCreator": {
+		"body": [
+			"SetCreator(${1:ply})$0"
+		],
+		"description": "Sets the creator of the SENT.",
+		"prefix": "SetCreator"
+	},
+	"Entity/SetCustomCollisionCheck": {
+		"body": [
+			"SetCustomCollisionCheck(${1:enable})$0"
+		],
+		"description": "Marks the entity to call",
+		"prefix": "SetCustomCollisionCheck"
+	},
+	"Entity/SetCycle": {
+		"body": [
+			"SetCycle(${1:value})$0"
+		],
+		"description": "Sets the progress of the current animation to a specific value between 0 and 1.",
+		"prefix": "SetCycle"
+	},
+	"Entity/SetDTAngle": {
+		"body": [
+			"SetDTAngle(${1:key}, ${2:ang})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDTAngle"
+	},
+	"Entity/SetDTBool": {
+		"body": [
+			"SetDTBool(${1:key}, ${2:bool})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDTBool"
+	},
+	"Entity/SetDTEntity": {
+		"body": [
+			"SetDTEntity(${1:key}, ${2:ent})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDTEntity"
+	},
+	"Entity/SetDTFloat": {
+		"body": [
+			"SetDTFloat(${1:key}, ${2:float})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDTFloat"
+	},
+	"Entity/SetDTInt": {
+		"body": [
+			"SetDTInt(${1:key}, ${2:integer})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDTInt"
+	},
+	"Entity/SetDTString": {
+		"body": [
+			"SetDTString(${1:key}, ${2:str})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDTString"
+	},
+	"Entity/SetDTVector": {
+		"body": [
+			"SetDTVector(${1:key}, ${2:vec})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDTVector"
+	},
+	"Entity/SetElasticity": {
+		"body": [
+			"SetElasticity(${1:elasticity})$0"
+		],
+		"description": "Sets the elasticity of this entity, used by some flying entities such as the Helicopter NPC to determine how much it should bounce around when colliding.",
+		"prefix": "SetElasticity"
+	},
+	"Entity/SetEntity": {
+		"body": [
+			"SetEntity(${1:name}, ${2:entity})$0"
+		],
+		"description": "Allows you to set the Start or End entity attachment for the rope.",
+		"prefix": "SetEntity"
+	},
+	"Entity/SetEyeTarget": {
+		"body": [
+			"SetEyeTarget(${1:pos})$0"
+		],
+		"description": "Sets the position an entity\u0026#39;s eyes look toward.",
+		"prefix": "SetEyeTarget"
+	},
+	"Entity/SetFlexScale": {
+		"body": [
+			"SetFlexScale(${1:scale})$0"
+		],
+		"description": "Sets the flex scale of the entity.",
+		"prefix": "SetFlexScale"
+	},
+	"Entity/SetFlexWeight": {
+		"body": [
+			"SetFlexWeight(${1:flex}, ${2:weight})$0"
+		],
+		"description": "Sets the flex weight.",
+		"prefix": "SetFlexWeight"
+	},
+	"Entity/SetFriction": {
+		"body": [
+			"SetFriction(${1:friction})$0"
+		],
+		"description": "Sets how much friction an entity has when sliding against a surface. Entities default to 1 (100%) and can be higher or even negative.",
+		"prefix": "SetFriction"
+	},
+	"Entity/SetGravity": {
+		"body": [
+			"SetGravity(${1:gravityMultiplier})$0"
+		],
+		"description": "Sets the gravity multiplier of the entity.",
+		"prefix": "SetGravity"
+	},
+	"Entity/SetGroundEntity": {
+		"body": [
+			"SetGroundEntity(${1:ground})$0"
+		],
+		"description": "Sets the ground the entity is standing on.",
+		"prefix": "SetGroundEntity"
+	},
+	"Entity/SetHealth": {
+		"body": [
+			"SetHealth(${1:newHealth})$0"
+		],
+		"description": "Sets the health of the entity.",
+		"prefix": "SetHealth"
+	},
+	"Entity/SetHitboxSet": {
+		"body": [
+			"SetHitboxSet(${1:number})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetHitboxSet"
+	},
+	"Entity/SetIK": {
+		"body": [
+			"SetIK(${1:useIK})$0"
+		],
+		"description": "Enables or disable the inverse kinematic usage of this entity.",
+		"prefix": "SetIK"
+	},
+	"Entity/SetKeyValue": {
+		"body": [
+			"SetKeyValue(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets key value for the entity.",
+		"prefix": "SetKeyValue"
+	},
+	"Entity/SetLOD": {
+		"body": [
+			"SetLOD(${1:lod=-1})$0"
+		],
+		"description": "Sets the Level Of Detail model to use with this entity. This may not work for all models if the model doesn\u0026#39;t include any LOD sub models.",
+		"prefix": "SetLOD"
+	},
+	"Entity/SetLagCompensated": {
+		"body": [
+			"SetLagCompensated(${1:enable})$0"
+		],
+		"description": "This allows the entity to be lag compensated during",
+		"prefix": "SetLagCompensated"
+	},
+	"Entity/SetLayerBlendIn": {
+		"body": [
+			"SetLayerBlendIn(${1:layerID}, ${2:blendIn})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetLayerBlendIn"
+	},
+	"Entity/SetLayerBlendOut": {
+		"body": [
+			"SetLayerBlendOut(${1:layerID}, ${2:blendOut})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetLayerBlendOut"
+	},
+	"Entity/SetLayerCycle": {
+		"body": [
+			"SetLayerCycle(${1:layerID}, ${2:duration})$0"
+		],
+		"description": "Sets the animation cycle/frame of given layer.",
+		"prefix": "SetLayerCycle"
+	},
+	"Entity/SetLayerDuration": {
+		"body": [
+			"SetLayerDuration(${1:layerID}, ${2:duration})$0"
+		],
+		"description": "Sets the duration of given layer. This internally overrides the",
+		"prefix": "SetLayerDuration"
+	},
+	"Entity/SetLayerLooping": {
+		"body": [
+			"SetLayerLooping(${1:layerID}, ${2:loop})$0"
+		],
+		"description": "Sets whether the layer should loop or not.",
+		"prefix": "SetLayerLooping"
+	},
+	"Entity/SetLayerPlaybackRate": {
+		"body": [
+			"SetLayerPlaybackRate(${1:layerID}, ${2:rate})$0"
+		],
+		"description": "Sets the layer player back rate. See also",
+		"prefix": "SetLayerPlaybackRate"
+	},
+	"Entity/SetLayerPriority": {
+		"body": [
+			"SetLayerPriority(${1:layerID}, ${2:priority})$0"
+		],
+		"description": "Sets the priority of given layer.",
+		"prefix": "SetLayerPriority"
+	},
+	"Entity/SetLayerWeight": {
+		"body": [
+			"SetLayerWeight(${1:layerID}, ${2:weight})$0"
+		],
+		"description": "Sets the layer weight. This influences how strongly the animation should be overriding the normal animations of the entity.",
+		"prefix": "SetLayerWeight"
+	},
+	"Entity/SetLegacyTransform": {
+		"body": [
+			"SetLegacyTransform(${1:enabled})$0"
+		],
+		"description": "This forces an entity to use the bone transformation behaviour from versions prior to",
+		"prefix": "SetLegacyTransform"
+	},
+	"Entity/SetLocalAngles": {
+		"body": [
+			"SetLocalAngles(${1:ang})$0"
+		],
+		"description": "Sets angles relative to angles of",
+		"prefix": "SetLocalAngles"
+	},
+	"Entity/SetLocalAngularVelocity": {
+		"body": [
+			"SetLocalAngularVelocity(${1:angVel})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetLocalAngularVelocity"
+	},
+	"Entity/SetLocalPos": {
+		"body": [
+			"SetLocalPos(${1:pos})$0"
+		],
+		"description": "Sets local position relative to the parented position. This is for use with",
+		"prefix": "SetLocalPos"
+	},
+	"Entity/SetLocalVelocity": {
+		"body": [
+			"SetLocalVelocity(${1:velocity})$0"
+		],
+		"description": "Sets the entity\u0026#39;s local velocity. Same as",
+		"prefix": "SetLocalVelocity"
+	},
+	"Entity/SetMaterial": {
+		"body": [
+			"SetMaterial(${1:materialName}, ${2:forceMaterial=false})$0"
+		],
+		"description": "Sets the rendering material override of the entity.",
+		"prefix": "SetMaterial"
+	},
+	"Entity/SetMaxHealth": {
+		"body": [
+			"SetMaxHealth(${1:maxhealth})$0"
+		],
+		"description": "Sets the maximum health for entity. Note, that you can still set entity\u0026#39;s health above this amount with",
+		"prefix": "SetMaxHealth"
+	},
+	"Entity/SetModel": {
+		"body": [
+			"SetModel(${1:modelName})$0"
+		],
+		"description": "Sets the model of the entity.",
+		"prefix": "SetModel"
+	},
+	"Entity/SetModelName": {
+		"body": [
+			"SetModelName(${1:model})$0"
+		],
+		"description": "Sets the model name returned by",
+		"prefix": "SetModelName"
+	},
+	"Entity/SetModelScale": {
+		"body": [
+			"SetModelScale(${1:scale}, ${2:deltaTime=0})$0"
+		],
+		"description": "Scales the model of the entity, if the entity is a",
+		"prefix": "SetModelScale"
+	},
+	"Entity/SetMoveCollide": {
+		"body": [
+			"SetMoveCollide(${1:moveCollideType})$0"
+		],
+		"description": "Sets the move collide type of the entity. The move collide is the way a physics object reacts to hitting an object - will it bounce, slide?",
+		"prefix": "SetMoveCollide"
+	},
+	"Entity/SetMoveParent": {
+		"body": [
+			"SetMoveParent(${1:Parent})$0"
+		],
+		"description": "Sets the Movement Parent of an entity to another entity. Similar to",
+		"prefix": "SetMoveParent"
+	},
+	"Entity/SetMoveType": {
+		"body": [
+			"SetMoveType(${1:movetype})$0"
+		],
+		"description": "Sets the entitys movetype.",
+		"prefix": "SetMoveType"
+	},
+	"Entity/SetNWAngle": {
+		"body": [
+			"SetNWAngle(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets a networked angle value on the entity.",
+		"prefix": "SetNWAngle"
+	},
+	"Entity/SetNWBool": {
+		"body": [
+			"SetNWBool(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets a networked boolean value on the entity.",
+		"prefix": "SetNWBool"
+	},
+	"Entity/SetNWEntity": {
+		"body": [
+			"SetNWEntity(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets a networked entity value on the entity.",
+		"prefix": "SetNWEntity"
+	},
+	"Entity/SetNWFloat": {
+		"body": [
+			"SetNWFloat(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets a networked float (number) value on the entity.",
+		"prefix": "SetNWFloat"
+	},
+	"Entity/SetNWInt": {
+		"body": [
+			"SetNWInt(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets a networked integer (whole number) value on the entity.",
+		"prefix": "SetNWInt"
+	},
+	"Entity/SetNWString": {
+		"body": [
+			"SetNWString(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets a networked string value on the entity.",
+		"prefix": "SetNWString"
+	},
+	"Entity/SetNWVarProxy": {
+		"body": [
+			"SetNWVarProxy(${1:name}, ${2:callback})$0"
+		],
+		"description": "Sets a function to be called when the NWVar changes.",
+		"prefix": "SetNWVarProxy"
+	},
+	"Entity/SetNWVector": {
+		"body": [
+			"SetNWVector(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets a networked vector value on the entity.",
+		"prefix": "SetNWVector"
+	},
+	"Entity/SetName": {
+		"body": [
+			"SetName(${1:mappingName})$0"
+		],
+		"description": "Sets the mapping name of the entity.",
+		"prefix": "SetName"
+	},
+	"Entity/SetNetworkAngles": {
+		"body": [
+			"SetNetworkAngles(${1:angle})$0"
+		],
+		"description": "Alters networked entity angles.",
+		"prefix": "SetNetworkAngles"
+	},
+	"Entity/SetNetworkOrigin": {
+		"body": [
+			"SetNetworkOrigin(${1:origin})$0"
+		],
+		"description": "Virtually changes entity position for clients.",
+		"prefix": "SetNetworkOrigin"
+	},
+	"Entity/SetNetworkedAngle": {
+		"body": [
+			"SetNetworkedAngle(${1:key}, ${2:)})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetNetworkedAngle"
+	},
+	"Entity/SetNetworkedBool": {
+		"body": [
+			"SetNetworkedBool(${1:key}, ${2:value=false})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetNetworkedBool"
+	},
+	"Entity/SetNetworkedEntity": {
+		"body": [
+			"SetNetworkedEntity(${1:key}, ${2:value=NULL})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetNetworkedEntity"
+	},
+	"Entity/SetNetworkedFloat": {
+		"body": [
+			"SetNetworkedFloat(${1:key}, ${2:value=0})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetNetworkedFloat"
+	},
+	"Entity/SetNetworkedInt": {
+		"body": [
+			"SetNetworkedInt(${1:key}, ${2:value=0})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetNetworkedInt"
+	},
+	"Entity/SetNetworkedNumber": {
+		"body": [
+			"SetNetworkedNumber(${1:index}, ${2:number})$0"
+		],
+		"description": "Sets a networked number at the specified index on the entity.",
+		"prefix": "SetNetworkedNumber"
+	},
+	"Entity/SetNetworkedString": {
+		"body": [
+			"SetNetworkedString(${1:key}, ${2:value=\"\"})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetNetworkedString"
+	},
+	"Entity/SetNetworkedVarProxy": {
+		"body": [
+			"SetNetworkedVarProxy(${1:name}, ${2:callback})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetNetworkedVarProxy"
+	},
+	"Entity/SetNetworkedVector": {
+		"body": [
+			"SetNetworkedVector(${1:key}, ${2:)})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetNetworkedVector"
+	},
+	"Entity/SetNextClientThink": {
+		"body": [
+			"SetNextClientThink(${1:nextthink})$0"
+		],
+		"description": "Sets the next time the clientside",
+		"prefix": "SetNextClientThink"
+	},
+	"Entity/SetNoDraw": {
+		"body": [
+			"SetNoDraw(${1:shouldNotDraw})$0"
+		],
+		"description": "Sets if the entity\u0026#39;s model should render at all",
+		"prefix": "SetNoDraw"
+	},
+	"Entity/SetNotSolid": {
+		"body": [
+			"SetNotSolid(${1:IsNotSolid})$0"
+		],
+		"description": "Sets whether the entity is solid or not.",
+		"prefix": "SetNotSolid"
+	},
+	"Entity/SetOwner": {
+		"body": [
+			"SetOwner(${1:owner=NULL})$0"
+		],
+		"description": "Sets the owner of this entity, disabling all physics interaction with it.",
+		"prefix": "SetOwner"
+	},
+	"Entity/SetParent": {
+		"body": [
+			"SetParent(${1:parent}, ${2:attachmentId=-1})$0"
+		],
+		"description": "Sets the parent of this entity.",
+		"prefix": "SetParent"
+	},
+	"Entity/SetParentPhysNum": {
+		"body": [
+			"SetParentPhysNum(${1:bone})$0"
+		],
+		"description": "Sets the parent of an entity to another entity with the given physics bone number. Similar to",
+		"prefix": "SetParentPhysNum"
+	},
+	"Entity/SetPersistent": {
+		"body": [
+			"SetPersistent(${1:persist})$0"
+		],
+		"description": "Sets whether or not the given entity is persistent, it will be saved on server shutdown and loaded back when the server starts up.",
+		"prefix": "SetPersistent"
+	},
+	"Entity/SetPhysConstraintObjects": {
+		"body": [
+			"SetPhysConstraintObjects(${1:Phys1}, ${2:Phys2})$0"
+		],
+		"description": "When called on a constraint entity, sets the two physics objects to be constrained.",
+		"prefix": "SetPhysConstraintObjects"
+	},
+	"Entity/SetPhysicsAttacker": {
+		"body": [
+			"SetPhysicsAttacker(${1:ent}, ${2:timeLimit=5})$0"
+		],
+		"description": "Sets the player who gets credit if this entity kills something with physics damage within the time limit.",
+		"prefix": "SetPhysicsAttacker"
+	},
+	"Entity/SetPlaybackRate": {
+		"body": [
+			"SetPlaybackRate(${1:fSpeed})$0"
+		],
+		"description": "Allows you to set how fast an entity\u0026#39;s animation will play, with 1.0 being the default speed.",
+		"prefix": "SetPlaybackRate"
+	},
+	"Entity/SetPos": {
+		"body": [
+			"SetPos(${1:position})$0"
+		],
+		"description": "Moves the entity to the specified position.",
+		"prefix": "SetPos"
+	},
+	"Entity/SetPoseParameter": {
+		"body": [
+			"SetPoseParameter(${1:poseName}, ${2:poseValue})$0"
+		],
+		"description": "Sets the specified pose parameter to the specified value.",
+		"prefix": "SetPoseParameter"
+	},
+	"Entity/SetPredictable": {
+		"body": [
+			"SetPredictable(${1:setPredictable})$0"
+		],
+		"description": "Sets whether an entity should be predictable or not. When an entity is set as predictable, its DT vars can be changed during predicted hooks. This is useful for entities which can be controlled by player input.",
+		"prefix": "SetPredictable"
+	},
+	"Entity/SetPreventTransmit": {
+		"body": [
+			"SetPreventTransmit(${1:player}, ${2:stopTransmitting})$0"
+		],
+		"description": "Prevents the server from sending any further information about the entity to a player.",
+		"prefix": "SetPreventTransmit"
+	},
+	"Entity/SetRagdollAng": {
+		"body": [
+			"SetRagdollAng(${1:boneid}, ${2:pos})$0"
+		],
+		"description": "Sets the bone angles. This is used alongside Kinect in",
+		"prefix": "SetRagdollAng"
+	},
+	"Entity/SetRagdollBuildFunction": {
+		"body": [
+			"SetRagdollBuildFunction(${1:func})$0"
+		],
+		"description": "Sets the function to build the ragdoll. This is used alongside Kinect, for more info see ragdoll_motion entity.",
+		"prefix": "SetRagdollBuildFunction"
+	},
+	"Entity/SetRagdollPos": {
+		"body": [
+			"SetRagdollPos(${1:boneid}, ${2:pos})$0"
+		],
+		"description": "Sets the bone position. This is used alongside Kinect in",
+		"prefix": "SetRagdollPos"
+	},
+	"Entity/SetRenderAngles": {
+		"body": [
+			"SetRenderAngles(${1:newAngles})$0"
+		],
+		"description": "Sets the render angles of the Entity.",
+		"prefix": "SetRenderAngles"
+	},
+	"Entity/SetRenderBounds": {
+		"body": [
+			"SetRenderBounds(${1:mins}, ${2:maxs}, ${3:)})$0"
+		],
+		"description": "Sets the render bounds for the entity. For world space coordinates see",
+		"prefix": "SetRenderBounds"
+	},
+	"Entity/SetRenderBoundsWS": {
+		"body": [
+			"SetRenderBoundsWS(${1:mins}, ${2:maxs}, ${3:)})$0"
+		],
+		"description": "Sets the render bounds for the entity in world space coordinates. For relative coordinates see",
+		"prefix": "SetRenderBoundsWS"
+	},
+	"Entity/SetRenderClipPlane": {
+		"body": [
+			"SetRenderClipPlane(${1:planeNormal}, ${2:planePosition})$0"
+		],
+		"description": "Used to specify a plane, past which an object will be visually clipped.",
+		"prefix": "SetRenderClipPlane"
+	},
+	"Entity/SetRenderClipPlaneEnabled": {
+		"body": [
+			"SetRenderClipPlaneEnabled(${1:enabled})$0"
+		],
+		"description": "Enables the use of clipping planes to \u0026#34;cut\u0026#34; objects.",
+		"prefix": "SetRenderClipPlaneEnabled"
+	},
+	"Entity/SetRenderFX": {
+		"body": [
+			"SetRenderFX(${1:renderFX})$0"
+		],
+		"description": "Sets entity\u0026#39;s render FX.",
+		"prefix": "SetRenderFX"
+	},
+	"Entity/SetRenderMode": {
+		"body": [
+			"SetRenderMode(${1:renderMode})$0"
+		],
+		"description": "Sets the render mode of the entity.",
+		"prefix": "SetRenderMode"
+	},
+	"Entity/SetRenderOrigin": {
+		"body": [
+			"SetRenderOrigin(${1:newOrigin})$0"
+		],
+		"description": "Set the origin in which the Entity will be drawn from.",
+		"prefix": "SetRenderOrigin"
+	},
+	"Entity/SetSaveValue": {
+		"body": [
+			"SetSaveValue(${1:name}, ${2:value})$0"
+		],
+		"description": "Sets a save value for an entity.",
+		"prefix": "SetSaveValue"
+	},
+	"Entity/SetSequence": {
+		"body": [
+			"SetSequence(${1:sequenceId})$0"
+		],
+		"description": "Sets the entity\u0026#39;s model sequence. If the specified sequence is already active, the animation will not be restarted. See also",
+		"prefix": "SetSequence"
+	},
+	"Entity/SetShouldPlayPickupSound": {
+		"body": [
+			"SetShouldPlayPickupSound(${1:playsound})$0"
+		],
+		"description": "Sets whether or not the entity should make a physics contact sound when it\u0026#39;s been picked up by a player.",
+		"prefix": "SetShouldPlayPickupSound"
+	},
+	"Entity/SetShouldServerRagdoll": {
+		"body": [
+			"SetShouldServerRagdoll(${1:serverragdoll})$0"
+		],
+		"description": "Sets if entity should create a server ragdoll on death or a client one.",
+		"prefix": "SetShouldServerRagdoll"
+	},
+	"Entity/SetSkin": {
+		"body": [
+			"SetSkin(${1:skinIndex})$0"
+		],
+		"description": "Sets the skin of the entity.",
+		"prefix": "SetSkin"
+	},
+	"Entity/SetSolid": {
+		"body": [
+			"SetSolid(${1:solid_type})$0"
+		],
+		"description": "Sets the solidity of an entity.",
+		"prefix": "SetSolid"
+	},
+	"Entity/SetSolidFlags": {
+		"body": [
+			"SetSolidFlags(${1:flags})$0"
+		],
+		"description": "Sets solid flag(s) for the entity.",
+		"prefix": "SetSolidFlags"
+	},
+	"Entity/SetSpawnEffect": {
+		"body": [
+			"SetSpawnEffect(${1:spawnEffect})$0"
+		],
+		"description": "Sets whether the entity should use a spawn effect. See also:",
+		"prefix": "SetSpawnEffect"
+	},
+	"Entity/SetSubMaterial": {
+		"body": [
+			"SetSubMaterial(${1:index=nil}, ${2:material=nil})$0"
+		],
+		"description": "Overrides a single material on the model of this entity.",
+		"prefix": "SetSubMaterial"
+	},
+	"Entity/SetTable": {
+		"body": [
+			"SetTable(${1:tab})$0"
+		],
+		"description": "Changes the table that can be accessed by indexing an entity. Each entity starts with its own table by default.",
+		"prefix": "SetTable"
+	},
+	"Entity/SetTransmitWithParent": {
+		"body": [
+			"SetTransmitWithParent(${1:onoff})$0"
+		],
+		"description": "When this flag is set the entity will only transmit to the player when its parent is transmitted. This is useful for things like viewmodel attachments since without this flag they will transmit to everyone (and cause the viewmodels to transmit to everyone too).",
+		"prefix": "SetTransmitWithParent"
+	},
+	"Entity/SetTrigger": {
+		"body": [
+			"SetTrigger(${1:maketrigger})$0"
+		],
+		"description": "Marks the entity as a trigger, so it will generate",
+		"prefix": "SetTrigger"
+	},
+	"Entity/SetUnFreezable": {
+		"body": [
+			"SetUnFreezable(${1:freezable})$0"
+		],
+		"description": "Sets whether an entity can be unfrozen, meaning that it cannot be unfrozen using the physgun.",
+		"prefix": "SetUnFreezable"
+	},
+	"Entity/SetUseType": {
+		"body": [
+			"SetUseType(${1:useType})$0"
+		],
+		"description": "Sets the use type of an entity, affecting how often",
+		"prefix": "SetUseType"
+	},
+	"Entity/SetVar": {
+		"body": [
+			"SetVar(${1:name}, ${2:value})$0"
+		],
+		"description": "Allows to quickly set variable to entitys",
+		"prefix": "SetVar"
+	},
+	"Entity/SetVelocity": {
+		"body": [
+			"SetVelocity(${1:velocity})$0"
+		],
+		"description": "Sets an entity\u0026#39;s velocity with a given vector velocity.",
+		"prefix": "SetVelocity"
+	},
+	"Entity/SetWeaponModel": {
+		"body": [
+			"SetWeaponModel(${1:viewModel}, ${2:weapon=NULL})$0"
+		],
+		"description": "Sets the model and associated weapon to this viewmodel entity.",
+		"prefix": "SetWeaponModel"
+	},
+	"Entity/SetupBones": {
+		"body": [
+			"SetupBones()$0"
+		],
+		"description": "Forces the entity to reconfigure its bones. You might need to call this after changing your model\u0026#39;s scales or when manually drawing the entity multiple times at different positions.",
+		"prefix": "SetupBones"
+	},
+	"Entity/SetupPhonemeMappings": {
+		"body": [
+			"SetupPhonemeMappings(${1:fileRoot})$0"
+		],
+		"description": "Initializes the class names of an entity\u0026#39;s phoneme mappings (mouth movement data). This is called by default with argument \u0026#34;phonemes\u0026#34; when a flex-based entity (such as an",
+		"prefix": "SetupPhonemeMappings"
+	},
+	"Entity/SkinCount": {
+		"body": [
+			"SkinCount()$0"
+		],
+		"description": "Returns the amount of skins the entity has.",
+		"prefix": "SkinCount"
+	},
+	"Entity/SnatchModelInstance": {
+		"body": [
+			"SnatchModelInstance(${1:srcEntity})$0"
+		],
+		"description": "Moves the model instance from the source entity to this entity. This can be used to transfer decals that have been applied on one entity to another.",
+		"prefix": "SnatchModelInstance"
+	},
+	"Entity/Spawn": {
+		"body": [
+			"Spawn()$0"
+		],
+		"description": "Initializes the entity and starts its networking.",
+		"prefix": "Spawn"
+	},
+	"Entity/StartLoopingSound": {
+		"body": [
+			"StartLoopingSound(${1:sound})$0"
+		],
+		"description": "The function seems to be broken.",
+		"prefix": "StartLoopingSound"
+	},
+	"Entity/StartMotionController": {
+		"body": [
+			"StartMotionController()$0"
+		],
+		"description": "Starts a motion controller in the physics engine tied to this entity\u0026#39;s",
+		"prefix": "StartMotionController"
+	},
+	"Entity/StopAndDestroyParticles": {
+		"body": [
+			"StopAndDestroyParticles()$0"
+		],
+		"description": "Stops all particle effects parented to the entity and immediately destroys them.",
+		"prefix": "StopAndDestroyParticles"
+	},
+	"Entity/StopLoopingSound": {
+		"body": [
+			"StopLoopingSound(${1:id})$0"
+		],
+		"description": "The function seems to be broken.",
+		"prefix": "StopLoopingSound"
+	},
+	"Entity/StopMotionController": {
+		"body": [
+			"StopMotionController()$0"
+		],
+		"description": "Stops the motion controller created with",
+		"prefix": "StopMotionController"
+	},
+	"Entity/StopParticleEmission": {
+		"body": [
+			"StopParticleEmission()$0"
+		],
+		"description": "Stops all particle effects parented to the entity.",
+		"prefix": "StopParticleEmission"
+	},
+	"Entity/StopParticles": {
+		"body": [
+			"StopParticles()$0"
+		],
+		"description": "Stops any attached to the entity .pcf particles using",
+		"prefix": "StopParticles"
+	},
+	"Entity/StopParticlesNamed": {
+		"body": [
+			"StopParticlesNamed(${1:name})$0"
+		],
+		"description": "Stops all particle effects parented to the entity with given name.",
+		"prefix": "StopParticlesNamed"
+	},
+	"Entity/StopParticlesWithNameAndAttachment": {
+		"body": [
+			"StopParticlesWithNameAndAttachment(${1:name}, ${2:attachment})$0"
+		],
+		"description": "Stops all particle effects parented to the entity with given name on given attachment.",
+		"prefix": "StopParticlesWithNameAndAttachment"
+	},
+	"Entity/StopSound": {
+		"body": [
+			"StopSound(${1:fileName})$0"
+		],
+		"description": "Stops emitting the given sound from the entity.",
+		"prefix": "StopSound"
+	},
+	"Entity/TakeDamage": {
+		"body": [
+			"TakeDamage(${1:damageAmount}, ${2:attacker}, ${3:inflictor})$0"
+		],
+		"description": "Applies the specified amount of damage to the entity.",
+		"prefix": "TakeDamage"
+	},
+	"Entity/TakeDamageInfo": {
+		"body": [
+			"TakeDamageInfo(${1:damageInfo})$0"
+		],
+		"description": "Applies the damage specified by the damage info to the entity.",
+		"prefix": "TakeDamageInfo"
+	},
+	"Entity/TakePhysicsDamage": {
+		"body": [
+			"TakePhysicsDamage(${1:dmginfo})$0"
+		],
+		"description": "Applies physics damage to the entity",
+		"prefix": "TakePhysicsDamage"
+	},
+	"Entity/TestPVS": {
+		"body": [
+			"TestPVS(${1:testPoint})$0"
+		],
+		"description": "Check if the given position or entity is within this entity\u0026#39;s PVS.",
+		"prefix": "TestPVS"
+	},
+	"Entity/TranslateBoneToPhysBone": {
+		"body": [
+			"TranslateBoneToPhysBone(${1:bone})$0"
+		],
+		"description": "Gets the phys bone for a bone",
+		"prefix": "TranslateBoneToPhysBone"
+	},
+	"Entity/TranslatePhysBoneToBone": {
+		"body": [
+			"TranslatePhysBoneToBone(${1:physNum})$0"
+		],
+		"description": "Gets the bone number corresponding to a physics bone.",
+		"prefix": "TranslatePhysBoneToBone"
+	},
+	"Entity/Use": {
+		"body": [
+			"Use(${1:Activator}, ${2:Caller}, ${3:UseType}, ${4:Integer})$0"
+		],
+		"description": "Activates the entity, as if a player pressed the Use key (Default",
+		"prefix": "Use"
+	},
+	"Entity/UseClientSideAnimation": {
+		"body": [
+			"UseClientSideAnimation()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UseClientSideAnimation"
+	},
+	"Entity/UseTriggerBounds": {
+		"body": [
+			"UseTriggerBounds(${1:enable}, ${2:bloat=0})$0"
+		],
+		"description": "Enables or disables trigger bounds.",
+		"prefix": "UseTriggerBounds"
+	},
+	"Entity/ViewModelIndex": {
+		"body": [
+			"ViewModelIndex()$0"
+		],
+		"description": "Returns the index of this view model, it can be used to identify which one of the player\u0026#39;s view models this entity is.",
+		"prefix": "ViewModelIndex"
+	},
+	"Entity/Visible": {
+		"body": [
+			"Visible(${1:Entity})$0"
+		],
+		"description": "Returns true if the provided entity is visible from the passed entity.",
+		"prefix": "Visible"
+	},
+	"Entity/VisibleVec": {
+		"body": [
+			"VisibleVec(${1:pos})$0"
+		],
+		"description": "Returns true if supplied vector is visible from the entity\u0026#39;s line of sight.",
+		"prefix": "VisibleVec"
+	},
+	"Entity/WaterLevel": {
+		"body": [
+			"WaterLevel()$0"
+		],
+		"description": "Returns an integer that represents how deep in water the entity is.",
+		"prefix": "WaterLevel"
+	},
+	"Entity/Weapon_SetActivity": {
+		"body": [
+			"Weapon_SetActivity(${1:act}, ${2:duration})$0"
+		],
+		"description": "No description available.",
+		"prefix": "Weapon_SetActivity"
+	},
+	"Entity/Weapon_TranslateActivity": {
+		"body": [
+			"Weapon_TranslateActivity(${1:act})$0"
+		],
+		"description": "Calls and returns",
+		"prefix": "Weapon_TranslateActivity"
+	},
+	"Entity/WorldSpaceAABB": {
+		"body": [
+			"WorldSpaceAABB()$0"
+		],
+		"description": "Returns two vectors representing the minimum and maximum extent of the entity\u0026#39;s bounding box.",
+		"prefix": "WorldSpaceAABB"
+	},
+	"Entity/WorldSpaceCenter": {
+		"body": [
+			"WorldSpaceCenter()$0"
+		],
+		"description": "Returns the center of the entity according to its collision model.",
+		"prefix": "WorldSpaceCenter"
+	},
+	"Entity/WorldToLocal": {
+		"body": [
+			"WorldToLocal(${1:wpos})$0"
+		],
+		"description": "Converts a worldspace vector into a vector local to an entity",
+		"prefix": "WorldToLocal"
+	},
+	"Entity/WorldToLocalAngles": {
+		"body": [
+			"WorldToLocalAngles(${1:ang})$0"
+		],
+		"description": "Converts world angles to local angles ( local to the entity )",
+		"prefix": "WorldToLocalAngles"
+	}
+}

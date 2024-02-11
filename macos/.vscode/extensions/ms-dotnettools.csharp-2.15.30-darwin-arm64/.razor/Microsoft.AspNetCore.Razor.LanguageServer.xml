@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.AspNetCore.Razor.LanguageServer</name>
+    </assembly>
+    <members>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.DocumentPositionInfoStrategy">
+            <summary>
+            The strategy to use to project the incoming caret position onto the generated C#/Html document
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.PreferCSharpOverHtmlIfPossible">
+            <summary>
+            When <see langword="true" />, we'll try to map the cursor position to C# even when it is in a Html context, for example
+            for component attributes that are fully within a Html context, but map to a C# property write in the generated document.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.CustomMessageTarget">
+            <summary>
+            The name of the endpoint to delegate to, from <see cref="T:Microsoft.AspNetCore.Razor.LanguageServer.Common.CustomMessageNames"/>. This is the
+            custom endpoint that is sent via <see cref="T:Microsoft.AspNetCore.Razor.LanguageServer.IClientConnection"/> which returns
+            a response by delegating to C#/HTML.
+            </summary>
+            <remarks>
+            An example is <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Common.CustomMessageNames.RazorHoverEndpointName"/>
+            </remarks>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.CreateDelegatedParamsAsync(`0,Microsoft.AspNetCore.Razor.LanguageServer.EndpointContracts.RazorRequestContext,Microsoft.AspNetCore.Razor.LanguageServer.DocumentPositionInfo,System.Threading.CancellationToken)">
+            <summary>
+            The delegated object to send to the <see cref="P:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.CustomMessageTarget"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.HandleDelegatedResponseAsync(`1,`0,Microsoft.AspNetCore.Razor.LanguageServer.EndpointContracts.RazorRequestContext,Microsoft.AspNetCore.Razor.LanguageServer.DocumentPositionInfo,System.Threading.CancellationToken)">
+            <summary>
+            If the response needs to be handled, such as for remapping positions back, override and handle here
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.TryHandleAsync(`0,Microsoft.AspNetCore.Razor.LanguageServer.EndpointContracts.RazorRequestContext,Microsoft.AspNetCore.Razor.LanguageServer.DocumentPositionInfo,System.Threading.CancellationToken)">
+            <summary>
+            If the request can be handled without delegation, override this to provide a response. If a null
+            value is returned the request will be delegated to C#/HTML servers, otherwise the response
+            will be used in <see cref="M:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.HandleRequestAsync(`0,Microsoft.AspNetCore.Razor.LanguageServer.EndpointContracts.RazorRequestContext,System.Threading.CancellationToken)"/>
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.IsSupported">
+            <summary>
+            Returns true if the configuration supports this operation being handled, otherwise returns false. Use to
+            handle cases where <see cref="T:Microsoft.CodeAnalysis.Razor.Workspaces.LanguageServerFeatureOptions"/> other than <see cref="P:Microsoft.CodeAnalysis.Razor.Workspaces.LanguageServerFeatureOptions.SingleServerSupport"/>
+            need to be checked to validate that the operation can be done.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.HandleRequestAsync(`0,Microsoft.AspNetCore.Razor.LanguageServer.EndpointContracts.RazorRequestContext,System.Threading.CancellationToken)">
+            <summary>
+            Implementation for <see cref="M:Microsoft.AspNetCore.Razor.LanguageServer.AbstractRazorDelegatingEndpoint`2.HandleRequestAsync(`0,Microsoft.AspNetCore.Razor.LanguageServer.EndpointContracts.RazorRequestContext,System.Threading.CancellationToken)"/>
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.ClaspLoggingBridge">
+            <summary>
+            Providers a bridge from CLaSP, which uses ILspLogger, to our logging infrastructure, which uses ILogger
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.ClientConnection.OnInitializedAsync(Microsoft.VisualStudio.LanguageServer.Protocol.VSInternalClientCapabilities,System.Threading.CancellationToken)">
+            <summary>
+            Fires when the language server is set to "Started".
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.CodeActions.AddUsingsCodeActionProviderHelper.TryExtractNamespace(System.String,System.String@,System.String@)">
+            <summary>
+            Extracts the namespace from a C# add using statement provided by Visual Studio
+            </summary>
+            <param name="csharpAddUsing">Add using statement of the form `using System.X;`</param>
+            <param name="namespace">Extract namespace `System.X`</param>
+            <param name="prefix">The prefix to show, before the namespace, if any</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.CodeActions.UnformattedRemappingCSharpCodeActionResolver">
+            <summary>
+            Resolves and remaps the code action, without running formatting passes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.CodeActions.ICodeActionProvider.ProvideAsync(Microsoft.AspNetCore.Razor.LanguageServer.CodeActions.RazorCodeActionContext,System.Collections.Generic.IEnumerable{Microsoft.AspNetCore.Razor.LanguageServer.CodeActions.Models.RazorVSInternalCodeAction},System.Threading.CancellationToken)">
+            <summary>
+            Takes code actions provided by a child language, and provides code actions that should be returned to the LSP client.
+            </summary>
+            <remarks>
+            The list of code actions returned from all providers will be combined together in a list. A null result and an empty
+            result are effectively the same.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.CodeActions.Razor.CodeBlockService.CreateFormattedTextEdit(Microsoft.AspNetCore.Razor.Language.RazorCodeDocument,System.String,Microsoft.AspNetCore.Razor.LanguageServer.RazorLSPOptions)">
+            <summary>
+             Creates a <see cref="T:Microsoft.VisualStudio.LanguageServer.Protocol.TextEdit"/> that will place the formatted generated method within a @code block in the file.
+            </summary>
+            <param name="code">
+             The <see cref="T:Microsoft.AspNetCore.Razor.Language.RazorCodeDocument"/> of the file where the generated method will be placed.
+            </param>
+            <param name="templateWithMethodSignature">
+             The skeleton of the generated method where a <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.Indent"/> should be placed
+             anywhere that needs to have some indenting, <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.InitialIndent"/> anywhere that
+             needs some initial indenting.
+             It should look something like:
+              <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.InitialIndent"/><see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.Indent"/>public void MethodName()
+              <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.InitialIndent"/><see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.Indent"/>{
+              <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.InitialIndent"/><see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.Indent"/><see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.Indent"/>throw new NotImplementedException();
+              <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.InitialIndent"/><see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.Indent"/>}
+            </param>
+            <param name="options">
+             The <see cref="T:Microsoft.AspNetCore.Razor.LanguageServer.RazorLSPOptions"/> that contains information about indentation.
+            </param>
+            <returns>
+             A <see cref="T:Microsoft.VisualStudio.LanguageServer.Protocol.TextEdit"/> that will place the formatted generated method within a @code block in the file.
+            </returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.CodeActions.Razor.CodeBlockService.IsLineEmpty(Microsoft.CodeAnalysis.Text.TextLine)">
+            <summary>
+             Determines whether the line is empty.
+            </summary>
+            <param name="textLine">The line to check.</param>
+            <returns>true if the line is empty, otherwise false.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.CodeActions.ExtractToCodeBehindCodeActionResolver.GenerateCodeBehindPath(System.String)">
+            <summary>
+            Generate a file path with adjacent to our input path that has the
+            correct codebehind extension, using numbers to differentiate from
+            any collisions.
+            </summary>
+            <param name="path">The origin file path.</param>
+            <returns>A non-existent file path with the same base name and a codebehind extension.</returns>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.CodeActions.VSCodeActionParams">
+            <summary>
+            We can't use the CodeActionParams defined in MS.VS.LS.Protocol, so need our own version, because the platform only
+            converts on read, not write. ie, if it gets a request for a CodeActionParams, it will happily deserialize the Context
+            property to VSInternalCodeActionContext, but in our case we need to send a request to our CustomMessageTarget, and so
+            we need the Context property serialized as the internal type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.Common.CustomMessageNames">
+            <summary>
+            This lists all of the LSP methods that we support  that are not part of the LSP spec, or LSP++
+            </summary>
+            <remarks>
+            Handlers for these methods live in either the RazorCustomMessageTarget class in this repo for VS,
+            or in various TypeScript files in https://github.com/dotnet/vscode-csharp for VS Code.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.LanguageServer.Common.LanguageServerConstants.CodeActions.UnformattedRemap">
+            <summary>
+            Remaps without formatting the resolved code action edit
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.LanguageServer.Common.LanguageServerConstants.CodeActions.Default">
+            <summary>
+            Remaps and formats the resolved code action edit
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Completion.Delegation.DelegatedCompletionResponseRewriter.Order">
+             <summary>
+             Defines the order in which the rewriter will run. Implementors of <see cref="T:Microsoft.AspNetCore.Razor.LanguageServer.Completion.Delegation.DelegatedCompletionResponseRewriter"/> should utilize
+             the <see cref="T:Microsoft.AspNetCore.Razor.LanguageServer.Completion.Delegation.DelegatedCompletionResponseRewriter.ExecutionBehaviorOrder"/> type to determine order.
+            
+             <see cref="P:Microsoft.AspNetCore.Razor.LanguageServer.Completion.Delegation.DelegatedCompletionResponseRewriter.Order"/> is only called once to determine order (needs to represent a static order).
+             </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.Completion.Delegation.DesignTimeHelperResponseRewriter">
+            <summary>
+             Removes Razor design-time helpers from a C# completion list.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.DefaultRazorComponentSearchEngine.TryLocateComponentAsync(Microsoft.AspNetCore.Razor.Language.TagHelperDescriptor)">
+            <summary>Search for a component in a project based on its tag name and fully qualified name.</summary>
+            <remarks>
+            This method makes several assumptions about the nature of components. First, it assumes that a component
+            a given name `Name` will be located in a file `Name.razor`. Second, it assumes that the namespace the
+            component is present in has the same name as the assembly its corresponding tag helper is loaded from.
+            Implicitly, this method inherits any assumptions made by TrySplitNamespaceAndType.
+            </remarks>
+            <param name="tagHelper">A TagHelperDescriptor to find the corresponding Razor component for.</param>
+            <returns>The corresponding DocumentSnapshot if found, null otherwise.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="tagHelper"/> is null.</exception>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.DefaultWorkspaceSemanticTokensRefreshTrigger">
+            <summary>
+            Sends a 'workspace\semanticTokens\refresh' request each time the project changes.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Diagnostics.RazorTranslateDiagnosticsService.#ctor(Microsoft.AspNetCore.Razor.LanguageServer.IRazorDocumentMappingService,Microsoft.CodeAnalysis.Razor.Logging.IRazorLoggerFactory)">
+            <summary>
+            Contains several methods for mapping and filtering Razor and C# diagnostics. It allows for
+            translating code diagnostics from one representation into another, such as from C# to Razor.
+            </summary>
+            <param name="documentMappingService">The <see cref="T:Microsoft.AspNetCore.Razor.LanguageServer.IRazorDocumentMappingService"/>.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.CodeAnalysis.Razor.Logging.IRazorLoggerFactory"/>.</param>
+            <exception cref="T:System.ArgumentNullException"/>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Diagnostics.RazorTranslateDiagnosticsService.TranslateAsync(Microsoft.AspNetCore.Razor.LanguageServer.Protocol.RazorLanguageKind,Microsoft.VisualStudio.LanguageServer.Protocol.Diagnostic[],Microsoft.AspNetCore.Razor.LanguageServer.DocumentContext,System.Threading.CancellationToken)">
+            <summary>
+            Translates code diagnostics from one representation into another.
+            </summary>
+            <param name="diagnosticKind">The `RazorLanguageKind` of the `Diagnostic` objects included in `diagnostics`.</param>
+            <param name="diagnostics">An array of `Diagnostic` objects to translate.</param>
+            <param name="documentContext">The `DocumentContext` for the code document associated with the diagnostics.</param>
+            <param name="cancellationToken">A `CancellationToken` to observe while waiting for the task to complete.</param>
+            <returns>An array of translated diagnostics</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.DirectoryHelper.GetFilteredFiles(System.String,System.String,System.Collections.Generic.IReadOnlyCollection{System.String},Microsoft.AspNetCore.Razor.LanguageServer.DirectoryHelper.IFileSystem,Microsoft.Extensions.Logging.ILogger)">
+            <summary>
+            Finds all the files in a directory which meet the given criteria.
+            </summary>
+            <param name="workspaceDirectory">The directory to be searched.</param>
+            <param name="searchPattern">The pattern to apply when searching.</param>
+            <param name="ignoredDirectories">List of directories to skip when recursing.</param>
+            <param name="fileSystem">Exists for tests only. DO NOT PROVIDE outside of tests.</param>
+            <param name="logger">An optional logger to report on exceptional situations such as <see cref="T:System.IO.PathTooLongException"/>.</param>
+            <returns>A list of files within the given directory that meet the search criteria.</returns>
+            <remarks>This method is needed to avoid problematic folders such as "node_modules" which are known not to yield the desired results or may cause performance issues.</remarks>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.DocumentPresentation.RazorTextPresentationParams">
+            <summary>
+            Class representing the parameters sent for a textDocument/_vs_textPresentation request, plus
+            a host document version.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.DocumentPresentation.RazorUriPresentationParams">
+            <summary>
+            Class representing the parameters sent for a textDocument/_vs_uriPresentation request, plus
+            a host document version.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.DocumentPresentation.TextPresentationParams">
+            <summary>
+            Class representing the parameters sent for a textDocument/_vs_textPresentation request.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.DocumentPresentation.UriPresentationParams">
+            <summary>
+            Class representing the parameters sent for a textDocument/_vs_uriPresentation request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.LanguageServer.Exports.CustomExportAssemblyLoader._loadedAssemblies">
+            <summary>
+            Cache assemblies that are already loaded by AssemblyName comparison
+            </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.LanguageServer.Exports.CustomExportAssemblyLoader._baseDirectory">
+            <summary>
+            Base directory to search for <see cref="M:System.Reflection.Assembly.LoadFrom(System.String)"/> if initial load fails
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.DocumentPositionInfo">
+            <summary>
+            Represents a position in a document. If <see cref="P:Microsoft.AspNetCore.Razor.LanguageServer.DocumentPositionInfo.LanguageKind"/> is Razor then the position will be
+            in the host document, otherwise it will be in the corresponding generated document.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.DocumentPositionInfo.#ctor(Microsoft.AspNetCore.Razor.LanguageServer.Protocol.RazorLanguageKind,Microsoft.VisualStudio.LanguageServer.Protocol.Position,System.Int32)">
+            <summary>
+            Represents a position in a document. If <see cref="P:Microsoft.AspNetCore.Razor.LanguageServer.DocumentPositionInfo.LanguageKind"/> is Razor then the position will be
+            in the host document, otherwise it will be in the corresponding generated document.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Extensions.SourceTextExtensions.GetEncompassingTextChangeRange(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.CodeAnalysis.Text.SourceText)">
+            <summary>
+            Gets the minimal range of text that changed between the two versions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.IRazorDocumentMappingServiceExtensions.MapToHostDocumentUriAndRangeAsync(Microsoft.AspNetCore.Razor.LanguageServer.IRazorDocumentMappingService,System.Uri,Microsoft.VisualStudio.LanguageServer.Protocol.Range,System.Threading.CancellationToken)">
+            <summary>
+            Maps a range in the specified generated document uri to a range in the Razor document that owns the
+            generated document. If the uri passed in is not for a generated document, or the range cannot be mapped
+            for some other reason, the original passed in range is returned unchanged.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.FindAllReferences.FindAllReferencesEndpoint.FilterReferenceDisplayText(System.Object)">
+            <summary>
+            If the reference text is showing a generated identifier (such as "__o =") this
+            fixes it to be what the actual reference display would look like to a user.
+            See https://github.com/dotnet/razor/issues/4611 for more details on what this fixes
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Folding.FoldingRangeEndpoint.FixFoldingRangeStart(Microsoft.VisualStudio.LanguageServer.Protocol.FoldingRange,Microsoft.AspNetCore.Razor.Language.RazorCodeDocument)">
+            <summary>
+            Fixes the start of a range so that the offset of the first line is the last character on that line. This makes
+            it so collapsing will still show the text instead of just "..."
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingContext.GetIndentations">
+            <summary>A Dictionary of int (line number) to IndentationContext.</summary>
+            <remarks>
+            Don't use this to discover the indentation level you should have, use
+            <see cref="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingContext.TryGetIndentationLevel(System.Int32,System.Int32@)"/> which operates on the position rather than just the line.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingContext.GetIndentationLevelString(System.Int32)">
+            <summary>
+            Generates a string of indentation based on a specific indentation level. For instance, inside of a C# method represents 1 indentation level. A method within a class would have indentaiton level of 2 by default etc.
+            </summary>
+            <param name="indentationLevel">The indentation level to represent</param>
+            <returns>A whitespace string representing the indentation level based on the configuration.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingContext.GetIndentationOffsetForLevel(System.Int32)">
+            <summary>
+            Given a level, returns the corresponding offset.
+            </summary>
+            <param name="level">A value representing the indentation level.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingContext.DEBUG_ValidateComponents(Microsoft.AspNetCore.Razor.Language.RazorCodeDocument,Microsoft.AspNetCore.Razor.Language.RazorCodeDocument)">
+            <summary>
+            It can be difficult in the testing infrastructure to correct constructs input files that work consistently across
+            context changes, so this method validates that the number of components isn't changing due to lost tag help info.
+            Without this guarantee its hard to reason about test behaviour/failures.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.AddIndentationToMethod(System.String,Microsoft.AspNetCore.Razor.LanguageServer.RazorLSPOptions,System.Int32)">
+            <summary>
+             Adds indenting to the method.
+            </summary>
+            <param name="method">
+             The method to add indenting to. The method should be marked with <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.Indent"/> where an indent is wanted
+            </param>
+            <param name="options">
+             The <see cref="T:Microsoft.AspNetCore.Razor.LanguageServer.RazorLSPOptions"/> that contains information about indenting.
+            </param>
+            <param name="startingIndent">
+             The size of the any existing indent.
+            </param>
+            <returns>The indented method.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.AddIndentationToMethod(System.String,Microsoft.AspNetCore.Razor.LanguageServer.RazorLSPOptions,System.Int32,System.Int32,System.String)">
+            <summary>
+             Adds indenting to the method.
+            </summary>
+            <param name="method">
+             The method to add indenting to. The method should be marked with <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.Indent"/> where an indent is wanted
+             and <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.InitialIndent"/> where some initial indent is needed.
+            </param>
+            <param name="options">
+             The <see cref="T:Microsoft.AspNetCore.Razor.LanguageServer.RazorLSPOptions"/> that contains information about indenting.
+            </param>
+            <param name="startAbsoluteIndex">
+             The absolute index of the beginning of the class in the C# file the method will be added to.
+            </param>
+            <param name="numCharacterBefore">
+             The number of characters on the line before where startAbsoluteIndex is in the source.
+            </param>
+            <param name="source">
+             The contents of the C# file.
+            </param>
+            <returns>The indented method.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.AddIndentationToMethod(System.String,Microsoft.AspNetCore.Razor.LanguageServer.RazorLSPOptions,System.Int32,System.Int32,Microsoft.AspNetCore.Razor.Language.RazorSourceDocument)">
+            <summary>
+             Adds indenting to the method.
+            </summary>
+            <param name="method">
+             The method to add indenting to. The method should be marked with <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.Indent"/> where an indent is wanted
+             and <see cref="F:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.InitialIndent"/> where some initial indent is needed.
+            </param>
+            <param name="options">
+             The <see cref="T:Microsoft.AspNetCore.Razor.LanguageServer.RazorLSPOptions"/> that contains information about indenting.
+            </param>
+            <param name="startAbsoluteIndex">
+             The absolute index of the beginning of the code block in the Razor file where the method will be added to.
+            </param>
+            <param name="numCharacterBefore">
+             The number of characters on the line before where startAbsoluteIndex is in the source.
+            </param>
+            <param name="source">
+             The <see cref="T:Microsoft.AspNetCore.Razor.Language.RazorSourceDocument"/> of the razor file the method is being added to.
+            </param>
+            <returns>The indented method.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.FormattingUtilities.GetIndentationString(System.Int32,System.Boolean,System.Int32)">
+            <summary>
+            Given a <paramref name="indentation"/> amount of characters, generate a string representing the configured indentation.
+            </summary>
+            <param name="indentation">An amount of characters to represent the indentation.</param>
+            <param name="insertSpaces">Whether spaces are used for indentation.</param>
+            <param name="tabSize">The size of a tab.</param>
+            <returns>A whitespace string representation indentation.</returns>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.HtmlFormatter.FixHtmlTestEdits(Microsoft.CodeAnalysis.Text.SourceText,Microsoft.VisualStudio.LanguageServer.Protocol.TextEdit[])">
+            <summary>
+            Sometimes the Html language server will send back an edit that contains a tilde, because the generated
+            document we send them has lots of tildes. In those cases, we need to do some extra work to compute the
+            minimal text edits
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.IndentationContext.ExistingIndentation">
+            <summary>
+            The number of characters of indentation there are on this line
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Formatting.IndentationContext.ExistingIndentationSize">
+            <summary>
+            The amount of visual indentation there is on this line, taking into account tab size
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.IConfigurationSyncService">
+            <summary>
+            Service that syncs settings from the client to the LSP server
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.IRazorDocumentMappingService.MapToHostDocumentUriAndRangeAsync(System.Uri,Microsoft.CodeAnalysis.Text.LinePositionSpan,System.Threading.CancellationToken)">
+            <summary>
+            Maps a range in the specified generated document uri to a range in the Razor document that owns the
+            generated document. If the uri passed in is not for a generated document, or the range cannot be mapped
+            for some other reason, the original passed in range is returned unchanged.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.LspLogger">
+            <summary>
+            ILogger implementation that logs via the window/logMessage LSP method
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.MapCode.MapCodeEndpoint">
+            <summary>
+            Maps requested code to a given Razor document.
+            </summary>
+            <remarks>
+            This class and its mapping heuristics will likely be constantly evolving as we receive
+            more advanced inputs from the client.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.LanguageServer.MappingBehavior.Inclusive">
+             <summary>
+             Inclusive mapping behavior will attempt to map overlapping or intersecting generated ranges with a provided projection range.
+            
+             Behavior:
+                 - Overlaps > 1 generated range = No mapping
+                 - Intersects > 1 generated range = No mapping
+                 - Overlaps 1 generated range = Will reduce the provided range down to the generated range.
+                 - Intersects 1 generated range = Will use the generated range mappings
+             </summary>
+        </member>
+        <member name="F:Microsoft.AspNetCore.Razor.LanguageServer.MappingBehavior.Inferred">
+             <summary>
+             Inferred mapping behavior will attempt to map overlapping, intersecting or inbetween generated ranges with a provided projection range.
+            
+             Behavior: Everything `Inclusive` does +
+                 - No mappings in document = No mapping
+                 - Inbetween two mappings = Maps inbetween the two generated ranges
+                 - Inbetween one mapping and end of document = Maps end of mapping to the end of document
+                 - Inbetween beginning of document and one mapping = No mapping
+                     o Usually errors flow forward in the document space (not backwards) which is why we don't map this scenario.
+             </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.PreferAttributeNameDocumentPositionInfoStrategy">
+            <summary>
+            A projection strategy that, when given a position that occurs anywhere in an attribute name, will return the projection
+            for the position at the start of the attribute name, ignoring any prefix or suffix. eg given any location within the
+            attribute "@bind-Value:after", it will return the projection at the point of the word "Value" therein.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.ProjectSystem.ISnapshotResolver.FindPotentialProjects(System.String)">
+            <summary>
+            Finds all the projects where the document path starts with the path of the folder that contains the project file.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.ProjectSystem.ISnapshotResolver.TryResolveDocumentInAnyProject(System.String,Microsoft.CodeAnalysis.Razor.ProjectSystem.IDocumentSnapshot@)">
+            <summary>
+            Finds a <see cref="T:Microsoft.CodeAnalysis.Razor.ProjectSystem.IDocumentSnapshot"/> for the given document path that is contained within any project, and returns the first
+            one found if it does. This method should be avoided where possible, and the overload that takes a <see cref="T:Microsoft.CodeAnalysis.Razor.ProjectSystem.ProjectKey"/> should be used instead
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.ProjectSystem.SnapshotResolver.FindPotentialProjects(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.RazorLanguageServer.LoggerFactoryWrapper">
+            <summary>
+            Very small wrapper around the <see cref="T:Microsoft.CodeAnalysis.Razor.Logging.IRazorLoggerFactory"/> to add a prefix to the category name, so we can tell in the logs
+            whether things are coming from the VS side, the LSP side, of our code. This is only temporary and will be removed when we move
+            to cohosting as there will only be one side.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.RazorLSPOptions.From(Microsoft.CodeAnalysis.Razor.Editor.ClientSettings)">
+            <summary>
+            Initializes the LSP options with the settings from the passed in client settings, and default values for anything
+            not defined in client settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.RazorSyntaxFacts.TryGetAttributeNameAbsoluteIndex(Microsoft.AspNetCore.Razor.Language.RazorCodeDocument,System.Int32,System.Int32@)">
+            <summary>
+            Given an absolute index positioned in an attribute, finds the absolute index of the part of the
+            attribute that represents the attribute name. eg. for @bi$$nd-Value it will find the absolute index
+            of "Value"
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.RazorSyntaxFacts.TryGetFullAttributeNameSpan(Microsoft.AspNetCore.Razor.Language.RazorCodeDocument,System.Int32,Microsoft.CodeAnalysis.Text.TextSpan@)">
+            <summary>
+            Gets the span of the entire "name" part of an attribute, if the <paramref name="absoluteIndex"/> is anywhere within it,
+            including any prefix or suffix
+            For example given "&lt;Goo @bi$$nd-Value:after="val" /&gt;" with the cursor at $$, it would return the span from "@" to "r".
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.Semantic.ProvideSemanticTokensResponse">
+            <summary>
+            Transports C# semantic token responses from the Razor LS client to the Razor LS.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Semantic.SemanticRange.FromRazor">
+            <summary>
+            If we produce a token, and a delegated server produces a token, we want to prefer ours, so we use this flag to help our
+            sort algorithm, that way we can avoid the perf hit of actually finding duplicates, and just take the first instance that
+            covers a range.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.WrapWithTag.WrapWithTagParams">
+            <summary>
+            Class representing the parameters sent for a textDocument/_vsweb_wrapWithTag request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.WrapWithTag.WrapWithTagParams.TextDocument">
+            <summary>
+            Gets or sets the identifier for the text document to be operate on.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.WrapWithTag.WrapWithTagParams.Range">
+            <summary>
+            Gets or sets the selection range to be wrapped.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.WrapWithTag.WrapWithTagParams.TagName">
+            <summary>
+            Gets or sets the wrapping tag name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.WrapWithTag.WrapWithTagParams.Options">
+            <summary>
+            Gets or sets the formatting options.
+            </summary>
+        </member>
+        <member name="T:Microsoft.AspNetCore.Razor.LanguageServer.WrapWithTag.WrapWithTagResponse">
+            <summary>
+            Class representing the response of an WrapWithTag response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.WrapWithTag.WrapWithTagResponse.TagRange">
+            <summary>
+            Gets or sets the range of the wrapping tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.WrapWithTag.WrapWithTagResponse.TextEdits">
+            <summary>
+            Gets or sets the text edits.
+            </summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Blazor_directive_attributes">
+            <summary>Blazor directive attributes</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Changes">
+            <summary>Changes:</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Create_Component_FromTag_Title">
+            <summary>Create component from tag</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Diagnostics_after">
+            <summary>Diagnostics after:</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Diagnostics_before">
+            <summary>Diagnostics before:</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Document_Not_Found">
+            <summary>Document {0} was not found.</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.FormatDocument_Not_Found(System.Object)">
+            <summary>Document {0} was not found.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Edit_at_adds">
+            <summary>Edit at {0} adds the non-whitespace content '{1}'.</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.FormatEdit_at_adds(System.Object,System.Object)">
+            <summary>Edit at {0} adds the non-whitespace content '{1}'.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Edit_at_deletes">
+            <summary>Edit at {0} deletes the non-whitespace content '{1}'.</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.FormatEdit_at_deletes(System.Object,System.Object)">
+            <summary>Edit at {0} deletes the non-whitespace content '{1}'.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.ExtractTo_CodeBehind_Title">
+            <summary>Extract block to code behind</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.File_Externally_Modified">
+            <summary>File was externally modified: {0}</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.FormatFile_Externally_Modified(System.Object)">
+            <summary>File was externally modified: {0}</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Format_operation_changed_diagnostics">
+            <summary>A format operation is being abandoned because it would introduce or remove one of more diagnostics.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Format_operation_changed_nonwhitespace">
+            <summary>A format operation is being abandoned because it would add or delete non-whitespace content.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Generate_Async_Event_Handler_Title">
+            <summary>Generate Async Event Handler '{0}'</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.FormatGenerate_Async_Event_Handler_Title(System.Object)">
+            <summary>Generate Async Event Handler '{0}'</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Generate_Event_Handler_Title">
+            <summary>Generate Event Handler '{0}'</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.FormatGenerate_Event_Handler_Title(System.Object)">
+            <summary>Generate Event Handler '{0}'</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Invalid_Offset">
+            <summary>Invalid offset.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Language_Services_Missing_Service">
+            <summary>Razor language services not configured properly, missing language service '{0}'.</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.FormatLanguage_Services_Missing_Service(System.Object)">
+            <summary>Razor language services not configured properly, missing language service '{0}'.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Not_Available_In">
+            <summary>Not available in</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.PositionIndex_Outside_Range">
+            <summary>Line '{0}' outside of the {1} range of '{2}' was queried. The document may not be up to date.</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.FormatPositionIndex_Outside_Range(System.Object,System.Object,System.Object)">
+            <summary>Line '{0}' outside of the {1} range of '{2}' was queried. The document may not be up to date.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.ReTrigger_Completions_Title">
+            <summary>"Re-trigger completions..."</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.TagHelper_Attribute_Glyph">
+            <summary>Razor TagHelper Attribute Glyph</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.TagHelper_Element_Glyph">
+            <summary>Razor TagHelper Element Glyph</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Unknown_mapping_behavior">
+            <summary>Unknown mapping behavior</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Unknown_ProjectChangeKind">
+            <summary>Unknown ProjectChangeKind {0}</summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.FormatUnknown_ProjectChangeKind(System.Object)">
+            <summary>Unknown ProjectChangeKind {0}</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Unknown_RazorMetaCode">
+            <summary>Attempted to visit a RazorMetaCode other than '{' or '}'.</summary>
+        </member>
+        <member name="P:Microsoft.AspNetCore.Razor.LanguageServer.Resources.SR.Version_Should_Not_Be_Null">
+            <summary>Provided version should not be null.</summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.LanguageServer.Protocol.MapCodeMapping.TextDocument">
+            <summary>
+            Gets or sets identifier for the document the contents are supposed to be mapped into.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.LanguageServer.Protocol.MapCodeMapping.Contents">
+            <summary>
+            Gets or sets strings of code/text to map into TextDocument.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.LanguageServer.Protocol.MapCodeMapping.FocusLocations">
+            <summary>
+            Prioritized Locations to be used when applying heuristics. For example, cursor location,
+            related classes (in other documents), viewport, etc. Earlier items should be considered
+            higher priority.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.LanguageServer.Protocol.MapCodeParams">
+            <summary>
+            LSP Params for textDocument/mapCode calls.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.LanguageServer.Protocol.MapCodeParams.Mappings">
+            <summary>
+            Set of code blocks, associated with documents and regions, to map.
+            </summary>
+        </member>
+        <member name="P:Microsoft.VisualStudio.LanguageServer.Protocol.MapCodeParams.Updates">
+            <summary>
+            Changes that should be applied to the workspace by the mapper before performing
+            the mapping operation.
+            </summary>
+        </member>
+        <member name="T:Microsoft.VisualStudio.LanguageServer.Protocol.MapperMethods">
+            <summary>
+            Class which contains the string values for CodeMapper-related LSP messages.
+            </summary>
+        </member>
+        <member name="F:Microsoft.VisualStudio.LanguageServer.Protocol.MapperMethods.WorkspaceMapCodeName">
+            <summary>
+            Method name for 'workspace/mapCode'.
+            </summary>
+        </member>
+    </members>
+</doc>

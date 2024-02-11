@@ -1,0 +1,23 @@
+{
+    "usermessage.GetTable": {
+        "body": [
+            "usermessage.GetTable()$0"
+        ],
+        "description": "USERMESSAGE [Shared]",
+        "prefix": "usermessage.GetTable"
+    },
+    "usermessage.Hook": {
+        "body": [
+            "usermessage.Hook(${1:name}, ${2:callback}, ${3:preArgs=nil})$0"
+        ],
+        "description": "USERMESSAGE [Shared] \n\n[string] name\n  The message name to hook to.\n\n[function] callback\n  The function to be called if the specified message was received.\nParameters (Optional):\n\n bf_read msg\n vararg preArgs\n\n[vararg] preArgs=nil\n  Arguments that are passed to the callback function when the hook is called. *ring ring*",
+        "prefix": "usermessage.Hook"
+    },
+    "usermessage.IncomingMessage": {
+        "body": [
+            "usermessage.IncomingMessage(${1:name}, ${2:msg})$0"
+        ],
+        "description": "USERMESSAGE [Shared] \n\n[string] name\n  The message name.\n\n[bf_read] msg\n  The message.",
+        "prefix": "usermessage.IncomingMessage"
+    }
+}

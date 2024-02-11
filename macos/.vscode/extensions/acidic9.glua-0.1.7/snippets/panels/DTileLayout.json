@@ -1,0 +1,149 @@
+{
+    "ClearTiles": {
+        "body": [
+            "ClearTiles()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "ClearTiles"
+    },
+    "ConsumeTiles": {
+        "body": [
+            "ConsumeTiles(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] x\n  The x coordinate of the top-left corner of the panel.\n\n[number] y\n  The y coordinate of the top-left corner of the panel.\n\n[number] w\n  The panel's width.\n\n[number] h\n  The panel's height.",
+        "prefix": "ConsumeTiles"
+    },
+    "Copy": {
+        "body": [
+            "Copy()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "Copy"
+    },
+    "CopyContents": {
+        "body": [
+            "CopyContents(${1:source})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[Panel] source\n  The source panel from which to copy all children.",
+        "prefix": "CopyContents"
+    },
+    "FindFreeTile": {
+        "body": [
+            "FindFreeTile(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] x\n  The x coordinate to start looking from.\n\n[number] y\n  The y coordinate to start looking from.\n\n[number] w\n  The needed width.\n\n[number] h\n  The needed height.",
+        "prefix": "FindFreeTile"
+    },
+    "FitsInTile": {
+        "body": [
+            "FitsInTile(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] x\n  The x coordinate of the first tile.\n\n[number] y\n  The y coordinate of the first tile.\n\n[number] w\n  The width needed.\n\n[number] h\n  The height needed.",
+        "prefix": "FitsInTile"
+    },
+    "GetBaseSize": {
+        "body": [
+            "GetBaseSize()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "GetBaseSize"
+    },
+    "GetBorder": {
+        "body": [
+            "GetBorder()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "GetBorder"
+    },
+    "GetMinHeight": {
+        "body": [
+            "GetMinHeight()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "GetMinHeight"
+    },
+    "GetSpaceX": {
+        "body": [
+            "GetSpaceX()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "GetSpaceX"
+    },
+    "GetSpaceY": {
+        "body": [
+            "GetSpaceY()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "GetSpaceY"
+    },
+    "GetTile": {
+        "body": [
+            "GetTile(${1:x}, ${2:y})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] x\n  The x coordinate of the tile.\n\n[number] y\n  The y coordinate of the tile.",
+        "prefix": "GetTile"
+    },
+    "Layout": {
+        "body": [
+            "Layout()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "Layout"
+    },
+    "LayoutTiles": {
+        "body": [
+            "LayoutTiles()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "LayoutTiles"
+    },
+    "OnModified": {
+        "body": [
+            "OnModified()$0"
+        ],
+        "description": "DTILELAYOUT [Client]",
+        "prefix": "OnModified"
+    },
+    "SetBaseSize": {
+        "body": [
+            "SetBaseSize(${1:size})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] size\n  The size of each tile. It is recommended you use 2n (16, 32, 64...) numbers, and those above 4, as numbers lower than this will result in many tiles being processed and therefore slow operation.",
+        "prefix": "SetBaseSize"
+    },
+    "SetBorder": {
+        "body": [
+            "SetBorder(${1:border})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] border",
+        "prefix": "SetBorder"
+    },
+    "SetMinHeight": {
+        "body": [
+            "SetMinHeight(${1:minH})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] minH\n  The minimum height the panel can shrink to.",
+        "prefix": "SetMinHeight"
+    },
+    "SetSpaceX": {
+        "body": [
+            "SetSpaceX(${1:spacingX})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] spacingX",
+        "prefix": "SetSpaceX"
+    },
+    "SetSpaceY": {
+        "body": [
+            "SetSpaceY(${1:spaceY})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] spaceY",
+        "prefix": "SetSpaceY"
+    },
+    "SetTile": {
+        "body": [
+            "SetTile(${1:x}, ${2:y}, ${3:state})$0"
+        ],
+        "description": "DTILELAYOUT [Client] \n\n[number] x\n  The x coordinate of the tile.\n\n[number] y\n  The y coordinate of the tile.\n\n[any] state\n  The new state of the tile, normally 1 or nil.",
+        "prefix": "SetTile"
+    }
+}

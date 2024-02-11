@@ -1,0 +1,65 @@
+{
+    "AddItem": {
+        "body": [
+            "AddItem(${1:pnl}, ${2:lifeLength=nil})$0"
+        ],
+        "description": "DNOTIFY [Client] \n\n[Panel] pnl\n  The panel to add\n\n[number] lifeLength=nil\n  If set, overrides DNotify:SetLife.",
+        "prefix": "AddItem"
+    },
+    "GetAlignment": {
+        "body": [
+            "GetAlignment()$0"
+        ],
+        "description": "DNOTIFY [Client]",
+        "prefix": "GetAlignment"
+    },
+    "GetItems": {
+        "body": [
+            "GetItems()$0"
+        ],
+        "description": "DNOTIFY [Client]",
+        "prefix": "GetItems"
+    },
+    "GetLife": {
+        "body": [
+            "GetLife()$0"
+        ],
+        "description": "DNOTIFY [Client]",
+        "prefix": "GetLife"
+    },
+    "GetSpacing": {
+        "body": [
+            "GetSpacing()$0"
+        ],
+        "description": "DNOTIFY [Client]",
+        "prefix": "GetSpacing"
+    },
+    "SetAlignment": {
+        "body": [
+            "SetAlignment(${1:alignment})$0"
+        ],
+        "description": "DNOTIFY [Client] \n\n[number] alignment\n  It's the Numpad alignment, 6 is right, 9 is top left, etc.",
+        "prefix": "SetAlignment"
+    },
+    "SetLife": {
+        "body": [
+            "SetLife(${1:time})$0"
+        ],
+        "description": "DNOTIFY [Client] \n\n[number] time\n  The time in seconds.",
+        "prefix": "SetLife"
+    },
+    "SetSpacing": {
+        "body": [
+            "SetSpacing(${1:spacing})$0"
+        ],
+        "description": "DNOTIFY [Client] \n\n[number] spacing",
+        "prefix": "SetSpacing"
+    },
+    "Shuffle": {
+        "body": [
+            "Shuffle()$0"
+        ],
+        "description": "DNOTIFY [Client]",
+        "prefix": "Shuffle"
+    }
+}

@@ -1,0 +1,23 @@
+{
+	"gamemode/Call": {
+		"body": [
+			"gamemode.Call(${1:name}, ${2:args})$0"
+		],
+		"description": "Called by the engine to call a hook within the loaded gamemode.",
+		"prefix": "gamemode.Call"
+	},
+	"gamemode/Get": {
+		"body": [
+			"gamemode.Get(${1:name})$0"
+		],
+		"description": "No description available.",
+		"prefix": "gamemode.Get"
+	},
+	"gamemode/Register": {
+		"body": [
+			"gamemode.Register(${1:gm}, ${2:name}, ${3:derived})$0"
+		],
+		"description": "No description available.",
+		"prefix": "gamemode.Register"
+	}
+}

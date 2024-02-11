@@ -1,0 +1,373 @@
+{
+	"WEAPON/AcceptInput": {
+		"body": [
+			"AcceptInput(${1:inputName}, ${2:activator}, ${3:called}, ${4:data})$0"
+		],
+		"description": "Called when another entity fires an event to this entity.",
+		"prefix": "AcceptInput"
+	},
+	"WEAPON/AdjustMouseSensitivity": {
+		"body": [
+			"AdjustMouseSensitivity()$0"
+		],
+		"description": "Allows you to adjust the mouse sensitivity. This hook only works if you haven\u0026#39;t overridden",
+		"prefix": "AdjustMouseSensitivity"
+	},
+	"WEAPON/Ammo1": {
+		"body": [
+			"Ammo1()$0"
+		],
+		"description": "Returns how much of primary ammo the player has.",
+		"prefix": "Ammo1"
+	},
+	"WEAPON/Ammo2": {
+		"body": [
+			"Ammo2()$0"
+		],
+		"description": "Returns how much of secondary ammo the player has.",
+		"prefix": "Ammo2"
+	},
+	"WEAPON/CalcView": {
+		"body": [
+			"CalcView(${1:ply}, ${2:pos}, ${3:ang}, ${4:fov})$0"
+		],
+		"description": "Allows you to adjust player view while this weapon in use.",
+		"prefix": "CalcView"
+	},
+	"WEAPON/CalcViewModelView": {
+		"body": [
+			"CalcViewModelView(${1:vm}, ${2:oldPos}, ${3:oldAng}, ${4:pos}, ${5:ang})$0"
+		],
+		"description": "Allows overriding the position and angle of the viewmodel. This hook only works if you haven\u0026#39;t overridden",
+		"prefix": "CalcViewModelView"
+	},
+	"WEAPON/CanPrimaryAttack": {
+		"body": [
+			"CanPrimaryAttack()$0"
+		],
+		"description": "Helper function for checking for no ammo.",
+		"prefix": "CanPrimaryAttack"
+	},
+	"WEAPON/CanSecondaryAttack": {
+		"body": [
+			"CanSecondaryAttack()$0"
+		],
+		"description": "Helper function for checking for no ammo.",
+		"prefix": "CanSecondaryAttack"
+	},
+	"WEAPON/ContextScreenClick": {
+		"body": [
+			"ContextScreenClick(${1:aimvec}, ${2:mouseCode}, ${3:pressed}, ${4:ply})$0"
+		],
+		"description": "Called when the Context Menu ( Default key C ) is open and the player has clicked the screen.",
+		"prefix": "ContextScreenClick"
+	},
+	"WEAPON/CustomAmmoDisplay": {
+		"body": [
+			"CustomAmmoDisplay()$0"
+		],
+		"description": "Allows you to use any numbers you want for the ammo display on the HUD.",
+		"prefix": "CustomAmmoDisplay"
+	},
+	"WEAPON/Deploy": {
+		"body": [
+			"Deploy()$0"
+		],
+		"description": "Called when player has just switched to this weapon.",
+		"prefix": "Deploy"
+	},
+	"WEAPON/DoDrawCrosshair": {
+		"body": [
+			"DoDrawCrosshair(${1:x}, ${2:y})$0"
+		],
+		"description": "Called when the crosshair is about to get drawn, and allows you to override it.",
+		"prefix": "DoDrawCrosshair"
+	},
+	"WEAPON/DoImpactEffect": {
+		"body": [
+			"DoImpactEffect(${1:tr}, ${2:damageType})$0"
+		],
+		"description": "Called so the weapon can override the impact effects it makes.",
+		"prefix": "DoImpactEffect"
+	},
+	"WEAPON/DrawHUD": {
+		"body": [
+			"DrawHUD()$0"
+		],
+		"description": "This hook allows you to draw on screen while this weapon is in use.",
+		"prefix": "DrawHUD"
+	},
+	"WEAPON/DrawHUDBackground": {
+		"body": [
+			"DrawHUDBackground()$0"
+		],
+		"description": "This hook allows you to draw on screen while this weapon is in use. This hook is called",
+		"prefix": "DrawHUDBackground"
+	},
+	"WEAPON/DrawWeaponSelection": {
+		"body": [
+			"DrawWeaponSelection(${1:x}, ${2:y}, ${3:width}, ${4:height}, ${5:alpha})$0"
+		],
+		"description": "This hook draws the selection icon in the weapon selection menu.",
+		"prefix": "DrawWeaponSelection"
+	},
+	"WEAPON/DrawWorldModel": {
+		"body": [
+			"DrawWorldModel()$0"
+		],
+		"description": "Called when we are about to draw the world model.",
+		"prefix": "DrawWorldModel"
+	},
+	"WEAPON/DrawWorldModelTranslucent": {
+		"body": [
+			"DrawWorldModelTranslucent()$0"
+		],
+		"description": "Called when we are about to draw the translucent world model.",
+		"prefix": "DrawWorldModelTranslucent"
+	},
+	"WEAPON/Equip": {
+		"body": [
+			"Equip(${1:NewOwner})$0"
+		],
+		"description": "Called when a player or NPC has picked the weapon up.",
+		"prefix": "Equip"
+	},
+	"WEAPON/EquipAmmo": {
+		"body": [
+			"EquipAmmo(${1:ply})$0"
+		],
+		"description": "The player has picked up the weapon and has taken the ammo from it. The weapon will be removed immidiately after this call.",
+		"prefix": "EquipAmmo"
+	},
+	"WEAPON/FireAnimationEvent": {
+		"body": [
+			"FireAnimationEvent(${1:pos}, ${2:ang}, ${3:event}, ${4:name})$0"
+		],
+		"description": "Called before firing animation events, such as muzzle flashes or shell ejections.",
+		"prefix": "FireAnimationEvent"
+	},
+	"WEAPON/FreezeMovement": {
+		"body": [
+			"FreezeMovement()$0"
+		],
+		"description": "This hook allows you to freeze players screen.",
+		"prefix": "FreezeMovement"
+	},
+	"WEAPON/GetCapabilities": {
+		"body": [
+			"GetCapabilities()$0"
+		],
+		"description": "This hook is for NPCs, you return what they should try to do with it.",
+		"prefix": "GetCapabilities"
+	},
+	"WEAPON/GetTracerOrigin": {
+		"body": [
+			"GetTracerOrigin()$0"
+		],
+		"description": "Allows you to override where the tracer effect comes from. ( Visual bullets )",
+		"prefix": "GetTracerOrigin"
+	},
+	"WEAPON/GetViewModelPosition": {
+		"body": [
+			"GetViewModelPosition(${1:pos}, ${2:ang})$0"
+		],
+		"description": "This hook allows you to adjust view model position and angles.",
+		"prefix": "GetViewModelPosition"
+	},
+	"WEAPON/HUDShouldDraw": {
+		"body": [
+			"HUDShouldDraw(${1:element})$0"
+		],
+		"description": "This hook determines which parts of the HUD to draw.",
+		"prefix": "HUDShouldDraw"
+	},
+	"WEAPON/Holster": {
+		"body": [
+			"Holster(${1:weapon})$0"
+		],
+		"description": "Called when weapon tries to holster.",
+		"prefix": "Holster"
+	},
+	"WEAPON/Initialize": {
+		"body": [
+			"Initialize()$0"
+		],
+		"description": "Called when the weapon entity is created.",
+		"prefix": "Initialize"
+	},
+	"WEAPON/KeyValue": {
+		"body": [
+			"KeyValue(${1:key}, ${2:value})$0"
+		],
+		"description": "Called when the engine sets a value for this swep.",
+		"prefix": "KeyValue"
+	},
+	"WEAPON/OnDrop": {
+		"body": [
+			"OnDrop()$0"
+		],
+		"description": "Called when weapon is dropped by",
+		"prefix": "OnDrop"
+	},
+	"WEAPON/OnReloaded": {
+		"body": [
+			"OnReloaded()$0"
+		],
+		"description": "Called whenever the weapons Lua script is reloaded.",
+		"prefix": "OnReloaded"
+	},
+	"WEAPON/OnRemove": {
+		"body": [
+			"OnRemove()$0"
+		],
+		"description": "Called when the swep is about to be removed.",
+		"prefix": "OnRemove"
+	},
+	"WEAPON/OnRestore": {
+		"body": [
+			"OnRestore()$0"
+		],
+		"description": "Called when the swep was reloaded from a save game.",
+		"prefix": "OnRestore"
+	},
+	"WEAPON/OwnerChanged": {
+		"body": [
+			"OwnerChanged()$0"
+		],
+		"description": "Called when weapon is dropped or picked up by a new player.",
+		"prefix": "OwnerChanged"
+	},
+	"WEAPON/PostDrawViewModel": {
+		"body": [
+			"PostDrawViewModel(${1:vm}, ${2:weapon}, ${3:ply})$0"
+		],
+		"description": "Allows you to modify viewmodel while the weapon in use after the view model has been drawn. This hook only works if you haven\u0026#39;t overridden",
+		"prefix": "PostDrawViewModel"
+	},
+	"WEAPON/PreDrawViewModel": {
+		"body": [
+			"PreDrawViewModel(${1:vm}, ${2:weapon}, ${3:ply})$0"
+		],
+		"description": "Allows you to modify viewmodel while the weapon in use before it is drawn. This hook only works if you haven\u0026#39;t overridden",
+		"prefix": "PreDrawViewModel"
+	},
+	"WEAPON/PrimaryAttack": {
+		"body": [
+			"PrimaryAttack()$0"
+		],
+		"description": "Called when primary attack button ( +attack ) is pressed.",
+		"prefix": "PrimaryAttack"
+	},
+	"WEAPON/PrintWeaponInfo": {
+		"body": [
+			"PrintWeaponInfo(${1:x}, ${2:y}, ${3:alpha})$0"
+		],
+		"description": "A convenience function that draws the weapon info box, used in",
+		"prefix": "PrintWeaponInfo"
+	},
+	"WEAPON/Reload": {
+		"body": [
+			"Reload()$0"
+		],
+		"description": "Called when the reload key ( +reload ) is pressed.",
+		"prefix": "Reload"
+	},
+	"WEAPON/RenderScreen": {
+		"body": [
+			"RenderScreen()$0"
+		],
+		"description": "No description available.",
+		"prefix": "RenderScreen"
+	},
+	"WEAPON/SecondaryAttack": {
+		"body": [
+			"SecondaryAttack()$0"
+		],
+		"description": "Called when secondary attack button ( +attack2 ) is pressed.",
+		"prefix": "SecondaryAttack"
+	},
+	"WEAPON/SetDeploySpeed": {
+		"body": [
+			"SetDeploySpeed(${1:speed})$0"
+		],
+		"description": "Sets the weapon deploy speed. This value needs to match on client and server.",
+		"prefix": "SetDeploySpeed"
+	},
+	"WEAPON/SetWeaponHoldType": {
+		"body": [
+			"SetWeaponHoldType(${1:name})$0"
+		],
+		"description": "Sets the hold type of the weapon. This must be called on",
+		"prefix": "SetWeaponHoldType"
+	},
+	"WEAPON/SetupDataTables": {
+		"body": [
+			"SetupDataTables()$0"
+		],
+		"description": "Called when the SWEP should set up its",
+		"prefix": "SetupDataTables"
+	},
+	"WEAPON/ShootBullet": {
+		"body": [
+			"ShootBullet(${1:damage}, ${2:num_bullets}, ${3:aimcone})$0"
+		],
+		"description": "A convenience function to shoot bullets.",
+		"prefix": "ShootBullet"
+	},
+	"WEAPON/ShootEffects": {
+		"body": [
+			"ShootEffects()$0"
+		],
+		"description": "A convenience function to create shoot effects.",
+		"prefix": "ShootEffects"
+	},
+	"WEAPON/ShouldDropOnDie": {
+		"body": [
+			"ShouldDropOnDie()$0"
+		],
+		"description": "Should this weapon be dropped when its owner dies?",
+		"prefix": "ShouldDropOnDie"
+	},
+	"WEAPON/TakePrimaryAmmo": {
+		"body": [
+			"TakePrimaryAmmo(${1:amount})$0"
+		],
+		"description": "A convenience function to remove primary ammo from clip.",
+		"prefix": "TakePrimaryAmmo"
+	},
+	"WEAPON/TakeSecondaryAmmo": {
+		"body": [
+			"TakeSecondaryAmmo(${1:amount})$0"
+		],
+		"description": "A convenience function to remove secondary ammo from clip.",
+		"prefix": "TakeSecondaryAmmo"
+	},
+	"WEAPON/Think": {
+		"body": [
+			"Think()$0"
+		],
+		"description": "Called when the swep thinks.",
+		"prefix": "Think"
+	},
+	"WEAPON/TranslateActivity": {
+		"body": [
+			"TranslateActivity(${1:act})$0"
+		],
+		"description": "Translate a player\u0026#39;s Activity into a weapon\u0026#39;s activity, depending on how you want the player to be holding the weapon.",
+		"prefix": "TranslateActivity"
+	},
+	"WEAPON/TranslateFOV": {
+		"body": [
+			"TranslateFOV(${1:fov})$0"
+		],
+		"description": "Allows to change players Field Of View while player holds the weapon.",
+		"prefix": "TranslateFOV"
+	},
+	"WEAPON/ViewModelDrawn": {
+		"body": [
+			"ViewModelDrawn(${1:ViewModel})$0"
+		],
+		"description": "Called straight after the view model has been drawn.",
+		"prefix": "ViewModelDrawn"
+	}
+}

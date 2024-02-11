@@ -1,0 +1,79 @@
+{
+    "DropAction_Copy": {
+        "body": [
+            "DropAction_Copy(${1:drops}, ${2:bDoDrop}, ${3:command}, ${4:y}, ${5:x})$0"
+        ],
+        "description": "DDRAGBASE [Client] \n\n[table] drops\n  \n\n[boolean] bDoDrop\n  \n\n[string] command\n  \n\n[number] y\n  \n\n[number] x",
+        "prefix": "DropAction_Copy"
+    },
+    "DropAction_Normal": {
+        "body": [
+            "DropAction_Normal(${1:drops}, ${2:bDoDrop}, ${3:command}, ${4:y}, ${5:x})$0"
+        ],
+        "description": "DDRAGBASE [Client] \n\n[table] drops\n  \n\n[boolean] bDoDrop\n  \n\n[string] command\n  \n\n[number] y\n  \n\n[number] x",
+        "prefix": "DropAction_Normal"
+    },
+    "DropAction_Simple": {
+        "body": [
+            "DropAction_Simple(${1:drops}, ${2:bDoDrop}, ${3:command}, ${4:y}, ${5:x})$0"
+        ],
+        "description": "DDRAGBASE [Client] \n\n[table] drops\n  \n\n[boolean] bDoDrop\n  \n\n[string] command\n  \n\n[number] y\n  \n\n[number] x",
+        "prefix": "DropAction_Simple"
+    },
+    "GetDnD": {
+        "body": [
+            "GetDnD()$0"
+        ],
+        "description": "DDRAGBASE [Client]",
+        "prefix": "GetDnD"
+    },
+    "GetUseLiveDrag": {
+        "body": [
+            "GetUseLiveDrag()$0"
+        ],
+        "description": "DDRAGBASE [Client]",
+        "prefix": "GetUseLiveDrag"
+    },
+    "MakeDroppable": {
+        "body": [
+            "MakeDroppable(${1:name}, ${2:allowCopy})$0"
+        ],
+        "description": "DDRAGBASE [Client] \n\n[string] name\n  The unique name for the receiver slot. Only droppable panels with the same DnD name as this can be dropped on the panel.\n\n[boolean] allowCopy\n  Whether or not to allow droppable panels to be copied when the Ctrl key is held down.",
+        "prefix": "MakeDroppable"
+    },
+    "OnModified": {
+        "body": [
+            "OnModified()$0"
+        ],
+        "description": "DDRAGBASE [Client]",
+        "prefix": "OnModified"
+    },
+    "SetDnD": {
+        "body": [
+            "SetDnD(${1:name})$0"
+        ],
+        "description": "DDRAGBASE [Client] \n\n[string] name\n  Name of the DnD family.",
+        "prefix": "SetDnD"
+    },
+    "SetDropPos": {
+        "body": [
+            "SetDropPos(${1:pos=5})$0"
+        ],
+        "description": "DDRAGBASE [Client] \n\n[string] pos=5\n  Where you're allowed to drop things.",
+        "prefix": "SetDropPos"
+    },
+    "SetUseLiveDrag": {
+        "body": [
+            "SetUseLiveDrag(${1:})$0"
+        ],
+        "description": "DDRAGBASE [Client] \n\n[boolean]",
+        "prefix": "SetUseLiveDrag"
+    },
+    "UpdateDropTarget": {
+        "body": [
+            "UpdateDropTarget(${1:drop}, ${2:pnl})$0"
+        ],
+        "description": "DDRAGBASE [Client] \n\n[number] drop\n  \n\n[Panel] pnl",
+        "prefix": "UpdateDropTarget"
+    }
+}

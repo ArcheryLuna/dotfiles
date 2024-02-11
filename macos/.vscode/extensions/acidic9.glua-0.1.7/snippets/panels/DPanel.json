@@ -1,0 +1,58 @@
+{
+    "GetBackgroundColor": {
+        "body": [
+            "GetBackgroundColor()$0"
+        ],
+        "description": "DPANEL [Client] Returns the panel's background color.",
+        "prefix": "GetBackgroundColor"
+    },
+    "GetDisabled": {
+        "body": [
+            "GetDisabled()$0"
+        ],
+        "description": "DPANEL [Client]",
+        "prefix": "GetDisabled"
+    },
+    "GetDrawBackground": {
+        "body": [
+            "GetDrawBackground()$0"
+        ],
+        "description": "DPANEL [Client]",
+        "prefix": "GetDrawBackground"
+    },
+    "GetPaintBackground": {
+        "body": [
+            "GetPaintBackground()$0"
+        ],
+        "description": "DPANEL [Client]",
+        "prefix": "GetPaintBackground"
+    },
+    "SetBackgroundColor": {
+        "body": [
+            "SetBackgroundColor(${1:color})$0"
+        ],
+        "description": "DPANEL [Client] Sets the background color of the panel.\n\n[table] color\n  The background color.",
+        "prefix": "SetBackgroundColor"
+    },
+    "SetDisabled": {
+        "body": [
+            "SetDisabled(${1:disabled})$0"
+        ],
+        "description": "DPANEL [Client] \n\n[boolean] disabled\n  True to disable the panel (mouse input disabled and background alpha set to 75), false to enable it (mouse input enabled and background alpha set to 255).",
+        "prefix": "SetDisabled"
+    },
+    "SetDrawBackground": {
+        "body": [
+            "SetDrawBackground(${1:draw})$0"
+        ],
+        "description": "DPANEL [Client] \n\n[boolean] draw\n  True to show the panel's background, false to hide it.",
+        "prefix": "SetDrawBackground"
+    },
+    "SetPaintBackground": {
+        "body": [
+            "SetPaintBackground(${1:paint})$0"
+        ],
+        "description": "DPANEL [Client] \n\n[boolean] paint\n  True to show the panel's background, false to hide it.",
+        "prefix": "SetPaintBackground"
+    }
+}

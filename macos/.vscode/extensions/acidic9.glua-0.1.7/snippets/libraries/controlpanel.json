@@ -1,0 +1,16 @@
+{
+    "controlpanel.Clear": {
+        "body": [
+            "controlpanel.Clear()$0"
+        ],
+        "description": "CONTROLPANEL [Client]",
+        "prefix": "controlpanel.Clear"
+    },
+    "controlpanel.Get": {
+        "body": [
+            "controlpanel.Get(${1:name})$0"
+        ],
+        "description": "CONTROLPANEL [Client] Returns (or creates if not exists) a controlpanel.\n\n[string] name\n  The name of the panel.",
+        "prefix": "controlpanel.Get"
+    }
+}

@@ -1,0 +1,184 @@
+{
+    "ClearButtons": {
+        "body": [
+            "ClearButtons()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "ClearButtons"
+    },
+    "ClearMovement": {
+        "body": [
+            "ClearMovement()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "ClearMovement"
+    },
+    "CommandNumber": {
+        "body": [
+            "CommandNumber()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "CommandNumber"
+    },
+    "GetButtons": {
+        "body": [
+            "GetButtons()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "GetButtons"
+    },
+    "GetForwardMove": {
+        "body": [
+            "GetForwardMove()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "GetForwardMove"
+    },
+    "GetImpulse": {
+        "body": [
+            "GetImpulse()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "GetImpulse"
+    },
+    "GetMouseWheel": {
+        "body": [
+            "GetMouseWheel()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "GetMouseWheel"
+    },
+    "GetMouseX": {
+        "body": [
+            "GetMouseX()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "GetMouseX"
+    },
+    "GetMouseY": {
+        "body": [
+            "GetMouseY()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "GetMouseY"
+    },
+    "GetSideMove": {
+        "body": [
+            "GetSideMove()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "GetSideMove"
+    },
+    "GetUpMove": {
+        "body": [
+            "GetUpMove()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "GetUpMove"
+    },
+    "GetViewAngles": {
+        "body": [
+            "GetViewAngles()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "GetViewAngles"
+    },
+    "IsForced": {
+        "body": [
+            "IsForced()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "IsForced"
+    },
+    "KeyDown": {
+        "body": [
+            "KeyDown(${1:key})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] key\n  Bitflag representing which button to check, see IN_ Enums.",
+        "prefix": "KeyDown"
+    },
+    "RemoveKey": {
+        "body": [
+            "RemoveKey(${1:button})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] button\n  Bitflag to be removed from the key bitflag, see IN_ Enums.",
+        "prefix": "RemoveKey"
+    },
+    "SelectWeapon": {
+        "body": [
+            "SelectWeapon(${1:weapon})$0"
+        ],
+        "description": "CUSERCMD [Shared] Forces the associated player to select a weapon.\nThis is used internally in the default HL2 weapon selection HUD.\n\n[Weapon] weapon\n  The weapon entity to select.",
+        "prefix": "SelectWeapon"
+    },
+    "SetButtons": {
+        "body": [
+            "SetButtons(${1:buttons})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] buttons\n  Bitflag representing which buttons are \"down\", see IN_ Enums.",
+        "prefix": "SetButtons"
+    },
+    "SetForwardMove": {
+        "body": [
+            "SetForwardMove(${1:speed})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] speed\n  The new speed to request.",
+        "prefix": "SetForwardMove"
+    },
+    "SetImpulse": {
+        "body": [
+            "SetImpulse(${1:speed})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] speed\n  The impulse to send.",
+        "prefix": "SetImpulse"
+    },
+    "SetMouseWheel": {
+        "body": [
+            "SetMouseWheel(${1:speed})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] speed\n  The scroll delta.",
+        "prefix": "SetMouseWheel"
+    },
+    "SetMouseX": {
+        "body": [
+            "SetMouseX(${1:speed})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] speed\n  Angular horizontal move delta.",
+        "prefix": "SetMouseX"
+    },
+    "SetMouseY": {
+        "body": [
+            "SetMouseY(${1:speed})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] speed\n  Angular vertical move delta.",
+        "prefix": "SetMouseY"
+    },
+    "SetSideMove": {
+        "body": [
+            "SetSideMove(${1:speed})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] speed\n  The new speed to request.",
+        "prefix": "SetSideMove"
+    },
+    "SetUpMove": {
+        "body": [
+            "SetUpMove(${1:speed})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[number] speed\n  The new speed to request.",
+        "prefix": "SetUpMove"
+    },
+    "SetViewAngles": {
+        "body": [
+            "SetViewAngles(${1:viewAngle})$0"
+        ],
+        "description": "CUSERCMD [Shared] \n\n[Angle] viewAngle\n  New view angles.",
+        "prefix": "SetViewAngles"
+    },
+    "TickCount": {
+        "body": [
+            "TickCount()$0"
+        ],
+        "description": "CUSERCMD [Shared]",
+        "prefix": "TickCount"
+    }
+}

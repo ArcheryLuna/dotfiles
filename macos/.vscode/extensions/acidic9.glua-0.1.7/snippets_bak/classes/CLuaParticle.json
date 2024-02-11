@@ -1,0 +1,296 @@
+{
+	"CLuaParticle/GetAirResistance": {
+		"body": [
+			"GetAirResistance()$0"
+		],
+		"description": "Returns the air resistance of the particle.",
+		"prefix": "GetAirResistance"
+	},
+	"CLuaParticle/GetAngleVelocity": {
+		"body": [
+			"GetAngleVelocity()$0"
+		],
+		"description": "Returns the angular velocity of the particle",
+		"prefix": "GetAngleVelocity"
+	},
+	"CLuaParticle/GetAngles": {
+		"body": [
+			"GetAngles()$0"
+		],
+		"description": "Returns the current orientation of the particle.",
+		"prefix": "GetAngles"
+	},
+	"CLuaParticle/GetBounce": {
+		"body": [
+			"GetBounce()$0"
+		],
+		"description": "Returns the \u0026#39;bounciness\u0026#39; of the particle.",
+		"prefix": "GetBounce"
+	},
+	"CLuaParticle/GetColor": {
+		"body": [
+			"GetColor()$0"
+		],
+		"description": "Returns the color of the particle.",
+		"prefix": "GetColor"
+	},
+	"CLuaParticle/GetDieTime": {
+		"body": [
+			"GetDieTime()$0"
+		],
+		"description": "Returns the amount of time in seconds after which the particle will be destroyed.",
+		"prefix": "GetDieTime"
+	},
+	"CLuaParticle/GetEndAlpha": {
+		"body": [
+			"GetEndAlpha()$0"
+		],
+		"description": "Returns the alpha value that the particle will reach on its death.",
+		"prefix": "GetEndAlpha"
+	},
+	"CLuaParticle/GetEndLength": {
+		"body": [
+			"GetEndLength()$0"
+		],
+		"description": "Returns the length that the particle will reach on its death.",
+		"prefix": "GetEndLength"
+	},
+	"CLuaParticle/GetEndSize": {
+		"body": [
+			"GetEndSize()$0"
+		],
+		"description": "Returns the size that the particle will reach on its death.",
+		"prefix": "GetEndSize"
+	},
+	"CLuaParticle/GetGravity": {
+		"body": [
+			"GetGravity()$0"
+		],
+		"description": "Returns the gravity of the particle.",
+		"prefix": "GetGravity"
+	},
+	"CLuaParticle/GetLifeTime": {
+		"body": [
+			"GetLifeTime()$0"
+		],
+		"description": "Returns the \u0026#39;life time\u0026#39; of the particle, how long the particle existed since its creation.",
+		"prefix": "GetLifeTime"
+	},
+	"CLuaParticle/GetPos": {
+		"body": [
+			"GetPos()$0"
+		],
+		"description": "Returns the absolute position of the particle.",
+		"prefix": "GetPos"
+	},
+	"CLuaParticle/GetRoll": {
+		"body": [
+			"GetRoll()$0"
+		],
+		"description": "Returns the current rotation of the particle in radians, this should only be used for 2D particles.",
+		"prefix": "GetRoll"
+	},
+	"CLuaParticle/GetRollDelta": {
+		"body": [
+			"GetRollDelta()$0"
+		],
+		"description": "Returns the current rotation speed of the particle in radians, this should only be used for 2D particles.",
+		"prefix": "GetRollDelta"
+	},
+	"CLuaParticle/GetStartAlpha": {
+		"body": [
+			"GetStartAlpha()$0"
+		],
+		"description": "Returns the alpha value which the particle has when it\u0026#39;s created.",
+		"prefix": "GetStartAlpha"
+	},
+	"CLuaParticle/GetStartLength": {
+		"body": [
+			"GetStartLength()$0"
+		],
+		"description": "Returns the length which the particle has when it\u0026#39;s created.",
+		"prefix": "GetStartLength"
+	},
+	"CLuaParticle/GetStartSize": {
+		"body": [
+			"GetStartSize()$0"
+		],
+		"description": "Returns the size which the particle has when it\u0026#39;s created.",
+		"prefix": "GetStartSize"
+	},
+	"CLuaParticle/GetVelocity": {
+		"body": [
+			"GetVelocity()$0"
+		],
+		"description": "Returns the current velocity of the particle.",
+		"prefix": "GetVelocity"
+	},
+	"CLuaParticle/SetAirResistance": {
+		"body": [
+			"SetAirResistance(${1:airResistance})$0"
+		],
+		"description": "Sets the air resistance of the the particle.",
+		"prefix": "SetAirResistance"
+	},
+	"CLuaParticle/SetAngleVelocity": {
+		"body": [
+			"SetAngleVelocity(${1:angVel})$0"
+		],
+		"description": "Sets the angular velocity of the the particle.",
+		"prefix": "SetAngleVelocity"
+	},
+	"CLuaParticle/SetAngles": {
+		"body": [
+			"SetAngles(${1:ang})$0"
+		],
+		"description": "Sets the angles of the particle.",
+		"prefix": "SetAngles"
+	},
+	"CLuaParticle/SetBounce": {
+		"body": [
+			"SetBounce(${1:bounce})$0"
+		],
+		"description": "Sets the \u0026#39;bounciness\u0026#39; of the the particle.",
+		"prefix": "SetBounce"
+	},
+	"CLuaParticle/SetCollide": {
+		"body": [
+			"SetCollide(${1:shouldCollide})$0"
+		],
+		"description": "Sets the whether the particle should collide with the world or not.",
+		"prefix": "SetCollide"
+	},
+	"CLuaParticle/SetCollideCallback": {
+		"body": [
+			"SetCollideCallback(${1:collideFunc})$0"
+		],
+		"description": "Sets the function that gets called whenever the particle collides with the world.",
+		"prefix": "SetCollideCallback"
+	},
+	"CLuaParticle/SetColor": {
+		"body": [
+			"SetColor(${1:r}, ${2:g}, ${3:b})$0"
+		],
+		"description": "Sets the color of the particle.",
+		"prefix": "SetColor"
+	},
+	"CLuaParticle/SetDieTime": {
+		"body": [
+			"SetDieTime(${1:dieTime})$0"
+		],
+		"description": "Sets the time where the particle will be removed.",
+		"prefix": "SetDieTime"
+	},
+	"CLuaParticle/SetEndAlpha": {
+		"body": [
+			"SetEndAlpha(${1:endAlpha})$0"
+		],
+		"description": "Sets the alpha value of the particle that it will reach when it dies.",
+		"prefix": "SetEndAlpha"
+	},
+	"CLuaParticle/SetEndLength": {
+		"body": [
+			"SetEndLength(${1:endLength})$0"
+		],
+		"description": "Sets the length of the particle that it will reach when it dies.",
+		"prefix": "SetEndLength"
+	},
+	"CLuaParticle/SetEndSize": {
+		"body": [
+			"SetEndSize(${1:endSize})$0"
+		],
+		"description": "Sets the size of the particle that it will reach when it dies.",
+		"prefix": "SetEndSize"
+	},
+	"CLuaParticle/SetGravity": {
+		"body": [
+			"SetGravity(${1:gravity})$0"
+		],
+		"description": "Sets the directional gravity aka. acceleration of the particle.",
+		"prefix": "SetGravity"
+	},
+	"CLuaParticle/SetLifeTime": {
+		"body": [
+			"SetLifeTime(${1:lifeTime})$0"
+		],
+		"description": "Sets the \u0026#39;life time\u0026#39; of the particle, how long the particle existed since its creation.",
+		"prefix": "SetLifeTime"
+	},
+	"CLuaParticle/SetLighting": {
+		"body": [
+			"SetLighting(${1:useLighting})$0"
+		],
+		"description": "Sets whether the particle should be lighted.",
+		"prefix": "SetLighting"
+	},
+	"CLuaParticle/SetNextThink": {
+		"body": [
+			"SetNextThink(${1:nextThink})$0"
+		],
+		"description": "Sets when the particles think function should be called next, this uses the synchronized server time returned by",
+		"prefix": "SetNextThink"
+	},
+	"CLuaParticle/SetPos": {
+		"body": [
+			"SetPos(${1:pos})$0"
+		],
+		"description": "Sets the absolute position of the particle.",
+		"prefix": "SetPos"
+	},
+	"CLuaParticle/SetRoll": {
+		"body": [
+			"SetRoll(${1:roll})$0"
+		],
+		"description": "Sets the roll of the particle in radians. This should only be used for 2D particles.",
+		"prefix": "SetRoll"
+	},
+	"CLuaParticle/SetRollDelta": {
+		"body": [
+			"SetRollDelta(${1:rollDelta})$0"
+		],
+		"description": "Sets the rotation speed of the particle in radians. This should only be used for 2D particles.",
+		"prefix": "SetRollDelta"
+	},
+	"CLuaParticle/SetStartAlpha": {
+		"body": [
+			"SetStartAlpha(${1:startAlpha})$0"
+		],
+		"description": "Sets the initial alpha value of the particle.",
+		"prefix": "SetStartAlpha"
+	},
+	"CLuaParticle/SetStartLength": {
+		"body": [
+			"SetStartLength(${1:startLength})$0"
+		],
+		"description": "Sets the initial length value of the particle.",
+		"prefix": "SetStartLength"
+	},
+	"CLuaParticle/SetStartSize": {
+		"body": [
+			"SetStartSize(${1:startSize})$0"
+		],
+		"description": "Sets the initial size value of the particle.",
+		"prefix": "SetStartSize"
+	},
+	"CLuaParticle/SetThinkFunction": {
+		"body": [
+			"SetThinkFunction(${1:thinkFunc})$0"
+		],
+		"description": "Sets the think function of the particle.",
+		"prefix": "SetThinkFunction"
+	},
+	"CLuaParticle/SetVelocity": {
+		"body": [
+			"SetVelocity(${1:vel})$0"
+		],
+		"description": "Sets the velocity of the particle.",
+		"prefix": "SetVelocity"
+	},
+	"CLuaParticle/SetVelocityScale": {
+		"body": [
+			"SetVelocityScale(${1:doScale=false})$0"
+		],
+		"description": "Scales the velocity based on the particle speed.",
+		"prefix": "SetVelocityScale"
+	}
+}

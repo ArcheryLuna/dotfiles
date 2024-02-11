@@ -1,0 +1,152 @@
+{
+	"name": "unity-code-snippets",
+	"displayName": "Unity Code Snippets",
+	"description": "All snippets you need for Unity3D development",
+	"version": "2.3.0",
+	"publisher": "kleber-swf",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kleber-swf/vscode-unity-code-snippets"
+	},
+	"author": {
+		"name": "Kleber Silva",
+		"email": "kleber.swf@gmail.com",
+		"url": "http://kleber-swf.com"
+	},
+	"bugs": {
+		"url": "https://github.com/kleber-swf/vscode-unity-code-snippets/issues",
+		"email": "kleber.swf@gmail.com"
+	},
+	"homepage": "https://github.com/kleber-swf/vscode-unity-code-snippets",
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#b5bcca",
+		"theme": "light"
+	},
+	"engines": {
+		"vscode": "^1.80.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"keywords": [
+		"unity",
+		"monobehaviour",
+		"csharp",
+		"gamedev",
+		"snippet",
+		"configurable",
+		"allman",
+		"k&r"
+	],
+	"files": [
+		"styles",
+		"snippets"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": [
+			{
+				"title": "Unity Code Snippets",
+				"properties": {
+					"unity-code-snippets.style": {
+						"type": "string",
+						"markdownDescription": "Select the [indentation style](https://en.wikipedia.org/wiki/Indentation_style) for the snippets",
+						"order": 0,
+						"default": "kr",
+						"enum": [
+							"kr",
+							"allman"
+						],
+						"enumItemLabels": [
+							"K&R",
+							"Allman (C# Default)"
+						],
+						"markdownEnumDescriptions": [
+							"Formats using [K&R Style](https://en.wikipedia.org/wiki/Indentation_style#K&R_style)",
+							"Formats using [Allman Style](https://en.wikipedia.org/wiki/Indentation_style#Allman_style)"
+						]
+					},
+					"unity-code-snippets.usePrivateKeyword": {
+						"type": "boolean",
+						"order": 10,
+						"markdownDescription": "Use `private` accessor keyword for private members",
+						"default": true
+					},
+					"unity-code-snippets.autoComplete.classes": {
+						"type": "boolean",
+						"order": 100,
+						"markdownDescription": "Auto complete classes like `MonoBehaviour` and `Editor`.",
+						"default": true
+					},
+					"unity-code-snippets.autoComplete.methods": {
+						"type": "boolean",
+						"order": 110,
+						"markdownDescription": "Auto complete methods like `Start` and `OnCollisionEnter`.",
+						"default": true
+					},
+					"unity-code-snippets.autoComplete.calls": {
+						"type": "boolean",
+						"order": 120,
+						"markdownDescription": "Auto complete utility calls like `Debug.Log` and `Debug.DrawLine`.",
+						"default": true
+					},
+					"unity-code-snippets.autoComplete.attributes": {
+						"type": "boolean",
+						"order": 130,
+						"markdownDescription": "Auto complete attributes like `[SerializeField]` and `[RequireComponent]`.",
+						"default": true
+					},
+					"unity-code-snippets.autoComplete.experimentalAttributes": {
+						"type": "boolean",
+						"order": 140,
+						"markdownDescription": "[Experimental] Auto complete all other attributes like `[HideInInspector]` and `[ContextMenu]`. There are a lot o attributes and this can pollute your Intellisense popup.",
+						"default": false
+					}
+				}
+			}
+		],
+		"snippets": [
+			{
+				"language": "csharp",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"vsce:build": "vsce package",
+		"vsce:publish": "vsce publish"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.80.0",
+		"@types/glob": "^8.1.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "20.2.5",
+		"@typescript-eslint/eslint-plugin": "^5.59.8",
+		"@typescript-eslint/parser": "^5.59.8",
+		"eslint": "^8.41.0",
+		"glob": "^8.1.0",
+		"mocha": "^10.2.0",
+		"typescript": "^5.1.3",
+		"@vscode/test-electron": "^2.3.2"
+	},
+	"__metadata": {
+		"id": "e310ade6-fe29-42da-a447-3fe493080a97",
+		"publisherId": "f2d3c932-7c13-41a1-a798-e22c8ef14c33",
+		"publisherDisplayName": "Kleber Silva",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033028
+	}
+}

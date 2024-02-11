@@ -1,0 +1,191 @@
+{
+    "DrawNotches": {
+        "body": [
+            "DrawNotches(${1:level}, ${2:x}, ${3:y}, ${4:w}, ${5:h}, ${6:range}, ${7:value}, ${8:min}, ${9:max})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] level\n  \n\n[number] x\n  \n\n[number] y\n  \n\n[number] w\n  \n\n[number] h\n  \n\n[number] range\n  \n\n[number] value\n  \n\n[number] min\n  \n\n[number] max",
+        "prefix": "DrawNotches"
+    },
+    "DrawScreen": {
+        "body": [
+            "DrawScreen(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] x\n  \n\n[number] y\n  \n\n[number] w\n  \n\n[number] h",
+        "prefix": "DrawScreen"
+    },
+    "GetActive": {
+        "body": [
+            "GetActive()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetActive"
+    },
+    "GetDecimals": {
+        "body": [
+            "GetDecimals()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetDecimals"
+    },
+    "GetFloatValue": {
+        "body": [
+            "GetFloatValue()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetFloatValue"
+    },
+    "GetFraction": {
+        "body": [
+            "GetFraction()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetFraction"
+    },
+    "GetMax": {
+        "body": [
+            "GetMax()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetMax"
+    },
+    "GetMin": {
+        "body": [
+            "GetMin()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetMin"
+    },
+    "GetRange": {
+        "body": [
+            "GetRange()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetRange"
+    },
+    "GetShouldDrawScreen": {
+        "body": [
+            "GetShouldDrawScreen()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetShouldDrawScreen"
+    },
+    "GetTextValue": {
+        "body": [
+            "GetTextValue()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetTextValue"
+    },
+    "GetZoom": {
+        "body": [
+            "GetZoom()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "GetZoom"
+    },
+    "IdealZoom": {
+        "body": [
+            "IdealZoom()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "IdealZoom"
+    },
+    "IsEditing": {
+        "body": [
+            "IsEditing()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "IsEditing"
+    },
+    "LockCursor": {
+        "body": [
+            "LockCursor()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "LockCursor"
+    },
+    "OnValueChanged": {
+        "body": [
+            "OnValueChanged(${1:newValue})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] newValue\n  The new value",
+        "prefix": "OnValueChanged"
+    },
+    "PaintScratchWindow": {
+        "body": [
+            "PaintScratchWindow()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "PaintScratchWindow"
+    },
+    "SetActive": {
+        "body": [
+            "SetActive(${1:active})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[boolean] active\n  true to activate, false to deactivate.",
+        "prefix": "SetActive"
+    },
+    "SetDecimals": {
+        "body": [
+            "SetDecimals(${1:decimals})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] decimals\n  0 for whole numbers only, 1 for one number after the decimal point, etc.",
+        "prefix": "SetDecimals"
+    },
+    "SetFloatValue": {
+        "body": [
+            "SetFloatValue(${1:val})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] val\n  The value to set",
+        "prefix": "SetFloatValue"
+    },
+    "SetFraction": {
+        "body": [
+            "SetFraction(${1:frac})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] frac\n  A value between 0 and 1",
+        "prefix": "SetFraction"
+    },
+    "SetMax": {
+        "body": [
+            "SetMax(${1:max})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] max\n  The maximum number",
+        "prefix": "SetMax"
+    },
+    "SetMin": {
+        "body": [
+            "SetMin(${1:min})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] min\n  The minimum number",
+        "prefix": "SetMin"
+    },
+    "SetShouldDrawScreen": {
+        "body": [
+            "SetShouldDrawScreen(${1:shouldDraw})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[boolean] shouldDraw",
+        "prefix": "SetShouldDrawScreen"
+    },
+    "SetValue": {
+        "body": [
+            "SetValue(${1:val})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] val\n  The value to set.",
+        "prefix": "SetValue"
+    },
+    "SetZoom": {
+        "body": [
+            "SetZoom(${1:zoom})$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client] \n\n[number] zoom",
+        "prefix": "SetZoom"
+    },
+    "UpdateConVar": {
+        "body": [
+            "UpdateConVar()$0"
+        ],
+        "description": "DNUMBERSCRATCH [Client]",
+        "prefix": "UpdateConVar"
+    }
+}

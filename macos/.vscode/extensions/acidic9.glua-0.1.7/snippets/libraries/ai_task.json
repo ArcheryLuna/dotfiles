@@ -1,0 +1,9 @@
+{
+    "ai_task.New": {
+        "body": [
+            "ai_task.New()$0"
+        ],
+        "description": "AI_TASK [Server]",
+        "prefix": "ai_task.New"
+    }
+}

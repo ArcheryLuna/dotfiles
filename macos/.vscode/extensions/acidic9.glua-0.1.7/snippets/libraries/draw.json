@@ -1,0 +1,79 @@
+{
+    "draw.DrawText": {
+        "body": [
+            "draw.DrawText(${1:text}, ${2:font=\"DermaDefault\"}, ${3:x=0}, ${4:y=0}, ${5:color=Color(255,255,255,255)}, ${6:xAlign=TEXT_ALIGN_LEFT})$0"
+        ],
+        "description": "DRAW [Client/Menu] Simple draw text at position, but this will expand newlines and tabs.\n\n[string] text\n  Text to be drawn.\n\n[string] font=\"DermaDefault\"\n  Name of font to draw the text in. See surface.CreateFont to create your own, or Default Fonts for a list of default fonts.\n\n[number] x=0\n  The X Coordinate.\n\n[number] y=0\n  The Y Coordinate.\n\n[table] color=Color(255,255,255,255)\n  Color to draw the text in. Uses the Color structure.\n\n[number] xAlign=TEXT_ALIGN_LEFT\n  Where to align the text horizontally. Uses the TEXT_ALIGN_ Enums.",
+        "prefix": "draw.DrawText"
+    },
+    "draw.GetFontHeight": {
+        "body": [
+            "draw.GetFontHeight(${1:font})$0"
+        ],
+        "description": "DRAW [Client/Menu] \n\n[string] font\n  Name of the font to get the height of.",
+        "prefix": "draw.GetFontHeight"
+    },
+    "draw.NoTexture": {
+        "body": [
+            "draw.NoTexture()$0"
+        ],
+        "description": "DRAW [Client/Menu]",
+        "prefix": "draw.NoTexture"
+    },
+    "draw.RoundedBox": {
+        "body": [
+            "draw.RoundedBox(${1:cornerRadius}, ${2:x}, ${3:y}, ${4:width}, ${5:height}, ${6:color})$0"
+        ],
+        "description": "DRAW [Client/Menu] Draws a rounded rectangle.\n\n[number] cornerRadius\n  Radius of the rounded corners, works best with a multiple of 2.\n\n[number] x\n  The x coordinate of the top left of the rectangle.\n\n[number] y\n  The y coordinate of the top left of the rectangle.\n\n[number] width\n  The width of the rectangle.\n\n[number] height\n  The height of the rectangle.\n\n[table] color\n  The color to fill the rectangle with. Uses the Color structure.",
+        "prefix": "draw.RoundedBox"
+    },
+    "draw.RoundedBoxEx": {
+        "body": [
+            "draw.RoundedBoxEx(${1:cornerRadius}, ${2:x}, ${3:y}, ${4:width}, ${5:height}, ${6:color}, ${7:roundTopLeft=false}, ${8:roundTopRight=false}, ${9:roundBottomLeft=false}, ${10:roundBottomRight=false})$0"
+        ],
+        "description": "DRAW [Client/Menu] Draws a rounded rectangle. This function also lets you specify which corners are drawn rounded.\n\n[number] cornerRadius\n  Radius of the rounded corners, works best with a power of 2 number.\n\n[number] x\n  The x coordinate of the top left of the rectangle.\n\n[number] y\n  The y coordinate of the top left of the rectangle.\n\n[number] width\n  The width of the rectangle.\n\n[number] height\n  The height of the rectangle.\n\n[table] color\n  The color to fill the rectangle with. Uses the Color structure.\n\n[boolean] roundTopLeft=false\n  Whether the top left corner should be rounded.\n\n[boolean] roundTopRight=false\n  Whether the top right corner should be rounded.\n\n[boolean] roundBottomLeft=false\n  Whether the bottom left corner should be rounded.\n\n[boolean] roundBottomRight=false\n  Whether the bottom right corner should be rounded.",
+        "prefix": "draw.RoundedBoxEx"
+    },
+    "draw.SimpleText": {
+        "body": [
+            "draw.SimpleText(${1:text}, ${2:font=\"DermaDefault\"}, ${3:x=0}, ${4:y=0}, ${5:color=Color(255,255,255,255)}, ${6:xAlign=TEXT_ALIGN_LEFT}, ${7:yAlign=TEXT_ALIGN_TOP})$0"
+        ],
+        "description": "DRAW [Client/Menu] Draws text on the screen.\n\n[string] text\n  The text to be drawn.\n\n[string] font=\"DermaDefault\"\n  The font. See surface.CreateFont to create your own, or see Default Fonts for a list of default fonts.\n\n[number] x=0\n  The X Coordinate.\n\n[number] y=0\n  The Y Coordinate.\n\n[table] color=Color(255,255,255,255)\n  The color of the text. Uses the Color structure.\n\n[number] xAlign=TEXT_ALIGN_LEFT\n  The alignment of the X coordinate using TEXT_ALIGN_ Enums.\n\n[number] yAlign=TEXT_ALIGN_TOP\n  The alignment of the Y coordinate using TEXT_ALIGN_ Enums.",
+        "prefix": "draw.SimpleText"
+    },
+    "draw.SimpleTextOutlined": {
+        "body": [
+            "draw.SimpleTextOutlined(${1:Text}, ${2:font=\"DermaDefault\"}, ${3:x=0}, ${4:y=0}, ${5:color=Color(255,255,255,255)}, ${6:xAlign=TEXT_ALIGN_LEFT}, ${7:yAlign=TEXT_ALIGN_TOP}, ${8:outlinewidth}, ${9:outlinecolor=Color(255,255,255,255)})$0"
+        ],
+        "description": "DRAW [Client/Menu] Creates a simple line of text that is outlined.\n\n[string] Text\n  The text to draw.\n\n[string] font=\"DermaDefault\"\n  The font name to draw with. See surface.CreateFont to create your own, or here for a list of default fonts.\n\n[number] x=0\n  The X Coordinate.\n\n[number] y=0\n  The Y Coordinate.\n\n[table] color=Color(255,255,255,255)\n  The color of the text. Uses the Color structure.\n\n[number] xAlign=TEXT_ALIGN_LEFT\n  The alignment of the X Coordinate using TEXT_ALIGN_ Enums.\n\n[number] yAlign=TEXT_ALIGN_TOP\n  The alignment of the Y Coordinate using TEXT_ALIGN_ Enums.\n\n[number] outlinewidth\n  Width of the outline.\n\n[table] outlinecolor=Color(255,255,255,255)\n  Color of the outline. Uses the Color structure.",
+        "prefix": "draw.SimpleTextOutlined"
+    },
+    "draw.Text": {
+        "body": [
+            "draw.Text(${1:textdata})$0"
+        ],
+        "description": "DRAW [Client/Menu] Works like draw.SimpleText but uses a table structure instead.\n\n[table] textdata\n  The text properties. See the TextData structure",
+        "prefix": "draw.Text"
+    },
+    "draw.TextShadow": {
+        "body": [
+            "draw.TextShadow(${1:textdata}, ${2:distance}, ${3:alpha=200})$0"
+        ],
+        "description": "DRAW [Client/Menu] Works like draw.Text, but draws the text as a shadow.\n\n[table] textdata\n  The text properties. See TextData structure\n\n[number] distance\n  How far away the shadow appears.\n\n[number] alpha=200\n  How visible the shadow is (0-255).",
+        "prefix": "draw.TextShadow"
+    },
+    "draw.TexturedQuad": {
+        "body": [
+            "draw.TexturedQuad(${1:texturedata})$0"
+        ],
+        "description": "DRAW [Client/Menu] Draws a texture with a table structure.\n\n[table] texturedata\n  The texture properties. See TextureData structure",
+        "prefix": "draw.TexturedQuad"
+    },
+    "draw.WordBox": {
+        "body": [
+            "draw.WordBox(${1:bordersize}, ${2:x}, ${3:y}, ${4:text}, ${5:font}, ${6:boxcolor}, ${7:textcolor})$0"
+        ],
+        "description": "DRAW [Client/Menu] Draws a rounded box with text in it.\n\n[number] bordersize\n  Size of border, should be multiple of 2. Ideally this will be 8 or 16.\n\n[number] x\n  The X Coordinate.\n\n[number] y\n  The Y Coordinate.\n\n[string] text\n  Text to draw.\n\n[string] font\n  Font to draw in. See surface.CreateFont to create your own, or here for a list of default fonts.\n\n[table] boxcolor\n  The box color. Uses the Color structure.\n\n[table] textcolor\n  The text color. Uses the Color structure.",
+        "prefix": "draw.WordBox"
+    }
+}

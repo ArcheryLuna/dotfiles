@@ -1,0 +1,23 @@
+{
+	"DCategoryList/Add": {
+		"body": [
+			"Add(${1:categoryName})$0"
+		],
+		"description": "Adds a",
+		"prefix": "Add"
+	},
+	"DCategoryList/AddItem": {
+		"body": [
+			"AddItem(${1:element})$0"
+		],
+		"description": "Adds an element to the list.",
+		"prefix": "AddItem"
+	},
+	"DCategoryList/UnselectAll": {
+		"body": [
+			"UnselectAll()$0"
+		],
+		"description": "Calls",
+		"prefix": "UnselectAll"
+	}
+}

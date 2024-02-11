@@ -1,0 +1,226 @@
+{
+	"CEffectData/GetAngles": {
+		"body": [
+			"GetAngles()$0"
+		],
+		"description": "Returns the angles of the effect.",
+		"prefix": "GetAngles"
+	},
+	"CEffectData/GetAttachment": {
+		"body": [
+			"GetAttachment()$0"
+		],
+		"description": "Returns the attachment ID for the effect.",
+		"prefix": "GetAttachment"
+	},
+	"CEffectData/GetColor": {
+		"body": [
+			"GetColor()$0"
+		],
+		"description": "Returns byte which represents the color of the effect.",
+		"prefix": "GetColor"
+	},
+	"CEffectData/GetDamageType": {
+		"body": [
+			"GetDamageType()$0"
+		],
+		"description": "Returns the damage type of the effect",
+		"prefix": "GetDamageType"
+	},
+	"CEffectData/GetEntIndex": {
+		"body": [
+			"GetEntIndex()$0"
+		],
+		"description": "Returns the entity index of the entity set for the effect.",
+		"prefix": "GetEntIndex"
+	},
+	"CEffectData/GetEntity": {
+		"body": [
+			"GetEntity()$0"
+		],
+		"description": "Returns the entity assigned to the effect.",
+		"prefix": "GetEntity"
+	},
+	"CEffectData/GetFlags": {
+		"body": [
+			"GetFlags()$0"
+		],
+		"description": "Returns the flags of the effect.",
+		"prefix": "GetFlags"
+	},
+	"CEffectData/GetHitBox": {
+		"body": [
+			"GetHitBox()$0"
+		],
+		"description": "Returns the hit box ID of the effect.",
+		"prefix": "GetHitBox"
+	},
+	"CEffectData/GetMagnitude": {
+		"body": [
+			"GetMagnitude()$0"
+		],
+		"description": "Returns the magnitude of the effect.",
+		"prefix": "GetMagnitude"
+	},
+	"CEffectData/GetMaterialIndex": {
+		"body": [
+			"GetMaterialIndex()$0"
+		],
+		"description": "Returns the material ID of the effect.",
+		"prefix": "GetMaterialIndex"
+	},
+	"CEffectData/GetNormal": {
+		"body": [
+			"GetNormal()$0"
+		],
+		"description": "Returns the normalized direction vector of the effect.",
+		"prefix": "GetNormal"
+	},
+	"CEffectData/GetOrigin": {
+		"body": [
+			"GetOrigin()$0"
+		],
+		"description": "Returns the origin position of the effect.",
+		"prefix": "GetOrigin"
+	},
+	"CEffectData/GetRadius": {
+		"body": [
+			"GetRadius()$0"
+		],
+		"description": "Returns the radius of the effect.",
+		"prefix": "GetRadius"
+	},
+	"CEffectData/GetScale": {
+		"body": [
+			"GetScale()$0"
+		],
+		"description": "Returns the scale of the effect.",
+		"prefix": "GetScale"
+	},
+	"CEffectData/GetStart": {
+		"body": [
+			"GetStart()$0"
+		],
+		"description": "Returns the start position of the effect.",
+		"prefix": "GetStart"
+	},
+	"CEffectData/GetSurfaceProp": {
+		"body": [
+			"GetSurfaceProp()$0"
+		],
+		"description": "Returns the surface property index of the effect.",
+		"prefix": "GetSurfaceProp"
+	},
+	"CEffectData/SetAngles": {
+		"body": [
+			"SetAngles(${1:ang})$0"
+		],
+		"description": "Sets the angles of the effect.",
+		"prefix": "SetAngles"
+	},
+	"CEffectData/SetAttachment": {
+		"body": [
+			"SetAttachment(${1:attachment})$0"
+		],
+		"description": "Sets the attachment id of the effect to be created with this effect data.",
+		"prefix": "SetAttachment"
+	},
+	"CEffectData/SetColor": {
+		"body": [
+			"SetColor(${1:color})$0"
+		],
+		"description": "Sets the color of the effect.",
+		"prefix": "SetColor"
+	},
+	"CEffectData/SetDamageType": {
+		"body": [
+			"SetDamageType(${1:damageType})$0"
+		],
+		"description": "Sets the damage type of the effect to be created with this effect data.",
+		"prefix": "SetDamageType"
+	},
+	"CEffectData/SetEntIndex": {
+		"body": [
+			"SetEntIndex(${1:entIndex})$0"
+		],
+		"description": "Sets the entity of the effect via its index.",
+		"prefix": "SetEntIndex"
+	},
+	"CEffectData/SetEntity": {
+		"body": [
+			"SetEntity(${1:entity})$0"
+		],
+		"description": "Sets the entity of the effect to be created with this effect data.",
+		"prefix": "SetEntity"
+	},
+	"CEffectData/SetFlags": {
+		"body": [
+			"SetFlags(${1:flags})$0"
+		],
+		"description": "Sets the flags of the effect.",
+		"prefix": "SetFlags"
+	},
+	"CEffectData/SetHitBox": {
+		"body": [
+			"SetHitBox(${1:hitBoxIndex})$0"
+		],
+		"description": "Sets the hit box index of the effect.",
+		"prefix": "SetHitBox"
+	},
+	"CEffectData/SetMagnitude": {
+		"body": [
+			"SetMagnitude(${1:magnitude})$0"
+		],
+		"description": "Sets the magnitude of the effect.",
+		"prefix": "SetMagnitude"
+	},
+	"CEffectData/SetMaterialIndex": {
+		"body": [
+			"SetMaterialIndex(${1:materialIndex})$0"
+		],
+		"description": "Sets the material index of the effect.",
+		"prefix": "SetMaterialIndex"
+	},
+	"CEffectData/SetNormal": {
+		"body": [
+			"SetNormal(${1:normal})$0"
+		],
+		"description": "Sets the normalized direction vector of the effect to be created with this effect data.",
+		"prefix": "SetNormal"
+	},
+	"CEffectData/SetOrigin": {
+		"body": [
+			"SetOrigin(${1:origin})$0"
+		],
+		"description": "Sets the origin of the effect to be created with this effect data.",
+		"prefix": "SetOrigin"
+	},
+	"CEffectData/SetRadius": {
+		"body": [
+			"SetRadius(${1:radius})$0"
+		],
+		"description": "Sets the radius of the effect to be created with this effect data.",
+		"prefix": "SetRadius"
+	},
+	"CEffectData/SetScale": {
+		"body": [
+			"SetScale(${1:scale})$0"
+		],
+		"description": "Sets the scale of the effect to be created with this effect data.",
+		"prefix": "SetScale"
+	},
+	"CEffectData/SetStart": {
+		"body": [
+			"SetStart(${1:start})$0"
+		],
+		"description": "Sets the start of the effect to be created with this effect data.",
+		"prefix": "SetStart"
+	},
+	"CEffectData/SetSurfaceProp": {
+		"body": [
+			"SetSurfaceProp(${1:surfaceProperties})$0"
+		],
+		"description": "Sets the surface property index of the effect.",
+		"prefix": "SetSurfaceProp"
+	}
+}

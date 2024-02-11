@@ -1,0 +1,93 @@
+{
+	"Tool/ClearObjects": {
+		"body": [
+			"ClearObjects()$0"
+		],
+		"description": "Clears all objects previously set with",
+		"prefix": "ClearObjects"
+	},
+	"Tool/GetBone": {
+		"body": [
+			"GetBone(${1:id})$0"
+		],
+		"description": "Retrieves a physics bone number previously stored using",
+		"prefix": "GetBone"
+	},
+	"Tool/GetClientInfo": {
+		"body": [
+			"GetClientInfo(${1:name})$0"
+		],
+		"description": "Attempts to grab a clientside tool",
+		"prefix": "GetClientInfo"
+	},
+	"Tool/GetClientNumber": {
+		"body": [
+			"GetClientNumber(${1:name}, ${2:default=0})$0"
+		],
+		"description": "Attempts to grab a clientside tool",
+		"prefix": "GetClientNumber"
+	},
+	"Tool/GetEnt": {
+		"body": [
+			"GetEnt(${1:id})$0"
+		],
+		"description": "Retrieves an Entity previously stored using",
+		"prefix": "GetEnt"
+	},
+	"Tool/GetOperation": {
+		"body": [
+			"GetOperation()$0"
+		],
+		"description": "Returns the current operation of the tool set by",
+		"prefix": "GetOperation"
+	},
+	"Tool/GetOwner": {
+		"body": [
+			"GetOwner()$0"
+		],
+		"description": "Returns the owner of this tool.",
+		"prefix": "GetOwner"
+	},
+	"Tool/GetServerInfo": {
+		"body": [
+			"GetServerInfo(${1:name})$0"
+		],
+		"description": "Attempts to grab a serverside tool",
+		"prefix": "GetServerInfo"
+	},
+	"Tool/GetStage": {
+		"body": [
+			"GetStage()$0"
+		],
+		"description": "Returns the current stage of the tool set by",
+		"prefix": "GetStage"
+	},
+	"Tool/NumObjects": {
+		"body": [
+			"NumObjects()$0"
+		],
+		"description": "Returns the amount of stored objects (",
+		"prefix": "NumObjects"
+	},
+	"Tool/SetObject": {
+		"body": [
+			"SetObject(${1:id}, ${2:ent}, ${3:pos}, ${4:phys}, ${5:bone}, ${6:norm})$0"
+		],
+		"description": "Stores an",
+		"prefix": "SetObject"
+	},
+	"Tool/SetOperation": {
+		"body": [
+			"SetOperation(${1:operation})$0"
+		],
+		"description": "Sets the current operation of the tool. Does nothing clientside. See also",
+		"prefix": "SetOperation"
+	},
+	"Tool/SetStage": {
+		"body": [
+			"SetStage(${1:stage})$0"
+		],
+		"description": "Sets the current stage of the tool. Does nothing clientside.",
+		"prefix": "SetStage"
+	}
+}

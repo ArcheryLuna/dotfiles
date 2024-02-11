@@ -1,0 +1,44 @@
+{
+	"killicon/Add": {
+		"body": [
+			"killicon.Add(${1:class}, ${2:texture}, ${3:color})$0"
+		],
+		"description": "Creates new kill icon using a texture.",
+		"prefix": "killicon.Add"
+	},
+	"killicon/AddAlias": {
+		"body": [
+			"killicon.AddAlias(${1:new_class}, ${2:existing_class})$0"
+		],
+		"description": "Creates kill icon from existing one.",
+		"prefix": "killicon.AddAlias"
+	},
+	"killicon/AddFont": {
+		"body": [
+			"killicon.AddFont(${1:class}, ${2:font}, ${3:symbol}, ${4:color})$0"
+		],
+		"description": "Adds kill icon for given weapon/entity class using special font.",
+		"prefix": "killicon.AddFont"
+	},
+	"killicon/Draw": {
+		"body": [
+			"killicon.Draw(${1:x}, ${2:y}, ${3:name}, ${4:alpha})$0"
+		],
+		"description": "Draws a kill icon.",
+		"prefix": "killicon.Draw"
+	},
+	"killicon/Exists": {
+		"body": [
+			"killicon.Exists(${1:class})$0"
+		],
+		"description": "Checks if kill icon exists for given class.",
+		"prefix": "killicon.Exists"
+	},
+	"killicon/GetSize": {
+		"body": [
+			"killicon.GetSize(${1:name})$0"
+		],
+		"description": "Returns the size of a kill icon.",
+		"prefix": "killicon.GetSize"
+	}
+}

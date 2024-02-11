@@ -1,0 +1,184 @@
+{
+	"CUserCmd/ClearButtons": {
+		"body": [
+			"ClearButtons()$0"
+		],
+		"description": "Removes all keys from the command. Doesn\u0026#39;t prevent movement, see",
+		"prefix": "ClearButtons"
+	},
+	"CUserCmd/ClearMovement": {
+		"body": [
+			"ClearMovement()$0"
+		],
+		"description": "Clears the movement from the command.",
+		"prefix": "ClearMovement"
+	},
+	"CUserCmd/CommandNumber": {
+		"body": [
+			"CommandNumber()$0"
+		],
+		"description": "Returns an increasing number representing the index of the user cmd. The value returned is occasionally 0 inside",
+		"prefix": "CommandNumber"
+	},
+	"CUserCmd/GetButtons": {
+		"body": [
+			"GetButtons()$0"
+		],
+		"description": "Returns a bitflag indicating which buttons are pressed.",
+		"prefix": "GetButtons"
+	},
+	"CUserCmd/GetForwardMove": {
+		"body": [
+			"GetForwardMove()$0"
+		],
+		"description": "The speed the client wishes to move forward with, negative if the clients wants to move backwards.",
+		"prefix": "GetForwardMove"
+	},
+	"CUserCmd/GetImpulse": {
+		"body": [
+			"GetImpulse()$0"
+		],
+		"description": "Gets the current impulse from the client, usually 0.",
+		"prefix": "GetImpulse"
+	},
+	"CUserCmd/GetMouseWheel": {
+		"body": [
+			"GetMouseWheel()$0"
+		],
+		"description": "Returns the scroll delta as whole number.",
+		"prefix": "GetMouseWheel"
+	},
+	"CUserCmd/GetMouseX": {
+		"body": [
+			"GetMouseX()$0"
+		],
+		"description": "Returns the delta of the angular horizontal mouse movement of the player.",
+		"prefix": "GetMouseX"
+	},
+	"CUserCmd/GetMouseY": {
+		"body": [
+			"GetMouseY()$0"
+		],
+		"description": "Returns the delta of the angular vertical mouse movement of the player.",
+		"prefix": "GetMouseY"
+	},
+	"CUserCmd/GetSideMove": {
+		"body": [
+			"GetSideMove()$0"
+		],
+		"description": "The speed the client wishes to move sideways with, positive if it wants to move right, negative if it wants to move left.",
+		"prefix": "GetSideMove"
+	},
+	"CUserCmd/GetUpMove": {
+		"body": [
+			"GetUpMove()$0"
+		],
+		"description": "The speed the client wishes to move up with, negative if the clients wants to move down.",
+		"prefix": "GetUpMove"
+	},
+	"CUserCmd/GetViewAngles": {
+		"body": [
+			"GetViewAngles()$0"
+		],
+		"description": "Gets the direction the player is looking in.",
+		"prefix": "GetViewAngles"
+	},
+	"CUserCmd/IsForced": {
+		"body": [
+			"IsForced()$0"
+		],
+		"description": "When players are not sending usercommands to the server (often due to lag), their last usercommand will be executed multiple times as a backup. This function returns true if that is happening.",
+		"prefix": "IsForced"
+	},
+	"CUserCmd/KeyDown": {
+		"body": [
+			"KeyDown(${1:key})$0"
+		],
+		"description": "Returns true if the specified button(s) is pressed.",
+		"prefix": "KeyDown"
+	},
+	"CUserCmd/RemoveKey": {
+		"body": [
+			"RemoveKey(${1:button})$0"
+		],
+		"description": "Removed a key bit from the current key bitflag.",
+		"prefix": "RemoveKey"
+	},
+	"CUserCmd/SelectWeapon": {
+		"body": [
+			"SelectWeapon(${1:weapon})$0"
+		],
+		"description": "Forces the associated player to select a weapon.",
+		"prefix": "SelectWeapon"
+	},
+	"CUserCmd/SetButtons": {
+		"body": [
+			"SetButtons(${1:buttons})$0"
+		],
+		"description": "Sets the buttons bitflag",
+		"prefix": "SetButtons"
+	},
+	"CUserCmd/SetForwardMove": {
+		"body": [
+			"SetForwardMove(${1:speed})$0"
+		],
+		"description": "Sets speed the client wishes to move forward with, negative if the clients wants to move backwards.",
+		"prefix": "SetForwardMove"
+	},
+	"CUserCmd/SetImpulse": {
+		"body": [
+			"SetImpulse(${1:speed})$0"
+		],
+		"description": "Sets the impulse to be send together with the command.",
+		"prefix": "SetImpulse"
+	},
+	"CUserCmd/SetMouseWheel": {
+		"body": [
+			"SetMouseWheel(${1:speed})$0"
+		],
+		"description": "Sets the scroll delta.",
+		"prefix": "SetMouseWheel"
+	},
+	"CUserCmd/SetMouseX": {
+		"body": [
+			"SetMouseX(${1:speed})$0"
+		],
+		"description": "Sets the delta of the angular horizontal mouse movement of the player.",
+		"prefix": "SetMouseX"
+	},
+	"CUserCmd/SetMouseY": {
+		"body": [
+			"SetMouseY(${1:speed})$0"
+		],
+		"description": "Sets the delta of the angular vertical mouse movement of the player.",
+		"prefix": "SetMouseY"
+	},
+	"CUserCmd/SetSideMove": {
+		"body": [
+			"SetSideMove(${1:speed})$0"
+		],
+		"description": "Sets speed the client wishes to move sidewards with, positive to move right, negative to move left.",
+		"prefix": "SetSideMove"
+	},
+	"CUserCmd/SetUpMove": {
+		"body": [
+			"SetUpMove(${1:speed})$0"
+		],
+		"description": "Sets speed the client wishes to move upwards with, negative to move down.",
+		"prefix": "SetUpMove"
+	},
+	"CUserCmd/SetViewAngles": {
+		"body": [
+			"SetViewAngles(${1:viewAngle})$0"
+		],
+		"description": "Sets the direction the client wants to move in.",
+		"prefix": "SetViewAngles"
+	},
+	"CUserCmd/TickCount": {
+		"body": [
+			"TickCount()$0"
+		],
+		"description": "Returns tick count since joining the server. This will always return 0 for bots.",
+		"prefix": "TickCount"
+	}
+}

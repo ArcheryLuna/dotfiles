@@ -1,0 +1,86 @@
+{
+	"DButton/GetDrawBorder": {
+		"body": [
+			"GetDrawBorder()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetDrawBorder"
+	},
+	"DButton/IsDown": {
+		"body": [
+			"IsDown()$0"
+		],
+		"description": "Returns true if the DButton is currently depressed (a user is clicking on it).",
+		"prefix": "IsDown"
+	},
+	"DButton/SetConsoleCommand": {
+		"body": [
+			"SetConsoleCommand(${1:command}, ${2:args})$0"
+		],
+		"description": "Sets a console command to be called when the button is clicked.",
+		"prefix": "SetConsoleCommand"
+	},
+	"DButton/SetDisabled": {
+		"body": [
+			"SetDisabled(${1:disable})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDisabled"
+	},
+	"DButton/SetDrawBorder": {
+		"body": [
+			"SetDrawBorder(${1:draw})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetDrawBorder"
+	},
+	"DButton/SetEnabled": {
+		"body": [
+			"SetEnabled(${1:enable})$0"
+		],
+		"description": "Sets whether or not the DButton is enabled.",
+		"prefix": "SetEnabled"
+	},
+	"DButton/SetImage": {
+		"body": [
+			"SetImage(${1:img=nil})$0"
+		],
+		"description": "Sets an image to be displayed as the button\u0026#39;s background.",
+		"prefix": "SetImage"
+	},
+	"DButton/UpdateColours": {
+		"body": [
+			"UpdateColours(${1:skin})$0"
+		],
+		"description": "A hook called from within",
+		"prefix": "UpdateColours"
+	},
+	"DLabel/DoClick": {
+		"body": [
+			"DoClick()$0"
+		],
+		"description": "This can be overridden; by default, it calls",
+		"prefix": "DoClick"
+	},
+	"DLabel/GetDisabled": {
+		"body": [
+			"GetDisabled()$0"
+		],
+		"description": "DLabel",
+		"prefix": "GetDisabled"
+	},
+	"DLabel/GetFont": {
+		"body": [
+			"GetFont()$0"
+		],
+		"description": "DLabel",
+		"prefix": "GetFont"
+	},
+	"DLabel/SetFont": {
+		"body": [
+			"SetFont(${1:fontName})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetFont"
+	}
+}

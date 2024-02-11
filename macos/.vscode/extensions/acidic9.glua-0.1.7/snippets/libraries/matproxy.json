@@ -1,0 +1,30 @@
+{
+    "matproxy.Add": {
+        "body": [
+            "matproxy.Add(${1:MatProxyData})$0"
+        ],
+        "description": "MATPROXY [Client] Adds a material proxy.\n\n[table] MatProxyData\n  The information about the proxy. See MatProxyData structure",
+        "prefix": "matproxy.Add"
+    },
+    "matproxy.Call": {
+        "body": [
+            "matproxy.Call(${1:uname}, ${2:mat}, ${3:ent})$0"
+        ],
+        "description": "MATPROXY [Client] Called by the engine from OnBind\n\n[string] uname\n  \n\n[IMaterial] mat\n  \n\n[Entity] ent",
+        "prefix": "matproxy.Call"
+    },
+    "matproxy.Init": {
+        "body": [
+            "matproxy.Init(${1:name}, ${2:uname}, ${3:mat}, ${4:values})$0"
+        ],
+        "description": "MATPROXY [Client] Called by the engine from OnBind\n\n[string] name\n  \n\n[string] uname\n  \n\n[IMaterial] mat\n  \n\n[table] values",
+        "prefix": "matproxy.Init"
+    },
+    "matproxy.ShouldOverrideProxy": {
+        "body": [
+            "matproxy.ShouldOverrideProxy(${1:name})$0"
+        ],
+        "description": "MATPROXY [Client] \n\n[string] name\n  The name of proxy in question",
+        "prefix": "matproxy.ShouldOverrideProxy"
+    }
+}

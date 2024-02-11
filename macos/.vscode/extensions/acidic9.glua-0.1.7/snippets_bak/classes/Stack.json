@@ -1,0 +1,30 @@
+{
+	"Stack/Pop": {
+		"body": [
+			"Pop(${1:amount=1})$0"
+		],
+		"description": "Pop an item from the stack",
+		"prefix": "Pop"
+	},
+	"Stack/Push": {
+		"body": [
+			"Push(${1:object})$0"
+		],
+		"description": "Push an item onto the stack",
+		"prefix": "Push"
+	},
+	"Stack/Size": {
+		"body": [
+			"Size()$0"
+		],
+		"description": "Returns the size of the stack",
+		"prefix": "Size"
+	},
+	"Stack/Top": {
+		"body": [
+			"Top()$0"
+		],
+		"description": "Get the item at the top of the stack",
+		"prefix": "Top"
+	}
+}

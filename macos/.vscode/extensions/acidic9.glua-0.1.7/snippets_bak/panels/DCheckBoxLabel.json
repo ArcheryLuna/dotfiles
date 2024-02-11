@@ -1,0 +1,44 @@
+{
+	"DCheckBoxLabel/GetChecked": {
+		"body": [
+			"GetChecked()$0"
+		],
+		"description": "Gets the checked state of the checkbox. This calls the checkbox\u0026#39;s",
+		"prefix": "GetChecked"
+	},
+	"DCheckBoxLabel/OnChange": {
+		"body": [
+			"OnChange(${1:bVal})$0"
+		],
+		"description": "Called when the \u0026#34;checked\u0026#34; state is changed.",
+		"prefix": "OnChange"
+	},
+	"DCheckBoxLabel/SetChecked": {
+		"body": [
+			"SetChecked(${1:checked})$0"
+		],
+		"description": "Sets the checked state of the checkbox. Does not call",
+		"prefix": "SetChecked"
+	},
+	"DCheckBoxLabel/SetText": {
+		"body": [
+			"SetText(${1:text})$0"
+		],
+		"description": "Set the Text of the DCheckBoxLabel VGUI element.",
+		"prefix": "SetText"
+	},
+	"DCheckBoxLabel/SetTextColor": {
+		"body": [
+			"SetTextColor(${1:color})$0"
+		],
+		"description": "Sets the text color for the DCheckBoxLabel.",
+		"prefix": "SetTextColor"
+	},
+	"DCheckBoxLabel/SetValue": {
+		"body": [
+			"SetValue(${1:checked})$0"
+		],
+		"description": "Sets the checked state of the checkbox, and calls",
+		"prefix": "SetValue"
+	}
+}

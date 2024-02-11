@@ -1,0 +1,128 @@
+{
+    "steamworks.ApplyAddons": {
+        "body": [
+            "steamworks.ApplyAddons()$0"
+        ],
+        "description": "STEAMWORKS [Menu]",
+        "prefix": "steamworks.ApplyAddons"
+    },
+    "steamworks.Download": {
+        "body": [
+            "steamworks.Download(${1:workshopPreviewID}, ${2:uncompress}, ${3:resultCallback})$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu] Downloads a file from the supplied addon and saves it as a .cache file in garrysmod/cache folder. This is mostly used to download the preview image of the addon, but the game seems to also use it to download replays and saves. In case the retrieved file is an image and you need the IMaterial, use AddonMaterial with the path supplied from the callback.\n\n[string] workshopPreviewID\n  The Preview ID of workshop item.\n\n[boolean] uncompress\n  Whether to uncompress the file or not, assuming it was compressed with LZMA.\n\nYou will usually want to set this to true.\n\n[function] resultCallback\n  The function to process retrieved data. The first and only argument is a string, containing path to the saved file.",
+        "prefix": "steamworks.Download"
+    },
+    "steamworks.FileInfo": {
+        "body": [
+            "steamworks.FileInfo(${1:workshopItemID}, ${2:resultCallback})$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu] Retrieves info about supplied Steam Workshop addon.\n\n[string] workshopItemID\n  The ID of Steam Workshop item.\n\n[function] resultCallback\n  The function to process retrieved data. The first and only argument is a table, containing all the info.",
+        "prefix": "steamworks.FileInfo"
+    },
+    "steamworks.GetList": {
+        "body": [
+            "steamworks.GetList(${1:type}, ${2:tags}, ${3:offset}, ${4:numRetrieve}, ${5:days}, ${6:userID}, ${7:resultCallback})$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu] Retrieves a customized list of Steam Workshop addons.\n\n[string] type\n  The type of items to retrieve.\n\n[table] tags\n  A table of tags to match.\n\n[number] offset\n  How much of results to skip from first one. Mainly used for pages.\n\n[number] numRetrieve\n  How much addons to retrieve.\n\n[number] days\n  When getting Most Popular content from Steam, this determines a time period. ( 7 = most popular addons in last 7 days, 1 = most popular addons today, etc )\n\n[string] userID\n  \"0\" to retrieve all addons, \"1\" to retrieve addons only published by you.\n\n[function] resultCallback\n  The function to process retrieved data. The first and only argument is a table, containing all the info.",
+        "prefix": "steamworks.GetList"
+    },
+    "steamworks.GetPlayerName": {
+        "body": [
+            "steamworks.GetPlayerName(${1:steamID64})$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu] \n\n[string] steamID64\n  The 64bit Steam ID ( aka Community ID ) of the player",
+        "prefix": "steamworks.GetPlayerName"
+    },
+    "steamworks.IsSubscribed": {
+        "body": [
+            "steamworks.IsSubscribed(${1:workshopItemID})$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu] Returns whenever the client is subscribed to the specified Steam Workshop item.\n\n[string] workshopItemID\n  The ID of the Steam Workshop item.",
+        "prefix": "steamworks.IsSubscribed"
+    },
+    "steamworks.OpenWorkshop": {
+        "body": [
+            "steamworks.OpenWorkshop()$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu]",
+        "prefix": "steamworks.OpenWorkshop"
+    },
+    "steamworks.Publish": {
+        "body": [
+            "steamworks.Publish(${1:tags}, ${2:filename}, ${3:image}, ${4:name}, ${5:desc})$0"
+        ],
+        "description": "STEAMWORKS [Menu] \n\n[table] tags\n  The workshop tags to apply\n\n[string] filename\n  Path to the file to upload\n\n[string] image\n  Path to the image to use as icon\n\n[string] name\n  Name of the Workshop submission\n\n[string] desc\n  Description of the Workshop submission",
+        "prefix": "steamworks.Publish"
+    },
+    "steamworks.RequestPlayerInfo": {
+        "body": [
+            "steamworks.RequestPlayerInfo(${1:steamID64}, ${2:callback})$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu] Requests information of the player with SteamID64 for later use with steamworks.GetPlayerName.\n\n[string] steamID64\n  The 64bit Steam ID of player.\n\n[function] callback\n  A callback function with only 1 argument - string name.",
+        "prefix": "steamworks.RequestPlayerInfo"
+    },
+    "steamworks.SetFileCompleted": {
+        "body": [
+            "steamworks.SetFileCompleted(${1:workshopid})$0"
+        ],
+        "description": "STEAMWORKS [Menu] \n\n[string] workshopid\n  The Steam Workshop item id",
+        "prefix": "steamworks.SetFileCompleted"
+    },
+    "steamworks.SetFilePlayed": {
+        "body": [
+            "steamworks.SetFilePlayed(${1:workshopid})$0"
+        ],
+        "description": "STEAMWORKS [Menu] \n\n[string] workshopid\n  The Steam Workshop item ID",
+        "prefix": "steamworks.SetFilePlayed"
+    },
+    "steamworks.SetShouldMountAddon": {
+        "body": [
+            "steamworks.SetShouldMountAddon(${1:workshopItemID}, ${2:shouldMount})$0"
+        ],
+        "description": "STEAMWORKS [Menu] Sets if an addon should be enabled or disabled. Call steamworks.ApplyAddons afterwards to update.\n\n[string] workshopItemID\n  The ID of the Steam Workshop item we should enable/disable\n\n[boolean] shouldMount\n  true to enable the item, false to disable.",
+        "prefix": "steamworks.SetShouldMountAddon"
+    },
+    "steamworks.ShouldMountAddon": {
+        "body": [
+            "steamworks.ShouldMountAddon(${1:workshopItemID})$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu] Returns whenever the specified Steam Workshop addon will be mounted or not.\n\n[string] workshopItemID\n  The ID of the Steam Workshop",
+        "prefix": "steamworks.ShouldMountAddon"
+    },
+    "steamworks.Subscribe": {
+        "body": [
+            "steamworks.Subscribe(${1:workshopItemID})$0"
+        ],
+        "description": "STEAMWORKS [Menu] \n\n[string] workshopItemID\n  The ID of the Steam Workshop item we should subscribe to",
+        "prefix": "steamworks.Subscribe"
+    },
+    "steamworks.Unsubscribe": {
+        "body": [
+            "steamworks.Unsubscribe(${1:workshopItemID})$0"
+        ],
+        "description": "STEAMWORKS [Menu] \n\n[string] workshopItemID\n  The ID of the Steam Workshop item we should unsubscribe from.",
+        "prefix": "steamworks.Unsubscribe"
+    },
+    "steamworks.ViewFile": {
+        "body": [
+            "steamworks.ViewFile(${1:workshopItemID})$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu] Opens the workshop website for specified Steam Workshop item in the Steam overlay browser.\n\n[string] workshopItemID\n  The ID of workshop item.",
+        "prefix": "steamworks.ViewFile"
+    },
+    "steamworks.Vote": {
+        "body": [
+            "steamworks.Vote(${1:workshopItemID}, ${2:upOrDown})$0"
+        ],
+        "description": "STEAMWORKS [Menu] \n\n[string] workshopItemID\n  The ID of workshop item.\n\n[boolean] upOrDown\n  Sets if the user should vote up/down. True makes them upvote, false down",
+        "prefix": "steamworks.Vote"
+    },
+    "steamworks.VoteInfo": {
+        "body": [
+            "steamworks.VoteInfo(${1:workshopItemID}, ${2:resultCallback})$0"
+        ],
+        "description": "STEAMWORKS [Client/Menu] Retrieves vote info of supplied addon.\n\n[string] workshopItemID\n  The ID of workshop item.\n\n[function] resultCallback\n  The function to process retrieved data. The first and only argument is a table, containing all the info.",
+        "prefix": "steamworks.VoteInfo"
+    }
+}

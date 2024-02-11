@@ -1,0 +1,345 @@
+{
+	"Vehicle/BoostTimeLeft": {
+		"body": [
+			"BoostTimeLeft()$0"
+		],
+		"description": "Returns the remaining boosting time left.",
+		"prefix": "BoostTimeLeft"
+	},
+	"Vehicle/CheckExitPoint": {
+		"body": [
+			"CheckExitPoint(${1:yaw}, ${2:distance}, ${3:endPoint})$0"
+		],
+		"description": "No description available.",
+		"prefix": "CheckExitPoint"
+	},
+	"Vehicle/EnableEngine": {
+		"body": [
+			"EnableEngine(${1:enable})$0"
+		],
+		"description": "Sets whether the engine is enabled or disabled, i.e. can be started or not.",
+		"prefix": "EnableEngine"
+	},
+	"Vehicle/GetAmmo": {
+		"body": [
+			"GetAmmo()$0"
+		],
+		"description": "Returns information about the ammo of the vehicle",
+		"prefix": "GetAmmo"
+	},
+	"Vehicle/GetCameraDistance": {
+		"body": [
+			"GetCameraDistance()$0"
+		],
+		"description": "Returns third person camera distance.",
+		"prefix": "GetCameraDistance"
+	},
+	"Vehicle/GetDriver": {
+		"body": [
+			"GetDriver()$0"
+		],
+		"description": "Gets the driver of the vehicle, returns NULL if no driver is present.",
+		"prefix": "GetDriver"
+	},
+	"Vehicle/GetHLSpeed": {
+		"body": [
+			"GetHLSpeed()$0"
+		],
+		"description": "Returns the current speed of the vehicle in Half-Life Hammer Units (in/s). Same as",
+		"prefix": "GetHLSpeed"
+	},
+	"Vehicle/GetMaxSpeed": {
+		"body": [
+			"GetMaxSpeed()$0"
+		],
+		"description": "Returns the max speed of the vehicle in MPH.",
+		"prefix": "GetMaxSpeed"
+	},
+	"Vehicle/GetOperatingParams": {
+		"body": [
+			"GetOperatingParams()$0"
+		],
+		"description": "Returns some info about the vehicle.",
+		"prefix": "GetOperatingParams"
+	},
+	"Vehicle/GetPassenger": {
+		"body": [
+			"GetPassenger(${1:passenger})$0"
+		],
+		"description": "Gets the passenger of the vehicle, returns NULL if no drivers is present.",
+		"prefix": "GetPassenger"
+	},
+	"Vehicle/GetPassengerSeatPoint": {
+		"body": [
+			"GetPassengerSeatPoint(${1:role})$0"
+		],
+		"description": "Returns the seat position and angle of a given passenger seat.",
+		"prefix": "GetPassengerSeatPoint"
+	},
+	"Vehicle/GetRPM": {
+		"body": [
+			"GetRPM()$0"
+		],
+		"description": "Returns the current RPM of the vehicle. This value is fake and doesn\u0026#39;t actually affect the vehicle movement.",
+		"prefix": "GetRPM"
+	},
+	"Vehicle/GetSpeed": {
+		"body": [
+			"GetSpeed()$0"
+		],
+		"description": "Returns the current speed of the vehicle in MPH.",
+		"prefix": "GetSpeed"
+	},
+	"Vehicle/GetSteering": {
+		"body": [
+			"GetSteering()$0"
+		],
+		"description": "Returns the current steering of the vehicle.",
+		"prefix": "GetSteering"
+	},
+	"Vehicle/GetSteeringDegrees": {
+		"body": [
+			"GetSteeringDegrees()$0"
+		],
+		"description": "Returns the maximum steering degree of the vehicle",
+		"prefix": "GetSteeringDegrees"
+	},
+	"Vehicle/GetThirdPersonMode": {
+		"body": [
+			"GetThirdPersonMode()$0"
+		],
+		"description": "Returns if vehicle has thirdperson mode enabled or not.",
+		"prefix": "GetThirdPersonMode"
+	},
+	"Vehicle/GetThrottle": {
+		"body": [
+			"GetThrottle()$0"
+		],
+		"description": "Returns the current throttle of the vehicle.",
+		"prefix": "GetThrottle"
+	},
+	"Vehicle/GetVehicleClass": {
+		"body": [
+			"GetVehicleClass()$0"
+		],
+		"description": "Returns the vehicle class name. This is only useful for Sandbox spawned vehicles or any vehicle that properly sets the vehicle class with",
+		"prefix": "GetVehicleClass"
+	},
+	"Vehicle/GetVehicleParams": {
+		"body": [
+			"GetVehicleParams()$0"
+		],
+		"description": "Returns the vehicle parameters of given vehicle.",
+		"prefix": "GetVehicleParams"
+	},
+	"Vehicle/GetVehicleViewPosition": {
+		"body": [
+			"GetVehicleViewPosition(${1:role})$0"
+		],
+		"description": "Returns the view position and forward angle of a given passenger seat.",
+		"prefix": "GetVehicleViewPosition"
+	},
+	"Vehicle/GetWheel": {
+		"body": [
+			"GetWheel(${1:wheel})$0"
+		],
+		"description": "Returns the",
+		"prefix": "GetWheel"
+	},
+	"Vehicle/GetWheelBaseHeight": {
+		"body": [
+			"GetWheelBaseHeight(${1:wheel})$0"
+		],
+		"description": "Returns the base wheel height.",
+		"prefix": "GetWheelBaseHeight"
+	},
+	"Vehicle/GetWheelContactPoint": {
+		"body": [
+			"GetWheelContactPoint(${1:wheel})$0"
+		],
+		"description": "Returns the wheel contact point.",
+		"prefix": "GetWheelContactPoint"
+	},
+	"Vehicle/GetWheelCount": {
+		"body": [
+			"GetWheelCount()$0"
+		],
+		"description": "Returns the wheel count of the vehicle",
+		"prefix": "GetWheelCount"
+	},
+	"Vehicle/GetWheelTotalHeight": {
+		"body": [
+			"GetWheelTotalHeight(${1:wheel})$0"
+		],
+		"description": "Returns the total wheel height.",
+		"prefix": "GetWheelTotalHeight"
+	},
+	"Vehicle/HasBoost": {
+		"body": [
+			"HasBoost()$0"
+		],
+		"description": "Returns whether this vehicle has boost at all.",
+		"prefix": "HasBoost"
+	},
+	"Vehicle/HasBrakePedal": {
+		"body": [
+			"HasBrakePedal()$0"
+		],
+		"description": "Returns whether this vehicle has a brake pedal. See",
+		"prefix": "HasBrakePedal"
+	},
+	"Vehicle/IsBoosting": {
+		"body": [
+			"IsBoosting()$0"
+		],
+		"description": "Returns whether this vehicle is currently boosting or not.",
+		"prefix": "IsBoosting"
+	},
+	"Vehicle/IsEngineEnabled": {
+		"body": [
+			"IsEngineEnabled()$0"
+		],
+		"description": "Returns whether the engine is enabled or not, i.e. whether it can be started.",
+		"prefix": "IsEngineEnabled"
+	},
+	"Vehicle/IsEngineStarted": {
+		"body": [
+			"IsEngineStarted()$0"
+		],
+		"description": "Returns whether the engine is started or not.",
+		"prefix": "IsEngineStarted"
+	},
+	"Vehicle/IsValidVehicle": {
+		"body": [
+			"IsValidVehicle()$0"
+		],
+		"description": "Returns true if the vehicle object is a valid or not. This will return false when",
+		"prefix": "IsValidVehicle"
+	},
+	"Vehicle/IsVehicleBodyInWater": {
+		"body": [
+			"IsVehicleBodyInWater()$0"
+		],
+		"description": "Returns whether this vehicle\u0026#39;s engine is underwater or not. ( Internally the attachment point \u0026#34;engine\u0026#34; or \u0026#34;vehicle_engine\u0026#34; is checked )",
+		"prefix": "IsVehicleBodyInWater"
+	},
+	"Vehicle/ReleaseHandbrake": {
+		"body": [
+			"ReleaseHandbrake()$0"
+		],
+		"description": "No description available.",
+		"prefix": "ReleaseHandbrake"
+	},
+	"Vehicle/SetBoost": {
+		"body": [
+			"SetBoost(${1:boost})$0"
+		],
+		"description": "Sets the boost. It is possible that this function does not work while the vehicle has a valid driver in it.",
+		"prefix": "SetBoost"
+	},
+	"Vehicle/SetCameraDistance": {
+		"body": [
+			"SetCameraDistance(${1:distance})$0"
+		],
+		"description": "Sets the third person camera distance of the vehicle.",
+		"prefix": "SetCameraDistance"
+	},
+	"Vehicle/SetHandbrake": {
+		"body": [
+			"SetHandbrake(${1:handbrake})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetHandbrake"
+	},
+	"Vehicle/SetHasBrakePedal": {
+		"body": [
+			"SetHasBrakePedal(${1:brakePedal})$0"
+		],
+		"description": "Sets whether this vehicle has a brake pedal.",
+		"prefix": "SetHasBrakePedal"
+	},
+	"Vehicle/SetMaxReverseThrottle": {
+		"body": [
+			"SetMaxReverseThrottle(${1:maxRevThrottle})$0"
+		],
+		"description": "Sets maximum reverse throttle",
+		"prefix": "SetMaxReverseThrottle"
+	},
+	"Vehicle/SetMaxThrottle": {
+		"body": [
+			"SetMaxThrottle(${1:maxThrottle})$0"
+		],
+		"description": "Sets maximum forward throttle",
+		"prefix": "SetMaxThrottle"
+	},
+	"Vehicle/SetSpringLength": {
+		"body": [
+			"SetSpringLength(${1:wheel}, ${2:length})$0"
+		],
+		"description": "Sets spring length of given wheel",
+		"prefix": "SetSpringLength"
+	},
+	"Vehicle/SetSteering": {
+		"body": [
+			"SetSteering(${1:steering})$0"
+		],
+		"description": "Sets the steering of the vehicle.",
+		"prefix": "SetSteering"
+	},
+	"Vehicle/SetSteeringDegrees": {
+		"body": [
+			"SetSteeringDegrees(${1:steeringDegrees})$0"
+		],
+		"description": "Sets the maximum steering degrees of the vehicle",
+		"prefix": "SetSteeringDegrees"
+	},
+	"Vehicle/SetThirdPersonMode": {
+		"body": [
+			"SetThirdPersonMode(${1:enable})$0"
+		],
+		"description": "Sets the third person mode state.",
+		"prefix": "SetThirdPersonMode"
+	},
+	"Vehicle/SetThrottle": {
+		"body": [
+			"SetThrottle(${1:throttle})$0"
+		],
+		"description": "Sets the throttle of the vehicle. It is possible that this function does not work with a valid driver in it.",
+		"prefix": "SetThrottle"
+	},
+	"Vehicle/SetVehicleClass": {
+		"body": [
+			"SetVehicleClass(${1:class})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetVehicleClass"
+	},
+	"Vehicle/SetVehicleEntryAnim": {
+		"body": [
+			"SetVehicleEntryAnim(${1:bOn})$0"
+		],
+		"description": "Sets whether the entry or exit camera animation should be played or not.",
+		"prefix": "SetVehicleEntryAnim"
+	},
+	"Vehicle/SetVehicleParams": {
+		"body": [
+			"SetVehicleParams(${1:params})$0"
+		],
+		"description": "Sets the vehicle parameters for given vehicle.",
+		"prefix": "SetVehicleParams"
+	},
+	"Vehicle/SetWheelFriction": {
+		"body": [
+			"SetWheelFriction(${1:wheel}, ${2:friction})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetWheelFriction"
+	},
+	"Vehicle/StartEngine": {
+		"body": [
+			"StartEngine(${1:start})$0"
+		],
+		"description": "Starts or stops the engine.",
+		"prefix": "StartEngine"
+	}
+}

@@ -1,0 +1,65 @@
+{
+    "EndBlock": {
+        "body": [
+            "EndBlock()$0"
+        ],
+        "description": "ISAVE [Shared]",
+        "prefix": "EndBlock"
+    },
+    "StartBlock": {
+        "body": [
+            "StartBlock(${1:name})$0"
+        ],
+        "description": "ISAVE [Shared] Starts a new block of data that you can write to inside current block. Blocks must be ended with ISave:EndBlock.\n\n[string] name\n  Name of the new block. Used for determining which block is which, returned by IRestore:StartBlock during game load.",
+        "prefix": "StartBlock"
+    },
+    "WriteAngle": {
+        "body": [
+            "WriteAngle(${1:ang})$0"
+        ],
+        "description": "ISAVE [Shared] \n\n[Angle] ang\n  The angle to write.",
+        "prefix": "WriteAngle"
+    },
+    "WriteBool": {
+        "body": [
+            "WriteBool(${1:bool})$0"
+        ],
+        "description": "ISAVE [Shared] \n\n[boolean] bool\n  The boolean to write.",
+        "prefix": "WriteBool"
+    },
+    "WriteEntity": {
+        "body": [
+            "WriteEntity(${1:ent})$0"
+        ],
+        "description": "ISAVE [Shared] \n\n[Entity] ent\n  The entity to write.",
+        "prefix": "WriteEntity"
+    },
+    "WriteFloat": {
+        "body": [
+            "WriteFloat(${1:float})$0"
+        ],
+        "description": "ISAVE [Shared] \n\n[number] float\n  The floating point number to write.",
+        "prefix": "WriteFloat"
+    },
+    "WriteInt": {
+        "body": [
+            "WriteInt(${1:int})$0"
+        ],
+        "description": "ISAVE [Shared] \n\n[number] int\n  The integer number to write.",
+        "prefix": "WriteInt"
+    },
+    "WriteString": {
+        "body": [
+            "WriteString(${1:str})$0"
+        ],
+        "description": "ISAVE [Shared] \n\n[string] str\n  The string to write. Maximum length is 1024.",
+        "prefix": "WriteString"
+    },
+    "WriteVector": {
+        "body": [
+            "WriteVector(${1:vec})$0"
+        ],
+        "description": "ISAVE [Shared] \n\n[Vector] vec\n  The vector to write.",
+        "prefix": "WriteVector"
+    }
+}

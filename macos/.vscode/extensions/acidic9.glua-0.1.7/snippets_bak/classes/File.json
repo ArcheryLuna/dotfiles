@@ -1,0 +1,149 @@
+{
+	"File/Close": {
+		"body": [
+			"Close()$0"
+		],
+		"description": "Dumps the file changes to disk and closes the file handle which makes the handle useless.",
+		"prefix": "Close"
+	},
+	"File/Flush": {
+		"body": [
+			"Flush()$0"
+		],
+		"description": "Dumps the file changes to disk and saves the file.",
+		"prefix": "Flush"
+	},
+	"File/Read": {
+		"body": [
+			"Read(${1:length})$0"
+		],
+		"description": "Reads the specified amount of chars and returns them as a binary string.",
+		"prefix": "Read"
+	},
+	"File/ReadBool": {
+		"body": [
+			"ReadBool()$0"
+		],
+		"description": "Reads one byte of the file and returns whether that byte was not 0.",
+		"prefix": "ReadBool"
+	},
+	"File/ReadByte": {
+		"body": [
+			"ReadByte()$0"
+		],
+		"description": "Reads one unsigned 8-bit integer from the file.",
+		"prefix": "ReadByte"
+	},
+	"File/ReadDouble": {
+		"body": [
+			"ReadDouble()$0"
+		],
+		"description": "Reads 8 bytes from the file converts them to a double and returns them.",
+		"prefix": "ReadDouble"
+	},
+	"File/ReadFloat": {
+		"body": [
+			"ReadFloat()$0"
+		],
+		"description": "Reads 4 bytes from the file converts them to a float and returns them.",
+		"prefix": "ReadFloat"
+	},
+	"File/ReadLine": {
+		"body": [
+			"ReadLine()$0"
+		],
+		"description": "Returns the contents of the file from the current position up until the end of the current line. This function will not return more than 8192 characters.",
+		"prefix": "ReadLine"
+	},
+	"File/ReadLong": {
+		"body": [
+			"ReadLong()$0"
+		],
+		"description": "Reads a signed 32 bit integer from the file.",
+		"prefix": "ReadLong"
+	},
+	"File/ReadShort": {
+		"body": [
+			"ReadShort()$0"
+		],
+		"description": "Reads a signed 16-bit integer from the file.",
+		"prefix": "ReadShort"
+	},
+	"File/Seek": {
+		"body": [
+			"Seek(${1:pos})$0"
+		],
+		"description": "Sets the file pointer to the specified position.",
+		"prefix": "Seek"
+	},
+	"File/Size": {
+		"body": [
+			"Size()$0"
+		],
+		"description": "Returns the size of the file in bytes.",
+		"prefix": "Size"
+	},
+	"File/Skip": {
+		"body": [
+			"Skip(${1:amount})$0"
+		],
+		"description": "Moves the file pointer by the specified amount of chars.",
+		"prefix": "Skip"
+	},
+	"File/Tell": {
+		"body": [
+			"Tell()$0"
+		],
+		"description": "Returns the current position of the file pointer.",
+		"prefix": "Tell"
+	},
+	"File/Write": {
+		"body": [
+			"Write(${1:data})$0"
+		],
+		"description": "Writes the given string into the file.",
+		"prefix": "Write"
+	},
+	"File/WriteBool": {
+		"body": [
+			"WriteBool(${1:bool})$0"
+		],
+		"description": "Writes on byte, representing the a Boolean to the file.",
+		"prefix": "WriteBool"
+	},
+	"File/WriteByte": {
+		"body": [
+			"WriteByte(${1:uint8})$0"
+		],
+		"description": "Write an 8-bit unsigned integer to the file.",
+		"prefix": "WriteByte"
+	},
+	"File/WriteDouble": {
+		"body": [
+			"WriteDouble(${1:double})$0"
+		],
+		"description": "Writes a 8byte floating point double to the file.",
+		"prefix": "WriteDouble"
+	},
+	"File/WriteFloat": {
+		"body": [
+			"WriteFloat(${1:float})$0"
+		],
+		"description": "Writes a 4byte float to the file.",
+		"prefix": "WriteFloat"
+	},
+	"File/WriteLong": {
+		"body": [
+			"WriteLong(${1:int32})$0"
+		],
+		"description": "Writes a 32-bit signed integer to the file.",
+		"prefix": "WriteLong"
+	},
+	"File/WriteShort": {
+		"body": [
+			"WriteShort(${1:int16})$0"
+		],
+		"description": "Writes a 16-bit signed integer to the file.",
+		"prefix": "WriteShort"
+	}
+}

@@ -1,0 +1,9 @@
+{
+    "video.Record": {
+        "body": [
+            "video.Record(${1:config})$0"
+        ],
+        "description": "VIDEO [Client/Menu] Attempts to create an IVideoWriter.\n\n[table] config\n  The video config. See VideoData structure.",
+        "prefix": "video.Record"
+    }
+}

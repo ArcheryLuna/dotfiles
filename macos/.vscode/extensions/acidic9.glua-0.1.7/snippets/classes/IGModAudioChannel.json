@@ -1,0 +1,205 @@
+{
+    "EnableLooping": {
+        "body": [
+            "EnableLooping(${1:enable})$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client] \n\n[boolean] enable\n  Enable or disable looping of this audio channel.",
+        "prefix": "EnableLooping"
+    },
+    "FFT": {
+        "body": [
+            "FFT(${1:tbl}, ${2:size})$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client] Computes the DFT (discrete Fourier transform) of the sound channel. The size parameter specifies the number of consecutive audio samples to use as the input to the DFT and is restricted to a power of two. A Hann window is applied to the input data. The computed DFT has the same number of frequency bins as the number of samples. Only half of this DFT is returned, since the DFT magnitudes are symmetric for real input data. The magnitudes of the DFT (values from 0 to 1) are used to fill the output table, starting at index 1. Visualization protip: For a size N DFT, bin k (1-indexed) corresponds to a frequency of (k - 1) / N * sampleRate. Visualization protip: Sound energy is proportional to the square of the magnitudes. Adding magnitudes together makes no sense physically, but adding energies does. Visualization protip: The human ear works on a logarithmic amplitude scale. You can convert to decibels by taking 20 log10 of frequency magnitudes, or 10 log10 of energy. The decibel values will range from -infinity to 0.\n\n[table] tbl\n  The table to output the DFT magnitudes (numbers between 0 and 1) into. Indices start from 1.\n\n[number] size\n  The number of samples to use. See FFT_ Enums",
+        "prefix": "FFT"
+    },
+    "Get3DCone": {
+        "body": [
+            "Get3DCone()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client] Returns 3D cone of the sound channel. See IGModAudioChannel:Set3DCone.",
+        "prefix": "Get3DCone"
+    },
+    "Get3DFadeDistance": {
+        "body": [
+            "Get3DFadeDistance()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "Get3DFadeDistance"
+    },
+    "GetAverageBitRate": {
+        "body": [
+            "GetAverageBitRate()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetAverageBitRate"
+    },
+    "GetBitsPerSample": {
+        "body": [
+            "GetBitsPerSample()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetBitsPerSample"
+    },
+    "GetFileName": {
+        "body": [
+            "GetFileName()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetFileName"
+    },
+    "GetLength": {
+        "body": [
+            "GetLength()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetLength"
+    },
+    "GetLevel": {
+        "body": [
+            "GetLevel()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetLevel"
+    },
+    "GetPlaybackRate": {
+        "body": [
+            "GetPlaybackRate()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetPlaybackRate"
+    },
+    "GetPos": {
+        "body": [
+            "GetPos()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetPos"
+    },
+    "GetSamplingRate": {
+        "body": [
+            "GetSamplingRate()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetSamplingRate"
+    },
+    "GetState": {
+        "body": [
+            "GetState()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetState"
+    },
+    "GetTime": {
+        "body": [
+            "GetTime()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetTime"
+    },
+    "GetVolume": {
+        "body": [
+            "GetVolume()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "GetVolume"
+    },
+    "Is3D": {
+        "body": [
+            "Is3D()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "Is3D"
+    },
+    "IsBlockStreamed": {
+        "body": [
+            "IsBlockStreamed()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "IsBlockStreamed"
+    },
+    "IsLooping": {
+        "body": [
+            "IsLooping()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "IsLooping"
+    },
+    "IsOnline": {
+        "body": [
+            "IsOnline()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "IsOnline"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "IsValid"
+    },
+    "Pause": {
+        "body": [
+            "Pause()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "Pause"
+    },
+    "Play": {
+        "body": [
+            "Play()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "Play"
+    },
+    "Set3DCone": {
+        "body": [
+            "Set3DCone(${1:innerAngle}, ${2:outerAngle}, ${3:outerVolume})$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client] Sets 3D cone of the sound channel.\n\n[number] innerAngle\n  The angle of the inside projection cone in degrees.\n\nRange is from 0 (no cone) to 360 (sphere), -1 = leave current.\n\n[number] outerAngle\n  The angle of the outside projection cone in degrees.\n\nRange is from 0 (no cone) to 360 (sphere), -1 = leave current.\n\n[number] outerVolume\n  The delta-volume outside the outer projection cone.\n\nRange is from 0 (silent) to 1 (same as inside the cone), less than 0 = leave current.",
+        "prefix": "Set3DCone"
+    },
+    "Set3DFadeDistance": {
+        "body": [
+            "Set3DFadeDistance(${1:min}, ${2:max})$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client] Sets 3D fade distances of a sound channel.\n\n[number] min\n  The minimum distance. The channel's volume is at maximum when the listener is within this distance.\n\n0 or less = leave current.\n\n[number] max\n  The maximum distance. The channel's volume stops decreasing when the listener is beyond this distance.\n\n0 or less = leave current.",
+        "prefix": "Set3DFadeDistance"
+    },
+    "SetPlaybackRate": {
+        "body": [
+            "SetPlaybackRate(${1:rate})$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client] \n\n[number] rate\n  Playback rate to set to. 1 is normal speed, 0.5 is half the normal speed, etc.",
+        "prefix": "SetPlaybackRate"
+    },
+    "SetPos": {
+        "body": [
+            "SetPos(${1:pos}, ${2:dir=Vector(0,0,0)})$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client] \n\n[Vector] pos\n  The position to put the sound into\n\n[Vector] dir=Vector(0,0,0)\n  The direction of the sound",
+        "prefix": "SetPos"
+    },
+    "SetTime": {
+        "body": [
+            "SetTime(${1:secs})$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client] \n\n[number] secs\n  The time to set the stream to, in seconds.",
+        "prefix": "SetTime"
+    },
+    "SetVolume": {
+        "body": [
+            "SetVolume(${1:volume})$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client] \n\n[number] volume\n  Volume to set, a number between 0 and 1",
+        "prefix": "SetVolume"
+    },
+    "Stop": {
+        "body": [
+            "Stop()$0"
+        ],
+        "description": "IGMODAUDIOCHANNEL [Client]",
+        "prefix": "Stop"
+    }
+}

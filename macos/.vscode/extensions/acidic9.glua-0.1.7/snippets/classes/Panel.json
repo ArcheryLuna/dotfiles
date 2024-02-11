@@ -1,0 +1,1892 @@
+{
+    "Add": {
+        "body": [
+            "Add(${1:object})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] object\n  The panel to be added (parented). Can also be:\n\n string Class Name - creates panel with the specified name and adds it to the panel.\n table PANEL table - creates a panel from table and adds it to the panel.",
+        "prefix": "Add"
+    },
+    "AddText": {
+        "body": [
+            "AddText()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "AddText"
+    },
+    "AlignBottom": {
+        "body": [
+            "AlignBottom(${1:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] offset=0\n  The align offset.",
+        "prefix": "AlignBottom"
+    },
+    "AlignLeft": {
+        "body": [
+            "AlignLeft(${1:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] offset=0\n  The align offset.",
+        "prefix": "AlignLeft"
+    },
+    "AlignRight": {
+        "body": [
+            "AlignRight(${1:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] offset=0\n  The align offset.",
+        "prefix": "AlignRight"
+    },
+    "AlignTop": {
+        "body": [
+            "AlignTop(${1:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] offset=0\n  The align offset.",
+        "prefix": "AlignTop"
+    },
+    "AlphaTo": {
+        "body": [
+            "AlphaTo(${1:alpha}, ${2:duration}, ${3:delay=0}, ${4:callback})$0"
+        ],
+        "description": "PANEL [Client] Uses animation to transition the current alpha value of a panel to a new alpha, over a set period of time and after a specified delay.\n\n[number] alpha\n  The alpha value (0-255) to approach.\n\n[number] duration\n  The time in seconds it should take to reach the alpha.\n\n[number] delay=0\n  The delay before the animation starts.\n\n[function] callback\n  The function to be called once the animation finishes. Arguments are:\n\n table animData - The AnimationData structure that was used.\n Panel pnl - The panel object whose alpha was changed.",
+        "prefix": "AlphaTo"
+    },
+    "AnimTail": {
+        "body": [
+            "AnimTail()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "AnimTail"
+    },
+    "AnimationThinkInternal": {
+        "body": [
+            "AnimationThinkInternal()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "AnimationThinkInternal"
+    },
+    "AppendText": {
+        "body": [
+            "AppendText(${1:txt})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] txt\n  The text to append (add on).",
+        "prefix": "AppendText"
+    },
+    "ApplyGWEN": {
+        "body": [
+            "ApplyGWEN(${1:GWENTable})$0"
+        ],
+        "description": "PANEL [Client] \n\n[table] GWENTable\n  The GWEN controls table to apply to the panel.",
+        "prefix": "ApplyGWEN"
+    },
+    "Center": {
+        "body": [
+            "Center()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Center"
+    },
+    "CenterHorizontal": {
+        "body": [
+            "CenterHorizontal(${1:fraction=0.5})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] fraction=0.5\n  The center fraction.",
+        "prefix": "CenterHorizontal"
+    },
+    "CenterVertical": {
+        "body": [
+            "CenterVertical(${1:fraction=0.5})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] fraction=0.5\n  The center fraction.",
+        "prefix": "CenterVertical"
+    },
+    "ChildCount": {
+        "body": [
+            "ChildCount()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "ChildCount"
+    },
+    "ChildrenSize": {
+        "body": [
+            "ChildrenSize()$0"
+        ],
+        "description": "PANEL [Client] Returns the width and height of the space between the position of the panel (upper-left corner) and the max bound of the children panels (farthest reaching lower-right corner).",
+        "prefix": "ChildrenSize"
+    },
+    "Clear": {
+        "body": [
+            "Clear()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Clear"
+    },
+    "ColorTo": {
+        "body": [
+            "ColorTo(${1:color}, ${2:length}, ${3:delay}, ${4:callback})$0"
+        ],
+        "description": "PANEL [Client] Fades panels color to specified one. It won't work unless panel has SetColor function.\n\n[table] color\n  The color to fade to\n\n[number] length\n  Length of the animation\n\n[number] delay\n  Delay before start fading\n\n[function] callback\n  Function to execute when finished",
+        "prefix": "ColorTo"
+    },
+    "Command": {
+        "body": [
+            "Command(${1:command})$0"
+        ],
+        "description": "PANEL [Client] Sends an action command signal to the panel. The response is handled by PANEL:ActionSignal.\n\n[string] command\n  The command to send to the panel.",
+        "prefix": "Command"
+    },
+    "ConVarChanged": {
+        "body": [
+            "ConVarChanged(${1:newValue})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] newValue\n  The new value to set the associated console variable to.",
+        "prefix": "ConVarChanged"
+    },
+    "ConVarNumberThink": {
+        "body": [
+            "ConVarNumberThink()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "ConVarNumberThink"
+    },
+    "ConVarStringThink": {
+        "body": [
+            "ConVarStringThink()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "ConVarStringThink"
+    },
+    "CopyBase": {
+        "body": [
+            "CopyBase(${1:srcPanel})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] srcPanel\n  The panel to copy the boundary and dock settings from.",
+        "prefix": "CopyBase"
+    },
+    "CopyBounds": {
+        "body": [
+            "CopyBounds(${1:base})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] base\n  The panel to copy size and position from.",
+        "prefix": "CopyBounds"
+    },
+    "CopyHeight": {
+        "body": [
+            "CopyHeight(${1:base})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] base\n  Panel to copy the height from.",
+        "prefix": "CopyHeight"
+    },
+    "CopyPos": {
+        "body": [
+            "CopyPos(${1:base})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] base\n  Panel to position the width from.",
+        "prefix": "CopyPos"
+    },
+    "CopySelected": {
+        "body": [
+            "CopySelected()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "CopySelected"
+    },
+    "CopyWidth": {
+        "body": [
+            "CopyWidth(${1:base})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] base\n  Panel to copy the width from.",
+        "prefix": "CopyWidth"
+    },
+    "CursorPos": {
+        "body": [
+            "CursorPos()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "CursorPos"
+    },
+    "CutSelected": {
+        "body": [
+            "CutSelected()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "CutSelected"
+    },
+    "DeleteCookie": {
+        "body": [
+            "DeleteCookie(${1:cookieName})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] cookieName\n  The unique cookie name to delete.",
+        "prefix": "DeleteCookie"
+    },
+    "DisableLerp": {
+        "body": [
+            "DisableLerp()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "DisableLerp"
+    },
+    "Distance": {
+        "body": [
+            "Distance(${1:tgtPanel})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] tgtPanel\n  The target object with which to compare position.",
+        "prefix": "Distance"
+    },
+    "DistanceFrom": {
+        "body": [
+            "DistanceFrom(${1:posX}, ${2:posY})$0"
+        ],
+        "description": "PANEL [Client] Returns the distance between the centre of this panel object and a specified point (local to the parent panel).\n\n[number] posX\n  The horizontal (x) position in pixels of the point to compare with. Local to the parent panel, or container.\n\n[number] posY\n  The vertical (y) position in pixels of the point to compare with. Local to the parent panel, or container.",
+        "prefix": "DistanceFrom"
+    },
+    "DoModal": {
+        "body": [
+            "DoModal(${1:doModal})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] doModal\n  Sets whenever to lock or unlock.",
+        "prefix": "DoModal"
+    },
+    "Dock": {
+        "body": [
+            "Dock(${1:dockType})$0"
+        ],
+        "description": "PANEL [Client] Sets the dock type of the panel.\n\n[number] dockType\n  Dock type using DOCK_ Enums.",
+        "prefix": "Dock"
+    },
+    "DockMargin": {
+        "body": [
+            "DockMargin(${1:marginLeft}, ${2:marginTop}, ${3:marginRight}, ${4:marginBottom})$0"
+        ],
+        "description": "PANEL [Client] Sets the dock margin of the panel. The dock margin is the extra space that will be left around the edge when this element is docked inside its parent element.\n\n[number] marginLeft\n  The left margin to the parent.\n\n[number] marginTop\n  The top margin to the parent.\n\n[number] marginRight\n  The right margin to the parent.\n\n[number] marginBottom\n  The bottom margin to the parent.",
+        "prefix": "DockMargin"
+    },
+    "DockPadding": {
+        "body": [
+            "DockPadding(${1:paddingLeft}, ${2:paddingTop}, ${3:paddingRight}, ${4:paddingBottom})$0"
+        ],
+        "description": "PANEL [Client] Sets the dock padding of the panel. The dock padding is the extra space that will be left around the edge when child elements are docked inside this element.\n\n[number] paddingLeft\n  The left padding to the parent.\n\n[number] paddingTop\n  The top padding to the parent.\n\n[number] paddingRight\n  The right padding to the parent.\n\n[number] paddingBottom\n  The bottom padding to the parent.",
+        "prefix": "DockPadding"
+    },
+    "DragClick": {
+        "body": [
+            "DragClick()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "DragClick"
+    },
+    "DragHover": {
+        "body": [
+            "DragHover(${1:HoverTime})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] HoverTime\n  If this time is greater than 0.1, Panel:DragHoverClick, passing it as an argument.",
+        "prefix": "DragHover"
+    },
+    "DragHoverEnd": {
+        "body": [
+            "DragHoverEnd()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "DragHoverEnd"
+    },
+    "DragMousePress": {
+        "body": [
+            "DragMousePress(${1:mouseCode})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] mouseCode\n  The code for the mouse button pressed, passed by, for example, PANEL:OnMousePressed. See the MOUSE_ Enums.",
+        "prefix": "DragMousePress"
+    },
+    "DragMouseRelease": {
+        "body": [
+            "DragMouseRelease(${1:mouseCode})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] mouseCode\n  The code for the mouse button pressed, passed by, for example, PANEL:OnMouseReleased. See the MOUSE_ Enums.",
+        "prefix": "DragMouseRelease"
+    },
+    "DrawDragHover": {
+        "body": [
+            "DrawDragHover(${1:x}, ${2:y}, ${3:width}, ${4:height})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] x\n  The x coordinate of the top-left corner of the drop area.\n\n[number] y\n  The y coordinate of the top-left corner of the drop area.\n\n[number] width\n  The width of the drop area.\n\n[number] height\n  The height of the drop area.",
+        "prefix": "DrawDragHover"
+    },
+    "DrawFilledRect": {
+        "body": [
+            "DrawFilledRect()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "DrawFilledRect"
+    },
+    "DrawOutlinedRect": {
+        "body": [
+            "DrawOutlinedRect()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "DrawOutlinedRect"
+    },
+    "DrawSelections": {
+        "body": [
+            "DrawSelections()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "DrawSelections"
+    },
+    "DrawTextEntryText": {
+        "body": [
+            "DrawTextEntryText(${1:textCol}, ${2:highlightCol}, ${3:cursorCol})$0"
+        ],
+        "description": "PANEL [Client] Used to draw the text in a DTextEntry within a derma skin. This should be called within the SKIN:PaintTextEntry skin hook.\n\n[table] textCol\n  The colour of the main text.\n\n[table] highlightCol\n  The colour of the selection highlight (when selecting text).\n\n[table] cursorCol\n  The colour of the text cursor (or caret).",
+        "prefix": "DrawTextEntryText"
+    },
+    "DrawTexturedRect": {
+        "body": [
+            "DrawTexturedRect()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "DrawTexturedRect"
+    },
+    "Droppable": {
+        "body": [
+            "Droppable(${1:name})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] name\n  Name of your droppable panel",
+        "prefix": "Droppable"
+    },
+    "EndBoxSelection": {
+        "body": [
+            "EndBoxSelection()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "EndBoxSelection"
+    },
+    "Exec": {
+        "body": [
+            "Exec(${1:cmd})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] cmd\n  The command to be run.",
+        "prefix": "Exec"
+    },
+    "Find": {
+        "body": [
+            "Find(${1:panelName})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] panelName\n  The name of the panel that should be found.",
+        "prefix": "Find"
+    },
+    "FocusNext": {
+        "body": [
+            "FocusNext()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "FocusNext"
+    },
+    "FocusPrevious": {
+        "body": [
+            "FocusPrevious()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "FocusPrevious"
+    },
+    "GWEN_SetCheckboxText": {
+        "body": [
+            "GWEN_SetCheckboxText(${1:txt})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] txt\n  The text to be applied to the DCheckBoxLabel.",
+        "prefix": "GWEN_SetCheckboxText"
+    },
+    "GWEN_SetControlName": {
+        "body": [
+            "GWEN_SetControlName(${1:name})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] name\n  The new name to apply to the panel.",
+        "prefix": "GWEN_SetControlName"
+    },
+    "GWEN_SetDock": {
+        "body": [
+            "GWEN_SetDock(${1:dockState})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] dockState\n  The dock mode to pass to the panel's Dock method. This reads a string and applies the approriate DOCK_ Enums.\n\n Right: Dock right.\n Left: Dock left.\n Bottom: Dock at the bottom.\n Top: Dock at the top.\n Fill: Fill the parent panel.",
+        "prefix": "GWEN_SetDock"
+    },
+    "GWEN_SetHorizontalAlign": {
+        "body": [
+            "GWEN_SetHorizontalAlign(${1:hAlign})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] hAlign\n  The alignment, as a string, to pass to Panel:SetContentAlignment. Accepts:\n\n Right: Align mid-right.\n Left: Align mid-left.\n Center: Align mid-center.",
+        "prefix": "GWEN_SetHorizontalAlign"
+    },
+    "GWEN_SetMargin": {
+        "body": [
+            "GWEN_SetMargin(${1:margins})$0"
+        ],
+        "description": "PANEL [Client] \n\n[table] margins\n  A four-membered table containing the margins as numbers:\n\n number left - The left margin.\n number top - The top margin.\n number right - The right margin.\n number bottom - The bottom margin.",
+        "prefix": "GWEN_SetMargin"
+    },
+    "GWEN_SetMax": {
+        "body": [
+            "GWEN_SetMax(${1:maxValue})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] maxValue\n  The maximum value the element is to permit.",
+        "prefix": "GWEN_SetMax"
+    },
+    "GWEN_SetMin": {
+        "body": [
+            "GWEN_SetMin(${1:minValue})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] minValue\n  The minimum value the element is to permit.",
+        "prefix": "GWEN_SetMin"
+    },
+    "GWEN_SetPosition": {
+        "body": [
+            "GWEN_SetPosition(${1:pos})$0"
+        ],
+        "description": "PANEL [Client] \n\n[table] pos\n  A two-membered table containing the x and y coordinates as numbers:\n\n number x - The x coordinate.\n number y - The y coordinate.",
+        "prefix": "GWEN_SetPosition"
+    },
+    "GWEN_SetSize": {
+        "body": [
+            "GWEN_SetSize(${1:size})$0"
+        ],
+        "description": "PANEL [Client] \n\n[table] size\n  A two-membered table containing the width and heights as numbers:\n\n number w - The width.\n number h - The height.",
+        "prefix": "GWEN_SetSize"
+    },
+    "GWEN_SetText": {
+        "body": [
+            "GWEN_SetText(${1:txt})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] txt\n  The text to be applied to the panel.",
+        "prefix": "GWEN_SetText"
+    },
+    "GetAlpha": {
+        "body": [
+            "GetAlpha()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetAlpha"
+    },
+    "GetBounds": {
+        "body": [
+            "GetBounds()$0"
+        ],
+        "description": "PANEL [Client] Returns the position and size of the panel. This is equivalent to calling Panel:GetPos and Panel:GetSize together.",
+        "prefix": "GetBounds"
+    },
+    "GetCaretPos": {
+        "body": [
+            "GetCaretPos()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetCaretPos"
+    },
+    "GetChild": {
+        "body": [
+            "GetChild(${1:childIndex})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] childIndex\n  The index of the child to get.",
+        "prefix": "GetChild"
+    },
+    "GetChildPosition": {
+        "body": [
+            "GetChildPosition(${1:pnl})$0"
+        ],
+        "description": "PANEL [Client] Gets a child object's position relative to this panel object. The number of levels is not relevant; the child may have many parents between itself and the object on which the method is called.\n\n[Panel] pnl\n  The panel to get the position of.",
+        "prefix": "GetChildPosition"
+    },
+    "GetChildren": {
+        "body": [
+            "GetChildren()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetChildren"
+    },
+    "GetChildrenInRect": {
+        "body": [
+            "GetChildrenInRect(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "PANEL [Client] Returns a table of all visible, selectable children of the panel object that lie at least partially within the specified rectangle.\n\n[number] x\n  The horizontal (x) position of the top-left corner of the rectangle, relative to the panel object.\n\n[number] y\n  The vertical (y) position of the top-left corner of the rectangle, relative to the panel object.\n\n[number] w\n  The width of the rectangle.\n\n[number] h\n  The height of the rectangle.",
+        "prefix": "GetChildrenInRect"
+    },
+    "GetClassName": {
+        "body": [
+            "GetClassName()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetClassName"
+    },
+    "GetClosestChild": {
+        "body": [
+            "GetClosestChild(${1:x}, ${2:y})$0"
+        ],
+        "description": "PANEL [Client] Returns the child of this panel object that is closest to the specified point. The point is relative to the object on which the method is called. The distance the child is from this point is also returned.\n\n[number] x\n  The horizontal (x) position of the point.\n\n[number] y\n  The vertical (y) position of the point.",
+        "prefix": "GetClosestChild"
+    },
+    "GetContentSize": {
+        "body": [
+            "GetContentSize()$0"
+        ],
+        "description": "PANEL [Client] Gets the size of the content/children within a panel object. Only works with Label derived panels by default such as DLabel.\nWill also work on any panel that manually implements this method.",
+        "prefix": "GetContentSize"
+    },
+    "GetCookie": {
+        "body": [
+            "GetCookie(${1:cookieName}, ${2:default})$0"
+        ],
+        "description": "PANEL [Client] Gets the value of a cookie stored by the panel object. This can also be done with cookie.GetString, using the panel's cookie name, a fullstop, and then the actual name of the cookie. Make sure the panel's cookie name has not changed since writing, or the cookie will not be accessible. This can be done with Panel:GetCookieName and Panel:SetCookieName.\n\n[string] cookieName\n  The name of the cookie from which to retrieve the value.\n\n[string] default\n  The default value to return if the cookie does not exist.",
+        "prefix": "GetCookie"
+    },
+    "GetCookieName": {
+        "body": [
+            "GetCookieName()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetCookieName"
+    },
+    "GetCookieNumber": {
+        "body": [
+            "GetCookieNumber(${1:cookieName}, ${2:default})$0"
+        ],
+        "description": "PANEL [Client] Gets the value of a cookie stored by the panel object, as a number. This can also be done with cookie.GetNumber, using the panel's cookie name, a fullstop, and then the actual name of the cookie. Make sure the panel's cookie name has not changed since writing, or the cookie will not be accessible. This can be done with Panel:GetCookieName and Panel:SetCookieName.\n\n[string] cookieName\n  The name of the cookie from which to retrieve the value.\n\n[number] default\n  The default value to return if the cookie does not exist.",
+        "prefix": "GetCookieNumber"
+    },
+    "GetDock": {
+        "body": [
+            "GetDock()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetDock"
+    },
+    "GetDockMargin": {
+        "body": [
+            "GetDockMargin()$0"
+        ],
+        "description": "PANEL [Client] Returns the docked margins of the panel. (set by Panel:DockMargin)",
+        "prefix": "GetDockMargin"
+    },
+    "GetDockPadding": {
+        "body": [
+            "GetDockPadding()$0"
+        ],
+        "description": "PANEL [Client] Returns the docked padding of the panel. (set by Panel:DockPadding)",
+        "prefix": "GetDockPadding"
+    },
+    "GetFont": {
+        "body": [
+            "GetFont()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetFont"
+    },
+    "GetHTMLMaterial": {
+        "body": [
+            "GetHTMLMaterial()$0"
+        ],
+        "description": "PANEL [Client] Returns the panel's HTML material. Only works with Awesomium, HTML and DHTML panels that have been fully loaded.",
+        "prefix": "GetHTMLMaterial"
+    },
+    "GetName": {
+        "body": [
+            "GetName()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetName"
+    },
+    "GetNumLines": {
+        "body": [
+            "GetNumLines()$0"
+        ],
+        "description": "PANEL [Client] Returns the number of lines in a RichText. You must wait a couple frames before calling this after using Panel:AppendText or Panel:SetText, otherwise it will return the number of text lines before the text change.",
+        "prefix": "GetNumLines"
+    },
+    "GetParent": {
+        "body": [
+            "GetParent()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetParent"
+    },
+    "GetPos": {
+        "body": [
+            "GetPos()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetPos"
+    },
+    "GetSelectedChildren": {
+        "body": [
+            "GetSelectedChildren()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetSelectedChildren"
+    },
+    "GetSelectionCanvas": {
+        "body": [
+            "GetSelectionCanvas()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetSelectionCanvas"
+    },
+    "GetSize": {
+        "body": [
+            "GetSize()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetSize"
+    },
+    "GetSkin": {
+        "body": [
+            "GetSkin()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetSkin"
+    },
+    "GetTable": {
+        "body": [
+            "GetTable()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetTable"
+    },
+    "GetTall": {
+        "body": [
+            "GetTall()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetTall"
+    },
+    "GetText": {
+        "body": [
+            "GetText()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetText"
+    },
+    "GetTextInset": {
+        "body": [
+            "GetTextInset()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetTextInset"
+    },
+    "GetTextSize": {
+        "body": [
+            "GetTextSize()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetTextSize"
+    },
+    "GetValidReceiverSlot": {
+        "body": [
+            "GetValidReceiverSlot()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetValidReceiverSlot"
+    },
+    "GetValue": {
+        "body": [
+            "GetValue()$0"
+        ],
+        "description": "PANEL [Client] Returns the value the panel holds. In engine is only implemented for CheckButton, Label and TextEntry as a string and for those elements has a hard coded limit of 8092 characters.",
+        "prefix": "GetValue"
+    },
+    "GetWide": {
+        "body": [
+            "GetWide()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetWide"
+    },
+    "GetZPos": {
+        "body": [
+            "GetZPos()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GetZPos"
+    },
+    "GoBack": {
+        "body": [
+            "GoBack()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GoBack"
+    },
+    "GoForward": {
+        "body": [
+            "GoForward()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GoForward"
+    },
+    "GoToHistoryOffset": {
+        "body": [
+            "GoToHistoryOffset(${1:offset})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] offset\n  The offset in the panel's back/forward history, relative to the current page, that you would like to skip to. Because this is relative, 0 = current page while negative goes back and positive goes forward. For example, -2 will go back 2 pages in the history.",
+        "prefix": "GoToHistoryOffset"
+    },
+    "GotoTextEnd": {
+        "body": [
+            "GotoTextEnd()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GotoTextEnd"
+    },
+    "GotoTextStart": {
+        "body": [
+            "GotoTextStart()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "GotoTextStart"
+    },
+    "HasChildren": {
+        "body": [
+            "HasChildren()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "HasChildren"
+    },
+    "HasFocus": {
+        "body": [
+            "HasFocus()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "HasFocus"
+    },
+    "HasHierarchicalFocus": {
+        "body": [
+            "HasHierarchicalFocus()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "HasHierarchicalFocus"
+    },
+    "HasParent": {
+        "body": [
+            "HasParent(${1:parentPanel})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] parentPanel",
+        "prefix": "HasParent"
+    },
+    "Hide": {
+        "body": [
+            "Hide()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Hide"
+    },
+    "InsertClickableTextEnd": {
+        "body": [
+            "InsertClickableTextEnd()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "InsertClickableTextEnd"
+    },
+    "InsertClickableTextStart": {
+        "body": [
+            "InsertClickableTextStart(${1:signalValue})$0"
+        ],
+        "description": "PANEL [Client] Starts the insertion of clickable text for a RichText element. Any text appended with Panel:AppendText between this call and Panel:InsertClickableTextEnd will become clickable text. The hook PANEL:ActionSignal is called when the text is clicked, with \"TextClicked\" as the signal name and signalValue as the signal value.\n\n[string] signalValue\n  The text passed as the action signal's value.",
+        "prefix": "InsertClickableTextStart"
+    },
+    "InsertColorChange": {
+        "body": [
+            "InsertColorChange(${1:r}, ${2:g}, ${3:b}, ${4:a})$0"
+        ],
+        "description": "PANEL [Client] Inserts a color change in a RichText element, which affects the color of all text added with Panel:AppendText until another color change is applied.\n\n[number] r\n  The red value (0 - 255).\n\n[number] g\n  The green value (0 - 255).\n\n[number] b\n  The blue value (0 - 255).\n\n[number] a\n  The alpha value (0 - 255).",
+        "prefix": "InsertColorChange"
+    },
+    "InsertFade": {
+        "body": [
+            "InsertFade(${1:sustain}, ${2:length})$0"
+        ],
+        "description": "PANEL [Client] Begins a text fade for a RichText element where the last appended text segment is fully faded out after a specific amount of time, at a specific speed. The alpha of the text at any given time is determined by the text's base alpha * ((sustain - CurTime) / length) where CurTime is added to sustain when this method is called.\n\n[number] sustain\n  The number of seconds the text remains visible.\n\n[number] length\n  The number of seconds it takes the text to fade out.\nIf set lower than sustain, the text will not begin fading out until (sustain - length) seconds have passed.\nIf set higher than sustain, the text will begin fading out immediately at a fraction of the base alpha.\n\nIf set to -1, the text doesn't fade out.",
+        "prefix": "InsertFade"
+    },
+    "InvalidateChildren": {
+        "body": [
+            "InvalidateChildren(${1:recursive=false})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] recursive=false\n  If true, the method will recursively invalidate the layout of all children. Otherwise, only immediate children are affected.",
+        "prefix": "InvalidateChildren"
+    },
+    "InvalidateLayout": {
+        "body": [
+            "InvalidateLayout(${1:layoutNow=false})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] layoutNow=false\n  If true the panel will re-layout instantly and not wait for the next frame.",
+        "prefix": "InvalidateLayout"
+    },
+    "InvalidateParent": {
+        "body": [
+            "InvalidateParent(${1:layoutNow=false})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] layoutNow=false\n  If true, the re-layout will occur immediately, otherwise it will be performed in the next frame.",
+        "prefix": "InvalidateParent"
+    },
+    "IsChildHovered": {
+        "body": [
+            "IsChildHovered(${1:immediate=false})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] immediate=false\n  Set to true to check only the immediate children of given panel ( first level )",
+        "prefix": "IsChildHovered"
+    },
+    "IsDraggable": {
+        "body": [
+            "IsDraggable()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsDraggable"
+    },
+    "IsDragging": {
+        "body": [
+            "IsDragging()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsDragging"
+    },
+    "IsEnabled": {
+        "body": [
+            "IsEnabled()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsEnabled"
+    },
+    "IsHovered": {
+        "body": [
+            "IsHovered()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsHovered"
+    },
+    "IsKeyboardInputEnabled": {
+        "body": [
+            "IsKeyboardInputEnabled()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsKeyboardInputEnabled"
+    },
+    "IsLoading": {
+        "body": [
+            "IsLoading()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsLoading"
+    },
+    "IsMarkedForDeletion": {
+        "body": [
+            "IsMarkedForDeletion()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsMarkedForDeletion"
+    },
+    "IsMouseInputEnabled": {
+        "body": [
+            "IsMouseInputEnabled()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsMouseInputEnabled"
+    },
+    "IsMultiline": {
+        "body": [
+            "IsMultiline()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsMultiline"
+    },
+    "IsOurChild": {
+        "body": [
+            "IsOurChild(${1:childPanel})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] childPanel",
+        "prefix": "IsOurChild"
+    },
+    "IsSelectable": {
+        "body": [
+            "IsSelectable()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsSelectable"
+    },
+    "IsSelected": {
+        "body": [
+            "IsSelected()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsSelected"
+    },
+    "IsSelectionCanvas": {
+        "body": [
+            "IsSelectionCanvas()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsSelectionCanvas"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsValid"
+    },
+    "IsVisible": {
+        "body": [
+            "IsVisible()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "IsVisible"
+    },
+    "KillFocus": {
+        "body": [
+            "KillFocus()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "KillFocus"
+    },
+    "LerpPositions": {
+        "body": [
+            "LerpPositions(${1:speed}, ${2:easeOut})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] speed\n  The speed at which to move the panel. This is affected by the value of easeOut. Recommended values are:\n\n 0.1 - 10 when easeOut is false.\n 0.1 - 1 when easeOut is true.\n\n[boolean] easeOut\n  This causes the panel object to 'jump' at the target, slowing as it approaches. This affects the speed value significantly, see above.",
+        "prefix": "LerpPositions"
+    },
+    "LoadControlsFromFile": {
+        "body": [
+            "LoadControlsFromFile(${1:path})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] path\n  The path to load the controls from.",
+        "prefix": "LoadControlsFromFile"
+    },
+    "LoadControlsFromString": {
+        "body": [
+            "LoadControlsFromString(${1:data})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] data\n  The data to load controls from. Format unknown.",
+        "prefix": "LoadControlsFromString"
+    },
+    "LoadGWENFile": {
+        "body": [
+            "LoadGWENFile(${1:filename}, ${2:path=\"GAME\"})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] filename\n  The file to open. The path is relative to garrysmod/garrysmod/.\n\n[string] path=\"GAME\"\n  The path used to look up the file.\n\n \"GAME\" Structured like base folder (garrysmod/), searches all the mounted content (main folder, addons, mounted games etc)\n \"LUA\" or \"lsv\" - All Lua folders (lua/) including gamesmodes and addons\n \"DATA\" Data folder (garrysmod/data)\n \"MOD\" Strictly the game folder (garrysmod/), ignores mounting.",
+        "prefix": "LoadGWENFile"
+    },
+    "LoadGWENString": {
+        "body": [
+            "LoadGWENString(${1:str})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] str\n  JSON string containing information about controls to create.",
+        "prefix": "LoadGWENString"
+    },
+    "LoadTGAImage": {
+        "body": [
+            "LoadTGAImage(${1:imageName}, ${2:strPath})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] imageName\n  The file path.\n\n[string] strPath\n  The PATH to search in. See File Search Paths.\n\nThis doesn't appear to be actually used internally.",
+        "prefix": "LoadTGAImage"
+    },
+    "LocalCursorPos": {
+        "body": [
+            "LocalCursorPos()$0"
+        ],
+        "description": "PANEL [Client] Returns the cursor position local to the position of the panel (usually the upper-left corner).",
+        "prefix": "LocalCursorPos"
+    },
+    "LocalToScreen": {
+        "body": [
+            "LocalToScreen(${1:posX}, ${2:posY})$0"
+        ],
+        "description": "PANEL [Client] Gets the absolute screen position of the position specified relative to the panel. See also Panel:ScreenToLocal.\n\n[number] posX\n  The X coordinate of the position on the panel to translate.\n\n[number] posY\n  The Y coordinate of the position on the panel to translate.",
+        "prefix": "LocalToScreen"
+    },
+    "MakePopup": {
+        "body": [
+            "MakePopup()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "MakePopup"
+    },
+    "MouseCapture": {
+        "body": [
+            "MouseCapture(${1:doCapture})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] doCapture\n  Set to true to enable, set to false to disable.",
+        "prefix": "MouseCapture"
+    },
+    "MoveAbove": {
+        "body": [
+            "MoveAbove(${1:panel}, ${2:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] panel\n  Panel to position relatively to.\n\n[number] offset=0\n  The align offset.",
+        "prefix": "MoveAbove"
+    },
+    "MoveBelow": {
+        "body": [
+            "MoveBelow(${1:panel}, ${2:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] panel\n  Panel to position relatively to.\n\n[number] offset=0\n  The align offset.",
+        "prefix": "MoveBelow"
+    },
+    "MoveBy": {
+        "body": [
+            "MoveBy(${1:moveX}, ${2:moveY}, ${3:time}, ${4:delay=0}, ${5:ease=-1}, ${6:callback})$0"
+        ],
+        "description": "PANEL [Client] Moves the panel by the specified coordinates using animation.\n\n[number] moveX\n  The number of pixels to move by in the horizontal (x) direction.\n\n[number] moveY\n  The number of pixels to move by in the vertical (y) direction.\n\n[number] time\n  The time (in seconds) in which to perform the animation.\n\n[number] delay=0\n  The delay (in seconds) before the animation begins.\n\n[number] ease=-1\n  The easing of the start and/or end speed of the animation. See Panel:NewAnimation for how this works.\n\n[function] callback\n  The function to be called once the animation is complete. Arguments are:\n\n table animData - The AnimationData structure that was used.\n Panel pnl - The panel object that was moved.",
+        "prefix": "MoveBy"
+    },
+    "MoveLeftOf": {
+        "body": [
+            "MoveLeftOf(${1:panel}, ${2:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] panel\n  Panel to position relatively to.\n\n[number] offset=0\n  The align offset.",
+        "prefix": "MoveLeftOf"
+    },
+    "MoveRightOf": {
+        "body": [
+            "MoveRightOf(${1:panel}, ${2:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] panel\n  Panel to position relatively to.\n\n[number] offset=0\n  The align offset.",
+        "prefix": "MoveRightOf"
+    },
+    "MoveTo": {
+        "body": [
+            "MoveTo(${1:posX}, ${2:posY}, ${3:time}, ${4:delay=0}, ${5:ease=-1}, ${6:callback})$0"
+        ],
+        "description": "PANEL [Client] Moves the panel to the specified position using animation.\n\n[number] posX\n  The target x coordinate of the panel.\n\n[number] posY\n  The target y coordinate of the panel.\n\n[number] time\n  The time to perform the animation within.\n\n[number] delay=0\n  The delay before the animation starts.\n\n[number] ease=-1\n  The easing of the start and/or end speed of the animation. See Panel:NewAnimation for how this works.\n\n[function] callback\n  The function to be called once the animation finishes. Arguments are:\n\n table animData - The AnimationData structure that was used.\n Panel pnl - The panel object that was moved.",
+        "prefix": "MoveTo"
+    },
+    "MoveToAfter": {
+        "body": [
+            "MoveToAfter(${1:siblingPanel})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] siblingPanel\n  The panel to move this one in front of. Must be a child of the same parent panel.",
+        "prefix": "MoveToAfter"
+    },
+    "MoveToBack": {
+        "body": [
+            "MoveToBack()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "MoveToBack"
+    },
+    "MoveToBefore": {
+        "body": [
+            "MoveToBefore(${1:siblingPanel})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] siblingPanel\n  The panel to move this one behind. Must be a child of the same parent panel.",
+        "prefix": "MoveToBefore"
+    },
+    "MoveToFront": {
+        "body": [
+            "MoveToFront()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "MoveToFront"
+    },
+    "NewAnimation": {
+        "body": [
+            "NewAnimation(${1:length}, ${2:delay=0}, ${3:ease=-1}, ${4:callback=nil})$0"
+        ],
+        "description": "PANEL [Client] Creates a new animation for the panel object.\n\n[number] length\n  The length of the animation in seconds.\n\n[number] delay=0\n  The delay before the animation starts.\n\n[number] ease=-1\n  The power/index to use for easing.\n\nPositive values greater than 1 will ease in; the higher the number, the sharper the curve's gradient (less linear).\nA value of 1 removes all easing.\nPositive values between 0 and 1 ease out; values closer to 0 increase the curve's gradient (less linear).\nA value of 0 will break the animation and should be avoided.\nAny value less than zero will ease in/out; the value has no effect on the gradient.\n\n[function] callback=nil\n  The function to be called when the animation ends. Arguments passed are:\n\n table animTable - The AnimationData structure that was used.\n Panel tgtPanel - The panel object that was animated.",
+        "prefix": "NewAnimation"
+    },
+    "NewObject": {
+        "body": [
+            "NewObject(${1:})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string]",
+        "prefix": "NewObject"
+    },
+    "NewObjectCallback": {
+        "body": [
+            "NewObjectCallback(${1:}, ${2:})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] \n  \n\n[string]",
+        "prefix": "NewObjectCallback"
+    },
+    "NoClipping": {
+        "body": [
+            "NoClipping(${1:clip})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] clip\n  Whether to clip or not.",
+        "prefix": "NoClipping"
+    },
+    "NumSelectedChildren": {
+        "body": [
+            "NumSelectedChildren()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "NumSelectedChildren"
+    },
+    "OpenURL": {
+        "body": [
+            "OpenURL(${1:URL})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] URL\n  URL to open",
+        "prefix": "OpenURL"
+    },
+    "PaintAt": {
+        "body": [
+            "PaintAt(${1:posX}, ${2:posY})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] posX\n  The x coordinate to draw the panel from.\n\n[number] posY\n  The y coordinate to draw the panel from.",
+        "prefix": "PaintAt"
+    },
+    "PaintManual": {
+        "body": [
+            "PaintManual()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "PaintManual"
+    },
+    "ParentToHUD": {
+        "body": [
+            "ParentToHUD()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "ParentToHUD"
+    },
+    "Paste": {
+        "body": [
+            "Paste()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Paste"
+    },
+    "PositionLabel": {
+        "body": [
+            "PositionLabel(${1:lblWidth}, ${2:x}, ${3:y}, ${4:lbl}, ${5:panelObj})$0"
+        ],
+        "description": "PANEL [Client] Sets the width and position of a DLabel and places the passed panel object directly to the right of it. Returns the y value of the bottom of the tallest object. The panel on which this method is run is not relevant; only the passed objects are affected.\n\n[number] lblWidth\n  The width to set the label to.\n\n[number] x\n  The horizontal (x) position at which to place the label.\n\n[number] y\n  The vertical (y) position at which to place the label.\n\n[Panel] lbl\n  The label to resize and position.\n\n[Panel] panelObj\n  The panel object to place to the right of the label.",
+        "prefix": "PositionLabel"
+    },
+    "PostMessage": {
+        "body": [
+            "PostMessage(${1:messageName}, ${2:valueType}, ${3:value})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] messageName\n  The name of the message.\n\n[string] valueType\n  The type of the variable to post.\n\n[string] value\n  The value to post.",
+        "prefix": "PostMessage"
+    },
+    "Prepare": {
+        "body": [
+            "Prepare()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Prepare"
+    },
+    "Queue": {
+        "body": [
+            "Queue()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Queue"
+    },
+    "RebuildSpawnIcon": {
+        "body": [
+            "RebuildSpawnIcon()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "RebuildSpawnIcon"
+    },
+    "RebuildSpawnIconEx": {
+        "body": [
+            "RebuildSpawnIconEx(${1:data})$0"
+        ],
+        "description": "PANEL [Client] Re-renders a spawn icon with customized cam data.\n\n[table] data\n  A four-membered table containing the information needed to re-render:\n\n Vector cam_pos - The relative camera position the model is viewed from.\n Angle cam_ang - The camera angle the model is viewed from.\n number cam_fov - The camera's field of view (FOV).\n Entity ent - The entity object of the model.\n\nSee the example below for how to retrieve these values.",
+        "prefix": "RebuildSpawnIconEx"
+    },
+    "Receiver": {
+        "body": [
+            "Receiver(${1:name}, ${2:func}, ${3:menu})$0"
+        ],
+        "description": "PANEL [Client] Allows the panel to receive drag and drop events.\n\n[string] name\n  Name of DnD panels to receive. This is set by Panel:Droppable\n\n[function] func\n  This function is called whenever a panel with valid name is hovering above and dropped on this panel. It has next arguments:\n\n Panel pnl - The receiver panel\n table tbl - A table of panels dropped onto receiver panel\n boolean dropped - False if hovering over, true if dropped onto\n number menuIndex - Index of clicked menu item from third argument of Panel:Receiver\n number x - Cursor pos, relative to the receiver\n number y - Cursor pos, relative to the receiver\n\n[table] menu\n  A table of strings that will act as a menu if drag'n'drop was performed with a right click",
+        "prefix": "Receiver"
+    },
+    "Refresh": {
+        "body": [
+            "Refresh(${1:ignoreCache=false})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] ignoreCache=false\n  If true, the refresh will ignore cached content similar to \"ctrl+f5\" in most browsers.",
+        "prefix": "Refresh"
+    },
+    "Remove": {
+        "body": [
+            "Remove()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Remove"
+    },
+    "RequestFocus": {
+        "body": [
+            "RequestFocus()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "RequestFocus"
+    },
+    "ResetAllFades": {
+        "body": [
+            "ResetAllFades(${1:hold}, ${2:expiredOnly}, ${3:newSustain})$0"
+        ],
+        "description": "PANEL [Client] Resets all text fades in a RichText element made with Panel:InsertFade.\n\n[boolean] hold\n  True to reset fades, false otherwise.\n\n[boolean] expiredOnly\n  Any value equating to true will reset fades only on text segments that are completely faded out.\n\n[number] newSustain\n  The new sustain value of each faded text segment. Set to -1 to keep the old sustain value.",
+        "prefix": "ResetAllFades"
+    },
+    "RunJavascript": {
+        "body": [
+            "RunJavascript(${1:js})$0"
+        ],
+        "description": "PANEL [Client] Runs/Executes a string as JavaScript code in DHTML panel.\n\n[string] js\n  Specify JavaScript code to be executed.",
+        "prefix": "RunJavascript"
+    },
+    "SaveUndoState": {
+        "body": [
+            "SaveUndoState()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SaveUndoState"
+    },
+    "ScreenToLocal": {
+        "body": [
+            "ScreenToLocal(${1:screenX}, ${2:screenY})$0"
+        ],
+        "description": "PANEL [Client] Translates global screen coordinate to coordinates relative to the panel. See also Panel:LocalToScreen.\n\n[number] screenX\n  The x coordinate of the screen position to be translated.\n\n[number] screenY\n  The y coordinate of the screed position be to translated.",
+        "prefix": "ScreenToLocal"
+    },
+    "SelectAll": {
+        "body": [
+            "SelectAll()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SelectAll"
+    },
+    "SelectAllOnFocus": {
+        "body": [
+            "SelectAllOnFocus()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SelectAllOnFocus"
+    },
+    "SelectAllText": {
+        "body": [
+            "SelectAllText()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SelectAllText"
+    },
+    "SelectNone": {
+        "body": [
+            "SelectNone()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SelectNone"
+    },
+    "SetAchievement": {
+        "body": [
+            "SetAchievement(${1:id})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] id\n  Achievement number ID",
+        "prefix": "SetAchievement"
+    },
+    "SetActionFunction": {
+        "body": [
+            "SetActionFunction(${1:func})$0"
+        ],
+        "description": "PANEL [Client] \n\n[function] func\n  Function to call when the Button is clicked or the Slider value is changed.\nArguments given are:\n\n Panel self - The panel itself\n string action - \"Command\" on button press, \"SliderMoved\" on slider move.\n number val - The new value of the Slider. Will always equal 0 for buttons.\n number - Always equals 0.",
+        "prefix": "SetActionFunction"
+    },
+    "SetAllowNonAsciiCharacters": {
+        "body": [
+            "SetAllowNonAsciiCharacters(${1:allowed})$0"
+        ],
+        "description": "PANEL [Client] Configures a text input to allow user to type characters that are not included in the US-ASCII (7-bit ASCII) character set. Characters not included in US-ASCII are multi-byte characters in UTF-8. They can be accented characters, non-Latin characters and special characters.\n\n[boolean] allowed\n  Set to true in order not to restrict input characters.",
+        "prefix": "SetAllowNonAsciiCharacters"
+    },
+    "SetAlpha": {
+        "body": [
+            "SetAlpha(${1:alpha})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] alpha\n  The alpha value in the range of 0-255.",
+        "prefix": "SetAlpha"
+    },
+    "SetAnimationEnabled": {
+        "body": [
+            "SetAnimationEnabled(${1:enable})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] enable\n  Whether to enable or disable animations.",
+        "prefix": "SetAnimationEnabled"
+    },
+    "SetAutoDelete": {
+        "body": [
+            "SetAutoDelete(${1:autoDelete})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] autoDelete\n  Whenever to delete if the parent was removed or not.",
+        "prefix": "SetAutoDelete"
+    },
+    "SetBGColor": {
+        "body": [
+            "SetBGColor(${1:rorcolor}, ${2:g}, ${3:b}, ${4:a})$0"
+        ],
+        "description": "PANEL [Client] Sets the background color of a panel such as a RichText, Label or DColorCube.\n\n[number] rorcolor\n  The red channel of the color, or a Color structure. If you pass the latter, the following three arguments are ignored.\n\n[number] g\n  The green channel of the color.\n\n[number] b\n  The blue channel of the color.\n\n[number] a\n  The alpha channel of the color.",
+        "prefix": "SetBGColor"
+    },
+    "SetBGColorEx": {
+        "body": [
+            "SetBGColorEx(${1:r}, ${2:g}, ${3:b}, ${4:a})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] r\n  The red channel of the color.\n\n[number] g\n  The green channel of the color.\n\n[number] b\n  The blue channel of the color.\n\n[number] a\n  The alpha channel of the color.",
+        "prefix": "SetBGColorEx"
+    },
+    "SetCaretPos": {
+        "body": [
+            "SetCaretPos(${1:offset})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] offset\n  Caret position/offset from the start of text. A value of 0 places the caret before the first character.",
+        "prefix": "SetCaretPos"
+    },
+    "SetCommand": {
+        "body": [
+            "SetCommand()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SetCommand"
+    },
+    "SetConVar": {
+        "body": [
+            "SetConVar(${1:convar})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] convar\n  The console variable to check.",
+        "prefix": "SetConVar"
+    },
+    "SetContentAlignment": {
+        "body": [
+            "SetContentAlignment(${1:alignment})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] alignment\n  The direction of the content, based on the number pad.",
+        "prefix": "SetContentAlignment"
+    },
+    "SetCookie": {
+        "body": [
+            "SetCookie(${1:cookieName}, ${2:value})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] cookieName\n  The unique name used to retrieve the cookie later.\n\n[string] value\n  The value to store in the cookie. This can be retrieved later as a string or number.",
+        "prefix": "SetCookie"
+    },
+    "SetCookieName": {
+        "body": [
+            "SetCookieName(${1:name})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] name\n  The panel's cookie name. Used as prefix for Panel:SetCookie",
+        "prefix": "SetCookieName"
+    },
+    "SetCursor": {
+        "body": [
+            "SetCursor(${1:cursor})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] cursor\n  The cursor to be set. Can be one of the following:\n\n arrow\n beam\n hourglass\n waitarrow\n crosshair\n up\n sizenwse\n sizenesw\n sizewe\n sizens\n sizeall\n no\n hand\n blank\n\nSet to anything else to set it to \"none\", the default fallback. Do note that a value of \"none\" does not, as one might assume, result in no cursor being drawn - hiding the cursor requires a value of \"blank\" instead.",
+        "prefix": "SetCursor"
+    },
+    "SetDragParent": {
+        "body": [
+            "SetDragParent(${1:parent})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] parent\n  The panel to set as drag parent.",
+        "prefix": "SetDragParent"
+    },
+    "SetDrawLanguageID": {
+        "body": [
+            "SetDrawLanguageID(${1:visible})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] visible\n  true to make it visible, false to hide it.",
+        "prefix": "SetDrawLanguageID"
+    },
+    "SetDrawLanguageIDAtLeft": {
+        "body": [
+            "SetDrawLanguageIDAtLeft(${1:left})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] left\n  true = left, false = right",
+        "prefix": "SetDrawLanguageIDAtLeft"
+    },
+    "SetDrawOnTop": {
+        "body": [
+            "SetDrawOnTop(${1:drawOnTop=false})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] drawOnTop=false\n  Whether or not to draw the panel in front of all others.",
+        "prefix": "SetDrawOnTop"
+    },
+    "SetDropTarget": {
+        "body": [
+            "SetDropTarget(${1:x}, ${2:y}, ${3:width}, ${4:height})$0"
+        ],
+        "description": "PANEL [Client] Sets the target area for dropping when an object is being dragged around this panel using the dragndrop library. This draws a target box of the specified size and position, until Panel:DragHoverEnd is called. It uses Panel:DrawDragHover to draw this area.\n\n[number] x\n  The x coordinate of the top-left corner of the drop area.\n\n[number] y\n  The y coordinate of the top-left corner of the drop area.\n\n[number] width\n  The width of the drop area.\n\n[number] height\n  The height of the drop area.",
+        "prefix": "SetDropTarget"
+    },
+    "SetEnabled": {
+        "body": [
+            "SetEnabled(${1:enable})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] enable\n  Whether to enable or disable the panel object.",
+        "prefix": "SetEnabled"
+    },
+    "SetExpensiveShadow": {
+        "body": [
+            "SetExpensiveShadow(${1:distance}, ${2:Color})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] distance\n  The distance of the shadow from the panel.\n\n[table] Color\n  The color of the shadow. Uses the Color structure.",
+        "prefix": "SetExpensiveShadow"
+    },
+    "SetFGColor": {
+        "body": [
+            "SetFGColor(${1:rorcolor}, ${2:g}, ${3:b}, ${4:a})$0"
+        ],
+        "description": "PANEL [Client] Sets the foreground color of a panel. For a Label or RichText, this is the color of its text. This function calls Panel:SetFGColorEx internally.\n\n[number] rorcolor\n  The red channel of the color, or a Color structure. If you pass the latter, the following three arguments are ignored.\n\n[number] g\n  The green channel of the color.\n\n[number] b\n  The blue channel of the color.\n\n[number] a\n  The alpha channel of the color.",
+        "prefix": "SetFGColor"
+    },
+    "SetFGColorEx": {
+        "body": [
+            "SetFGColorEx(${1:r}, ${2:g}, ${3:b}, ${4:a})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] r\n  The red channel of the color.\n\n[number] g\n  The green channel of the color.\n\n[number] b\n  The blue channel of the color.\n\n[number] a\n  The alpha channel of the color.",
+        "prefix": "SetFGColorEx"
+    },
+    "SetFocusTopLevel": {
+        "body": [
+            "SetFocusTopLevel(${1:state})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] state",
+        "prefix": "SetFocusTopLevel"
+    },
+    "SetFontInternal": {
+        "body": [
+            "SetFontInternal(${1:fontName})$0"
+        ],
+        "description": "PANEL [Client] Sets the font used to render this panel's text. To retrieve the font used by a panel, call Panel:GetFont.\n\n[string] fontName\n  The name of the font.\nSee here for a list of existing fonts.\n\nAlternatively, use surface.CreateFont to create your own custom font.",
+        "prefix": "SetFontInternal"
+    },
+    "SetHTML": {
+        "body": [
+            "SetHTML(${1:HTMLcode})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] HTMLcode\n  The code to set.",
+        "prefix": "SetHTML"
+    },
+    "SetHeight": {
+        "body": [
+            "SetHeight(${1:height})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] height\n  The height to be set.",
+        "prefix": "SetHeight"
+    },
+    "SetKeyBoardInputEnabled": {
+        "body": [
+            "SetKeyBoardInputEnabled(${1:keyboardInput})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] keyboardInput\n  Whether to enable or disable keyboard input.",
+        "prefix": "SetKeyBoardInputEnabled"
+    },
+    "SetKeyboardInputEnabled": {
+        "body": [
+            "SetKeyboardInputEnabled(${1:enable})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] enable\n  Whether keyboard input should be enabled for this panel.",
+        "prefix": "SetKeyboardInputEnabled"
+    },
+    "SetMinimumSize": {
+        "body": [
+            "SetMinimumSize(${1:minW=nil}, ${2:minH=nil})$0"
+        ],
+        "description": "PANEL [Client] Sets the minimum dimensions of the panel or object. You can restrict either or both values. Calling the function without arguments will remove the minimum size.\n\n[number] minW=nil\n  The minimum width of the object.\n\n[number] minH=nil\n  The minimum height of the object.",
+        "prefix": "SetMinimumSize"
+    },
+    "SetModel": {
+        "body": [
+            "SetModel(${1:ModelPath}, ${2:skin=0}, ${3:bodygroups=\"\"})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] ModelPath\n  The path of the model to set\n\n[number] skin=0\n  The skin to set\n\n[string] bodygroups=\"\"\n  The body groups to set. Each single-digit number in the string represents a separate bodygroup. This make it impossible to set any body group to a value higher than 9!",
+        "prefix": "SetModel"
+    },
+    "SetMouseInputEnabled": {
+        "body": [
+            "SetMouseInputEnabled(${1:mouseInput})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] mouseInput\n  Whenever to enable or disable mouse input.",
+        "prefix": "SetMouseInputEnabled"
+    },
+    "SetMultiline": {
+        "body": [
+            "SetMultiline(${1:multiline})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] multiline\n  Whether to enable multiline or not.",
+        "prefix": "SetMultiline"
+    },
+    "SetName": {
+        "body": [
+            "SetName(${1:name})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] name\n  The new name of the panel.",
+        "prefix": "SetName"
+    },
+    "SetPaintBackgroundEnabled": {
+        "body": [
+            "SetPaintBackgroundEnabled(${1:paintBackground})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] paintBackground\n  Whenever to draw the background or not.",
+        "prefix": "SetPaintBackgroundEnabled"
+    },
+    "SetPaintBorderEnabled": {
+        "body": [
+            "SetPaintBorderEnabled(${1:paintBorder})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] paintBorder\n  Whenever to draw the border or not.",
+        "prefix": "SetPaintBorderEnabled"
+    },
+    "SetPaintFunction": {
+        "body": [
+            "SetPaintFunction()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SetPaintFunction"
+    },
+    "SetPaintedManually": {
+        "body": [
+            "SetPaintedManually(${1:paintedManually})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] paintedManually\n  True if the panel should be painted manually.",
+        "prefix": "SetPaintedManually"
+    },
+    "SetParent": {
+        "body": [
+            "SetParent(${1:parent})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] parent\n  The new parent of the panel.",
+        "prefix": "SetParent"
+    },
+    "SetPlayer": {
+        "body": [
+            "SetPlayer(${1:player}, ${2:size})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Player] player\n  The player to use avatar of.\n\n[number] size\n  The size of the avatar to use. Acceptable sizes are 32, 64, 184.",
+        "prefix": "SetPlayer"
+    },
+    "SetPopupStayAtBack": {
+        "body": [
+            "SetPopupStayAtBack(${1:stayAtBack})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] stayAtBack\n  If true, the popup panel will not draw in front of others when it gets focus, for example when it is clicked.",
+        "prefix": "SetPopupStayAtBack"
+    },
+    "SetPos": {
+        "body": [
+            "SetPos(${1:posX}, ${2:posY})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] posX\n  The x coordinate of the position.\n\n[number] posY\n  The y coordinate of the position.",
+        "prefix": "SetPos"
+    },
+    "SetRenderInScreenshots": {
+        "body": [
+            "SetRenderInScreenshots(${1:renderInScreenshot})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] renderInScreenshot\n  Whenever to render or not.",
+        "prefix": "SetRenderInScreenshots"
+    },
+    "SetSelectable": {
+        "body": [
+            "SetSelectable(${1:selectable})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] selectable\n  Whether the panel object should be selectable or not.",
+        "prefix": "SetSelectable"
+    },
+    "SetSelected": {
+        "body": [
+            "SetSelected(${1:selected=false})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] selected=false\n  Whether the object should be selected or deselected. Panel:IsSelected can be used to determine the selected state of the object.",
+        "prefix": "SetSelected"
+    },
+    "SetSelectionCanvas": {
+        "body": [
+            "SetSelectionCanvas(${1:selCanvas})$0"
+        ],
+        "description": "PANEL [Client] \n\n[any] selCanvas\n  Any value other than nil or false will enable the panel object for selection. It is recommended to pass true.",
+        "prefix": "SetSelectionCanvas"
+    },
+    "SetSize": {
+        "body": [
+            "SetSize(${1:width}, ${2:height})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] width\n  The width of the panel.\n\n[number] height\n  The height of the panel.",
+        "prefix": "SetSize"
+    },
+    "SetSkin": {
+        "body": [
+            "SetSkin(${1:skinName})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] skinName\n  The name of the skin to use. The default derma skin is Default.",
+        "prefix": "SetSkin"
+    },
+    "SetSpawnIcon": {
+        "body": [
+            "SetSpawnIcon(${1:icon})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] icon\n  The silkicon to use.",
+        "prefix": "SetSpawnIcon"
+    },
+    "SetSteamID": {
+        "body": [
+            "SetSteamID(${1:steamid}, ${2:size})$0"
+        ],
+        "description": "PANEL [Client] Used by AvatarImage panels to load an avatar by its 64-bit Steam ID (community ID).\n\n[string] steamid\n  The 64bit SteamID of the player to load avatar of\n\n[number] size\n  The size of the avatar to use. Acceptable sizes are 32, 64, 184.",
+        "prefix": "SetSteamID"
+    },
+    "SetTabPosition": {
+        "body": [
+            "SetTabPosition(${1:})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number]",
+        "prefix": "SetTabPosition"
+    },
+    "SetTall": {
+        "body": [
+            "SetTall(${1:height})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] height\n  Desired height to set",
+        "prefix": "SetTall"
+    },
+    "SetTerm": {
+        "body": [
+            "SetTerm(${1:delay})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] delay\n  Delay in seconds after which the panel should be removed.",
+        "prefix": "SetTerm"
+    },
+    "SetText": {
+        "body": [
+            "SetText(${1:text})$0"
+        ],
+        "description": "PANEL [Client] Sets the text value of a panel object containing text, such as a Label, TextEntry or RichText and their derivatives, such as DLabel, DTextEntry or DButton.\n\n[string] text\n  The text value to set.",
+        "prefix": "SetText"
+    },
+    "SetTextInset": {
+        "body": [
+            "SetTextInset(${1:insetX}, ${2:insetY})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] insetX\n  The left margin for the text, in pixels. This will only affect centered text if the margin is greater than its x-coordinate.\n\n[number] insetY\n  The top margin for the text, in pixels.",
+        "prefix": "SetTextInset"
+    },
+    "SetToFullHeight": {
+        "body": [
+            "SetToFullHeight()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SetToFullHeight"
+    },
+    "SetToolTip": {
+        "body": [
+            "SetToolTip()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SetToolTip"
+    },
+    "SetToolTipPanel": {
+        "body": [
+            "SetToolTipPanel()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SetToolTipPanel"
+    },
+    "SetTooltip": {
+        "body": [
+            "SetTooltip(${1:str})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] str\n  The text to be displayed in the tooltip.",
+        "prefix": "SetTooltip"
+    },
+    "SetTooltipPanel": {
+        "body": [
+            "SetTooltipPanel(${1:tooltipPanel=nil})$0"
+        ],
+        "description": "PANEL [Client] Sets the panel to be displayed as a tooltip when a player hovers over the panel object with their cursor. Note that it will not override the default DTooltip panel.\n\n[Panel] tooltipPanel=nil\n  The panel to use as the tooltip.",
+        "prefix": "SetTooltipPanel"
+    },
+    "SetURL": {
+        "body": [
+            "SetURL(${1:url})$0"
+        ],
+        "description": "PANEL [Client] \n\n[string] url\n  The URL to set. This must begin with http://.",
+        "prefix": "SetURL"
+    },
+    "SetVerticalScrollbarEnabled": {
+        "body": [
+            "SetVerticalScrollbarEnabled(${1:display=false})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] display=false\n  True to display the vertical text scroll bar, false to hide it.",
+        "prefix": "SetVerticalScrollbarEnabled"
+    },
+    "SetVisible": {
+        "body": [
+            "SetVisible(${1:visible})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] visible\n  The visibility of the panel.",
+        "prefix": "SetVisible"
+    },
+    "SetWide": {
+        "body": [
+            "SetWide(${1:width})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] width\n  Desired width to set",
+        "prefix": "SetWide"
+    },
+    "SetWidth": {
+        "body": [
+            "SetWidth(${1:width})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] width\n  The width of the panel.",
+        "prefix": "SetWidth"
+    },
+    "SetWorldClicker": {
+        "body": [
+            "SetWorldClicker(${1:enabled})$0"
+        ],
+        "description": "PANEL [Client] \n\n[boolean] enabled",
+        "prefix": "SetWorldClicker"
+    },
+    "SetWrap": {
+        "body": [
+            "SetWrap(${1:wrap})$0"
+        ],
+        "description": "PANEL [Client] Sets whether text wrapping should be enabled or disabled on Label and DLabel panels.\nUse DLabel:SetAutoStretchVertical to automatically correct vertical size; Panel:SizeToContents will not set the correct height.\n\n[boolean] wrap\n  True to enable text wrapping, false otherwise.",
+        "prefix": "SetWrap"
+    },
+    "SetZPos": {
+        "body": [
+            "SetZPos(${1:zIndex})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] zIndex\n  The z position of the panel.\n\nCan't be lower than -32768 or higher than 32767.",
+        "prefix": "SetZPos"
+    },
+    "Show": {
+        "body": [
+            "Show()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Show"
+    },
+    "SizeTo": {
+        "body": [
+            "SizeTo(${1:sizeW=0}, ${2:sizeH=0}, ${3:time}, ${4:delay=0}, ${5:ease=-1}, ${6:callback})$0"
+        ],
+        "description": "PANEL [Client] Uses animation to resize the panel to the specified size.\n\n[number] sizeW=0\n  The target width of the panel. Use -1 to retain the current width.\n\n[number] sizeH=0\n  The target height of the panel. Use -1 to retain the current height.\n\n[number] time\n  The time to perform the animation within.\n\n[number] delay=0\n  The delay before the animation starts.\n\n[number] ease=-1\n  Easing of the start and/or end speed of the animation. See Panel:NewAnimation for how this works.\n\n[function] callback\n  The function to be called once the animation finishes. Arguments are:\n\n table animData - The AnimationData structure that was used.\n Panel pnl - The panel object that was resized.",
+        "prefix": "SizeTo"
+    },
+    "SizeToChildren": {
+        "body": [
+            "SizeToChildren(${1:sizeW}, ${2:sizeH})$0"
+        ],
+        "description": "PANEL [Client] Resizes the panel to fit the bounds of its children.\n\n[boolean] sizeW\n  Resize with width of the panel.\n\n[boolean] sizeH\n  Resize the height of the panel.",
+        "prefix": "SizeToChildren"
+    },
+    "SizeToContents": {
+        "body": [
+            "SizeToContents()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "SizeToContents"
+    },
+    "SizeToContentsX": {
+        "body": [
+            "SizeToContentsX(${1:addVal=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] addVal=0\n  The number of extra pixels to add to the width. Can be a negative number, to reduce the width.",
+        "prefix": "SizeToContentsX"
+    },
+    "SizeToContentsY": {
+        "body": [
+            "SizeToContentsY(${1:addVal=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] addVal=0\n  The number of extra pixels to add to the height.",
+        "prefix": "SizeToContentsY"
+    },
+    "SlideDown": {
+        "body": [
+            "SlideDown(${1:Length})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] Length\n  Time to complete the animation.",
+        "prefix": "SlideDown"
+    },
+    "SlideUp": {
+        "body": [
+            "SlideUp(${1:Length})$0"
+        ],
+        "description": "PANEL [Client] \n\n[number] Length\n  Time to complete the animation.",
+        "prefix": "SlideUp"
+    },
+    "StartBoxSelection": {
+        "body": [
+            "StartBoxSelection()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "StartBoxSelection"
+    },
+    "Stop": {
+        "body": [
+            "Stop()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Stop"
+    },
+    "StretchBottomTo": {
+        "body": [
+            "StretchBottomTo(${1:tgtPanel}, ${2:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] tgtPanel\n  The panel to align the bottom of this one with.\n\n[number] offset=0\n  The gap to leave between this and the passed panel. Negative values will cause the panel's height to increase, forming an overlap.",
+        "prefix": "StretchBottomTo"
+    },
+    "StretchRightTo": {
+        "body": [
+            "StretchRightTo(${1:tgtPanel}, ${2:offset=0})$0"
+        ],
+        "description": "PANEL [Client] \n\n[Panel] tgtPanel\n  The panel to align the right edge of this one with.\n\n[number] offset=0\n  The gap to leave between this and the passed panel. Negative values will cause the panel's width to increase, forming an overlap.",
+        "prefix": "StretchRightTo"
+    },
+    "StretchToParent": {
+        "body": [
+            "StretchToParent(${1:offsetLeft}, ${2:offsetTop}, ${3:offsetRight}, ${4:offsetBottom})$0"
+        ],
+        "description": "PANEL [Client] Sets the dimensions of the panel to fill its parent. It will only stretch in directions that aren't nil.\n\n[number] offsetLeft\n  The left offset to the parent.\n\n[number] offsetTop\n  The top offset to the parent.\n\n[number] offsetRight\n  The right offset to the parent.\n\n[number] offsetBottom\n  The bottom offset to the parent.",
+        "prefix": "StretchToParent"
+    },
+    "ToggleSelection": {
+        "body": [
+            "ToggleSelection()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "ToggleSelection"
+    },
+    "ToggleVisible": {
+        "body": [
+            "ToggleVisible()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "ToggleVisible"
+    },
+    "Undo": {
+        "body": [
+            "Undo()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Undo"
+    },
+    "UnselectAll": {
+        "body": [
+            "UnselectAll()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "UnselectAll"
+    },
+    "UpdateHTMLTexture": {
+        "body": [
+            "UpdateHTMLTexture()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "UpdateHTMLTexture"
+    },
+    "Valid": {
+        "body": [
+            "Valid()$0"
+        ],
+        "description": "PANEL [Client]",
+        "prefix": "Valid"
+    }
+}

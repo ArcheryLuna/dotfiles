@@ -1,0 +1,205 @@
+{
+    "constraint.AddConstraintTable": {
+        "body": [
+            "constraint.AddConstraintTable(${1:ent1}, ${2:constrt}, ${3:ent2=nil}, ${4:ent3=nil}, ${5:ent4=nil})$0"
+        ],
+        "description": "CONSTRAINT [Server] Stores information about constraints in an entity's table.\n\n[Entity] ent1\n  The entity to store the information on.\n\n[Entity] constrt\n  The constraint to store in the entity's table.\n\n[Entity] ent2=nil\n  Optional. If different from ent1, the info will also be stored in the table for this entity.\n\n[Entity] ent3=nil\n  Optional. Same as ent2.\n\n[Entity] ent4=nil\n  Optional. Same as ent2.",
+        "prefix": "constraint.AddConstraintTable"
+    },
+    "constraint.AddConstraintTableNoDelete": {
+        "body": [
+            "constraint.AddConstraintTableNoDelete(${1:ent1}, ${2:constrt}, ${3:ent2=nil}, ${4:ent3=nil}, ${5:ent4=nil})$0"
+        ],
+        "description": "CONSTRAINT [Server] Stores info about the constraints on the entity's table. The only difference between this and constraint.AddConstraintTable is that the constraint does not get deleted when the entity is removed.\n\n[Entity] ent1\n  The entity to store the information on.\n\n[Entity] constrt\n  The constraint to store in the entity's table.\n\n[Entity] ent2=nil\n  Optional. If different from ent1, the info will also be stored in the table for this entity.\n\n[Entity] ent3=nil\n  Optional. Same as ent2.\n\n[Entity] ent4=nil\n  Optional. Same as ent2.",
+        "prefix": "constraint.AddConstraintTableNoDelete"
+    },
+    "constraint.AdvBallsocket": {
+        "body": [
+            "constraint.AdvBallsocket(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:forcelimit}, ${8:torquelimit}, ${9:xmin}, ${10:ymin}, ${11:zmin}, ${12:xmax}, ${13:ymax}, ${14:zmax}, ${15:xfric}, ${16:yfric}, ${17:zfric}, ${18:onlyrotation}, ${19:nocollide})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates an advanced ballsocket (ragdoll) constraint.\n\n[Entity] Ent1\n  First entity.\n\n[Entity] Ent2\n  Second entity\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls)\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls)\n\n[Vector] LPos1\n  \n\n[Vector] LPos2\n  \n\n[number] forcelimit\n  Amount of force until it breaks (0 = unbreakable)\n\n[number] torquelimit\n  Amount of torque (rotation speed) until it breaks (0 = unbreakable)\n\n[number] xmin\n  \n\n[number] ymin\n  \n\n[number] zmin\n  \n\n[number] xmax\n  \n\n[number] ymax\n  \n\n[number] zmax\n  \n\n[number] xfric\n  \n\n[number] yfric\n  \n\n[number] zfric\n  \n\n[number] onlyrotation\n  \n\n[number] nocollide\n  Whether the entities should be no-collided.",
+        "prefix": "constraint.AdvBallsocket"
+    },
+    "constraint.Axis": {
+        "body": [
+            "constraint.Axis(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:forcelimit}, ${8:torquelimit}, ${9:friction}, ${10:nocollide}, ${11:LocalAxis}, ${12:DontAddTable})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates an axis constraint.\n\n[Entity] Ent1\n  First entity.\n\n[Entity] Ent2\n  Second entity.\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls)\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls)\n\n[Vector] LPos1\n  \n\n[Vector] LPos2\n  \n\n[number] forcelimit\n  Amount of force until it breaks (0 = unbreakable)\n\n[number] torquelimit\n  Amount of torque (rotation speed) until it breaks (0 = unbreakable)\n\n[number] friction\n  \n\n[number] nocollide\n  Whether the entities should be no-collided.\n\n[Vector] LocalAxis\n  If you include the LocalAxis then LPos2 will not be used in the final constraint. However, LPos2 is still a required argument.\n\n[boolean] DontAddTable\n  Whether or not to add the constraint info on the entity table. See constraint.AddConstraintTable.",
+        "prefix": "constraint.Axis"
+    },
+    "constraint.Ballsocket": {
+        "body": [
+            "constraint.Ballsocket(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LocalPos}, ${6:forcelimit}, ${7:torquelimit}, ${8:nocollide})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a ballsocket joint.\n\n[Entity] Ent1\n  First entity\n\n[Entity] Ent2\n  Second entity\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls)\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls)\n\n[Vector] LocalPos\n  Centerposition of the joint, relative to the second entity.\n\n[number] forcelimit\n  Amount of force until it breaks (0 = unbreakable)\n\n[number] torquelimit\n  Amount of torque (rotation speed) until it breaks (0 = unbreakable)\n\n[number] nocollide\n  Whether the entities should be nocollided",
+        "prefix": "constraint.Ballsocket"
+    },
+    "constraint.CanConstrain": {
+        "body": [
+            "constraint.CanConstrain(${1:ent}, ${2:bone})$0"
+        ],
+        "description": "CONSTRAINT [Server] Basic checks to make sure that the specified entity and bone are valid. Returns false if we should not be constraining the entity.\n\n[Entity] ent\n  The entity to check\n\n[number] bone\n  The bone of the entity to check (use 0 for mono boned ents)",
+        "prefix": "constraint.CanConstrain"
+    },
+    "constraint.CreateKeyframeRope": {
+        "body": [
+            "constraint.CreateKeyframeRope(${1:pos}, ${2:width}, ${3:material}, ${4:Constraint}, ${5:Ent1}, ${6:LPos1}, ${7:Bone1}, ${8:Ent2}, ${9:LPos2}, ${10:Bone2}, ${11:kv})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a rope without any constraint\n\n[Vector] pos\n  \n\n[number] width\n  \n\n[string] material\n  \n\n[Entity] Constraint\n  \n\n[Entity] Ent1\n  \n\n[Vector] LPos1\n  \n\n[number] Bone1\n  \n\n[Entity] Ent2\n  \n\n[Vector] LPos2\n  \n\n[number] Bone2\n  \n\n[table] kv",
+        "prefix": "constraint.CreateKeyframeRope"
+    },
+    "constraint.CreateStaticAnchorPoint": {
+        "body": [
+            "constraint.CreateStaticAnchorPoint(${1:pos})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates an invisible, non-moveable anchor point in the world to which things can be attached.\n\n[Vector] pos\n  The position to spawn the anchor at",
+        "prefix": "constraint.CreateStaticAnchorPoint"
+    },
+    "constraint.Elastic": {
+        "body": [
+            "constraint.Elastic(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:constant}, ${8:damping}, ${9:rdamping}, ${10:material}, ${11:width}, ${12:stretchonly})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates an elastic constraint.\n\n[Entity] Ent1\n  First entity.\n\n[Entity] Ent2\n  Second entity\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls)\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls)\n\n[Vector] LPos1\n  Position of first end of the rope. Local to Ent1.\n\n[Vector] LPos2\n  Position of second end of the rope. Local to Ent2.\n\n[number] constant\n  \n\n[number] damping\n  \n\n[number] rdamping\n  \n\n[string] material\n  The material of the rope.\n\n[number] width\n  Width of rope.\n\n[boolean] stretchonly",
+        "prefix": "constraint.Elastic"
+    },
+    "constraint.Find": {
+        "body": [
+            "constraint.Find(${1:ent1}, ${2:ent2}, ${3:type}, ${4:bone1}, ${5:bone2})$0"
+        ],
+        "description": "CONSTRAINT [Server] Returns the constraint of a specified type between two entities, if it exists\n\n[Entity] ent1\n  The first entity to check\n\n[Entity] ent2\n  The second entity to check\n\n[string] type\n  The constraint type to look for (eg. \"Weld\", \"Elastic\", \"NoCollide\")\n\n[number] bone1\n  The bone number for the first entity (0 for monoboned entities)\n\n[number] bone2\n  The bone number for the second entity",
+        "prefix": "constraint.Find"
+    },
+    "constraint.FindConstraint": {
+        "body": [
+            "constraint.FindConstraint(${1:ent}, ${2:type})$0"
+        ],
+        "description": "CONSTRAINT [Server] Returns the first constraint of a specific type directly connected to the entity found\n\n[Entity] ent\n  The entity to check\n\n[string] type\n  The type of constraint (eg. \"Weld\", \"Elastic\", \"NoCollide\")",
+        "prefix": "constraint.FindConstraint"
+    },
+    "constraint.FindConstraintEntity": {
+        "body": [
+            "constraint.FindConstraintEntity(${1:ent}, ${2:type})$0"
+        ],
+        "description": "CONSTRAINT [Server] Returns the other entity involved in the first constraint of a specific type directly connected to the entity\n\n[Entity] ent\n  The entity to check\n\n[string] type\n  The type of constraint (eg. \"Weld\", \"Elastic\", \"NoCollide\")",
+        "prefix": "constraint.FindConstraintEntity"
+    },
+    "constraint.FindConstraints": {
+        "body": [
+            "constraint.FindConstraints(${1:ent}, ${2:type})$0"
+        ],
+        "description": "CONSTRAINT [Server] Returns a table of all constraints of a specific type directly connected to the entity\n\n[Entity] ent\n  The entity to check\n\n[string] type\n  The type of constraint (eg. \"Weld\", \"Elastic\", \"NoCollide\")",
+        "prefix": "constraint.FindConstraints"
+    },
+    "constraint.ForgetConstraints": {
+        "body": [
+            "constraint.ForgetConstraints(${1:ent})$0"
+        ],
+        "description": "CONSTRAINT [Server] \n\n[Entity] ent\n  The entity that will forget its constraints.",
+        "prefix": "constraint.ForgetConstraints"
+    },
+    "constraint.GetAllConstrainedEntities": {
+        "body": [
+            "constraint.GetAllConstrainedEntities(${1:ent}, ${2:ResultTable=nil})$0"
+        ],
+        "description": "CONSTRAINT [Server] Returns a table of all entities recursively constrained to an entitiy.\n\n[Entity] ent\n  The entity to check\n\n[table] ResultTable=nil\n  Table used to return result. Optional.",
+        "prefix": "constraint.GetAllConstrainedEntities"
+    },
+    "constraint.GetTable": {
+        "body": [
+            "constraint.GetTable(${1:ent})$0"
+        ],
+        "description": "CONSTRAINT [Server] \n\n[Entity] ent\n  The entity to check",
+        "prefix": "constraint.GetTable"
+    },
+    "constraint.HasConstraints": {
+        "body": [
+            "constraint.HasConstraints(${1:ent})$0"
+        ],
+        "description": "CONSTRAINT [Server] \n\n[Entity] ent\n  The entity to check",
+        "prefix": "constraint.HasConstraints"
+    },
+    "constraint.Hydraulic": {
+        "body": [
+            "constraint.Hydraulic(${1:pl}, ${2:Ent1}, ${3:Ent2}, ${4:Bone1}, ${5:Bone2}, ${6:LPos1}, ${7:LPos2}, ${8:Length1}, ${9:Length2}, ${10:width}, ${11:key}, ${12:fixed}, ${13:speed}, ${14:material})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a Hydraulic constraint.\n\n[Player] pl\n  The player that will be used to call numpad.OnDown.\n\n[Entity] Ent1\n  First entity.\n\n[Entity] Ent2\n  Second entity.\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls),\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls).\n\n[Vector] LPos1\n  \n\n[Vector] LPos2\n  \n\n[number] Length1\n  \n\n[number] Length2\n  \n\n[number] width\n  The width of the rope.\n\n[number] key\n  The key binding, corresponding to an KEY_ Enums\n\n[number] fixed\n  Whether the hydraulic is fixed.\n\n[number] speed\n  \n\n[string] material\n  The material of the rope.",
+        "prefix": "constraint.Hydraulic"
+    },
+    "constraint.Keepupright": {
+        "body": [
+            "constraint.Keepupright(${1:ent}, ${2:ang}, ${3:bone}, ${4:angularLimit})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a keep upright constraint.\n\n[Entity] ent\n  The entity to keep upright\n\n[Angle] ang\n  The angle defined as \"upright\"\n\n[number] bone\n  The bone of the entity to constrain (0 for boneless)\n\n[number] angularLimit\n  Basically, the strength of the constraint",
+        "prefix": "constraint.Keepupright"
+    },
+    "constraint.Motor": {
+        "body": [
+            "constraint.Motor(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:friction}, ${8:torque}, ${9:forcetime}, ${10:nocollide}, ${11:toggle}, ${12:pl}, ${13:forcelimit}, ${14:numpadkey_fwd}, ${15:numpadkey_bwd}, ${16:direction}, ${17:LocalAxis})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a motor constraint.\n\n[Entity] Ent1\n  First entity.\n\n[Entity] Ent2\n  Second entity.\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls)\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls)\n\n[Vector] LPos1\n  \n\n[Vector] LPos2\n  \n\n[number] friction\n  \n\n[number] torque\n  \n\n[number] forcetime\n  \n\n[number] nocollide\n  Whether the entities should be no-collided.\n\n[number] toggle\n  Whether the constraint is on toggle.\n\n[Player] pl\n  The player that will be used to call numpad.OnDown and numpad.OnUp.\n\n[number] forcelimit\n  Amount of force until it breaks (0 = unbreakable)\n\n[number] numpadkey_fwd\n  The key binding for \"forward\", corresponding to an KEY_ Enums\n\n[number] numpadkey_bwd\n  The key binding for \"backwards\", corresponding to an KEY_ Enums\n\n[number] direction\n  \n\n[Vector] LocalAxis",
+        "prefix": "constraint.Motor"
+    },
+    "constraint.Muscle": {
+        "body": [
+            "constraint.Muscle(${1:pl}, ${2:Ent1}, ${3:Ent2}, ${4:Bone1}, ${5:Bone2}, ${6:LPos1}, ${7:LPos2}, ${8:Length1}, ${9:Length2}, ${10:width}, ${11:key}, ${12:fixed}, ${13:period}, ${14:amplitude}, ${15:starton}, ${16:material})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a muscle constraint.\n\n[Player] pl\n  The player that will be used to call numpad.OnDown.\n\n[Entity] Ent1\n  First entity.\n\n[Entity] Ent2\n  Second entity.\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls)\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls)\n\n[Vector] LPos1\n  \n\n[Vector] LPos2\n  \n\n[number] Length1\n  \n\n[number] Length2\n  \n\n[number] width\n  Width of the rope.\n\n[number] key\n  The key binding, corresponding to an KEY_ Enums\n\n[number] fixed\n  Whether the constraint is fixed.\n\n[number] period\n  \n\n[number] amplitude\n  \n\n[boolean] starton\n  \n\n[string] material\n  Material of the rope.",
+        "prefix": "constraint.Muscle"
+    },
+    "constraint.NoCollide": {
+        "body": [
+            "constraint.NoCollide(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates an no-collide \"constraint\". Disables collision between two entities.\n\n[Entity] Ent1\n  First entity.\n\n[Entity] Ent2\n  Second entity.\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls).\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls).",
+        "prefix": "constraint.NoCollide"
+    },
+    "constraint.Pulley": {
+        "body": [
+            "constraint.Pulley(${1:Ent1}, ${2:Ent4}, ${3:Bone1}, ${4:Bone4}, ${5:LPos1}, ${6:LPos4}, ${7:WPos2}, ${8:WPos3}, ${9:forcelimit}, ${10:rigid}, ${11:width}, ${12:material})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a pulley constraint.\n\n[Entity] Ent1\n  \n\n[Entity] Ent4\n  \n\n[number] Bone1\n  \n\n[number] Bone4\n  \n\n[Vector] LPos1\n  \n\n[Vector] LPos4\n  \n\n[Vector] WPos2\n  \n\n[Vector] WPos3\n  \n\n[number] forcelimit\n  Amount of force until it breaks (0 = unbreakable)\n\n[boolean] rigid\n  Whether the constraint is rigid.\n\n[number] width\n  Width of the rope.\n\n[string] material\n  Material of the rope.",
+        "prefix": "constraint.Pulley"
+    },
+    "constraint.RemoveAll": {
+        "body": [
+            "constraint.RemoveAll(${1:ent})$0"
+        ],
+        "description": "CONSTRAINT [Server] Attempts to remove all constraints associated with an entity\n\n[Entity] ent\n  The entity to remove constraints from",
+        "prefix": "constraint.RemoveAll"
+    },
+    "constraint.RemoveConstraints": {
+        "body": [
+            "constraint.RemoveConstraints(${1:ent}, ${2:type})$0"
+        ],
+        "description": "CONSTRAINT [Server] Attempts to remove all constraints of a specified type associated with an entity\n\n[Entity] ent\n  The entity to check\n\n[string] type\n  The constraint type to remove (eg. \"Weld\", \"Elastic\", \"NoCollide\")",
+        "prefix": "constraint.RemoveConstraints"
+    },
+    "constraint.Rope": {
+        "body": [
+            "constraint.Rope(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:length}, ${8:addlength}, ${9:forcelimit}, ${10:width}, ${11:material}, ${12:rigid})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a rope constraint - with rope!\n\n[Entity] Ent1\n  First entity\n\n[number] Ent2\n  Second entity\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls)\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls)\n\n[Vector] LPos1\n  Position of first end of the rope. Local to Ent1.\n\n[Vector] LPos2\n  Position of second end of the rope. Local to Ent2.\n\n[number] length\n  Length of the rope.\n\n[number] addlength\n  Amount to add to the length of the rope. Works as it does in the Rope tool.\n\n[number] forcelimit\n  Amount of force until it breaks (0 = unbreakable).\n\n[number] width\n  Width of the rope.\n\n[string] material\n  Material of the rope.\n\n[boolean] rigid\n  Whether the constraint is rigid.",
+        "prefix": "constraint.Rope"
+    },
+    "constraint.Slider": {
+        "body": [
+            "constraint.Slider(${1:Ent1}, ${2:Ent2}, ${3:Bone1}, ${4:Bone2}, ${5:LPos1}, ${6:LPos2}, ${7:width}, ${8:material})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a slider constraint.\n\n[Entity] Ent1\n  First entity.\n\n[Entity] Ent2\n  Second entity.\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls),\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls).\n\n[Vector] LPos1\n  \n\n[Vector] LPos2\n  \n\n[number] width\n  The width of the rope.\n\n[string] material\n  The material of the rope.",
+        "prefix": "constraint.Slider"
+    },
+    "constraint.Weld": {
+        "body": [
+            "constraint.Weld(${1:ent1}, ${2:ent2}, ${3:bone1}, ${4:bone2}, ${5:forcelimit}, ${6:nocollide}, ${7:deleteent1onbreak})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a weld constraint\n\n[Entity] ent1\n  The first entity\n\n[Entity] ent2\n  The second entity\n\n[number] bone1\n  The bonenumber of the first entity (0 for monoboned entities) \n\n\nPhysObj number for ragdolls, see: Entity:TranslateBoneToPhysBone.\n\n[number] bone2\n  The bonenumber of the second entity\n\n[number] forcelimit\n  The amount of force appliable to the constraint before it will break (0 is never)\n\n[boolean] nocollide\n  Should ent1 be nocollided to ent2 via this constraint\n\n[boolean] deleteent1onbreak\n  If true, when ent2 is removed, ent1 will also be removed",
+        "prefix": "constraint.Weld"
+    },
+    "constraint.Winch": {
+        "body": [
+            "constraint.Winch(${1:pl}, ${2:Ent1}, ${3:Ent2}, ${4:Bone1}, ${5:Bone2}, ${6:LPos1}, ${7:LPos2}, ${8:width}, ${9:key}, ${10:key}, ${11:fwd_speed}, ${12:bwd_speed}, ${13:material}, ${14:toggle})$0"
+        ],
+        "description": "CONSTRAINT [Server] Creates a Winch constraint.\n\n[Player] pl\n  The player that will be used to call numpad.OnDown and numpad.OnUp.\n\n[Entity] Ent1\n  First entity.\n\n[Entity] Ent2\n  Second entity.\n\n[number] Bone1\n  Bone of first entity (0 for non-ragdolls),\n\n[number] Bone2\n  Bone of second entity (0 for non-ragdolls).\n\n[Vector] LPos1\n  \n\n[Vector] LPos2\n  \n\n[number] width\n  The width of the rope.\n\n[number] key\n  The key binding for \"forward\", corresponding to an KEY_ Enums\n\n[number] key\n  The key binding for \"backwards\", corresponding to an KEY_ Enums\n\n[number] fwd_speed\n  Forward speed.\n\n[number] bwd_speed\n  Backwards speed.\n\n[string] material\n  The material of the rope.\n\n[boolean] toggle\n  Whether the winch should be on toggle.",
+        "prefix": "constraint.Winch"
+    }
+}

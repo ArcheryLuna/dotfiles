@@ -1,0 +1,142 @@
+{
+    "team.AddScore": {
+        "body": [
+            "team.AddScore(${1:index}, ${2:increment})$0"
+        ],
+        "description": "TEAM [Shared] \n\n[number] index\n  Index of the team\n\n[number] increment\n  Amount to increase the team's score by",
+        "prefix": "team.AddScore"
+    },
+    "team.BestAutoJoinTeam": {
+        "body": [
+            "team.BestAutoJoinTeam()$0"
+        ],
+        "description": "TEAM [Shared]",
+        "prefix": "team.BestAutoJoinTeam"
+    },
+    "team.GetAllTeams": {
+        "body": [
+            "team.GetAllTeams()$0"
+        ],
+        "description": "TEAM [Shared] Returns a table consisting of information on every defined team",
+        "prefix": "team.GetAllTeams"
+    },
+    "team.GetClass": {
+        "body": [
+            "team.GetClass(${1:index})$0"
+        ],
+        "description": "TEAM [Shared] \n\n[number] index\n  Index of the team",
+        "prefix": "team.GetClass"
+    },
+    "team.GetColor": {
+        "body": [
+            "team.GetColor(${1:teamIndex})$0"
+        ],
+        "description": "TEAM [Shared] \n\n[number] teamIndex\n  The team index.",
+        "prefix": "team.GetColor"
+    },
+    "team.GetName": {
+        "body": [
+            "team.GetName(${1:teamIndex})$0"
+        ],
+        "description": "TEAM [Shared] Returns the name of the team.\n\n[number] teamIndex\n  The team index.",
+        "prefix": "team.GetName"
+    },
+    "team.GetPlayers": {
+        "body": [
+            "team.GetPlayers(${1:teamIndex})$0"
+        ],
+        "description": "TEAM [Shared] Returns a table with all player of the specified team.\n\n[number] teamIndex\n  The team index.",
+        "prefix": "team.GetPlayers"
+    },
+    "team.GetScore": {
+        "body": [
+            "team.GetScore(${1:teamIndex})$0"
+        ],
+        "description": "TEAM [Shared] Returns the score of the team.\n\n[number] teamIndex\n  The team index.",
+        "prefix": "team.GetScore"
+    },
+    "team.GetSpawnPoint": {
+        "body": [
+            "team.GetSpawnPoint(${1:index})$0"
+        ],
+        "description": "TEAM [Shared] \n\n[number] index\n  Index of the team",
+        "prefix": "team.GetSpawnPoint"
+    },
+    "team.GetSpawnPoints": {
+        "body": [
+            "team.GetSpawnPoints(${1:index})$0"
+        ],
+        "description": "TEAM [Shared] Returns a table of valid spawnpoint entities the team can use. These are set with team.SetSpawnPoint.\n\n[number] index\n  Index of the team",
+        "prefix": "team.GetSpawnPoints"
+    },
+    "team.Joinable": {
+        "body": [
+            "team.Joinable(${1:index})$0"
+        ],
+        "description": "TEAM [Shared] \n\n[number] index\n  The index of the team.",
+        "prefix": "team.Joinable"
+    },
+    "team.NumPlayers": {
+        "body": [
+            "team.NumPlayers(${1:teamIndex})$0"
+        ],
+        "description": "TEAM [Shared] Returns the amount of players in a team.\n\n[number] teamIndex\n  The team index.",
+        "prefix": "team.NumPlayers"
+    },
+    "team.SetClass": {
+        "body": [
+            "team.SetClass(${1:index}, ${2:classes})$0"
+        ],
+        "description": "TEAM [Shared] Sets valid classes for use by a team. Classes can be created using player_manager.RegisterClass\n\n[number] index\n  Index of the team\n\n[any] classes\n  A class ID or table of class IDs",
+        "prefix": "team.SetClass"
+    },
+    "team.SetColor": {
+        "body": [
+            "team.SetColor(${1:teamIndex}, ${2:color})$0"
+        ],
+        "description": "TEAM [Shared] \n\n[number] teamIndex\n  The team index.\n\n[table] color\n  The team's new color as a Color structure.",
+        "prefix": "team.SetColor"
+    },
+    "team.SetScore": {
+        "body": [
+            "team.SetScore(${1:index}, ${2:score})$0"
+        ],
+        "description": "TEAM [Shared] \n\n[number] index\n  Index of the team\n\n[number] score\n  The team's new score",
+        "prefix": "team.SetScore"
+    },
+    "team.SetSpawnPoint": {
+        "body": [
+            "team.SetSpawnPoint(${1:index}, ${2:classes})$0"
+        ],
+        "description": "TEAM [Shared] Sets valid spawnpoint classes for use by a team.\n\n[number] index\n  Index of the team\n\n[any] classes\n  A spawnpoint classname or table of spawnpoint classnames",
+        "prefix": "team.SetSpawnPoint"
+    },
+    "team.SetUp": {
+        "body": [
+            "team.SetUp(${1:teamIndex}, ${2:teamName}, ${3:teamColor}, ${4:isJoinable=true})$0"
+        ],
+        "description": "TEAM [Shared] Creates a new team.\n\n[number] teamIndex\n  The team index.\n\n[string] teamName\n  The team name.\n\n[table] teamColor\n  The team color. Uses the Color structure.\n\n[boolean] isJoinable=true\n  Whether the team is joinable or not.",
+        "prefix": "team.SetUp"
+    },
+    "team.TotalDeaths": {
+        "body": [
+            "team.TotalDeaths(${1:teamIndex})$0"
+        ],
+        "description": "TEAM [Shared] Returns the sum of deaths of all players of the team.\n\n[number] teamIndex\n  The team index.",
+        "prefix": "team.TotalDeaths"
+    },
+    "team.TotalFrags": {
+        "body": [
+            "team.TotalFrags(${1:Entityornumber})$0"
+        ],
+        "description": "TEAM [Shared] Get's the total frags in a team.\n\n[Entity] Entityornumber\n  Entity or number.",
+        "prefix": "team.TotalFrags"
+    },
+    "team.Valid": {
+        "body": [
+            "team.Valid(${1:index})$0"
+        ],
+        "description": "TEAM [Shared] \n\n[number] index\n  Index of the team",
+        "prefix": "team.Valid"
+    }
+}

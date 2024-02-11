@@ -1,0 +1,37 @@
+{
+	"hook/Add": {
+		"body": [
+			"hook.Add(${1:eventName}, ${2:identifier}, ${3:func})$0"
+		],
+		"description": "Add a hook to be called upon the given event occurring.",
+		"prefix": "hook.Add"
+	},
+	"hook/Call": {
+		"body": [
+			"hook.Call(${1:eventName}, ${2:gamemodeTable}, ${3:args})$0"
+		],
+		"description": "Calls hooks associated with the given event",
+		"prefix": "hook.Call"
+	},
+	"hook/GetTable": {
+		"body": [
+			"hook.GetTable()$0"
+		],
+		"description": "Returns a table containing subtables which contain all hooks.",
+		"prefix": "hook.GetTable"
+	},
+	"hook/Remove": {
+		"body": [
+			"hook.Remove(${1:eventName}, ${2:identifier})$0"
+		],
+		"description": "Removes the hook with the supplied identifier from the given event.",
+		"prefix": "hook.Remove"
+	},
+	"hook/Run": {
+		"body": [
+			"hook.Run(${1:eventName}, ${2:args})$0"
+		],
+		"description": "Calls hooks associated with the given event",
+		"prefix": "hook.Run"
+	}
+}

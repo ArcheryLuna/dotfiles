@@ -1,0 +1,36 @@
+{
+	"name": "ejs-snippets",
+	"displayName": "ejs Snippets",
+	"description": "using in ejs file, clone from HTML5 Snippets",
+	"version": "0.1.0",
+	"publisher": "TaodongWu",
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.9.1"
+	},
+	"galleryBanner": {
+		"color": "#1E81C1",
+		"theme": "light"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "ejs",
+				"path": "./snippets/snippets.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "f9dd9e15-b3f1-49eb-a8f0-d14b65645290",
+		"publisherId": "090ad36c-2790-40da-b7ef-252802b40b42",
+		"publisherDisplayName": "TaodongWu",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033152
+	}
+}

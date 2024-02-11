@@ -1,0 +1,30 @@
+{
+	"DAdjustableModelPanel/CaptureMouse": {
+		"body": [
+			"CaptureMouse()$0"
+		],
+		"description": "No description available.",
+		"prefix": "CaptureMouse"
+	},
+	"DAdjustableModelPanel/FirstPersonControls": {
+		"body": [
+			"FirstPersonControls()$0"
+		],
+		"description": "No description available.",
+		"prefix": "FirstPersonControls"
+	},
+	"DAdjustableModelPanel/GetFirstPerson": {
+		"body": [
+			"GetFirstPerson()$0"
+		],
+		"description": "Gets whether mouse and keyboard-based adjustment of the perspective has been enabled. See",
+		"prefix": "GetFirstPerson"
+	},
+	"DAdjustableModelPanel/SetFirstPerson": {
+		"body": [
+			"SetFirstPerson(${1:enable})$0"
+		],
+		"description": "Enables mouse and keyboard-based adjustment of the perspective.",
+		"prefix": "SetFirstPerson"
+	}
+}

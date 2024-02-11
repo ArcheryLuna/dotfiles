@@ -1,0 +1,499 @@
+{
+    "AddFolder": {
+        "body": [
+            "AddFolder(${1:name}, ${2:folder}, ${3:path}, ${4:showFiles=false}, ${5:wildcard=\"*\"}, ${6:bDontForceExpandable=false})$0"
+        ],
+        "description": "DTREE_NODE [Client] A helper function that adds a new node and calls to DTree_Node:MakeFolder on it.\n\n[string] name\n  The name of the new node\n\n[string] folder\n  The folder in the filesystem to use, relative to the garrysmod/ folder.\n\n[string] path\n  The path to search in. See File Search Paths\n\n[boolean] showFiles=false\n  Should files be added as nodes (true) or folders only (false)\n\n[string] wildcard=\"*\"\n  The wildcard to use when searching for files.\n\n[boolean] bDontForceExpandable=false",
+        "prefix": "AddFolder"
+    },
+    "AddNode": {
+        "body": [
+            "AddNode(${1:name}, ${2:icon=\"icon16/folder.png\"})$0"
+        ],
+        "description": "DTREE_NODE [Client] Add a child node to the DTree_Node\n\n[string] name\n  Name of the node.\n\n[string] icon=\"icon16/folder.png\"\n  The icon that will show nexto the node in the DTree.",
+        "prefix": "AddNode"
+    },
+    "AddPanel": {
+        "body": [
+            "AddPanel(${1:pnl})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[Panel] pnl\n  The panel to add.",
+        "prefix": "AddPanel"
+    },
+    "AnimSlide": {
+        "body": [
+            "AnimSlide(${1:anim}, ${2:delta}, ${3:data})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[table] anim\n  \n\n[number] delta\n  \n\n[table] data",
+        "prefix": "AnimSlide"
+    },
+    "ChildExpanded": {
+        "body": [
+            "ChildExpanded(${1:expanded})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] expanded",
+        "prefix": "ChildExpanded"
+    },
+    "CleanList": {
+        "body": [
+            "CleanList()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "CleanList"
+    },
+    "Copy": {
+        "body": [
+            "Copy()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "Copy"
+    },
+    "CreateChildNodes": {
+        "body": [
+            "CreateChildNodes()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "CreateChildNodes"
+    },
+    "DoChildrenOrder": {
+        "body": [
+            "DoChildrenOrder()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "DoChildrenOrder"
+    },
+    "DoClick": {
+        "body": [
+            "DoClick()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "DoClick"
+    },
+    "DoRightClick": {
+        "body": [
+            "DoRightClick()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "DoRightClick"
+    },
+    "ExpandRecurse": {
+        "body": [
+            "ExpandRecurse(${1:expand})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] expand\n  Whether to expand (true) or collapse (false)",
+        "prefix": "ExpandRecurse"
+    },
+    "ExpandTo": {
+        "body": [
+            "ExpandTo(${1:expand})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] expand\n  Whether to expand (true) or collapse (false)",
+        "prefix": "ExpandTo"
+    },
+    "FilePopulate": {
+        "body": [
+            "FilePopulate(${1:bAndChildren}, ${2:bExpand})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] bAndChildren\n  Does nothing. Set to true if called from DTree_Node:PopulateChildren.\n\n[boolean] bExpand\n  Expand self once population process is finished.",
+        "prefix": "FilePopulate"
+    },
+    "FilePopulateCallback": {
+        "body": [
+            "FilePopulateCallback(${1:files}, ${2:folders}, ${3:foldername}, ${4:path}, ${5:bAndChildren}, ${6:wildcard})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[table] files\n  A list of files in this folder\n\n[table] folders\n  A list of folder in this folder.\n\n[string] foldername\n  The folder name/path this node represents\n\n[string] path\n  The Path ID search was performed with. See File Search Paths\n\n[boolean] bAndChildren\n  Inherited from the FilePopulate call. Does nothing\n\n[string] wildcard\n  The wildcard that was given",
+        "prefix": "FilePopulateCallback"
+    },
+    "GetChildNode": {
+        "body": [
+            "GetChildNode(${1:num})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[number] num\n  The number of the child to get, starting with 0",
+        "prefix": "GetChildNode"
+    },
+    "GetDirty": {
+        "body": [
+            "GetDirty()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetDirty"
+    },
+    "GetDoubleClickToOpen": {
+        "body": [
+            "GetDoubleClickToOpen()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetDoubleClickToOpen"
+    },
+    "GetDraggableName": {
+        "body": [
+            "GetDraggableName()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetDraggableName"
+    },
+    "GetDrawLines": {
+        "body": [
+            "GetDrawLines()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetDrawLines"
+    },
+    "GetFileName": {
+        "body": [
+            "GetFileName()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetFileName"
+    },
+    "GetFolder": {
+        "body": [
+            "GetFolder()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetFolder"
+    },
+    "GetForceShowExpander": {
+        "body": [
+            "GetForceShowExpander()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetForceShowExpander"
+    },
+    "GetHideExpander": {
+        "body": [
+            "GetHideExpander()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetHideExpander"
+    },
+    "GetIcon": {
+        "body": [
+            "GetIcon()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetIcon"
+    },
+    "GetIndentSize": {
+        "body": [
+            "GetIndentSize()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetIndentSize"
+    },
+    "GetLastChild": {
+        "body": [
+            "GetLastChild()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetLastChild"
+    },
+    "GetLineHeight": {
+        "body": [
+            "GetLineHeight()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetLineHeight"
+    },
+    "GetNeedsChildSearch": {
+        "body": [
+            "GetNeedsChildSearch()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetNeedsChildSearch"
+    },
+    "GetNeedsPopulating": {
+        "body": [
+            "GetNeedsPopulating()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetNeedsPopulating"
+    },
+    "GetParentNode": {
+        "body": [
+            "GetParentNode()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetParentNode"
+    },
+    "GetPathID": {
+        "body": [
+            "GetPathID()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetPathID"
+    },
+    "GetRoot": {
+        "body": [
+            "GetRoot()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetRoot"
+    },
+    "GetShowFiles": {
+        "body": [
+            "GetShowFiles()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetShowFiles"
+    },
+    "GetWildCard": {
+        "body": [
+            "GetWildCard()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "GetWildCard"
+    },
+    "Insert": {
+        "body": [
+            "Insert(${1:node}, ${2:nodeNextTo}, ${3:before})$0"
+        ],
+        "description": "DTREE_NODE [Client] Inserts a sub-node into this node before or after the given node.\n\n[Panel] node\n  The DTree_Node to insert.\n\n[Panel] nodeNextTo\n  The node to insert the node above before or after.\n\n[boolean] before\n  true to insert before, false to insert after.",
+        "prefix": "Insert"
+    },
+    "InsertNode": {
+        "body": [
+            "InsertNode(${1:node})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[Panel] node\n  Has to be DTree_Node",
+        "prefix": "InsertNode"
+    },
+    "InstallDraggable": {
+        "body": [
+            "InstallDraggable(${1:node})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[Panel] node\n  The DTree_Node.",
+        "prefix": "InstallDraggable"
+    },
+    "InternalDoClick": {
+        "body": [
+            "InternalDoClick()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "InternalDoClick"
+    },
+    "InternalDoRightClick": {
+        "body": [
+            "InternalDoRightClick()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "InternalDoRightClick"
+    },
+    "IsRootNode": {
+        "body": [
+            "IsRootNode()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "IsRootNode"
+    },
+    "LeaveTree": {
+        "body": [
+            "LeaveTree(${1:pnl})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[Panel] pnl\n  The node to remove",
+        "prefix": "LeaveTree"
+    },
+    "MakeFolder": {
+        "body": [
+            "MakeFolder(${1:folder}, ${2:path}, ${3:showFiles=false}, ${4:wildcard=\"*\"}, ${5:dontForceExpandable=false})$0"
+        ],
+        "description": "DTREE_NODE [Client] Makes this node a folder in the filesystem. This will make it automatically populated. See also DTree_Node:AddFolder.\n\n[string] folder\n  The folder in the filesystem to use, relative to the garrysmod/ folder.\n\n[string] path\n  The path to search in. See File Search Paths\n\n[boolean] showFiles=false\n  Should files be added as nodes (true) or folders only (false)\n\n[string] wildcard=\"*\"\n  The wildcard to use when searching for files.\n\n[boolean] dontForceExpandable=false\n  If set to true, don't show the expand buttons on empty nodes.",
+        "prefix": "MakeFolder"
+    },
+    "MoveChildTo": {
+        "body": [
+            "MoveChildTo(${1:node})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[Panel] node\n  The node to move.",
+        "prefix": "MoveChildTo"
+    },
+    "MoveToTop": {
+        "body": [
+            "MoveToTop()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "MoveToTop"
+    },
+    "OnModified": {
+        "body": [
+            "OnModified()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "OnModified"
+    },
+    "OnNodeSelected": {
+        "body": [
+            "OnNodeSelected(${1:node})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[Panel] node",
+        "prefix": "OnNodeSelected"
+    },
+    "PerformRootNodeLayout": {
+        "body": [
+            "PerformRootNodeLayout()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "PerformRootNodeLayout"
+    },
+    "PopulateChildren": {
+        "body": [
+            "PopulateChildren()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "PopulateChildren"
+    },
+    "PopulateChildrenAndSelf": {
+        "body": [
+            "PopulateChildrenAndSelf(${1:expand})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] expand\n  Expand self once population process is finished.",
+        "prefix": "PopulateChildrenAndSelf"
+    },
+    "SetDirty": {
+        "body": [
+            "SetDirty(${1:dirty})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] dirty",
+        "prefix": "SetDirty"
+    },
+    "SetDoubleClickToOpen": {
+        "body": [
+            "SetDoubleClickToOpen(${1:enable})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] enable\n  true to enable, false to disable this functionality.",
+        "prefix": "SetDoubleClickToOpen"
+    },
+    "SetDraggableName": {
+        "body": [
+            "SetDraggableName(${1:name})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[string] name",
+        "prefix": "SetDraggableName"
+    },
+    "SetDrawLines": {
+        "body": [
+            "SetDrawLines(${1:draw})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] draw",
+        "prefix": "SetDrawLines"
+    },
+    "SetExpanded": {
+        "body": [
+            "SetExpanded(${1:expand}, ${2:surpressAnimation=false})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] expand\n  Whether to expand (true) or collapse (false)\n\n[boolean] surpressAnimation=false\n  Whether to play animation (false) or not (true)",
+        "prefix": "SetExpanded"
+    },
+    "SetFileName": {
+        "body": [
+            "SetFileName(${1:filename})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[string] filename",
+        "prefix": "SetFileName"
+    },
+    "SetFolder": {
+        "body": [
+            "SetFolder(${1:folder})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[string] folder",
+        "prefix": "SetFolder"
+    },
+    "SetForceShowExpander": {
+        "body": [
+            "SetForceShowExpander(${1:forceShow})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] forceShow",
+        "prefix": "SetForceShowExpander"
+    },
+    "SetHideExpander": {
+        "body": [
+            "SetHideExpander(${1:hide})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] hide",
+        "prefix": "SetHideExpander"
+    },
+    "SetIcon": {
+        "body": [
+            "SetIcon(${1:path})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[string] path\n  The path to the material to be used. Do not include \"materials/\". .pngs are supported.",
+        "prefix": "SetIcon"
+    },
+    "SetLastChild": {
+        "body": [
+            "SetLastChild(${1:last})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] last",
+        "prefix": "SetLastChild"
+    },
+    "SetNeedsChildSearch": {
+        "body": [
+            "SetNeedsChildSearch(${1:})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean]",
+        "prefix": "SetNeedsChildSearch"
+    },
+    "SetNeedsPopulating": {
+        "body": [
+            "SetNeedsPopulating(${1:needs})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] needs\n  Whether or not the node needs populating",
+        "prefix": "SetNeedsPopulating"
+    },
+    "SetParentNode": {
+        "body": [
+            "SetParentNode(${1:parent})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[Panel] parent\n  The panel to set as a parent node for this node",
+        "prefix": "SetParentNode"
+    },
+    "SetPathID": {
+        "body": [
+            "SetPathID(${1:path})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[string] path\n  The path ID to set.",
+        "prefix": "SetPathID"
+    },
+    "SetRoot": {
+        "body": [
+            "SetRoot(${1:root})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[Panel] root\n  The panel to set as root node.",
+        "prefix": "SetRoot"
+    },
+    "SetSelected": {
+        "body": [
+            "SetSelected(${1:selected})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] selected\n  Whether this node is currently selected or not.",
+        "prefix": "SetSelected"
+    },
+    "SetShowFiles": {
+        "body": [
+            "SetShowFiles(${1:showFiles})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[boolean] showFiles",
+        "prefix": "SetShowFiles"
+    },
+    "SetWildCard": {
+        "body": [
+            "SetWildCard(${1:wildcard})$0"
+        ],
+        "description": "DTREE_NODE [Client] \n\n[string] wildcard\n  The wildcard to set",
+        "prefix": "SetWildCard"
+    },
+    "SetupCopy": {
+        "body": [
+            "SetupCopy()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "SetupCopy"
+    },
+    "ShowIcons": {
+        "body": [
+            "ShowIcons()$0"
+        ],
+        "description": "DTREE_NODE [Client]",
+        "prefix": "ShowIcons"
+    }
+}

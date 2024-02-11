@@ -1,0 +1,1612 @@
+{
+    "AcceptInput": {
+        "body": [
+            "AcceptInput(${1:ent}, ${2:input}, ${3:activator}, ${4:caller}, ${5:value})$0"
+        ],
+        "description": "GM [Server] Called when a map I/O event occurs.\n\n[Entity] ent\n  Entity that receives the input\n\n[string] input\n  The input name\n\n[Entity] activator\n  Activator of the input\n\n[Entity] caller\n  Caller of the input\n\n[any] value\n  Data provided with the input",
+        "prefix": "AcceptInput"
+    },
+    "AddDeathNotice": {
+        "body": [
+            "AddDeathNotice(${1:attacker}, ${2:attackerTeam}, ${3:inflictor}, ${4:victim}, ${5:victimTeam})$0"
+        ],
+        "description": "GM [Client] Adds a death notice entry.\n\n[string] attacker\n  The name of the attacker\n\n[number] attackerTeam\n  The team of the attacker\n\n[string] inflictor\n  Class name of the entity inflicting the damage\n\n[string] victim\n  Name of the victim\n\n[number] victimTeam\n  Team of the victim",
+        "prefix": "AddDeathNotice"
+    },
+    "AdjustMouseSensitivity": {
+        "body": [
+            "AdjustMouseSensitivity(${1:defaultSensitivity})$0"
+        ],
+        "description": "GM [Client] \n\n[number] defaultSensitivity\n  The old sensitivity\n\nIn general it will be 0, which is equivalent to a sensitivity of 1.",
+        "prefix": "AdjustMouseSensitivity"
+    },
+    "AllowPlayerPickup": {
+        "body": [
+            "AllowPlayerPickup(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "GM [Server] Called when a player tries to pick up something using the \"use\" key, return to override.\n\n[Player] ply\n  The player trying to pick up something.\n\n[Entity] ent\n  The Entity the player attempted to pick up.",
+        "prefix": "AllowPlayerPickup"
+    },
+    "CalcMainActivity": {
+        "body": [
+            "CalcMainActivity(${1:ply}, ${2:vel})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  The player to apply the animation.\n\n[Vector] vel\n  The velocity of the player.",
+        "prefix": "CalcMainActivity"
+    },
+    "CalcVehicleView": {
+        "body": [
+            "CalcVehicleView(${1:veh}, ${2:ply}, ${3:view})$0"
+        ],
+        "description": "GM [Client] Called from GM:CalcView when player is in driving a vehicle. This hook may not be called in gamemodes that override GM:CalcView.\n\n[Vehicle] veh\n  The vehicle the player is driving\n\n[Player] ply\n  The vehicle driver\n\n[table] view\n  The view data containing players FOV, view position and angles, see CamData structure",
+        "prefix": "CalcVehicleView"
+    },
+    "CalcView": {
+        "body": [
+            "CalcView(${1:ply}, ${2:origin}, ${3:angles}, ${4:fov}, ${5:znear}, ${6:zfar})$0"
+        ],
+        "description": "GM [Client] Allows override of the default view.\n\n[Player] ply\n  The local player.\n\n[Vector] origin\n  The player's view position.\n\n[Angle] angles\n  The player's view angles.\n\n[number] fov\n  Field of view.\n\n[number] znear\n  Distance to near clipping plane.\n\n[number] zfar\n  Distance to far clipping plane.",
+        "prefix": "CalcView"
+    },
+    "CalcViewModelView": {
+        "body": [
+            "CalcViewModelView(${1:wep}, ${2:vm}, ${3:oldPos}, ${4:oldAng}, ${5:pos}, ${6:ang})$0"
+        ],
+        "description": "GM [Client] Allows overriding the position and angle of the viewmodel.\n\n[Weapon] wep\n  The weapon entity\n\n[Entity] vm\n  The viewmodel entity\n\n[Vector] oldPos\n  Original position (before viewmodel bobbing and swaying)\n\n[Angle] oldAng\n  Original angle (before viewmodel bobbing and swaying)\n\n[Vector] pos\n  Current position\n\n[Angle] ang\n  Current angle",
+        "prefix": "CalcViewModelView"
+    },
+    "CanEditVariable": {
+        "body": [
+            "CanEditVariable(${1:ent}, ${2:ply}, ${3:key}, ${4:val}, ${5:editor})$0"
+        ],
+        "description": "GM [Server] Called when a variable is edited on an Entity (called by Edit Properties... menu), to determine if the edit should be permitted. See Editable entities for more details about the system.\n\n[Entity] ent\n  The entity being edited\n\n[Player] ply\n  The player doing the editing\n\n[string] key\n  The name of the variable\n\n[string] val\n  The new value, as a string which will later be converted to its appropriate type\n\n[table] editor\n  The edit table defined in Entity:NetworkVar",
+        "prefix": "CanEditVariable"
+    },
+    "CanExitVehicle": {
+        "body": [
+            "CanExitVehicle(${1:veh}, ${2:ply})$0"
+        ],
+        "description": "GM [Server] Determines if the player can exit the vehicle.\n\n[Vehicle] veh\n  The vehicle entity\n\n[Player] ply\n  The player",
+        "prefix": "CanExitVehicle"
+    },
+    "CanPlayerEnterVehicle": {
+        "body": [
+            "CanPlayerEnterVehicle(${1:player}, ${2:vehicle}, ${3:role})$0"
+        ],
+        "description": "GM [Shared] Determines whether or not the player can enter the vehicle.\n\n[Player] player\n  The player\n\n[Vehicle] vehicle\n  The vehicle\n\n[number] role",
+        "prefix": "CanPlayerEnterVehicle"
+    },
+    "CanPlayerSuicide": {
+        "body": [
+            "CanPlayerSuicide(${1:player})$0"
+        ],
+        "description": "GM [Server] Determines if the player can kill themselves using the concommands \"kill\" or \"explode\".\n\n[Player] player\n  The player",
+        "prefix": "CanPlayerSuicide"
+    },
+    "CanPlayerUnfreeze": {
+        "body": [
+            "CanPlayerUnfreeze(${1:player}, ${2:entity}, ${3:phys})$0"
+        ],
+        "description": "GM [Server] Determines if the player can unfreeze the entity.\n\n[Player] player\n  The player\n\n[Entity] entity\n  The entity\n\n[PhysObj] phys\n  The physics object of the entity",
+        "prefix": "CanPlayerUnfreeze"
+    },
+    "CaptureVideo": {
+        "body": [
+            "CaptureVideo()$0"
+        ],
+        "description": "GM [Menu]",
+        "prefix": "CaptureVideo"
+    },
+    "ChatText": {
+        "body": [
+            "ChatText(${1:index}, ${2:name}, ${3:text}, ${4:type})$0"
+        ],
+        "description": "GM [Client] Called when a message is printed to the chat box. Note, that this isn't working with player messages even though there are arguments for it. For player messages see GM:PlayerSay and GM:OnPlayerChat\n\n[number] index\n  The index of the player.\n\n[string] name\n  The name of the player.\n\n[string] text\n  The text that is being sent.\n\n[string] type\n  Chat filter type. Possible values are:\n\n joinleave - Player join and leave messages\n namechange - Player name change messages\n servermsg - Server messages such as convar changes\n teamchange - Team changes?\n chat - (Obsolete?) Player chat?\n none - A fallback value",
+        "prefix": "ChatText"
+    },
+    "ChatTextChanged": {
+        "body": [
+            "ChatTextChanged(${1:text})$0"
+        ],
+        "description": "GM [Client] \n\n[string] text\n  The new contents of the input box",
+        "prefix": "ChatTextChanged"
+    },
+    "CheckPassword": {
+        "body": [
+            "CheckPassword(${1:steamID64}, ${2:ipAddress}, ${3:svPassword}, ${4:clPassword}, ${5:name})$0"
+        ],
+        "description": "GM [Server] Called when a non local player connects to allow the Lua system to check the password. The default behaviour in the base gamemodes emulates what would normally happen. If sv_password is set and its value matches the password passed in by the client - then they are allowed to join. If it isn't set it lets them in too.\n\n[string] steamID64\n  The 64bit Steam ID of the joining player, use util.SteamIDFrom64 to convert it to a \"STEAM_0:\" one.\n\n[string] ipAddress\n  The IP of the connecting client\n\n[string] svPassword\n  The current value of sv_password (the password set by the server)\n\n[string] clPassword\n  The password provided by the client\n\n[string] name\n  The name of the joining player",
+        "prefix": "CheckPassword"
+    },
+    "CloseDermaMenus": {
+        "body": [
+            "CloseDermaMenus()$0"
+        ],
+        "description": "GM [Client/Menu]",
+        "prefix": "CloseDermaMenus"
+    },
+    "ContextMenuOpen": {
+        "body": [
+            "ContextMenuOpen()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "ContextMenuOpen"
+    },
+    "CreateClientsideRagdoll": {
+        "body": [
+            "CreateClientsideRagdoll(${1:entity}, ${2:ragdoll})$0"
+        ],
+        "description": "GM [Client] Called whenever an entity becomes a clientside ragdoll.\n\n[Entity] entity\n  The Entity that created the ragdoll\n\n[Entity] ragdoll\n  The ragdoll being created.",
+        "prefix": "CreateClientsideRagdoll"
+    },
+    "CreateEntityRagdoll": {
+        "body": [
+            "CreateEntityRagdoll(${1:owner}, ${2:ragdoll})$0"
+        ],
+        "description": "GM [Server] \n\n[Entity] owner\n  Entity that owns the ragdoll\n\n[Entity] ragdoll\n  The ragdoll entity",
+        "prefix": "CreateEntityRagdoll"
+    },
+    "CreateMove": {
+        "body": [
+            "CreateMove(${1:cmd})$0"
+        ],
+        "description": "GM [Client] \n\n[CUserCmd] cmd\n  The User Command data",
+        "prefix": "CreateMove"
+    },
+    "CreateTeams": {
+        "body": [
+            "CreateTeams()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "CreateTeams"
+    },
+    "DoAnimationEvent": {
+        "body": [
+            "DoAnimationEvent(${1:ply}, ${2:event}, ${3:data=0})$0"
+        ],
+        "description": "GM [Shared] Called upon an animation event, this is the ideal place to call player animation functions such as Player:AddVCDSequenceToGestureSlot, Player:AnimRestartGesture and so on.\n\n[Player] ply\n  Player who is being animated\n\n[number] event\n  Animation event. See PLAYERANIMEVENT_ Enums\n\n[number] data=0\n  The data for the event. This is interpreted as an ACT_ Enums by PLAYERANIMEVENT_CUSTOM and PLAYERANIMEVENT_CUSTOM_GESTURE, or a sequence by PLAYERANIMEVENT_CUSTOM_SEQUENCE.",
+        "prefix": "DoAnimationEvent"
+    },
+    "DoPlayerDeath": {
+        "body": [
+            "DoPlayerDeath(${1:ply}, ${2:attacker}, ${3:dmg})$0"
+        ],
+        "description": "GM [Server] Handles the player's death. Player:Alive returns true when this is called and the player will be considered dead right after this hook. See GM:PostPlayerDeath for a hook in which the player is 100% dead. See also GM:PlayerDeath.\n\n[Player] ply\n  The player\n\n[Entity] attacker\n  The entity that killed the player\n\n[CTakeDamageInfo] dmg\n  Damage info",
+        "prefix": "DoPlayerDeath"
+    },
+    "DrawDeathNotice": {
+        "body": [
+            "DrawDeathNotice(${1:x}, ${2:y})$0"
+        ],
+        "description": "GM [Client] \n\n[number] x\n  X position to draw death notices as a ratio\n\n[number] y\n  Y position to draw death notices as a ratio",
+        "prefix": "DrawDeathNotice"
+    },
+    "DrawMonitors": {
+        "body": [
+            "DrawMonitors()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "DrawMonitors"
+    },
+    "DrawOverlay": {
+        "body": [
+            "DrawOverlay()$0"
+        ],
+        "description": "GM [Client/Menu]",
+        "prefix": "DrawOverlay"
+    },
+    "DrawPhysgunBeam": {
+        "body": [
+            "DrawPhysgunBeam(${1:ply}, ${2:physgun}, ${3:enabled}, ${4:target}, ${5:bone}, ${6:hitPos})$0"
+        ],
+        "description": "GM [Client] Allows you to override physgun beam drawing.\n\n[Player] ply\n  Physgun owner\n\n[Weapon] physgun\n  The physgun\n\n[boolean] enabled\n  Is the beam enabled\n\n[Entity] target\n  Entity we are grabbing. This will be NULL if nothing is being held\n\n[number] bone\n  ID of the bone we are aiming at\n\n[Vector] hitPos\n  Beam hit position relative to the entity",
+        "prefix": "DrawPhysgunBeam"
+    },
+    "EndEntityDriving": {
+        "body": [
+            "EndEntityDriving(${1:ent}, ${2:ply})$0"
+        ],
+        "description": "GM [Shared] \n\n[Entity] ent\n  The entity being driven\n\n[Player] ply\n  The player driving the entity",
+        "prefix": "EndEntityDriving"
+    },
+    "EntityEmitSound": {
+        "body": [
+            "EntityEmitSound(${1:data})$0"
+        ],
+        "description": "GM [Shared] Called whenever a sound has been played.\n\n[table] data\n  Information about the played sound. Changes done to this table can be applied by returning true from this hook.See EmitSoundInfo structure.",
+        "prefix": "EntityEmitSound"
+    },
+    "EntityFireBullets": {
+        "body": [
+            "EntityFireBullets(${1:ent}, ${2:data})$0"
+        ],
+        "description": "GM [Shared] Called every time a bullet is fired from an entity.\n\n[Entity] ent\n  The entity that fired the bullet\n\n[table] data\n  The bullet data. See Bullet structure",
+        "prefix": "EntityFireBullets"
+    },
+    "EntityKeyValue": {
+        "body": [
+            "EntityKeyValue(${1:ent}, ${2:key}, ${3:value})$0"
+        ],
+        "description": "GM [Shared] Called when a key-value pair is set on an entity, either by the engine (for example when map spawns) or Entity:SetKeyValue. See ENTITY:KeyValue for a hook that works for scripted entities.\nSee WEAPON:KeyValue for a hook that works for scripted weapons.\n\n[Entity] ent\n  Entity that the keyvalue is being set on\n\n[string] key\n  Key of the key/value pair\n\n[string] value\n  Value of the key/value pair",
+        "prefix": "EntityKeyValue"
+    },
+    "EntityNetworkedVarChanged": {
+        "body": [
+            "EntityNetworkedVarChanged(${1:ent}, ${2:name}, ${3:oldval}, ${4:newval})$0"
+        ],
+        "description": "GM [Shared] Called when an NWVar is changed.\n\n[Entity] ent\n  The owner entity of changed NWVar\n\n[string] name\n  The name if changed NWVar\n\n[any] oldval\n  The old value of the NWVar\n\n[any] newval\n  The new value of the NWVar",
+        "prefix": "EntityNetworkedVarChanged"
+    },
+    "EntityRemoved": {
+        "body": [
+            "EntityRemoved(${1:ent})$0"
+        ],
+        "description": "GM [Shared] \n\n[Entity] ent\n  Entity being removed",
+        "prefix": "EntityRemoved"
+    },
+    "EntityTakeDamage": {
+        "body": [
+            "EntityTakeDamage(${1:target}, ${2:dmg})$0"
+        ],
+        "description": "GM [Server] Called when an entity takes damage. You can modify all parts of the damage info in this hook.\n\n[Entity] target\n  The entity taking damage\n\n[CTakeDamageInfo] dmg\n  Damage info",
+        "prefix": "EntityTakeDamage"
+    },
+    "FindUseEntity": {
+        "body": [
+            "FindUseEntity(${1:ply}, ${2:defaultEnt})$0"
+        ],
+        "description": "GM [Shared] This hook polls the entity the player use action should be applied to. The default behavior of this hook is on CBasePlayer::FindUseEntity().\n\n[Player] ply\n  The player who initiated the use action.\n\n[Entity] defaultEnt\n  The entity that was chosen by the engine.",
+        "prefix": "FindUseEntity"
+    },
+    "FinishChat": {
+        "body": [
+            "FinishChat()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "FinishChat"
+    },
+    "FinishMove": {
+        "body": [
+            "FinishMove(${1:ply}, ${2:mv})$0"
+        ],
+        "description": "GM [Shared] Called after GM:Move , applies all the changes from the CMoveData to the player.\n\n[Player] ply\n  Player\n\n[CMoveData] mv\n  Movement data",
+        "prefix": "FinishMove"
+    },
+    "ForceDermaSkin": {
+        "body": [
+            "ForceDermaSkin()$0"
+        ],
+        "description": "GM [Client] Called to allow override of the default Derma skin for all panels.",
+        "prefix": "ForceDermaSkin"
+    },
+    "GUIMouseDoublePressed": {
+        "body": [
+            "GUIMouseDoublePressed(${1:mouseCode}, ${2:aimVector})$0"
+        ],
+        "description": "GM [Client] \n\n[number] mouseCode\n  The code of the mouse button pressed, see MOUSE_ Enums\n\n[Vector] aimVector\n  A normalized vector pointing in the direction the client has clicked",
+        "prefix": "GUIMouseDoublePressed"
+    },
+    "GUIMousePressed": {
+        "body": [
+            "GUIMousePressed(${1:mouseCode}, ${2:aimVector})$0"
+        ],
+        "description": "GM [Client] \n\n[number] mouseCode\n  The key that the player pressed using MOUSE_ Enums.\n\n[Vector] aimVector\n  A normalized direction vector local to the camera. Internally, this is gui.ScreenToVector( gui.MousePos() ).",
+        "prefix": "GUIMousePressed"
+    },
+    "GUIMouseReleased": {
+        "body": [
+            "GUIMouseReleased(${1:mouseCode}, ${2:aimVector})$0"
+        ],
+        "description": "GM [Client] \n\n[number] mouseCode\n  The key the player released, see MOUSE_ Enums\n\n[Vector] aimVector\n  A normalized direction vector local to the camera. Internally this is gui.ScreenToVector( gui.MousePos() ).",
+        "prefix": "GUIMouseReleased"
+    },
+    "GameContentChanged": {
+        "body": [
+            "GameContentChanged()$0"
+        ],
+        "description": "GM [Menu]",
+        "prefix": "GameContentChanged"
+    },
+    "GetFallDamage": {
+        "body": [
+            "GetFallDamage(${1:ply}, ${2:speed})$0"
+        ],
+        "description": "GM [Server] Called when a player takes damage from falling, allows to override the damage.\n\n[Player] ply\n  The player\n\n[number] speed\n  The fall speed",
+        "prefix": "GetFallDamage"
+    },
+    "GetGameDescription": {
+        "body": [
+            "GetGameDescription()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "GetGameDescription"
+    },
+    "GetMotionBlurValues": {
+        "body": [
+            "GetMotionBlurValues(${1:horizontal}, ${2:vertical}, ${3:forward}, ${4:rotational})$0"
+        ],
+        "description": "GM [Client] Allows you to modify the Source Engine's motion blur shaders.\n\n[number] horizontal\n  The amount of horizontal blur.\n\n[number] vertical\n  The amount of vertical blur.\n\n[number] forward\n  The amount of forward/radial blur.\n\n[number] rotational\n  The amount of rotational blur.",
+        "prefix": "GetMotionBlurValues"
+    },
+    "GetPreferredCarryAngles": {
+        "body": [
+            "GetPreferredCarryAngles(${1:ent})$0"
+        ],
+        "description": "GM [Server] Called to determine preferred carry angles for the entity. It works for both, +use pickup and gravity gun pickup.\n\n[Entity] ent\n  The entity to generate carry angles for",
+        "prefix": "GetPreferredCarryAngles"
+    },
+    "GetTeamColor": {
+        "body": [
+            "GetTeamColor(${1:ent})$0"
+        ],
+        "description": "GM [Client] \n\n[Entity] ent\n  Entity",
+        "prefix": "GetTeamColor"
+    },
+    "GetTeamNumColor": {
+        "body": [
+            "GetTeamNumColor(${1:team})$0"
+        ],
+        "description": "GM [Client] \n\n[number] team\n  Team index",
+        "prefix": "GetTeamNumColor"
+    },
+    "GrabEarAnimation": {
+        "body": [
+            "GrabEarAnimation(${1:ply})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  Player",
+        "prefix": "GrabEarAnimation"
+    },
+    "GravGunOnDropped": {
+        "body": [
+            "GravGunOnDropped(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  Player who is wielding the gravity gun\n\n[Entity] ent\n  The entity that has been dropped",
+        "prefix": "GravGunOnDropped"
+    },
+    "GravGunOnPickedUp": {
+        "body": [
+            "GravGunOnPickedUp(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  The player wielding the gravity gun\n\n[Entity] ent\n  The entity that has been picked up by the gravity gun",
+        "prefix": "GravGunOnPickedUp"
+    },
+    "GravGunPickupAllowed": {
+        "body": [
+            "GravGunPickupAllowed(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "GM [Server] Called every tick to poll whether a player is allowed to pick up an entity with the gravity gun or not. Calls ENTITY:GravGunPickupAllowed on the entity being hovered every frame in Sandbox-derived gamemodes.\n\n[Player] ply\n  The player wielding the gravity gun\n\n[Entity] ent\n  The entity the player is attempting to pick up",
+        "prefix": "GravGunPickupAllowed"
+    },
+    "GravGunPunt": {
+        "body": [
+            "GravGunPunt(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "GM [Shared] Called when an entity is about to be punted with the gravity gun (primary fire). Return true to allow and false to disallow.\n\n[Player] ply\n  The player wielding the gravity gun\n\n[Entity] ent\n  The entity the player is attempting to punt",
+        "prefix": "GravGunPunt"
+    },
+    "HUDAmmoPickedUp": {
+        "body": [
+            "HUDAmmoPickedUp(${1:itemName}, ${2:amount})$0"
+        ],
+        "description": "GM [Client] \n\n[string] itemName\n  Name of the item (ammo) picked up\n\n[number] amount\n  Amount of the item (ammo) picked up",
+        "prefix": "HUDAmmoPickedUp"
+    },
+    "HUDDrawPickupHistory": {
+        "body": [
+            "HUDDrawPickupHistory()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "HUDDrawPickupHistory"
+    },
+    "HUDDrawScoreBoard": {
+        "body": [
+            "HUDDrawScoreBoard()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "HUDDrawScoreBoard"
+    },
+    "HUDDrawTargetID": {
+        "body": [
+            "HUDDrawTargetID()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "HUDDrawTargetID"
+    },
+    "HUDItemPickedUp": {
+        "body": [
+            "HUDItemPickedUp(${1:itemName})$0"
+        ],
+        "description": "GM [Client] \n\n[string] itemName\n  Name of the picked up item",
+        "prefix": "HUDItemPickedUp"
+    },
+    "HUDPaint": {
+        "body": [
+            "HUDPaint()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "HUDPaint"
+    },
+    "HUDPaintBackground": {
+        "body": [
+            "HUDPaintBackground()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "HUDPaintBackground"
+    },
+    "HUDShouldDraw": {
+        "body": [
+            "HUDShouldDraw(${1:name})$0"
+        ],
+        "description": "GM [Client] Called when the Gamemode is about to draw a given element on the client's HUD (heads-up display).\n\n[string] name\n  The name of the HUD element. You can find a full list of HUD elements for this hook here.",
+        "prefix": "HUDShouldDraw"
+    },
+    "HUDWeaponPickedUp": {
+        "body": [
+            "HUDWeaponPickedUp(${1:weapon})$0"
+        ],
+        "description": "GM [Client] \n\n[Weapon] weapon\n  The picked up weapon",
+        "prefix": "HUDWeaponPickedUp"
+    },
+    "HandlePlayerDriving": {
+        "body": [
+            "HandlePlayerDriving(${1:ply})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  Player to process",
+        "prefix": "HandlePlayerDriving"
+    },
+    "HandlePlayerDucking": {
+        "body": [
+            "HandlePlayerDucking(${1:ply}, ${2:velocity})$0"
+        ],
+        "description": "GM [Shared] Allows to override player crouch animations.\n\n[Player] ply\n  The player\n\n[number] velocity\n  Players velocity",
+        "prefix": "HandlePlayerDucking"
+    },
+    "HandlePlayerJumping": {
+        "body": [
+            "HandlePlayerJumping(${1:ply}, ${2:velocity})$0"
+        ],
+        "description": "GM [Shared] Allows to override player jumping animations.\n\n[Player] ply\n  The player\n\n[number] velocity\n  Players velocity",
+        "prefix": "HandlePlayerJumping"
+    },
+    "HandlePlayerLanding": {
+        "body": [
+            "HandlePlayerLanding(${1:ply}, ${2:velocity}, ${3:onGround})$0"
+        ],
+        "description": "GM [Shared] Allows to override player landing animations.\n\n[Player] ply\n  The player\n\n[number] velocity\n  Players velocity\n\n[boolean] onGround\n  Was the player on ground?",
+        "prefix": "HandlePlayerLanding"
+    },
+    "HandlePlayerNoClipping": {
+        "body": [
+            "HandlePlayerNoClipping(${1:ply}, ${2:velocity})$0"
+        ],
+        "description": "GM [Shared] Allows to override player noclip animations.\n\n[Player] ply\n  The player\n\n[number] velocity\n  Players velocity",
+        "prefix": "HandlePlayerNoClipping"
+    },
+    "HandlePlayerSwimming": {
+        "body": [
+            "HandlePlayerSwimming(${1:ply}, ${2:velocity})$0"
+        ],
+        "description": "GM [Shared] Allows to override player swimming animations.\n\n[Player] ply\n  The player\n\n[number] velocity\n  Players velocity",
+        "prefix": "HandlePlayerSwimming"
+    },
+    "HandlePlayerVaulting": {
+        "body": [
+            "HandlePlayerVaulting(${1:ply}, ${2:velocity})$0"
+        ],
+        "description": "GM [Shared] Allows to override player flying ( in mid-air, not noclipping ) animations.\n\n[Player] ply\n  The player\n\n[number] velocity\n  Players velocity",
+        "prefix": "HandlePlayerVaulting"
+    },
+    "HideTeam": {
+        "body": [
+            "HideTeam()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "HideTeam"
+    },
+    "InitPostEntity": {
+        "body": [
+            "InitPostEntity()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "InitPostEntity"
+    },
+    "Initialize": {
+        "body": [
+            "Initialize()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "Initialize"
+    },
+    "InputMouseApply": {
+        "body": [
+            "InputMouseApply(${1:cmd}, ${2:x}, ${3:y}, ${4:ang})$0"
+        ],
+        "description": "GM [Client] Allows you to modify the supplied User Command with mouse input. This could be used to make moving the mouse do funky things to view angles.\n\n[CUserCmd] cmd\n  User command\n\n[number] x\n  The amount of mouse movement across the X axis this frame\n\n[number] y\n  The amount of mouse movement across the Y axis this frame\n\n[Angle] ang\n  The current view angle",
+        "prefix": "InputMouseApply"
+    },
+    "IsSpawnpointSuitable": {
+        "body": [
+            "IsSpawnpointSuitable(${1:ply}, ${2:spawnpoint}, ${3:makeSuitable})$0"
+        ],
+        "description": "GM [Server] Check if a player can spawn at a certain spawnpoint.\n\n[Player] ply\n  The player who is spawned\n\n[Entity] spawnpoint\n  The spawnpoint entity (on the map)\n\n[boolean] makeSuitable\n  If this is true, it'll kill any players blocking the spawnpoint",
+        "prefix": "IsSpawnpointSuitable"
+    },
+    "KeyPress": {
+        "body": [
+            "KeyPress(${1:ply}, ${2:key})$0"
+        ],
+        "description": "GM [Shared] Called whenever a player pressed a key included within the IN keys.\n\n[Player] ply\n  The player pressing the key. If running client-side, this will always be LocalPlayer\n\n[number] key\n  The key that the player pressed using IN_ Enums.",
+        "prefix": "KeyPress"
+    },
+    "KeyRelease": {
+        "body": [
+            "KeyRelease(${1:ply}, ${2:key})$0"
+        ],
+        "description": "GM [Shared] Runs when a IN key was released by a player.\n\n[Entity] ply\n  The player releasing the key. If running client-side, this will always be LocalPlayer\n\n[number] key\n  The key that the player released using IN_ Enums.",
+        "prefix": "KeyRelease"
+    },
+    "MenuStart": {
+        "body": [
+            "MenuStart()$0"
+        ],
+        "description": "GM [Menu]",
+        "prefix": "MenuStart"
+    },
+    "MouthMoveAnimation": {
+        "body": [
+            "MouthMoveAnimation(${1:ply})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  Player in question",
+        "prefix": "MouthMoveAnimation"
+    },
+    "Move": {
+        "body": [
+            "Move(${1:ply}, ${2:mv})$0"
+        ],
+        "description": "GM [Shared] The Move hook is called for you to manipulate the player's MoveData. You shouldn't adjust the player's position in any way in the move hook. This is because due to prediction errors, the netcode might run the move hook multiple times as packets arrive late. Therefore you should only adjust the movedata construct in this hook. Generally you shouldn't have to use this hook - if you want to make a custom move type you should look at the drive system. This hook is called after GM:PlayerTick.\n\n[Player] ply\n  Player\n\n[CMoveData] mv\n  Movement information",
+        "prefix": "Move"
+    },
+    "NeedsDepthPass": {
+        "body": [
+            "NeedsDepthPass()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "NeedsDepthPass"
+    },
+    "NetworkEntityCreated": {
+        "body": [
+            "NetworkEntityCreated(${1:ent})$0"
+        ],
+        "description": "GM [Client] \n\n[Entity] ent\n  Created entity",
+        "prefix": "NetworkEntityCreated"
+    },
+    "NetworkIDValidated": {
+        "body": [
+            "NetworkIDValidated(${1:name}, ${2:steamID})$0"
+        ],
+        "description": "GM [Server] \n\n[string] name\n  Player name\n\n[string] steamID\n  Player SteamID",
+        "prefix": "NetworkIDValidated"
+    },
+    "NotifyShouldTransmit": {
+        "body": [
+            "NotifyShouldTransmit(${1:ent}, ${2:shouldtransmit})$0"
+        ],
+        "description": "GM [Client] \n\n[Entity] ent\n  The entity that changed its transmission state.\n\n[boolean] shouldtransmit\n  True if we started transmitting to this client and false if we stopped.",
+        "prefix": "NotifyShouldTransmit"
+    },
+    "OnAchievementAchieved": {
+        "body": [
+            "OnAchievementAchieved(${1:ply}, ${2:achievement})$0"
+        ],
+        "description": "GM [Client] \n\n[Player] ply\n  The player that earned the achievement\n\n[number] achievement\n  The index of the achievement",
+        "prefix": "OnAchievementAchieved"
+    },
+    "OnChatTab": {
+        "body": [
+            "OnChatTab(${1:text})$0"
+        ],
+        "description": "GM [Client] \n\n[string] text\n  The currently typed into chatbox text",
+        "prefix": "OnChatTab"
+    },
+    "OnContextMenuClose": {
+        "body": [
+            "OnContextMenuClose()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "OnContextMenuClose"
+    },
+    "OnContextMenuOpen": {
+        "body": [
+            "OnContextMenuOpen()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "OnContextMenuOpen"
+    },
+    "OnDamagedByExplosion": {
+        "body": [
+            "OnDamagedByExplosion(${1:ply}, ${2:dmginfo})$0"
+        ],
+        "description": "GM [Server] Called when a player has been hurt by an explosion. Override to disable default sound effect.\n\n[Player] ply\n  Player who has been hurt\n\n[CTakeDamageInfo] dmginfo\n  Damage info from explsion",
+        "prefix": "OnDamagedByExplosion"
+    },
+    "OnEntityCreated": {
+        "body": [
+            "OnEntityCreated(${1:entity})$0"
+        ],
+        "description": "GM [Shared] Called right after the Entity has been made visible to Lua.\n\n[Entity] entity\n  The entity",
+        "prefix": "OnEntityCreated"
+    },
+    "OnGamemodeLoaded": {
+        "body": [
+            "OnGamemodeLoaded()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "OnGamemodeLoaded"
+    },
+    "OnLuaError": {
+        "body": [
+            "OnLuaError(${1:error}, ${2:realm}, ${3:name}, ${4:id})$0"
+        ],
+        "description": "GM [Menu] Called when a Lua error occurs, only works in the Menu realm.\n\n[string] error\n  The error that occurred.\n\n[number] realm\n  Where the Lua error took place\n\n[string] name\n  Title of the addon that is creating the Lua errors\n\n[number] id\n  Steam Workshop ID of the addon creating Lua errors, if it is an addon.",
+        "prefix": "OnLuaError"
+    },
+    "OnNPCKilled": {
+        "body": [
+            "OnNPCKilled(${1:npc}, ${2:attacker}, ${3:inflictor})$0"
+        ],
+        "description": "GM [Server] Called whenever an NPC is killed.\n\n[NPC] npc\n  The killed NPC\n\n[Entity] attacker\n  The NPCs attacker, the entity that gets the kill credit, for example a player or an NPC.\n\n[Entity] inflictor\n  Death inflictor. The entity that did the killing. Not necessarily a weapon.",
+        "prefix": "OnNPCKilled"
+    },
+    "OnPhysgunFreeze": {
+        "body": [
+            "OnPhysgunFreeze(${1:weapon}, ${2:physobj}, ${3:ent}, ${4:ply})$0"
+        ],
+        "description": "GM [Server] Called when a player freezes an entity with the Physgun.\n\n[Entity] weapon\n  The weapon that was used to freeze the entity.\n\n[PhysObj] physobj\n  PhysObj of the entity.\n\n[Entity] ent\n  The target entity.\n\n[Player] ply\n  The player who tried to freeze the entity.",
+        "prefix": "OnPhysgunFreeze"
+    },
+    "OnPhysgunReload": {
+        "body": [
+            "OnPhysgunReload(${1:physgun}, ${2:ply})$0"
+        ],
+        "description": "GM [Server] Called when a player reloads with the physgun. Override this to disable default unfreezing behavior.\n\n[Weapon] physgun\n  The physgun in question\n\n[Player] ply\n  The player wielding the physgun",
+        "prefix": "OnPhysgunReload"
+    },
+    "OnPlayerChangedTeam": {
+        "body": [
+            "OnPlayerChangedTeam(${1:ply}, ${2:oldTeam}, ${3:newTeam})$0"
+        ],
+        "description": "GM [Server] Called when a player has changed team using GM:PlayerJoinTeam.\n\n[Player] ply\n  Player who has changed team\n\n[number] oldTeam\n  Index of the team the player was originally in\n\n[number] newTeam\n  Index of the team the player has changed to",
+        "prefix": "OnPlayerChangedTeam"
+    },
+    "OnPlayerChat": {
+        "body": [
+            "OnPlayerChat(${1:ply}, ${2:text}, ${3:teamChat}, ${4:isDead})$0"
+        ],
+        "description": "GM [Client] Called whenever a player sends a chat message. For the serverside equivalent, see GM:PlayerSay.\n\n[Player] ply\n  The player\n\n[string] text\n  The message's text\n\n[boolean] teamChat\n  Is the player typing in team chat?\n\n[boolean] isDead\n  Is the player dead?",
+        "prefix": "OnPlayerChat"
+    },
+    "OnPlayerHitGround": {
+        "body": [
+            "OnPlayerHitGround(${1:player}, ${2:inWater}, ${3:onFloater}, ${4:speed})$0"
+        ],
+        "description": "GM [Shared] Called when a player makes contact with the ground.\n\n[Entity] player\n  Player\n\n[boolean] inWater\n  Did the player land in water?\n\n[boolean] onFloater\n  Did the player land on an object floating in the water?\n\n[number] speed\n  The speed at which the player hit the ground",
+        "prefix": "OnPlayerHitGround"
+    },
+    "OnReloaded": {
+        "body": [
+            "OnReloaded()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "OnReloaded"
+    },
+    "OnSpawnMenuClose": {
+        "body": [
+            "OnSpawnMenuClose()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "OnSpawnMenuClose"
+    },
+    "OnSpawnMenuOpen": {
+        "body": [
+            "OnSpawnMenuOpen()$0"
+        ],
+        "description": "GM [Client] Called when a player presses the \"+menu\" bind on their keyboard, which is bound to Q by default.",
+        "prefix": "OnSpawnMenuOpen"
+    },
+    "OnTextEntryGetFocus": {
+        "body": [
+            "OnTextEntryGetFocus(${1:panel})$0"
+        ],
+        "description": "GM [Client] \n\n[Panel] panel\n  The panel that got focus",
+        "prefix": "OnTextEntryGetFocus"
+    },
+    "OnTextEntryLoseFocus": {
+        "body": [
+            "OnTextEntryLoseFocus(${1:panel})$0"
+        ],
+        "description": "GM [Client] \n\n[Panel] panel\n  The panel that lost focus",
+        "prefix": "OnTextEntryLoseFocus"
+    },
+    "OnUndo": {
+        "body": [
+            "OnUndo(${1:name}, ${2:customText})$0"
+        ],
+        "description": "GM [Client] Called when the player undoes something.\n\n[string] name\n  The name of the undo action\n\n[string] customText\n  The custom text for the undo, set by undo.SetCustomUndoText",
+        "prefix": "OnUndo"
+    },
+    "OnViewModelChanged": {
+        "body": [
+            "OnViewModelChanged(${1:viewmodel}, ${2:oldModel}, ${3:newModel})$0"
+        ],
+        "description": "GM [Shared] Called when the player changes their weapon to another one - and their viewmodel model changes.\n\n[Entity] viewmodel\n  The viewmodel that is changing\n\n[string] oldModel\n  The old model\n\n[string] newModel\n  The new model",
+        "prefix": "OnViewModelChanged"
+    },
+    "PhysgunDrop": {
+        "body": [
+            "PhysgunDrop(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  The player who dropped an entitiy\n\n[Entity] ent\n  The dropped entity",
+        "prefix": "PhysgunDrop"
+    },
+    "PhysgunPickup": {
+        "body": [
+            "PhysgunPickup(${1:player}, ${2:entity})$0"
+        ],
+        "description": "GM [Shared] Called whenever a player picks up an entity with the Physgun.\n\n[Player] player\n  The player that is picking up using the phys gun.\n\n[Entity] entity\n  The entity that is being picked up.",
+        "prefix": "PhysgunPickup"
+    },
+    "PlayerAuthed": {
+        "body": [
+            "PlayerAuthed(${1:ply}, ${2:steamid}, ${3:uniqueid})$0"
+        ],
+        "description": "GM [Server] Called once when the player is authenticated.\n\n[Player] ply\n  The player\n\n[string] steamid\n  The player's SteamID\n\n[string] uniqueid\n  The player's UniqueID",
+        "prefix": "PlayerAuthed"
+    },
+    "PlayerBindPress": {
+        "body": [
+            "PlayerBindPress(${1:ply}, ${2:bind}, ${3:pressed})$0"
+        ],
+        "description": "GM [Client] Runs when a bind has been pressed. Allows to block commands.\n\n[Player] ply\n  The player who used the command; this will always be equal to LocalPlayer\n\n[string] bind\n  The bind command\n\n[boolean] pressed\n  If the bind was activated or deactivated",
+        "prefix": "PlayerBindPress"
+    },
+    "PlayerButtonDown": {
+        "body": [
+            "PlayerButtonDown(${1:ply}, ${2:button})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  Player who pressed the button\n\n[number] button\n  The button, see BUTTON_CODE_ Enums",
+        "prefix": "PlayerButtonDown"
+    },
+    "PlayerButtonUp": {
+        "body": [
+            "PlayerButtonUp(${1:ply}, ${2:button})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  Player who released the button\n\n[number] button\n  The button, see BUTTON_CODE_ Enums",
+        "prefix": "PlayerButtonUp"
+    },
+    "PlayerCanHearPlayersVoice": {
+        "body": [
+            "PlayerCanHearPlayersVoice(${1:listener}, ${2:talker})$0"
+        ],
+        "description": "GM [Server] Decides whether a player can hear another player using voice chat.\n\n[Player] listener\n  The listening player.\n\n[Player] talker\n  The talking player.",
+        "prefix": "PlayerCanHearPlayersVoice"
+    },
+    "PlayerCanJoinTeam": {
+        "body": [
+            "PlayerCanJoinTeam(${1:ply}, ${2:team})$0"
+        ],
+        "description": "GM [Server] Returns whether or not a player is allowed to join a team\n\n[Player] ply\n  Player attempting to switch teams\n\n[number] team\n  Index of the team",
+        "prefix": "PlayerCanJoinTeam"
+    },
+    "PlayerCanPickupItem": {
+        "body": [
+            "PlayerCanPickupItem(${1:ply}, ${2:item})$0"
+        ],
+        "description": "GM [Server] Returns whether or not a player is allowed to pick an item up.\n\n[Player] ply\n  Player attempting to pick up\n\n[Entity] item\n  The item the player is attempting to pick up",
+        "prefix": "PlayerCanPickupItem"
+    },
+    "PlayerCanPickupWeapon": {
+        "body": [
+            "PlayerCanPickupWeapon(${1:ply}, ${2:wep})$0"
+        ],
+        "description": "GM [Server] Returns whether or not a player is allowed to pick up a weapon.\n\n[Player] ply\n  The player attempting to pick up the weapon\n\n[Weapon] wep\n  The weapon entity in question",
+        "prefix": "PlayerCanPickupWeapon"
+    },
+    "PlayerCanSeePlayersChat": {
+        "body": [
+            "PlayerCanSeePlayersChat(${1:text}, ${2:teamOnly}, ${3:listener}, ${4:speaker})$0"
+        ],
+        "description": "GM [Server] Returns whether or not the player can see the other player's chat.\n\n[string] text\n  The chat text\n\n[boolean] teamOnly\n  If the message is team-only\n\n[Player] listener\n  The player receiving the message\n\n[Player] speaker\n  The player sending the message",
+        "prefix": "PlayerCanSeePlayersChat"
+    },
+    "PlayerConnect": {
+        "body": [
+            "PlayerConnect(${1:name}, ${2:ip})$0"
+        ],
+        "description": "GM [Shared] Executes when a player connects to the server.\n\n[string] name\n  Players name\n\n[string] ip\n  Players IP Address",
+        "prefix": "PlayerConnect"
+    },
+    "PlayerDeath": {
+        "body": [
+            "PlayerDeath(${1:victim}, ${2:inflictor}, ${3:attacker})$0"
+        ],
+        "description": "GM [Server] Called when a player is killed by Player:Kill or any other normal means, except for when the player is killed with Player:KillSilent. See GM:PostPlayerDeath for a hook in which the player is 100% dead.\nSee GM:PlayerSilentDeath for a hook that handles player deaths caused by Player:KillSilent.\nSee GM:DoPlayerDeath for a hook where player is still considered alive and is about to die. See Player:LastHitGroup if you need to get the last hit hitgroup of the player.\n\n[Player] victim\n  The player who died\n\n[Entity] inflictor\n  Item used to kill the person\n\n[Entity] attacker\n  Player or entity that killed the victim",
+        "prefix": "PlayerDeath"
+    },
+    "PlayerDeathSound": {
+        "body": [
+            "PlayerDeathSound()$0"
+        ],
+        "description": "GM [Server]",
+        "prefix": "PlayerDeathSound"
+    },
+    "PlayerDeathThink": {
+        "body": [
+            "PlayerDeathThink(${1:ply})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  The player affected in the hook.",
+        "prefix": "PlayerDeathThink"
+    },
+    "PlayerDisconnected": {
+        "body": [
+            "PlayerDisconnected(${1:ply})$0"
+        ],
+        "description": "GM [Server] Called when a player leaves the server.\n\n[Player] ply\n  the player",
+        "prefix": "PlayerDisconnected"
+    },
+    "PlayerDriveAnimate": {
+        "body": [
+            "PlayerDriveAnimate(${1:ply})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  The driving player",
+        "prefix": "PlayerDriveAnimate"
+    },
+    "PlayerEndVoice": {
+        "body": [
+            "PlayerEndVoice(${1:ply})$0"
+        ],
+        "description": "GM [Client] \n\n[Player] ply\n  Player who stopped talking",
+        "prefix": "PlayerEndVoice"
+    },
+    "PlayerEnteredVehicle": {
+        "body": [
+            "PlayerEnteredVehicle(${1:ply}, ${2:veh}, ${3:role})$0"
+        ],
+        "description": "GM [Shared] Called when a player enters a vehicle.\n\n[Player] ply\n  Player who entered vehicle\n\n[Vehicle] veh\n  Vehicle the player entered\n\n[number] role",
+        "prefix": "PlayerEnteredVehicle"
+    },
+    "PlayerFootstep": {
+        "body": [
+            "PlayerFootstep(${1:ply}, ${2:pos}, ${3:foot}, ${4:sound}, ${5:volume}, ${6:filter})$0"
+        ],
+        "description": "GM [Shared] Called whenever a player steps. Return true to mute the normal sound.\n\n[Player] ply\n  The stepping player\n\n[Vector] pos\n  The position of the step\n\n[number] foot\n  Foot that is stepped. 0 for left, 1 for right\n\n[string] sound\n  Sound that is going to play\n\n[number] volume\n  Volume of the footstep\n\n[CRecipientFilter] filter\n  The Recipient filter of players who can hear the footstep",
+        "prefix": "PlayerFootstep"
+    },
+    "PlayerFrozeObject": {
+        "body": [
+            "PlayerFrozeObject(${1:ply}, ${2:ent}, ${3:physobj})$0"
+        ],
+        "description": "GM [Server] Called when a player freezes an object.\n\n[Player] ply\n  Player who has frozen an object\n\n[Entity] ent\n  The frozen object\n\n[PhysObj] physobj\n  The frozen physics object of the frozen entity ( For ragdolls )",
+        "prefix": "PlayerFrozeObject"
+    },
+    "PlayerHurt": {
+        "body": [
+            "PlayerHurt(${1:victim}, ${2:attacker}, ${3:healthRemaining}, ${4:damageTaken})$0"
+        ],
+        "description": "GM [Server] Called when a player gets hurt.\n\n[Player] victim\n  Victim\n\n[Entity] attacker\n  Attacker Entity\n\n[number] healthRemaining\n  Remaining Health\n\n[number] damageTaken\n  Damage Taken",
+        "prefix": "PlayerHurt"
+    },
+    "PlayerInitialSpawn": {
+        "body": [
+            "PlayerInitialSpawn(${1:player})$0"
+        ],
+        "description": "GM [Server] Called when the player spawns for the first time.\n\n[Player] player\n  The player who spawned.",
+        "prefix": "PlayerInitialSpawn"
+    },
+    "PlayerJoinTeam": {
+        "body": [
+            "PlayerJoinTeam(${1:ply}, ${2:team})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  Player to force\n\n[number] team\n  The team to put player into",
+        "prefix": "PlayerJoinTeam"
+    },
+    "PlayerLeaveVehicle": {
+        "body": [
+            "PlayerLeaveVehicle(${1:ply}, ${2:veh})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  Player who left a vehicle.\n\n[Vehicle] veh\n  Vehicle the player left.",
+        "prefix": "PlayerLeaveVehicle"
+    },
+    "PlayerLoadout": {
+        "body": [
+            "PlayerLoadout(${1:ply})$0"
+        ],
+        "description": "GM [Server] Called to give players the default set of weapons.\n\n[Player] ply\n  Player to give weapons to.",
+        "prefix": "PlayerLoadout"
+    },
+    "PlayerNoClip": {
+        "body": [
+            "PlayerNoClip(${1:ply}, ${2:desiredState})$0"
+        ],
+        "description": "GM [Shared] Called when a player tries to switch noclip mode.\n\n[Player] ply\n  The person who entered/exited noclip\n\n[boolean] desiredState\n  Represents the noclip state (on/off) the user will enter if this hook allows them to.",
+        "prefix": "PlayerNoClip"
+    },
+    "PlayerPostThink": {
+        "body": [
+            "PlayerPostThink(${1:ply})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  The player",
+        "prefix": "PlayerPostThink"
+    },
+    "PlayerRequestTeam": {
+        "body": [
+            "PlayerRequestTeam(${1:ply}, ${2:team})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  The player to try to put into a team\n\n[number] team\n  Team to put the player into if the checks succeeded",
+        "prefix": "PlayerRequestTeam"
+    },
+    "PlayerSay": {
+        "body": [
+            "PlayerSay(${1:sender}, ${2:text}, ${3:teamChat})$0"
+        ],
+        "description": "GM [Server] Called when a player dispatched a chat message. For the clientside equivalent, see GM:OnPlayerChat.\n\n[Player] sender\n  The player which sent the message.\n\n[string] text\n  The message's content\n\n[boolean] teamChat\n  Is team chat?",
+        "prefix": "PlayerSay"
+    },
+    "PlayerSelectSpawn": {
+        "body": [
+            "PlayerSelectSpawn(${1:ply})$0"
+        ],
+        "description": "GM [Server] Called to determine a spawn point for a player to spawn at.\n\n[Player] ply\n  The player who needs a spawn point",
+        "prefix": "PlayerSelectSpawn"
+    },
+    "PlayerSelectTeamSpawn": {
+        "body": [
+            "PlayerSelectTeamSpawn(${1:team}, ${2:ply})$0"
+        ],
+        "description": "GM [Server] Find a team spawn point entity for this player.\n\n[number] team\n  Players team\n\n[Player] ply\n  The player",
+        "prefix": "PlayerSelectTeamSpawn"
+    },
+    "PlayerSetHandsModel": {
+        "body": [
+            "PlayerSetHandsModel(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "GM [Server] Called whenever view model hands needs setting a model. By default this calls PLAYER:GetHandsModel and if that fails, sets the hands model according to his player model.\n\n[Player] ply\n  The player whose hands needs a model set\n\n[Entity] ent\n  The hands to set model of",
+        "prefix": "PlayerSetHandsModel"
+    },
+    "PlayerSetModel": {
+        "body": [
+            "PlayerSetModel(${1:ply})$0"
+        ],
+        "description": "GM [Server] Called whenever a player spawns and must choose a model. A good place to assign a model to a player.\n\n[Player] ply\n  The player being chosen",
+        "prefix": "PlayerSetModel"
+    },
+    "PlayerShouldTakeDamage": {
+        "body": [
+            "PlayerShouldTakeDamage(${1:ply}, ${2:attacker})$0"
+        ],
+        "description": "GM [Server] Returns true if the player should take damage from the given attacker.\n\n[Player] ply\n  The player\n\n[Entity] attacker\n  The attacker",
+        "prefix": "PlayerShouldTakeDamage"
+    },
+    "PlayerShouldTaunt": {
+        "body": [
+            "PlayerShouldTaunt(${1:ply}, ${2:act})$0"
+        ],
+        "description": "GM [Server] Allows to suppress player taunts.\n\n[Player] ply\n  Player who tried to taunt\n\n[number] act\n  Act ID of the taunt player tries to do, see ACT_ Enums",
+        "prefix": "PlayerShouldTaunt"
+    },
+    "PlayerSilentDeath": {
+        "body": [
+            "PlayerSilentDeath(${1:ply})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  The player",
+        "prefix": "PlayerSilentDeath"
+    },
+    "PlayerSpawn": {
+        "body": [
+            "PlayerSpawn(${1:player})$0"
+        ],
+        "description": "GM [Server] Called whenever a player spawns, including respawns.\n\n[Player] player\n  The player who spawned.",
+        "prefix": "PlayerSpawn"
+    },
+    "PlayerSpawnAsSpectator": {
+        "body": [
+            "PlayerSpawnAsSpectator(${1:ply})$0"
+        ],
+        "description": "GM [Server] Called to spawn the player as a spectator.\n\n[Player] ply\n  The player to spawn as a spectator",
+        "prefix": "PlayerSpawnAsSpectator"
+    },
+    "PlayerSpray": {
+        "body": [
+            "PlayerSpray(${1:sprayer})$0"
+        ],
+        "description": "GM [Server] Determines if the player can spray using the \"impulse 201\" console command.\n\n[Player] sprayer\n  The player",
+        "prefix": "PlayerSpray"
+    },
+    "PlayerStartTaunt": {
+        "body": [
+            "PlayerStartTaunt(${1:ply}, ${2:act}, ${3:length})$0"
+        ],
+        "description": "GM [Server] Called when player starts taunting.\n\n[Player] ply\n  The player who is taunting\n\n[number] act\n  The sequence ID of the taunt\n\n[number] length\n  Length of the taunt",
+        "prefix": "PlayerStartTaunt"
+    },
+    "PlayerStartVoice": {
+        "body": [
+            "PlayerStartVoice(${1:ply})$0"
+        ],
+        "description": "GM [Client] \n\n[Player] ply\n  Player who started using voice chat",
+        "prefix": "PlayerStartVoice"
+    },
+    "PlayerStepSoundTime": {
+        "body": [
+            "PlayerStepSoundTime(${1:ply}, ${2:type}, ${3:walking})$0"
+        ],
+        "description": "GM [Shared] Allows you to override the time between footsteps.\n\n[Player] ply\n  Player who is walking\n\n[number] type\n  The type of footsteps, see STEPSOUNDTIME_ Enums\n\n[boolean] walking\n  Is the player walking or not ( +walk? )",
+        "prefix": "PlayerStepSoundTime"
+    },
+    "PlayerSwitchFlashlight": {
+        "body": [
+            "PlayerSwitchFlashlight(${1:ply}, ${2:enabled})$0"
+        ],
+        "description": "GM [Server] Called whenever a player attempts to either turn on or off their flashlight, returning false will deny the change.\n\n[Player] ply\n  The player who attempts to change their flashlight state.\n\n[boolean] enabled\n  The new state the player requested, true for on, false for off.",
+        "prefix": "PlayerSwitchFlashlight"
+    },
+    "PlayerSwitchWeapon": {
+        "body": [
+            "PlayerSwitchWeapon(${1:player}, ${2:oldWeapon}, ${3:newWeapon})$0"
+        ],
+        "description": "GM [Shared] Called when a player switches their weapon.\n\n[Player] player\n  The player switching weapons.\n\n[Weapon] oldWeapon\n  The previous weapon.\n\n[Weapon] newWeapon\n  The weapon the player switched to.",
+        "prefix": "PlayerSwitchWeapon"
+    },
+    "PlayerTick": {
+        "body": [
+            "PlayerTick(${1:player}, ${2:mv})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] player\n  The player\n\n[CMoveData] mv\n  The current movedata for the player.",
+        "prefix": "PlayerTick"
+    },
+    "PlayerTraceAttack": {
+        "body": [
+            "PlayerTraceAttack(${1:ply}, ${2:dmginfo}, ${3:dir}, ${4:trace})$0"
+        ],
+        "description": "GM [Shared] Called when a player has been hit by a trace and damaged (such as from a bullet). Returning true overrides the damage handling and prevents GM:ScalePlayerDamage from being called.\n\n[Player] ply\n  The player that has been hit\n\n[CTakeDamageInfo] dmginfo\n  The damage info of the bullet\n\n[Vector] dir\n  Normalized vector direction of the bullet's path\n\n[table] trace\n  The trace of the bullet's path, see TraceResult structure",
+        "prefix": "PlayerTraceAttack"
+    },
+    "PlayerUnfrozeObject": {
+        "body": [
+            "PlayerUnfrozeObject(${1:ply}, ${2:ent}, ${3:physobj})$0"
+        ],
+        "description": "GM [Server] Called when a player unfreezes an object.\n\n[Player] ply\n  Player who has unfrozen an object\n\n[Entity] ent\n  The unfrozen object\n\n[PhysObj] physobj\n  The frozen physics object of the unfrozen entity ( For ragdolls )",
+        "prefix": "PlayerUnfrozeObject"
+    },
+    "PlayerUse": {
+        "body": [
+            "PlayerUse(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "GM [Server] Triggered when the player presses use on an object. Continuously runs until USE is released but will not activate other Entities until the USE key is released; dependent on activation type of the Entity.\n\n[Player] ply\n  The player pressing the \"use\" key.\n\n[Entity] ent\n  The entity which the player is looking at / activating USE on.",
+        "prefix": "PlayerUse"
+    },
+    "PopulateMenuBar": {
+        "body": [
+            "PopulateMenuBar(${1:menubar})$0"
+        ],
+        "description": "GM [Client] Called when it's time to populate the context menu menu bar at the top.\n\n[Panel] menubar\n  The DMenuBar itself.",
+        "prefix": "PopulateMenuBar"
+    },
+    "PopulateSTOOLMenu": {
+        "body": [
+            "PopulateSTOOLMenu()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PopulateSTOOLMenu"
+    },
+    "PopulateToolMenu": {
+        "body": [
+            "PopulateToolMenu()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PopulateToolMenu"
+    },
+    "PostCleanupMap": {
+        "body": [
+            "PostCleanupMap()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "PostCleanupMap"
+    },
+    "PostDraw2DSkyBox": {
+        "body": [
+            "PostDraw2DSkyBox()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PostDraw2DSkyBox"
+    },
+    "PostDrawEffects": {
+        "body": [
+            "PostDrawEffects()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PostDrawEffects"
+    },
+    "PostDrawHUD": {
+        "body": [
+            "PostDrawHUD()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PostDrawHUD"
+    },
+    "PostDrawOpaqueRenderables": {
+        "body": [
+            "PostDrawOpaqueRenderables(${1:bDrawingDepth}, ${2:bDrawingSkybox})$0"
+        ],
+        "description": "GM [Client] \n\n[boolean] bDrawingDepth\n  Whether the current draw is writing depth.\n\n[boolean] bDrawingSkybox\n  Whether the current draw is drawing the skybox.",
+        "prefix": "PostDrawOpaqueRenderables"
+    },
+    "PostDrawPlayerHands": {
+        "body": [
+            "PostDrawPlayerHands(${1:hands}, ${2:vm}, ${3:ply}, ${4:weapon})$0"
+        ],
+        "description": "GM [Client] Called after the player hands are drawn.\n\n[Entity] hands\n  This is the gmod_hands entity.\n\n[Entity] vm\n  This is the view model entity.\n\n[Player] ply\n  The the owner of the view model.\n\n[Weapon] weapon\n  This is the weapon that is from the view model.",
+        "prefix": "PostDrawPlayerHands"
+    },
+    "PostDrawSkyBox": {
+        "body": [
+            "PostDrawSkyBox()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PostDrawSkyBox"
+    },
+    "PostDrawTranslucentRenderables": {
+        "body": [
+            "PostDrawTranslucentRenderables(${1:bDrawingDepth}, ${2:bDrawingSkybox})$0"
+        ],
+        "description": "GM [Client] \n\n[boolean] bDrawingDepth\n  Unknown\n\n[boolean] bDrawingSkybox\n  True if we are drawing skybox",
+        "prefix": "PostDrawTranslucentRenderables"
+    },
+    "PostDrawViewModel": {
+        "body": [
+            "PostDrawViewModel(${1:viewmodel}, ${2:player}, ${3:weapon})$0"
+        ],
+        "description": "GM [Client] Called after view model is drawn.\n\n[Entity] viewmodel\n  Players view model\n\n[Player] player\n  The owner of the weapon/view model\n\n[Weapon] weapon\n  The weapon the player is currently holding",
+        "prefix": "PostDrawViewModel"
+    },
+    "PostGamemodeLoaded": {
+        "body": [
+            "PostGamemodeLoaded()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "PostGamemodeLoaded"
+    },
+    "PostPlayerDeath": {
+        "body": [
+            "PostPlayerDeath(${1:ply})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  The player",
+        "prefix": "PostPlayerDeath"
+    },
+    "PostPlayerDraw": {
+        "body": [
+            "PostPlayerDraw(${1:ply})$0"
+        ],
+        "description": "GM [Client] Called after the player was drawn.\n\n[Player] ply\n  The player that was drawn.",
+        "prefix": "PostPlayerDraw"
+    },
+    "PostProcessPermitted": {
+        "body": [
+            "PostProcessPermitted(${1:ppeffect})$0"
+        ],
+        "description": "GM [Client] \n\n[string] ppeffect\n  The classname of Post Processing effect",
+        "prefix": "PostProcessPermitted"
+    },
+    "PostReloadToolsMenu": {
+        "body": [
+            "PostReloadToolsMenu()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PostReloadToolsMenu"
+    },
+    "PostRender": {
+        "body": [
+            "PostRender()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PostRender"
+    },
+    "PostRenderVGUI": {
+        "body": [
+            "PostRenderVGUI()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PostRenderVGUI"
+    },
+    "PreCleanupMap": {
+        "body": [
+            "PreCleanupMap()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "PreCleanupMap"
+    },
+    "PreDrawEffects": {
+        "body": [
+            "PreDrawEffects()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PreDrawEffects"
+    },
+    "PreDrawHUD": {
+        "body": [
+            "PreDrawHUD()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PreDrawHUD"
+    },
+    "PreDrawHalos": {
+        "body": [
+            "PreDrawHalos()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PreDrawHalos"
+    },
+    "PreDrawOpaqueRenderables": {
+        "body": [
+            "PreDrawOpaqueRenderables(${1:isDrawingDepth}, ${2:isDrawSkybox})$0"
+        ],
+        "description": "GM [Client] Called before all opaque entities are drawn.\n\n[boolean] isDrawingDepth\n  Whether the current draw is writing depth.\n\n[boolean] isDrawSkybox\n  Whether the current draw is drawing the skybox.",
+        "prefix": "PreDrawOpaqueRenderables"
+    },
+    "PreDrawPlayerHands": {
+        "body": [
+            "PreDrawPlayerHands(${1:hands}, ${2:vm}, ${3:ply}, ${4:weapon})$0"
+        ],
+        "description": "GM [Client] Called before the player hands are drawn.\n\n[Entity] hands\n  This is the gmod_hands entity before it is drawn.\n\n[Entity] vm\n  This is the view model entity before it is drawn.\n\n[Player] ply\n  The the owner of the view model.\n\n[Weapon] weapon\n  This is the weapon that is from the view model.",
+        "prefix": "PreDrawPlayerHands"
+    },
+    "PreDrawSkyBox": {
+        "body": [
+            "PreDrawSkyBox()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PreDrawSkyBox"
+    },
+    "PreDrawTranslucentRenderables": {
+        "body": [
+            "PreDrawTranslucentRenderables(${1:isDrawingDepth}, ${2:isDrawSkybox})$0"
+        ],
+        "description": "GM [Client] Called before all the translucent entities are drawn.\n\n[boolean] isDrawingDepth\n  Whether the current draw is writing depth.\n\n[boolean] isDrawSkybox\n  Whether the current draw is drawing the skybow.",
+        "prefix": "PreDrawTranslucentRenderables"
+    },
+    "PreDrawViewModel": {
+        "body": [
+            "PreDrawViewModel(${1:vm}, ${2:ply}, ${3:weapon})$0"
+        ],
+        "description": "GM [Client] Called before the view model has been drawn. This hook by default also calls this on weapons, so you can use WEAPON:PreDrawViewModel.\n\n[Entity] vm\n  This is the view model entity before it is drawn. On server-side, this entity is the predicted view model.\n\n[Player] ply\n  The the owner of the view model.\n\n[Weapon] weapon\n  This is the weapon that is from the view model.",
+        "prefix": "PreDrawViewModel"
+    },
+    "PreGamemodeLoaded": {
+        "body": [
+            "PreGamemodeLoaded()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "PreGamemodeLoaded"
+    },
+    "PrePlayerDraw": {
+        "body": [
+            "PrePlayerDraw(${1:player})$0"
+        ],
+        "description": "GM [Client] \n\n[Player] player\n  The player that is about to be drawn.",
+        "prefix": "PrePlayerDraw"
+    },
+    "PreReloadToolsMenu": {
+        "body": [
+            "PreReloadToolsMenu()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PreReloadToolsMenu"
+    },
+    "PreRender": {
+        "body": [
+            "PreRender()$0"
+        ],
+        "description": "GM [Client] Called before the renderer is about to start rendering the next frame.",
+        "prefix": "PreRender"
+    },
+    "PreventScreenClicks": {
+        "body": [
+            "PreventScreenClicks()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "PreventScreenClicks"
+    },
+    "PropBreak": {
+        "body": [
+            "PropBreak(${1:attacker}, ${2:prop})$0"
+        ],
+        "description": "GM [Shared] Called when a prop has been destroyed.\n\n[Player] attacker\n  The person who broke the prop.\n\n[Entity] prop\n  The entity that has been broken by the attacker.",
+        "prefix": "PropBreak"
+    },
+    "RenderScene": {
+        "body": [
+            "RenderScene(${1:origin}, ${2:angles}, ${3:fov})$0"
+        ],
+        "description": "GM [Client] Render the scene. Used by the \"Stereoscopy\" Post-processing effect.\n\n[Vector] origin\n  View origin\n\n[Angle] angles\n  View angles\n\n[number] fov\n  View FOV",
+        "prefix": "RenderScene"
+    },
+    "RenderScreenspaceEffects": {
+        "body": [
+            "RenderScreenspaceEffects()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "RenderScreenspaceEffects"
+    },
+    "Restored": {
+        "body": [
+            "Restored()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "Restored"
+    },
+    "Saved": {
+        "body": [
+            "Saved()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "Saved"
+    },
+    "ScaleNPCDamage": {
+        "body": [
+            "ScaleNPCDamage(${1:npc}, ${2:hitgroup}, ${3:dmginfo})$0"
+        ],
+        "description": "GM [Server] Called when an NPC takes damage.\n\n[NPC] npc\n  The NPC that takes damage\n\n[number] hitgroup\n  The hitgroup (hitbox) enum where the player took damage. See HITGROUP_ Enums\n\n[CTakeDamageInfo] dmginfo\n  Damage info",
+        "prefix": "ScaleNPCDamage"
+    },
+    "ScalePlayerDamage": {
+        "body": [
+            "ScalePlayerDamage(${1:ply}, ${2:hitgroup}, ${3:dmginfo})$0"
+        ],
+        "description": "GM [Shared] This hook allows you to change how much damage a player receives when one takes damage to a specific body part.\n\n[Player] ply\n  The player taking damage.\n\n[number] hitgroup\n  The hitgroup where the player took damage. See HITGROUP_ Enums\n\n[CTakeDamageInfo] dmginfo\n  The damage info.",
+        "prefix": "ScalePlayerDamage"
+    },
+    "ScoreboardHide": {
+        "body": [
+            "ScoreboardHide()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "ScoreboardHide"
+    },
+    "ScoreboardShow": {
+        "body": [
+            "ScoreboardShow()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "ScoreboardShow"
+    },
+    "SetPlayerSpeed": {
+        "body": [
+            "SetPlayerSpeed(${1:ply}, ${2:walkSpeed}, ${3:runSpeed})$0"
+        ],
+        "description": "GM [Shared] Sets player run and sprint speeds. This is not a hook.\n\n[Player] ply\n  The player\n\n[number] walkSpeed\n  The walk speed\n\n[number] runSpeed\n  The run speed",
+        "prefix": "SetPlayerSpeed"
+    },
+    "SetupMove": {
+        "body": [
+            "SetupMove(${1:ply}, ${2:mv}, ${3:cmd})$0"
+        ],
+        "description": "GM [Shared] SetupMove is called before the engine process movements. This allows us to override the players movement.\n\n[Player] ply\n  The player whose movement we are about to process\n\n[CMoveData] mv\n  The move data to override/use\n\n[CUserCmd] cmd\n  The command data",
+        "prefix": "SetupMove"
+    },
+    "SetupPlayerVisibility": {
+        "body": [
+            "SetupPlayerVisibility(${1:ply}, ${2:viewEntity})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  The player\n\n[Entity] viewEntity\n  Players Player:GetViewEntity",
+        "prefix": "SetupPlayerVisibility"
+    },
+    "SetupSkyboxFog": {
+        "body": [
+            "SetupSkyboxFog(${1:scale})$0"
+        ],
+        "description": "GM [Client] \n\n[number] scale\n  The scale of 3D skybox",
+        "prefix": "SetupSkyboxFog"
+    },
+    "SetupWorldFog": {
+        "body": [
+            "SetupWorldFog()$0"
+        ],
+        "description": "GM [Client]",
+        "prefix": "SetupWorldFog"
+    },
+    "ShouldCollide": {
+        "body": [
+            "ShouldCollide(${1:ent1}, ${2:ent2})$0"
+        ],
+        "description": "GM [Shared] Called to decide whether a pair of entities should collide with each other. This is only called if Entity:SetCustomCollisionCheck was used on one or both entities. This hook must return the same value consistently for the same pair of entities. If an entity changed in such a way that its collision rules change, you must call Entity:CollisionRulesChanged on that entity immediately - not in this hook. Where applicable, consider using constraint.NoCollide instead - it is considerably easier to use.\n\n[Entity] ent1\n  The first entity in the collision poll.\n\n[Entity] ent2\n  The second entity in the collision poll.",
+        "prefix": "ShouldCollide"
+    },
+    "ShouldDrawLocalPlayer": {
+        "body": [
+            "ShouldDrawLocalPlayer(${1:ply})$0"
+        ],
+        "description": "GM [Client] \n\n[Player] ply\n  The player",
+        "prefix": "ShouldDrawLocalPlayer"
+    },
+    "ShowHelp": {
+        "body": [
+            "ShowHelp(${1:ply})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  Player who executed the command",
+        "prefix": "ShowHelp"
+    },
+    "ShowSpare1": {
+        "body": [
+            "ShowSpare1(${1:ply})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  Player who executed the command",
+        "prefix": "ShowSpare1"
+    },
+    "ShowSpare2": {
+        "body": [
+            "ShowSpare2(${1:ply})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  Player who executed the command",
+        "prefix": "ShowSpare2"
+    },
+    "ShowTeam": {
+        "body": [
+            "ShowTeam(${1:ply})$0"
+        ],
+        "description": "GM [Server] \n\n[Player] ply\n  Player who executed the command",
+        "prefix": "ShowTeam"
+    },
+    "ShutDown": {
+        "body": [
+            "ShutDown()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "ShutDown"
+    },
+    "SpawniconGenerated": {
+        "body": [
+            "SpawniconGenerated(${1:lastmodel}, ${2:imagename}, ${3:modelsleft})$0"
+        ],
+        "description": "GM [Client] Called when spawn icon is generated.\n\n[string] lastmodel\n  File path of previously generated model.\n\n[string] imagename\n  File path of the generated icon.\n\n[number] modelsleft\n  Amount of models left to generate.",
+        "prefix": "SpawniconGenerated"
+    },
+    "StartChat": {
+        "body": [
+            "StartChat(${1:isTeamChat})$0"
+        ],
+        "description": "GM [Client] Runs when the user tries to open the chat box.\n\n[boolean] isTeamChat\n  True if team chat or, false otherwise.",
+        "prefix": "StartChat"
+    },
+    "StartCommand": {
+        "body": [
+            "StartCommand(${1:ply}, ${2:ucmd})$0"
+        ],
+        "description": "GM [Shared] \n\n[Player] ply\n  The player\n\n[CUserCmd] ucmd\n  The usercommand",
+        "prefix": "StartCommand"
+    },
+    "StartEntityDriving": {
+        "body": [
+            "StartEntityDriving(${1:ent}, ${2:ply})$0"
+        ],
+        "description": "GM [Shared] \n\n[Entity] ent\n  The entity that is going to be driven\n\n[Player] ply\n  The player that is going to drive the entity",
+        "prefix": "StartEntityDriving"
+    },
+    "StartGame": {
+        "body": [
+            "StartGame()$0"
+        ],
+        "description": "GM [Menu]",
+        "prefix": "StartGame"
+    },
+    "Think": {
+        "body": [
+            "Think()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "Think"
+    },
+    "Tick": {
+        "body": [
+            "Tick()$0"
+        ],
+        "description": "GM [Shared]",
+        "prefix": "Tick"
+    },
+    "TranslateActivity": {
+        "body": [
+            "TranslateActivity(${1:ply}, ${2:act})$0"
+        ],
+        "description": "GM [Shared] Allows you to translate player activities.\n\n[Player] ply\n  The player\n\n[number] act\n  The activity. See ACT_ Enums",
+        "prefix": "TranslateActivity"
+    },
+    "UpdateAnimation": {
+        "body": [
+            "UpdateAnimation(${1:ply}, ${2:velocity}, ${3:maxSeqGroundSpeed})$0"
+        ],
+        "description": "GM [Shared] Animation updates (pose params etc) should be done here.\n\n[Player] ply\n  The player\n\n[number] velocity\n  Players velocity\n\n[number] maxSeqGroundSpeed\n  Velocity, at which animation will play at normal speed ( Playback Rate = 1 )",
+        "prefix": "UpdateAnimation"
+    },
+    "VGUIMousePressAllowed": {
+        "body": [
+            "VGUIMousePressAllowed(${1:button})$0"
+        ],
+        "description": "GM [Client] \n\n[number] button\n  The button that was pressed, see MOUSE_ Enums",
+        "prefix": "VGUIMousePressAllowed"
+    },
+    "VGUIMousePressed": {
+        "body": [
+            "VGUIMousePressed(${1:pnl}, ${2:mouseCode})$0"
+        ],
+        "description": "GM [Client] \n\n[Panel] pnl\n  Panel that currently has focus.\n\n[number] mouseCode\n  The key that the player pressed using MOUSE_ Enums.",
+        "prefix": "VGUIMousePressed"
+    },
+    "VariableEdited": {
+        "body": [
+            "VariableEdited(${1:ent}, ${2:ply}, ${3:key}, ${4:val}, ${5:editor})$0"
+        ],
+        "description": "GM [Server] Called when a variable is edited on an Entity (called by Edit Properties... menu)\n\n[Entity] ent\n  The entity being edited\n\n[Player] ply\n  The player doing the editing\n\n[string] key\n  The name of the variable\n\n[string] val\n  The new value, as a string which will later be converted to its appropriate type\n\n[table] editor\n  The edit table defined in Entity:NetworkVar",
+        "prefix": "VariableEdited"
+    },
+    "VehicleMove": {
+        "body": [
+            "VehicleMove(${1:ply}, ${2:veh}, ${3:mv})$0"
+        ],
+        "description": "GM [Shared] Called when you are driving a vehicle. This hook works just like GM:Move. This hook is called before GM:Move and will be called when GM:PlayerTick is not.\n\n[Player] ply\n  Player who is driving the vehicle\n\n[Vehicle] veh\n  The vehicle being driven\n\n[CMoveData] mv\n  Move data",
+        "prefix": "VehicleMove"
+    },
+    "WeaponEquip": {
+        "body": [
+            "WeaponEquip(${1:weapon}, ${2:owner})$0"
+        ],
+        "description": "GM [Server] \n\n[Weapon] weapon\n  The equipped weapon.\n\n[Player] owner\n  The player that is picking up the weapon.",
+        "prefix": "WeaponEquip"
+    },
+    "WorkshopDownloadFile": {
+        "body": [
+            "WorkshopDownloadFile(${1:id}, ${2:imageID}, ${3:title}, ${4:size})$0"
+        ],
+        "description": "GM [Menu] Called when an addon from the Steam workshop begins downloading. Used by default to place details on the workshop downloading panel.\n\n[number] id\n  Workshop ID of addon.\n\n[number] imageID\n  ID of addon's preview image.\nFor example, for Extended Spawnmenu addon, the image URL is\nhttp://cloud-4.steamusercontent.com/ugc/702859018846106764/9E7E1946296240314751192DA0AD15B6567FF92D/\n\nSo, the value of this argument would be 702859018846106764.\n\n[string] title\n  Name of addon.\n\n[number] size\n  File size of addon in bytes.",
+        "prefix": "WorkshopDownloadFile"
+    },
+    "WorkshopDownloadProgress": {
+        "body": [
+            "WorkshopDownloadProgress(${1:id}, ${2:imageID}, ${3:title}, ${4:downloaded}, ${5:expected})$0"
+        ],
+        "description": "GM [Menu] Called while an addon from the Steam workshop is downloading. Used by default to update details on the fancy workshop download panel.\n\n[number] id\n  Workshop ID of addon.\n\n[number] imageID\n  ID of addon's preview image.\nFor example, for Extended Spawnmenu addon, the image URL is\nhttp://cloud-4.steamusercontent.com/ugc/702859018846106764/9E7E1946296240314751192DA0AD15B6567FF92D/\n\nSo, the value of this argument would be 702859018846106764.\n\n[string] title\n  Name of addon.\n\n[number] downloaded\n  Current bytes of addon downloaded.\n\n[number] expected\n  Expected file size of addon in bytes.",
+        "prefix": "WorkshopDownloadProgress"
+    },
+    "WorkshopDownloadTotals": {
+        "body": [
+            "WorkshopDownloadTotals(${1:remain}, ${2:total})$0"
+        ],
+        "description": "GM [Menu] \n\n[number] remain\n  Remaining addons to download\n\n[number] total\n  Total addons needing to be downloaded",
+        "prefix": "WorkshopDownloadTotals"
+    },
+    "WorkshopDownloadedFile": {
+        "body": [
+            "WorkshopDownloadedFile(${1:id}, ${2:title})$0"
+        ],
+        "description": "GM [Menu] \n\n[number] id\n  Workshop ID of addon.\n\n[string] title\n  Name of addon.",
+        "prefix": "WorkshopDownloadedFile"
+    },
+    "WorkshopEnd": {
+        "body": [
+            "WorkshopEnd()$0"
+        ],
+        "description": "GM [Menu]",
+        "prefix": "WorkshopEnd"
+    },
+    "WorkshopStart": {
+        "body": [
+            "WorkshopStart()$0"
+        ],
+        "description": "GM [Menu]",
+        "prefix": "WorkshopStart"
+    },
+    "WorkshopSubscriptionsProgress": {
+        "body": [
+            "WorkshopSubscriptionsProgress(${1:num}, ${2:max})$0"
+        ],
+        "description": "GM [Menu] \n\n[number] num\n  Amount of subscribed addons that have info retrieved.\n\n[number] max\n  Total amount of subscribed addons that need their info retrieved.",
+        "prefix": "WorkshopSubscriptionsProgress"
+    }
+}

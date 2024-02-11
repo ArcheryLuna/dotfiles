@@ -1,0 +1,44 @@
+{
+	"Schedule/AddTask": {
+		"body": [
+			"AddTask(${1:taskname}, ${2:taskdata})$0"
+		],
+		"description": "No description available.",
+		"prefix": "AddTask"
+	},
+	"Schedule/AddTaskEx": {
+		"body": [
+			"AddTaskEx(${1:start}, ${2:run}, ${3:data})$0"
+		],
+		"description": "No description available.",
+		"prefix": "AddTaskEx"
+	},
+	"Schedule/EngTask": {
+		"body": [
+			"EngTask(${1:taskname}, ${2:taskdata})$0"
+		],
+		"description": "Adds an engine task to the schedule.",
+		"prefix": "EngTask"
+	},
+	"Schedule/GetTask": {
+		"body": [
+			"GetTask(${1:num})$0"
+		],
+		"description": "Returns the task at the given index.",
+		"prefix": "GetTask"
+	},
+	"Schedule/Init": {
+		"body": [
+			"Init(${1:debugName})$0"
+		],
+		"description": "No description available.",
+		"prefix": "Init"
+	},
+	"Schedule/NumTasks": {
+		"body": [
+			"NumTasks()$0"
+		],
+		"description": "Returns the number of tasks in the schedule.",
+		"prefix": "NumTasks"
+	}
+}

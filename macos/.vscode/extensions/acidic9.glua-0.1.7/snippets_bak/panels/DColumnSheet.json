@@ -1,0 +1,23 @@
+{
+	"DColumnSheet/AddSheet": {
+		"body": [
+			"AddSheet(${1:name}, ${2:pnl}, ${3:icon=nil})$0"
+		],
+		"description": "Adds a new column/tab.",
+		"prefix": "AddSheet"
+	},
+	"DColumnSheet/SetActiveButton": {
+		"body": [
+			"SetActiveButton(${1:active})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetActiveButton"
+	},
+	"DColumnSheet/UseButtonOnlyStyle": {
+		"body": [
+			"UseButtonOnlyStyle()$0"
+		],
+		"description": "Makes the tabs/buttons show only the image and no text.",
+		"prefix": "UseButtonOnlyStyle"
+	}
+}

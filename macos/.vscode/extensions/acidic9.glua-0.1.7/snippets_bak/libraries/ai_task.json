@@ -1,0 +1,9 @@
+{
+	"ai_task/New": {
+		"body": [
+			"ai_task.New()$0"
+		],
+		"description": "Create a new empty task. Used by",
+		"prefix": "ai_task.New"
+	}
+}

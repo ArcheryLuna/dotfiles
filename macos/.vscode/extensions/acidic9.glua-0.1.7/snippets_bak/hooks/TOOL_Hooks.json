@@ -1,0 +1,65 @@
+{
+	"TOOL/Deploy": {
+		"body": [
+			"Deploy()$0"
+		],
+		"description": "Called when",
+		"prefix": "Deploy"
+	},
+	"TOOL/DrawHUD": {
+		"body": [
+			"DrawHUD()$0"
+		],
+		"description": "Called when",
+		"prefix": "DrawHUD"
+	},
+	"TOOL/DrawToolScreen": {
+		"body": [
+			"DrawToolScreen(${1:width}, ${2:height})$0"
+		],
+		"description": "Called after the default tool screen has been drawn.",
+		"prefix": "DrawToolScreen"
+	},
+	"TOOL/FreezeMovement": {
+		"body": [
+			"FreezeMovement()$0"
+		],
+		"description": "Called when",
+		"prefix": "FreezeMovement"
+	},
+	"TOOL/Holster": {
+		"body": [
+			"Holster()$0"
+		],
+		"description": "Called when",
+		"prefix": "Holster"
+	},
+	"TOOL/LeftClick": {
+		"body": [
+			"LeftClick(${1:tr})$0"
+		],
+		"description": "Called when the user left clicks with the tool",
+		"prefix": "LeftClick"
+	},
+	"TOOL/Reload": {
+		"body": [
+			"Reload(${1:tr})$0"
+		],
+		"description": "Called when the user presses the reload key with the tool out.",
+		"prefix": "Reload"
+	},
+	"TOOL/RightClick": {
+		"body": [
+			"RightClick(${1:tr})$0"
+		],
+		"description": "Called when the user right clicks with the tool.",
+		"prefix": "RightClick"
+	},
+	"TOOL/Think": {
+		"body": [
+			"Think()$0"
+		],
+		"description": "Called when",
+		"prefix": "Think"
+	}
+}

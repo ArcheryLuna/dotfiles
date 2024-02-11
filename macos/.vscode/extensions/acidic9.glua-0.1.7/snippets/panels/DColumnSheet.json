@@ -1,0 +1,30 @@
+{
+    "AddSheet": {
+        "body": [
+            "AddSheet(${1:name}, ${2:pnl}, ${3:icon=nil})$0"
+        ],
+        "description": "DCOLUMNSHEET [Client] Adds a new column/tab.\n\n[string] name\n  Name of the column/tab\n\n[Panel] pnl\n  Panel to be used as contents of the tab. This normally would be a DPanel\n\n[string] icon=nil\n  Icon for the tab. This will ideally be a silkicon, but any material name can be used.",
+        "prefix": "AddSheet"
+    },
+    "GetActiveButton": {
+        "body": [
+            "GetActiveButton()$0"
+        ],
+        "description": "DCOLUMNSHEET [Client]",
+        "prefix": "GetActiveButton"
+    },
+    "SetActiveButton": {
+        "body": [
+            "SetActiveButton(${1:active})$0"
+        ],
+        "description": "DCOLUMNSHEET [Client] \n\n[Panel] active\n  The button to make active button",
+        "prefix": "SetActiveButton"
+    },
+    "UseButtonOnlyStyle": {
+        "body": [
+            "UseButtonOnlyStyle()$0"
+        ],
+        "description": "DCOLUMNSHEET [Client]",
+        "prefix": "UseButtonOnlyStyle"
+    }
+}

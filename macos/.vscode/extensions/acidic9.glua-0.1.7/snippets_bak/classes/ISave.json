@@ -1,0 +1,65 @@
+{
+	"ISave/EndBlock": {
+		"body": [
+			"EndBlock()$0"
+		],
+		"description": "Ends current data block started with",
+		"prefix": "EndBlock"
+	},
+	"ISave/StartBlock": {
+		"body": [
+			"StartBlock(${1:name})$0"
+		],
+		"description": "Starts a new block of data that you can write to inside current block. Blocks",
+		"prefix": "StartBlock"
+	},
+	"ISave/WriteAngle": {
+		"body": [
+			"WriteAngle(${1:ang})$0"
+		],
+		"description": "Writes an",
+		"prefix": "WriteAngle"
+	},
+	"ISave/WriteBool": {
+		"body": [
+			"WriteBool(${1:bool})$0"
+		],
+		"description": "Writes a",
+		"prefix": "WriteBool"
+	},
+	"ISave/WriteEntity": {
+		"body": [
+			"WriteEntity(${1:ent})$0"
+		],
+		"description": "Writes an",
+		"prefix": "WriteEntity"
+	},
+	"ISave/WriteFloat": {
+		"body": [
+			"WriteFloat(${1:float})$0"
+		],
+		"description": "Writes a floating point",
+		"prefix": "WriteFloat"
+	},
+	"ISave/WriteInt": {
+		"body": [
+			"WriteInt(${1:int})$0"
+		],
+		"description": "Writes an integer",
+		"prefix": "WriteInt"
+	},
+	"ISave/WriteString": {
+		"body": [
+			"WriteString(${1:str})$0"
+		],
+		"description": "Writes a",
+		"prefix": "WriteString"
+	},
+	"ISave/WriteVector": {
+		"body": [
+			"WriteVector(${1:vec})$0"
+		],
+		"description": "Writes a",
+		"prefix": "WriteVector"
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"cookie/Delete": {
+		"body": [
+			"cookie.Delete(${1:name})$0"
+		],
+		"description": "Deletes a cookie on the client.",
+		"prefix": "cookie.Delete"
+	},
+	"cookie/GetNumber": {
+		"body": [
+			"cookie.GetNumber(${1:name}, ${2:default=nil})$0"
+		],
+		"description": "Gets the value of a cookie on the client as a number.",
+		"prefix": "cookie.GetNumber"
+	},
+	"cookie/GetString": {
+		"body": [
+			"cookie.GetString(${1:name}, ${2:default=nil})$0"
+		],
+		"description": "Gets the value of a cookie on the client as a string.",
+		"prefix": "cookie.GetString"
+	},
+	"cookie/Set": {
+		"body": [
+			"cookie.Set(${1:key}, ${2:value})$0"
+		],
+		"description": "Sets the value of a cookie, which is saved automatically by the",
+		"prefix": "cookie.Set"
+	}
+}

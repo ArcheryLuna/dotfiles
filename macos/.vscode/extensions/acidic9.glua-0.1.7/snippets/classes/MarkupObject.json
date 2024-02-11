@@ -1,0 +1,37 @@
+{
+    "Create": {
+        "body": [
+            "Create()$0"
+        ],
+        "description": "MARKUPOBJECT [Client]",
+        "prefix": "Create"
+    },
+    "Draw": {
+        "body": [
+            "Draw(${1:xOffset}, ${2:yOffset}, ${3:xAlign}, ${4:yAlign}, ${5:alphaoverride=255})$0"
+        ],
+        "description": "MARKUPOBJECT [Client] Draws the computed markupobject to the screen.\n\n[number] xOffset\n  The X coordinate on the screen.\n\n[number] yOffset\n  The Y coordinate on the screen.\n\n[number] xAlign\n  The alignment of the x coordinate using TEXT_ALIGN_ Enums\n\n[number] yAlign\n  The alignment of the y coordinate using TEXT_ALIGN_ Enums\n\n[number] alphaoverride=255\n  Sets the alpha of all drawn objects to this.",
+        "prefix": "Draw"
+    },
+    "GetHeight": {
+        "body": [
+            "GetHeight()$0"
+        ],
+        "description": "MARKUPOBJECT [Client]",
+        "prefix": "GetHeight"
+    },
+    "GetWidth": {
+        "body": [
+            "GetWidth()$0"
+        ],
+        "description": "MARKUPOBJECT [Client]",
+        "prefix": "GetWidth"
+    },
+    "Size": {
+        "body": [
+            "Size()$0"
+        ],
+        "description": "MARKUPOBJECT [Client]",
+        "prefix": "Size"
+    }
+}

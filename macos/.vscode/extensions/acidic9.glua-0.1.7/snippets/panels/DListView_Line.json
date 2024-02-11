@@ -1,0 +1,9 @@
+{
+    "GetColumnText": {
+        "body": [
+            "GetColumnText(${1:column})$0"
+        ],
+        "description": "DLISTVIEW_LINE [Client] Gets the string held in the specified column of a DListView_Line panel. This is the same thing as doing DListView_Line:GetValue( column_number ).\n\n[number] column\n  The number of the column to retrieve the text from, starts with 1.",
+        "prefix": "GetColumnText"
+    }
+}

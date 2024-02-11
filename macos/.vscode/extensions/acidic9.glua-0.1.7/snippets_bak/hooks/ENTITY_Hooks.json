@@ -1,0 +1,415 @@
+{
+	"ENTITY/AcceptInput": {
+		"body": [
+			"AcceptInput(${1:inputName}, ${2:activator}, ${3:called}, ${4:data})$0"
+		],
+		"description": "Called when another entity fires an event to this entity.",
+		"prefix": "AcceptInput"
+	},
+	"ENTITY/Blocked": {
+		"body": [
+			"Blocked(${1:other})$0"
+		],
+		"description": "Called when the entity is blocked.",
+		"prefix": "Blocked"
+	},
+	"ENTITY/CalcAbsolutePosition": {
+		"body": [
+			"CalcAbsolutePosition(${1:pos}, ${2:ang})$0"
+		],
+		"description": "Called whenever the entity\u0026#39;s position changes.",
+		"prefix": "CalcAbsolutePosition"
+	},
+	"ENTITY/CanProperty": {
+		"body": [
+			"CanProperty(${1:ply}, ${2:property})$0"
+		],
+		"description": "Controls if a property can be used on this entity or not.",
+		"prefix": "CanProperty"
+	},
+	"ENTITY/DoSchedule": {
+		"body": [
+			"DoSchedule(${1:sched})$0"
+		],
+		"description": "Runs a Lua schedule. Runs tasks inside the schedule.",
+		"prefix": "DoSchedule"
+	},
+	"ENTITY/DoingEngineSchedule": {
+		"body": [
+			"DoingEngineSchedule()$0"
+		],
+		"description": "Called whenever an engine schedule is being ran.",
+		"prefix": "DoingEngineSchedule"
+	},
+	"ENTITY/Draw": {
+		"body": [
+			"Draw(${1:flags})$0"
+		],
+		"description": "Called if and when the entity should be drawn opaquely, based on the",
+		"prefix": "Draw"
+	},
+	"ENTITY/DrawTranslucent": {
+		"body": [
+			"DrawTranslucent()$0"
+		],
+		"description": "Called when the entity should be drawn translucently.",
+		"prefix": "DrawTranslucent"
+	},
+	"ENTITY/EndTouch": {
+		"body": [
+			"EndTouch(${1:entity})$0"
+		],
+		"description": "Called when the entity stops touching another entity.",
+		"prefix": "EndTouch"
+	},
+	"ENTITY/EngineScheduleFinish": {
+		"body": [
+			"EngineScheduleFinish()$0"
+		],
+		"description": "Called whenever an engine schedule is finished.",
+		"prefix": "EngineScheduleFinish"
+	},
+	"ENTITY/ExpressionFinished": {
+		"body": [
+			"ExpressionFinished(${1:strExp})$0"
+		],
+		"description": "No description available.",
+		"prefix": "ExpressionFinished"
+	},
+	"ENTITY/FireAnimationEvent": {
+		"body": [
+			"FireAnimationEvent(${1:pos}, ${2:ang}, ${3:event}, ${4:name})$0"
+		],
+		"description": "Called before firing animation events, such as muzzle flashes or shell ejections.",
+		"prefix": "FireAnimationEvent"
+	},
+	"ENTITY/GetAttackSpread": {
+		"body": [
+			"GetAttackSpread(${1:wep}, ${2:target})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetAttackSpread"
+	},
+	"ENTITY/GetRelationship": {
+		"body": [
+			"GetRelationship(${1:ent})$0"
+		],
+		"description": "Called when scripted NPC needs to check how he \u0026#34;feels\u0026#34; against another entity.",
+		"prefix": "GetRelationship"
+	},
+	"ENTITY/HandleAnimEvent": {
+		"body": [
+			"HandleAnimEvent(${1:event}, ${2:eventTime}, ${3:cycle}, ${4:type}, ${5:options})$0"
+		],
+		"description": "Called before firing animation events, such as muzzle flashes or shell ejections.",
+		"prefix": "HandleAnimEvent"
+	},
+	"ENTITY/ImpactTrace": {
+		"body": [
+			"ImpactTrace(${1:traceResult}, ${2:damageType}, ${3:customImpactName=nil})$0"
+		],
+		"description": "Called when a bullet trace hits this entity and allows you to override the default behavior by returning true.",
+		"prefix": "ImpactTrace"
+	},
+	"ENTITY/Initialize": {
+		"body": [
+			"Initialize()$0"
+		],
+		"description": "Called when the entity is created. This is called when you",
+		"prefix": "Initialize"
+	},
+	"ENTITY/KeyValue": {
+		"body": [
+			"KeyValue(${1:key}, ${2:value})$0"
+		],
+		"description": "Called when the engine sets a value for this entity.",
+		"prefix": "KeyValue"
+	},
+	"ENTITY/NextTask": {
+		"body": [
+			"NextTask(${1:sched})$0"
+		],
+		"description": "Start the next task in specific schedule.",
+		"prefix": "NextTask"
+	},
+	"ENTITY/OnCondition": {
+		"body": [
+			"OnCondition(${1:conditionID})$0"
+		],
+		"description": "Called each time the NPC updates its condition.",
+		"prefix": "OnCondition"
+	},
+	"ENTITY/OnDuplicated": {
+		"body": [
+			"OnDuplicated(${1:entTable})$0"
+		],
+		"description": "Called on any entity after it has been created by the",
+		"prefix": "OnDuplicated"
+	},
+	"ENTITY/OnEntityCopyTableFinish": {
+		"body": [
+			"OnEntityCopyTableFinish(${1:data})$0"
+		],
+		"description": "Called after duplicator finishes saving the entity, allowing you to modify the save data.",
+		"prefix": "OnEntityCopyTableFinish"
+	},
+	"ENTITY/OnReloaded": {
+		"body": [
+			"OnReloaded()$0"
+		],
+		"description": "Called when the entity is reloaded by the auto-reload system.",
+		"prefix": "OnReloaded"
+	},
+	"ENTITY/OnRemove": {
+		"body": [
+			"OnRemove()$0"
+		],
+		"description": "Called when the entity is about to be removed.",
+		"prefix": "OnRemove"
+	},
+	"ENTITY/OnRestore": {
+		"body": [
+			"OnRestore()$0"
+		],
+		"description": "Called when the entity was reloaded from a save game.",
+		"prefix": "OnRestore"
+	},
+	"ENTITY/OnTakeDamage": {
+		"body": [
+			"OnTakeDamage(${1:damage})$0"
+		],
+		"description": "Called when the entity is taking damage.",
+		"prefix": "OnTakeDamage"
+	},
+	"ENTITY/OnTaskComplete": {
+		"body": [
+			"OnTaskComplete()$0"
+		],
+		"description": "Called from the engine when TaskComplete is called. This allows us to move onto the next task - even when TaskComplete was called from an engine side task.",
+		"prefix": "OnTaskComplete"
+	},
+	"ENTITY/PassesDamageFilter": {
+		"body": [
+			"PassesDamageFilter(${1:dmg})$0"
+		],
+		"description": "Called by",
+		"prefix": "PassesDamageFilter"
+	},
+	"ENTITY/PassesFilter": {
+		"body": [
+			"PassesFilter(${1:trigger}, ${2:ent})$0"
+		],
+		"description": "Called by",
+		"prefix": "PassesFilter"
+	},
+	"ENTITY/PassesTriggerFilters": {
+		"body": [
+			"PassesTriggerFilters(${1:ent})$0"
+		],
+		"description": "Polls whenever the entity should trigger the brush.",
+		"prefix": "PassesTriggerFilters"
+	},
+	"ENTITY/PhysicsCollide": {
+		"body": [
+			"PhysicsCollide(${1:colData}, ${2:collider})$0"
+		],
+		"description": "Called when the entity collides with anything.",
+		"prefix": "PhysicsCollide"
+	},
+	"ENTITY/PhysicsSimulate": {
+		"body": [
+			"PhysicsSimulate(${1:phys}, ${2:deltaTime})$0"
+		],
+		"description": "Called from the Entity\u0026#39;s motion controller to simulate physics.",
+		"prefix": "PhysicsSimulate"
+	},
+	"ENTITY/PhysicsUpdate": {
+		"body": [
+			"PhysicsUpdate(${1:phys})$0"
+		],
+		"description": "Called whenever the physics of the entity are updated.",
+		"prefix": "PhysicsUpdate"
+	},
+	"ENTITY/PostEntityCopy": {
+		"body": [
+			"PostEntityCopy()$0"
+		],
+		"description": "Called after the duplicator finished copying the entity",
+		"prefix": "PostEntityCopy"
+	},
+	"ENTITY/PostEntityPaste": {
+		"body": [
+			"PostEntityPaste(${1:ply}, ${2:ent}, ${3:createdEntities})$0"
+		],
+		"description": "Called after the",
+		"prefix": "PostEntityPaste"
+	},
+	"ENTITY/PreEntityCopy": {
+		"body": [
+			"PreEntityCopy()$0"
+		],
+		"description": "Called before the duplicator copies the entity.",
+		"prefix": "PreEntityCopy"
+	},
+	"ENTITY/RenderOverride": {
+		"body": [
+			"RenderOverride()$0"
+		],
+		"description": "Called instead of the engine drawing function of the entity.",
+		"prefix": "RenderOverride"
+	},
+	"ENTITY/RunAI": {
+		"body": [
+			"RunAI()$0"
+		],
+		"description": "Called from the engine every 0.1 seconds.",
+		"prefix": "RunAI"
+	},
+	"ENTITY/RunEngineTask": {
+		"body": [
+			"RunEngineTask(${1:taskID}, ${2:taskData})$0"
+		],
+		"description": "Called when an engine task is ran on the entity.",
+		"prefix": "RunEngineTask"
+	},
+	"ENTITY/RunTask": {
+		"body": [
+			"RunTask(${1:task})$0"
+		],
+		"description": "Called every think on running task. The actual task function should tell us when the task is finished.",
+		"prefix": "RunTask"
+	},
+	"ENTITY/ScheduleFinished": {
+		"body": [
+			"ScheduleFinished()$0"
+		],
+		"description": "Called whenever a schedule is finished.",
+		"prefix": "ScheduleFinished"
+	},
+	"ENTITY/SelectSchedule": {
+		"body": [
+			"SelectSchedule(${1:iNPCState})$0"
+		],
+		"description": "Set the schedule we should be playing right now.",
+		"prefix": "SelectSchedule"
+	},
+	"ENTITY/SetTask": {
+		"body": [
+			"SetTask(${1:task})$0"
+		],
+		"description": "Sets the current task.",
+		"prefix": "SetTask"
+	},
+	"ENTITY/SetupDataTables": {
+		"body": [
+			"SetupDataTables()$0"
+		],
+		"description": "Called when the entity should set up its",
+		"prefix": "SetupDataTables"
+	},
+	"ENTITY/SpawnFunction": {
+		"body": [
+			"SpawnFunction(${1:ply}, ${2:tr}, ${3:ClassName})$0"
+		],
+		"description": "This is the spawn function. It\u0026#39;s called when a client calls the entity to be spawned. If you want to make your SENT spawnable you need this function to properly create the entity.",
+		"prefix": "SpawnFunction"
+	},
+	"ENTITY/StartEngineSchedule": {
+		"body": [
+			"StartEngineSchedule(${1:scheduleID})$0"
+		],
+		"description": "Starts an engine schedule.",
+		"prefix": "StartEngineSchedule"
+	},
+	"ENTITY/StartEngineTask": {
+		"body": [
+			"StartEngineTask(${1:taskID}, ${2:TaskData})$0"
+		],
+		"description": "Called when an engine task has been started on the entity.",
+		"prefix": "StartEngineTask"
+	},
+	"ENTITY/StartSchedule": {
+		"body": [
+			"StartSchedule(${1:sched})$0"
+		],
+		"description": "Starts a schedule previously created by",
+		"prefix": "StartSchedule"
+	},
+	"ENTITY/StartTask": {
+		"body": [
+			"StartTask(${1:task})$0"
+		],
+		"description": "Called once on starting task.",
+		"prefix": "StartTask"
+	},
+	"ENTITY/StartTouch": {
+		"body": [
+			"StartTouch(${1:entity})$0"
+		],
+		"description": "Called when the entity starts touching another entity.",
+		"prefix": "StartTouch"
+	},
+	"ENTITY/StoreOutput": {
+		"body": [
+			"StoreOutput(${1:name}, ${2:info})$0"
+		],
+		"description": "Used to store an output so it can be triggered with",
+		"prefix": "StoreOutput"
+	},
+	"ENTITY/TaskFinished": {
+		"body": [
+			"TaskFinished()$0"
+		],
+		"description": "Returns true if the current running Task is finished.",
+		"prefix": "TaskFinished"
+	},
+	"ENTITY/TaskTime": {
+		"body": [
+			"TaskTime()$0"
+		],
+		"description": "Returns how many seconds we\u0026#39;ve been doing this current task",
+		"prefix": "TaskTime"
+	},
+	"ENTITY/TestCollision": {
+		"body": [
+			"TestCollision(${1:startpos}, ${2:delta}, ${3:isbox}, ${4:extents})$0"
+		],
+		"description": "Allows you to override trace result when a trace hits the entitys Bounding Box.",
+		"prefix": "TestCollision"
+	},
+	"ENTITY/Think": {
+		"body": [
+			"Think()$0"
+		],
+		"description": "Called every frame on the client. Called every tick on the server.",
+		"prefix": "Think"
+	},
+	"ENTITY/Touch": {
+		"body": [
+			"Touch(${1:entity})$0"
+		],
+		"description": "Called when another entity touches the entity.",
+		"prefix": "Touch"
+	},
+	"ENTITY/TriggerOutput": {
+		"body": [
+			"TriggerOutput(${1:output}, ${2:activator}, ${3:data=nil})$0"
+		],
+		"description": "Triggers all outputs stored using",
+		"prefix": "TriggerOutput"
+	},
+	"ENTITY/UpdateTransmitState": {
+		"body": [
+			"UpdateTransmitState()$0"
+		],
+		"description": "Called whenever the transmit state should be updated.",
+		"prefix": "UpdateTransmitState"
+	},
+	"ENTITY/Use": {
+		"body": [
+			"Use(${1:activator}, ${2:caller}, ${3:useType}, ${4:value})$0"
+		],
+		"description": "Called when another entity uses this entity, example would be a player pressing \u0026#34;+use\u0026#34; this entity.",
+		"prefix": "Use"
+	}
+}

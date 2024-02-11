@@ -1,0 +1,55 @@
+{
+	"name": "prettier-java",
+	"displayName": "Prettier Java",
+	"description": "Format Java with Prettier",
+	"version": "0.1.1",
+	"license": "LGPL-3.0+",
+	"publisher": "dotdevru",
+	"author": {
+		"name": "Iv Po",
+		"url": "https://dotdev.ru/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dotdevru/vscode-prettier-java"
+	},
+	"engines": {
+		"vscode": "^1.8.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"onLanguage:toml"
+	],
+	"main": "./out/extension.js",
+	"contributes": {},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"tslint": "^5.12.1",
+		"vscode-test": "^1.2.0"
+	},
+	"dependencies": {
+		"@types/vscode": "^1.41.0",
+		"@types/prettier": "^1.19.0",
+		"prettier": "^1.19.1",
+		"prettier-plugin-java": "^0.6.0"
+	},
+	"__metadata": {
+		"id": "4808d528-744d-473f-b084-2443c00e2bf7",
+		"publisherId": "6e6686ae-1934-47ce-a380-fc36267da0db",
+		"publisherDisplayName": "dotdevru",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"hasPreReleaseVersion": false,
+		"installedTimestamp": 1707623033089
+	}
+}

@@ -1,0 +1,128 @@
+{
+	"input/CheckKeyTrapping": {
+		"body": [
+			"input.CheckKeyTrapping()$0"
+		],
+		"description": "Returns the last key captured by key trapping.",
+		"prefix": "input.CheckKeyTrapping"
+	},
+	"input/GetCursorPos": {
+		"body": [
+			"input.GetCursorPos()$0"
+		],
+		"description": "Returns the cursor\u0026#39;s position on the screen",
+		"prefix": "input.GetCursorPos"
+	},
+	"input/GetKeyName": {
+		"body": [
+			"input.GetKeyName(${1:button})$0"
+		],
+		"description": "Gets the name of the button index.",
+		"prefix": "input.GetKeyName"
+	},
+	"input/IsButtonDown": {
+		"body": [
+			"input.IsButtonDown(${1:button})$0"
+		],
+		"description": "Gets whether the specified button code is down.",
+		"prefix": "input.IsButtonDown"
+	},
+	"input/IsControlDown": {
+		"body": [
+			"input.IsControlDown()$0"
+		],
+		"description": "Returns whether a control key is being pressed",
+		"prefix": "input.IsControlDown"
+	},
+	"input/IsKeyDown": {
+		"body": [
+			"input.IsKeyDown(${1:key})$0"
+		],
+		"description": "Gets whether a key is down",
+		"prefix": "input.IsKeyDown"
+	},
+	"input/IsKeyTrapping": {
+		"body": [
+			"input.IsKeyTrapping()$0"
+		],
+		"description": "Returns whether key trapping is activate and the next key press will be captured.",
+		"prefix": "input.IsKeyTrapping"
+	},
+	"input/IsMouseDown": {
+		"body": [
+			"input.IsMouseDown(${1:mouseKey})$0"
+		],
+		"description": "Gets whether a mouse button is down",
+		"prefix": "input.IsMouseDown"
+	},
+	"input/IsShiftDown": {
+		"body": [
+			"input.IsShiftDown()$0"
+		],
+		"description": "Gets whether a shift key is being pressed",
+		"prefix": "input.IsShiftDown"
+	},
+	"input/LookupBinding": {
+		"body": [
+			"input.LookupBinding(${1:binding}, ${2:exact=false})$0"
+		],
+		"description": "Gets the match uppercase key for the specified binding.",
+		"prefix": "input.LookupBinding"
+	},
+	"input/LookupKeyBinding": {
+		"body": [
+			"input.LookupKeyBinding(${1:key})$0"
+		],
+		"description": "Returns the bind string that the given key is bound to.",
+		"prefix": "input.LookupKeyBinding"
+	},
+	"input/SetCursorPos": {
+		"body": [
+			"input.SetCursorPos(${1:mouseX}, ${2:mouseY})$0"
+		],
+		"description": "Sets the cursor\u0026#39;s position on the screen, relative to the topleft corner of the window",
+		"prefix": "input.SetCursorPos"
+	},
+	"input/StartKeyTrapping": {
+		"body": [
+			"input.StartKeyTrapping()$0"
+		],
+		"description": "Begins waiting for a key to be pressed so we can save it for",
+		"prefix": "input.StartKeyTrapping"
+	},
+	"input/WasKeyPressed": {
+		"body": [
+			"input.WasKeyPressed(${1:key})$0"
+		],
+		"description": "Returns whether a key was initially pressed in the same frame this function was called.",
+		"prefix": "input.WasKeyPressed"
+	},
+	"input/WasKeyReleased": {
+		"body": [
+			"input.WasKeyReleased(${1:key})$0"
+		],
+		"description": "Returns whether a key was released in the same frame this function was called.",
+		"prefix": "input.WasKeyReleased"
+	},
+	"input/WasKeyTyped": {
+		"body": [
+			"input.WasKeyTyped(${1:key})$0"
+		],
+		"description": "Returns whether the key is being held down or not.",
+		"prefix": "input.WasKeyTyped"
+	},
+	"input/WasMouseDoublePressed": {
+		"body": [
+			"input.WasMouseDoublePressed(${1:button})$0"
+		],
+		"description": "Returns whether a mouse key was double pressed in the same frame this function was called.",
+		"prefix": "input.WasMouseDoublePressed"
+	},
+	"input/WasMousePressed": {
+		"body": [
+			"input.WasMousePressed(${1:key})$0"
+		],
+		"description": "Returns whether a mouse key was initially pressed in the same frame this function was called.",
+		"prefix": "input.WasMousePressed"
+	}
+}

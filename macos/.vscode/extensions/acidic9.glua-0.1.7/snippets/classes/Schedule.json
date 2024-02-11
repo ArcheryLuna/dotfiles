@@ -1,0 +1,44 @@
+{
+    "AddTask": {
+        "body": [
+            "AddTask(${1:taskname}, ${2:taskdata})$0"
+        ],
+        "description": "SCHEDULE [Server] \n\n[string] taskname\n  Task name, see ai_task.h\n\n[number] taskdata\n  Task data as a float",
+        "prefix": "AddTask"
+    },
+    "AddTaskEx": {
+        "body": [
+            "AddTaskEx(${1:start}, ${2:run}, ${3:data})$0"
+        ],
+        "description": "SCHEDULE [Server] \n\n[string] start\n  \n\n[string] run\n  \n\n[number] data",
+        "prefix": "AddTaskEx"
+    },
+    "EngTask": {
+        "body": [
+            "EngTask(${1:taskname}, ${2:taskdata})$0"
+        ],
+        "description": "SCHEDULE [Server] \n\n[string] taskname\n  Task name.\n\n[number] taskdata\n  Task data.",
+        "prefix": "EngTask"
+    },
+    "GetTask": {
+        "body": [
+            "GetTask(${1:num})$0"
+        ],
+        "description": "SCHEDULE [Server] \n\n[number] num\n  Task index.",
+        "prefix": "GetTask"
+    },
+    "Init": {
+        "body": [
+            "Init(${1:debugName})$0"
+        ],
+        "description": "SCHEDULE [Server] \n\n[string] debugName\n  The name passed from ai_schedule.New.",
+        "prefix": "Init"
+    },
+    "NumTasks": {
+        "body": [
+            "NumTasks()$0"
+        ],
+        "description": "SCHEDULE [Server]",
+        "prefix": "NumTasks"
+    }
+}

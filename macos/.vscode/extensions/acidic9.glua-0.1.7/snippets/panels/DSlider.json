@@ -1,0 +1,149 @@
+{
+    "GetDragging": {
+        "body": [
+            "GetDragging()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "GetDragging"
+    },
+    "GetLockX": {
+        "body": [
+            "GetLockX()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "GetLockX"
+    },
+    "GetLockY": {
+        "body": [
+            "GetLockY()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "GetLockY"
+    },
+    "GetNotches": {
+        "body": [
+            "GetNotches()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "GetNotches"
+    },
+    "GetNumSlider": {
+        "body": [
+            "GetNumSlider()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "GetNumSlider"
+    },
+    "GetSlideX": {
+        "body": [
+            "GetSlideX()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "GetSlideX"
+    },
+    "GetSlideY": {
+        "body": [
+            "GetSlideY()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "GetSlideY"
+    },
+    "GetTrapInside": {
+        "body": [
+            "GetTrapInside()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "GetTrapInside"
+    },
+    "IsEditing": {
+        "body": [
+            "IsEditing()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "IsEditing"
+    },
+    "SetBackground": {
+        "body": [
+            "SetBackground(${1:path})$0"
+        ],
+        "description": "DSLIDER [Client] \n\n[string] path\n  Path to the image.",
+        "prefix": "SetBackground"
+    },
+    "SetDragging": {
+        "body": [
+            "SetDragging(${1:dragging})$0"
+        ],
+        "description": "DSLIDER [Client] \n\n[boolean] dragging",
+        "prefix": "SetDragging"
+    },
+    "SetImage": {
+        "body": [
+            "SetImage()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "SetImage"
+    },
+    "SetImageColor": {
+        "body": [
+            "SetImageColor()$0"
+        ],
+        "description": "DSLIDER [Client]",
+        "prefix": "SetImageColor"
+    },
+    "SetLockX": {
+        "body": [
+            "SetLockX(${1:lockX=nil})$0"
+        ],
+        "description": "DSLIDER [Client] Sets the lock on the X axis. For example the value 0.5 will lock the draggable panel to half the width of the slider's panel.\n\n[number] lockX=nil\n  Set to nil to reset lock.\n\nThe value range is from 0 to 1.",
+        "prefix": "SetLockX"
+    },
+    "SetLockY": {
+        "body": [
+            "SetLockY(${1:lockY=nil})$0"
+        ],
+        "description": "DSLIDER [Client] \n\n[number] lockY=nil\n  Set to nil to reset lock.\n\nThe value range is from 0 to 1.",
+        "prefix": "SetLockY"
+    },
+    "SetNotches": {
+        "body": [
+            "SetNotches(${1:notches})$0"
+        ],
+        "description": "DSLIDER [Client] \n\n[number] notches",
+        "prefix": "SetNotches"
+    },
+    "SetNumSlider": {
+        "body": [
+            "SetNumSlider(${1:})$0"
+        ],
+        "description": "DSLIDER [Client] \n\n[any]",
+        "prefix": "SetNumSlider"
+    },
+    "SetSlideX": {
+        "body": [
+            "SetSlideX(${1:x})$0"
+        ],
+        "description": "DSLIDER [Client] \n\n[number] x\n  The value range seems to be from 0 to 1",
+        "prefix": "SetSlideX"
+    },
+    "SetSlideY": {
+        "body": [
+            "SetSlideY(${1:y})$0"
+        ],
+        "description": "DSLIDER [Client] \n\n[number] y\n  The value range seems to be from 0 to 1",
+        "prefix": "SetSlideY"
+    },
+    "SetTrapInside": {
+        "body": [
+            "SetTrapInside(${1:trap})$0"
+        ],
+        "description": "DSLIDER [Client] \n\n[boolean] trap",
+        "prefix": "SetTrapInside"
+    },
+    "TranslateValues": {
+        "body": [
+            "TranslateValues(${1:x}, ${2:y})$0"
+        ],
+        "description": "DSLIDER [Client] For override by child panels, such as DNumSlider.\n\n[number] x\n  \n\n[number] y",
+        "prefix": "TranslateValues"
+    }
+}

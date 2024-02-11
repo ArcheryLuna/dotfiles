@@ -1,0 +1,72 @@
+{
+    "GetBaseRGB": {
+        "body": [
+            "GetBaseRGB()$0"
+        ],
+        "description": "DCOLORCUBE [Client]",
+        "prefix": "GetBaseRGB"
+    },
+    "GetHue": {
+        "body": [
+            "GetHue()$0"
+        ],
+        "description": "DCOLORCUBE [Client]",
+        "prefix": "GetHue"
+    },
+    "GetRGB": {
+        "body": [
+            "GetRGB()$0"
+        ],
+        "description": "DCOLORCUBE [Client] Returns the color cube's current set color.",
+        "prefix": "GetRGB"
+    },
+    "OnUserChanged": {
+        "body": [
+            "OnUserChanged(${1:color})$0"
+        ],
+        "description": "DCOLORCUBE [Client] Function which is called when the color cube slider is moved (through user input). Meant to be overridden.\n\n[table] color\n  The new color, uses Color structure.",
+        "prefix": "OnUserChanged"
+    },
+    "SetBaseRGB": {
+        "body": [
+            "SetBaseRGB(${1:color})$0"
+        ],
+        "description": "DCOLORCUBE [Client] Sets the base color and the color used to draw the color cube panel itself.\n\n[table] color\n  The base color to set, uses Color structure.",
+        "prefix": "SetBaseRGB"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color})$0"
+        ],
+        "description": "DCOLORCUBE [Client] Sets the base color of the color cube and updates the slider position.\n\n[table] color\n  The color to set, uses Color structure.",
+        "prefix": "SetColor"
+    },
+    "SetHue": {
+        "body": [
+            "SetHue(${1:hue})$0"
+        ],
+        "description": "DCOLORCUBE [Client] \n\n[number] hue",
+        "prefix": "SetHue"
+    },
+    "SetRGB": {
+        "body": [
+            "SetRGB(${1:clr})$0"
+        ],
+        "description": "DCOLORCUBE [Client] \n\n[table] clr\n  A Color structure",
+        "prefix": "SetRGB"
+    },
+    "TranslateValues": {
+        "body": [
+            "TranslateValues(${1:x}, ${2:y})$0"
+        ],
+        "description": "DCOLORCUBE [Client] \n\n[number] x\n  The x position to sample color from/the percentage of saturation to remove from the color (ranges from 0.0 to 1.0).\n\n[number] y\n  The y position to sample color from/the percentage of brightness or value to remove from the color (ranges from 0.0 to 1.0).",
+        "prefix": "TranslateValues"
+    },
+    "UpdateColor": {
+        "body": [
+            "UpdateColor(${1:x=nil}, ${2:y=nil})$0"
+        ],
+        "description": "DCOLORCUBE [Client] \n\n[number] x=nil\n  The x position to set color to/the percentage of saturation to remove from the color (ranges from 0.0 to 1.0).\n\n[number] y=nil\n  The y position to set color to/the percentage of brightness or value to remove from the color (ranges from 0.0 to 1.0).",
+        "prefix": "UpdateColor"
+    }
+}

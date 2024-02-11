@@ -1,0 +1,30 @@
+{
+    "GWEN.CreateTextureBorder": {
+        "body": [
+            "GWEN.CreateTextureBorder(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:left}, ${6:top}, ${7:right}, ${8:bottom})$0"
+        ],
+        "description": "GWEN [Client/Menu] Used in derma skins to create a bordered rectangle drawing function from an image. The texture is taken from SKIN.GwenTexture\n\n[number] x\n  The X coordinate on the texture\n\n[number] y\n  The Y coordinate on the texture\n\n[number] w\n  Width of the area on texture\n\n[number] h\n  Height of the area on texture\n\n[number] left\n  Left width of border\n\n[number] top\n  Top width of border\n\n[number] right\n  Right width of border\n\n[number] bottom\n  Bottom width of border",
+        "prefix": "GWEN.CreateTextureBorder"
+    },
+    "GWEN.CreateTextureCentered": {
+        "body": [
+            "GWEN.CreateTextureCentered(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "GWEN [Client/Menu] Used in derma skins to create a rectangle drawing function from an image. The rectangle will not be scaled, but instead it will be drawn in the center of the box. The texture is taken from SKIN.GwenTexture\n\n[number] x\n  The X coordinate on the texture\n\n[number] y\n  The Y coordinate on the texture\n\n[number] w\n  Width of the area on texture\n\n[number] h\n  Height of the area on texture",
+        "prefix": "GWEN.CreateTextureCentered"
+    },
+    "GWEN.CreateTextureNormal": {
+        "body": [
+            "GWEN.CreateTextureNormal(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+        ],
+        "description": "GWEN [Client/Menu] Used in derma skins to create a rectangle drawing function from an image. The texture of the rectangle will be scaled. The texture is taken from SKIN.GwenTexture\n\n[number] x\n  The X coordinate on the texture\n\n[number] y\n  The Y coordinate on the texture\n\n[number] w\n  Width of the area on texture\n\n[number] h\n  Height of the area on texture",
+        "prefix": "GWEN.CreateTextureNormal"
+    },
+    "GWEN.TextureColor": {
+        "body": [
+            "GWEN.TextureColor(${1:x}, ${2:y})$0"
+        ],
+        "description": "GWEN [Client/Menu] When used in a material skin, it returns a color value from a point in the skin image.\n\n[number] x\n  X position of the pixel to get the color from.\n\n[number] y\n  Y position of the pixel to get the color from.",
+        "prefix": "GWEN.TextureColor"
+    }
+}

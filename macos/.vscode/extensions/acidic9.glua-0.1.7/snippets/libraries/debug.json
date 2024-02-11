@@ -1,0 +1,121 @@
+{
+    "debug.Trace": {
+        "body": [
+            "debug.Trace()$0"
+        ],
+        "description": "DEBUG [Shared/Menu]",
+        "prefix": "debug.Trace"
+    },
+    "debug.debug": {
+        "body": [
+            "debug.debug()$0"
+        ],
+        "description": "DEBUG [Shared/Menu]",
+        "prefix": "debug.debug"
+    },
+    "debug.getfenv": {
+        "body": [
+            "debug.getfenv(${1:object})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] \n\n[table] object\n  Object to get environment of",
+        "prefix": "debug.getfenv"
+    },
+    "debug.gethook": {
+        "body": [
+            "debug.gethook(${1:thread=nil})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] Returns the current hook settings of the passed thread. The thread argument can be omitted. This is unrelated to gamemode hooks. More information on hooks can be found at http://www.lua.org/pil/23.2.html\n\n[thread] thread=nil\n  Which thread to retrieve its hook from",
+        "prefix": "debug.gethook"
+    },
+    "debug.getinfo": {
+        "body": [
+            "debug.getinfo(${1:funcOrStackLevel}, ${2:fields=\"flnSu\"})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] Returns debug information about a function.\n\n[function] funcOrStackLevel\n  Takes either a function or a stack level as an argument (stack level 0 always corresponds to the debug.getinfo call).\n\nReturns useful information about that function in a table.\n\n[string] fields=\"flnSu\"\n  A string whose characters specify the information to be retrieved.\nf - Populates the func field.\nl - Populates the currentline field.\nn - Populates the name and namewhat fields - only works if stack level is passed rather than function pointer.\nS - Populates the location fields (lastlinedefined, linedefined, short_src, source and what).\nu - Populates the argument and upvalue fields (isvararg, nparams, nups)",
+        "prefix": "debug.getinfo"
+    },
+    "debug.getlocal": {
+        "body": [
+            "debug.getlocal(${1:thread=Currentthread}, ${2:level}, ${3:index})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] Gets the name and value of a local variable indexed from the level\n\n[thread] thread=Currentthread\n  The thread\n\n[number] level\n  The level above the thread.\n0 = the function that was called (most always this function)'s arguments\n1 = the thread that had called this function.\n2 = the thread that had called the function that started the thread that called this function.\n\nA function defined in Lua can also be passed as the level. The index will specify the parameter's name to be returned (a parameter will have a value of nil).\n\n[number] index\n  The variable's index you want to get.\n1 = the first local defined in the thread\n2 = the second local defined in the thread\n\netc...",
+        "prefix": "debug.getlocal"
+    },
+    "debug.getmetatable": {
+        "body": [
+            "debug.getmetatable(${1:object})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] \n\n[any] object\n  The object to retrieve the metatable from.",
+        "prefix": "debug.getmetatable"
+    },
+    "debug.getregistry": {
+        "body": [
+            "debug.getregistry()$0"
+        ],
+        "description": "DEBUG [Shared/Menu]",
+        "prefix": "debug.getregistry"
+    },
+    "debug.getupvalue": {
+        "body": [
+            "debug.getupvalue(${1:func}, ${2:index})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] Used for getting variable values in an index from the passed function\n\n[function] func\n  Function to get the upvalue indexed from\n\n[number] index\n  The index from func",
+        "prefix": "debug.getupvalue"
+    },
+    "debug.setfenv": {
+        "body": [
+            "debug.setfenv(${1:object}, ${2:env})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] Sets the environment of the passed object.\n\n[table] object\n  Object to set environment of\n\n[table] env\n  Environment to set",
+        "prefix": "debug.setfenv"
+    },
+    "debug.sethook": {
+        "body": [
+            "debug.sethook(${1:thread}, ${2:hook}, ${3:mask}, ${4:count})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] Sets the given function as a Lua hook. This is completely different to gamemode hooks. The thread argument can be completely omitted and calling this function with no arguments will remove the current hook. This is used by default for infinite loop detection. More information on hooks can be found at http://www.lua.org/pil/23.2.html Hooks are not always ran when code that has been compiled by LuaJIT's JIT compiler is being executed. This means that relying on them for infinite loop protection is unwise.\n\n[thread] thread\n  Thread to set the hook on. This argument can be omited\n\n[function] hook\n  Function for the hook to call\n\n[string] mask\n  The hook's mask\n\n[number] count\n  How often to call the hook (in instructions). 0 for every instruction",
+        "prefix": "debug.sethook"
+    },
+    "debug.setlocal": {
+        "body": [
+            "debug.setlocal(${1:thread=CurrentThread}, ${2:level}, ${3:index}, ${4:value=nil})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] \n\n[thread] thread=CurrentThread\n  The thread\n\n[number] level\n  The level above the thread.\n0 is the function that was called (most always this function)'s arguments\n1 is the thread that had called this function.\n\n2 is the thread that had called the function that started the thread that called this function.\n\n[number] index\n  The variable's index you want to get.\n1 = the first local defined in the thread\n\n2 = the second local defined in the thread\n\n[any] value=nil\n  The value to set the local to",
+        "prefix": "debug.setlocal"
+    },
+    "debug.setmetatable": {
+        "body": [
+            "debug.setmetatable(${1:object}, ${2:metatable})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] Sets the object's metatable. Unlike setmetatable, this function works regardless of whether the first object passed is a valid table or not; this function even works on primitive datatypes such as numbers, functions, and even nil.\n\n[any] object\n  Object to set the metatable for.\n\n[table] metatable\n  The metatable to set for the object.\n\nIf this argument is nil, then the object's metatable is removed.",
+        "prefix": "debug.setmetatable"
+    },
+    "debug.setupvalue": {
+        "body": [
+            "debug.setupvalue(${1:func}, ${2:index}, ${3:val=nil})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] \n\n[function] func\n  The function to index the upvalue from\n\n[number] index\n  The index from func\n\n[any] val=nil\n  The value to set the upvalue to.",
+        "prefix": "debug.setupvalue"
+    },
+    "debug.traceback": {
+        "body": [
+            "debug.traceback(${1:thread=currentthread}, ${2:message=nil}, ${3:level=1})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] Returns a full execution stack trace.\n\n[thread] thread=currentthread\n  Thread (ie. error object from xpcall error handler) to build traceback for.\n\n[string] message=nil\n  Appended at the beginning of the traceback.\n\n[number] level=1\n  Which level to start the traceback.",
+        "prefix": "debug.traceback"
+    },
+    "debug.upvalueid": {
+        "body": [
+            "debug.upvalueid(${1:func}, ${2:index})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] \n\n[function] func\n  The function to index the upvalue from\n\n[number] index\n  The index from func",
+        "prefix": "debug.upvalueid"
+    },
+    "debug.upvaluejoin": {
+        "body": [
+            "debug.upvaluejoin(${1:f1}, ${2:n1}, ${3:f2}, ${4:n2})$0"
+        ],
+        "description": "DEBUG [Shared/Menu] \n\n[function] f1\n  \n\n[number] n1\n  \n\n[function] f2\n  \n\n[number] n2",
+        "prefix": "debug.upvaluejoin"
+    }
+}

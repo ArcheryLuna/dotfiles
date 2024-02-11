@@ -1,0 +1,100 @@
+{
+    "timer.Adjust": {
+        "body": [
+            "timer.Adjust(${1:identifier}, ${2:delay}, ${3:repetitions}, ${4:func})$0"
+        ],
+        "description": "TIMER [Shared/Menu] Adjusts the timer if the timer with the given identifier exists.\n\n[any] identifier\n  Identifier of the timer to adjust.\n\n[number] delay\n  The delay interval in seconds.\n\n[number] repetitions\n  Repetitions. Use 0 for infinite.\n\n[function] func\n  The new function.",
+        "prefix": "timer.Adjust"
+    },
+    "timer.Check": {
+        "body": [
+            "timer.Check()$0"
+        ],
+        "description": "TIMER [Shared/Menu]",
+        "prefix": "timer.Check"
+    },
+    "timer.Create": {
+        "body": [
+            "timer.Create(${1:identifier}, ${2:delay}, ${3:repetitions}, ${4:func})$0"
+        ],
+        "description": "TIMER [Shared/Menu] Creates a new timer that will repeat its function given amount of times.\nThis function also requires the timer to be named, which allows you to control it after it was created via the timer library. For a simple one-time timer with no identifiers, see timer.Simple.\n\n[string] identifier\n  Identifier of the timer to create. Must be unique. If a timer already exists with the same identifier, that timer will be updated to the new settings and reset.\n\n[number] delay\n  The delay interval in seconds. If the delay is too small, the timer will fire on the next frame/tick.\n\n[number] repetitions\n  The number of times to repeat the timer. Enter 0 for infinite repetitions.\n\n[function] func\n  Function called when timer has finished the countdown.",
+        "prefix": "timer.Create"
+    },
+    "timer.Destroy": {
+        "body": [
+            "timer.Destroy(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] \n\n[string] identifier\n  Identifier of the timer to destroy.",
+        "prefix": "timer.Destroy"
+    },
+    "timer.Exists": {
+        "body": [
+            "timer.Exists(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] Returns whenever the given timer exists or not.\n\n[string] identifier\n  Identifier of the timer.",
+        "prefix": "timer.Exists"
+    },
+    "timer.Pause": {
+        "body": [
+            "timer.Pause(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] \n\n[any] identifier\n  Identifier of the timer.",
+        "prefix": "timer.Pause"
+    },
+    "timer.Remove": {
+        "body": [
+            "timer.Remove(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] \n\n[string] identifier\n  Identifier of the timer to remove.",
+        "prefix": "timer.Remove"
+    },
+    "timer.RepsLeft": {
+        "body": [
+            "timer.RepsLeft(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] \n\n[any] identifier\n  Identifier of the timer.",
+        "prefix": "timer.RepsLeft"
+    },
+    "timer.Simple": {
+        "body": [
+            "timer.Simple(${1:delay}, ${2:func})$0"
+        ],
+        "description": "TIMER [Shared/Menu] Creates a simple timer that runs the given function after a specified delay. For a more advanced version that you can control after creation, see timer.Create.\n\n[number] delay\n  How long until the function should be ran (in seconds).\n\n[function] func\n  The function to run after the specified delay.",
+        "prefix": "timer.Simple"
+    },
+    "timer.Start": {
+        "body": [
+            "timer.Start(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] \n\n[any] identifier\n  Identifier of the timer.",
+        "prefix": "timer.Start"
+    },
+    "timer.Stop": {
+        "body": [
+            "timer.Stop(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] \n\n[any] identifier\n  Identifier of the timer.",
+        "prefix": "timer.Stop"
+    },
+    "timer.TimeLeft": {
+        "body": [
+            "timer.TimeLeft(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] \n\n[any] identifier\n  Identifier of the timer.",
+        "prefix": "timer.TimeLeft"
+    },
+    "timer.Toggle": {
+        "body": [
+            "timer.Toggle(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] \n\n[any] identifier\n  Identifier of the timer.",
+        "prefix": "timer.Toggle"
+    },
+    "timer.UnPause": {
+        "body": [
+            "timer.UnPause(${1:identifier})$0"
+        ],
+        "description": "TIMER [Shared/Menu] \n\n[any] identifier\n  Identifier of the timer.",
+        "prefix": "timer.UnPause"
+    }
+}

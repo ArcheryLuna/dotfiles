@@ -1,0 +1,51 @@
+{
+    "GetSelectedNumber": {
+        "body": [
+            "GetSelectedNumber()$0"
+        ],
+        "description": "DBINDER [Client]",
+        "prefix": "GetSelectedNumber"
+    },
+    "GetValue": {
+        "body": [
+            "GetValue()$0"
+        ],
+        "description": "DBINDER [Client]",
+        "prefix": "GetValue"
+    },
+    "OnChange": {
+        "body": [
+            "OnChange(${1:iNum})$0"
+        ],
+        "description": "DBINDER [Client] \n\n[number] iNum\n  The new bound key. See input.GetKeyName.",
+        "prefix": "OnChange"
+    },
+    "SetSelected": {
+        "body": [
+            "SetSelected(${1:keyCode})$0"
+        ],
+        "description": "DBINDER [Client] \n\n[number] keyCode\n  The key code of the key to bind. See KEY_ Enums.",
+        "prefix": "SetSelected"
+    },
+    "SetSelectedNumber": {
+        "body": [
+            "SetSelectedNumber(${1:keyCode})$0"
+        ],
+        "description": "DBINDER [Client] \n\n[number] keyCode\n  The key code of the key to bind. See KEY_ Enums.",
+        "prefix": "SetSelectedNumber"
+    },
+    "SetValue": {
+        "body": [
+            "SetValue(${1:keyCode})$0"
+        ],
+        "description": "DBINDER [Client] \n\n[number] keyCode\n  The key code of the key to bind. See KEY_ Enums.",
+        "prefix": "SetValue"
+    },
+    "UpdateText": {
+        "body": [
+            "UpdateText()$0"
+        ],
+        "description": "DBINDER [Client]",
+        "prefix": "UpdateText"
+    }
+}

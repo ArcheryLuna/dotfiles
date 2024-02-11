@@ -1,0 +1,44 @@
+{
+	"DHTML/AddFunction": {
+		"body": [
+			"AddFunction(${1:library}, ${2:name}, ${3:callback})$0"
+		],
+		"description": "Defines a Javascript function that when called will call a Lua callback.",
+		"prefix": "AddFunction"
+	},
+	"DHTML/Call": {
+		"body": [
+			"Call(${1:js})$0"
+		],
+		"description": "Runs/Executes a string as JavaScript code.",
+		"prefix": "Call"
+	},
+	"DHTML/ConsoleMessage": {
+		"body": [
+			"ConsoleMessage(${1:msg})$0"
+		],
+		"description": "Called when the page inside the",
+		"prefix": "ConsoleMessage"
+	},
+	"DHTML/GetAllowLua": {
+		"body": [
+			"GetAllowLua()$0"
+		],
+		"description": "Returns if the loaded page can run Lua code, set by",
+		"prefix": "GetAllowLua"
+	},
+	"DHTML/SetAllowLua": {
+		"body": [
+			"SetAllowLua(${1:allow=false})$0"
+		],
+		"description": "Determines whether the loaded page can run Lua code or not. See",
+		"prefix": "SetAllowLua"
+	},
+	"DHTML/SetScrollbars": {
+		"body": [
+			"SetScrollbars(${1:show})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetScrollbars"
+	}
+}

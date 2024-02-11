@@ -1,0 +1,51 @@
+{
+    "coroutine.create": {
+        "body": [
+            "coroutine.create(${1:func})$0"
+        ],
+        "description": "COROUTINE [Shared/Menu] Creates a coroutine of the given function.\n\n[function] func\n  The function for the coroutine to use",
+        "prefix": "coroutine.create"
+    },
+    "coroutine.resume": {
+        "body": [
+            "coroutine.resume(${1:coroutine}, ${2:args})$0"
+        ],
+        "description": "COROUTINE [Shared/Menu] Resumes the given coroutine and passes the given vararg to either the function arguments or the coroutine.yield that is inside that function and returns whatever yield is called with the next time or by the final return in the function.\n\n[thread] coroutine\n  Coroutine to resume.\n\n[vararg] args\n  Arguments to be returned by coroutine.yield.",
+        "prefix": "coroutine.resume"
+    },
+    "coroutine.running": {
+        "body": [
+            "coroutine.running()$0"
+        ],
+        "description": "COROUTINE [Shared/Menu]",
+        "prefix": "coroutine.running"
+    },
+    "coroutine.status": {
+        "body": [
+            "coroutine.status(${1:coroutine})$0"
+        ],
+        "description": "COROUTINE [Shared/Menu] \n\n[thread] coroutine\n  Coroutine to check the status of.",
+        "prefix": "coroutine.status"
+    },
+    "coroutine.wait": {
+        "body": [
+            "coroutine.wait(${1:duration})$0"
+        ],
+        "description": "COROUTINE [Shared] \n\n[number] duration\n  The number of seconds to wait",
+        "prefix": "coroutine.wait"
+    },
+    "coroutine.wrap": {
+        "body": [
+            "coroutine.wrap(${1:coroutine})$0"
+        ],
+        "description": "COROUTINE [Shared/Menu] \n\n[function] coroutine\n  Coroutine to resume.",
+        "prefix": "coroutine.wrap"
+    },
+    "coroutine.yield": {
+        "body": [
+            "coroutine.yield(${1:returnValue})$0"
+        ],
+        "description": "COROUTINE [Shared/Menu] Pauses the active coroutine and passes all additional variables to the call of coroutine.resume that resumed the coroutine last time, and returns all additional variables that were passed to the previous call of resume.\n\n[vararg] returnValue\n  Arguments to be returned by the last call of coroutine.resume",
+        "prefix": "coroutine.yield"
+    }
+}

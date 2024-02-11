@@ -1,0 +1,37 @@
+{
+    "Close": {
+        "body": [
+            "Close()$0"
+        ],
+        "description": "DTOOLTIP [Client]",
+        "prefix": "Close"
+    },
+    "DrawArrow": {
+        "body": [
+            "DrawArrow(${1:x}, ${2:y})$0"
+        ],
+        "description": "DTOOLTIP [Client] \n\n[number] x\n  arrow location on the x axis\n\n[number] y\n  arrow location on the y axis",
+        "prefix": "DrawArrow"
+    },
+    "OpenForPanel": {
+        "body": [
+            "OpenForPanel(${1:pnl})$0"
+        ],
+        "description": "DTOOLTIP [Client] \n\n[Panel] pnl",
+        "prefix": "OpenForPanel"
+    },
+    "PositionTooltip": {
+        "body": [
+            "PositionTooltip()$0"
+        ],
+        "description": "DTOOLTIP [Client]",
+        "prefix": "PositionTooltip"
+    },
+    "SetContents": {
+        "body": [
+            "SetContents(${1:panel}, ${2:bDelete=false})$0"
+        ],
+        "description": "DTOOLTIP [Client] \n\n[Panel] panel\n  Contents\n\n[boolean] bDelete=false\n  If set to true, the panel in the first argument will be automatically removed when DTooltip is closed via DTooltip:Close.",
+        "prefix": "SetContents"
+    }
+}

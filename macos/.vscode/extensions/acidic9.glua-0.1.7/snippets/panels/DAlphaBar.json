@@ -1,0 +1,37 @@
+{
+    "GetBarColor": {
+        "body": [
+            "GetBarColor()$0"
+        ],
+        "description": "DALPHABAR [Client]",
+        "prefix": "GetBarColor"
+    },
+    "GetValue": {
+        "body": [
+            "GetValue()$0"
+        ],
+        "description": "DALPHABAR [Client]",
+        "prefix": "GetValue"
+    },
+    "OnChange": {
+        "body": [
+            "OnChange(${1:alpha})$0"
+        ],
+        "description": "DALPHABAR [Client] \n\n[number] alpha\n  The new alpha value",
+        "prefix": "OnChange"
+    },
+    "SetBarColor": {
+        "body": [
+            "SetBarColor(${1:clr})$0"
+        ],
+        "description": "DALPHABAR [Client] \n\n[table] clr\n  The new Color structure to set. See Color.",
+        "prefix": "SetBarColor"
+    },
+    "SetValue": {
+        "body": [
+            "SetValue(${1:alpha})$0"
+        ],
+        "description": "DALPHABAR [Client] \n\n[number] alpha\n  The new alpha value to set",
+        "prefix": "SetValue"
+    }
+}

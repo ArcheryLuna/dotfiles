@@ -1,0 +1,23 @@
+{
+    "menubar.Init": {
+        "body": [
+            "menubar.Init()$0"
+        ],
+        "description": "MENUBAR [Client]",
+        "prefix": "menubar.Init"
+    },
+    "menubar.IsParent": {
+        "body": [
+            "menubar.IsParent(${1:pnl})$0"
+        ],
+        "description": "MENUBAR [Client] \n\n[Panel] pnl\n  The panel to check",
+        "prefix": "menubar.IsParent"
+    },
+    "menubar.ParentTo": {
+        "body": [
+            "menubar.ParentTo(${1:pnl})$0"
+        ],
+        "description": "MENUBAR [Client] \n\n[Panel] pnl\n  The panel to parent to",
+        "prefix": "menubar.ParentTo"
+    }
+}

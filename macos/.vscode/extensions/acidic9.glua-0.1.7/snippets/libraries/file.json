@@ -1,0 +1,79 @@
+{
+    "file.Append": {
+        "body": [
+            "file.Append(${1:name}, ${2:content})$0"
+        ],
+        "description": "FILE [Shared/Menu] Appends a file relative to the data folder.\n\n[string] name\n  The file's name.\n\n[string] content\n  The content which should be appended to the file.",
+        "prefix": "file.Append"
+    },
+    "file.CreateDir": {
+        "body": [
+            "file.CreateDir(${1:name})$0"
+        ],
+        "description": "FILE [Shared/Menu] Creates a directory that is relative to the data folder.\n\n[string] name\n  The directory's name.",
+        "prefix": "file.CreateDir"
+    },
+    "file.Delete": {
+        "body": [
+            "file.Delete(${1:name})$0"
+        ],
+        "description": "FILE [Shared/Menu] Deletes a file or empty folder that is relative to the data folder.\nYou can't remove any files outside of data folder.\n\n[string] name\n  The file name",
+        "prefix": "file.Delete"
+    },
+    "file.Exists": {
+        "body": [
+            "file.Exists(${1:name}, ${2:path})$0"
+        ],
+        "description": "FILE [Shared/Menu] Returns a boolean of whether the file or directory exists or not.\n\n[string] name\n  The file or directory's name.\n\n[string] path\n  The path of where to look for the file.\n\n \"GAME\" Structured like base folder (garrysmod/), searches all the mounted content (main folder, addons, mounted games etc)\n \"LUA\" or \"lsv\" - All Lua folders (lua/) including gamesmodes and addons\n \"DATA\" Data folder (garrysmod/data)\n \"MOD\" Strictly the game folder (garrysmod/), ignores mounting.",
+        "prefix": "file.Exists"
+    },
+    "file.Find": {
+        "body": [
+            "file.Find(${1:name}, ${2:path}, ${3:sorting=\"nameasc\"})$0"
+        ],
+        "description": "FILE [Shared/Menu] Returns a list of files and directories inside a single folder.\n\n[string] name\n  The wildcard to search for. \"models/*.mdl\" will list .mdl files in the models/ folder.\n\n[string] path\n  The path to look for the files and directories in. See this list for a list of valid paths.\n\n[string] sorting=\"nameasc\"\n  The sorting to be used, optional.\n\n \"nameasc\" sort the files ascending by name\n \"namedesc\" sort the files descending by name\n \"dateasc\" sort the files ascending by date\n \"datedesc\" sort the files descending by date",
+        "prefix": "file.Find"
+    },
+    "file.IsDir": {
+        "body": [
+            "file.IsDir(${1:fileName}, ${2:path})$0"
+        ],
+        "description": "FILE [Shared/Menu] Returns if the given file is a directory.\n\n[string] fileName\n  The file or directory's name.\n\n[string] path\n  The path type.",
+        "prefix": "file.IsDir"
+    },
+    "file.Open": {
+        "body": [
+            "file.Open(${1:fileName}, ${2:fileMode}, ${3:path})$0"
+        ],
+        "description": "FILE [Shared/Menu] Attempts to open a file with the given mode.\n\n[string] fileName\n  The files name. See file.Write for details on filename restrictions when writing to files.\n\n[string] fileMode\n  The mode to open the file in. Possible values are:\n\n r - read mode\n w - write mode\n a - append mode\n\n rb - binary read mode\n wb - binary write mode\n ab - binary append mode\n\n[string] path\n  The path type.\n\n \"GAME\" Structured like base folder (garrysmod/), searches all the mounted content (main folder, addons, mounted games etc)\n \"LUA\" or \"lsv\" - All Lua folders (lua/) including gamesmodes and addons\n \"DATA\" Data folder (garrysmod/data)\n \"MOD\" Strictly the game folder (garrysmod/), ignores mounting.",
+        "prefix": "file.Open"
+    },
+    "file.Read": {
+        "body": [
+            "file.Read(${1:fileName}, ${2:path=\"DATA\"})$0"
+        ],
+        "description": "FILE [Shared/Menu] Returns the content of a file. Beware of casing -- some filesystems are case-sensitive. SRCDS on Linux seems to force file/directory creation to lowercase, but will not modify read operations.\n\n[string] fileName\n  The name of the file.\n\n[string] path=\"DATA\"\n  The path used to look up the file.\n\n \"GAME\" Structured like base folder (garrysmod/), searches all the mounted content (main folder, addons, mounted games etc)\n \"LUA\" or \"lsv\" - All Lua folders (lua/) including gamesmodes and addons\n \"DATA\" Data folder (garrysmod/data)\n \"MOD\" Strictly the game folder (garrysmod/), ignores mounting.\n\nIt can also be a boolean:\n\n true = \"GAME\"\n false = \"DATA\"",
+        "prefix": "file.Read"
+    },
+    "file.Size": {
+        "body": [
+            "file.Size(${1:fileName}, ${2:path})$0"
+        ],
+        "description": "FILE [Shared/Menu] Returns the file's size in bytes. If the file is not found, returns -1.\n\n[string] fileName\n  The file's name.\n\n[string] path\n  The path type.\n\n \"GAME\" Structured like base folder (garrysmod/), searches all the mounted content (main folder, addons, mounted games etc)\n \"LUA\" or \"lsv\" - All Lua folders (lua/) including gamesmodes and addons\n \"DATA\" Data folder (garrysmod/data)\n \"MOD\" Strictly the game folder (garrysmod/), ignores mounting.",
+        "prefix": "file.Size"
+    },
+    "file.Time": {
+        "body": [
+            "file.Time(${1:path}, ${2:gamePath})$0"
+        ],
+        "description": "FILE [Shared/Menu] Returns when the file or folder was lasted modified in Unix time.\n\n[string] path\n  The file or folder path.\n\n[string] gamePath\n  The game path to be used.\n\n \"GAME\" Structured like base folder (garrysmod/), searches all the mounted content (main folder, addons, mounted games etc)\n \"LUA\" or \"lsv\" - All Lua folders (lua/) including gamesmodes and addons\n \"DATA\" Data folder (garrysmod/data)\n \"MOD\" Strictly the game folder (garrysmod/), ignores mounting.",
+        "prefix": "file.Time"
+    },
+    "file.Write": {
+        "body": [
+            "file.Write(${1:fileName}, ${2:content})$0"
+        ],
+        "description": "FILE [Shared/Menu] Writes the given string to a file. Erases all previous data in the file. To add data without deleting previous data, use file.Append. It is recommended to write only to lowercase file paths and names because some filesystems are case-sensitive. The Linux build of SRCDS seems to auto-lower directory and file names on write, but not on read.\n\n[string] fileName\n  The name of the file being written into.\nThe filename must end with \".txt\", \".jpg\", \".png\", \".vtf\" or \".dat\" and the path is relative to the data/ folder.\n\nRestricted symbols are: \" :\n\n[string] content\n  The content that will be written into the file.",
+        "prefix": "file.Write"
+    }
+}

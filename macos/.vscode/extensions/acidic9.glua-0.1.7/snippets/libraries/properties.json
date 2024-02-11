@@ -1,0 +1,30 @@
+{
+    "properties.Add": {
+        "body": [
+            "properties.Add(${1:name}, ${2:propertyData})$0"
+        ],
+        "description": "PROPERTIES [Shared] Add properties to the properties module\n\n[string] name\n  A unique name used to identify the property\n\n[table] propertyData\n  A table that defines the property. Uses the PropertyAdd structure.",
+        "prefix": "properties.Add"
+    },
+    "properties.GetHovered": {
+        "body": [
+            "properties.GetHovered(${1:pos}, ${2:aimVec})$0"
+        ],
+        "description": "PROPERTIES [Client] Returns an entity player is hovering over with his cursor.\n\n[Vector] pos\n  Eye position of local player, Entity:EyePos\n\n[Vector] aimVec\n  Aim vector of local player, Player:GetAimVector",
+        "prefix": "properties.GetHovered"
+    },
+    "properties.OnScreenClick": {
+        "body": [
+            "properties.OnScreenClick(${1:eyepos}, ${2:eyevec})$0"
+        ],
+        "description": "PROPERTIES [Shared] \n\n[Vector] eyepos\n  The eye pos of a player\n\n[Vector] eyevec\n  The aim vector of a player",
+        "prefix": "properties.OnScreenClick"
+    },
+    "properties.OpenEntityMenu": {
+        "body": [
+            "properties.OpenEntityMenu(${1:ent}, ${2:tr})$0"
+        ],
+        "description": "PROPERTIES [Shared] \n\n[Entity] ent\n  The entity to open menu for\n\n[table] tr\n  The trace that is passed as second argument to Action callback of a property",
+        "prefix": "properties.OpenEntityMenu"
+    }
+}

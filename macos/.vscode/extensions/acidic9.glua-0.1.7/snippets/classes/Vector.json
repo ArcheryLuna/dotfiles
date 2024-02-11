@@ -1,0 +1,177 @@
+{
+    "Add": {
+        "body": [
+            "Add(${1:vector})$0"
+        ],
+        "description": "VECTOR [Shared] Adds the values of the second vector to the orignal vector, this function can be used to avoid garbage collection.\n\n[Vector] vector\n  The other vector.",
+        "prefix": "Add"
+    },
+    "Angle": {
+        "body": [
+            "Angle()$0"
+        ],
+        "description": "VECTOR [Shared]",
+        "prefix": "Angle"
+    },
+    "AngleEx": {
+        "body": [
+            "AngleEx(${1:up})$0"
+        ],
+        "description": "VECTOR [Shared] Returns the angle of the vector, but instead of assuming that up is Vector( 0, 0, 1 ) (Like Vector:Angle does) you can specify which direction is 'up' for the angle.\n\n[Vector] up\n  The up direction vector",
+        "prefix": "AngleEx"
+    },
+    "Cross": {
+        "body": [
+            "Cross(${1:otherVector})$0"
+        ],
+        "description": "VECTOR [Shared] \n\n[Vector] otherVector\n  Vector to calculate the cross product with.",
+        "prefix": "Cross"
+    },
+    "DistToSqr": {
+        "body": [
+            "DistToSqr(${1:otherVec})$0"
+        ],
+        "description": "VECTOR [Shared] \n\n[Vector] otherVec\n  The vector to calculate the distance to.",
+        "prefix": "DistToSqr"
+    },
+    "Distance": {
+        "body": [
+            "Distance(${1:otherVector})$0"
+        ],
+        "description": "VECTOR [Shared] Returns the pythagorean distance between the vector and the other vector.\n\n[Vector] otherVector\n  The vector to get the distance to.",
+        "prefix": "Distance"
+    },
+    "Dot": {
+        "body": [
+            "Dot(${1:otherVector})$0"
+        ],
+        "description": "VECTOR [Shared] Returns the dot product of this vector and the passed one. The dot product of two vectors is the product of their magnitudes (lengths), and the cosine of the angle between them:\n\n[Vector] otherVector\n  The vector to calculate the dot product with",
+        "prefix": "Dot"
+    },
+    "DotProduct": {
+        "body": [
+            "DotProduct(${1:Vector})$0"
+        ],
+        "description": "VECTOR [Shared] \n\n[Vector] Vector\n  The other vector.",
+        "prefix": "DotProduct"
+    },
+    "GetNormal": {
+        "body": [
+            "GetNormal()$0"
+        ],
+        "description": "VECTOR [Shared]",
+        "prefix": "GetNormal"
+    },
+    "GetNormalized": {
+        "body": [
+            "GetNormalized()$0"
+        ],
+        "description": "VECTOR [Shared]",
+        "prefix": "GetNormalized"
+    },
+    "IsEqualTol": {
+        "body": [
+            "IsEqualTol(${1:compare}, ${2:tolerance})$0"
+        ],
+        "description": "VECTOR [Shared] Returns if the vector is equal to another vector with the given tolerance.\n\n[Vector] compare\n  The vector to compare to.\n\n[number] tolerance\n  The tolerance range.",
+        "prefix": "IsEqualTol"
+    },
+    "IsZero": {
+        "body": [
+            "IsZero()$0"
+        ],
+        "description": "VECTOR [Shared] Checks whenever all fields of the vector are 0.",
+        "prefix": "IsZero"
+    },
+    "Length": {
+        "body": [
+            "Length()$0"
+        ],
+        "description": "VECTOR [Shared] Returns the Euclidean length of the vector: √ x² + y² + z²",
+        "prefix": "Length"
+    },
+    "Length2D": {
+        "body": [
+            "Length2D()$0"
+        ],
+        "description": "VECTOR [Shared]",
+        "prefix": "Length2D"
+    },
+    "Length2DSqr": {
+        "body": [
+            "Length2DSqr()$0"
+        ],
+        "description": "VECTOR [Shared]",
+        "prefix": "Length2DSqr"
+    },
+    "LengthSqr": {
+        "body": [
+            "LengthSqr()$0"
+        ],
+        "description": "VECTOR [Shared]",
+        "prefix": "LengthSqr"
+    },
+    "Mul": {
+        "body": [
+            "Mul(${1:multiplier})$0"
+        ],
+        "description": "VECTOR [Shared] Scales the vector by the given number, that means x, y and z are multiplied by that value.\n\n[number] multiplier\n  The value to scale the vector with.",
+        "prefix": "Mul"
+    },
+    "Normalize": {
+        "body": [
+            "Normalize()$0"
+        ],
+        "description": "VECTOR [Shared]",
+        "prefix": "Normalize"
+    },
+    "Rotate": {
+        "body": [
+            "Rotate(${1:rotation})$0"
+        ],
+        "description": "VECTOR [Shared] \n\n[Angle] rotation\n  The angle to rotate the vector by.",
+        "prefix": "Rotate"
+    },
+    "Set": {
+        "body": [
+            "Set(${1:vector})$0"
+        ],
+        "description": "VECTOR [Shared] Copies the values from the second vector to the first vector.\n\n[Vector] vector\n  The vector to copy from.",
+        "prefix": "Set"
+    },
+    "Sub": {
+        "body": [
+            "Sub(${1:vector})$0"
+        ],
+        "description": "VECTOR [Shared] Substracts the values of the second vector from the orignal vector, this function can be used to avoid garbage collection.\n\n[Vector] vector\n  The other vector.",
+        "prefix": "Sub"
+    },
+    "ToColor": {
+        "body": [
+            "ToColor()$0"
+        ],
+        "description": "VECTOR [Shared]",
+        "prefix": "ToColor"
+    },
+    "ToScreen": {
+        "body": [
+            "ToScreen()$0"
+        ],
+        "description": "VECTOR [Client]",
+        "prefix": "ToScreen"
+    },
+    "WithinAABox": {
+        "body": [
+            "WithinAABox(${1:boxStart}, ${2:boxEnd})$0"
+        ],
+        "description": "VECTOR [Shared] Returns whenever the given vector is in a box created by the 2 other vectors.\n\n[Vector] boxStart\n  The first vector.\n\n[Vector] boxEnd\n  The second vector.",
+        "prefix": "WithinAABox"
+    },
+    "Zero": {
+        "body": [
+            "Zero()$0"
+        ],
+        "description": "VECTOR [Shared]",
+        "prefix": "Zero"
+    }
+}

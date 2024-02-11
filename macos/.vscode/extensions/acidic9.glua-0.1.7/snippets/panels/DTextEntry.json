@@ -1,0 +1,121 @@
+{
+    "AllowInput": {
+        "body": [
+            "AllowInput(${1:char})$0"
+        ],
+        "description": "DTEXTENTRY [Client] Called whenever the value of the panel has been updated (whether by user input or otherwise). It allows you to determine whether a user can modify the TextEntry's text. By default, this only checks whether the panel disallows numeric characters, preventing it from being edited if the value contains any. This is actually an engine hook that only works on TextEntry derived elements.\n\n[string] char\n  The last character entered into the panel.",
+        "prefix": "AllowInput"
+    },
+    "CheckNumeric": {
+        "body": [
+            "CheckNumeric(${1:strValue})$0"
+        ],
+        "description": "DTEXTENTRY [Client] \n\n[string] strValue\n  The string to check.",
+        "prefix": "CheckNumeric"
+    },
+    "GetCursorColor": {
+        "body": [
+            "GetCursorColor()$0"
+        ],
+        "description": "DTEXTENTRY [Client] Returns the cursor color of a DTextEntry.",
+        "prefix": "GetCursorColor"
+    },
+    "GetNumeric": {
+        "body": [
+            "GetNumeric()$0"
+        ],
+        "description": "DTEXTENTRY [Client]",
+        "prefix": "GetNumeric"
+    },
+    "GetTextColor": {
+        "body": [
+            "GetTextColor()$0"
+        ],
+        "description": "DTEXTENTRY [Client] Returns the text color of a DTextEntry.",
+        "prefix": "GetTextColor"
+    },
+    "GetUpdateOnType": {
+        "body": [
+            "GetUpdateOnType()$0"
+        ],
+        "description": "DTEXTENTRY [Client]",
+        "prefix": "GetUpdateOnType"
+    },
+    "IsEditing": {
+        "body": [
+            "IsEditing()$0"
+        ],
+        "description": "DTEXTENTRY [Client]",
+        "prefix": "IsEditing"
+    },
+    "OnChange": {
+        "body": [
+            "OnChange()$0"
+        ],
+        "description": "DTEXTENTRY [Client]",
+        "prefix": "OnChange"
+    },
+    "OnEnter": {
+        "body": [
+            "OnEnter()$0"
+        ],
+        "description": "DTEXTENTRY [Client]",
+        "prefix": "OnEnter"
+    },
+    "OnKeyCodeTyped": {
+        "body": [
+            "OnKeyCodeTyped(${1:keyCode})$0"
+        ],
+        "description": "DTEXTENTRY [Client] \n\n[number] keyCode\n  They key code of the key pressed, see KEY_ Enums.",
+        "prefix": "OnKeyCodeTyped"
+    },
+    "OnTextChanged": {
+        "body": [
+            "OnTextChanged(${1:noMenuRemoval})$0"
+        ],
+        "description": "DTEXTENTRY [Client] \n\n[boolean] noMenuRemoval\n  Determines whether to remove the autocomplete menu (false) or not (true).",
+        "prefix": "OnTextChanged"
+    },
+    "OnValueChange": {
+        "body": [
+            "OnValueChange(${1:value})$0"
+        ],
+        "description": "DTEXTENTRY [Client] \n\n[string] value\n  The DTextEntry text.",
+        "prefix": "OnValueChange"
+    },
+    "SetDisabled": {
+        "body": [
+            "SetDisabled(${1:disabled})$0"
+        ],
+        "description": "DTEXTENTRY [Client] \n\n[boolean] disabled\n  Whether the textbox should be disabled",
+        "prefix": "SetDisabled"
+    },
+    "SetEditable": {
+        "body": [
+            "SetEditable(${1:enabled})$0"
+        ],
+        "description": "DTEXTENTRY [Client] Disables Input on a DTextEntry. This differs from DTextEntry:SetDisabled - SetEditable will not affect the appearance of the textbox.\n\n[boolean] enabled\n  Whether the DTextEntry should be editable",
+        "prefix": "SetEditable"
+    },
+    "SetFont": {
+        "body": [
+            "SetFont(${1:font})$0"
+        ],
+        "description": "DTEXTENTRY [Client] Changes the font of the DTextEntry.\n\n[string] font\n  The name of the font to be changed to.",
+        "prefix": "SetFont"
+    },
+    "SetNumeric": {
+        "body": [
+            "SetNumeric(${1:numericOnly})$0"
+        ],
+        "description": "DTEXTENTRY [Client] Sets whether or not to decline non-numeric characters as input. Numeric characters are 1234567890.-\n\n[boolean] numericOnly\n  Whether to accept only numeric characters.",
+        "prefix": "SetNumeric"
+    },
+    "SetUpdateOnType": {
+        "body": [
+            "SetUpdateOnType(${1:updateOnType})$0"
+        ],
+        "description": "DTEXTENTRY [Client] \n\n[boolean] updateOnType",
+        "prefix": "SetUpdateOnType"
+    }
+}

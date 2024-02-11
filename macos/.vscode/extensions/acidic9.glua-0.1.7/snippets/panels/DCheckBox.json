@@ -1,0 +1,44 @@
+{
+    "GetChecked": {
+        "body": [
+            "GetChecked()$0"
+        ],
+        "description": "DCHECKBOX [Client]",
+        "prefix": "GetChecked"
+    },
+    "IsEditing": {
+        "body": [
+            "IsEditing()$0"
+        ],
+        "description": "DCHECKBOX [Client]",
+        "prefix": "IsEditing"
+    },
+    "OnChange": {
+        "body": [
+            "OnChange(${1:bVal})$0"
+        ],
+        "description": "DCHECKBOX [Client] Called when the \"checked\" state is changed.\n\n[boolean] bVal\n  Whether the CheckBox is checked or not.",
+        "prefix": "OnChange"
+    },
+    "SetChecked": {
+        "body": [
+            "SetChecked(${1:checked})$0"
+        ],
+        "description": "DCHECKBOX [Client] \n\n[boolean] checked\n  Whether the box should be checked or not.",
+        "prefix": "SetChecked"
+    },
+    "SetValue": {
+        "body": [
+            "SetValue(${1:checked})$0"
+        ],
+        "description": "DCHECKBOX [Client] \n\n[boolean] checked\n  Whether the box should be checked or not.",
+        "prefix": "SetValue"
+    },
+    "Toggle": {
+        "body": [
+            "Toggle()$0"
+        ],
+        "description": "DCHECKBOX [Client]",
+        "prefix": "Toggle"
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "hook.Add": {
+        "body": [
+            "hook.Add(${1:eventName}, ${2:identifier}, ${3:func})$0"
+        ],
+        "description": "HOOK [Shared/Menu] Add a hook to be called upon the given event occurring.\n\n[string] eventName\n  The event to hook on to, see GM Hooks and Sandbox Hooks\n\n[any] identifier\n  The unique identifier, usually a string. This can be used elsewhere in the code to replace or remove the hook. The identifier should be unique so that you do not accidentally override some other mods hook, unless that's what you are trying to do.\nThe identifier can be either a string, or a table/object with an IsValid function defined such as an Entity or Panel. numbers and booleans, for example, are not allowed.\n\nIf the identifier is a table/object, it will be inserted in front of the other arguments in the callback and the hook will be called as long as it's valid. However, as soon as IsValid( identifier ) returns false, the hook will be removed.\n\n[function] func\n  The function to be called, arguments given to it depend on the hook.",
+        "prefix": "hook.Add"
+    },
+    "hook.Call": {
+        "body": [
+            "hook.Call(${1:eventName}, ${2:gamemodeTable}, ${3:args})$0"
+        ],
+        "description": "HOOK [Shared/Menu] Calls all hooks associated with the given event until one returns something other than nil, and then returns that data. In almost all cases, you should use hook.Run instead - it calls hook.Call internally but supplies the gamemode table by itself, making your code neater.\n\n[string] eventName\n  The event to call hooks for\n\n[table] gamemodeTable\n  If the gamemode is specified, the gamemode hook within will be called, otherwise not\n\n[vararg] args\n  The arguments to be passed to the hooks",
+        "prefix": "hook.Call"
+    },
+    "hook.GetTable": {
+        "body": [
+            "hook.GetTable()$0"
+        ],
+        "description": "HOOK [Shared/Menu] Returns a list of all the hooks registered with hook.Add.",
+        "prefix": "hook.GetTable"
+    },
+    "hook.Remove": {
+        "body": [
+            "hook.Remove(${1:eventName}, ${2:identifier})$0"
+        ],
+        "description": "HOOK [Shared/Menu] Removes the hook with the supplied identifier from the given event.\n\n[string] eventName\n  The event name.\n\n[any] identifier\n  The unique identifier of the hook to remove, usually a string.",
+        "prefix": "hook.Remove"
+    },
+    "hook.Run": {
+        "body": [
+            "hook.Run(${1:eventName}, ${2:args})$0"
+        ],
+        "description": "HOOK [Shared/Menu] Calls hooks associated with the given event. Calls all hooks until one returns something other than nil and then returns that data.\nIf no hook returns any data, it will try to call the GAMEMODE:\u003ceventName\u003e alternative, if one exists. This function internally calls hook.Call. See also: gamemode.Call - same as this, but does not call hooks if the gamemode hasn't defined the function.\n\n[string] eventName\n  The event to call hooks for\n\n[vararg] args\n  The arguments to be passed to the hooks",
+        "prefix": "hook.Run"
+    }
+}

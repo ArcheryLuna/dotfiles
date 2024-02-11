@@ -1,0 +1,100 @@
+{
+    "AddChoice": {
+        "body": [
+            "AddChoice(${1:value}, ${2:data=nil}, ${3:select=false})$0"
+        ],
+        "description": "DCOMBOBOX [Client] Adds a choice to the combo box\n\n[string] value\n  The text show to the user.\n\n[any] data=nil\n  The data accompanying this string. Accessed again with the second argument of DComboBox:GetSelected. If left empty, the value argument is used instead.\n\n[boolean] select=false\n  Should this be the default selected text show to the user or not.",
+        "prefix": "AddChoice"
+    },
+    "ChooseOption": {
+        "body": [
+            "ChooseOption(${1:value}, ${2:index})$0"
+        ],
+        "description": "DCOMBOBOX [Client] \n\n[string] value\n  The text to display at the top of the combo box.\n\n[number] index\n  The option index.",
+        "prefix": "ChooseOption"
+    },
+    "ChooseOptionID": {
+        "body": [
+            "ChooseOptionID(${1:index})$0"
+        ],
+        "description": "DCOMBOBOX [Client] Selects an option within a combo box based on its table index.\n\n[number] index\n  Selects the option with given index.",
+        "prefix": "ChooseOptionID"
+    },
+    "Clear": {
+        "body": [
+            "Clear()$0"
+        ],
+        "description": "DCOMBOBOX [Client]",
+        "prefix": "Clear"
+    },
+    "CloseMenu": {
+        "body": [
+            "CloseMenu()$0"
+        ],
+        "description": "DCOMBOBOX [Client]",
+        "prefix": "CloseMenu"
+    },
+    "GetOptionData": {
+        "body": [
+            "GetOptionData(${1:index})$0"
+        ],
+        "description": "DCOMBOBOX [Client] \n\n[number] index\n  The option index.",
+        "prefix": "GetOptionData"
+    },
+    "GetOptionText": {
+        "body": [
+            "GetOptionText(${1:index})$0"
+        ],
+        "description": "DCOMBOBOX [Client] Returns an option's text based on the given index.\n\n[number] index\n  The option index.",
+        "prefix": "GetOptionText"
+    },
+    "GetSelected": {
+        "body": [
+            "GetSelected()$0"
+        ],
+        "description": "DCOMBOBOX [Client]",
+        "prefix": "GetSelected"
+    },
+    "GetSelectedID": {
+        "body": [
+            "GetSelectedID()$0"
+        ],
+        "description": "DCOMBOBOX [Client]",
+        "prefix": "GetSelectedID"
+    },
+    "IsMenuOpen": {
+        "body": [
+            "IsMenuOpen()$0"
+        ],
+        "description": "DCOMBOBOX [Client]",
+        "prefix": "IsMenuOpen"
+    },
+    "OnSelect": {
+        "body": [
+            "OnSelect(${1:index}, ${2:value}, ${3:data})$0"
+        ],
+        "description": "DCOMBOBOX [Client] Internal function which is called when an option in the combo box is selected. This function does nothing by default and is meant to be overridden in order to make the combo box functional.\n\n[number] index\n  The table index of the option.\n\n[string] value\n  The name of the option.\n\n[any] data\n  The data assigned to the option.",
+        "prefix": "OnSelect"
+    },
+    "OpenMenu": {
+        "body": [
+            "OpenMenu()$0"
+        ],
+        "description": "DCOMBOBOX [Client]",
+        "prefix": "OpenMenu"
+    },
+    "SetSortItems": {
+        "body": [
+            "SetSortItems(${1:sort})$0"
+        ],
+        "description": "DCOMBOBOX [Client] \n\n[boolean] sort\n  true to enable ( default )",
+        "prefix": "SetSortItems"
+    },
+    "SetValue": {
+        "body": [
+            "SetValue(${1:value})$0"
+        ],
+        "description": "DCOMBOBOX [Client] Sets the text shown in the combo box when the menu is not collapsed.\n\n[string] value\n  The text in the DComboBox.",
+        "prefix": "SetValue"
+    }
+}

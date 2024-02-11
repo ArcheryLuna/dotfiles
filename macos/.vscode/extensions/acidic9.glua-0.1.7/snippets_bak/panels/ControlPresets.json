@@ -1,0 +1,23 @@
+{
+	"ControlPresets/AddConVar": {
+		"body": [
+			"AddConVar(${1:convar})$0"
+		],
+		"description": "Adds a convar to be managed by this control.",
+		"prefix": "AddConVar"
+	},
+	"ControlPresets/GetConVars": {
+		"body": [
+			"GetConVars()$0"
+		],
+		"description": "Get a list of all Console Variables being managed by this panel.",
+		"prefix": "GetConVars"
+	},
+	"ControlPresets/SetLabel": {
+		"body": [
+			"SetLabel(${1:name})$0"
+		],
+		"description": "Set the name label text.",
+		"prefix": "SetLabel"
+	}
+}

@@ -1,0 +1,86 @@
+{
+    "Add": {
+        "body": [
+            "Add(${1:material}, ${2:position})$0"
+        ],
+        "description": "CLUAEMITTER [Client] Creates a new CLuaParticle with the given material and position.\n\n[string] material\n  The particles material. Can also be an IMaterial.\n\n[Vector] position\n  The position to spawn the particle on.",
+        "prefix": "Add"
+    },
+    "Draw": {
+        "body": [
+            "Draw()$0"
+        ],
+        "description": "CLUAEMITTER [Client]",
+        "prefix": "Draw"
+    },
+    "Finish": {
+        "body": [
+            "Finish()$0"
+        ],
+        "description": "CLUAEMITTER [Client]",
+        "prefix": "Finish"
+    },
+    "GetNumActiveParticles": {
+        "body": [
+            "GetNumActiveParticles()$0"
+        ],
+        "description": "CLUAEMITTER [Client]",
+        "prefix": "GetNumActiveParticles"
+    },
+    "GetPos": {
+        "body": [
+            "GetPos()$0"
+        ],
+        "description": "CLUAEMITTER [Client]",
+        "prefix": "GetPos"
+    },
+    "Is3D": {
+        "body": [
+            "Is3D()$0"
+        ],
+        "description": "CLUAEMITTER [Client]",
+        "prefix": "Is3D"
+    },
+    "IsValid": {
+        "body": [
+            "IsValid()$0"
+        ],
+        "description": "CLUAEMITTER [Client]",
+        "prefix": "IsValid"
+    },
+    "SetBBox": {
+        "body": [
+            "SetBBox(${1:mins}, ${2:maxs})$0"
+        ],
+        "description": "CLUAEMITTER [Client] \n\n[Vector] mins\n  The minimum position of the box\n\n[Vector] maxs\n  The maximum position of the box",
+        "prefix": "SetBBox"
+    },
+    "SetNearClip": {
+        "body": [
+            "SetNearClip(${1:distanceMin}, ${2:distanceMax})$0"
+        ],
+        "description": "CLUAEMITTER [Client] \n\n[number] distanceMin\n  Min distance where the alpha becomes 0.\n\n[number] distanceMax\n  Max distance where the alpha starts fading.",
+        "prefix": "SetNearClip"
+    },
+    "SetNoDraw": {
+        "body": [
+            "SetNoDraw(${1:noDraw})$0"
+        ],
+        "description": "CLUAEMITTER [Client] \n\n[boolean] noDraw\n  Whether we should draw the particles ( false ) or not ( true )",
+        "prefix": "SetNoDraw"
+    },
+    "SetParticleCullRadius": {
+        "body": [
+            "SetParticleCullRadius(${1:radius})$0"
+        ],
+        "description": "CLUAEMITTER [Client] \n\n[number] radius\n  Particle radius.",
+        "prefix": "SetParticleCullRadius"
+    },
+    "SetPos": {
+        "body": [
+            "SetPos(${1:position})$0"
+        ],
+        "description": "CLUAEMITTER [Client] \n\n[Vector] position\n  New position.",
+        "prefix": "SetPos"
+    }
+}

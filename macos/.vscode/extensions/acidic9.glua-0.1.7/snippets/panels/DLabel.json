@@ -1,0 +1,128 @@
+{
+    "DoClick": {
+        "body": [
+            "DoClick()$0"
+        ],
+        "description": "DLABEL [Client]",
+        "prefix": "DoClick"
+    },
+    "DoRightClick": {
+        "body": [
+            "DoRightClick()$0"
+        ],
+        "description": "DLABEL [Client]",
+        "prefix": "DoRightClick"
+    },
+    "GetDisabled": {
+        "body": [
+            "GetDisabled()$0"
+        ],
+        "description": "DLABEL [Client]",
+        "prefix": "GetDisabled"
+    },
+    "GetFont": {
+        "body": [
+            "GetFont()$0"
+        ],
+        "description": "DLABEL [Client]",
+        "prefix": "GetFont"
+    },
+    "GetIsToggle": {
+        "body": [
+            "GetIsToggle()$0"
+        ],
+        "description": "DLABEL [Client]",
+        "prefix": "GetIsToggle"
+    },
+    "GetToggle": {
+        "body": [
+            "GetToggle()$0"
+        ],
+        "description": "DLABEL [Client]",
+        "prefix": "GetToggle"
+    },
+    "OnToggled": {
+        "body": [
+            "OnToggled(${1:toggleState})$0"
+        ],
+        "description": "DLABEL [Client] \n\n[boolean] toggleState\n  The new toggle state.",
+        "prefix": "OnToggled"
+    },
+    "SetAutoStretchVertical": {
+        "body": [
+            "SetAutoStretchVertical(${1:stretch})$0"
+        ],
+        "description": "DLABEL [Client] \n\n[boolean] stretch\n  Whenever to stretch the label vertically or not.",
+        "prefix": "SetAutoStretchVertical"
+    },
+    "SetBright": {
+        "body": [
+            "SetBright(${1:bright})$0"
+        ],
+        "description": "DLABEL [Client] \n\n[boolean] bright\n  Whenever to set the text to bright or not.",
+        "prefix": "SetBright"
+    },
+    "SetColor": {
+        "body": [
+            "SetColor(${1:color})$0"
+        ],
+        "description": "DLABEL [Client] Changes color of label. Alias of DLabel:SetTextColor.\n\n[table] color\n  The color to set. Uses the Color structure.",
+        "prefix": "SetColor"
+    },
+    "SetDark": {
+        "body": [
+            "SetDark(${1:dark})$0"
+        ],
+        "description": "DLABEL [Client] \n\n[boolean] dark\n  Whenever to set the text to dark or not.",
+        "prefix": "SetDark"
+    },
+    "SetDisabled": {
+        "body": [
+            "SetDisabled(${1:disable})$0"
+        ],
+        "description": "DLABEL [Client] \n\n[boolean] disable\n  true to disable the DLabel, false to enable it.",
+        "prefix": "SetDisabled"
+    },
+    "SetFont": {
+        "body": [
+            "SetFont(${1:fontName})$0"
+        ],
+        "description": "DLABEL [Client] \n\n[string] fontName\n  The name of the font.\nSee here for a list of existing fonts.\n\nAlternatively, use surface.CreateFont to create your own custom font.",
+        "prefix": "SetFont"
+    },
+    "SetIsToggle": {
+        "body": [
+            "SetIsToggle(${1:allowToggle})$0"
+        ],
+        "description": "DLABEL [Client] \n\n[boolean] allowToggle\n  Whether or not to enable toggle functionality.",
+        "prefix": "SetIsToggle"
+    },
+    "SetTextColor": {
+        "body": [
+            "SetTextColor(${1:color})$0"
+        ],
+        "description": "DLABEL [Client] Sets the text color for the DLabel.\n\n[table] color\n  The text color. Uses the Color structure.",
+        "prefix": "SetTextColor"
+    },
+    "SetToggle": {
+        "body": [
+            "SetToggle(${1:toggleState})$0"
+        ],
+        "description": "DLABEL [Client] \n\n[boolean] toggleState\n  The toggle state to be set.",
+        "prefix": "SetToggle"
+    },
+    "Toggle": {
+        "body": [
+            "Toggle()$0"
+        ],
+        "description": "DLABEL [Client]",
+        "prefix": "Toggle"
+    },
+    "UpdateColours": {
+        "body": [
+            "UpdateColours(${1:skin})$0"
+        ],
+        "description": "DLABEL [Client] \n\n[table] skin\n  A table supposed to contain the color values listed above.",
+        "prefix": "UpdateColours"
+    }
+}

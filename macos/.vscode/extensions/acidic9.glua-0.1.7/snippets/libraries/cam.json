@@ -1,0 +1,100 @@
+{
+    "cam.ApplyShake": {
+        "body": [
+            "cam.ApplyShake(${1:pos}, ${2:angles}, ${3:factor})$0"
+        ],
+        "description": "CAM [Client] Shakes the screen at a certain position.\n\n[Vector] pos\n  Origin of the shake.\n\n[Angle] angles\n  Angles of the shake.\n\n[number] factor\n  The shake factor.",
+        "prefix": "cam.ApplyShake"
+    },
+    "cam.End": {
+        "body": [
+            "cam.End()$0"
+        ],
+        "description": "CAM [Client]",
+        "prefix": "cam.End"
+    },
+    "cam.End2D": {
+        "body": [
+            "cam.End2D()$0"
+        ],
+        "description": "CAM [Client]",
+        "prefix": "cam.End2D"
+    },
+    "cam.End3D": {
+        "body": [
+            "cam.End3D()$0"
+        ],
+        "description": "CAM [Client]",
+        "prefix": "cam.End3D"
+    },
+    "cam.End3D2D": {
+        "body": [
+            "cam.End3D2D()$0"
+        ],
+        "description": "CAM [Client]",
+        "prefix": "cam.End3D2D"
+    },
+    "cam.EndOrthoView": {
+        "body": [
+            "cam.EndOrthoView()$0"
+        ],
+        "description": "CAM [Client]",
+        "prefix": "cam.EndOrthoView"
+    },
+    "cam.IgnoreZ": {
+        "body": [
+            "cam.IgnoreZ(${1:ignoreZ})$0"
+        ],
+        "description": "CAM [Client] \n\n[boolean] ignoreZ\n  Determines whenever to ignore the depth buffer or not.",
+        "prefix": "cam.IgnoreZ"
+    },
+    "cam.PopModelMatrix": {
+        "body": [
+            "cam.PopModelMatrix()$0"
+        ],
+        "description": "CAM [Client]",
+        "prefix": "cam.PopModelMatrix"
+    },
+    "cam.PushModelMatrix": {
+        "body": [
+            "cam.PushModelMatrix(${1:matrix})$0"
+        ],
+        "description": "CAM [Client] Pushes the specified matrix onto the render matrix stack. Unlike opengl, this will replace the current model matrix.\n\n[VMatrix] matrix\n  The matrix to push.",
+        "prefix": "cam.PushModelMatrix"
+    },
+    "cam.Start": {
+        "body": [
+            "cam.Start(${1:dataTbl})$0"
+        ],
+        "description": "CAM [Client] \n\n[table] dataTbl\n  Render context config. See RenderCamData structure",
+        "prefix": "cam.Start"
+    },
+    "cam.Start2D": {
+        "body": [
+            "cam.Start2D()$0"
+        ],
+        "description": "CAM [Client]",
+        "prefix": "cam.Start2D"
+    },
+    "cam.Start3D": {
+        "body": [
+            "cam.Start3D(${1:pos=()}, ${2:angles=()}, ${3:fov=nil}, ${4:x=0}, ${5:y=0}, ${6:w=()}, ${7:h=()}, ${8:zNear=nil}, ${9:zFar=nil})$0"
+        ],
+        "description": "CAM [Client] Sets up a new 3D rendering context. Must be finished by cam.End3D. For more advanced settings such as an orthographic view, use cam.Start instead. \n\n[VectorEyePos] pos=()\n  Render cam position.\n\n[AngleEyeAngles] angles=()\n  Render cam angles.\n\n[number] fov=nil\n  Field of view.\n\n[number] x=0\n  X coordinate of where to start the new view port.\n\n[number] y=0\n  Y coordinate of where to start the new view port.\n\n[numberScrW] w=()\n  Width of the new viewport.\n\n[numberScrH] h=()\n  Height of the new viewport.\n\n[number] zNear=nil\n  Distance to near clipping plane.\n\n[number] zFar=nil\n  Distance to far clipping plane.",
+        "prefix": "cam.Start3D"
+    },
+    "cam.Start3D2D": {
+        "body": [
+            "cam.Start3D2D(${1:pos}, ${2:angles}, ${3:scale})$0"
+        ],
+        "description": "CAM [Client] Sets up a new 2D rendering context. Must be finished by cam.End3D2D. \n\n[Vector] pos\n  Origin of the 3D2D context, ie. the top left corner, (0, 0).\n\n[Angle] angles\n  Angles of the 3D2D context.\n+x in the 2d context corresponds to +x of the angle (its forward direction).\n+y in the 2d context corresponds to -y of the angle (its right direction).\n\nIf (dx, dy) are your desired (+x, +y) unit vectors, the angle you want is dx:AngleEx(dx:Cross(-dy)).\n\n[number] scale\n  The scale of the render context.\n\nIf scale is 1 then 1 pixel in 2D context will equal to 1 unit in 3D context.",
+        "prefix": "cam.Start3D2D"
+    },
+    "cam.StartOrthoView": {
+        "body": [
+            "cam.StartOrthoView(${1:leftOffset}, ${2:topOffset}, ${3:rightOffset}, ${4:bottomOffset})$0"
+        ],
+        "description": "CAM [Client] Sets up a new 3d context using orthographic projection.\n\n[number] leftOffset\n  The left plane offset.\n\n[number] topOffset\n  The top plane offset.\n\n[number] rightOffset\n  The right plane offset.\n\n[number] bottomOffset\n  The bottom plane offset.",
+        "prefix": "cam.StartOrthoView"
+    }
+}

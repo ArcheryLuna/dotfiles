@@ -1,0 +1,9 @@
+{
+	"menu/RecordFrame": {
+		"body": [
+			"menu.RecordFrame()$0"
+		],
+		"description": "Used by \u0026#34;Demo to Video\u0026#34; to record the frame.",
+		"prefix": "menu.RecordFrame"
+	}
+}

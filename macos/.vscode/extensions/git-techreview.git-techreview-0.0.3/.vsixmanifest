@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="git-techreview" Version="0.0.3" Publisher="Git-TechReview"/>
+    <DisplayName>Git-TechReview</DisplayName>
+    <Description xml:space="preserve">Convert between a Markdown topic store in a Git repo to a Word .docx file stored in OneDrive, and vice versa. The purpose is to enable writers authoring topics in Markdown to use the review and collaboration capabilities of Word Online while developing their content.</Description>
+    <Tags>git,markdown,word,docx,tech review</Tags>
+    <Categories>Other</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.25.0" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
+      
+        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://office.visualstudio.com/MAX/PIE/_git/Git-TechReview" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://office.visualstudio.com/MAX/PIE/_git/Git-TechReview" />
+        
+          <Property Id="Microsoft.VisualStudio.Services.Links.Repository" Value="https://office.visualstudio.com/MAX/PIE/_git/Git-TechReview" />
+        
+      
+      
+      
+      
+      
+      <Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+      
+      
+    </Properties>
+    
+    
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" />
+  </Assets>
+</PackageManifest>

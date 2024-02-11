@@ -1,0 +1,2 @@
+JAVA_VERSION="18.0.1.1"
+MODULES="java.base java.compiler java.logging java.transaction.xa java.xml java.sql jdk.internal.jvmstat jdk.attach jdk.compiler jdk.jdwp.agent jdk.jdi jdk.unsupported jdk.zipfs"

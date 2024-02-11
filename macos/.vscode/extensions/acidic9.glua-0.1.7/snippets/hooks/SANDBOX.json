@@ -1,0 +1,226 @@
+{
+    "AddGamemodeToolMenuCategories": {
+        "body": [
+            "AddGamemodeToolMenuCategories()$0"
+        ],
+        "description": "SANDBOX [Client]",
+        "prefix": "AddGamemodeToolMenuCategories"
+    },
+    "AddGamemodeToolMenuTabs": {
+        "body": [
+            "AddGamemodeToolMenuTabs()$0"
+        ],
+        "description": "SANDBOX [Client]",
+        "prefix": "AddGamemodeToolMenuTabs"
+    },
+    "AddToolMenuCategories": {
+        "body": [
+            "AddToolMenuCategories()$0"
+        ],
+        "description": "SANDBOX [Client]",
+        "prefix": "AddToolMenuCategories"
+    },
+    "AddToolMenuTabs": {
+        "body": [
+            "AddToolMenuTabs()$0"
+        ],
+        "description": "SANDBOX [Client]",
+        "prefix": "AddToolMenuTabs"
+    },
+    "CanDrive": {
+        "body": [
+            "CanDrive(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "SANDBOX [Shared] Called when a player attempts to drive a prop via Prop Drive\n\n[Player] ply\n  The player who attempted to use Prop Drive.\n\n[Entity] ent\n  The entity the player is attempting to drive",
+        "prefix": "CanDrive"
+    },
+    "CanProperty": {
+        "body": [
+            "CanProperty(${1:ply}, ${2:property}, ${3:ent})$0"
+        ],
+        "description": "SANDBOX [Shared] Controls if a property can be used or not.\n\n[Player] ply\n  Player, that tried to use the property\n\n[string] property\n  Class of the property that is tried to use, for example - bonemanipulate\n\n[Entity] ent\n  The entity, on which property is tried to be used on",
+        "prefix": "CanProperty"
+    },
+    "CanTool": {
+        "body": [
+            "CanTool(${1:ply}, ${2:tr}, ${3:tool})$0"
+        ],
+        "description": "SANDBOX [Shared] Called when a player attempts to fire their tool gun. Return true to specifically allow the attempt, false to block it.\n\n[Player] ply\n  The player who attempted to use their toolgun.\n\n[table] tr\n  A trace from the players eye to where in the world their crosshair/cursor is pointing. See TraceResult structure\n\n[string] tool\n  The tool mode the player currently has selected.",
+        "prefix": "CanTool"
+    },
+    "ContentSidebarSelection": {
+        "body": [
+            "ContentSidebarSelection(${1:parent}, ${2:node})$0"
+        ],
+        "description": "SANDBOX [Client] \n\n[Panel] parent\n  The panel that holds spawnicons and the sidebar of spawnmenu\n\n[Panel] node\n  The item player selected",
+        "prefix": "ContentSidebarSelection"
+    },
+    "ContextMenuCreated": {
+        "body": [
+            "ContextMenuCreated(${1:g_ContextMenu})$0"
+        ],
+        "description": "SANDBOX [Client] \n\n[Panel] g_ContextMenu\n  The created context menu panel",
+        "prefix": "ContextMenuCreated"
+    },
+    "PaintNotes": {
+        "body": [
+            "PaintNotes()$0"
+        ],
+        "description": "SANDBOX [Client]",
+        "prefix": "PaintNotes"
+    },
+    "PaintWorldTips": {
+        "body": [
+            "PaintWorldTips()$0"
+        ],
+        "description": "SANDBOX [Client]",
+        "prefix": "PaintWorldTips"
+    },
+    "PersistenceLoad": {
+        "body": [
+            "PersistenceLoad()$0"
+        ],
+        "description": "SANDBOX [Server]",
+        "prefix": "PersistenceLoad"
+    },
+    "PersistenceSave": {
+        "body": [
+            "PersistenceSave()$0"
+        ],
+        "description": "SANDBOX [Server]",
+        "prefix": "PersistenceSave"
+    },
+    "PlayerGiveSWEP": {
+        "body": [
+            "PlayerGiveSWEP(${1:ply}, ${2:weapon}, ${3:swep})$0"
+        ],
+        "description": "SANDBOX [Server] Called when a player attempts to give themselves a weapon from the Q menu. ( Left mouse clicks on an icon )\n\n[Player] ply\n  The player who attempted to give themselves a weapon.\n\n[string] weapon\n  Class name of the weapon the player tried to give themselves.\n\n[table] swep\n  The swep table of this weapon, see SWEP structure",
+        "prefix": "PlayerGiveSWEP"
+    },
+    "PlayerSpawnEffect": {
+        "body": [
+            "PlayerSpawnEffect(${1:ply}, ${2:model})$0"
+        ],
+        "description": "SANDBOX [Server] Called to ask if player allowed to spawn a particular effect or not.\n\n[Player] ply\n  The player that wants to spawn an effect\n\n[string] model\n  The effect model that player wants to spawn",
+        "prefix": "PlayerSpawnEffect"
+    },
+    "PlayerSpawnNPC": {
+        "body": [
+            "PlayerSpawnNPC(${1:ply}, ${2:npc_type}, ${3:weapon})$0"
+        ],
+        "description": "SANDBOX [Server] Called to ask if player allowed to spawn a particular NPC or not.\n\n[Player] ply\n  The player that wants to spawn that NPC\n\n[string] npc_type\n  The npc type that player is trying to spawn\n\n[string] weapon\n  The weapon of that NPC",
+        "prefix": "PlayerSpawnNPC"
+    },
+    "PlayerSpawnObject": {
+        "body": [
+            "PlayerSpawnObject(${1:ply}, ${2:model}, ${3:skin})$0"
+        ],
+        "description": "SANDBOX [Server] Called to ask whether player is allowed to spawn any objects.\n\n[Player] ply\n  The player in question\n\n[string] model\n  Modelname\n\n[number] skin\n  Skin number",
+        "prefix": "PlayerSpawnObject"
+    },
+    "PlayerSpawnProp": {
+        "body": [
+            "PlayerSpawnProp(${1:ply}, ${2:model})$0"
+        ],
+        "description": "SANDBOX [Server] Called when a player attempts to spawn a prop from the Q menu.\n\n[Player] ply\n  The player who attempted to spawn a prop.\n\n[string] model\n  Path to the model of the prop the player is attempting to spawn.",
+        "prefix": "PlayerSpawnProp"
+    },
+    "PlayerSpawnRagdoll": {
+        "body": [
+            "PlayerSpawnRagdoll(${1:ply}, ${2:model})$0"
+        ],
+        "description": "SANDBOX [Server] Called when a player attempts to spawn a ragdoll from the Q menu.\n\n[Player] ply\n  The player who attempted to spawn a ragdoll.\n\n[string] model\n  Path to the model of the ragdoll the player is attempting to spawn.",
+        "prefix": "PlayerSpawnRagdoll"
+    },
+    "PlayerSpawnSENT": {
+        "body": [
+            "PlayerSpawnSENT(${1:ply}, ${2:class})$0"
+        ],
+        "description": "SANDBOX [Server] Called when a player attempts to spawn an Entity from the Q menu.\n\n[Player] ply\n  The player who attempted to spawn the entity.\n\n[string] class\n  Class name of the entity the player tried to spawn.",
+        "prefix": "PlayerSpawnSENT"
+    },
+    "PlayerSpawnSWEP": {
+        "body": [
+            "PlayerSpawnSWEP(${1:ply}, ${2:weapon}, ${3:swep})$0"
+        ],
+        "description": "SANDBOX [Server] Called when a player attempts to spawn a weapon from the Q menu. ( Mouse wheel clicks on an icon )\n\n[Player] ply\n  The player who attempted to spawn a weapon.\n\n[string] weapon\n  Class name of the weapon the player tried to spawn.\n\n[table] swep\n  Information about the weapon the player is trying to spawn, see SWEP structure",
+        "prefix": "PlayerSpawnSWEP"
+    },
+    "PlayerSpawnVehicle": {
+        "body": [
+            "PlayerSpawnVehicle(${1:ply}, ${2:model}, ${3:name}, ${4:table})$0"
+        ],
+        "description": "SANDBOX [Server] Called to ask if player allowed to spawn a particular vehicle or not.\n\n[Player] ply\n  The player that wants to spawn that vehicle\n\n[string] model\n  The vehicle model that player wants to spawn\n\n[string] name\n  Vehicle name\n\n[table] table\n  Table of that vehicle, containing info about it",
+        "prefix": "PlayerSpawnVehicle"
+    },
+    "PlayerSpawnedEffect": {
+        "body": [
+            "PlayerSpawnedEffect(${1:ply}, ${2:model}, ${3:ent})$0"
+        ],
+        "description": "SANDBOX [Server] Called after the player spawned an effect.\n\n[Player] ply\n  The player that spawned the effect\n\n[string] model\n  The model of spawned effect\n\n[Entity] ent\n  The spawned effect itself",
+        "prefix": "PlayerSpawnedEffect"
+    },
+    "PlayerSpawnedNPC": {
+        "body": [
+            "PlayerSpawnedNPC(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "SANDBOX [Server] \n\n[Player] ply\n  The player that spawned the NPC\n\n[Entity] ent\n  The spawned NPC itself",
+        "prefix": "PlayerSpawnedNPC"
+    },
+    "PlayerSpawnedProp": {
+        "body": [
+            "PlayerSpawnedProp(${1:ply}, ${2:model}, ${3:entity})$0"
+        ],
+        "description": "SANDBOX [Server] Called when a player has successfully spawned a prop from the Q menu.\n\n[Player] ply\n  The player who spawned a prop.\n\n[string] model\n  Path to the model of the prop the player is attempting to spawn.\n\n[Entity] entity\n  The entity that was spawned.",
+        "prefix": "PlayerSpawnedProp"
+    },
+    "PlayerSpawnedRagdoll": {
+        "body": [
+            "PlayerSpawnedRagdoll(${1:ply}, ${2:model}, ${3:ent})$0"
+        ],
+        "description": "SANDBOX [Server] Called after the player spawned a ragdoll.\n\n[Player] ply\n  The player that spawned the ragdoll\n\n[string] model\n  The ragdoll model that player wants to spawn\n\n[Entity] ent\n  The spawned ragdoll itself",
+        "prefix": "PlayerSpawnedRagdoll"
+    },
+    "PlayerSpawnedSENT": {
+        "body": [
+            "PlayerSpawnedSENT(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "SANDBOX [Server] \n\n[Player] ply\n  The player that spawned the SENT\n\n[Entity] ent\n  The spawned SENT",
+        "prefix": "PlayerSpawnedSENT"
+    },
+    "PlayerSpawnedSWEP": {
+        "body": [
+            "PlayerSpawnedSWEP(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "SANDBOX [Server] \n\n[Player] ply\n  The player that spawned the SWEP\n\n[Entity] ent\n  The SWEP itself",
+        "prefix": "PlayerSpawnedSWEP"
+    },
+    "PlayerSpawnedVehicle": {
+        "body": [
+            "PlayerSpawnedVehicle(${1:ply}, ${2:ent})$0"
+        ],
+        "description": "SANDBOX [Server] \n\n[Player] ply\n  The player that spawned the vehicle\n\n[Entity] ent\n  The vehicle itself",
+        "prefix": "PlayerSpawnedVehicle"
+    },
+    "PopulatePropMenu": {
+        "body": [
+            "PopulatePropMenu()$0"
+        ],
+        "description": "SANDBOX [Client]",
+        "prefix": "PopulatePropMenu"
+    },
+    "SpawnMenuEnabled": {
+        "body": [
+            "SpawnMenuEnabled()$0"
+        ],
+        "description": "SANDBOX [Client]",
+        "prefix": "SpawnMenuEnabled"
+    },
+    "SpawnMenuOpen": {
+        "body": [
+            "SpawnMenuOpen()$0"
+        ],
+        "description": "SANDBOX [Client]",
+        "prefix": "SpawnMenuOpen"
+    }
+}

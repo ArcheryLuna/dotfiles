@@ -1,0 +1,121 @@
+{
+	"CNavLadder/ConnectTo": {
+		"body": [
+			"ConnectTo(${1:area})$0"
+		],
+		"description": "No description available.",
+		"prefix": "ConnectTo"
+	},
+	"CNavLadder/GetBottomArea": {
+		"body": [
+			"GetBottomArea()$0"
+		],
+		"description": "Returns the bottom area of the",
+		"prefix": "GetBottomArea"
+	},
+	"CNavLadder/GetID": {
+		"body": [
+			"GetID()$0"
+		],
+		"description": "Returns this",
+		"prefix": "GetID"
+	},
+	"CNavLadder/GetLength": {
+		"body": [
+			"GetLength()$0"
+		],
+		"description": "Returns the length of the ladder.",
+		"prefix": "GetLength"
+	},
+	"CNavLadder/GetNormal": {
+		"body": [
+			"GetNormal()$0"
+		],
+		"description": "Returns the direction of this",
+		"prefix": "GetNormal"
+	},
+	"CNavLadder/GetPosAtHeight": {
+		"body": [
+			"GetPosAtHeight(${1:height})$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetPosAtHeight"
+	},
+	"CNavLadder/GetTopBehindArea": {
+		"body": [
+			"GetTopBehindArea()$0"
+		],
+		"description": "Returns the top behind",
+		"prefix": "GetTopBehindArea"
+	},
+	"CNavLadder/GetTopForwardArea": {
+		"body": [
+			"GetTopForwardArea()$0"
+		],
+		"description": "Returns the top forward",
+		"prefix": "GetTopForwardArea"
+	},
+	"CNavLadder/GetTopLeftArea": {
+		"body": [
+			"GetTopLeftArea()$0"
+		],
+		"description": "Returns the top left",
+		"prefix": "GetTopLeftArea"
+	},
+	"CNavLadder/GetTopRightArea": {
+		"body": [
+			"GetTopRightArea()$0"
+		],
+		"description": "Returns the top right",
+		"prefix": "GetTopRightArea"
+	},
+	"CNavLadder/IsConnectedAtSide": {
+		"body": [
+			"IsConnectedAtSide(${1:navArea}, ${2:navDirType})$0"
+		],
+		"description": "Returns whether this",
+		"prefix": "IsConnectedAtSide"
+	},
+	"CNavLadder/IsValid": {
+		"body": [
+			"IsValid()$0"
+		],
+		"description": "Returns whether this",
+		"prefix": "IsValid"
+	},
+	"CNavLadder/SetBottomArea": {
+		"body": [
+			"SetBottomArea(${1:area})$0"
+		],
+		"description": "Sets the bottom area of the",
+		"prefix": "SetBottomArea"
+	},
+	"CNavLadder/SetTopBehindArea": {
+		"body": [
+			"SetTopBehindArea(${1:area})$0"
+		],
+		"description": "Sets the top behind area of the",
+		"prefix": "SetTopBehindArea"
+	},
+	"CNavLadder/SetTopForwardArea": {
+		"body": [
+			"SetTopForwardArea(${1:area})$0"
+		],
+		"description": "Sets the top forward area of the",
+		"prefix": "SetTopForwardArea"
+	},
+	"CNavLadder/SetTopLeftArea": {
+		"body": [
+			"SetTopLeftArea(${1:area})$0"
+		],
+		"description": "Sets the top left area of the",
+		"prefix": "SetTopLeftArea"
+	},
+	"CNavLadder/SetTopRightArea": {
+		"body": [
+			"SetTopRightArea(${1:area})$0"
+		],
+		"description": "Sets the top right area of the",
+		"prefix": "SetTopRightArea"
+	}
+}

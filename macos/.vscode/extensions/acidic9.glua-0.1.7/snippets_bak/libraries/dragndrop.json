@@ -1,0 +1,79 @@
+{
+	"dragndrop/CallReceiverFunction": {
+		"body": [
+			"dragndrop.CallReceiverFunction(${1:bDoDrop}, ${2:command}, ${3:mx}, ${4:my})$0"
+		],
+		"description": "No description available.",
+		"prefix": "dragndrop.CallReceiverFunction"
+	},
+	"dragndrop/Clear": {
+		"body": [
+			"dragndrop.Clear()$0"
+		],
+		"description": "Clears all the internal drag\u0026#39;n\u0026#39;drop variables.",
+		"prefix": "dragndrop.Clear"
+	},
+	"dragndrop/Drop": {
+		"body": [
+			"dragndrop.Drop()$0"
+		],
+		"description": "No description available.",
+		"prefix": "dragndrop.Drop"
+	},
+	"dragndrop/GetDroppable": {
+		"body": [
+			"dragndrop.GetDroppable(${1:name=nil})$0"
+		],
+		"description": "Returns a table of currently dragged panels.",
+		"prefix": "dragndrop.GetDroppable"
+	},
+	"dragndrop/HandleDroppedInGame": {
+		"body": [
+			"dragndrop.HandleDroppedInGame()$0"
+		],
+		"description": "If returns true, calls",
+		"prefix": "dragndrop.HandleDroppedInGame"
+	},
+	"dragndrop/HoverThink": {
+		"body": [
+			"dragndrop.HoverThink()$0"
+		],
+		"description": "No description available.",
+		"prefix": "dragndrop.HoverThink"
+	},
+	"dragndrop/IsDragging": {
+		"body": [
+			"dragndrop.IsDragging()$0"
+		],
+		"description": "Returns whether the user is dragging something with the drag\u0026#39;n\u0026#39;drop system.",
+		"prefix": "dragndrop.IsDragging"
+	},
+	"dragndrop/StartDragging": {
+		"body": [
+			"dragndrop.StartDragging()$0"
+		],
+		"description": "No description available.",
+		"prefix": "dragndrop.StartDragging"
+	},
+	"dragndrop/StopDragging": {
+		"body": [
+			"dragndrop.StopDragging()$0"
+		],
+		"description": "Stops the drag\u0026#39;n\u0026#39;drop and calls",
+		"prefix": "dragndrop.StopDragging"
+	},
+	"dragndrop/Think": {
+		"body": [
+			"dragndrop.Think()$0"
+		],
+		"description": "No description available.",
+		"prefix": "dragndrop.Think"
+	},
+	"dragndrop/UpdateReceiver": {
+		"body": [
+			"dragndrop.UpdateReceiver()$0"
+		],
+		"description": "No description available.",
+		"prefix": "dragndrop.UpdateReceiver"
+	}
+}

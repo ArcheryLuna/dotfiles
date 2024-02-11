@@ -1,0 +1,44 @@
+{
+    "weapons.Get": {
+        "body": [
+            "weapons.Get(${1:classname})$0"
+        ],
+        "description": "WEAPONS [Shared] \n\n[string] classname\n  Class name of weapon to retrieve",
+        "prefix": "weapons.Get"
+    },
+    "weapons.GetList": {
+        "body": [
+            "weapons.GetList()$0"
+        ],
+        "description": "WEAPONS [Shared] Get a list of all the registered SWEPs. This does not include weapons added to spawnmenu manually.",
+        "prefix": "weapons.GetList"
+    },
+    "weapons.GetStored": {
+        "body": [
+            "weapons.GetStored(${1:weapon_class})$0"
+        ],
+        "description": "WEAPONS [Shared] \n\n[string] weapon_class\n  Weapon class to retrieve weapon table of",
+        "prefix": "weapons.GetStored"
+    },
+    "weapons.IsBasedOn": {
+        "body": [
+            "weapons.IsBasedOn(${1:name}, ${2:base})$0"
+        ],
+        "description": "WEAPONS [Shared] Checks if name is based on base\n\n[string] name\n  Entity's class name to be checked\n\n[string] base\n  Base class name to be checked",
+        "prefix": "weapons.IsBasedOn"
+    },
+    "weapons.OnLoaded": {
+        "body": [
+            "weapons.OnLoaded()$0"
+        ],
+        "description": "WEAPONS [Shared]",
+        "prefix": "weapons.OnLoaded"
+    },
+    "weapons.Register": {
+        "body": [
+            "weapons.Register(${1:swep_table}, ${2:classname})$0"
+        ],
+        "description": "WEAPONS [Shared] \n\n[table] swep_table\n  The SWEP table\n\n[string] classname\n  Classname to assign to that swep",
+        "prefix": "weapons.Register"
+    }
+}

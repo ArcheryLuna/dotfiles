@@ -1,0 +1,387 @@
+{
+	"CNavArea/AddToClosedList": {
+		"body": [
+			"AddToClosedList()$0"
+		],
+		"description": "Adds this",
+		"prefix": "AddToClosedList"
+	},
+	"CNavArea/AddToOpenList": {
+		"body": [
+			"AddToOpenList()$0"
+		],
+		"description": "No description available.",
+		"prefix": "AddToOpenList"
+	},
+	"CNavArea/ClearSearchLists": {
+		"body": [
+			"ClearSearchLists()$0"
+		],
+		"description": "No description available.",
+		"prefix": "ClearSearchLists"
+	},
+	"CNavArea/ComputeAdjacentConnectionHeightChange": {
+		"body": [
+			"ComputeAdjacentConnectionHeightChange(${1:navarea})$0"
+		],
+		"description": "Returns the height difference between the edges of two connected navareas.",
+		"prefix": "ComputeAdjacentConnectionHeightChange"
+	},
+	"CNavArea/ComputeDirection": {
+		"body": [
+			"ComputeDirection(${1:pos})$0"
+		],
+		"description": "Returns the",
+		"prefix": "ComputeDirection"
+	},
+	"CNavArea/ComputeGroundHeightChange": {
+		"body": [
+			"ComputeGroundHeightChange(${1:navArea})$0"
+		],
+		"description": "Returns the height difference on the Z axis of the two",
+		"prefix": "ComputeGroundHeightChange"
+	},
+	"CNavArea/Contains": {
+		"body": [
+			"Contains(${1:pos})$0"
+		],
+		"description": "Returns true if this",
+		"prefix": "Contains"
+	},
+	"CNavArea/Draw": {
+		"body": [
+			"Draw()$0"
+		],
+		"description": "Draws this navarea on debug overlay.",
+		"prefix": "Draw"
+	},
+	"CNavArea/DrawSpots": {
+		"body": [
+			"DrawSpots()$0"
+		],
+		"description": "Draws the hiding spots on debug overlay. This includes sniper/exposed spots too!",
+		"prefix": "DrawSpots"
+	},
+	"CNavArea/GetAdjacentAreas": {
+		"body": [
+			"GetAdjacentAreas()$0"
+		],
+		"description": "Returns a table of all the",
+		"prefix": "GetAdjacentAreas"
+	},
+	"CNavArea/GetAdjacentAreasAtSide": {
+		"body": [
+			"GetAdjacentAreasAtSide(${1:navDir})$0"
+		],
+		"description": "Returns a table of all the",
+		"prefix": "GetAdjacentAreasAtSide"
+	},
+	"CNavArea/GetAdjacentCount": {
+		"body": [
+			"GetAdjacentCount()$0"
+		],
+		"description": "Returns the amount of",
+		"prefix": "GetAdjacentCount"
+	},
+	"CNavArea/GetAdjacentCountAtSide": {
+		"body": [
+			"GetAdjacentCountAtSide(${1:navDir})$0"
+		],
+		"description": "Returns the amount of",
+		"prefix": "GetAdjacentCountAtSide"
+	},
+	"CNavArea/GetAttributes": {
+		"body": [
+			"GetAttributes()$0"
+		],
+		"description": "Returns the attribute mask for the given",
+		"prefix": "GetAttributes"
+	},
+	"CNavArea/GetCenter": {
+		"body": [
+			"GetCenter()$0"
+		],
+		"description": "Returns the center most vector point for the given",
+		"prefix": "GetCenter"
+	},
+	"CNavArea/GetClosestPointOnArea": {
+		"body": [
+			"GetClosestPointOnArea(${1:pos})$0"
+		],
+		"description": "Returns the closest point of this Nav Area from the given position.",
+		"prefix": "GetClosestPointOnArea"
+	},
+	"CNavArea/GetCorner": {
+		"body": [
+			"GetCorner(${1:cornerid})$0"
+		],
+		"description": "Returns the vector position of the corner for the given",
+		"prefix": "GetCorner"
+	},
+	"CNavArea/GetCostSoFar": {
+		"body": [
+			"GetCostSoFar()$0"
+		],
+		"description": "Internal function used when generating a path from one point to another in",
+		"prefix": "GetCostSoFar"
+	},
+	"CNavArea/GetExposedSpots": {
+		"body": [
+			"GetExposedSpots()$0"
+		],
+		"description": "Returns a table of very bad hiding spots in this area",
+		"prefix": "GetExposedSpots"
+	},
+	"CNavArea/GetExtentInfo": {
+		"body": [
+			"GetExtentInfo()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetExtentInfo"
+	},
+	"CNavArea/GetHidingSpots": {
+		"body": [
+			"GetHidingSpots()$0"
+		],
+		"description": "Returns a table of good hiding spots in this area",
+		"prefix": "GetHidingSpots"
+	},
+	"CNavArea/GetID": {
+		"body": [
+			"GetID()$0"
+		],
+		"description": "Returns this",
+		"prefix": "GetID"
+	},
+	"CNavArea/GetIncomingConnections": {
+		"body": [
+			"GetIncomingConnections()$0"
+		],
+		"description": "Returns a table of all the",
+		"prefix": "GetIncomingConnections"
+	},
+	"CNavArea/GetIncomingConnectionsAtSide": {
+		"body": [
+			"GetIncomingConnectionsAtSide(${1:navDir})$0"
+		],
+		"description": "Returns a table of all the",
+		"prefix": "GetIncomingConnectionsAtSide"
+	},
+	"CNavArea/GetLadders": {
+		"body": [
+			"GetLadders()$0"
+		],
+		"description": "Returns all",
+		"prefix": "GetLadders"
+	},
+	"CNavArea/GetLaddersAtSide": {
+		"body": [
+			"GetLaddersAtSide(${1:navDir})$0"
+		],
+		"description": "Returns all",
+		"prefix": "GetLaddersAtSide"
+	},
+	"CNavArea/GetParent": {
+		"body": [
+			"GetParent()$0"
+		],
+		"description": "Returns the parent",
+		"prefix": "GetParent"
+	},
+	"CNavArea/GetParentHow": {
+		"body": [
+			"GetParentHow()$0"
+		],
+		"description": "Returns how this",
+		"prefix": "GetParentHow"
+	},
+	"CNavArea/GetRandomAdjacentAreaAtSide": {
+		"body": [
+			"GetRandomAdjacentAreaAtSide(${1:navDir})$0"
+		],
+		"description": "Returns a random",
+		"prefix": "GetRandomAdjacentAreaAtSide"
+	},
+	"CNavArea/GetRandomPoint": {
+		"body": [
+			"GetRandomPoint()$0"
+		],
+		"description": "Returns a random point on the nav area.",
+		"prefix": "GetRandomPoint"
+	},
+	"CNavArea/GetSizeX": {
+		"body": [
+			"GetSizeX()$0"
+		],
+		"description": "Returns the width this Nav Area.",
+		"prefix": "GetSizeX"
+	},
+	"CNavArea/GetSizeY": {
+		"body": [
+			"GetSizeY()$0"
+		],
+		"description": "Returns the height of this Nav Area.",
+		"prefix": "GetSizeY"
+	},
+	"CNavArea/GetTotalCost": {
+		"body": [
+			"GetTotalCost()$0"
+		],
+		"description": "No description available.",
+		"prefix": "GetTotalCost"
+	},
+	"CNavArea/GetZ": {
+		"body": [
+			"GetZ(${1:pos})$0"
+		],
+		"description": "Returns the elevation of this Nav Area at the given position.",
+		"prefix": "GetZ"
+	},
+	"CNavArea/HasAttributes": {
+		"body": [
+			"HasAttributes(${1:attribs})$0"
+		],
+		"description": "Returns true if the given",
+		"prefix": "HasAttributes"
+	},
+	"CNavArea/IsBlocked": {
+		"body": [
+			"IsBlocked()$0"
+		],
+		"description": "No description available.",
+		"prefix": "IsBlocked"
+	},
+	"CNavArea/IsClosed": {
+		"body": [
+			"IsClosed()$0"
+		],
+		"description": "No description available.",
+		"prefix": "IsClosed"
+	},
+	"CNavArea/IsConnected": {
+		"body": [
+			"IsConnected(${1:navArea})$0"
+		],
+		"description": "Returns whether this",
+		"prefix": "IsConnected"
+	},
+	"CNavArea/IsConnectedAtSide": {
+		"body": [
+			"IsConnectedAtSide(${1:navArea}, ${2:navDirType})$0"
+		],
+		"description": "Returns whether this",
+		"prefix": "IsConnectedAtSide"
+	},
+	"CNavArea/IsCoplanar": {
+		"body": [
+			"IsCoplanar(${1:navArea})$0"
+		],
+		"description": "Returns whether this Nav Area is in the same plane as the given one.",
+		"prefix": "IsCoplanar"
+	},
+	"CNavArea/IsFlat": {
+		"body": [
+			"IsFlat()$0"
+		],
+		"description": "Returns if this Nav Area is flat within the tolerance of the nav_coplanar_slope_limit_displacement and nav_coplanar_slope_limit convars.",
+		"prefix": "IsFlat"
+	},
+	"CNavArea/IsOpen": {
+		"body": [
+			"IsOpen()$0"
+		],
+		"description": "No description available.",
+		"prefix": "IsOpen"
+	},
+	"CNavArea/IsOpenListEmpty": {
+		"body": [
+			"IsOpenListEmpty()$0"
+		],
+		"description": "No description available.",
+		"prefix": "IsOpenListEmpty"
+	},
+	"CNavArea/IsOverlapping": {
+		"body": [
+			"IsOverlapping(${1:pos}, ${2:tolerance=0})$0"
+		],
+		"description": "Returns if this position overlaps the Nav Area within the given tolerance.",
+		"prefix": "IsOverlapping"
+	},
+	"CNavArea/IsOverlappingArea": {
+		"body": [
+			"IsOverlappingArea(${1:navArea})$0"
+		],
+		"description": "Returns true if this",
+		"prefix": "IsOverlappingArea"
+	},
+	"CNavArea/IsRoughlySquare": {
+		"body": [
+			"IsRoughlySquare()$0"
+		],
+		"description": "Returns if we\u0026#39;re shaped like a square.",
+		"prefix": "IsRoughlySquare"
+	},
+	"CNavArea/IsUnderwater": {
+		"body": [
+			"IsUnderwater()$0"
+		],
+		"description": "Whether this Nav Area is placed underwater.",
+		"prefix": "IsUnderwater"
+	},
+	"CNavArea/IsValid": {
+		"body": [
+			"IsValid()$0"
+		],
+		"description": "Returns whether this",
+		"prefix": "IsValid"
+	},
+	"CNavArea/IsVisible": {
+		"body": [
+			"IsVisible(${1:pos})$0"
+		],
+		"description": "Returns whether we can be seen from the given position.",
+		"prefix": "IsVisible"
+	},
+	"CNavArea/PopOpenList": {
+		"body": [
+			"PopOpenList()$0"
+		],
+		"description": "No description available.",
+		"prefix": "PopOpenList"
+	},
+	"CNavArea/RemoveFromClosedList": {
+		"body": [
+			"RemoveFromClosedList()$0"
+		],
+		"description": "No description available.",
+		"prefix": "RemoveFromClosedList"
+	},
+	"CNavArea/SetAttributes": {
+		"body": [
+			"SetAttributes(${1:attribs})$0"
+		],
+		"description": "Sets the attributes for given CNavArea.",
+		"prefix": "SetAttributes"
+	},
+	"CNavArea/SetParent": {
+		"body": [
+			"SetParent(${1:parent})$0"
+		],
+		"description": "Sets the new parent of this",
+		"prefix": "SetParent"
+	},
+	"CNavArea/SetTotalCost": {
+		"body": [
+			"SetTotalCost(${1:cost})$0"
+		],
+		"description": "No description available.",
+		"prefix": "SetTotalCost"
+	},
+	"CNavArea/UpdateOnOpenList": {
+		"body": [
+			"UpdateOnOpenList()$0"
+		],
+		"description": "No description available.",
+		"prefix": "UpdateOnOpenList"
+	}
+}

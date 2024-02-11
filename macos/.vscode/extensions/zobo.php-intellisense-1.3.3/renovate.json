@@ -1,0 +1,67 @@
+{
+  "extends": ["config:base", ":maintainLockFilesMonthly"],
+  "prCreation": "not-pending",
+  "rangeStrategy": "bump",
+  "semanticCommits": true,
+  "masterIssue": true,
+  "prHourlyLimit": 0,
+  "node": {
+    "supportPolicy": ["current"],
+    "major": {
+      "enabled": true
+    }
+  },
+  "regexManagers": [
+    {
+      "fileMatch": ["^.github/workflows/.+\\.ya?ml$"],
+      "matchStrings": ["php: '(?<currentValue>[^']+)'.*# renovate:keep-up-to-date"],
+      "depNameTemplate": "php",
+      "lookupNameTemplate": "php/php-src",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<prerelease>\\w+)?$"
+    },
+    {
+      "fileMatch": ["^.github/workflows/.+\\.ya?ml$"],
+      "matchStrings": ["node-version: '(?<currentValue>[^']+)'.*# renovate:keep-up-to-date"],
+      "depNameTemplate": "node",
+      "lookupNameTemplate": "nodejs/node",
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "node"
+    }
+  ],
+  "npm": {
+    "packageRules": [
+      {
+        "packagePatterns": ["*"],
+        "semanticCommitType": "chore",
+        "minor": {
+          "groupName": "all non-major dependencies",
+          "groupSlug": "all-minor-patch"
+        }
+      }
+    ]
+  },
+  "separateMinorPatch": true,
+  "composer": {
+    "enabled": true,
+    "rollbackPrs": false
+  },
+  "packageRules": [
+    {
+      "matchPackageNames": ["php"],
+      "extractVersion": "^php-(?<version>.*)$"
+    },
+    {
+      "matchPackageNames": ["node"],
+      "extractVersion": "^v(?<version>.*)$",
+      "commitMessageTopic": "Node.js",
+      "major": {
+        "enabled": true
+      }
+    },
+    {
+      "matchPackageNames": ["vscode"],
+      "allowedVersions": "!/^1\\.999\\.0$/"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+    "AddItem": {
+        "body": [
+            "AddItem(${1:item})$0"
+        ],
+        "description": "DGRID [Client] \n\n[Panel] item\n  The item to add. It will be forced visible and parented to the DGrid.",
+        "prefix": "AddItem"
+    },
+    "GetColWide": {
+        "body": [
+            "GetColWide()$0"
+        ],
+        "description": "DGRID [Client]",
+        "prefix": "GetColWide"
+    },
+    "GetCols": {
+        "body": [
+            "GetCols()$0"
+        ],
+        "description": "DGRID [Client]",
+        "prefix": "GetCols"
+    },
+    "GetItems": {
+        "body": [
+            "GetItems()$0"
+        ],
+        "description": "DGRID [Client]",
+        "prefix": "GetItems"
+    },
+    "GetRowHeight": {
+        "body": [
+            "GetRowHeight()$0"
+        ],
+        "description": "DGRID [Client]",
+        "prefix": "GetRowHeight"
+    },
+    "RemoveItem": {
+        "body": [
+            "RemoveItem(${1:item}, ${2:bDontDelete=false})$0"
+        ],
+        "description": "DGRID [Client] \n\n[Panel] item\n  Item to remove from the grid\n\n[boolean] bDontDelete=false\n  If set to true, the actual panel will not be removed via Panel:Remove.",
+        "prefix": "RemoveItem"
+    },
+    "SetColWide": {
+        "body": [
+            "SetColWide(${1:colWidth})$0"
+        ],
+        "description": "DGRID [Client] \n\n[number] colWidth\n  The width of each column.",
+        "prefix": "SetColWide"
+    },
+    "SetCols": {
+        "body": [
+            "SetCols(${1:cols})$0"
+        ],
+        "description": "DGRID [Client] \n\n[number] cols\n  The desired number of columns",
+        "prefix": "SetCols"
+    },
+    "SetRowHeight": {
+        "body": [
+            "SetRowHeight(${1:rowHeight})$0"
+        ],
+        "description": "DGRID [Client] \n\n[number] rowHeight\n  The height of each row",
+        "prefix": "SetRowHeight"
+    },
+    "SortByMember": {
+        "body": [
+            "SortByMember(${1:key}, ${2:desc=true})$0"
+        ],
+        "description": "DGRID [Client] \n\n[string] key\n  A key in the panel from DGrid:GetItems. The key's value must be numeric.\n\n[boolean] desc=true\n  True for descending order, false for ascending.",
+        "prefix": "SortByMember"
+    }
+}

@@ -1,0 +1,30 @@
+{
+	"GWEN/CreateTextureBorder": {
+		"body": [
+			"GWEN.CreateTextureBorder(${1:x}, ${2:y}, ${3:w}, ${4:h}, ${5:left}, ${6:top}, ${7:right}, ${8:bottom})$0"
+		],
+		"description": "Used in derma skins to create a bordered rectangle drawing function from an image. The texture is taken from SKIN.GwenTexture",
+		"prefix": "GWEN.CreateTextureBorder"
+	},
+	"GWEN/CreateTextureCentered": {
+		"body": [
+			"GWEN.CreateTextureCentered(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+		],
+		"description": "Used in derma skins to create a rectangle drawing function from an image. The rectangle will not be scaled, but instead it will be drawn in the center of the box. The texture is taken from SKIN.GwenTexture",
+		"prefix": "GWEN.CreateTextureCentered"
+	},
+	"GWEN/CreateTextureNormal": {
+		"body": [
+			"GWEN.CreateTextureNormal(${1:x}, ${2:y}, ${3:w}, ${4:h})$0"
+		],
+		"description": "Used in derma skins to create a rectangle drawing function from an image. The texture of the rectangle will be scaled. The texture is taken from SKIN.GwenTexture",
+		"prefix": "GWEN.CreateTextureNormal"
+	},
+	"GWEN/TextureColor": {
+		"body": [
+			"GWEN.TextureColor(${1:x}, ${2:y})$0"
+		],
+		"description": "When used in a material skin, it returns a color value from a point in the skin image.",
+		"prefix": "GWEN.TextureColor"
+	}
+}

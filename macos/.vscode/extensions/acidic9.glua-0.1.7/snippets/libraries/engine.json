@@ -1,0 +1,142 @@
+{
+    "engine.ActiveGamemode": {
+        "body": [
+            "engine.ActiveGamemode()$0"
+        ],
+        "description": "ENGINE [Shared/Menu] Returns the name of the currently running gamemode.",
+        "prefix": "engine.ActiveGamemode"
+    },
+    "engine.CloseServer": {
+        "body": [
+            "engine.CloseServer()$0"
+        ],
+        "description": "ENGINE [Server]",
+        "prefix": "engine.CloseServer"
+    },
+    "engine.GetAddons": {
+        "body": [
+            "engine.GetAddons()$0"
+        ],
+        "description": "ENGINE [Shared/Menu] Returns a list of addons the player have subscribed to on the workshop.",
+        "prefix": "engine.GetAddons"
+    },
+    "engine.GetDemoPlaybackStartTick": {
+        "body": [
+            "engine.GetDemoPlaybackStartTick()$0"
+        ],
+        "description": "ENGINE [Client/Menu]",
+        "prefix": "engine.GetDemoPlaybackStartTick"
+    },
+    "engine.GetDemoPlaybackTick": {
+        "body": [
+            "engine.GetDemoPlaybackTick()$0"
+        ],
+        "description": "ENGINE [Client/Menu]",
+        "prefix": "engine.GetDemoPlaybackTick"
+    },
+    "engine.GetDemoPlaybackTimeScale": {
+        "body": [
+            "engine.GetDemoPlaybackTimeScale()$0"
+        ],
+        "description": "ENGINE [Client/Menu]",
+        "prefix": "engine.GetDemoPlaybackTimeScale"
+    },
+    "engine.GetDemoPlaybackTotalTicks": {
+        "body": [
+            "engine.GetDemoPlaybackTotalTicks()$0"
+        ],
+        "description": "ENGINE [Client/Menu]",
+        "prefix": "engine.GetDemoPlaybackTotalTicks"
+    },
+    "engine.GetGamemodes": {
+        "body": [
+            "engine.GetGamemodes()$0"
+        ],
+        "description": "ENGINE [Shared/Menu] Returns a table containing info for all installed gamemodes",
+        "prefix": "engine.GetGamemodes"
+    },
+    "engine.GetGames": {
+        "body": [
+            "engine.GetGames()$0"
+        ],
+        "description": "ENGINE [Shared/Menu] Returns an array of tables corresponding to all games from which Garry's Mod supports mounting content. The \"mounted\" and \"installed\" values currently do not work correctly serverside on dedicated servers. Some games will always report true while others will always report false.",
+        "prefix": "engine.GetGames"
+    },
+    "engine.GetUserContent": {
+        "body": [
+            "engine.GetUserContent()$0"
+        ],
+        "description": "ENGINE [Shared/Menu]",
+        "prefix": "engine.GetUserContent"
+    },
+    "engine.IsPlayingDemo": {
+        "body": [
+            "engine.IsPlayingDemo()$0"
+        ],
+        "description": "ENGINE [Client/Menu]",
+        "prefix": "engine.IsPlayingDemo"
+    },
+    "engine.IsRecordingDemo": {
+        "body": [
+            "engine.IsRecordingDemo()$0"
+        ],
+        "description": "ENGINE [Client/Menu]",
+        "prefix": "engine.IsRecordingDemo"
+    },
+    "engine.LightStyle": {
+        "body": [
+            "engine.LightStyle(${1:lightstyle}, ${2:pattern})$0"
+        ],
+        "description": "ENGINE [Server] \n\n[number] lightstyle\n  The lightstyle to edit. 0 to 63. If you want to edit map lighting, you want to set this to 0.\n\n[string] pattern\n  The pattern to change the lightstyle to. \"a\" is the darkest, \"z\" is the brightest. You can use stuff like \"abcxyz\" to make flashing patterns. The normal brightness for a map is \"m\". Values over \"z\" are allowed, \"~\" for instance.",
+        "prefix": "engine.LightStyle"
+    },
+    "engine.OpenDupe": {
+        "body": [
+            "engine.OpenDupe(${1:dupeName})$0"
+        ],
+        "description": "ENGINE [Client] \n\n[string] dupeName\n  Name of the file. e.g, engine.OpenDupe(\"dupes/8b809dd7a1a9a375e75be01cdc12e61f.dupe\")",
+        "prefix": "engine.OpenDupe"
+    },
+    "engine.ServerFrameTime": {
+        "body": [
+            "engine.ServerFrameTime()$0"
+        ],
+        "description": "ENGINE [Client]",
+        "prefix": "engine.ServerFrameTime"
+    },
+    "engine.SetMounted": {
+        "body": [
+            "engine.SetMounted(${1:depotID}, ${2:doMount})$0"
+        ],
+        "description": "ENGINE [Menu] \n\n[string] depotID\n  The depot id of the game to mount.\n\n[boolean] doMount\n  The mount state, true to mount, false to unmount",
+        "prefix": "engine.SetMounted"
+    },
+    "engine.TickInterval": {
+        "body": [
+            "engine.TickInterval()$0"
+        ],
+        "description": "ENGINE [Shared/Menu] Returns the number of seconds between each gametick.",
+        "prefix": "engine.TickInterval"
+    },
+    "engine.VideoSettings": {
+        "body": [
+            "engine.VideoSettings()$0"
+        ],
+        "description": "ENGINE [Client]",
+        "prefix": "engine.VideoSettings"
+    },
+    "engine.WriteDupe": {
+        "body": [
+            "engine.WriteDupe(${1:dupe}, ${2:jpeg})$0"
+        ],
+        "description": "ENGINE [Client] \n\n[string] dupe\n  Dupe table, encoded by util.TableToJSON and compressed by util.Compress\n\n[string] jpeg\n  The dupe icon, created by render.Capture",
+        "prefix": "engine.WriteDupe"
+    },
+    "engine.WriteSave": {
+        "body": [
+            "engine.WriteSave(${1:saveData}, ${2:name}, ${3:time}, ${4:map})$0"
+        ],
+        "description": "ENGINE [Client] Stores savedata into the game (can be loaded using the LoadGame menu)\n\n[string] saveData\n  Data generated by gmsave.SaveMap\n\n[string] name\n  Name the save will have.\n\n[number] time\n  When the save was saved during the game (Put CurTime here)\n\n[string] map\n  The map the save is used for.",
+        "prefix": "engine.WriteSave"
+    }
+}

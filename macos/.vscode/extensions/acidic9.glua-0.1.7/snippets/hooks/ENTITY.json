@@ -1,0 +1,429 @@
+{
+    "AcceptInput": {
+        "body": [
+            "AcceptInput(${1:inputName}, ${2:activator}, ${3:called}, ${4:data})$0"
+        ],
+        "description": "ENTITY [Server] Called when another entity fires an event to this entity.\n\n[string] inputName\n  The name of the input that was triggered.\n\n[Entity] activator\n  The initial cause for the input getting triggered.\n\n[Entity] called\n  The entity that directly trigger the input.\n\n[string] data\n  The data passed.",
+        "prefix": "AcceptInput"
+    },
+    "Blocked": {
+        "body": [
+            "Blocked(${1:other})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Entity] other\n  The entity that is blocking this entity.",
+        "prefix": "Blocked"
+    },
+    "CalcAbsolutePosition": {
+        "body": [
+            "CalcAbsolutePosition(${1:pos}, ${2:ang})$0"
+        ],
+        "description": "ENTITY [Shared] Called whenever the entity's position changes. A callback for when an entity's angle changes is available via Entity:AddCallback. Like ENTITY:RenderOverride, this hook works on any entity (scripted or not) it is applied on.\n\n[Vector] pos\n  The entity's actual position. May differ from Entity:GetPos\n\n[Angle] ang\n  The entity's actual angles. May differ from Entity:GetAngles",
+        "prefix": "CalcAbsolutePosition"
+    },
+    "CanProperty": {
+        "body": [
+            "CanProperty(${1:ply}, ${2:property})$0"
+        ],
+        "description": "ENTITY [Shared] Controls if a property can be used on this entity or not. This hook will only work in Sandbox derived gamemodes that do not have SANDBOX:CanProperty overridden.\n\n[Player] ply\n  Player, that tried to use the property\n\n[string] property\n  Class of the property that is tried to use, for example - bonemanipulate",
+        "prefix": "CanProperty"
+    },
+    "DoSchedule": {
+        "body": [
+            "DoSchedule(${1:sched})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[table] sched\n  The schedule to run.",
+        "prefix": "DoSchedule"
+    },
+    "DoingEngineSchedule": {
+        "body": [
+            "DoingEngineSchedule()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "DoingEngineSchedule"
+    },
+    "Draw": {
+        "body": [
+            "Draw(${1:flags})$0"
+        ],
+        "description": "ENTITY [Client] Called if and when the entity should be drawn opaquely, based on the Entity:GetRenderGroup of the entity. See ENT structure and RENDERGROUP_ Enums for more information.\n\n[number] flags\n  The bit flags from STUDIO_ Enums",
+        "prefix": "Draw"
+    },
+    "DrawTranslucent": {
+        "body": [
+            "DrawTranslucent(${1:flags})$0"
+        ],
+        "description": "ENTITY [Client] Called when the entity should be drawn translucently.\n\n[number] flags\n  The bit flags from STUDIO_ Enums",
+        "prefix": "DrawTranslucent"
+    },
+    "EndTouch": {
+        "body": [
+            "EndTouch(${1:entity})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Entity] entity\n  The entity which was touched.",
+        "prefix": "EndTouch"
+    },
+    "EngineScheduleFinish": {
+        "body": [
+            "EngineScheduleFinish()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "EngineScheduleFinish"
+    },
+    "ExpressionFinished": {
+        "body": [
+            "ExpressionFinished(${1:strExp})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[string] strExp\n  The path of the expression.",
+        "prefix": "ExpressionFinished"
+    },
+    "FireAnimationEvent": {
+        "body": [
+            "FireAnimationEvent(${1:pos}, ${2:ang}, ${3:event}, ${4:name})$0"
+        ],
+        "description": "ENTITY [Shared] Called before firing animation events, such as muzzle flashes or shell ejections.\n\n[Vector] pos\n  Position of the effect\n\n[Angle] ang\n  Angle of the effect\n\n[number] event\n  The event ID of happened even. See this page.\n\n[string] name\n  Name of the event",
+        "prefix": "FireAnimationEvent"
+    },
+    "GetAttackSpread": {
+        "body": [
+            "GetAttackSpread(${1:wep}, ${2:target})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Entity] wep\n  The weapon being used by the NPC.\n\n[Entity] target\n  The target the NPC is attacking",
+        "prefix": "GetAttackSpread"
+    },
+    "GetRelationship": {
+        "body": [
+            "GetRelationship(${1:ent})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Entity] ent\n  The entity in question",
+        "prefix": "GetRelationship"
+    },
+    "GravGunPickupAllowed": {
+        "body": [
+            "GravGunPickupAllowed(${1:ply})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Player] ply\n  The player aiming at us",
+        "prefix": "GravGunPickupAllowed"
+    },
+    "HandleAnimEvent": {
+        "body": [
+            "HandleAnimEvent(${1:event}, ${2:eventTime}, ${3:cycle}, ${4:type}, ${5:options})$0"
+        ],
+        "description": "ENTITY [Server] Called before firing animation events, such as muzzle flashes or shell ejections.\n\n[number] event\n  The event ID of happened even. See this page.\n\n[number] eventTime\n  \n\n[number] cycle\n  \n\n[number] type\n  \n\n[string] options",
+        "prefix": "HandleAnimEvent"
+    },
+    "ImpactTrace": {
+        "body": [
+            "ImpactTrace(${1:traceResult}, ${2:damageType}, ${3:customImpactName=nil})$0"
+        ],
+        "description": "ENTITY [Client] Called when a bullet trace hits this entity and allows you to override the default behavior by returning true.\n\n[table] traceResult\n  The trace that hit this entity as a TraceResult structure.\n\n[number] damageType\n  The damage bits associated with the trace, see DMG_ Enums\n\n[string] customImpactName=nil\n  The effect name to override the impact effect with.\n\nPossible arguments are ImpactJeep, AirboatGunImpact, HelicopterImpact, ImpactGunship.",
+        "prefix": "ImpactTrace"
+    },
+    "Initialize": {
+        "body": [
+            "Initialize()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "Initialize"
+    },
+    "KeyValue": {
+        "body": [
+            "KeyValue(${1:key}, ${2:value})$0"
+        ],
+        "description": "ENTITY [Server] Called when the engine sets a value for this scripted entity. See GM:EntityKeyValue for a hook that works for all entities.\nSee WEAPON:KeyValue for a hook that works for scripted weapons.\n\n[string] key\n  The key that was affected.\n\n[string] value\n  The new value.",
+        "prefix": "KeyValue"
+    },
+    "NextTask": {
+        "body": [
+            "NextTask(${1:sched})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[table] sched\n  The schedule to start next task in.",
+        "prefix": "NextTask"
+    },
+    "OnCondition": {
+        "body": [
+            "OnCondition(${1:conditionID})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] conditionID\n  The ID of condition. See NPC:ConditionName.",
+        "prefix": "OnCondition"
+    },
+    "OnDuplicated": {
+        "body": [
+            "OnDuplicated(${1:entTable})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[table] entTable\n  EntityCopyData structure of the source entity.",
+        "prefix": "OnDuplicated"
+    },
+    "OnEntityCopyTableFinish": {
+        "body": [
+            "OnEntityCopyTableFinish(${1:data})$0"
+        ],
+        "description": "ENTITY [Server] Called after duplicator finishes saving the entity, allowing you to modify the save data. This is called after ENTITY:PostEntityCopy.\n\n[table] data\n  The save EntityCopyData structure that you can modify.",
+        "prefix": "OnEntityCopyTableFinish"
+    },
+    "OnReloaded": {
+        "body": [
+            "OnReloaded()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "OnReloaded"
+    },
+    "OnRemove": {
+        "body": [
+            "OnRemove()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "OnRemove"
+    },
+    "OnRestore": {
+        "body": [
+            "OnRestore()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "OnRestore"
+    },
+    "OnTakeDamage": {
+        "body": [
+            "OnTakeDamage(${1:damage})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[CTakeDamageInfo] damage\n  The damage to be applied to the entity.",
+        "prefix": "OnTakeDamage"
+    },
+    "OnTaskComplete": {
+        "body": [
+            "OnTaskComplete()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "OnTaskComplete"
+    },
+    "PassesDamageFilter": {
+        "body": [
+            "PassesDamageFilter(${1:dmg})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[CTakeDamageInfo] dmg\n  Damage to test.",
+        "prefix": "PassesDamageFilter"
+    },
+    "PassesFilter": {
+        "body": [
+            "PassesFilter(${1:trigger}, ${2:ent})$0"
+        ],
+        "description": "ENTITY [Server] Called by Entity:PassesFilter and engine entities to determine whether an entity passes this filter's filter.\n\n[Entity] trigger\n  The 'caller' entity, the one that wants to know if the entity passes the filter\n\n[Entity] ent\n  The entity in question that is being tested",
+        "prefix": "PassesFilter"
+    },
+    "PassesTriggerFilters": {
+        "body": [
+            "PassesTriggerFilters(${1:ent})$0"
+        ],
+        "description": "ENTITY [Server] Polls whenever the entity should trigger the brush.\n\n[Entity] ent\n  The entity that is about to trigger.",
+        "prefix": "PassesTriggerFilters"
+    },
+    "PhysicsCollide": {
+        "body": [
+            "PhysicsCollide(${1:colData}, ${2:collider})$0"
+        ],
+        "description": "ENTITY [Server] Called when the entity collides with anything. The move type and solid type must be VPHYSICS for the hook to be called.\n\n[table] colData\n  Information regarding the collision. See CollisionData structure.\n\n[PhysObj] collider\n  The physics object that collided.",
+        "prefix": "PhysicsCollide"
+    },
+    "PhysicsSimulate": {
+        "body": [
+            "PhysicsSimulate(${1:phys}, ${2:deltaTime})$0"
+        ],
+        "description": "ENTITY [Shared] Called from the Entity's motion controller to simulate physics. This will only be called after using Entity:StartMotionController on a scripted entity of \"anim\" type.\n\n[PhysObj] phys\n  The physics object of the entity.\n\n[number] deltaTime\n  Time since the last call.",
+        "prefix": "PhysicsSimulate"
+    },
+    "PhysicsUpdate": {
+        "body": [
+            "PhysicsUpdate(${1:phys})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[PhysObj] phys\n  The physics object of the entity.",
+        "prefix": "PhysicsUpdate"
+    },
+    "PostEntityCopy": {
+        "body": [
+            "PostEntityCopy()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "PostEntityCopy"
+    },
+    "PostEntityPaste": {
+        "body": [
+            "PostEntityPaste(${1:ply}, ${2:ent}, ${3:createdEntities})$0"
+        ],
+        "description": "ENTITY [Server] Called after the duplicator library pastes the entity, after the bone/entity modifiers have been applied to the entity. This hook is called after ENTITY:OnDuplicated.\n\n[Player] ply\n  The player who pasted the entity.\n\n[Entity] ent\n  The entity itself. Same as 'self'.\n\n[table] createdEntities\n  All entities that are within the placed dupe.",
+        "prefix": "PostEntityPaste"
+    },
+    "PreEntityCopy": {
+        "body": [
+            "PreEntityCopy()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "PreEntityCopy"
+    },
+    "RenderOverride": {
+        "body": [
+            "RenderOverride()$0"
+        ],
+        "description": "ENTITY [Client]",
+        "prefix": "RenderOverride"
+    },
+    "RunAI": {
+        "body": [
+            "RunAI()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "RunAI"
+    },
+    "RunEngineTask": {
+        "body": [
+            "RunEngineTask(${1:taskID}, ${2:taskData})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] taskID\n  The task ID, see ai_task.h\n\n[number] taskData\n  The task data.",
+        "prefix": "RunEngineTask"
+    },
+    "RunTask": {
+        "body": [
+            "RunTask(${1:task})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[table] task\n  The task to run",
+        "prefix": "RunTask"
+    },
+    "ScheduleFinished": {
+        "body": [
+            "ScheduleFinished()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "ScheduleFinished"
+    },
+    "SelectSchedule": {
+        "body": [
+            "SelectSchedule(${1:iNPCState})$0"
+        ],
+        "description": "ENTITY [Server] Set the schedule we should be playing right now.\n\n[number] iNPCState",
+        "prefix": "SelectSchedule"
+    },
+    "SetAutomaticFrameAdvance": {
+        "body": [
+            "SetAutomaticFrameAdvance(${1:enable})$0"
+        ],
+        "description": "ENTITY [Shared] \n\n[boolean] enable\n  Whether or not to set automatic frame advancing.",
+        "prefix": "SetAutomaticFrameAdvance"
+    },
+    "SetTask": {
+        "body": [
+            "SetTask(${1:task})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[table] task\n  The task to set.",
+        "prefix": "SetTask"
+    },
+    "SetupDataTables": {
+        "body": [
+            "SetupDataTables()$0"
+        ],
+        "description": "ENTITY [Shared]",
+        "prefix": "SetupDataTables"
+    },
+    "SpawnFunction": {
+        "body": [
+            "SpawnFunction(${1:ply}, ${2:tr}, ${3:ClassName})$0"
+        ],
+        "description": "ENTITY [Server] This is the spawn function. It's called when a player spawns the entity from the spawnmenu. If you want to make your SENT spawnable you need this function to properly create the entity.\n\n[Player] ply\n  The player that is spawning this SENT\n\n[table] tr\n  A TraceResult structure from player eyes to their aim position\n\n[string] ClassName\n  The classname of your entity",
+        "prefix": "SpawnFunction"
+    },
+    "StartEngineSchedule": {
+        "body": [
+            "StartEngineSchedule(${1:scheduleID})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] scheduleID\n  Schedule ID to start. See SCHED_ Enums",
+        "prefix": "StartEngineSchedule"
+    },
+    "StartEngineTask": {
+        "body": [
+            "StartEngineTask(${1:taskID}, ${2:TaskData})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[number] taskID\n  Task ID to start, see ai_task.h\n\n[number] TaskData\n  Task data",
+        "prefix": "StartEngineTask"
+    },
+    "StartSchedule": {
+        "body": [
+            "StartSchedule(${1:sched})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Schedule] sched\n  Schedule to start.",
+        "prefix": "StartSchedule"
+    },
+    "StartTask": {
+        "body": [
+            "StartTask(${1:task})$0"
+        ],
+        "description": "ENTITY [Server] Called once on starting task.\n\n[Task] task\n  The task to start, created by ai_task.New.",
+        "prefix": "StartTask"
+    },
+    "StartTouch": {
+        "body": [
+            "StartTouch(${1:entity})$0"
+        ],
+        "description": "ENTITY [Server] \n\n[Entity] entity\n  The entity which is being touched.",
+        "prefix": "StartTouch"
+    },
+    "StoreOutput": {
+        "body": [
+            "StoreOutput(${1:name}, ${2:info})$0"
+        ],
+        "description": "ENTITY [Server] Used to store an output so it can be triggered with ENTITY:TriggerOutput.\nOutputs compiled into a map are passed to entities as key/value pairs through ENTITY:KeyValue. TriggerOutput will do nothing if this function has not been called first.\n\n[string] name\n  Name of output to store\n\n[string] info\n  Output info",
+        "prefix": "StoreOutput"
+    },
+    "TaskFinished": {
+        "body": [
+            "TaskFinished()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "TaskFinished"
+    },
+    "TaskTime": {
+        "body": [
+            "TaskTime()$0"
+        ],
+        "description": "ENTITY [Server]",
+        "prefix": "TaskTime"
+    },
+    "TestCollision": {
+        "body": [
+            "TestCollision(${1:startpos}, ${2:delta}, ${3:isbox}, ${4:extents}, ${5:mask})$0"
+        ],
+        "description": "ENTITY [Shared] Allows you to override trace result when a trace hits the entitys Bounding Box.\n\n[Vector] startpos\n  Start position of the trace\n\n[Vector] delta\n  Offset from startpos to the endpos of the trace\n\n[boolean] isbox\n  Is the trace a hull trace?\n\n[Vector] extents\n  Size of the hull trace?\n\n[number] mask\n  The CONTENTS_ Enums mask",
+        "prefix": "TestCollision"
+    },
+    "Think": {
+        "body": [
+            "Think()$0"
+        ],
+        "description": "ENTITY [Shared] Called every frame on the client.\nCalled every tick on the server.",
+        "prefix": "Think"
+    },
+    "Touch": {
+        "body": [
+            "Touch(${1:entity})$0"
+        ],
+        "description": "ENTITY [Server] Called every tick for every entity being \"touched\". See also ENTITY:StartTouch and ENTITY:EndTouch.\n\n[Entity] entity\n  The entity that touched it.",
+        "prefix": "Touch"
+    },
+    "TriggerOutput": {
+        "body": [
+            "TriggerOutput(${1:output}, ${2:activator}, ${3:data=nil})$0"
+        ],
+        "description": "ENTITY [Server] Triggers all outputs stored using ENTITY:StoreOutput.\n\n[string] output\n  Name of output to fire\n\n[Entity] activator\n  Activator entity\n\n[string] data=nil\n  The data to give to the output.",
+        "prefix": "TriggerOutput"
+    },
+    "UpdateTransmitState": {
+        "body": [
+            "UpdateTransmitState()$0"
+        ],
+        "description": "ENTITY [Server] Called whenever the transmit state should be updated.",
+        "prefix": "UpdateTransmitState"
+    },
+    "Use": {
+        "body": [
+            "Use(${1:activator}, ${2:caller}, ${3:useType}, ${4:value})$0"
+        ],
+        "description": "ENTITY [Server] Called when another entity uses this entity, example would be a player pressing \"+use\" this entity. To change how often the function is called, see Entity:SetUseType.\n\n[Entity] activator\n  The initial cause for the input getting triggered.\n\n[Entity] caller\n  The entity that directly triggered the input.\n\n[number] useType\n  Use type, see USE_ Enums.\n\n[number] value\n  Any passed value.",
+        "prefix": "Use"
+    }
+}

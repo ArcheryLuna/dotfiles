@@ -1,0 +1,44 @@
+{
+    "FinishedLoading": {
+        "body": [
+            "FinishedLoading()$0"
+        ],
+        "description": "DHTMLCONTROLS [Client]",
+        "prefix": "FinishedLoading"
+    },
+    "SetButtonColor": {
+        "body": [
+            "SetButtonColor(${1:clr})$0"
+        ],
+        "description": "DHTMLCONTROLS [Client] \n\n[table] clr\n  A Color structure",
+        "prefix": "SetButtonColor"
+    },
+    "SetHTML": {
+        "body": [
+            "SetHTML(${1:dhtml})$0"
+        ],
+        "description": "DHTMLCONTROLS [Client] \n\n[Panel] dhtml",
+        "prefix": "SetHTML"
+    },
+    "StartedLoading": {
+        "body": [
+            "StartedLoading()$0"
+        ],
+        "description": "DHTMLCONTROLS [Client]",
+        "prefix": "StartedLoading"
+    },
+    "UpdateHistory": {
+        "body": [
+            "UpdateHistory(${1:url})$0"
+        ],
+        "description": "DHTMLCONTROLS [Client] \n\n[string] url",
+        "prefix": "UpdateHistory"
+    },
+    "UpdateNavButtonStatus": {
+        "body": [
+            "UpdateNavButtonStatus()$0"
+        ],
+        "description": "DHTMLCONTROLS [Client]",
+        "prefix": "UpdateNavButtonStatus"
+    }
+}

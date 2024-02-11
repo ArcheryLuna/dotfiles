@@ -1,0 +1,289 @@
+{
+    "table.Add": {
+        "body": [
+            "table.Add(${1:target}, ${2:source})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Adds the contents from one table into another. See also table.Inherit and table.Merge.\n\n[table] target\n  The table to insert the new values into.\n\n[table] source\n  The table to retrieve the values from.",
+        "prefix": "table.Add"
+    },
+    "table.ClearKeys": {
+        "body": [
+            "table.ClearKeys(${1:table}, ${2:saveKeys=false})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Changes all keys to sequential integers. This creates a new table object and does not affect the original.\n\n[table] table\n  The original table to modify.\n\n[boolean] saveKeys=false\n  Save the keys within each member table. This will insert a new field __key into each value, and should not be used if the table contains non-table values.",
+        "prefix": "table.ClearKeys"
+    },
+    "table.CollapseKeyValue": {
+        "body": [
+            "table.CollapseKeyValue(${1:input})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Collapses a table with keyvalue structure\n\n[table] input\n  Input table",
+        "prefix": "table.CollapseKeyValue"
+    },
+    "table.Copy": {
+        "body": [
+            "table.Copy(${1:originalTable})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Creates a deep copy and returns that copy.\n\n[table] originalTable\n  The table to be copied.",
+        "prefix": "table.Copy"
+    },
+    "table.CopyFromTo": {
+        "body": [
+            "table.CopyFromTo(${1:source}, ${2:target})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Empties the target table, and merges all values from the source table into it.\n\n[table] source\n  The table to copy from.\n\n[table] target\n  The table to write to.",
+        "prefix": "table.CopyFromTo"
+    },
+    "table.Count": {
+        "body": [
+            "table.Count(${1:tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Counts the amount of keys in a table. This should only be used when a table is not numerically and sequentially indexed. For those tables, consider the length operator.\n\n[table] tbl\n  The table to count the keys of.",
+        "prefix": "table.Count"
+    },
+    "table.DeSanitise": {
+        "body": [
+            "table.DeSanitise(${1:tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tbl\n  Table to be de-sanitised",
+        "prefix": "table.DeSanitise"
+    },
+    "table.Empty": {
+        "body": [
+            "table.Empty(${1:tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Removes all values from a table.\n\n[table] tbl\n  The table to empty.",
+        "prefix": "table.Empty"
+    },
+    "table.FindNext": {
+        "body": [
+            "table.FindNext(${1:tbl}, ${2:value})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tbl\n  Table to search\n\n[any] value\n  Value to return element after",
+        "prefix": "table.FindNext"
+    },
+    "table.FindPrev": {
+        "body": [
+            "table.FindPrev(${1:tbl}, ${2:value})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tbl\n  Table to search\n\n[any] value\n  Value to return element before",
+        "prefix": "table.FindPrev"
+    },
+    "table.ForEach": {
+        "body": [
+            "table.ForEach(${1:tab}, ${2:callback})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tab\n  Table to iterate over.\n\n[function] callback\n  Function to call for every key-value pair. Arguments passed are:\n\n any key\n any value",
+        "prefix": "table.ForEach"
+    },
+    "table.ForceInsert": {
+        "body": [
+            "table.ForceInsert(${1:tab={}}, ${2:value})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Inserts a value in to the given table even if the table is non-existent\n\n[table] tab={}\n  Table to insert value in to\n\n[any] value\n  Value to insert",
+        "prefix": "table.ForceInsert"
+    },
+    "table.GetFirstKey": {
+        "body": [
+            "table.GetFirstKey(${1:tab})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tab\n  Table to retrieve key from",
+        "prefix": "table.GetFirstKey"
+    },
+    "table.GetFirstValue": {
+        "body": [
+            "table.GetFirstValue(${1:tab})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tab\n  Table to retrieve value from",
+        "prefix": "table.GetFirstValue"
+    },
+    "table.GetKeys": {
+        "body": [
+            "table.GetKeys(${1:tabl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Returns all keys of a table.\n\n[table] tabl\n  The table to get keys of",
+        "prefix": "table.GetKeys"
+    },
+    "table.GetLastKey": {
+        "body": [
+            "table.GetLastKey(${1:tab})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tab\n  Table to retrieve key from",
+        "prefix": "table.GetLastKey"
+    },
+    "table.GetLastValue": {
+        "body": [
+            "table.GetLastValue(${1:tab})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tab\n  Table to retrieve value from",
+        "prefix": "table.GetLastValue"
+    },
+    "table.GetWinningKey": {
+        "body": [
+            "table.GetWinningKey(${1:inputTable})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Returns a key of the supplied table with the highest number value.\n\n[table] inputTable\n  The table to search in.",
+        "prefix": "table.GetWinningKey"
+    },
+    "table.HasValue": {
+        "body": [
+            "table.HasValue(${1:tbl}, ${2:value})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Checks if a table has a value.\n\n[table] tbl\n  Table to check\n\n[any] value\n  Value to search for",
+        "prefix": "table.HasValue"
+    },
+    "table.Inherit": {
+        "body": [
+            "table.Inherit(${1:target}, ${2:base})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Copies any missing data from base to target, and sets the target's BaseClass member to the base table's pointer. See table.Merge, which overrides existing values and doesn't add a BaseClass member.\nSee also table.Add, which simply adds values of one table to another.\n\n[table] target\n  Table to copy data to\n\n[table] base\n  Table to copy data from",
+        "prefix": "table.Inherit"
+    },
+    "table.IsSequential": {
+        "body": [
+            "table.IsSequential(${1:tab})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tab\n  Table to check",
+        "prefix": "table.IsSequential"
+    },
+    "table.KeyFromValue": {
+        "body": [
+            "table.KeyFromValue(${1:tab}, ${2:value})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Returns the first key found to be containing the supplied value\n\n[table] tab\n  Table to search\n\n[any] value\n  Value to search for",
+        "prefix": "table.KeyFromValue"
+    },
+    "table.KeysFromValue": {
+        "body": [
+            "table.KeysFromValue(${1:tab}, ${2:value})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Returns a table of keys containing the supplied value\n\n[table] tab\n  Table to search\n\n[any] value\n  Value to search for",
+        "prefix": "table.KeysFromValue"
+    },
+    "table.LowerKeyNames": {
+        "body": [
+            "table.LowerKeyNames(${1:tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tbl\n  Table to convert",
+        "prefix": "table.LowerKeyNames"
+    },
+    "table.Merge": {
+        "body": [
+            "table.Merge(${1:destination}, ${2:source})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Merges the content of the second table with the content in the first one. See table.Inherit, which doesn't override existing values.\nSee also table.Add, which simply adds values of one table to another.\n\n[table] destination\n  The table you want the source table to merge with\n\n[table] source\n  The table you want to merge with the destination table",
+        "prefix": "table.Merge"
+    },
+    "table.Random": {
+        "body": [
+            "table.Random(${1:haystack})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Returns a random value from the supplied table.\n\n[table] haystack\n  The table to choose from.",
+        "prefix": "table.Random"
+    },
+    "table.RemoveByValue": {
+        "body": [
+            "table.RemoveByValue(${1:tbl}, ${2:val})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Removes the first instance of a given value from the specified table with table.remove, then returns the key that the value was found at.\n\n[table] tbl\n  The table that will be searched.\n\n[any] val\n  The value to find within the table.",
+        "prefix": "table.RemoveByValue"
+    },
+    "table.Reverse": {
+        "body": [
+            "table.Reverse(${1:tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Returns a reversed copy of a sequential table. Any non-sequential and non-numeric keyvalue pairs will not be copied.\n\n[table] tbl\n  Table to reverse.",
+        "prefix": "table.Reverse"
+    },
+    "table.Sanitise": {
+        "body": [
+            "table.Sanitise(${1:tab})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Converts Vectors, Angles and booleans to be able to be converted to and from key-values. table.DeSanitise does the opposite\n\n[table] tab\n  Table to sanitise",
+        "prefix": "table.Sanitise"
+    },
+    "table.SortByKey": {
+        "body": [
+            "table.SortByKey(${1:tab}, ${2:descending=false})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Returns a list of keys sorted based on values of those keys. For normal sorting see table.sort.\n\n[table] tab\n  Table to sort. All values of this table must be of same type.\n\n[boolean] descending=false\n  Should the order be descending?",
+        "prefix": "table.SortByKey"
+    },
+    "table.SortByMember": {
+        "body": [
+            "table.SortByMember(${1:tab}, ${2:memberKey}, ${3:ascending=false})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Sorts a table by a named member\n\n[table] tab\n  Table to sort\n\n[any] memberKey\n  The key used to identify the member\n\n[boolean] ascending=false\n  Whether or not the order should be ascending",
+        "prefix": "table.SortByMember"
+    },
+    "table.SortDesc": {
+        "body": [
+            "table.SortDesc(${1:tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tbl\n  The table to sort in descending order.",
+        "prefix": "table.SortDesc"
+    },
+    "table.ToString": {
+        "body": [
+            "table.ToString(${1:tbl}, ${2:displayName}, ${3:niceFormatting})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Converts a table into a string\n\n[table] tbl\n  The table to iterate over.\n\n[string] displayName\n  Optional. A name for the table.\n\n[boolean] niceFormatting\n  Adds new lines and tabs to the string.",
+        "prefix": "table.ToString"
+    },
+    "table.concat": {
+        "body": [
+            "table.concat(${1:tbl}, ${2:concatenator=\"\"}, ${3:startPos=1}, ${4:endPos=#tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Concatenates the contents of a table to a string.\n\n[table] tbl\n  The table to concatenate.\n\n[string] concatenator=\"\"\n  A seperator to insert between strings\n\n[number] startPos=1\n  The key to start at\n\n[number] endPos=#tbl\n  The key to end at",
+        "prefix": "table.concat"
+    },
+    "table.foreach": {
+        "body": [
+            "table.foreach(${1:tbl}, ${2:callback})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tbl\n  The table to iterate over.\n\n[function] callback\n  The function to run for each key and value.",
+        "prefix": "table.foreach"
+    },
+    "table.foreachi": {
+        "body": [
+            "table.foreachi(${1:table}, ${2:func})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] table\n  The table to iterate over.\n\n[function] func\n  The function to run for each index.",
+        "prefix": "table.foreachi"
+    },
+    "table.getn": {
+        "body": [
+            "table.getn(${1:tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] \n\n[table] tbl\n  The table to check.",
+        "prefix": "table.getn"
+    },
+    "table.insert": {
+        "body": [
+            "table.insert(${1:tbl}, ${2:position=nil}, ${3:value})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Inserts a value into a table at the end of the table or at the given position.\n\n[table] tbl\n  The table to insert the variable into.\n\n[number] position=nil\n  The position in the table to insert the variable.\n\n[any] value\n  The variable to insert into the table.",
+        "prefix": "table.insert"
+    },
+    "table.maxn": {
+        "body": [
+            "table.maxn(${1:tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Returns the highest numerical key.\n\n[table] tbl\n  The table to search.",
+        "prefix": "table.maxn"
+    },
+    "table.remove": {
+        "body": [
+            "table.remove(${1:tbl}, ${2:index=#tbl})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Removes a value from a table and shifts any other values down to fill the gap.\n\n[table] tbl\n  The table to remove the value from.\n\n[number] index=#tbl\n  The index of the value to remove.",
+        "prefix": "table.remove"
+    },
+    "table.sort": {
+        "body": [
+            "table.sort(${1:tbl}, ${2:sorter})$0"
+        ],
+        "description": "TABLE [Shared/Menu] Sorts a table either ascending or by the given sort function.\n\n[table] tbl\n  The table to sort.\n\n[function] sorter\n  If specified, the function will be called with 2 parameters each.\n\nReturn true in this function if you want the first parameter to come first in the sorted array.",
+        "prefix": "table.sort"
+    }
+}
