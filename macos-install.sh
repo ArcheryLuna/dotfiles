@@ -6,7 +6,7 @@ brew bundle install --file=~/.dotfiles/macos/Brewfile
 
 ln -s ~/.dotfiles/macos/.config ~/.config
 ln -s ~/.dotfiles/macos/zsh/.zshrc ~/
-ln -s ~/.dotfiles/macos/.gitconfig ~/
+ln -s ~/.dotfiles/global/.gitconfig ~/
 ln -s ~/.dotfiles/macos/.vscode ~/ 
 ln -s ~/.dotfiles/macos/.npm ~/
 
