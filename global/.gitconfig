@@ -4,3 +4,4 @@
 [core]
 	editor = nano
 	excludesfile = /Users/archery/.gitignore
+	autocrlf = false
