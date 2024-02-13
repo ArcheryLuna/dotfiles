@@ -53,6 +53,8 @@ cask "microsoft-word"
 cask "parallels"
 # Remote desktop
 cask "parsec"
+# Collaboration platform for API development
+cask "postman"
 # SSH client
 cask "termius"
 # Music streaming service with high fidelity sound and hi-def video quality
@@ -96,6 +98,7 @@ vscode "mactkg.sonic-pi"
 vscode "matthewevers.compiler-explorer"
 vscode "mikestead.dotenv"
 vscode "ms-dotnettools.csharp"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-toolsai.jupyter"
