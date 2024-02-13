@@ -10,8 +10,6 @@ brew "gcc"
 brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Drop-in replacement for MySQL
-brew "mariadb"
 # Open source relational database management system
 brew "mysql@5.7"
 # Fast, highly customisable system info script
