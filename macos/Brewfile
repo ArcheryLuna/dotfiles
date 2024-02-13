@@ -1,6 +1,7 @@
 tap "homebrew/autoupdate"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+tap "homebrew/services"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # GNU compiler collection
@@ -11,6 +12,8 @@ brew "ffmpeg"
 brew "go"
 # Drop-in replacement for MySQL
 brew "mariadb"
+# Open source relational database management system
+brew "mysql@5.7"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
