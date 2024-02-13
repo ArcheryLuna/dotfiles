@@ -21,6 +21,10 @@ brew() {
     cd -
 }
 
+cls() {
+   clear
+}
+
 # Ensure you source this script in your .zshrc to make it available in your shell sessions
 
 

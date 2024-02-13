@@ -1,6 +1,6 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-ln -s ~/.dotfile/macos/zsh/.zprofile ~/
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew bundle install --file=~/.dotfiles/macos/Brewfile
 
