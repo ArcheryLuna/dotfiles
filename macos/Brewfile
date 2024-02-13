@@ -11,7 +11,7 @@ brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Open source relational database management system
-brew "mysql@5.7", link: true
+brew "mysql@8.0"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -52,6 +52,8 @@ cask "microsoft-powerpoint"
 cask "microsoft-teams"
 # Word processor
 cask "microsoft-word"
+# Interactive tool for analyzing MongoDB data
+cask "mongodb-compass"
 # Desktop virtualization software
 cask "parallels"
 # Remote desktop
@@ -121,6 +123,7 @@ vscode "ms-vsliveshare.vsliveshare"
 vscode "msjsdiag.vscode-react-native"
 vscode "muoshuu.rojo-ui"
 vscode "neodynamicsrl.jspm"
+vscode "prisma.prisma"
 vscode "redhat.java"
 vscode "rishabh.discord-theme"
 vscode "ritwickdey.liveserver"
