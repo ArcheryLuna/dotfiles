@@ -47,6 +47,8 @@ cask "github"
 cask "microsoft-auto-update"
 # Presentation software
 cask "microsoft-powerpoint"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
 # Word processor
 cask "microsoft-word"
 # Desktop virtualization software
