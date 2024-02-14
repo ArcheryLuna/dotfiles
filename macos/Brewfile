@@ -38,6 +38,8 @@ cask "alt-tab"
 cask "arc"
 # Voice and text chat software
 cask "discord"
+# Developer platform
+cask "dotnet-sdk"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
 # Developer targeted fonts with a high number of glyphs
