@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@eslint/create-config": "^0.4.6"
+  }
+}

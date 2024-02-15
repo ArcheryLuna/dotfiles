@@ -11,7 +11,7 @@ brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Open source relational database management system
-brew "mysql@8.0"
+brew "mysql@8.0", restart_service: true
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -62,6 +62,8 @@ cask "parallels"
 cask "parsec"
 # Collaboration platform for API development
 cask "postman"
+# XMPP client
+cask "swift"
 # SSH client
 cask "termius"
 # Music streaming service with high fidelity sound and hi-def video quality
