@@ -46,6 +46,8 @@ cask "font-fira-code"
 cask "font-geist-mono-nerd-font"
 # Desktop client for GitHub repositories
 cask "github"
+# GPU-based terminal emulator
+cask "kitty"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Presentation software
