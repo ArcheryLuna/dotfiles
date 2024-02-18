@@ -4,6 +4,8 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # GNU compiler collection
 brew "gcc"
 # Play, record, convert, and stream audio and video

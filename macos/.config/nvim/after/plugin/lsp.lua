@@ -1,5 +1,7 @@
 local lsp_zero = require('lsp-zero')
 
+-- Make it live vscode's autocomplete
+
 lsp_zero.on_attach(function(client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the available actions
@@ -24,7 +26,7 @@ cmp.setup({
   },
   mapping = {
     ['<C-e>'] = cmp.mapping.abort(),
-    ['<CR>'] = cmp.mapping.confirm({select = true}),
+    ['<Tab>'] = cmp.mapping.confirm({select = true}),
     ['<Up>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
     ['<Down>'] = cmp.mapping.select_next_item({behavior = 'select'}),
     ['<C-p>'] = cmp.mapping(function()

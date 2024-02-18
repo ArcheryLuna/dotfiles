@@ -29,5 +29,6 @@ cls() {
 export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 
 alias vim=nvim
+alias vi=nvim
 
 eval "$(starship init zsh)"

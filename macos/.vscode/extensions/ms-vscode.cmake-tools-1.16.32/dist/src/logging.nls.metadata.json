@@ -1,9 +1,0 @@
-{
-	"messages": [
-		"Build"
-	],
-	"keys": [
-		"build.logging.title"
-	],
-	"filePath": "src\\logging"
-}
