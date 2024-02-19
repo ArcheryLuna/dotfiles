@@ -4,6 +4,8 @@ tap "homebrew/cask-fonts"
 tap "homebrew/services"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # GNU compiler collection
