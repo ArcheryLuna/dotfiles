@@ -13,6 +13,8 @@ brew "ffmpeg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Open source relational database management system
+brew "mysql"
+# Open source relational database management system
 brew "mysql@8.0"
 # Fast, highly customisable system info script
 brew "neofetch"
