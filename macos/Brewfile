@@ -38,6 +38,8 @@ brew "rust"
 brew "starship"
 # Collection of apps and services for photography, design, video, web, and UX
 cask "adobe-creative-cloud"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Chromium based browser
