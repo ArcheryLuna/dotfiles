@@ -28,6 +28,8 @@ cls() {
 # Ensure you source this script in your .zshrc to make it available in your shell sessions
 export PATH="/opt/homebrew/opt/mysql@8.0/bin:$PATH"
 
+ZSH_THEME="GeistMono Nerd Font Mono"
+
 alias vim=nvim
 alias vi=nvim
 
