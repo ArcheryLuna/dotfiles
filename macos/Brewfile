@@ -36,6 +36,8 @@ brew "python@3.11"
 brew "rust"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Collection of apps and services for photography, design, video, web, and UX
 cask "adobe-creative-cloud"
 # GPU-accelerated terminal emulator
