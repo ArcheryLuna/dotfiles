@@ -1,6 +1,8 @@
 tap "homebrew/autoupdate"
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/core"
 tap "homebrew/services"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
@@ -68,6 +70,8 @@ cask "microsoft-teams"
 cask "microsoft-word"
 # Interactive tool for analyzing MongoDB data
 cask "mongodb-compass"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Desktop virtualization software
 cask "parallels"
 # Remote desktop
